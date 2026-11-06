@@ -69,6 +69,10 @@ jobs:
         if: runner.os == 'Linux'
         timeout-minutes: 15
         run: |
+          # The runner's default Azure apt mirror is intermittently very slow (≈60 KB/s);
+          # use Canonical's archive instead.
+          sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|http://archive.ubuntu.com/ubuntu|g' \
+            /etc/apt/apt-mirrors.txt /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true
           sudo apt-get update -o Acquire::Retries=3
           sudo apt-get install -y --no-install-recommends \
             -o Acquire::Retries=3 -o Acquire::http::Timeout=60 \
