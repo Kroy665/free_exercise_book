@@ -8,6 +8,20 @@
 - **Cost:** Free forever. No accounts, ads or tracking.
 - **Languages:** English and **Bengali (বাংলা)** at launch, for both the UI and the content. Hindi and other Indian languages come later.
 
+## Download
+
+Latest: **v0.1.0 (pre-alpha)**. [All releases](https://github.com/Kroy665/free_exercise_book/releases)
+
+| Operating system | Download |
+|---|---|
+| **Windows 10 / 11** (64-bit) | [Installer (.exe)](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book_0.1.0_x64-setup.exe) · [MSI](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book_0.1.0_x64_en-US.msi) |
+| **macOS 11+** (Apple Silicon and Intel) | [Disk image (.dmg)](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book_0.1.0_universal.dmg) |
+| **Linux**: Ubuntu / Debian / Mint | [.deb](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book_0.1.0_amd64.deb) |
+| **Linux**: Fedora / RHEL / openSUSE | [.rpm](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book-0.1.0-1.x86_64.rpm) |
+| **Linux**: any distribution | [AppImage](https://github.com/Kroy665/free_exercise_book/releases/download/v0.1.0/Free.Exercise.Book_0.1.0_amd64.AppImage) |
+
+The installers are **not code-signed yet**, so Windows and macOS show a warning the first time. See **[docs/INSTALL.md](docs/INSTALL.md)** for how to open the app, verify downloads and find your data.
+
 ## Who it is for
 
 Aspirants preparing for UPSC, State PSCs, SSC, Banking (IBPS/SBI), Railways (RRB) and similar exams, especially those with **limited or unreliable internet**. Users download the topics they need once and study offline.
@@ -51,6 +65,7 @@ Set `FEB_CONTENT_DIR=/path/to/content` to load content from another folder.
 | [docs/DATA_AND_PACKS.md](docs/DATA_AND_PACKS.md) | Database schema, vector search, offline content packs, updates |
 | [docs/CODING_GUIDELINES.md](docs/CODING_GUIDELINES.md) | Code style, testing, CI, commits, releases |
 | [docs/PRIVACY_AND_SECURITY.md](docs/PRIVACY_AND_SECURITY.md) | Privacy promises, threat model, security rules |
+| [docs/INSTALL.md](docs/INSTALL.md) | Download, install and first-run help for each OS |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute code, content and translations |
 
 ## Repository layout (planned)
