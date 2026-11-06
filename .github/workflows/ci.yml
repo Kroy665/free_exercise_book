@@ -63,15 +63,16 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # Cached: the first run downloads the .debs, later runs restore them in seconds.
-      # (The Azure Ubuntu mirror can be very slow; see CI run 42198775762.)
+      # --no-install-recommends skips ~100 optional packages (PipeWire, portals, …) that slow
+      # downloads from the Azure apt mirror; retries + timeout guard against a slow mirror.
       - name: Install Linux system dependencies (Tauri)
         if: runner.os == 'Linux'
         timeout-minutes: 15
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: libwebkit2gtk-4.1-dev librsvg2-dev
-          version: 1
+        run: |
+          sudo apt-get update -o Acquire::Retries=3
+          sudo apt-get install -y --no-install-recommends \
+            -o Acquire::Retries=3 -o Acquire::http::Timeout=60 \
+            libwebkit2gtk-4.1-dev librsvg2-dev
 
       - uses: dtolnay/rust-toolchain@stable
         with:
