@@ -8,7 +8,7 @@
 //! with `--auto-key`), or a development key in `--dev-key`/`--auto-key <dir>` (created on
 //! first use; untrusted: only debug builds of the app accept it).
 
-use feb_core::import::load_dir;
+use feb_core::import::{load_dir, load_exams};
 use feb_core::packs::build_pack_db;
 use feb_packs::sign;
 use feb_packs::{Counts, MANIFEST_FILE, MANIFEST_SCHEMA, MANIFEST_SIG_FILE, Manifest, PackEntry};
@@ -191,11 +191,19 @@ fn build(args: &[String]) -> Res<()> {
                 .map(|d| d.as_secs())
                 .unwrap_or(0)
         });
+    let exams = load_exams(Path::new(content))
+        .map_err(|e| e.to_string())?
+        .iter()
+        .map(serde_json::to_value)
+        .collect::<Result<Vec<_>, _>>()
+        .map_err(|e| e.to_string())?;
+    println!("  {} exam pattern(s)", exams.len());
     let manifest = Manifest {
         schema: MANIFEST_SCHEMA,
         generated_at,
         min_app_version: "0.1.0".into(),
         packs,
+        exams,
     };
     let bytes = serde_json::to_vec_pretty(&manifest).map_err(|e| e.to_string())?;
     let sig = sign::sign(

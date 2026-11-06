@@ -107,6 +107,20 @@ impl PackConfig {
         Some((m, at))
     }
 
+    /// Save the exam patterns of a verified manifest (used by mock tests).
+    pub fn store_exams(&self, content: &Mutex<Connection>, manifest: &Manifest) {
+        let patterns: Vec<feb_core::mock::ExamPattern> = manifest
+            .exams
+            .iter()
+            .filter_map(|v| serde_json::from_value(v.clone()).ok())
+            .collect();
+        if let Ok(c) = content.lock()
+            && let Err(e) = feb_core::mock::store_patterns(&c, &patterns)
+        {
+            eprintln!("[packs] could not store exam patterns: {e}");
+        }
+    }
+
     /// Fetch, verify and cache the server manifest.
     pub fn check_remote(&self) -> Result<Manifest, ErrorPayload> {
         let (bytes, sig) = Source::Remote(self.remote_url.clone())
@@ -193,6 +207,7 @@ impl PackConfig {
         let Some(dir) = self.bundled_dir.clone() else {
             return;
         };
+        self.store_exams(content, &manifest);
         let marker = self.data_dir.join("packs-initialized");
         let first_run = !marker.exists();
         if let Ok(mut c) = content.lock() {
@@ -427,6 +442,11 @@ mod tests {
             generated_at: 0,
             min_app_version: "0.1.0".into(),
             packs,
+            exams: feb_core::import::load_exams(&root)
+                .unwrap()
+                .iter()
+                .map(|e| serde_json::to_value(e).unwrap())
+                .collect(),
         };
         let bytes = serde_json::to_vec(&m).unwrap();
         std::fs::write(dir.join(feb_packs::MANIFEST_FILE), &bytes).unwrap();
@@ -504,6 +524,13 @@ mod tests {
         // First run installs the bundled pack, offline.
         packs.sync_bundled(&content);
         assert_eq!(installed_version(&content).as_deref(), Some("1.0.0"));
+        // Exam patterns from the signed manifest are stored for mock tests.
+        let patterns = feb_core::mock::patterns(&content.lock().unwrap()).unwrap();
+        assert_eq!(
+            patterns.len(),
+            2,
+            "exam patterns stored from the bundled manifest"
+        );
         let v = view(&packs, &content.lock().unwrap(), "bn", None).unwrap();
         assert_eq!(
             (v.items[0].state, v.items[0].title.as_str()),

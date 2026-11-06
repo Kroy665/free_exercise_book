@@ -37,6 +37,8 @@
     { href: "/settings", key: "nav.settings", icon: Settings },
   ];
 
+  const examMode = $derived(/^\/tests\/\d+\/run\/?$/.test(page.url.pathname));
+
   function active(href: string) {
     const p = page.url.pathname;
     if (href === "/") return p === "/";
@@ -72,7 +74,10 @@
 
 <svelte:window {onkeydown} {oncontextmenu} />
 
-{#if settings.loaded}
+{#if settings.loaded && examMode}
+  <!-- Exam view: full window, no sidebar or top bar (like the real computer-based test). -->
+  {@render children()}
+{:else if settings.loaded}
   <div class="shell">
     <nav class="sidebar chrome" aria-label={t("nav.main")}>
       <div class="brand">

@@ -57,6 +57,13 @@ const CONTENT_MIGRATIONS: &[&str] = &[
         installed_at INTEGER NOT NULL DEFAULT (unixepoch())
     );
     "#,
+    // 3: exam patterns for mock tests (from content/exams/, shipped in the signed manifest)
+    r#"
+    CREATE TABLE exam_patterns (
+        id   TEXT PRIMARY KEY,
+        data TEXT NOT NULL              -- JSON ExamPattern
+    );
+    "#,
 ];
 
 /// Pack file format version (docs/DATA_AND_PACKS.md §2). A pack is a SQLite database with
@@ -93,6 +100,23 @@ const USER_MIGRATIONS: &[&str] = &[
     CREATE TABLE settings (
         key   TEXT PRIMARY KEY,
         value TEXT NOT NULL
+    );
+    "#,
+    // 2: mock tests (docs/NAVIGATION.md §4.4)
+    r#"
+    CREATE TABLE tests (
+        id           INTEGER PRIMARY KEY AUTOINCREMENT,
+        kind         TEXT NOT NULL,      -- custom | pattern
+        pattern_id   TEXT,
+        title        TEXT NOT NULL,
+        config       TEXT NOT NULL,      -- JSON TestConfig (sections, question ids, marking, duration)
+        state        TEXT NOT NULL,      -- JSON TestState (answers, marks, time per question)
+        remaining_ms INTEGER NOT NULL,
+        status       TEXT NOT NULL,      -- ready | in_progress | submitted
+        created_at   INTEGER NOT NULL DEFAULT (unixepoch()),
+        started_at   INTEGER,
+        submitted_at INTEGER,
+        result       TEXT                -- JSON TestSummary
     );
     "#,
 ];

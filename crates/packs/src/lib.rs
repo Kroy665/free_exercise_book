@@ -100,6 +100,10 @@ pub struct Manifest {
     pub generated_at: u64,
     pub min_app_version: String,
     pub packs: Vec<PackEntry>,
+    /// Exam patterns for mock tests (`content/exams/*.yaml` as JSON). Optional, so older
+    /// manifests stay valid.
+    #[serde(default)]
+    pub exams: Vec<serde_json::Value>,
 }
 
 impl Manifest {

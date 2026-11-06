@@ -12,6 +12,7 @@ fn manifest_with(pack: &[u8]) -> Manifest {
         schema: 1,
         generated_at: 0,
         min_app_version: "0.1.0".into(),
+        exams: vec![],
         packs: vec![PackEntry {
             id: "a.b.c".into(),
             version: "1.0.0".into(),

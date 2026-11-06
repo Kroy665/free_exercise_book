@@ -170,3 +170,126 @@ export const packsApi = {
   remove: (id: string, lang: string) => invoke<PacksView>("packs_remove", { id, lang }),
   importFolder: (path: string, lang: string) => invoke<InstallReport>("packs_import_folder", { path, lang }),
 };
+
+// ---------- Mock tests ----------
+
+export interface PatternSectionView {
+  id: string;
+  name: string;
+  required: number;
+  available: number;
+  marks_each: number;
+}
+
+export interface PatternView {
+  id: string;
+  name: string;
+  duration_minutes: number;
+  negative_marking: number;
+  total_questions: number;
+  total_marks: number;
+  available: number;
+  scaled_minutes: number;
+  sections: PatternSectionView[];
+  source: string | null;
+  as_of: string | null;
+}
+
+export interface TestListItem {
+  id: number;
+  title: string;
+  kind: "custom" | "pattern";
+  status: "ready" | "in_progress" | "submitted";
+  questions: number;
+  duration_ms: number;
+  remaining_ms: number;
+  created_at: number;
+  submitted_at: number | null;
+  score: number | null;
+  max_score: number | null;
+  accuracy: number | null;
+}
+
+export interface AnswerState {
+  choice: number | null;
+  marked: boolean;
+  visited: boolean;
+  time_ms: number;
+}
+
+export interface TestState {
+  answers: Record<string, AnswerState>;
+  current: number;
+}
+
+export interface TestSession {
+  id: number;
+  title: string;
+  kind: string;
+  status: "ready" | "in_progress" | "submitted";
+  duration_ms: number;
+  remaining_ms: number;
+  scaled_from: [number, number] | null;
+  sections: { id: string; name: string; marks_each: number; negative: number; questions: QuestionView[] }[];
+  state: TestState;
+  total_questions: number;
+  total_marks: number;
+  missing: number;
+}
+
+export interface Tally {
+  correct: number;
+  wrong: number;
+  unanswered: number;
+  score: number;
+  max_score: number;
+}
+
+export interface TestSummary extends Tally {
+  accuracy: number;
+  time_used_ms: number;
+}
+
+export interface ReviewItem {
+  section: string;
+  question: QuestionView;
+  chosen: number | null;
+  marked: boolean;
+  time_ms: number;
+  outcome: "correct" | "wrong" | "unanswered";
+}
+
+export interface TestResult {
+  id: number;
+  title: string;
+  submitted_at: number | null;
+  duration_ms: number;
+  scaled_from: [number, number] | null;
+  summary: TestSummary;
+  sections: (Tally & { id: string; name: string })[];
+  topics: (Tally & { id: string; name: string })[];
+  review: ReviewItem[];
+}
+
+export interface CustomSpec {
+  title: string | null;
+  topic_ids: string[];
+  count: number;
+  duration_minutes: number;
+  marks_each: number;
+  negative: number;
+}
+
+export const testsApi = {
+  overview: (lang: string) => invoke<{ patterns: PatternView[]; tests: TestListItem[] }>("tests_overview", { lang }),
+  createCustom: (spec: CustomSpec) => invoke<number>("tests_create_custom", { spec }),
+  createPattern: (patternId: string) => invoke<number>("tests_create_pattern", { patternId }),
+  session: (id: number, lang: string) => invoke<TestSession>("test_session", { id, lang }),
+  start: (id: number) => invoke<void>("test_start", { id }),
+  save: (id: number, testState: TestState, remainingMs: number) =>
+    invoke<void>("test_save", { id, testState, remainingMs }),
+  submit: (id: number, testState: TestState, remainingMs: number) =>
+    invoke<TestSummary>("test_submit", { id, testState, remainingMs }),
+  result: (id: number, lang: string) => invoke<TestResult>("test_result", { id, lang }),
+  remove: (id: number) => invoke<void>("test_delete", { id }),
+};

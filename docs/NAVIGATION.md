@@ -91,6 +91,10 @@ Tests hub → Instructions (pattern, marks, negative marking, time) → Start
 ```
 - **Leaving a running test requires confirmation** ("Pause and exit? The timer will stop and you can resume later.").
 - Auto-submit when the timer reaches 0.
+- **Exam-pattern tests** use the exam's sections, marks and negative marking (from `content/exams/`, shipped in the signed manifest). If the installed topics can't supply every question, the test is **shortened and its time scaled in proportion**, and the Tests page and instructions say so.
+- Question selection prefers questions never attempted, then ones answered wrongly last time.
+- Answers given in tests count as attempts (mode `test`), so wrong ones appear in **Revise → Mistakes**.
+- The exam view (`/tests/[id]/run`) hides the sidebar and top bar. Leaving it asks "Pause and exit?"; progress and remaining time are saved every few seconds and after every answer.
 - State is saved after every answer so a crash or close can **resume**.
 
 ### 4.5 Revise

@@ -125,7 +125,13 @@ pub async fn packs_check(app: AppHandle, lang: String) -> CmdResult<PacksView> {
         if state.packs.dev_mode {
             return Err(dev_mode_err());
         }
-        let error = state.packs.check_remote().err();
+        let error = match state.packs.check_remote() {
+            Ok(m) => {
+                state.packs.store_exams(&state.content, &m);
+                None
+            }
+            Err(e) => Some(e),
+        };
         pack_service::view(&state.packs, &*state.content()?, &lang, error)
     })
     .await
@@ -199,6 +205,7 @@ pub async fn packs_import_folder(
         }
         let dir = PathBuf::from(path);
         let manifest = state.packs.folder_manifest(&dir)?;
+        state.packs.store_exams(&state.content, &manifest);
         let installed =
             store::list_installed(&*state.content()?).map_err(pack_service::core_err)?;
         let items = manifest

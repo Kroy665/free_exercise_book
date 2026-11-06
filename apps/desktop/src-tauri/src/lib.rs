@@ -2,6 +2,7 @@ mod commands;
 mod pack_commands;
 mod pack_service;
 mod state;
+mod test_commands;
 
 use feb_core::{db, import};
 use pack_service::PackConfig;
@@ -91,6 +92,15 @@ pub fn run() {
             pack_commands::packs_install,
             pack_commands::packs_remove,
             pack_commands::packs_import_folder,
+            test_commands::tests_overview,
+            test_commands::tests_create_custom,
+            test_commands::tests_create_pattern,
+            test_commands::test_session,
+            test_commands::test_start,
+            test_commands::test_save,
+            test_commands::test_submit,
+            test_commands::test_result,
+            test_commands::test_delete,
         ])
         .run(tauri::generate_context!())
         .expect("error while running Free Exercise Book");

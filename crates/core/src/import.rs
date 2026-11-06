@@ -182,6 +182,21 @@ pub fn load_dir(root: &Path) -> Result<Vec<SubjectSource>> {
     Ok(subjects)
 }
 
+/// Parse `content/exams/*.yaml` (exam patterns for mock tests).
+pub fn load_exams(root: &Path) -> Result<Vec<crate::mock::ExamPattern>> {
+    let dir = root.join("exams");
+    if !dir.exists() {
+        return Ok(Vec::new());
+    }
+    let mut out = Vec::new();
+    for path in entries(&dir)? {
+        if path.extension().is_some_and(|e| e == "yaml" || e == "yml") {
+            out.push(yaml(&path)?);
+        }
+    }
+    Ok(out)
+}
+
 /// Insert or replace a subject row.
 pub fn write_subject(conn: &Connection, s: &SubjectFile) -> Result<()> {
     conn.execute(
@@ -263,12 +278,14 @@ pub fn write_topic(conn: &Connection, unit: &UnitFile, t: &TopicSource) -> Resul
 /// (no packs involved). Runs in one transaction; on error the old content stays.
 pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
     let subjects = load_dir(root)?;
+    let exams = load_exams(root)?;
     let mut report = ImportReport::default();
     let tx = conn.transaction()?;
     tx.execute_batch(
         "DELETE FROM subjects; DELETE FROM units; DELETE FROM topics;
          DELETE FROM note_sections; DELETE FROM questions; DELETE FROM installed_packs;",
     )?;
+    crate::mock::store_patterns(&tx, &exams)?;
     for s in &subjects {
         write_subject(&tx, &s.subject)?;
         report.subjects += 1;

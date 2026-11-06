@@ -12,6 +12,7 @@ pub mod error;
 pub mod import;
 pub mod library;
 pub mod localize;
+pub mod mock;
 pub mod model;
 pub mod packs;
 pub mod practice;
