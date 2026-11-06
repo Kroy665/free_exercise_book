@@ -6,7 +6,7 @@
 - **Stack:** Rust, Tauri 2, Svelte 5 (SvelteKit SPA), SQLite with FTS5 and sqlite-vec
 - **License:** App code is [GPL-3.0](LICENSE). Content is [CC BY-SA 4.0](content/LICENSE.md).
 - **Cost:** Free forever. No accounts, ads or tracking.
-- **Languages:** English and **Bengali (বাংলা)** at launch, for both the UI and the content. Hindi and other Indian languages come later.
+- **Languages:** English and **Bengali (বাংলা)** for study content (notes and questions), chosen with the language button. Menus are in English. Hindi and other Indian languages come later.
 
 ## Download
 

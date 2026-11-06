@@ -5,11 +5,21 @@
 }
 
 html {
-  font-size: calc(var(--font-size) * var(--script-scale));
+  font-size: var(--font-size);
+}
+
+/* Desktop app, not a web page: the window never scrolls or bounces; only the
+   content pane (.content in +layout.svelte) scrolls. */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 body {
   margin: 0;
+  cursor: default;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-ui);
@@ -29,6 +39,7 @@ p { margin: 0 0 var(--space-3); }
 
 a {
   color: var(--accent);
+  -webkit-user-drag: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
@@ -140,3 +151,23 @@ a {
 .callout-timeline ul { list-style: none; padding-left: 0; }
 .callout-timeline li { display: grid; grid-template-columns: 11em 1fr; gap: var(--space-3); }
 .tl-date { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* App chrome (sidebar, top bar, buttons, cards) is not selectable and uses the arrow
+   cursor like native apps; study content stays selectable so text can be copied. */
+.chrome,
+.btn,
+.card a,
+.tabs,
+.breadcrumb {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btn,
+nav a,
+a.card,
+.tab {
+  cursor: default;
+}
+img {
+  -webkit-user-drag: none;
+}

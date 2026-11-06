@@ -4,7 +4,7 @@
   import ErrorBox from "$lib/components/ErrorBox.svelte";
   import StatusTag from "$lib/components/StatusTag.svelte";
   import { renderMarkdown } from "$lib/markdown/render";
-  import { settings, t } from "$lib/stores/settings.svelte";
+  import { settings, t, tc } from "$lib/stores/settings.svelte";
   import { openUrl } from "@tauri-apps/plugin-opener";
   import { tick } from "svelte";
 
@@ -30,7 +30,7 @@
     load(id, settings.lang);
   });
 
-  const labels = $derived(Object.fromEntries(CALLOUTS.map((k) => [k, t(`callout.${k}`)])));
+  const labels = $derived(Object.fromEntries(CALLOUTS.map((k) => [k, tc(`callout.${k}`, topic?.lang ?? "en")])));
   const sections = $derived(
     topic?.sections.map((s) => ({ ...s, html: renderMarkdown(s.body_md, { labels }) })) ?? [],
   );
@@ -62,7 +62,7 @@
       <a href="/library">{t("nav.library")}</a> › {topic.subject_title} › {topic.unit_title}
     </nav>
     <header class="head">
-      <h1>{topic.title}</h1>
+      <h1 lang={topic.lang}>{topic.title}</h1>
       <div class="meta">
         <StatusTag status={topic.meta.status} />
         <span class="muted">{t("library.questions", { n: topic.question_count })}</span>
@@ -156,7 +156,7 @@
   }
   .toc-inner {
     position: sticky;
-    top: 64px;
+    top: var(--space-5);
   }
   .toc ul {
     list-style: none;

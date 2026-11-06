@@ -122,7 +122,7 @@ FTS5 with BM25, with prefix matching for search-as-you-type. Uses the trigram in
 **Bengali search notes**
 - Normalise text (NFC) at both pack-build and query time, so composed and decomposed forms of characters like `য়` and `ড়` match.
 - Index Bengali digits (০–৯) and ASCII digits as the same value, so "1857" finds "১৮৫৭" and vice versa.
-- Keep the English terms that appear in brackets in Bengali notes in the index, so typing "Doctrine of Lapse" in the Bengali UI still finds স্বত্ববিলোপ নীতি.
+- Keep the English terms that appear in brackets in Bengali notes in the index, so typing "Doctrine of Lapse" while Bengali content is selected still finds স্বত্ববিলোপ নীতি.
 - `multilingual-e5-small` covers Bengali, so meaning-based search works across languages (an English query can find a Bengali note).
 
 ### Vector (optional)

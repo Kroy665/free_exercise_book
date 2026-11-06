@@ -2,7 +2,6 @@
   import { api, errorMessage, type LibrarySubject } from "$lib/api";
   import ErrorBox from "$lib/components/ErrorBox.svelte";
   import ProgressBar from "$lib/components/ProgressBar.svelte";
-  import StatusTag from "$lib/components/StatusTag.svelte";
   import { settings, t } from "$lib/stores/settings.svelte";
 
   let tree = $state<LibrarySubject[] | null>(null);
@@ -34,17 +33,14 @@
   {:else}
     {#each tree as subject (subject.id)}
       <section class="subject">
-        <h2>{subject.title}</h2>
+        <h2 lang={settings.lang}>{subject.title}</h2>
         {#each subject.units as unit (unit.id)}
-          <h3 class="muted">{unit.title}</h3>
+          <h3 class="muted" lang={settings.lang}>{unit.title}</h3>
           <div class="grid">
             {#each unit.topics as topic (topic.id)}
               <a class="card topic" href="/topic/{topic.id}">
-                <div class="row">
-                  <strong>{topic.title}</strong>
-                  <StatusTag status={topic.status} />
-                </div>
-                {#if topic.summary}<p class="muted small">{topic.summary}</p>{/if}
+                <strong lang={settings.lang}>{topic.title}</strong>
+                {#if topic.summary}<p class="muted small" lang={settings.lang}>{topic.summary}</p>{/if}
                 <ProgressBar value={topic.attempted} max={topic.question_count} label={t("library.progress", { done: topic.attempted, total: topic.question_count })} />
                 <span class="muted small">
                   {t("library.questions", { n: topic.question_count })}
@@ -85,12 +81,6 @@
   }
   .topic p {
     margin: 0;
-  }
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    gap: var(--space-2);
   }
   .small {
     font-size: 0.8125rem;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { AttemptResult, QuestionView } from "$lib/api";
   import { renderInline } from "$lib/markdown/render";
-  import { optionLabel, t } from "$lib/stores/settings.svelte";
+  import { optionLabel, t, tc } from "$lib/stores/settings.svelte";
   import CircleCheck from "@lucide/svelte/icons/circle-check";
   import CircleX from "@lucide/svelte/icons/circle-x";
 
@@ -14,7 +14,7 @@
   let { q, selected, result, onselect }: Props = $props();
 
   // Assertion-reason questions use the four standard options supplied by the app.
-  const options = $derived(q.options ?? [0, 1, 2, 3].map((i) => t(`ar.${i}`)));
+  const options = $derived(q.options ?? [0, 1, 2, 3].map((i) => tc(`ar.${i}`, q.lang)));
   const label = (i: number) => optionLabel(i, q.lang);
 
   function state(i: number): string {
@@ -32,12 +32,12 @@
 
   {#if q.kind === "assertion-reason"}
     <div class="ar">
-      <p><strong>{t("q.assertion")}:</strong> {@html renderInline(q.assertion ?? "")}</p>
-      <p><strong>{t("q.reason")}:</strong> {@html renderInline(q.reason ?? "")}</p>
+      <p><strong>{tc("q.assertion", q.lang)}:</strong> {@html renderInline(q.assertion ?? "")}</p>
+      <p><strong>{tc("q.reason", q.lang)}:</strong> {@html renderInline(q.reason ?? "")}</p>
     </div>
   {:else if q.kind === "match" && q.left && q.right}
     <table class="match">
-      <thead><tr><th>{t("q.list1")}</th><th>{t("q.list2")}</th></tr></thead>
+      <thead><tr><th>{tc("q.list1", q.lang)}</th><th>{tc("q.list2", q.lang)}</th></tr></thead>
       <tbody>
         {#each q.left as l, i (i)}
           <tr><td>{l}</td><td>{q.right[i] ?? ""}</td></tr>

@@ -33,7 +33,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/library">{t("nav.library")}</a> › <a href="/topic/{topic.id}">{topic.title}</a> › {t("topic.practice")}
     </nav>
-    <h1>{topic.title}</h1>
+    <h1 lang={topic.lang}>{topic.title}</h1>
     {#key questions}
       <PracticeSession {questions} mode="practice" backHref="/topic/{topic.id}" />
     {/key}

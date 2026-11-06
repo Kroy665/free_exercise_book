@@ -50,7 +50,7 @@ How the codebase is organised and how data flows through it.
 │       │   │   ├── api/          # generated TS bindings + thin wrappers
 │       │   │   ├── components/   # reusable UI (see UI_GUIDELINES.md)
 │       │   │   ├── stores/       # Svelte 5 runes-based state ($state classes)
-│       │   │   ├── i18n/         # UI strings: en.json, bn.json (hi.json later)
+│       │   │   ├── i18n/         # en.json (UI, English only) + content.ts (strings inside content, per content language)
 │       │   │   ├── markdown/     # note renderer + custom blocks
 │       │   │   └── styles/       # tokens.css, base.css
 │       │   └── app.html

@@ -3,7 +3,9 @@
   import "@fontsource-variable/noto-sans-bengali";
   import "$lib/styles/tokens.css";
   import "$lib/styles/base.css";
+  import { afterNavigate } from "$app/navigation";
   import { page } from "$app/state";
+  import LanguageMenu from "$lib/components/LanguageMenu.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
   import House from "@lucide/svelte/icons/house";
   import BookOpen from "@lucide/svelte/icons/book-open";
@@ -15,7 +17,6 @@
   import Settings from "@lucide/svelte/icons/settings";
   import Sun from "@lucide/svelte/icons/sun";
   import Moon from "@lucide/svelte/icons/moon";
-  import Languages from "@lucide/svelte/icons/languages";
 
   let { children } = $props();
 
@@ -42,8 +43,15 @@
 
   const isDark = $derived(
     settings.theme === "dark" ||
-    (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches),
+      (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches),
   );
+
+  // Only the content pane scrolls (desktop layout). Reset it on every page change,
+  // unless the URL targets a section (#anchor), which the page scrolls to itself.
+  let scroller = $state<HTMLElement | null>(null);
+  afterNavigate(({ to }) => {
+    if (scroller && !to?.url.hash) scroller.scrollTop = 0;
+  });
 
   function onkeydown(e: KeyboardEvent) {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "l") {
@@ -51,14 +59,24 @@
       toggleLang();
     }
   }
+
+  // Desktop app, not a web page: no browser context menu (Reload / Inspect) in release builds.
+  function oncontextmenu(e: MouseEvent) {
+    if (!import.meta.env.PROD) return;
+    if ((e.target as HTMLElement).closest("input, textarea, [contenteditable='true']")) return;
+    e.preventDefault();
+  }
 </script>
 
-<svelte:window {onkeydown} />
+<svelte:window {onkeydown} {oncontextmenu} />
 
 {#if settings.loaded}
   <div class="shell">
-    <nav class="sidebar" aria-label={t("nav.main")}>
-      <div class="brand">{t("app.name")}</div>
+    <nav class="sidebar chrome" aria-label={t("nav.main")}>
+      <div class="brand">
+        <img src="/favicon.png" alt="" width="24" height="24" />
+        <span>{t("app.name")}</span>
+      </div>
       <ul>
         {#each main as item (item.href)}
           <li>
@@ -80,11 +98,8 @@
     </nav>
 
     <div class="main-col">
-      <header class="topbar">
-        <button class="btn btn-ghost" onclick={toggleLang} title={t("lang.toggle")} aria-label={t("lang.toggle")}>
-          <Languages size={18} aria-hidden="true" />
-          <span class:on={settings.lang === "en"}>EN</span>/<span class:on={settings.lang === "bn"}>বাং</span>
-        </button>
+      <header class="topbar chrome">
+        <LanguageMenu />
         <button
           class="btn btn-ghost"
           onclick={() => setSetting("theme", isDark ? "light" : "dark")}
@@ -94,7 +109,7 @@
           {#if isDark}<Sun size={18} aria-hidden="true" />{:else}<Moon size={18} aria-hidden="true" />{/if}
         </button>
       </header>
-      <main>
+      <main class="content" bind:this={scroller}>
         {@render children()}
       </main>
     </div>
@@ -105,21 +120,29 @@
   .shell {
     display: grid;
     grid-template-columns: 220px 1fr;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
   }
   .sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
     background: var(--surface);
     border-right: 1px solid var(--border);
     padding: var(--space-4) var(--space-2);
   }
   .brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
     font-weight: 700;
+    font-size: 0.9375rem;
+    white-space: nowrap;
     padding: 0 var(--space-3) var(--space-4);
+  }
+  .brand img {
+    border-radius: 6px;
   }
   ul {
     list-style: none;
@@ -151,33 +174,38 @@
     font-weight: 600;
   }
   .main-col {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
+    min-height: 0;
   }
   .topbar {
+    flex: none;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: var(--space-1);
     padding: var(--space-2) var(--space-4);
     border-bottom: 1px solid var(--border);
     background: var(--bg);
-    position: sticky;
-    top: 0;
-    z-index: 5;
   }
-  .topbar span {
-    color: var(--text-muted);
-  }
-  .topbar span.on {
-    color: var(--text);
-    font-weight: 700;
+  .content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: none;
   }
   @media (max-width: 1100px) {
     .shell {
       grid-template-columns: 64px 1fr;
     }
-    .brand,
+    .brand span,
     nav a span {
       display: none;
+    }
+    .brand {
+      justify-content: center;
+      padding: 0 0 var(--space-4);
     }
     nav a {
       justify-content: center;

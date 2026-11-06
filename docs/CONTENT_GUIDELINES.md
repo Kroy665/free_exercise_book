@@ -11,7 +11,7 @@ Editorial rules for notes, questions and current affairs. **Accuracy is the prod
 | `reviewed` | One human checked every fact against a listed source | Reviewer |
 | `verified` | Two independent humans reviewed, or one subject expert | Maintainer |
 
-The app labels `ai-generated` items with a small tag so users know to treat them with care.
+The topic page and each question show a small status tag. Library cards do **not** show it (product decision, keeps the library clean).
 
 ### Mandatory checks before merge
 1. Every fact in a question's **answer and explanation** appears in the topic's notes or a listed source.
@@ -113,7 +113,7 @@ Cite as a short text reference in `topic.yaml → sources`, or a URL for current
 | **Bengali digits** (০–৯) in all Bengali prose, dates, statement numbers and option codes | ১০ মে ১৮৫৭; "কেবল ১ ও ২"; "ক-৩, খ-১" |
 | List labels for match questions: **ক, খ, গ, ঘ** (List I) and **১, ২, ৩, ৪** (List II) | ক. লখনউ … ১. কুনওয়ার সিং |
 | Proper nouns use the spelling common in West Bengal textbooks | মিরাট, লখনউ, ঝাঁসি, রানি লক্ষ্মীবাঈ, তাঁতিয়া টোপি, মঙ্গল পাণ্ডে |
-| Notes use neutral, impersonal sentences; exam tips and UI address the reader as **আপনি** | মনে রাখুন… |
+| Notes use neutral, impersonal sentences; exam tips address the reader as **আপনি** | মনে রাখুন… |
 | End sentences with the দাঁড়ি (।) | |
 | Book and document titles: give the original English title, transliterated, then a Bengali gloss if helpful | "দ্য ইন্ডিয়ান ওয়ার অব ইন্ডিপেনডেন্স" |
 | When a person is better known by a full name in Bengali, use it | R.C. Majumdar → রমেশচন্দ্র মজুমদার |

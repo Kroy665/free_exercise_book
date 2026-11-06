@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { CONTENT_LANGS } from "$lib/i18n/content";
   import { setSetting, settings, t } from "$lib/stores/settings.svelte";
 </script>
 
@@ -9,8 +10,9 @@
     <label for="lang"><strong>{t("settings.language")}</strong></label>
     <p class="muted">{t("settings.language_help")}</p>
     <select id="lang" value={settings.lang} onchange={(e) => setSetting("lang", e.currentTarget.value)}>
-      <option value="en">English</option>
-      <option value="bn">বাংলা (Bengali)</option>
+      {#each CONTENT_LANGS as l (l.code)}
+        <option value={l.code}>{l.code === "en" ? l.label : `${l.native} (${l.label})`}</option>
+      {/each}
     </select>
   </section>
 
@@ -29,18 +31,6 @@
   <section class="card group">
     <label for="fs"><strong>{t("settings.font_size")}</strong> · {settings.font_size}px</label>
     <input id="fs" type="range" min="14" max="22" step="1" value={settings.font_size} onchange={(e) => setSetting("font_size", e.currentTarget.value)} />
-  </section>
-
-  <section class="card group">
-    <span id="digits-label"><strong>{t("settings.digits")}</strong></span>
-    <div class="radios" role="radiogroup" aria-labelledby="digits-label">
-      {#each ["native", "latin"] as d (d)}
-        <label>
-          <input type="radio" name="digits" value={d} checked={settings.digits === d} onchange={() => setSetting("digits", d)} />
-          {t(`digits.${d}`)}
-        </label>
-      {/each}
-    </div>
   </section>
 
   <section class="card group">

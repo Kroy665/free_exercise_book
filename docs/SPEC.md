@@ -44,7 +44,7 @@ Priorities: **P0** = MVP, **P1** = v1.0, **P2** = later.
 | L2 | Notes reader: Markdown, tables, timelines, callouts, images | P0 |
 | L3 | Table of contents per note, with scroll position remembered | P0 |
 | L4 | Bookmarks on topics and note sections | P0 |
-| L5 | Switch English/Bengali per page (and per question) | P0 |
+| L5 | Content language button (English/Bengali) in the top bar; UI stays English | P0 |
 | L6 | Highlights and personal notes on note text | P1 |
 | L7 | "Related notes" (vector similarity) | P1 |
 | L8 | Source and "as of" date shown on time-sensitive facts | P0 |
@@ -130,10 +130,10 @@ Language, theme (system/light/dark), font size, reading width, daily goal, netwo
 
 | Version | Scope |
 |---|---|
-| **v0.1** | Shell, onboarding, sample content packs **in English and Bengali** (UI + content), library, notes reader, topic practice, keyword search, mistake notebook, error reporting |
+| **v0.1** | Shell, onboarding, sample content **in English and Bengali** (content language switch; English UI), library, notes reader, topic practice, keyword search, mistake notebook, error reporting |
 | **v0.2** | Custom and exam-pattern mock tests, results, resume, progress analytics |
 | **v0.3** | Vector search, related notes/questions, FSRS revision, monthly current-affairs packs |
-| **v0.4** | Hindi UI and content, WBCS exam pattern, delta updates, sideloading, app auto-update |
+| **v0.4** | Hindi content, WBCS exam pattern, delta updates, sideloading, app auto-update |
 | **v1.0** | Stable pack format, broad syllabus coverage, accessibility audit, signed installers |
 
 ## 7. Open questions

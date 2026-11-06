@@ -25,6 +25,7 @@
 ```
 
 - **Min window:** 960 × 600. Below 1100 px width the sidebar collapses to icons (64 px).
+- **Desktop behaviour, not a web page:** the window itself never scrolls. The sidebar and top bar are fixed; **only the content pane scrolls**, with no rubber-band overscroll. App chrome (sidebar, top bar, buttons, cards) is not text-selectable and uses the arrow cursor; study content stays selectable. The browser context menu (Reload / Inspect) is disabled in release builds.
 - **Test mode** hides the sidebar entirely (full-screen exam view, like the real CBT).
 - **Spacing scale (px):** 4, 8, 12, 16, 24, 32, 48, 64. Use tokens, never arbitrary values.
 - **Radius:** 6 px (controls), 10 px (cards). No pill-shaped buttons except tags.
@@ -93,8 +94,9 @@ All colours, spacing and type sizes are CSS custom properties in `lib/styles/tok
 - Bengali glyphs look smaller than Latin ones at the same size. In Bengali mode, scale body text by **1.06×** (`--bn-scale`) so both scripts feel equally readable.
 
 ### Bengali number and label conventions
-- **Digits:** the Bengali UI shows Bengali digits (০–৯) by default, via `Intl.NumberFormat('bn-IN')`. Settings → Language has a "Use English digits (0–9)" toggle. IDs, version numbers and keyboard hints always use ASCII digits.
-- **Option labels:** ক খ গ ঘ in the Bengali UI, A B C D in English.
+- **UI vs content language:** the UI (menus, buttons, messages) is **always English**. Only study content (topic titles, notes, questions and the labels inside them, such as callout titles, "List I/II", assertion–reason options) follows the selected content language.
+- **Digits:** Bengali content is authored with Bengali digits (০–৯); UI numbers (counts, progress) use 0–9.
+- **Option labels:** follow the question's language: ক খ গ ঘ for Bengali questions, A B C D for English.
 - **Dates:** `১০ মে ১৮৫৭` (day, Bengali month name, year), via `Intl.DateTimeFormat('bn-IN')`.
 - **Punctuation:** Bengali sentences end with the দাঁড়ি (।). Never replace it with a full stop in Bengali strings.
 - **Reading width:** max 72ch (user setting: narrow 60ch / normal 72ch / wide 90ch).
@@ -111,7 +113,7 @@ Build a small, consistent set in `lib/components/`. Each component has a story o
 | `IconButton` | Must have `aria-label` and a tooltip. |
 | `Card` | Topic and test cards; whole card is clickable via a real `<a>`/`<button>`. |
 | `ProgressBar` / `ProgressRing` | Shows topic completion; includes a text label for screen readers. |
-| `Tag` | Exam tags, difficulty, status (`ai-generated` / `reviewed` / `verified`). |
+| `Tag` | Exam tags, difficulty, status (`ai-generated` / `reviewed` / `verified`). Status is shown on the topic page and questions, **not on library cards**. |
 | `Callout` | Note blocks: `keyfacts`, `exam-tip`, `mnemonic`, `caution`, `as-of`. |
 | `QuestionCard` | Stem, statements/table, options, actions. Handles every question type. |
 | `OptionButton` | States: default, hover, selected, correct, wrong, disabled. See §6. |
@@ -181,8 +183,8 @@ Correctness must **never rely on colour alone**. Always pair it with an icon and
 - Errors say **what happened and what to do**: "Couldn't download Polity (no internet). It will retry when you're online."
 - Numbers use the Indian format where relevant (1,00,000), via `Intl.NumberFormat('en-IN')`.
 - Dates use `6 Nov 2026` style. Do not use ambiguous `06/11/26`.
-- Every UI string goes through i18n. Allow ~40% text expansion for Bengali and other languages; never fix widths to English text.
-- **Bengali UI copy:** standard colloquial Bengali (চলিত ভাষা), never the old literary style (সাধু ভাষা). Address the user politely as **আপনি**. Use common English loanwords where students actually use them (ডাউনলোড, মক টেস্ট, সেটিংস) instead of forced coinages.
+- Every UI string goes through `t()` (en.json). Content can be ~40% longer in Bengali; never fix widths to English text.
+- UI copy is English only. Bengali text appears only inside study content (see CONTENT_GUIDELINES §7).
 
 ## 11. States every screen must design for
 

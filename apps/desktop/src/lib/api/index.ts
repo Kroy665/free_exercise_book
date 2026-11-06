@@ -93,7 +93,8 @@ export interface Stats {
   total_attempts: number;
 }
 
-export type Settings = Record<"lang" | "theme" | "font_size" | "digits", string>;
+// `lang` is the content language; the UI is always English.
+export type Settings = Record<"lang" | "theme" | "font_size", string>;
 
 export interface ApiError {
   code: string;

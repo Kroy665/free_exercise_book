@@ -62,7 +62,7 @@ IDs in routes are **stable content IDs** (e.g. `hist.modern.revolt-1857`), so li
 
 ### 4.1 First run (onboarding)
 1. **Welcome:** one sentence about the app and "Start".
-2. **Language:** English / বাংলা (sets both the UI and the default content language; Hindi is added later). A second option, "Show English terms in Bengali content", is on by default.
+2. **Content language:** English / বাংলা (notes and questions; Hindi is added later). Menus and buttons are always English. A second option, "Show English terms in Bengali content", is on by default.
 3. **Exams:** multi-select (UPSC CSE, SSC CGL, IBPS PO, RRB NTPC, state PSCs...). This only pre-selects topics.
 4. **Topics:** pre-selected from the chosen exams, with the total download size shown and the option to adjust.
 5. **Download:** progress per pack. The user can **start studying as soon as the first pack is installed**.
@@ -132,9 +132,14 @@ Shown in Settings → Keyboard and in a `?` overlay.
 
 Single-letter shortcuts are disabled while a text input has focus.
 
-In the Bengali UI, options are labelled **ক খ গ ঘ**, but the keys stay `1–4` / `A–D` (they map to the same positions). The `?` overlay shows both labels.
+In Bengali questions, options are labelled **ক খ গ ঘ**, but the keys stay `1–4` / `A–D` (they map to the same positions). The `?` overlay shows both labels.
 
-## 7. Global status indicators (top bar)
+## 7. Top bar
+
+- **Content language button** (globe icon + current language, e.g. "বাংলা ▾"): opens a menu to pick the content language. Same as `Ctrl/⌘ + L` and Settings → Content language. Changing it re-renders the current page in place.
+- **Theme toggle** (sun/moon).
+
+## 8. Global status indicators (top bar)
 
 - **Offline**: a small muted "Offline" chip. Informational only, never a blocker.
 - **Downloading**: a progress chip that opens Downloads.
