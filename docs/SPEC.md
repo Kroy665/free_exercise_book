@@ -81,9 +81,9 @@ Priorities: **P0** = MVP, **P1** = v1.0, **P2** = later.
 ### 4.5 Search
 | ID | Feature | Pri |
 |---|---|---|
-| S1 | Keyword search across notes and questions (FTS5) | P0 |
+| S1 | ✅ Keyword search across notes and questions (FTS5; Bengali-aware words, digits, substring fallback) | P0 |
 | S2 | Meaning-based search (vectors), with fallback to keyword | P1 |
-| S3 | Command palette (Ctrl/Cmd+K) | P1 |
+| S3 | ✅ Command palette (Ctrl/Cmd+K) with search and quick actions | P1 |
 
 ### 4.6 Progress
 | ID | Feature | Pri |

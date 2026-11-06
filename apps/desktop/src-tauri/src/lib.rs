@@ -60,6 +60,11 @@ fn init_state(app: &AppHandle) -> Result<AppState, Box<dyn std::error::Error>> {
     };
     let content = Mutex::new(content);
     packs.sync_bundled(&content);
+    if let Ok(c) = content.lock()
+        && let Err(err) = feb_core::search::ensure_index(&c)
+    {
+        eprintln!("[search] could not build the index: {err}");
+    }
 
     Ok(AppState {
         content,
@@ -87,6 +92,7 @@ pub fn run() {
             commands::stats_get,
             commands::settings_get,
             commands::settings_set,
+            commands::search,
             pack_commands::packs_list,
             pack_commands::packs_check,
             pack_commands::packs_install,

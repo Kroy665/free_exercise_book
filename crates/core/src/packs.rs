@@ -123,6 +123,7 @@ pub fn install_pack_db(
             "INSERT OR REPLACE INTO installed_packs (id, version, sha256, size) VALUES (?1, ?2, ?3, ?4)",
             params![id, version, sha256, size],
         )?;
+        crate::search::index_topic(&tx, &id)?;
         tx.commit()?;
         Ok(installed(conn, &id)?.expect("just installed"))
     })();
@@ -138,6 +139,7 @@ pub fn remove_pack(conn: &mut Connection, id: &str) -> Result<()> {
     tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
     tx.execute("DELETE FROM installed_packs WHERE id = ?1", [id])?;
+    crate::search::remove_topic(&tx, id)?;
     tx.execute_batch(
         "DELETE FROM units WHERE id NOT IN (SELECT DISTINCT unit_id FROM topics);
          DELETE FROM subjects WHERE id NOT IN (SELECT DISTINCT subject_id FROM topics);",
@@ -187,6 +189,7 @@ pub fn purge_unmanaged(conn: &mut Connection) -> Result<usize> {
         tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
+        crate::search::remove_topic(&tx, id)?;
     }
     tx.execute_batch(
         "DELETE FROM units WHERE id NOT IN (SELECT DISTINCT unit_id FROM topics);

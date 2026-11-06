@@ -300,6 +300,7 @@ pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
             }
         }
     }
+    crate::search::rebuild(&tx)?;
     tx.commit()?;
     Ok(report)
 }

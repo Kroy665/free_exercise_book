@@ -127,6 +127,14 @@ FTS5 with BM25, with prefix matching for search-as-you-type. Uses the trigram in
 - Keep the English terms that appear in brackets in Bengali notes in the index, so typing "Doctrine of Lapse" while Bengali content is selected still finds স্বত্ববিলোপ নীতি.
 - `multilingual-e5-small` covers Bengali, so meaning-based search works across languages (an English query can find a Bengali note).
 
+### Implementation (v0.2)
+- `search_index` (FTS5 `unicode61` with **`tokenchars`** = Bengali/Devanagari vowel signs, virama, ZWJ/ZWNJ). Without `tokenchars`, unicode61 splits Bengali words into consonant fragments ("মহাবিদ্রোহের" → "মহ", "ব", "দ", …).
+- Columns: `title`, `body` (original text, for display) and `alt` (digit-normalised copy, only when it differs).
+- Query: each word becomes a prefix term (`"বিদ্রোহ"*` finds "বিদ্রোহের"); the selected language plus English; each item shown once, titled in the selected language.
+- `search_trigram` (FTS5 `trigram`): substring fallback used when there are fewer than 8 whole-word hits (Bengali compounds like "মহাবিদ্রোহ").
+- Both indexes are updated in the pack install/remove transaction; built once on first start after upgrading.
+- UI: command palette (`Ctrl/⌘+K`, or the search box in the top bar). Highlights are widened to whole words, so a Bengali word is never split between a consonant and its vowel sign.
+
 ### Vector (optional)
 - Content vectors are **precomputed by the packer** with `multilingual-e5-small` (`"passage: "` prefix).
 - On device, only the **query** is embedded (`"query: "` prefix) by `crates/embed`. The model (~120 MB, quantised ONNX) is downloaded only if the user turns on "Smart search".

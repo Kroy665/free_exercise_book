@@ -293,3 +293,23 @@ export const testsApi = {
   result: (id: number, lang: string) => invoke<TestResult>("test_result", { id, lang }),
   remove: (id: number) => invoke<void>("test_delete", { id }),
 };
+
+// ---------- Search ----------
+
+export interface SearchHit {
+  kind: "topic" | "section" | "question";
+  ref: string;
+  topic_id: string;
+  topic_title: string;
+  title: string;
+  /** Matches are wrapped in \u0002 … \u0003 */
+  snippet: string;
+  /** Language of `title`. */
+  lang: string;
+  /** Language of `snippet` (English when only English text matched). */
+  snippet_lang: string;
+}
+
+export const searchApi = {
+  search: (query: string, lang: string) => invoke<SearchHit[]>("search", { query, lang }),
+};

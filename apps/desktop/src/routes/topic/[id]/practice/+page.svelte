@@ -13,7 +13,12 @@
   async function load(topicId: string, lang: string) {
     error = null;
     try {
-      [topic, questions] = await Promise.all([api.topicGet(topicId, lang), api.practiceQuestions(topicId, lang)]);
+      const [tp, qs] = await Promise.all([api.topicGet(topicId, lang), api.practiceQuestions(topicId, lang)]);
+      // ?q=<question id> (from search): start with that question.
+      const first = page.url.searchParams.get("q");
+      const i = first ? qs.findIndex((q) => q.id === first) : -1;
+      topic = tp;
+      questions = i > 0 ? [qs[i], ...qs.slice(0, i), ...qs.slice(i + 1)] : qs;
     } catch (e) {
       error = errorMessage(e);
     }

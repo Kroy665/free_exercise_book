@@ -83,3 +83,15 @@ pub async fn settings_get(state: State<'_, AppState>) -> CmdResult<BTreeMap<Stri
 pub async fn settings_set(state: State<'_, AppState>, key: String, value: String) -> CmdResult<()> {
     settings::set(&*state.user()?, &key, &value).map_err(e)
 }
+
+#[tauri::command]
+pub async fn search(
+    state: State<'_, AppState>,
+    query: String,
+    lang: String,
+) -> CmdResult<Vec<feb_core::search::SearchHit>> {
+    if query.chars().count() > 200 {
+        return Ok(Vec::new());
+    }
+    feb_core::search::search(&*state.content()?, &query, &lang, 30).map_err(e)
+}

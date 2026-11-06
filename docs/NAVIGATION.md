@@ -18,7 +18,7 @@ App
 └── Settings                General, reading, study, data, network, about
 ```
 
-Search (⌘K / Ctrl+K) is global and opens as an overlay, not a page.
+Search (⌘K / Ctrl+K, or the search box in the top bar) is global and opens as an overlay, not a page. It lists quick actions (go to a page, new custom test, switch content language, toggle theme) and search results grouped as Topics / Notes / Questions. Enter on a note opens the topic at that section; on a question, starts topic practice with that question first. Disabled in the exam view.
 
 ## 2. Sidebar
 

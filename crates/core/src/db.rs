@@ -64,6 +64,31 @@ const CONTENT_MIGRATIONS: &[&str] = &[
         data TEXT NOT NULL              -- JSON ExamPattern
     );
     "#,
+    // 4: full-text search (docs/DATA_AND_PACKS.md §8, crates/core/src/search.rs).
+    // `search_index`: word index. `tokenchars` keeps Bengali/Devanagari vowel signs, virama and
+    // ZWJ/ZWNJ inside words (by default unicode61 splits words at them). `alt` holds the
+    // digit-normalised text (০-৯ -> 0-9) so "1857" finds "১৮৫৭"; title/body stay original
+    // for display. `search_trigram`: substring fallback (Bengali compounds, partial words).
+    r#"
+    CREATE VIRTUAL TABLE search_index USING fts5(
+        title,
+        body,
+        alt,
+        kind     UNINDEXED,   -- topic | section | question
+        ref      UNINDEXED,   -- topic id | section anchor | question id
+        topic_id UNINDEXED,
+        lang     UNINDEXED,
+        tokenize = 'unicode61 remove_diacritics 2 tokenchars ''ঁংঃ়ািীুূৃৄেৈোৌ্ৗৢৣऀँंःऺऻ़ऽािीुूृॄॅॆेैॉॊोौ्ॎॏ॒॑॓॔ॕॖॗॢॣ‌‍'''
+    );
+    CREATE VIRTUAL TABLE search_trigram USING fts5(
+        text,
+        kind     UNINDEXED,
+        ref      UNINDEXED,
+        topic_id UNINDEXED,
+        lang     UNINDEXED,
+        tokenize = 'trigram'
+    );
+    "#,
 ];
 
 /// Pack file format version (docs/DATA_AND_PACKS.md §2). A pack is a SQLite database with

@@ -6,6 +6,8 @@
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/state";
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
+  import CommandPalette from "$lib/components/CommandPalette.svelte";
+  import Search from "@lucide/svelte/icons/search";
   import { packBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
   import House from "@lucide/svelte/icons/house";
@@ -57,7 +59,14 @@
     if (scroller && !to?.url.hash) scroller.scrollTop = 0;
   });
 
+  let paletteOpen = $state(false);
+
   function onkeydown(e: KeyboardEvent) {
+    if (!examMode && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      paletteOpen = !paletteOpen;
+      return;
+    }
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "l") {
       e.preventDefault();
       toggleLang();
@@ -108,6 +117,12 @@
 
     <div class="main-col">
       <header class="topbar chrome">
+        <button class="searchbtn" onclick={() => (paletteOpen = true)} aria-keyshortcuts="Control+K Meta+K">
+          <Search size={16} aria-hidden="true" />
+          <span>{t("search.open")}…</span>
+          <kbd>{navigator.platform.startsWith("Mac") ? "⌘K" : "Ctrl K"}</kbd>
+        </button>
+        <span class="spacer"></span>
         <LanguageMenu />
         <button
           class="btn btn-ghost"
@@ -123,6 +138,7 @@
       </main>
     </div>
   </div>
+  <CommandPalette bind:open={paletteOpen} />
 {/if}
 
 <style>
@@ -211,6 +227,35 @@
     padding: var(--space-2) var(--space-4);
     border-bottom: 1px solid var(--border);
     background: var(--bg);
+  }
+  .searchbtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: min(360px, 40vw);
+    height: 34px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: default;
+  }
+  .searchbtn:hover {
+    border-color: var(--accent);
+  }
+  .searchbtn kbd {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0 6px;
+  }
+  .spacer {
+    flex: 1;
   }
   .content {
     flex: 1;
