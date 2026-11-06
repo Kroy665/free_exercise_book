@@ -1,4 +1,5 @@
-//! Mock test engine against the real sample content (12 History questions).
+//! Mock test engine against the real sample content: 12 History questions plus 8
+//! current-affairs questions (exam patterns include the `ca` subject).
 
 use feb_core::mock::{self, AnswerState, CustomSpec, TestState};
 use feb_core::{db, import, practice};
@@ -17,9 +18,9 @@ fn setup() -> (rusqlite::Connection, rusqlite::Connection) {
 }
 
 fn answer_key(c: &rusqlite::Connection) -> std::collections::HashMap<String, u8> {
-    practice::questions_for_topic(c, TOPIC, "en")
-        .unwrap()
-        .into_iter()
+    [TOPIC, "ca.2026.10"]
+        .iter()
+        .flat_map(|t| practice::questions_for_topic(c, t, "en").unwrap())
         .map(|q| (q.id, q.answer))
         .collect()
 }
@@ -32,11 +33,11 @@ fn exam_patterns_are_scaled_to_installed_content() {
         .iter()
         .find(|p| p.id == "upsc-cse-prelims-gs1")
         .unwrap();
-    assert_eq!((upsc.total_questions, upsc.available), (100, 12));
-    assert_eq!(upsc.scaled_minutes, 15); // ceil(120 * 12 / 100)
+    assert_eq!((upsc.total_questions, upsc.available), (100, 20));
+    assert_eq!(upsc.scaled_minutes, 24); // ceil(120 * 20 / 100)
     let ssc = views.iter().find(|p| p.id == "ssc-cgl-tier1").unwrap();
     let ga = ssc.sections.iter().find(|s| s.id == "ga").unwrap();
-    assert_eq!((ga.required, ga.available), (25, 12));
+    assert_eq!((ga.required, ga.available), (25, 20));
     assert!(
         ssc.sections
             .iter()
@@ -52,7 +53,7 @@ fn pattern_test_full_cycle_with_negative_marking() {
     let s = mock::session(&c, &u, id, "bn").unwrap();
     assert_eq!(
         (s.status.as_str(), s.total_questions, s.duration_ms),
-        ("ready", 12, 15 * 60_000)
+        ("ready", 20, 24 * 60_000)
     );
     assert_eq!(s.scaled_from, Some((100, 120)));
     // Answers and explanations are hidden during the test.
@@ -75,7 +76,7 @@ fn pattern_test_full_cycle_with_negative_marking() {
         let choice = match i {
             0..=2 => Some(right),           // 3 correct
             3..=4 => Some((right + 1) % 4), // 2 wrong
-            _ => None,                      // 7 unanswered
+            _ => None,                      // the rest unanswered
         };
         state.answers.insert(
             q.id.clone(),
@@ -103,12 +104,12 @@ fn pattern_test_full_cycle_with_negative_marking() {
     let r = mock::submit(&c, &mut u, id, &state, 300_000).unwrap();
     assert_eq!(
         (r.total.correct, r.total.wrong, r.total.unanswered),
-        (3, 2, 7)
+        (3, 2, 15)
     );
-    assert_eq!(r.total.max_score, 24.0);
+    assert_eq!(r.total.max_score, 40.0);
     assert_eq!(r.total.score, 4.67); // 3*2 - 2*0.6667
     assert_eq!(r.accuracy, 60.0);
-    assert_eq!(r.time_used_ms, 15 * 60_000 - 300_000);
+    assert_eq!(r.time_used_ms, 24 * 60_000 - 300_000);
     // Submitting again returns the same result; saving is no longer allowed.
     assert_eq!(
         mock::submit(&c, &mut u, id, &TestState::default(), 0)
@@ -124,7 +125,7 @@ fn pattern_test_full_cycle_with_negative_marking() {
     assert_eq!(practice::stats(&c, &u).unwrap().total_attempts, 5);
 
     let res = mock::result(&c, &u, id, "en").unwrap();
-    assert_eq!(res.review.len(), 12);
+    assert_eq!(res.review.len(), 20);
     assert_eq!(
         res.review.iter().filter(|x| x.outcome == "wrong").count(),
         2
@@ -134,7 +135,8 @@ fn pattern_test_full_cycle_with_negative_marking() {
             .iter()
             .all(|x| x.question.answer < 4 && !x.question.explanation.is_empty())
     );
-    assert_eq!(res.topics[0].name, "The Revolt of 1857");
+    assert!(res.topics.iter().any(|t| t.name == "The Revolt of 1857"));
+    assert!(res.topics.iter().any(|t| t.name == "October 2026"));
     let list = mock::list(&u).unwrap();
     assert_eq!(
         (list[0].status.as_str(), list[0].score),

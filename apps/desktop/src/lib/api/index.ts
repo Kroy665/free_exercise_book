@@ -130,6 +130,8 @@ export const api = {
   reviseDue: (lang: string) => invoke<QuestionView[]>("revise_due", { lang }),
   grade: (questionId: string, grade: Grade) => invoke<unknown>("srs_grade", { questionId, grade }),
   progress: (lang: string) => invoke<ProgressView>("progress_get", { lang }),
+  caMonths: (lang: string) => invoke<CaMonthSummary[]>("ca_months", { lang }),
+  caMonth: (id: string, lang: string) => invoke<CaMonthView>("ca_month", { id, lang }),
   settingsGet: () => invoke<Settings>("settings_get"),
   settingsSet: (key: keyof Settings, value: string) => invoke<void>("settings_set", { key, value }),
 };
@@ -354,4 +356,38 @@ export interface ProgressView {
   }[];
   weak: string[];
   tests: { id: number; title: string; pct: number; submitted_at: number }[];
+}
+
+// ---------- Current affairs ----------
+
+export interface CaMonthSummary {
+  topic_id: string;
+  title: string;
+  items: number;
+  questions: number;
+  attempted: number;
+  correct: number;
+  categories: string[];
+}
+
+export interface CaItem {
+  id: string;
+  anchor: string;
+  date: string;
+  category: string;
+  title: string;
+  body: string;
+  key_points: string[];
+  related: { id: string; title: string | null }[];
+  source: string;
+  as_of: string;
+  status: ContentStatus;
+  lang: string;
+}
+
+export interface CaMonthView {
+  topic_id: string;
+  title: string;
+  items: CaItem[];
+  questions: number;
 }

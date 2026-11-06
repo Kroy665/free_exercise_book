@@ -195,8 +195,10 @@ impl PackConfig {
         result
     }
 
-    /// First run: install every bundled pack. Later runs: update installed packs whose
-    /// bundled version is newer (the app was updated). Never re-installs a removed pack.
+    /// Install bundled packs the app has never offered before (first run, or new packs
+    /// shipped with an app update), and update installed packs whose bundled version is
+    /// newer. A pack the user removed is never re-installed: every bundled pack id ever
+    /// offered is remembered in `bundled-seen.json`.
     pub fn sync_bundled(&self, content: &Mutex<Connection>) {
         if self.dev_mode {
             return;
@@ -208,8 +210,12 @@ impl PackConfig {
             return;
         };
         self.store_exams(content, &manifest);
-        let marker = self.data_dir.join("packs-initialized");
-        let first_run = !marker.exists();
+        let seen_file = self.data_dir.join("bundled-seen.json");
+        let legacy_marker = self.data_dir.join("packs-initialized");
+        let mut seen: std::collections::BTreeSet<String> = std::fs::read_to_string(&seen_file)
+            .ok()
+            .and_then(|s| serde_json::from_str(&s).ok())
+            .unwrap_or_default();
         if let Ok(mut c) = content.lock() {
             match store::purge_unmanaged(&mut c) {
                 Ok(n) if n > 0 => {
@@ -227,10 +233,15 @@ impl PackConfig {
             .into_iter()
             .map(|p| (p.id, p.version))
             .collect();
+        // Upgrading from a build that only kept a first-run marker: treat what is installed
+        // as already offered (so earlier removals stay removed; new packs still arrive).
+        if !seen_file.exists() && legacy_marker.exists() {
+            seen.extend(installed.keys().cloned());
+        }
         let source = Source::Folder(dir);
         for entry in &manifest.packs {
             let wanted = match installed.get(&entry.id) {
-                None => first_run,
+                None => !seen.contains(&entry.id),
                 Some(v) => version_newer(&entry.version, v),
             };
             if wanted {
@@ -240,7 +251,10 @@ impl PackConfig {
                 }
             }
         }
-        std::fs::write(marker, "1").ok();
+        seen.extend(manifest.packs.iter().map(|p| p.id.clone()));
+        if let Ok(json) = serde_json::to_string(&seen) {
+            std::fs::write(&seen_file, json).ok();
+        }
     }
 }
 
@@ -499,6 +513,8 @@ mod tests {
 
     #[test]
     fn lifecycle_bundled_update_tamper_remove() {
+        // The sample content has two packs (a History topic and a current-affairs month).
+        let item = |v: &PacksView| v.items.iter().find(|i| i.id == TOPIC).cloned().unwrap();
         let tmp = std::env::temp_dir().join(format!("feb-app-packs-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&tmp);
         let key = sign::generate_keypair("test").unwrap();
@@ -533,14 +549,14 @@ mod tests {
         );
         let v = view(&packs, &content.lock().unwrap(), "bn", None).unwrap();
         assert_eq!(
-            (v.items[0].state, v.items[0].title.as_str()),
+            (item(&v).state, item(&v).title.as_str()),
             ("installed", "১৮৫৭ সালের মহাবিদ্রোহ")
         );
 
         // The server has 1.1.0 → shown as an update and installed from the server.
         packs.check_remote().unwrap();
         let v = view(&packs, &content.lock().unwrap(), "en", None).unwrap();
-        assert_eq!((v.items[0].state, v.updates), ("update", 1));
+        assert_eq!((item(&v).state, v.updates), ("update", 2));
         let (entry, source) = packs.best(TOPIC).unwrap();
         assert!(matches!(source, Source::Remote(_)));
         let mut phases = Vec::new();
@@ -570,7 +586,27 @@ mod tests {
         packs.sync_bundled(&content);
         assert_eq!(installed_version(&content), None);
         let v = view(&packs, &content.lock().unwrap(), "en", None).unwrap();
-        assert_eq!(v.items[0].state, "available");
+        assert_eq!(item(&v).state, "available");
+
+        // A bundled pack the app has never offered (e.g. a new month shipped in an app
+        // update) is installed on the next start; removed packs stay removed.
+        let month = "ca.2026.10";
+        store::remove_pack(&mut content.lock().unwrap(), month).unwrap();
+        std::fs::write(tmp.join("data/bundled-seen.json"), format!("[\"{TOPIC}\"]")).unwrap();
+        packs.sync_bundled(&content);
+        assert!(
+            store::installed(&content.lock().unwrap(), month)
+                .unwrap()
+                .is_some(),
+            "new pack arrives"
+        );
+        assert_eq!(
+            installed_version(&content),
+            None,
+            "removed pack stays removed"
+        );
+        let seen = std::fs::read_to_string(tmp.join("data/bundled-seen.json")).unwrap();
+        assert!(seen.contains(month) && seen.contains(TOPIC));
 
         // A server signed by an unknown key is refused.
         let rogue_cfg = cfg(serve(tmp.join("rogue")));

@@ -50,7 +50,19 @@ content/
                 └── assets/            # images (WebP/SVG, ≤ 200 KB each)
 ```
 
-Current affairs live under `content/current-affairs/2026/11/` with `items.yaml` and `questions.yaml`.
+Current affairs live under `content/current-affairs/` (see §10):
+
+```
+content/current-affairs/
+├── subject.yaml          # id: ca
+└── 2026/
+    ├── unit.yaml         # id: ca.2026
+    └── 10/
+        ├── topic.yaml    # id: ca.2026.10 (one month = one pack)
+        ├── items.yaml    # the month's news items
+        ├── questions.yaml# the monthly quiz (source + as_of required)
+        └── notes.en.md   # optional intro; items are added as note sections automatically
+```
 
 ## 4. IDs
 
@@ -220,6 +232,9 @@ If an exam has sections whose subjects are not yet available, the test builder o
 - Changing a question's **answer** always requires a changelog line, because the app re-grades past attempts.
 
 ## 10. Current affairs items (`items.yaml`)
+
+A month is a normal topic of the subject `ca` (id `ca.<yyyy>.<mm>`), so packs, search, practice, mock tests, revision and progress work unchanged. Each item is stored structurally (for the Current Affairs page) **and** turned into a note section (anchor = item id, with key facts and an "as of" + source block), so questions can link to it via `refs: [i003]`.
+Items are validated by `content/schema/ca_items.schema.json`; quiz questions must have `source` and `as_of`.
 
 ```yaml
 - id: i001

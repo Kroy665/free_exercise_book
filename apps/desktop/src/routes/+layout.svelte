@@ -45,6 +45,7 @@
   function active(href: string) {
     const p = page.url.pathname;
     if (href === "/") return p === "/";
+    if (p.startsWith("/topic/ca.")) return href === "/current-affairs";
     return p === href || p.startsWith(href + "/") || (href === "/library" && p.startsWith("/topic/"));
   }
 

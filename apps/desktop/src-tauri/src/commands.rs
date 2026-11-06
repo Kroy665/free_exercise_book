@@ -119,3 +119,20 @@ pub async fn progress_get(
 ) -> CmdResult<feb_core::progress::ProgressView> {
     feb_core::progress::view(&*state.content()?, &*state.user()?, &lang).map_err(e)
 }
+
+#[tauri::command]
+pub async fn ca_months(
+    state: State<'_, AppState>,
+    lang: String,
+) -> CmdResult<Vec<feb_core::ca::MonthSummary>> {
+    feb_core::ca::months(&*state.content()?, &*state.user()?, &lang).map_err(e)
+}
+
+#[tauri::command]
+pub async fn ca_month(
+    state: State<'_, AppState>,
+    id: String,
+    lang: String,
+) -> CmdResult<feb_core::ca::MonthView> {
+    feb_core::ca::month(&*state.content()?, &id, &lang).map_err(e)
+}

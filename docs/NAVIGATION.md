@@ -49,7 +49,7 @@ Order (top to bottom): **Home, Library, Practice, Tests, Revise, Current Affairs
 | `/tests/[testId]/review` | Question-by-question review |
 | `/revise` | Due / Mistakes / Bookmarks tabs |
 | `/current-affairs` | Month list |
-| `/current-affairs/[yyyy-mm]` | Month items and quiz |
+| `/current-affairs/[topicId]` | Month items (e.g. `ca.2026.10`), category filters, quiz and timed test |
 | `/progress` | Analytics |
 | `/downloads` | Pack manager |
 | `/settings/[section]` | Settings |

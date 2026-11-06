@@ -112,6 +112,7 @@ pub fn install_pack_db(
         let tx = conn.transaction()?;
         tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [&id])?;
         tx.execute("DELETE FROM questions WHERE topic_id = ?1", [&id])?;
+        tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [&id])?;
         tx.execute_batch(
             "INSERT OR REPLACE INTO subjects SELECT * FROM pack.subjects;
              INSERT OR REPLACE INTO units SELECT * FROM pack.units;
@@ -119,6 +120,14 @@ pub fn install_pack_db(
              INSERT INTO note_sections SELECT * FROM pack.note_sections;
              INSERT INTO questions SELECT * FROM pack.questions;",
         )?;
+        let has_ca: bool = tx.query_row(
+            "SELECT EXISTS (SELECT 1 FROM pack.sqlite_master WHERE type = 'table' AND name = 'ca_items')",
+            [],
+            |r| r.get(0),
+        )?;
+        if has_ca {
+            tx.execute_batch("INSERT INTO ca_items SELECT * FROM pack.ca_items;")?;
+        }
         tx.execute(
             "INSERT OR REPLACE INTO installed_packs (id, version, sha256, size) VALUES (?1, ?2, ?3, ?4)",
             params![id, version, sha256, size],
@@ -137,6 +146,7 @@ pub fn remove_pack(conn: &mut Connection, id: &str) -> Result<()> {
     let tx = conn.transaction()?;
     tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
+    tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
     tx.execute("DELETE FROM installed_packs WHERE id = ?1", [id])?;
     crate::search::remove_topic(&tx, id)?;
@@ -188,6 +198,7 @@ pub fn purge_unmanaged(conn: &mut Connection) -> Result<usize> {
     for id in &ids {
         tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
+        tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
         crate::search::remove_topic(&tx, id)?;
     }

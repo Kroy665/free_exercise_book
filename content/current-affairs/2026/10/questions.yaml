@@ -1,0 +1,187 @@
+# Monthly quiz — October 2026. Every question cites its source and as_of date.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ibps-po, rrb-ntpc, wbcs]
+  refs: [i001]
+  stem:
+    en: In October 2026, the RBI changed the policy repo rate to what level?
+    bn: অক্টোবর ২০২৬-এ রিজার্ভ ব্যাংক নীতিগত রেপো রেট কত করেছে?
+  options:
+    - { en: "5.25%", bn: "৫.২৫%" }
+    - { en: "5.50%", bn: "৫.৫০%" }
+    - { en: "5.75%", bn: "৫.৭৫%" }
+    - { en: "6.00%", bn: "৬.০০%" }
+  answer: 1
+  explanation:
+    en: The MPC raised the repo rate by 25 basis points, from 5.25% to 5.50%, at its meeting of 5–7 October 2026.
+    bn: ৫–৭ অক্টোবর ২০২৬-এর বৈঠকে MPC রেপো রেট ২৫ বেসিস পয়েন্ট বাড়িয়ে ৫.২৫% থেকে ৫.৫০% করে।
+  status: ai-generated
+  as_of: "2026-10-07"
+  source: https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63744
+
+- id: q0002
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, ibps-po, wbcs]
+  refs: [i001]
+  stem:
+    en: Consider the following statements about the RBI's monetary policy decision of October 2026.
+    bn: অক্টোবর ২০২৬-এ রিজার্ভ ব্যাংকের মুদ্রানীতি সিদ্ধান্ত সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The repo rate was increased by 25 basis points."
+      bn: "১. রেপো রেট ২৫ বেসিস পয়েন্ট বাড়ানো হয়েছিল।"
+    - en: "2. The policy stance was changed to \"calibrated tightening\"."
+      bn: "২. নীতিগত অবস্থান বদলে \"পরিমিত কঠোরতা\" (calibrated tightening) করা হয়েছিল।"
+    - en: "3. It was the first repo rate cut since February 2023."
+      bn: "৩. এটি ছিল ফেব্রুয়ারি ২০২৩-এর পর প্রথম রেপো রেট হ্রাস।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong; it was the first repo rate increase (not a cut) since February 2023.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল; এটি ছিল ফেব্রুয়ারি ২০২৩-এর পর প্রথম রেপো রেট বৃদ্ধি (হ্রাস নয়)।
+  status: ai-generated
+  as_of: "2026-10-07"
+  source: https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63744
+
+- id: q0003
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, wbcs]
+  refs: [i002]
+  stem:
+    en: The 2026 Nobel Memorial Prize in Economic Sciences was awarded "for microeconomic foundations of macroeconomic stabilisation" to which pair?
+    bn: '"সামষ্টিক অর্থনৈতিক স্থিতিশীলতার ব্যষ্টিক অর্থনৈতিক ভিত্তি"-র জন্য ২০২৬ সালের অর্থনীতিতে নোবেল কোন দুজন পেয়েছেন?'
+  options:
+    - { en: Robert E. Hall and Michael Woodford, bn: রবার্ট ই. হল ও মাইকেল উডফোর্ড }
+    - { en: Francis Halzen and Michael Woodford, bn: ফ্রান্সিস হালজেন ও মাইকেল উডফোর্ড }
+    - { en: Robert E. Hall and Karl Deisseroth, bn: রবার্ট ই. হল ও কার্ল ডাইসারথ }
+    - { en: Henri B. Kagan and Kensō Soai, bn: অঁরি বি. কাগান ও কেনসো সোয়াই }
+  answer: 0
+  explanation:
+    en: Robert E. Hall (Stanford) and Michael Woodford (Columbia) shared the prize, announced on 12 October 2026. Halzen won the Physics prize; Kagan and Soai won Chemistry.
+    bn: রবার্ট ই. হল (স্ট্যানফোর্ড) ও মাইকেল উডফোর্ড (কলম্বিয়া) যৌথভাবে পুরস্কারটি পান; ঘোষণা ১২ অক্টোবর ২০২৬। হালজেন পদার্থবিদ্যায় এবং কাগান ও সোয়াই রসায়নে নোবেল পেয়েছেন।
+  status: ai-generated
+  as_of: "2026-10-12"
+  source: https://www.nobelprize.org/prizes/economic-sciences/2026/press-release/
+
+- id: q0004
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, wbcs, rrb-ntpc]
+  refs: [i003]
+  stem:
+    en: Match List I (Nobel Prize 2026) with List II (Laureate).
+    bn: তালিকা I (নোবেল পুরস্কার ২০২৬)-এর সঙ্গে তালিকা II (পুরস্কারপ্রাপক) মেলান।
+  left:
+    - { en: "A. Physics", bn: "ক. পদার্থবিদ্যা" }
+    - { en: "B. Literature", bn: "খ. সাহিত্য" }
+    - { en: "C. Peace", bn: "গ. শান্তি" }
+    - { en: "D. Economic Sciences", bn: "ঘ. অর্থনীতি" }
+  right:
+    - { en: "1. Anne Carson", bn: "১. অ্যান কারসন" }
+    - { en: "2. Robert E. Hall and Michael Woodford", bn: "২. রবার্ট ই. হল ও মাইকেল উডফোর্ড" }
+    - { en: "3. Francis Halzen", bn: "৩. ফ্রান্সিস হালজেন" }
+    - { en: "4. Navi Pillay", bn: "৪. নাভি পিল্লাই" }
+  options:
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+  answer: 0
+  explanation:
+    en: Physics went to Francis Halzen, Literature to Anne Carson, Peace to Navi Pillay, and Economic Sciences to Robert E. Hall and Michael Woodford.
+    bn: পদার্থবিদ্যায় ফ্রান্সিস হালজেন, সাহিত্যে অ্যান কারসন, শান্তিতে নাভি পিল্লাই এবং অর্থনীতিতে রবার্ট ই. হল ও মাইকেল উডফোর্ড নোবেল পেয়েছেন।
+  status: ai-generated
+  as_of: "2026-10-31"
+  source: https://www.nobelprize.org/all-nobel-prizes-2026/
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, wbcs]
+  refs: [i003]
+  stem:
+    en: The 2026 Nobel Prize in Physiology or Medicine was awarded for work on which subject?
+    bn: ২০২৬ সালের চিকিৎসাবিজ্ঞানে নোবেল পুরস্কার কোন বিষয়ে কাজের জন্য দেওয়া হয়েছে?
+  options:
+    - { en: mRNA vaccines, bn: এমআরএনএ টিকা }
+    - { en: Light-gated ion channels and optogenetics, bn: আলো-নিয়ন্ত্রিত আয়ন চ্যানেল ও অপটোজেনেটিক্স }
+    - { en: CRISPR gene editing, bn: ক্রিসপার জিন সম্পাদনা }
+    - { en: High-energy astrophysical neutrinos, bn: উচ্চশক্তির মহাজাগতিক নিউট্রিনো }
+  answer: 1
+  explanation:
+    en: Karl Deisseroth, Peter Hegemann and Georg Nagel were honoured for light-gated ion channels and optogenetics. High-energy neutrinos (IceCube) was the subject of the Physics prize.
+    bn: আলো-নিয়ন্ত্রিত আয়ন চ্যানেল ও অপটোজেনেটিক্সের জন্য কার্ল ডাইসারথ, পিটার হেগেমান ও গেয়র্গ নাগেল সম্মানিত হয়েছেন। উচ্চশক্তির নিউট্রিনো (আইসকিউব) ছিল পদার্থবিদ্যার নোবেলের বিষয়।
+  status: ai-generated
+  as_of: "2026-10-31"
+  source: https://www.nobelprize.org/all-nobel-prizes-2026/
+
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [i004]
+  stem:
+    en: The Pradhan Mantri Viksit Gram Swaraj Yojana, approved by the Union Cabinet on 28 October 2026, mainly aims to strengthen which of the following?
+    bn: ২৮ অক্টোবর ২০২৬ কেন্দ্রীয় মন্ত্রিসভার অনুমোদিত প্রধানমন্ত্রী বিকশিত গ্রাম স্বরাজ যোজনার মূল লক্ষ্য নিম্নলিখিত কোনটিকে শক্তিশালী করা?
+  options:
+    - { en: Urban local bodies, bn: শহুরে স্থানীয় সংস্থা }
+    - { en: Rural cooperative banks, bn: গ্রামীণ সমবায় ব্যাংক }
+    - { en: Panchayats and rural local governance, bn: পঞ্চায়েত ও গ্রামীণ স্থানীয় স্বশাসন }
+    - { en: Self-help groups for women, bn: মহিলাদের স্বনির্ভর গোষ্ঠী }
+  answer: 2
+  explanation:
+    en: PM-VGSY is a Centrally Sponsored Scheme (2026-27 to 2030-31, ₹7,395.55 crore) to strengthen Panchayats and rural local governance, covering more than 2.55 lakh Panchayats and traditional local bodies.
+    bn: PM-VGSY একটি কেন্দ্রীয়ভাবে প্রবর্তিত প্রকল্প (২০২৬-২৭ থেকে ২০৩০-৩১, ৭,৩৯৫.৫৫ কোটি টাকা), যার উদ্দেশ্য পঞ্চায়েত ও গ্রামীণ স্থানীয় স্বশাসন শক্তিশালী করা; ২.৫৫ লক্ষেরও বেশি পঞ্চায়েত ও প্রথাগত স্থানীয় সংস্থা এর আওতায়।
+  status: ai-generated
+  as_of: "2026-10-28"
+  source: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2329692
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, rrb-ntpc, wbcs]
+  refs: [i005]
+  stem:
+    en: NVS-03, launched by ISRO's GSLV-F18 on 30 October 2026, belongs to which kind of satellite system?
+    bn: ৩০ অক্টোবর ২০২৬ ইসরোর জিএসএলভি-এফ১৮ দ্বারা উৎক্ষেপিত এনভিএস-০৩ কোন ধরনের উপগ্রহ ব্যবস্থার অংশ?
+  options:
+    - { en: Earth observation, bn: ভূ-পর্যবেক্ষণ }
+    - { en: Communication, bn: যোগাযোগ }
+    - { en: Navigation (IRNSS / NavIC), bn: নেভিগেশন (IRNSS / NavIC) }
+    - { en: Weather (meteorology), bn: আবহাওয়া }
+  answer: 2
+  explanation:
+    en: NVS-03 is the third satellite of ISRO's next-generation navigation (NVS) series, which provides continuity of the IRNSS (NavIC) navigation service.
+    bn: এনভিএস-০৩ ইসরোর পরবর্তী প্রজন্মের নেভিগেশন (NVS) সিরিজের তৃতীয় উপগ্রহ, যা IRNSS (NavIC) নেভিগেশন পরিষেবার ধারাবাহিকতা বজায় রাখে।
+  status: ai-generated
+  as_of: "2026-10-31"
+  source: https://www.isro.gov.in/Mission_GSLVF18.html
+
+- id: q0008
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs]
+  refs: [i005]
+  assertion:
+    en: NVS-03 carries an indigenous atomic clock.
+    bn: এনভিএস-০৩-এ দেশে তৈরি পারমাণবিক ঘড়ি রয়েছে।
+  reason:
+    en: Satellite navigation systems determine position from precisely timed signals, so accurate onboard clocks are essential.
+    bn: উপগ্রহ নেভিগেশন ব্যবস্থা নিখুঁত সময়ের সংকেত থেকে অবস্থান নির্ণয় করে, তাই উপগ্রহে নির্ভুল ঘড়ি অপরিহার্য।
+  answer: 0
+  explanation:
+    en: Both are true and R explains A. Navigation satellites broadcast time-stamped signals; receivers compute position from signal travel times, which needs very accurate (atomic) clocks.
+    bn: দুটি বক্তব্যই সত্য এবং R হলো A-এর সঠিক ব্যাখ্যা। নেভিগেশন উপগ্রহ সময়-চিহ্নিত সংকেত পাঠায়; গ্রাহক যন্ত্র সংকেতের যাত্রাকাল থেকে অবস্থান নির্ণয় করে, যার জন্য অত্যন্ত নির্ভুল (পারমাণবিক) ঘড়ি প্রয়োজন।
+  status: ai-generated
+  as_of: "2026-10-31"
+  source: https://www.isro.gov.in/Mission_GSLVF18.html

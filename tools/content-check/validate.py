@@ -24,6 +24,31 @@ ok = True
 for p in root.glob("subjects/*/subject.yaml"): ok &= check("subject.schema.json", p)[1]
 for p in root.glob("subjects/*/*/unit.yaml"): ok &= check("subject.schema.json", p)[1]
 for p in root.glob("exams/*.yaml"): ok &= check("exam.schema.json", p)[1]
+for p in root.glob("current-affairs/subject.yaml"): ok &= check("subject.schema.json", p)[1]
+for p in root.glob("current-affairs/*/unit.yaml"): ok &= check("subject.schema.json", p)[1]
+
+# Current-affairs months: items + questions; notes are optional (items become sections).
+for t in root.glob("current-affairs/*/*/topic.yaml"):
+    ok &= check("topic.schema.json", t)[1]
+    items, good = check("ca_items.schema.json", t.parent/"items.yaml"); ok &= good
+    qs, good = check("question.schema.json", t.parent/"questions.yaml"); ok &= good
+    if not good: continue
+    item_ids = [i["id"] for i in items]
+    if len(item_ids) != len(set(item_ids)): print(f"ERR {t.parent}: duplicate item ids"); ok = False
+    for i in items:
+        for path, val in walk(i):
+            if path.endswith(".bn") and re.search(r"[0-9]", val):
+                print(f"ERR {t.parent.name}/{i['id']} {path}: ASCII digits in Bengali text (use ০-৯)"); ok = False
+    for q in qs:
+        if not q.get("source") or not q.get("as_of"):
+            print(f"ERR {t.parent.name}/{q['id']}: current-affairs questions need source and as_of"); ok = False
+        for r in q["refs"]:
+            if r not in item_ids: print(f"ERR {q['id']} bad ref {r}"); ok = False
+        for path, val in walk(q):
+            if path.endswith(".bn") and re.search(r"[0-9]", val):
+                print(f"ERR {q['id']} {path}: ASCII digits in Bengali text (use ০-৯)"); ok = False
+    print(t.parent.relative_to(root), "items:", len(items), "questions:", len(qs))
+
 for t in root.glob("subjects/*/*/*/topic.yaml"):
     ok &= check("topic.schema.json", t)[1]
     qs, good = check("question.schema.json", t.parent/"questions.yaml"); ok &= good

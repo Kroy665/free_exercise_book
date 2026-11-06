@@ -96,6 +96,8 @@ pub fn run() {
             commands::revise_due,
             commands::srs_grade,
             commands::progress_get,
+            commands::ca_months,
+            commands::ca_month,
             pack_commands::packs_list,
             pack_commands::packs_check,
             pack_commands::packs_install,

@@ -1,0 +1,21 @@
+id: ca.2026.10
+title:
+  en: October 2026
+  bn: অক্টোবর ২০২৬
+summary:
+  en: Key national and international events of October 2026 for exam preparation.
+  bn: পরীক্ষার প্রস্তুতির জন্য অক্টোবর ২০২৬-এর গুরুত্বপূর্ণ জাতীয় ও আন্তর্জাতিক ঘটনা।
+order: 10
+exams: [upsc-cse, wbcs, ssc-cgl, ssc-chsl, state-psc, rrb-ntpc, ibps-po]
+estimated_minutes: 15
+version: 0.1.0
+status: ai-generated
+reviewers: []
+# Every item and question cites its own source URL. Facts were included only when an
+# official source states them and other sources don't contradict them (see items.yaml).
+sources:
+  - Reserve Bank of India press releases (rbi.org.in)
+  - Press Information Bureau (pib.gov.in)
+  - The Nobel Prize (nobelprize.org)
+  - Indian Space Research Organisation (isro.gov.in)
+retired: []

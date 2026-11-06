@@ -3,7 +3,8 @@
 //! - the packer (`tools/packer`), which writes one topic per pack database, and
 //! - the developer path (`FEB_CONTENT_DIR`), which imports a whole folder directly.
 
-use crate::model::{RawQuestion, SubjectFile, TopicFile, TopicMeta, UnitFile};
+use crate::localize::pick;
+use crate::model::{CaItem, RawQuestion, SubjectFile, TopicFile, TopicMeta, UnitFile};
 use crate::{CoreError, Result};
 use regex::Regex;
 use rusqlite::{Connection, params};
@@ -36,6 +37,8 @@ pub struct TopicSource {
     /// (lang, sections) for every `notes.<lang>.md`, sorted by lang.
     pub notes: Vec<(String, Vec<Section>)>,
     pub questions: Vec<RawQuestion>,
+    /// Current-affairs months only (`items.yaml`).
+    pub ca_items: Vec<CaItem>,
 }
 
 #[derive(Debug, Clone)]
@@ -121,7 +124,7 @@ fn load_topic(dir: &Path) -> Result<TopicSource> {
         else {
             continue;
         };
-        let sections = parse_sections(&read(&path)?)
+        let sections: Vec<Section> = parse_sections(&read(&path)?)
             .into_iter()
             .map(|(anchor, heading, body)| Section {
                 anchor,
@@ -137,17 +140,86 @@ fn load_topic(dir: &Path) -> Result<TopicSource> {
     } else {
         Vec::new()
     };
+    let ifile = dir.join("items.yaml");
+    let ca_items: Vec<CaItem> = if ifile.exists() {
+        yaml(&ifile)?
+    } else {
+        Vec::new()
+    };
+    // Current-affairs items also become note sections (one per item, after any intro
+    // notes), so the notes reader, search and "Revise in notes" links work unchanged.
+    if !ca_items.is_empty() {
+        let mut langs: Vec<String> = ca_items
+            .iter()
+            .flat_map(|i| i.title.keys().cloned())
+            .collect();
+        langs.sort();
+        langs.dedup();
+        for lang in langs {
+            let generated: Vec<Section> = ca_items
+                .iter()
+                .map(|i| Section {
+                    anchor: i.id.clone(),
+                    heading: pick(&i.title, &lang),
+                    body: ca_markdown(i, &lang),
+                })
+                .collect();
+            match notes.iter_mut().find(|(l, _)| *l == lang) {
+                Some((_, list)) => list.extend(generated),
+                None => notes.push((lang, generated)),
+            }
+        }
+        notes.sort_by(|a, b| a.0.cmp(&b.0));
+    }
     Ok(TopicSource {
         topic,
         notes,
         questions,
+        ca_items,
     })
+}
+
+fn host(url: &str) -> &str {
+    url.split("://")
+        .nth(1)
+        .unwrap_or(url)
+        .split('/')
+        .next()
+        .unwrap_or(url)
+        .trim_start_matches("www.")
+}
+
+/// Markdown for a current-affairs item shown as a note section.
+fn ca_markdown(item: &CaItem, lang: &str) -> String {
+    let mut s = pick(&item.body, lang);
+    if !item.key_points.is_empty() {
+        s.push_str("\n\n:::keyfacts\n");
+        for p in &item.key_points {
+            s.push_str(&format!("- {}\n", pick(p, lang)));
+        }
+        s.push_str(":::");
+    }
+    s.push_str(&format!(
+        "\n\n:::asof {}\nSource: [{}]({})\n:::",
+        item.as_of,
+        host(&item.source),
+        item.source
+    ));
+    s
 }
 
 /// Parse the whole `content/` folder (`content/subjects/<subject>/<unit>/<topic>/`).
 pub fn load_dir(root: &Path) -> Result<Vec<SubjectSource>> {
     let mut subjects = Vec::new();
-    for sdir in subdirs(&root.join("subjects"))? {
+    // Subjects, then current affairs (a subject whose units are years and topics months).
+    let mut subject_dirs = Vec::new();
+    if root.join("subjects").is_dir() {
+        subject_dirs.extend(subdirs(&root.join("subjects"))?);
+    }
+    if root.join("current-affairs/subject.yaml").exists() {
+        subject_dirs.push(root.join("current-affairs"));
+    }
+    for sdir in subject_dirs {
         let sfile = sdir.join("subject.yaml");
         if !sfile.exists() {
             continue;
@@ -256,6 +328,28 @@ pub fn write_topic(conn: &Connection, unit: &UnitFile, t: &TopicSource) -> Resul
             sections += 1;
         }
     }
+    conn.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
+    for (ord, i) in t.ca_items.iter().enumerate() {
+        conn.execute(
+            "INSERT INTO ca_items (id, topic_id, ord, date, category, title, body, key_points,
+                                   related_topics, source, as_of, status)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12)",
+            params![
+                format!("{id}/{}", i.id),
+                id,
+                ord as i64,
+                i.date,
+                i.category,
+                serde_json::to_string(&i.title)?,
+                serde_json::to_string(&i.body)?,
+                serde_json::to_string(&i.key_points)?,
+                serde_json::to_string(&i.related_topics)?,
+                i.source,
+                i.as_of,
+                i.status
+            ],
+        )?;
+    }
     for (ord, q) in t.questions.iter().enumerate() {
         conn.execute(
             "INSERT INTO questions (id, topic_id, ord, kind, difficulty, status, data)
@@ -283,7 +377,8 @@ pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
     let tx = conn.transaction()?;
     tx.execute_batch(
         "DELETE FROM subjects; DELETE FROM units; DELETE FROM topics;
-         DELETE FROM note_sections; DELETE FROM questions; DELETE FROM installed_packs;",
+         DELETE FROM note_sections; DELETE FROM questions; DELETE FROM installed_packs;
+         DELETE FROM ca_items;",
     )?;
     crate::mock::store_patterns(&tx, &exams)?;
     for s in &subjects {

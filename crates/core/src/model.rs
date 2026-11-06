@@ -145,6 +145,25 @@ impl RawQuestion {
     }
 }
 
+/// One current-affairs item (`content/current-affairs/<yyyy>/<mm>/items.yaml`,
+/// docs/CONTENT_STRUCTURE.md §10).
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CaItem {
+    pub id: String,
+    /// ISO date of the event, e.g. "2026-10-15".
+    pub date: String,
+    pub category: String,
+    pub title: Localized,
+    pub body: Localized,
+    #[serde(default)]
+    pub key_points: Vec<Localized>,
+    #[serde(default)]
+    pub related_topics: Vec<String>,
+    pub source: String,
+    pub as_of: String,
+    pub status: String,
+}
+
 // ---------- Views (sent to the UI) ----------
 
 #[derive(Debug, Clone, Serialize)]

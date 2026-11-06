@@ -25,7 +25,8 @@
     load(settings.lang);
   });
 
-  const topics = $derived(tree.flatMap((s) => s.units.flatMap((u) => u.topics)));
+  // Current-affairs months have their own page.
+  const topics = $derived(tree.filter((s) => s.id !== "ca").flatMap((s) => s.units.flatMap((u) => u.topics)));
   const goalDone = $derived(!!p && p.today >= p.daily_goal);
 </script>
 

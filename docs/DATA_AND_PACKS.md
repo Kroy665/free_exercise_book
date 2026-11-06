@@ -172,7 +172,7 @@ FTS5 with BM25, with prefix matching for search-as-you-type. Uses the trigram in
 A pack directory contains `manifest.json`, `manifest.json.minisig` and one `<topic-id>@<version>.pack` per topic (zstd-compressed SQLite, pack format 1). The manifest lists, per pack: titles (all languages), subject/unit, counts, `size` and `sha256` of the `.pack` file.
 
 ### Sources (in the app)
-1. **Bundled**: `packs/` inside the installer (built by `npm run packs` during `tauri build`). On the first start every bundled pack is installed, so a fresh install works offline. Later starts only *update* installed packs when the app ships a newer version; a pack the user removed is not re-installed.
+1. **Bundled**: `packs/` inside the installer (built by `npm run packs` during `tauri build`). On start the app installs every bundled pack it has **never offered before** (first run, or a new pack such as a new month shipped in an app update) and updates installed packs to newer bundled versions. Offered ids are remembered in `bundled-seen.json`, so a pack the user removed is not re-installed.
 2. **Server**: `https://raw.githubusercontent.com/Kroy665/free_exercise_book/packs/` (the `packs` branch, published by the manual *Publish content packs* workflow). Override with `FEB_PACKS_URL`. The last verified manifest is cached, so the Downloads page works offline.
 3. **Folder**: Downloads → *Import from folder* installs new/newer packs from any copy of a pack directory (USB drive, LAN share).
 

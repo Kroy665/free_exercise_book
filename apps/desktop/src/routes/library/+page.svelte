@@ -10,7 +10,7 @@
   async function load(lang: string) {
     error = null;
     try {
-      tree = await api.libraryTree(lang);
+      tree = (await api.libraryTree(lang)).filter((s) => s.id !== "ca");
     } catch (e) {
       error = errorMessage(e);
     }

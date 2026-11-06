@@ -87,6 +87,7 @@ Cite as a short text reference in `topic.yaml → sources`, or a URL for current
 ## 6. Current affairs rules
 
 - Every item needs an **official or reputed source URL** and `as_of`.
+- **Only include facts an official source states and other sources don't contradict.** Leave out details that sources disagree on (and note them in a YAML comment) until a reviewer confirms them. AI search summaries are leads, not sources.
 - Cover facts likely to be asked: what, who, where, when, which ministry, key numbers. Skip opinion and speculation.
 - Neutral wording, especially for political, judicial and international events.
 - Link each item to static topics through `related_topics` when relevant.

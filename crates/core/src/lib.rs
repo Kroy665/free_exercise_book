@@ -7,6 +7,7 @@
 //! - practice (questions resolved to a language, grading, mistakes)
 //! - user settings
 
+pub mod ca;
 pub mod db;
 pub mod error;
 pub mod import;

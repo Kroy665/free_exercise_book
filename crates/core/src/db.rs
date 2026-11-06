@@ -4,6 +4,25 @@ use crate::Result;
 use rusqlite::Connection;
 use std::path::Path;
 
+/// Current-affairs items (structured); also created in every pack database (may be empty).
+const CA_ITEMS_DDL: &str = r#"
+    CREATE TABLE ca_items (
+        id             TEXT PRIMARY KEY,  -- "<topic_id>/<item id>"
+        topic_id       TEXT NOT NULL,     -- the month, e.g. ca.2026.10
+        ord            INTEGER NOT NULL,
+        date           TEXT NOT NULL,
+        category       TEXT NOT NULL,
+        title          TEXT NOT NULL,     -- JSON {lang: text}
+        body           TEXT NOT NULL,     -- JSON {lang: text}
+        key_points     TEXT NOT NULL,     -- JSON [{lang: text}]
+        related_topics TEXT NOT NULL,     -- JSON [topic id]
+        source         TEXT NOT NULL,
+        as_of          TEXT NOT NULL,
+        status         TEXT NOT NULL
+    );
+    CREATE INDEX ca_items_topic ON ca_items(topic_id, ord);
+"#;
+
 const CONTENT_MIGRATIONS: &[&str] = &[
     // 1: initial content schema
     r#"
@@ -89,6 +108,8 @@ const CONTENT_MIGRATIONS: &[&str] = &[
         tokenize = 'trigram'
     );
     "#,
+    // 5: current-affairs items
+    CA_ITEMS_DDL,
 ];
 
 /// Pack file format version (docs/DATA_AND_PACKS.md §2). A pack is a SQLite database with
@@ -106,6 +127,7 @@ pub fn create_pack(path: &Path) -> Result<Connection> {
     let conn = Connection::open(path)?;
     conn.execute_batch(CONTENT_MIGRATIONS[0])?;
     conn.execute_batch("CREATE TABLE pack_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);")?;
+    conn.execute_batch(CA_ITEMS_DDL)?;
     Ok(conn)
 }
 

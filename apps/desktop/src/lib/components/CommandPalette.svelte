@@ -103,8 +103,9 @@
     close();
     if (item.type === "command") return item.run();
     const h = item.hit;
-    if (h.kind === "topic") goto(`/topic/${h.topic_id}`);
-    else if (h.kind === "section") goto(`/topic/${h.topic_id}#${h.ref}`);
+    const ca = h.topic_id.startsWith("ca.");
+    if (h.kind === "topic") goto(ca ? `/current-affairs/${h.topic_id}` : `/topic/${h.topic_id}`);
+    else if (h.kind === "section") goto(ca ? `/current-affairs/${h.topic_id}#${h.ref}` : `/topic/${h.topic_id}#${h.ref}`);
     else goto(`/topic/${h.topic_id}/practice?q=${encodeURIComponent(h.ref)}`);
   }
 

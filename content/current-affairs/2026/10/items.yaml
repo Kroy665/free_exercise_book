@@ -1,0 +1,96 @@
+# Current affairs — October 2026. Format: docs/CONTENT_STRUCTURE.md §10.
+# Rule for this month: only facts stated by an official source and not contradicted by
+# other sources. Details that sources disagreed on (e.g. RBI SDF/MSF rates, NVS-03
+# orbit-raising and target slot) were left out on purpose until a reviewer confirms them.
+
+- id: i001
+  date: "2026-10-07"
+  category: economy
+  title:
+    en: RBI raises repo rate by 25 basis points to 5.50%
+    bn: রিজার্ভ ব্যাংক রেপো রেট ২৫ বেসিস পয়েন্ট বাড়িয়ে ৫.৫০% করল
+  body:
+    en: The Monetary Policy Committee (MPC) of the Reserve Bank of India, which met from 5 to 7 October 2026, unanimously raised the policy repo rate under the Liquidity Adjustment Facility (LAF) by 25 basis points, from 5.25% to 5.50%. It also changed its policy stance to "calibrated tightening". This was the first increase in the repo rate since February 2023.
+    bn: ৫ থেকে ৭ অক্টোবর ২০২৬ পর্যন্ত বৈঠকে ভারতীয় রিজার্ভ ব্যাংকের মুদ্রানীতি কমিটি (MPC) সর্বসম্মতিক্রমে তারল্য সমন্বয় সুবিধার (LAF) অধীনে নীতিগত রেপো রেট ২৫ বেসিস পয়েন্ট বাড়িয়ে ৫.২৫% থেকে ৫.৫০% করে। কমিটি তার নীতিগত অবস্থান বদলে "পরিমিত কঠোরতা" (calibrated tightening) করে। ফেব্রুয়ারি ২০২৩-এর পর এই প্রথম রেপো রেট বাড়ানো হলো।
+  key_points:
+    - { en: "Repo rate: 5.25% → 5.50% (+25 bps)", bn: "রেপো রেট: ৫.২৫% → ৫.৫০% (+২৫ বেসিস পয়েন্ট)" }
+    - { en: "MPC vote on the rate: unanimous", bn: "রেট নিয়ে MPC-র ভোট: সর্বসম্মত" }
+    - { en: "Stance: calibrated tightening", bn: "অবস্থান: পরিমিত কঠোরতা (calibrated tightening)" }
+    - { en: "The MPC has six members and is chaired by the RBI Governor", bn: "ছয় সদস্যের MPC-র সভাপতি রিজার্ভ ব্যাংকের গভর্নর" }
+  related_topics: []
+  source: https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63744
+  as_of: "2026-10-07"
+  status: ai-generated
+
+- id: i002
+  date: "2026-10-12"
+  category: awards
+  title:
+    en: "Economics Nobel 2026: Robert E. Hall and Michael Woodford"
+    bn: "অর্থনীতিতে নোবেল ২০২৬: রবার্ট ই. হল ও মাইকেল উডফোর্ড"
+  body:
+    en: The Royal Swedish Academy of Sciences awarded the 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel jointly to Robert E. Hall (Stanford University) and Michael Woodford (Columbia University) "for microeconomic foundations of macroeconomic stabilisation". The prize was announced on 12 October 2026.
+    bn: রয়্যাল সুইডিশ অ্যাকাডেমি অব সায়েন্সেস ২০২৬ সালের অর্থনীতিতে নোবেল (আলফ্রেড নোবেলের স্মৃতিতে সুইডেনের রিক্সব্যাংক পুরস্কার) যৌথভাবে রবার্ট ই. হল (স্ট্যানফোর্ড বিশ্ববিদ্যালয়) ও মাইকেল উডফোর্ড (কলম্বিয়া বিশ্ববিদ্যালয়)-কে দিয়েছে, "সামষ্টিক অর্থনৈতিক স্থিতিশীলতার ব্যষ্টিক অর্থনৈতিক ভিত্তি"-র জন্য। ১২ অক্টোবর ২০২৬ পুরস্কারটি ঘোষণা করা হয়।
+  key_points:
+    - { en: "Awarded by: Royal Swedish Academy of Sciences", bn: "প্রদানকারী: রয়্যাল সুইডিশ অ্যাকাডেমি অব সায়েন্সেস" }
+    - { en: "Shared equally between Hall and Woodford", bn: "হল ও উডফোর্ডের মধ্যে সমানভাবে ভাগ" }
+    - { en: "Woodford's work underpins interest-rate-based monetary policy used by most central banks", bn: "উডফোর্ডের কাজ সুদের হারভিত্তিক মুদ্রানীতির ভিত্তি, যা অধিকাংশ কেন্দ্রীয় ব্যাংক অনুসরণ করে" }
+  related_topics: []
+  source: https://www.nobelprize.org/prizes/economic-sciences/2026/press-release/
+  as_of: "2026-10-12"
+  status: ai-generated
+
+- id: i003
+  date: "2026-10-12"
+  category: awards
+  title:
+    en: "Nobel Prizes 2026: physics, chemistry, medicine, literature and peace"
+    bn: "নোবেল পুরস্কার ২০২৬: পদার্থবিদ্যা, রসায়ন, চিকিৎসাবিজ্ঞান, সাহিত্য ও শান্তি"
+  body:
+    en: The other 2026 Nobel Prizes, announced in October 2026, went to Francis Halzen (Physics, for contributions to the IceCube Neutrino Observatory and the discovery of high-energy astrophysical neutrinos), Henri B. Kagan and Kensō Soai (Chemistry, for non-linear effects and autocatalysis in asymmetric synthesis), Karl Deisseroth, Peter Hegemann and Georg Nagel (Physiology or Medicine, for light-gated ion channels and optogenetics), Anne Carson of Canada (Literature) and Navi Pillay of South Africa (Peace).
+    bn: অক্টোবর ২০২৬-এ ঘোষিত অন্যান্য নোবেল পুরস্কার পেয়েছেন ফ্রান্সিস হালজেন (পদার্থবিদ্যা; আইসকিউব নিউট্রিনো মানমন্দিরে অবদান ও উচ্চশক্তির মহাজাগতিক নিউট্রিনো আবিষ্কারের জন্য), অঁরি বি. কাগান ও কেনসো সোয়াই (রসায়ন; অপ্রতিসম সংশ্লেষণে অরৈখিক প্রভাব ও স্বয়ং-অনুঘটনের জন্য), কার্ল ডাইসারথ, পিটার হেগেমান ও গেয়র্গ নাগেল (চিকিৎসাবিজ্ঞান; আলো-নিয়ন্ত্রিত আয়ন চ্যানেল ও অপটোজেনেটিক্সের জন্য), কানাডার অ্যান কারসন (সাহিত্য) এবং দক্ষিণ আফ্রিকার নাভি পিল্লাই (শান্তি)।
+  key_points:
+    - { en: "Physics: Francis Halzen (IceCube neutrinos)", bn: "পদার্থবিদ্যা: ফ্রান্সিস হালজেন (আইসকিউব নিউট্রিনো)" }
+    - { en: "Literature: Anne Carson (Canada)", bn: "সাহিত্য: অ্যান কারসন (কানাডা)" }
+    - { en: "Peace: Navi Pillay (South Africa)", bn: "শান্তি: নাভি পিল্লাই (দক্ষিণ আফ্রিকা)" }
+    - { en: "The Peace Prize is awarded in Oslo; the others in Stockholm", bn: "শান্তি পুরস্কার দেওয়া হয় অসলোতে; বাকিগুলি স্টকহোমে" }
+  related_topics: []
+  source: https://www.nobelprize.org/all-nobel-prizes-2026/
+  as_of: "2026-10-31"
+  status: ai-generated
+
+- id: i004
+  date: "2026-10-28"
+  category: schemes
+  title:
+    en: Cabinet approves Pradhan Mantri Viksit Gram Swaraj Yojana
+    bn: মন্ত্রিসভার অনুমোদন পেল প্রধানমন্ত্রী বিকশিত গ্রাম স্বরাজ যোজনা
+  body:
+    en: On 28 October 2026 the Union Cabinet approved the Pradhan Mantri Viksit Gram Swaraj Yojana (PM-VGSY) as a Centrally Sponsored Scheme for 2026-27 to 2030-31, with a total outlay of ₹7,395.55 crore (Centre ₹4,869.48 crore; States ₹2,526.07 crore). It aims to strengthen Panchayats and rural local governance, and is expected to benefit about 32 lakh elected representatives, Panchayat functionaries and other stakeholders across more than 2.55 lakh Panchayats and traditional local bodies.
+    bn: ২৮ অক্টোবর ২০২৬ কেন্দ্রীয় মন্ত্রিসভা প্রধানমন্ত্রী বিকশিত গ্রাম স্বরাজ যোজনা (PM-VGSY)-কে ২০২৬-২৭ থেকে ২০৩০-৩১ সময়কালের জন্য কেন্দ্রীয়ভাবে প্রবর্তিত প্রকল্প হিসেবে অনুমোদন দেয়। মোট ব্যয় ৭,৩৯৫.৫৫ কোটি টাকা (কেন্দ্র ৪,৮৬৯.৪৮ কোটি; রাজ্য ২,৫২৬.০৭ কোটি)। প্রকল্পের লক্ষ্য পঞ্চায়েত ও গ্রামীণ স্থানীয় স্বশাসন শক্তিশালী করা; ২.৫৫ লক্ষেরও বেশি পঞ্চায়েত ও প্রথাগত স্থানীয় সংস্থার প্রায় ৩২ লক্ষ নির্বাচিত প্রতিনিধি, পঞ্চায়েত কর্মী ও অন্যান্য অংশীদার এতে উপকৃত হবেন।
+  key_points:
+    - { en: "Type: Centrally Sponsored Scheme, 2026-27 to 2030-31", bn: "ধরন: কেন্দ্রীয়ভাবে প্রবর্তিত প্রকল্প, ২০২৬-২৭ থেকে ২০৩০-৩১" }
+    - { en: "Outlay: ₹7,395.55 crore", bn: "ব্যয়: ৭,৩৯৫.৫৫ কোটি টাকা" }
+    - { en: "Period matches the Sixteenth Finance Commission cycle", bn: "সময়কাল ষোড়শ অর্থ কমিশনের মেয়াদের সঙ্গে মিলে যায়" }
+  related_topics: []
+  source: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2329692
+  as_of: "2026-10-28"
+  status: ai-generated
+
+- id: i005
+  date: "2026-10-30"
+  category: science
+  title:
+    en: ISRO's GSLV-F18 launches navigation satellite NVS-03
+    bn: ইসরোর জিএসএলভি-এফ১৮ উৎক্ষেপণ করল নেভিগেশন উপগ্রহ এনভিএস-০৩
+  body:
+    en: On 30 October 2026 ISRO's GSLV-F18 lifted off from the Second Launch Pad at the Satish Dhawan Space Centre (SDSC SHAR), Sriharikota, and placed the NVS-03 satellite in its intended transfer orbit. NVS-03 is the third satellite of ISRO's next-generation navigation satellite (NVS) series, meant to ensure continuity of the IRNSS (NavIC) navigation service. It carries an indigenous atomic clock. The mission was the 20th flight of the GSLV.
+    bn: ৩০ অক্টোবর ২০২৬ ইসরোর জিএসএলভি-এফ১৮ শ্রীহরিকোটার সতীশ ধাওয়ান মহাকাশ কেন্দ্রের (SDSC SHAR) দ্বিতীয় উৎক্ষেপণ মঞ্চ থেকে যাত্রা করে এবং এনভিএস-০৩ উপগ্রহকে নির্ধারিত স্থানান্তর কক্ষপথে স্থাপন করে। এনভিএস-০৩ ইসরোর পরবর্তী প্রজন্মের নেভিগেশন উপগ্রহ (NVS) সিরিজের তৃতীয় উপগ্রহ, যার উদ্দেশ্য IRNSS (NavIC) নেভিগেশন পরিষেবা অব্যাহত রাখা। এতে দেশে তৈরি পারমাণবিক ঘড়ি রয়েছে। এটি ছিল জিএসএলভি-র ২০তম উড়ান।
+  key_points:
+    - { en: "Launch: 30 October 2026, Second Launch Pad, Sriharikota", bn: "উৎক্ষেপণ: ৩০ অক্টোবর ২০২৬, দ্বিতীয় উৎক্ষেপণ মঞ্চ, শ্রীহরিকোটা" }
+    - { en: "NVS series replaces/continues the IRNSS (NavIC) constellation", bn: "NVS সিরিজ IRNSS (NavIC) ব্যবস্থার ধারাবাহিকতা রক্ষা করে" }
+    - { en: "20th flight of GSLV", bn: "জিএসএলভি-র ২০তম উড়ান" }
+  related_topics: []
+  source: https://www.isro.gov.in/Mission_GSLVF18.html
+  as_of: "2026-10-31"
+  status: ai-generated
