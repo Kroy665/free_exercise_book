@@ -3,7 +3,7 @@
   import "@fontsource-variable/noto-sans-bengali";
   import "$lib/styles/tokens.css";
   import "$lib/styles/base.css";
-  import { afterNavigate } from "$app/navigation";
+  import { afterNavigate, goto } from "$app/navigation";
   import { page } from "$app/state";
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
   import CommandPalette from "$lib/components/CommandPalette.svelte";
@@ -41,6 +41,12 @@
   ];
 
   const examMode = $derived(/^\/tests\/\d+\/run\/?$/.test(page.url.pathname));
+  const setupMode = $derived(page.url.pathname.startsWith("/onboarding"));
+
+  // First start: run the setup before anything else.
+  $effect(() => {
+    if (settings.loaded && settings.onboarded === "0" && !setupMode) goto("/onboarding", { replaceState: true });
+  });
 
   function active(href: string) {
     const p = page.url.pathname;
@@ -86,7 +92,7 @@
 
 <svelte:window {onkeydown} {oncontextmenu} />
 
-{#if settings.loaded && examMode}
+{#if settings.loaded && (examMode || setupMode)}
   <!-- Exam view: full window, no sidebar or top bar (like the real computer-based test). -->
   {@render children()}
 {:else if settings.loaded}

@@ -106,7 +106,7 @@ export interface Stats {
 }
 
 // `lang` is the content language; the UI is always English.
-export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal", string>;
+export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal" | "onboarded" | "exams", string>;
 
 export interface ApiError {
   code: string;
@@ -150,6 +150,7 @@ export interface PackItem {
   unit_title: string;
   sort: [number, number, number];
   langs: string[];
+  exams: string[];
   questions: number;
   sections: number;
   size: number;
@@ -391,3 +392,29 @@ export interface CaMonthView {
   items: CaItem[];
   questions: number;
 }
+
+// ---------- Your data (backup / restore / reset) ----------
+
+export interface ImportSummary {
+  attempts: number;
+  tests: number;
+  cards: number;
+  previous_backup: string;
+}
+
+export const dataApi = {
+  export: (path: string) => invoke<void>("data_export", { path }),
+  import: (path: string) => invoke<ImportSummary>("data_import", { path }),
+  reset: () => invoke<void>("data_reset"),
+};
+
+/** Exam families offered in first-run setup and Settings (crates/core settings::EXAM_TAGS). */
+export const EXAMS: { id: string; label: string; hint: string }[] = [
+  { id: "upsc-cse", label: "UPSC Civil Services", hint: "IAS, IPS, IFS… (Prelims GS)" },
+  { id: "wbcs", label: "WBCS", hint: "West Bengal Civil Service" },
+  { id: "state-psc", label: "Other State PSC exams", hint: "State civil service exams" },
+  { id: "ssc-cgl", label: "SSC CGL", hint: "Combined Graduate Level" },
+  { id: "ssc-chsl", label: "SSC CHSL", hint: "Combined Higher Secondary Level" },
+  { id: "ibps-po", label: "Banking (IBPS / SBI PO)", hint: "Bank PO and clerk exams" },
+  { id: "rrb-ntpc", label: "Railways (RRB NTPC)", hint: "Railway recruitment" },
+];

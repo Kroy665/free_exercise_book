@@ -11,6 +11,9 @@ export const settings = $state<Settings & { loaded: boolean }>({
   theme: "system",
   font_size: "16",
   daily_goal: "20",
+  // "1" until the backend says otherwise, so a plain browser preview never redirects.
+  onboarded: "1",
+  exams: "",
   loaded: false,
 });
 

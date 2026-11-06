@@ -136,3 +136,27 @@ pub async fn ca_month(
 ) -> CmdResult<feb_core::ca::MonthView> {
     feb_core::ca::month(&*state.content()?, &id, &lang).map_err(e)
 }
+
+/// Save a copy of the user's progress to `path` (chosen in a save dialog).
+#[tauri::command]
+pub async fn data_export(state: State<'_, AppState>, path: String) -> CmdResult<()> {
+    feb_core::backup::export(&*state.user()?, std::path::Path::new(&path)).map_err(e)
+}
+
+/// Replace progress with a backup file; the current progress is saved first.
+#[tauri::command]
+pub async fn data_import(
+    state: State<'_, AppState>,
+    path: String,
+) -> CmdResult<feb_core::backup::ImportSummary> {
+    let backups = state.packs.data_dir.join("backups");
+    let mut user = state.user()?;
+    feb_core::backup::import(&mut user, std::path::Path::new(&path), &backups).map_err(e)
+}
+
+/// Delete answers, tests and review cards (settings are kept).
+#[tauri::command]
+pub async fn data_reset(state: State<'_, AppState>) -> CmdResult<()> {
+    let mut user = state.user()?;
+    feb_core::backup::reset(&mut user).map_err(e)
+}

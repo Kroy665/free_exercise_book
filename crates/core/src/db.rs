@@ -206,11 +206,56 @@ pub fn open_content(path: &Path) -> Result<Connection> {
     Ok(conn)
 }
 
+/// Schema version of `user.db` written by this app version.
+pub fn user_schema_version() -> usize {
+    USER_MIGRATIONS.len()
+}
+
+/// Backups of `user.db` taken before a schema upgrade are kept (newest N).
+const KEEP_MIGRATION_BACKUPS: usize = 3;
+
 pub fn open_user(path: &Path) -> Result<Connection> {
     let mut conn = Connection::open(path)?;
     configure(&conn)?;
+    // Before upgrading an existing progress database, keep a copy
+    // (docs/PRIVACY_AND_SECURITY.md §4): `<dir>/backups/user-before-v<N>-<time>.db`.
+    let current: usize = conn.pragma_query_value(None, "user_version", |r| r.get(0))?;
+    if current > 0 && current < USER_MIGRATIONS.len() {
+        backup_before_migration(&conn, path, current)?;
+    }
     migrate(&mut conn, USER_MIGRATIONS)?;
     Ok(conn)
+}
+
+fn backup_before_migration(conn: &Connection, path: &Path, from: usize) -> Result<()> {
+    let dir = path.parent().unwrap_or(Path::new(".")).join("backups");
+    std::fs::create_dir_all(&dir).map_err(|source| crate::CoreError::Io {
+        path: dir.display().to_string(),
+        source,
+    })?;
+    let file = dir.join(format!(
+        "user-before-v{}-{}.db",
+        from + 1,
+        crate::srs::now()
+    ));
+    conn.execute("VACUUM INTO ?1", [file.to_string_lossy()])?;
+    // Keep only the newest few.
+    let mut old: Vec<_> = std::fs::read_dir(&dir)
+        .map(|it| {
+            it.filter_map(|e| e.ok().map(|e| e.path()))
+                .filter(|p| {
+                    p.file_name()
+                        .and_then(|n| n.to_str())
+                        .is_some_and(|n| n.starts_with("user-before-v"))
+                })
+                .collect()
+        })
+        .unwrap_or_default();
+    old.sort_by_key(|p| std::fs::metadata(p).and_then(|m| m.modified()).ok());
+    while old.len() > KEEP_MIGRATION_BACKUPS {
+        std::fs::remove_file(old.remove(0)).ok();
+    }
+    Ok(())
 }
 
 /// In-memory databases, for tests.

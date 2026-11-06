@@ -175,6 +175,7 @@ Correctness must **never rely on colour alone**. Always pair it with an icon and
 - Hit targets ≥ 32 × 32 px.
 - Set `lang` attributes on content (`lang="bn"` for Bengali, `lang="en"` for English terms inside Bengali text) so screen readers switch voice and the right font features apply.
 - Test with NVDA (Windows), VoiceOver (macOS) and Orca (Linux) before each release.
+- Automated check: an axe-core scan (WCAG 2.0/2.1/2.2 A and AA rules) of every screen in light and dark mode found **0 violations** (v0.2). Automated tools catch only part of the issues; the manual screen-reader and keyboard checks above still apply.
 
 ## 10. Writing style for UI text
 

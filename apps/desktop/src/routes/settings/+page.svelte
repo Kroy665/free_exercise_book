@@ -1,6 +1,68 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
+  import { EXAMS, dataApi, errorMessage } from "$lib/api";
   import { CONTENT_LANGS } from "$lib/i18n/content";
+  import { refreshDueBadge } from "$lib/stores/packs.svelte";
   import { setSetting, settings, t } from "$lib/stores/settings.svelte";
+  import { ask, open, save } from "@tauri-apps/plugin-dialog";
+
+  let message = $state<{ ok: boolean; text: string } | null>(null);
+  const exams = $derived(new Set(settings.exams ? settings.exams.split(",") : []));
+  const filters = [{ name: "Free Exercise Book backup", extensions: ["febackup"] }];
+
+  function toggleExam(id: string) {
+    const n = new Set(exams);
+    if (n.has(id)) n.delete(id);
+    else n.add(id);
+    setSetting("exams", EXAMS.map((e) => e.id).filter((e) => n.has(e)).join(","));
+  }
+
+  async function exportData() {
+    message = null;
+    const day = new Date().toISOString().slice(0, 10);
+    const path = await save({ defaultPath: `free-exercise-book-progress-${day}.febackup`, filters });
+    if (!path) return;
+    try {
+      await dataApi.export(path);
+      message = { ok: true, text: t("data.exported", { path }) };
+    } catch (e) {
+      message = { ok: false, text: errorMessage(e) };
+    }
+  }
+
+  async function importData() {
+    message = null;
+    const path = await open({ multiple: false, directory: false, filters });
+    if (typeof path !== "string") return;
+    const ok = await ask(t("data.import_confirm"), { title: t("data.import"), kind: "warning", okLabel: t("data.import"), cancelLabel: t("common.cancel") });
+    if (!ok) return;
+    try {
+      const r = await dataApi.import(path);
+      refreshDueBadge();
+      message = { ok: true, text: t("data.imported", { a: r.attempts, t: r.tests, c: r.cards, path: r.previous_backup }) };
+      location.reload(); // settings may have changed
+    } catch (e) {
+      message = { ok: false, text: errorMessage(e) };
+    }
+  }
+
+  async function resetData() {
+    message = null;
+    const ok = await ask(t("data.reset_confirm"), { title: t("data.reset"), kind: "warning", okLabel: t("data.reset"), cancelLabel: t("common.cancel") });
+    if (!ok) return;
+    try {
+      await dataApi.reset();
+      refreshDueBadge();
+      message = { ok: true, text: t("data.reset_done") };
+    } catch (e) {
+      message = { ok: false, text: errorMessage(e) };
+    }
+  }
+
+  async function rerunSetup() {
+    await setSetting("onboarded", "0");
+    goto("/onboarding");
+  }
 </script>
 
 <div class="page">
@@ -41,6 +103,28 @@
   </section>
 
   <section class="card group">
+    <span id="exams-label"><strong>{t("settings.exams")}</strong></span>
+    <p class="muted">{t("settings.exams_help")}</p>
+    <div class="chips" role="group" aria-labelledby="exams-label">
+      {#each EXAMS as ex (ex.id)}
+        <button class="chip" role="checkbox" aria-checked={exams.has(ex.id)} class:on={exams.has(ex.id)} onclick={() => toggleExam(ex.id)}>{ex.label}</button>
+      {/each}
+    </div>
+    <button class="btn btn-ghost start" onclick={rerunSetup}>{t("settings.rerun")}</button>
+  </section>
+
+  <section class="card group">
+    <strong>{t("data.title")}</strong>
+    <p class="muted">{t("data.help")}</p>
+    <div class="row">
+      <button class="btn" onclick={exportData}>{t("data.export")}</button>
+      <button class="btn" onclick={importData}>{t("data.import")}</button>
+      <button class="btn btn-ghost danger" onclick={resetData}>{t("data.reset")}</button>
+    </div>
+    {#if message}<p class="small {message.ok ? 'okmsg' : 'errmsg'}" role="status">{message.text}</p>{/if}
+  </section>
+
+    <section class="card group">
     <strong>{t("settings.about")}</strong>
     <p class="muted">{t("settings.about_text")}</p>
     <p class="muted small">v0.1.0</p>
@@ -85,5 +169,40 @@
   }
   .small {
     font-size: 0.8125rem;
+  }
+  .chips,
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .chip {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: default;
+  }
+  .chip.on {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 600;
+  }
+  .start {
+    justify-self: start;
+    padding-left: 0;
+  }
+  .danger {
+    color: var(--wrong);
+  }
+  .okmsg {
+    color: var(--correct);
+    word-break: break-all;
+  }
+  .errmsg {
+    color: var(--wrong);
   }
 </style>

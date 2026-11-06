@@ -70,6 +70,8 @@ IDs in routes are **stable content IDs** (e.g. `hist.modern.revolt-1857`), so li
 
 The user can skip any step. Onboarding never blocks access to installed content.
 
+*Implemented (v0.2):* `/onboarding`, full-screen. Steps: Welcome → content language → exams (multi-select; stored in setting `exams`) → daily goal → topics (installed ones listed; online topics matching the chosen exams pre-selected; "Check online") → done. Shown while setting `onboarded` = 0; Settings → "Run first-time setup again". The user's exams also sort the Tests page (their exam patterns first).
+
 ### 4.2 Study a topic
 Library → Subject → Topic (Notes) → read → "Practice this section" or the **Practice** tab → session → result → "Revise mistakes" or "Back to notes".
 

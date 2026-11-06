@@ -32,7 +32,7 @@
 ## 4. Data handling
 
 - `user.db` is backed up automatically before each migration (keeps the last 3).
-- Export files contain only study data; the format is documented so users own their data.
+- Export files contain only study data; the format is documented so users own their data. *Implemented:* Settings → Your data → Export / Import / Reset. A backup (`.febackup`) is a SQLite copy of `user.db` (answers, tests, revision cards, settings). Import refuses non-backups and backups from newer app versions, upgrades older ones, and first saves the current progress to `<app data>/backups/` so an import can be undone. Reset deletes answers, tests and revision cards; settings and content stay.
 - "Reset all data" asks for confirmation and deletes both DBs, the caches and the model.
 
 ## 5. Reporting vulnerabilities

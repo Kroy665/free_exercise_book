@@ -91,7 +91,7 @@ Priorities: **P0** = MVP, **P1** = v1.0, **P2** = later.
 | A1 | ✅ Accuracy and attempt counts per topic | P0 |
 | A2 | ✅ Weak topics and an activity heatmap | P1 |
 | A3 | ✅ Streaks and a daily goal | P1 |
-| A4 | Export/import of progress (single file) | P1 |
+| A4 | ✅ Export/import of progress (single `.febackup` file) and reset | P1 |
 
 ### 4.7 Downloads and updates
 | ID | Feature | Pri |
@@ -131,7 +131,7 @@ Language, theme (system/light/dark), font size, reading width, daily goal, netwo
 | Version | Scope |
 |---|---|
 | **v0.1** | Shell, onboarding, sample content **in English and Bengali** (content language switch; English UI), library, notes reader, topic practice, keyword search, mistake notebook, error reporting |
-| **v0.2** | ✅ Content packs: Downloads page, signed packs, bundled/offline install, updates, folder import. ✅ Mock tests: custom and exam-pattern tests (scaled to installed content), timer, palette, mark for review, resume, negative marking, results by section/topic, review. ✅ Spaced repetition (FSRS-5) and Progress page (goal, streaks, heatmap, weak topics, test trend). ✅ Current affairs: monthly packs (first month: October 2026), Current Affairs page with category filters, sources, quiz and timed test. |
+| **v0.2** | ✅ Content packs: Downloads page, signed packs, bundled/offline install, updates, folder import. ✅ Mock tests: custom and exam-pattern tests (scaled to installed content), timer, palette, mark for review, resume, negative marking, results by section/topic, review. ✅ Spaced repetition (FSRS-5) and Progress page (goal, streaks, heatmap, weak topics, test trend). ✅ Current affairs: monthly packs (first month: October 2026), Current Affairs page with category filters, sources, quiz and timed test. ✅ First-run setup, progress export/import/reset, automated WCAG 2.2 AA scan of all screens (0 violations). |
 | **v0.3** | Vector search, related notes/questions, FSRS revision, monthly current-affairs packs |
 | **v0.4** | Hindi content, WBCS exam pattern, delta updates, sideloading, app auto-update |
 | **v1.0** | Stable pack format, broad syllabus coverage, accessibility audit, signed installers |

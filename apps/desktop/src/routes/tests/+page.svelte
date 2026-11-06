@@ -20,7 +20,10 @@
     error = null;
     try {
       const o = await testsApi.overview(lang);
-      patterns = o.patterns;
+      // The user's exams (first-run setup / Settings) come first.
+      const mine = settings.exams ? settings.exams.split(",") : [];
+      const isMine = (id: string) => mine.some((e) => id.startsWith(e));
+      patterns = [...o.patterns].sort((a, b) => Number(isMine(b.id)) - Number(isMine(a.id)));
       tests = o.tests;
     } catch (e) {
       error = errorMessage(e);
