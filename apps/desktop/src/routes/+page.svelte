@@ -1,17 +1,21 @@
 <script lang="ts">
-  import { api, errorMessage, type LibrarySubject, type Stats } from "$lib/api";
+  import { api, errorMessage, type LibrarySubject, type ProgressView } from "$lib/api";
   import ErrorBox from "$lib/components/ErrorBox.svelte";
   import ProgressBar from "$lib/components/ProgressBar.svelte";
+  import { num } from "$lib/format";
   import { settings, t } from "$lib/stores/settings.svelte";
+  import Target from "@lucide/svelte/icons/target";
+  import RotateCcw from "@lucide/svelte/icons/rotate-ccw";
+  import Flame from "@lucide/svelte/icons/flame";
 
-  let stats = $state<Stats | null>(null);
+  let p = $state<ProgressView | null>(null);
   let tree = $state<LibrarySubject[]>([]);
   let error = $state<string | null>(null);
 
   async function load(lang: string) {
     error = null;
     try {
-      [stats, tree] = await Promise.all([api.statsGet(), api.libraryTree(lang)]);
+      [p, tree] = await Promise.all([api.progress(lang), api.libraryTree(lang)]);
     } catch (e) {
       error = errorMessage(e);
     }
@@ -22,7 +26,7 @@
   });
 
   const topics = $derived(tree.flatMap((s) => s.units.flatMap((u) => u.topics)));
-  const accuracy = $derived(stats && stats.attempted > 0 ? Math.round((stats.correct / stats.attempted) * 100) : null);
+  const goalDone = $derived(!!p && p.today >= p.daily_goal);
 </script>
 
 <div class="page">
@@ -31,15 +35,28 @@
 
   {#if error}
     <ErrorBox message={error} onretry={() => load(settings.lang)} />
-  {:else if stats}
+  {:else if p}
     <div class="tiles">
-      <div class="card tile"><span class="num">{stats.topics}</span><span class="muted">{t("stat.topics")}</span></div>
-      <div class="card tile"><span class="num">{stats.attempted}</span><span class="muted">{t("stat.practised")}</span></div>
-      <div class="card tile">
-        <span class="num">{accuracy === null ? "—" : `${accuracy}%`}</span><span class="muted">{t("stat.accuracy")}</span>
+      <div class="card tile goal" class:done={goalDone}>
+        <span class="muted small"><Target size={14} aria-hidden="true" /> {t("home.goal")}</span>
+        <span class="num">{p.today} <span class="of">/ {p.daily_goal}</span></span>
+        <ProgressBar value={Math.min(p.today, p.daily_goal)} max={p.daily_goal} label={t("home.goal_of", { n: p.today, goal: p.daily_goal })} />
+        <span class="muted small">{goalDone ? t("home.goal_done") : t("home.goal_of", { n: p.today, goal: p.daily_goal })}</span>
       </div>
       <a class="card tile link" href="/revise">
-        <span class="num">{stats.mistakes}</span><span class="muted">{t("stat.mistakes")}</span>
+        <span class="muted small"><RotateCcw size={14} aria-hidden="true" /> {t("home.due")}</span>
+        <span class="num">{p.due}</span>
+        <span class="small {p.due ? 'cta' : 'muted'}">{p.due ? t("home.due_action") + " →" : t("revise.due_empty").split(".")[0] + "."}</span>
+      </a>
+      <a class="card tile link" href="/progress">
+        <span class="muted small"><Flame size={14} aria-hidden="true" /> {t("progress.streak")}</span>
+        <span class="num">{t("progress.days", { n: p.streak })}</span>
+        <span class="muted small">{t("progress.best")}: {t("progress.days", { n: p.best_streak })}</span>
+      </a>
+      <a class="card tile link" href="/progress">
+        <span class="muted small">{t("progress.accuracy")}</span>
+        <span class="num">{p.attempted ? `${num(p.accuracy)}%` : "—"}</span>
+        <span class="muted small">{t("progress.answers", { n: p.total_attempts })}</span>
       </a>
     </div>
 
@@ -73,16 +90,32 @@
   .tile {
     display: grid;
     gap: var(--space-1);
+    align-content: start;
     color: inherit;
     text-decoration: none;
   }
+  .tile :global(svg) {
+    vertical-align: -2px;
+  }
   .tile.link:hover {
     border-color: var(--accent);
+  }
+  .goal.done {
+    border-color: var(--correct);
+    background: var(--correct-bg);
   }
   .num {
     font-size: 2rem;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
+  }
+  .of {
+    font-size: 1rem;
+    color: var(--text-muted);
+  }
+  .cta {
+    color: var(--accent);
+    font-weight: 600;
   }
   .grid {
     display: grid;

@@ -1,5 +1,5 @@
 use crate::model::{AttemptResult, QuestionView, RawQuestion, Stats};
-use crate::{CoreError, Result};
+use crate::{CoreError, Result, srs};
 use rusqlite::{Connection, OptionalExtension, params};
 use std::collections::HashMap;
 
@@ -67,10 +67,45 @@ pub fn record_attempt(
         "INSERT INTO attempts (question_id, chosen, correct, time_ms, mode) VALUES (?1, ?2, ?3, ?4, ?5)",
         params![question_id, chosen, correct, time_ms, mode],
     )?;
+    let now = srs::now();
+    let srs = if !correct {
+        // A wrong answer anywhere puts the question into the review queue.
+        srs::review(user, question_id, srs::Grade::Again, now)?;
+        None
+    } else if mode == "revise" {
+        Some(srs::preview(srs::card(user, question_id)?.as_ref(), now))
+    } else {
+        None
+    };
     Ok(AttemptResult {
         correct,
         answer: raw.answer,
+        srs,
     })
+}
+
+/// The user's recall grade for a correctly answered revision question.
+pub fn grade(user: &Connection, question_id: &str, grade: srs::Grade) -> Result<srs::Card> {
+    srs::review(user, question_id, grade, srs::now())
+}
+
+/// Questions due for spaced-repetition review now (questions removed from content are skipped).
+pub fn due(
+    content: &Connection,
+    user: &Connection,
+    lang: &str,
+    limit: usize,
+) -> Result<Vec<QuestionView>> {
+    let mut out = Vec::new();
+    for id in srs::due_ids(user, srs::now(), limit)? {
+        out.extend(load(
+            content,
+            "SELECT id, topic_id, data FROM questions WHERE id = ?1",
+            [&id],
+            lang,
+        )?);
+    }
+    Ok(out)
 }
 
 /// Latest result per question → (attempted, correct) per topic.
@@ -121,5 +156,6 @@ pub fn stats(content: &Connection, user: &Connection) -> Result<Stats> {
         s.correct += correct;
     }
     s.mistakes = s.attempted - s.correct;
+    s.due = srs::due_count(user, srs::now())?;
     Ok(s)
 }

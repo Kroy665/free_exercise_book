@@ -79,10 +79,21 @@ export interface TopicView {
   question_count: number;
 }
 
+export interface SrsPreview {
+  again: number;
+  hard: number;
+  good: number;
+  easy: number;
+}
+
 export interface AttemptResult {
   correct: boolean;
   answer: number;
+  /** Revision only: seconds until the next review for each grade. */
+  srs: SrsPreview | null;
 }
+
+export type Grade = "again" | "hard" | "good" | "easy";
 
 export interface Stats {
   topics: number;
@@ -91,10 +102,11 @@ export interface Stats {
   correct: number;
   mistakes: number;
   total_attempts: number;
+  due: number;
 }
 
 // `lang` is the content language; the UI is always English.
-export type Settings = Record<"lang" | "theme" | "font_size", string>;
+export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal", string>;
 
 export interface ApiError {
   code: string;
@@ -115,6 +127,9 @@ export const api = {
     invoke<AttemptResult>("practice_record", { questionId, chosen, timeMs, mode }),
   mistakesList: (lang: string) => invoke<QuestionView[]>("mistakes_list", { lang }),
   statsGet: () => invoke<Stats>("stats_get"),
+  reviseDue: (lang: string) => invoke<QuestionView[]>("revise_due", { lang }),
+  grade: (questionId: string, grade: Grade) => invoke<unknown>("srs_grade", { questionId, grade }),
+  progress: (lang: string) => invoke<ProgressView>("progress_get", { lang }),
   settingsGet: () => invoke<Settings>("settings_get"),
   settingsSet: (key: keyof Settings, value: string) => invoke<void>("settings_set", { key, value }),
 };
@@ -313,3 +328,30 @@ export interface SearchHit {
 export const searchApi = {
   search: (query: string, lang: string) => invoke<SearchHit[]>("search", { query, lang }),
 };
+
+// ---------- Progress ----------
+
+export interface ProgressView {
+  total_attempts: number;
+  attempted: number;
+  correct: number;
+  accuracy: number;
+  today: number;
+  daily_goal: number;
+  streak: number;
+  best_streak: number;
+  due: number;
+  days: { date: string; attempts: number; correct: number }[];
+  topics: {
+    topic_id: string;
+    title: string;
+    subject_title: string;
+    questions: number;
+    attempted: number;
+    correct: number;
+    accuracy: number;
+    last_at: number | null;
+  }[];
+  weak: string[];
+  tests: { id: number; title: string; pct: number; submitted_at: number }[];
+}

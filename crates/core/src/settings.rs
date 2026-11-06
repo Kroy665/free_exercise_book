@@ -4,9 +4,10 @@ use std::collections::BTreeMap;
 
 /// Allowed keys and their defaults.
 const DEFAULTS: &[(&str, &str)] = &[
-    ("lang", "en"),      // content language (the UI is always English)
-    ("theme", "system"), // system | light | dark
-    ("font_size", "16"), // 14..=22 px
+    ("lang", "en"),       // content language (the UI is always English)
+    ("theme", "system"),  // system | light | dark
+    ("font_size", "16"),  // 14..=22 px
+    ("daily_goal", "20"), // questions per day
 ];
 
 pub fn get_all(user: &Connection) -> Result<BTreeMap<String, String>> {
@@ -29,6 +30,7 @@ fn validate(key: &str, value: &str) -> Result<()> {
         "lang" => SUPPORTED_LANGS.contains(&value),
         "theme" => matches!(value, "system" | "light" | "dark"),
         "font_size" => value.parse::<u8>().is_ok_and(|n| (14..=22).contains(&n)),
+        "daily_goal" => value.parse::<u16>().is_ok_and(|n| (1..=500).contains(&n)),
         _ => return Err(CoreError::Invalid(format!("unknown setting '{key}'"))),
     };
     if ok {

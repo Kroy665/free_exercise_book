@@ -95,3 +95,27 @@ pub async fn search(
     }
     feb_core::search::search(&*state.content()?, &query, &lang, 30).map_err(e)
 }
+
+/// Questions due for spaced-repetition review.
+#[tauri::command]
+pub async fn revise_due(state: State<'_, AppState>, lang: String) -> CmdResult<Vec<QuestionView>> {
+    practice::due(&*state.content()?, &*state.user()?, &lang, 200).map_err(e)
+}
+
+/// The user's recall grade for a correctly answered revision question.
+#[tauri::command]
+pub async fn srs_grade(
+    state: State<'_, AppState>,
+    question_id: String,
+    grade: feb_core::srs::Grade,
+) -> CmdResult<feb_core::srs::Card> {
+    practice::grade(&*state.user()?, &question_id, grade).map_err(e)
+}
+
+#[tauri::command]
+pub async fn progress_get(
+    state: State<'_, AppState>,
+    lang: String,
+) -> CmdResult<feb_core::progress::ProgressView> {
+    feb_core::progress::view(&*state.content()?, &*state.user()?, &lang).map_err(e)
+}

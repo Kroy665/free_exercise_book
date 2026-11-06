@@ -29,6 +29,13 @@
   </section>
 
   <section class="card group">
+    <label for="goal"><strong>{t("settings.goal")}</strong></label>
+    <p class="muted">{t("settings.goal_help")}</p>
+    <input id="goal" class="goal" type="number" min="1" max="500" value={settings.daily_goal}
+      onchange={(e) => { const n = Math.round(Number(e.currentTarget.value)); if (n >= 1 && n <= 500) setSetting("daily_goal", String(n)); }} />
+  </section>
+
+  <section class="card group">
     <label for="fs"><strong>{t("settings.font_size")}</strong> · {settings.font_size}px</label>
     <input id="fs" type="range" min="14" max="22" step="1" value={settings.font_size} onchange={(e) => setSetting("font_size", e.currentTarget.value)} />
   </section>
@@ -54,6 +61,15 @@
     display: flex;
     gap: var(--space-5);
     flex-wrap: wrap;
+  }
+  .goal {
+    width: 120px;
+    font: inherit;
+    padding: var(--space-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
   }
   select,
   input[type="range"] {

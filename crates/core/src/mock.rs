@@ -705,6 +705,9 @@ pub fn submit(
                     "INSERT INTO attempts (question_id, chosen, correct, time_ms, mode) VALUES (?1, ?2, ?3, ?4, 'test')",
                     params![q, c, c == answer, a.time_ms as i64],
                 )?;
+                if c != answer {
+                    crate::srs::review(&tx, q, crate::srs::Grade::Again, now())?;
+                }
             }
         }
         st.score = round2(st.score);

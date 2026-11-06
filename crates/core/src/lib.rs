@@ -16,8 +16,10 @@ pub mod mock;
 pub mod model;
 pub mod packs;
 pub mod practice;
+pub mod progress;
 pub mod search;
 pub mod settings;
+pub mod srs;
 
 pub use error::{CoreError, Result};
 

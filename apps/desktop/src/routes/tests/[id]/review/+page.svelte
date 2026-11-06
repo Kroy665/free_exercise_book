@@ -36,7 +36,7 @@
   const count = (f: Filter) =>
     numbered.filter(({ item }) => (f === "all" ? true : f === "marked" ? item.marked : item.outcome === f)).length;
 
-  const result = (item: ReviewItem) => ({ correct: item.outcome === "correct", answer: item.question.answer });
+  const result = (item: ReviewItem) => ({ correct: item.outcome === "correct", answer: item.question.answer, srs: null });
 </script>
 
 <div class="page">

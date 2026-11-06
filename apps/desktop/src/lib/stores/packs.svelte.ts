@@ -1,7 +1,14 @@
-// Number of pack updates, for the dot on the Downloads item in the sidebar.
-import { packsApi, type PacksView } from "$lib/api";
+// Sidebar badges: pack updates (Downloads dot) and cards due for review (Revise count).
+import { api, packsApi, type PacksView } from "$lib/api";
 
-export const packBadge = $state({ updates: 0 });
+export const packBadge = $state({ updates: 0, due: 0 });
+
+export function refreshDueBadge() {
+  api
+    .statsGet()
+    .then((s) => (packBadge.due = s.due))
+    .catch(() => {});
+}
 
 export function refreshPackBadge(view?: PacksView) {
   if (view) {

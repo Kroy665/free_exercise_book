@@ -10,6 +10,7 @@ export const settings = $state<Settings & { loaded: boolean }>({
   lang: "en",
   theme: "system",
   font_size: "16",
+  daily_goal: "20",
   loaded: false,
 });
 

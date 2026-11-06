@@ -144,6 +144,19 @@ const USER_MIGRATIONS: &[&str] = &[
         result       TEXT                -- JSON TestSummary
     );
     "#,
+    // 3: spaced repetition cards (FSRS-5, crates/core/src/srs.rs)
+    r#"
+    CREATE TABLE srs_cards (
+        question_id TEXT PRIMARY KEY,
+        stability   REAL NOT NULL,     -- days until recall probability falls to 90%
+        difficulty  REAL NOT NULL,     -- 1 (easy) .. 10 (hard)
+        due         INTEGER NOT NULL,  -- unix seconds
+        last_review INTEGER NOT NULL,  -- unix seconds
+        reps        INTEGER NOT NULL,
+        lapses      INTEGER NOT NULL
+    );
+    CREATE INDEX srs_due ON srs_cards(due);
+    "#,
 ];
 
 fn configure(conn: &Connection) -> Result<()> {

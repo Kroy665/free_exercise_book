@@ -227,6 +227,9 @@ pub struct TopicView {
 pub struct AttemptResult {
     pub correct: bool,
     pub answer: u8,
+    /// In revision, a correct answer asks the user to grade recall: next-review times
+    /// (seconds) for each grade. None otherwise.
+    pub srs: Option<crate::srs::Preview>,
 }
 
 #[derive(Debug, Clone, Default, Serialize)]
@@ -237,4 +240,6 @@ pub struct Stats {
     pub correct: i64,
     pub mistakes: i64,
     pub total_attempts: i64,
+    /// Spaced-repetition cards due now.
+    pub due: i64,
 }

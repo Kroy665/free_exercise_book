@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { api, errorMessage, type AttemptResult, type QuestionView } from "$lib/api";
+  import { api, errorMessage, type AttemptResult, type Grade, type QuestionView } from "$lib/api";
+  import { refreshDueBadge } from "$lib/stores/packs.svelte";
   import { renderInline } from "$lib/markdown/render";
   import { optionLabel, settings, t } from "$lib/stores/settings.svelte";
   import { openUrl } from "@tauri-apps/plugin-opener";
@@ -61,8 +62,35 @@
     }
   }
 
+  // Revision: after a correct answer the user grades recall; that schedules the next review.
+  const grading = $derived(mode === "revise" && !!result?.correct && !!result?.srs);
+
+  async function gradeAndNext(g: Grade) {
+    if (busy) return;
+    busy = true;
+    try {
+      await api.grade(q.id, g);
+      refreshDueBadge();
+      next();
+    } catch (e) {
+      error = errorMessage(e);
+    } finally {
+      busy = false;
+    }
+  }
+
+  function interval(secs: number): string {
+    if (secs < 3600) return `${Math.max(1, Math.round(secs / 60))} min`;
+    if (secs < 86400) return `${Math.round(secs / 3600)} h`;
+    const d = Math.round(secs / 86400);
+    if (d < 31) return `${d} d`;
+    if (d < 365) return `${Math.round(d / 30)} mo`;
+    return `${(d / 365).toFixed(1)} y`;
+  }
+
   function next() {
     if (!result) return;
+    if (mode === "revise" && !result.correct) refreshDueBadge();
     if (isLast) {
       finished = true;
       return;
@@ -86,12 +114,16 @@
     if (el.closest("input, textarea, select")) return;
     const k = e.key.toLowerCase();
     const idx = "1234".indexOf(k) >= 0 ? Number(k) - 1 : "abcd".indexOf(k);
-    if (idx >= 0 && !result) {
+    if (grading && "1234".includes(k)) {
+      e.preventDefault();
+      gradeAndNext((["again", "hard", "good", "easy"] as const)[Number(k) - 1]);
+    } else if (idx >= 0 && !result) {
       selected = idx;
       e.preventDefault();
     } else if (e.key === "Enter") {
       e.preventDefault();
-      if (result) next();
+      if (grading) gradeAndNext("good");
+      else if (result) next();
       else check();
     }
   }
@@ -144,6 +176,9 @@
         <strong>
           {result.correct ? t("q.correct") : t("q.wrong", { label: optionLabel(result.answer, q.lang) })}
         </strong>
+        {#if mode === "revise" && !result.correct}
+          <p class="muted small">{t("srs.wrong_note", { t: "10 min" })}</p>
+        {/if}
         <h3>{t("q.explanation")}</h3>
         <p lang={q.lang}>{@html renderInline(q.explanation)}</p>
         <div class="links">
@@ -160,8 +195,17 @@
     {/if}
 
     <footer class="foot">
-      <span class="muted hint">{t("q.keys")}</span>
-      {#if result}
+      <span class="muted hint">{grading ? t("srs.keys") : t("q.keys")}</span>
+      {#if grading && result?.srs}
+        <div class="grades" role="group" aria-label={t("srs.how")}>
+          <span class="muted small">{t("srs.how")}</span>
+          {#each [["again", result.srs.again], ["hard", result.srs.hard], ["good", result.srs.good], ["easy", result.srs.easy]] as const as [g, secs], i (g)}
+            <button class="btn grade {g === 'good' ? 'btn-primary' : ''}" disabled={busy} onclick={() => gradeAndNext(g)}>
+              <span>{i + 1}. {t(`srs.${g}`)}</span><span class="when">{interval(secs)}</span>
+            </button>
+          {/each}
+        </div>
+      {:else if result}
         <button class="btn btn-primary" onclick={next}>{isLast ? t("q.finish") : t("q.next")}</button>
       {:else}
         <button class="btn btn-primary" disabled={selected === null || busy} onclick={check}>{t("q.check")}</button>
@@ -222,6 +266,33 @@
     align-items: center;
     gap: var(--space-4);
     margin-top: var(--space-5);
+  }
+  .foot {
+    flex-wrap: wrap;
+  }
+  .grades {
+    order: -1;
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: flex-end;
+  }
+  .grades > span {
+    margin-right: auto;
+  }
+  .grade {
+    flex-direction: column;
+    gap: 0;
+    min-height: 44px;
+    line-height: 1.2;
+  }
+  .when {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+  .small {
+    font-size: 0.8125rem;
   }
   .hint {
     font-size: 0.8125rem;

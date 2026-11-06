@@ -8,7 +8,7 @@
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
   import CommandPalette from "$lib/components/CommandPalette.svelte";
   import Search from "@lucide/svelte/icons/search";
-  import { packBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
+  import { packBadge, refreshDueBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
   import House from "@lucide/svelte/icons/house";
   import BookOpen from "@lucide/svelte/icons/book-open";
@@ -25,6 +25,7 @@
 
   loadSettings();
   refreshPackBadge();
+  refreshDueBadge();
 
   const main = [
     { href: "/", key: "nav.home", icon: House },
@@ -57,6 +58,7 @@
   let scroller = $state<HTMLElement | null>(null);
   afterNavigate(({ to }) => {
     if (scroller && !to?.url.hash) scroller.scrollTop = 0;
+    refreshDueBadge();
   });
 
   let paletteOpen = $state(false);
@@ -95,9 +97,11 @@
       </div>
       <ul>
         {#each main as item (item.href)}
+          {@const due = item.href === "/revise" ? packBadge.due : 0}
           <li>
-            <a href={item.href} title={t(item.key)} class:active={active(item.href)} aria-current={active(item.href) ? "page" : undefined}>
+            <a href={item.href} title={due ? t("nav.due", { n: due }) : t(item.key)} class:active={active(item.href)} aria-current={active(item.href) ? "page" : undefined}>
               <item.icon size={20} aria-hidden="true" /><span>{t(item.key)}</span>
+              {#if due}<span class="count" aria-label={t("nav.due", { n: due })}>{due > 99 ? "99+" : due}</span>{/if}
             </a>
           </li>
         {/each}
@@ -179,6 +183,18 @@
   .bottom {
     margin-top: auto;
   }
+  .count {
+    margin-left: auto;
+    min-width: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-fg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 18px;
+  }
   .icon {
     position: relative;
     display: inline-flex;
@@ -194,6 +210,7 @@
     border: 2px solid var(--surface);
   }
   nav a {
+    position: relative;
     display: flex;
     align-items: center;
     gap: var(--space-3);
@@ -268,8 +285,16 @@
       grid-template-columns: 64px 1fr;
     }
     .brand span,
-    nav a span {
+    nav a span:not(.icon):not(.count) {
       display: none;
+    }
+    .count {
+      position: absolute;
+      transform: translate(10px, -10px);
+      min-width: 16px;
+      padding: 0 4px;
+      line-height: 16px;
+      font-size: 0.6875rem;
     }
     .brand {
       justify-content: center;

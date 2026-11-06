@@ -98,7 +98,10 @@ Tests hub → Instructions (pattern, marks, negative marking, time) → Start
 - State is saved after every answer so a crash or close can **resume**.
 
 ### 4.5 Revise
-Due cards (FSRS) first, then Mistakes, then Bookmarks. Each review uses the same QuestionCard UI with "Again / Hard / Good / Easy" grading after the answer is revealed. Grading is auto-suggested from correctness and time.
+Two tabs: **Due for review** (spaced repetition, FSRS-5) and **Mistakes** (latest answer wrong).
+- A wrong answer anywhere (practice, test, revision) adds the question to the review queue; it comes back after 10 minutes, then at growing intervals.
+- In a review, after a **correct** answer the user grades recall: **Again / Hard / Good / Easy** (keys `1–4`, `Enter` = Good), each button showing when the question will return. Hard, Good and Easy always give different intervals. A wrong answer is graded Again automatically.
+- The sidebar shows the number of questions due on **Revise**; Home shows it with a "Review now" link.
 
 ### 4.6 Downloads
 Installed packs (with update badge) → Available packs by subject → Pack detail (size, version, changelog, question/note counts) → Download / Update / Remove. Removing a pack keeps the user's progress history.
