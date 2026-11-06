@@ -100,3 +100,50 @@ fn sections_parser_ignores_fenced_headings() {
         ["a", "b"]
     );
 }
+
+#[test]
+fn pack_build_install_update_remove() {
+    let dir = std::env::temp_dir().join(format!("feb-pack-test-{}", std::process::id()));
+    std::fs::create_dir_all(&dir).unwrap();
+    let subjects = import::load_dir(&content_dir()).unwrap();
+    let s = &subjects[0];
+    let u = &s.units[0];
+    let t = &u.topics[0];
+    let pack = dir.join("p.db");
+    let counts = feb_core::packs::build_pack_db(&pack, s, u, t).unwrap();
+    assert_eq!((counts.sections, counts.questions), (14, 12));
+
+    let (mut c, u_db) = db::open_in_memory().unwrap();
+    let v = &t.topic.version;
+    // Wrong id/version from the "manifest" must be rejected and leave nothing behind.
+    assert!(feb_core::packs::install_pack_db(&mut c, &pack, "other.topic", v, "x", 1).is_err());
+    assert!(library::tree(&c, &u_db, "en").unwrap().is_empty());
+
+    let p = feb_core::packs::install_pack_db(&mut c, &pack, TOPIC, v, "abc", 123).unwrap();
+    assert_eq!((p.id.as_str(), p.size), (TOPIC, 123));
+    assert_eq!(
+        practice::questions_for_topic(&c, TOPIC, "bn")
+            .unwrap()
+            .len(),
+        12
+    );
+    // Re-install (update) is idempotent: no duplicate rows.
+    feb_core::packs::install_pack_db(&mut c, &pack, TOPIC, v, "def", 124).unwrap();
+    assert_eq!(
+        practice::questions_for_topic(&c, TOPIC, "en")
+            .unwrap()
+            .len(),
+        12
+    );
+    assert_eq!(library::topic(&c, TOPIC, "en").unwrap().sections.len(), 7);
+    assert_eq!(
+        feb_core::packs::list_installed(&c).unwrap()[0].sha256,
+        "def"
+    );
+    assert!(!feb_core::packs::has_dev_content(&c).unwrap());
+
+    feb_core::packs::remove_pack(&mut c, TOPIC).unwrap();
+    assert!(library::tree(&c, &u_db, "en").unwrap().is_empty());
+    assert!(feb_core::packs::list_installed(&c).unwrap().is_empty());
+    std::fs::remove_dir_all(&dir).ok();
+}

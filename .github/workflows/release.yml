@@ -64,9 +64,22 @@ jobs:
         working-directory: apps/desktop
         run: npm ci
 
+      # Bundled packs must be signed with the production key, or release builds reject them.
+      - name: Require the pack signing key
+        shell: bash
+        env:
+          FEB_PACK_SIGNING_KEY: ${{ secrets.FEB_PACK_SIGNING_KEY }}
+        run: |
+          if [ -z "$FEB_PACK_SIGNING_KEY" ]; then
+            echo "::error::Repository secret FEB_PACK_SIGNING_KEY is not set (see docs/DATA_AND_PACKS.md)."
+            exit 1
+          fi
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Used by `npm run packs` (beforeBuildCommand) to sign the bundled packs.
+          FEB_PACK_SIGNING_KEY: ${{ secrets.FEB_PACK_SIGNING_KEY }}
         with:
           projectPath: apps/desktop
           tagName: ${{ github.ref_name }}

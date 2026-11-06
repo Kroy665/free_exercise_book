@@ -95,6 +95,10 @@ jobs:
           npm ci
           npm run build
 
+      # The app bundles dist/packs; CI signs them with a throwaway development key.
+      - name: Build content packs (development key)
+        run: cargo run -q -p feb-packer -- build content --out dist/packs --dev-key dist/dev-key
+
       - name: rustfmt
         if: runner.os == 'Linux'
         run: cargo fmt --all --check

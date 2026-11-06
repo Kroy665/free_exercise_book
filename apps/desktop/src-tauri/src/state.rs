@@ -1,3 +1,4 @@
+use crate::pack_service::PackConfig;
 use feb_core::error::ErrorPayload;
 use rusqlite::Connection;
 use std::sync::{Mutex, MutexGuard};
@@ -5,6 +6,7 @@ use std::sync::{Mutex, MutexGuard};
 pub struct AppState {
     pub content: Mutex<Connection>,
     pub user: Mutex<Connection>,
+    pub packs: PackConfig,
 }
 
 fn lock(m: &Mutex<Connection>) -> Result<MutexGuard<'_, Connection>, ErrorPayload> {

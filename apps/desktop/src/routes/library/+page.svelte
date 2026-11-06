@@ -29,7 +29,10 @@
   {:else if !tree}
     <p class="muted">{t("common.loading")}</p>
   {:else if tree.length === 0}
-    <p class="muted">{t("library.empty")}</p>
+    <div class="card empty">
+      <p class="muted">{t("library.empty")}</p>
+      <a class="btn btn-primary" href="/downloads">{t("library.empty_action")}</a>
+    </div>
   {:else}
     {#each tree as subject (subject.id)}
       <section class="subject">
@@ -57,6 +60,9 @@
 </div>
 
 <style>
+  .empty {
+    max-width: 480px;
+  }
   .subject {
     margin-top: var(--space-5);
   }

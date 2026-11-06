@@ -11,7 +11,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "tauri": "tauri",
-    "icons": "tauri icon src-tauri/icons/source/icon.svg && node -e \"const fs=require('fs');for(const d of ['android','ios'])fs.rmSync('src-tauri/icons/'+d,{recursive:true,force:true});fs.copyFileSync('src-tauri/icons/64x64.png','static/favicon.png')\""
+    "icons": "tauri icon src-tauri/icons/source/icon.svg && node -e \"const fs=require('fs');for(const d of ['android','ios'])fs.rmSync('src-tauri/icons/'+d,{recursive:true,force:true});fs.copyFileSync('src-tauri/icons/64x64.png','static/favicon.png')\"",
+    "packs": "cargo run -q --manifest-path ../../Cargo.toml -p feb-packer -- build ../../content --out ../../dist/packs --auto-key ../../dist/dev-key"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
@@ -19,6 +20,7 @@
     "@fontsource-variable/noto-sans-bengali": "^5.3.0",
     "@lucide/svelte": "^1.70.0",
     "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.8.4",
     "@tauri-apps/plugin-opener": "^2",
     "markdown-it": "^15.0.3",
     "markdown-it-container": "^4.0.0"

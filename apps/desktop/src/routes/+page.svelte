@@ -52,7 +52,10 @@
           <span class="muted small">{t("library.progress", { done: topic.attempted, total: topic.question_count })}</span>
         </a>
       {:else}
-        <p class="muted">{t("library.empty")}</p>
+        <div class="card">
+          <p class="muted">{t("library.empty")}</p>
+          <a class="btn btn-primary" href="/downloads">{t("library.empty_action")}</a>
+        </div>
       {/each}
     </div>
   {:else}

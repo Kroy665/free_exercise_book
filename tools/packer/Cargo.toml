@@ -1,0 +1,21 @@
+[package]
+name = "feb-packer"
+description = "Builds signed content packs from content/ (docs/DATA_AND_PACKS.md)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+
+[[bin]]
+name = "feb-packer"
+path = "src/main.rs"
+
+[dependencies]
+feb-core = { path = "../../crates/core" }
+feb-packs = { path = "../../crates/packs", default-features = false, features = ["sign"] }
+serde_json.workspace = true
+
+[dev-dependencies]
+feb-packs = { path = "../../crates/packs", default-features = false }

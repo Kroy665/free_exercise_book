@@ -18,8 +18,13 @@ tauri-build = { version = "2", features = [] }
 
 [dependencies]
 feb-core = { path = "../../../crates/core" }
+feb-packs = { path = "../../../crates/packs" }
+tauri-plugin-dialog = "2"
 tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde.workspace = true
 serde_json.workspace = true
 rusqlite.workspace = true
+
+[dev-dependencies]
+feb-packs = { path = "../../../crates/packs", features = ["sign"] }

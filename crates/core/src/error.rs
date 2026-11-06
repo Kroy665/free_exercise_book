@@ -37,7 +37,7 @@ impl CoreError {
 }
 
 /// Serializable error shape for the IPC boundary.
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, Serialize)]
 pub struct ErrorPayload {
     pub code: &'static str,
     pub message: String,

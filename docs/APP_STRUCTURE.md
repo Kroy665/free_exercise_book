@@ -148,7 +148,7 @@ pub async fn practice_next(
 ## 7. Startup sequence
 
 1. Resolve paths and open both DBs (create and migrate if needed).
-1a. *(v0.1, until packs exist)* Import `content/` into `content.db` in one transaction. Source: `FEB_CONTENT_DIR` env var → the repo's `content/` (debug builds) → bundled `content/` resource (release builds).
+1a. If `FEB_CONTENT_DIR` is set (developer mode), import that folder directly. Otherwise install bundled packs on first run / update installed packs from a newer bundle (docs/DATA_AND_PACKS.md §10).
 2. Load settings. Apply theme and font size before first paint (avoids a flash).
 3. If no packs are installed, go to **Onboarding**. Otherwise go to **Home**.
 4. In the background (only if network is allowed): check the manifest for pack and app updates.

@@ -131,7 +131,7 @@ Language, theme (system/light/dark), font size, reading width, daily goal, netwo
 | Version | Scope |
 |---|---|
 | **v0.1** | Shell, onboarding, sample content **in English and Bengali** (content language switch; English UI), library, notes reader, topic practice, keyword search, mistake notebook, error reporting |
-| **v0.2** | Custom and exam-pattern mock tests, results, resume, progress analytics |
+| **v0.2** | ✅ Content packs: Downloads page, signed packs, bundled/offline install, updates, folder import. Next: custom and exam-pattern mock tests, results, resume, progress analytics |
 | **v0.3** | Vector search, related notes/questions, FSRS revision, monthly current-affairs packs |
 | **v0.4** | Hindi content, WBCS exam pattern, delta updates, sideloading, app auto-update |
 | **v1.0** | Stable pack format, broad syllabus coverage, accessibility audit, signed installers |

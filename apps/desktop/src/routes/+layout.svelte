@@ -6,6 +6,7 @@
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/state";
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
+  import { packBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
   import House from "@lucide/svelte/icons/house";
   import BookOpen from "@lucide/svelte/icons/book-open";
@@ -21,6 +22,7 @@
   let { children } = $props();
 
   loadSettings();
+  refreshPackBadge();
 
   const main = [
     { href: "/", key: "nav.home", icon: House },
@@ -88,9 +90,11 @@
       </ul>
       <ul class="bottom">
         {#each bottom as item (item.href)}
+          {@const dot = item.href === "/downloads" && packBadge.updates > 0}
           <li>
-            <a href={item.href} title={t(item.key)} class:active={active(item.href)} aria-current={active(item.href) ? "page" : undefined}>
-              <item.icon size={20} aria-hidden="true" /><span>{t(item.key)}</span>
+            <a href={item.href} title={dot ? t("nav.updates", { n: packBadge.updates }) : t(item.key)} class:active={active(item.href)} aria-current={active(item.href) ? "page" : undefined}>
+              <span class="icon"><item.icon size={20} aria-hidden="true" />{#if dot}<span class="dot" aria-hidden="true"></span>{/if}</span><span>{t(item.key)}</span>
+              {#if dot}<span class="sr-only">{t("nav.updates", { n: packBadge.updates })}</span>{/if}
             </a>
           </li>
         {/each}
@@ -153,6 +157,20 @@
   }
   .bottom {
     margin-top: auto;
+  }
+  .icon {
+    position: relative;
+    display: inline-flex;
+  }
+  .dot {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--surface);
   }
   nav a {
     display: flex;

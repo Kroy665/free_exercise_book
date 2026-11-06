@@ -118,3 +118,55 @@ export const api = {
   settingsGet: () => invoke<Settings>("settings_get"),
   settingsSet: (key: keyof Settings, value: string) => invoke<void>("settings_set", { key, value }),
 };
+
+// ---------- Content packs (Downloads page) ----------
+
+export type PackState = "installed" | "update" | "available";
+
+export interface PackItem {
+  id: string;
+  title: string;
+  summary: string | null;
+  subject: string;
+  subject_title: string;
+  unit: string;
+  unit_title: string;
+  sort: [number, number, number];
+  langs: string[];
+  questions: number;
+  sections: number;
+  size: number;
+  state: PackState;
+  installed_version: string | null;
+  available_version: string | null;
+  source: "bundled" | "server" | null;
+}
+
+export interface PacksView {
+  items: PackItem[];
+  remote: { url: string; checked_at: number | null; error: ApiError | null };
+  dev_mode: boolean;
+  updates: number;
+}
+
+export interface InstallReport {
+  view: PacksView;
+  installed: string[];
+  failed: [string, ApiError][];
+}
+
+export interface PackProgress {
+  id: string;
+  phase: "download" | "install" | "done" | "error";
+  done: number;
+  total: number;
+  message: string | null;
+}
+
+export const packsApi = {
+  list: (lang: string) => invoke<PacksView>("packs_list", { lang }),
+  check: (lang: string) => invoke<PacksView>("packs_check", { lang }),
+  install: (ids: string[], lang: string) => invoke<InstallReport>("packs_install", { ids, lang }),
+  remove: (id: string, lang: string) => invoke<PacksView>("packs_remove", { id, lang }),
+  importFolder: (path: string, lang: string) => invoke<InstallReport>("packs_import_folder", { path, lang }),
+};

@@ -5,14 +5,14 @@ use serde::{Deserialize, Serialize};
 
 // ---------- Source files (content/) ----------
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SubjectFile {
     pub id: String,
     pub title: Localized,
     pub order: i64,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UnitFile {
     pub id: String,
     pub subject: String,
@@ -20,7 +20,7 @@ pub struct UnitFile {
     pub order: i64,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TopicFile {
     pub id: String,
     pub title: Localized,

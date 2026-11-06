@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "identifier": "io.github.kroy665.freeexercisebook",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "npm run packs && npm run dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "npm run packs && npm run build",
     "frontendDist": "../build"
   },
   "app": {
@@ -35,7 +35,7 @@
     "license": "GPL-3.0-or-later",
     "copyright": "Free Exercise Book contributors",
     "resources": {
-      "../../../content/subjects/": "content/subjects/"
+      "../../../dist/packs/": "packs/"
     },
     "icon": [
       "icons/32x32.png",

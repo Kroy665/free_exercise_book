@@ -47,7 +47,35 @@ const CONTENT_MIGRATIONS: &[&str] = &[
     );
     CREATE INDEX questions_topic ON questions(topic_id, ord);
     "#,
+    // 2: installed content packs (docs/DATA_AND_PACKS.md §6)
+    r#"
+    CREATE TABLE installed_packs (
+        id           TEXT PRIMARY KEY,  -- = topic id
+        version      TEXT NOT NULL,
+        sha256       TEXT NOT NULL,     -- of the compressed .pack file
+        size         INTEGER NOT NULL,  -- compressed bytes
+        installed_at INTEGER NOT NULL DEFAULT (unixepoch())
+    );
+    "#,
 ];
+
+/// Pack file format version (docs/DATA_AND_PACKS.md §2). A pack is a SQLite database with
+/// the content tables of content migration 1 plus a `pack_meta` key/value table.
+pub const PACK_FORMAT: u32 = 1;
+
+/// Create an empty pack database at `path` (overwritten if it exists).
+pub fn create_pack(path: &Path) -> Result<Connection> {
+    if path.exists() {
+        std::fs::remove_file(path).map_err(|source| crate::CoreError::Io {
+            path: path.display().to_string(),
+            source,
+        })?;
+    }
+    let conn = Connection::open(path)?;
+    conn.execute_batch(CONTENT_MIGRATIONS[0])?;
+    conn.execute_batch("CREATE TABLE pack_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);")?;
+    Ok(conn)
+}
 
 const USER_MIGRATIONS: &[&str] = &[
     // 1: attempts + settings

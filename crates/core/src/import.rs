@@ -1,7 +1,7 @@
-//! Import source content (`content/` folder: YAML + Markdown) into `content.db`.
-//!
-//! This is the development path. Release builds will install signed packs
-//! (docs/DATA_AND_PACKS.md); the packer reuses this same parsing code.
+//! Read source content (`content/` folder: YAML + Markdown) and write it into a content
+//! database. Shared by:
+//! - the packer (`tools/packer`), which writes one topic per pack database, and
+//! - the developer path (`FEB_CONTENT_DIR`), which imports a whole folder directly.
 
 use crate::model::{RawQuestion, SubjectFile, TopicFile, TopicMeta, UnitFile};
 use crate::{CoreError, Result};
@@ -20,6 +20,34 @@ pub struct ImportReport {
     pub topics: usize,
     pub sections: usize,
     pub questions: usize,
+}
+
+/// One `## Heading {#anchor}` section of a notes file.
+#[derive(Debug, Clone)]
+pub struct Section {
+    pub anchor: String,
+    pub heading: String,
+    pub body: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct TopicSource {
+    pub topic: TopicFile,
+    /// (lang, sections) for every `notes.<lang>.md`, sorted by lang.
+    pub notes: Vec<(String, Vec<Section>)>,
+    pub questions: Vec<RawQuestion>,
+}
+
+#[derive(Debug, Clone)]
+pub struct UnitSource {
+    pub unit: UnitFile,
+    pub topics: Vec<TopicSource>,
+}
+
+#[derive(Debug, Clone)]
+pub struct SubjectSource {
+    pub subject: SubjectFile,
+    pub units: Vec<UnitSource>,
 }
 
 static H2: LazyLock<Regex> =
@@ -63,42 +91,69 @@ fn yaml<T: DeserializeOwned>(path: &Path) -> Result<T> {
     })
 }
 
-fn subdirs(dir: &Path) -> Result<Vec<PathBuf>> {
+fn entries(dir: &Path) -> Result<Vec<PathBuf>> {
     let mut v: Vec<PathBuf> = fs::read_dir(dir)
         .map_err(|source| CoreError::Io {
             path: dir.display().to_string(),
             source,
         })?
         .filter_map(|e| e.ok().map(|e| e.path()))
-        .filter(|p| p.is_dir())
         .collect();
     v.sort();
     Ok(v)
 }
 
-/// Replace all content in `conn` with the content found under `root` (the `content/` dir).
-/// Runs in one transaction: on any error the previous content stays intact.
-pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
-    let mut report = ImportReport::default();
-    let tx = conn.transaction()?;
-    tx.execute_batch("DELETE FROM subjects; DELETE FROM units; DELETE FROM topics; DELETE FROM note_sections; DELETE FROM questions;")?;
+fn subdirs(dir: &Path) -> Result<Vec<PathBuf>> {
+    Ok(entries(dir)?.into_iter().filter(|p| p.is_dir()).collect())
+}
 
+fn load_topic(dir: &Path) -> Result<TopicSource> {
+    let topic: TopicFile = yaml(&dir.join("topic.yaml"))?;
+    let mut notes = Vec::new();
+    for path in entries(dir)? {
+        let name = path
+            .file_name()
+            .and_then(|n| n.to_str())
+            .unwrap_or_default();
+        let Some(lang) = name
+            .strip_prefix("notes.")
+            .and_then(|r| r.strip_suffix(".md"))
+        else {
+            continue;
+        };
+        let sections = parse_sections(&read(&path)?)
+            .into_iter()
+            .map(|(anchor, heading, body)| Section {
+                anchor,
+                heading,
+                body,
+            })
+            .collect();
+        notes.push((lang.to_string(), sections));
+    }
+    let qfile = dir.join("questions.yaml");
+    let questions = if qfile.exists() {
+        yaml(&qfile)?
+    } else {
+        Vec::new()
+    };
+    Ok(TopicSource {
+        topic,
+        notes,
+        questions,
+    })
+}
+
+/// Parse the whole `content/` folder (`content/subjects/<subject>/<unit>/<topic>/`).
+pub fn load_dir(root: &Path) -> Result<Vec<SubjectSource>> {
+    let mut subjects = Vec::new();
     for sdir in subdirs(&root.join("subjects"))? {
         let sfile = sdir.join("subject.yaml");
         if !sfile.exists() {
             continue;
         }
         let subject: SubjectFile = yaml(&sfile)?;
-        tx.execute(
-            "INSERT INTO subjects (id, ord, title) VALUES (?1, ?2, ?3)",
-            params![
-                subject.id,
-                subject.order,
-                serde_json::to_string(&subject.title)?
-            ],
-        )?;
-        report.subjects += 1;
-
+        let mut units = Vec::new();
         for udir in subdirs(&sdir)? {
             let ufile = udir.join("unit.yaml");
             if !ufile.exists() {
@@ -114,88 +169,117 @@ pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
                     ),
                 });
             }
-            tx.execute(
-                "INSERT INTO units (id, subject_id, ord, title) VALUES (?1, ?2, ?3, ?4)",
-                params![
-                    unit.id,
-                    subject.id,
-                    unit.order,
-                    serde_json::to_string(&unit.title)?
-                ],
-            )?;
-            report.units += 1;
-
+            let mut topics = Vec::new();
             for tdir in subdirs(&udir)? {
-                let tfile = tdir.join("topic.yaml");
-                if !tfile.exists() {
-                    continue;
+                if tdir.join("topic.yaml").exists() {
+                    topics.push(load_topic(&tdir)?);
                 }
-                let topic: TopicFile = yaml(&tfile)?;
-                let meta = TopicMeta {
-                    exams: topic.exams.clone(),
-                    estimated_minutes: topic.estimated_minutes,
-                    version: topic.version.clone(),
-                    status: topic.status.clone(),
-                    sources: topic.sources.clone(),
-                };
-                tx.execute(
-                    "INSERT INTO topics (id, unit_id, subject_id, ord, title, summary, meta) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
-                    params![
-                        topic.id,
-                        unit.id,
-                        subject.id,
-                        topic.order,
-                        serde_json::to_string(&topic.title)?,
-                        topic.summary.as_ref().map(serde_json::to_string).transpose()?,
-                        serde_json::to_string(&meta)?,
-                    ],
-                )?;
+            }
+            units.push(UnitSource { unit, topics });
+        }
+        subjects.push(SubjectSource { subject, units });
+    }
+    Ok(subjects)
+}
+
+/// Insert or replace a subject row.
+pub fn write_subject(conn: &Connection, s: &SubjectFile) -> Result<()> {
+    conn.execute(
+        "INSERT OR REPLACE INTO subjects (id, ord, title) VALUES (?1, ?2, ?3)",
+        params![s.id, s.order, serde_json::to_string(&s.title)?],
+    )?;
+    Ok(())
+}
+
+/// Insert or replace a unit row.
+pub fn write_unit(conn: &Connection, u: &UnitFile) -> Result<()> {
+    conn.execute(
+        "INSERT OR REPLACE INTO units (id, subject_id, ord, title) VALUES (?1, ?2, ?3, ?4)",
+        params![u.id, u.subject, u.order, serde_json::to_string(&u.title)?],
+    )?;
+    Ok(())
+}
+
+/// Replace one topic (row, note sections, questions). Returns (sections, questions) written.
+pub fn write_topic(conn: &Connection, unit: &UnitFile, t: &TopicSource) -> Result<(usize, usize)> {
+    let topic = &t.topic;
+    let id = &topic.id;
+    conn.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
+    conn.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
+    let meta = TopicMeta {
+        exams: topic.exams.clone(),
+        estimated_minutes: topic.estimated_minutes,
+        version: topic.version.clone(),
+        status: topic.status.clone(),
+        sources: topic.sources.clone(),
+    };
+    conn.execute(
+        "INSERT OR REPLACE INTO topics (id, unit_id, subject_id, ord, title, summary, meta)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
+        params![
+            id,
+            unit.id,
+            unit.subject,
+            topic.order,
+            serde_json::to_string(&topic.title)?,
+            topic
+                .summary
+                .as_ref()
+                .map(serde_json::to_string)
+                .transpose()?,
+            serde_json::to_string(&meta)?,
+        ],
+    )?;
+    let mut sections = 0;
+    for (lang, list) in &t.notes {
+        for (ord, s) in list.iter().enumerate() {
+            conn.execute(
+                "INSERT INTO note_sections (topic_id, lang, anchor, ord, heading, body_md)
+                 VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+                params![id, lang, s.anchor, ord as i64, s.heading, s.body],
+            )?;
+            sections += 1;
+        }
+    }
+    for (ord, q) in t.questions.iter().enumerate() {
+        conn.execute(
+            "INSERT INTO questions (id, topic_id, ord, kind, difficulty, status, data)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
+            params![
+                format!("{id}/{}", q.id),
+                id,
+                ord as i64,
+                q.kind,
+                q.difficulty,
+                q.status,
+                serde_json::to_string(q)?
+            ],
+        )?;
+    }
+    Ok((sections, t.questions.len()))
+}
+
+/// Developer path: replace **all** content in `conn` with the folder at `root`
+/// (no packs involved). Runs in one transaction; on error the old content stays.
+pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
+    let subjects = load_dir(root)?;
+    let mut report = ImportReport::default();
+    let tx = conn.transaction()?;
+    tx.execute_batch(
+        "DELETE FROM subjects; DELETE FROM units; DELETE FROM topics;
+         DELETE FROM note_sections; DELETE FROM questions; DELETE FROM installed_packs;",
+    )?;
+    for s in &subjects {
+        write_subject(&tx, &s.subject)?;
+        report.subjects += 1;
+        for u in &s.units {
+            write_unit(&tx, &u.unit)?;
+            report.units += 1;
+            for t in &u.topics {
+                let (sec, q) = write_topic(&tx, &u.unit, t)?;
                 report.topics += 1;
-
-                // notes.<lang>.md
-                let mut entries: Vec<PathBuf> = fs::read_dir(&tdir)
-                    .map_err(|source| CoreError::Io {
-                        path: tdir.display().to_string(),
-                        source,
-                    })?
-                    .filter_map(|e| e.ok().map(|e| e.path()))
-                    .collect();
-                entries.sort();
-                for path in entries {
-                    let name = path
-                        .file_name()
-                        .and_then(|n| n.to_str())
-                        .unwrap_or_default();
-                    let Some(lang) = name
-                        .strip_prefix("notes.")
-                        .and_then(|r| r.strip_suffix(".md"))
-                    else {
-                        continue;
-                    };
-                    for (ord, (anchor, heading, body)) in
-                        parse_sections(&read(&path)?).into_iter().enumerate()
-                    {
-                        tx.execute(
-                            "INSERT INTO note_sections (topic_id, lang, anchor, ord, heading, body_md) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
-                            params![topic.id, lang, anchor, ord as i64, heading, body],
-                        )?;
-                        report.sections += 1;
-                    }
-                }
-
-                // questions.yaml
-                let qfile = tdir.join("questions.yaml");
-                if qfile.exists() {
-                    let qs: Vec<RawQuestion> = yaml(&qfile)?;
-                    for (ord, q) in qs.iter().enumerate() {
-                        let full_id = format!("{}/{}", topic.id, q.id);
-                        tx.execute(
-                            "INSERT INTO questions (id, topic_id, ord, kind, difficulty, status, data) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
-                            params![full_id, topic.id, ord as i64, q.kind, q.difficulty, q.status, serde_json::to_string(q)?],
-                        )?;
-                        report.questions += 1;
-                    }
-                }
+                report.sections += sec;
+                report.questions += q;
             }
         }
     }

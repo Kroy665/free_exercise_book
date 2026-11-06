@@ -1,5 +1,7 @@
 # Data and Content Packs
 
+> **Status:** implemented in v0.2: packer, signed manifest, bundled packs, server download, folder import, update and remove. Not yet: delta updates (§3 `delta_from`), mirrors list, embeddings/vector search (§8). See [§10](#10-implementation-notes) for how the current code works.
+
 How content gets from `content/` to a user's offline database, and how search (keyword + vector) works.
 
 ## 1. Pipeline
@@ -146,3 +148,36 @@ FTS5 with BM25, with prefix matching for search-as-you-type. Uses the trigram in
 - Primary: GitHub Releases on the content repo (free, reliable).
 - Mirrors: jsDelivr (GitHub-backed CDN) and any community mirror listed in the manifest. The app tries mirrors in order.
 - Downloads are resumable, delta updates cut repeat downloads, and the app never downloads in the background on a metered connection without asking (Windows exposes this; elsewhere there is a user setting).
+
+## 10. Implementation notes
+
+### Code map
+| Piece | Location |
+|---|---|
+| Parse `content/`, write topics, build/install/remove pack DBs | `crates/core/src/import.rs`, `crates/core/src/packs.rs` |
+| Manifest types, signature + hash checks, zstd, HTTP/folder sources | `crates/packs` (`feb-packs`) |
+| Packer CLI | `tools/packer` (`feb-packer build`, `feb-packer keygen`) |
+| App: sources, merged list, install/update/remove, first-run sync | `apps/desktop/src-tauri/src/pack_service.rs`, `pack_commands.rs` |
+| Downloads page | `apps/desktop/src/routes/downloads/+page.svelte` |
+
+### Files
+A pack directory contains `manifest.json`, `manifest.json.minisig` and one `<topic-id>@<version>.pack` per topic (zstd-compressed SQLite, pack format 1). The manifest lists, per pack: titles (all languages), subject/unit, counts, `size` and `sha256` of the `.pack` file.
+
+### Sources (in the app)
+1. **Bundled**: `packs/` inside the installer (built by `npm run packs` during `tauri build`). On the first start every bundled pack is installed, so a fresh install works offline. Later starts only *update* installed packs when the app ships a newer version; a pack the user removed is not re-installed.
+2. **Server**: `https://raw.githubusercontent.com/Kroy665/free_exercise_book/packs/` (the `packs` branch, published by the manual *Publish content packs* workflow). Override with `FEB_PACKS_URL`. The last verified manifest is cached, so the Downloads page works offline.
+3. **Folder**: Downloads → *Import from folder* installs new/newer packs from any copy of a pack directory (USB drive, LAN share).
+
+When bundled and server offer the same version, the bundled copy is used (no download).
+
+### Keys
+| Key | Where | Trusted by |
+|---|---|---|
+| Production public key | `apps/desktop/src-tauri/keys/packs.pub` (compiled in) | all builds |
+| Production secret key | maintainer: `~/.config/free-exercise-book/pack-signing.key`; CI: repo secret `FEB_PACK_SIGNING_KEY` | — |
+| Development key | `dist/dev-key/` (created by `feb-packer --dev-key/--auto-key`, git-ignored) | **debug builds only** |
+
+`npm run packs` signs with `FEB_PACK_SIGNING_KEY`, else the maintainer key file, else the development key. Release workflows fail if the secret is missing. Back up the secret key: losing it means shipping a new public key in an app update.
+
+### Developer mode
+`FEB_CONTENT_DIR=/path/to/content npm run tauri dev` imports a content folder directly (no packs, Downloads disabled). Fast for content authors. Without it, `tauri dev` builds packs first (`npm run packs`) and uses the same pack flow as release builds.

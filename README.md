@@ -50,7 +50,14 @@ cd apps/desktop && npm run check             # svelte-check / TypeScript
 python3 tools/content-check/validate.py content   # needs: pip install pyyaml jsonschema
 ```
 
-Set `FEB_CONTENT_DIR=/path/to/content` to load content from another folder.
+Content is installed from signed **content packs** (see [docs/DATA_AND_PACKS.md](docs/DATA_AND_PACKS.md#10-implementation-notes)):
+
+```sh
+cd apps/desktop
+npm run packs                                   # build + sign packs into dist/packs (dev key if you have no signing key)
+FEB_CONTENT_DIR=../../content npm run tauri dev # author mode: load content/ directly, no packs
+FEB_PACKS_URL=http://localhost:8000/ npm run tauri dev   # test against a local pack server
+```
 
 ## Documentation
 

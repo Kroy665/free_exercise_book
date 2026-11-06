@@ -1,0 +1,30 @@
+[package]
+name = "feb-packs"
+description = "Content pack manifest, signatures, compression and download for Free Exercise Book"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+
+[lib]
+name = "feb_packs"
+
+[features]
+default = ["fetch"]
+# HTTP download (the app). The packer builds without it.
+fetch = ["dep:ureq"]
+# Signing and key generation (the packer only; the app only verifies).
+sign = ["dep:minisign"]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+minisign-verify = "0.3"
+zstd = "0.14"
+sha2 = "0.11"
+hex = "0.4"
+minisign = { version = "0.10", optional = true }
+ureq = { version = "2", optional = true }

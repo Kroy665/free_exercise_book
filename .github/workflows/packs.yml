@@ -1,0 +1,56 @@
+# Publish content packs to the content server (the `packs` branch, served from
+# raw.githubusercontent.com). Manual only: run it when content should go live.
+# docs/DATA_AND_PACKS.md §9
+name: Publish content packs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-packs
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Build, sign and publish packs
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Validate content
+        run: |
+          pip install pyyaml jsonschema
+          python3 tools/content-check/validate.py content
+
+      - name: Build and sign packs
+        env:
+          FEB_PACK_SIGNING_KEY: ${{ secrets.FEB_PACK_SIGNING_KEY }}
+        run: |
+          if [ -z "$FEB_PACK_SIGNING_KEY" ]; then
+            echo "::error::Repository secret FEB_PACK_SIGNING_KEY is not set."; exit 1
+          fi
+          SOURCE_DATE_EPOCH=$(git log -1 --format=%ct) \
+            cargo run --release -q -p feb-packer -- build content --out dist/packs
+
+      - name: Push to the packs branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist/packs
+          cat > README.md <<MD
+          Signed content packs for Free Exercise Book, built from ${GITHUB_SHA} by the
+          "Publish content packs" workflow. Do not edit by hand.
+          MD
+          git init -q -b packs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Content packs from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" packs
+          ls -la
