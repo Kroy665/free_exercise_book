@@ -1,0 +1,34 @@
+# cargo-deny policy — docs/CODING_GUIDELINES.md §1: dependencies must be GPL-3.0 compatible.
+[graph]
+all-features = false
+
+[advisories]
+# Unmaintained crates deep in the Tauri/GTK tree are reported as warnings by default;
+# security vulnerabilities always fail.
+unmaintained = "workspace"
+
+[licenses]
+confidence-threshold = 0.9
+allow = [
+    "MIT",
+    "MIT-0",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-3-Clause",
+    "Zlib",
+    "0BSD",
+    "BSL-1.0",
+    "Unicode-3.0",
+    "MPL-2.0",
+    "CC0-1.0",
+    "GPL-3.0-or-later",
+]
+
+[bans]
+multiple-versions = "allow"
+wildcards = "deny"
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

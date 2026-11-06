@@ -6,6 +6,7 @@ edition.workspace = true
 license.workspace = true
 repository.workspace = true
 authors.workspace = true
+publish = false
 
 [lib]
 # The `_lib` suffix avoids a name clash with the binary on Windows (cargo#8519).
