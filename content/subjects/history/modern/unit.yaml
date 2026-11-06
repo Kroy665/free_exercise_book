@@ -1,0 +1,6 @@
+id: hist.modern
+subject: hist
+title: { en: Modern India, bn: আধুনিক ভারত, hi: आधुनिक भारत }
+order: 3
+topics:
+  - hist.modern.revolt-1857

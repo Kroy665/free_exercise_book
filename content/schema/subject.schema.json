@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "subject.schema.json",
+  "title": "Subject or Unit",
+  "type": "object",
+  "required": ["id", "title", "order"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)?$" },
+    "subject": { "type": "string" },
+    "title": { "$ref": "localized.schema.json" },
+    "order": { "type": "integer", "minimum": 0 },
+    "units": { "type": "array", "items": { "type": "string" } },
+    "topics": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

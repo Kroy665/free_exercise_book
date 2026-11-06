@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "topic.schema.json",
+  "title": "Topic",
+  "type": "object",
+  "required": ["id", "title", "order", "exams", "version", "status", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+\\.[a-z0-9-]+\\.[a-z0-9-]+$" },
+    "title": { "$ref": "localized.schema.json" },
+    "summary": { "$ref": "localized.schema.json" },
+    "order": { "type": "integer", "minimum": 0 },
+    "exams": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "prerequisites": { "type": "array", "items": { "type": "string" } },
+    "estimated_minutes": { "type": "integer", "minimum": 5 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "status": { "enum": ["ai-generated", "reviewed", "verified"] },
+    "reviewers": { "type": "array", "items": { "type": "string" } },
+    "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "retired": { "type": "array", "items": { "type": "string", "pattern": "^q\\d{4}$" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question.schema.json",
+  "title": "Questions file",
+  "type": "array",
+  "items": { "$ref": "#/$defs/question" },
+  "$defs": {
+    "text": { "$ref": "localized.schema.json" },
+    "texts": { "type": "array", "items": { "$ref": "localized.schema.json" } },
+    "question": {
+      "type": "object",
+      "required": ["id", "type", "difficulty", "exams", "refs", "answer", "explanation", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^q\\d{4}$" },
+        "type": { "enum": ["single", "statements", "match", "assertion-reason", "chronology"] },
+        "difficulty": { "enum": [1, 2, 3] },
+        "exams": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "refs": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "minItems": 1 },
+        "stem": { "$ref": "#/$defs/text" },
+        "question": { "$ref": "#/$defs/text" },
+        "statements": { "$ref": "#/$defs/texts" },
+        "left": { "$ref": "#/$defs/texts" },
+        "right": { "$ref": "#/$defs/texts" },
+        "items": { "$ref": "#/$defs/texts" },
+        "assertion": { "$ref": "#/$defs/text" },
+        "reason": { "$ref": "#/$defs/text" },
+        "options": { "type": "array", "items": { "$ref": "localized.schema.json" }, "minItems": 4, "maxItems": 4 },
+        "answer": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "explanation": { "$ref": "#/$defs/text" },
+        "status": { "enum": ["ai-generated", "reviewed", "verified"] },
+        "as_of": { "type": "string", "format": "date" },
+        "source": { "type": "string" },
+        "pyq": {
+          "type": "object",
+          "required": ["exam", "year"],
+          "properties": { "exam": { "type": "string" }, "year": { "type": "integer", "minimum": 1950 } },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        { "if": { "properties": { "type": { "const": "single" } } },
+          "then": { "required": ["stem", "options"] } },
+        { "if": { "properties": { "type": { "const": "statements" } } },
+          "then": { "required": ["stem", "statements", "question", "options"] } },
+        { "if": { "properties": { "type": { "const": "match" } } },
+          "then": { "required": ["stem", "left", "right", "options"] } },
+        { "if": { "properties": { "type": { "const": "chronology" } } },
+          "then": { "required": ["stem", "items", "options"] } },
+        { "if": { "properties": { "type": { "const": "assertion-reason" } } },
+          "then": { "required": ["assertion", "reason"], "not": { "required": ["options"] } } }
+      ]
+    }
+  }
+}

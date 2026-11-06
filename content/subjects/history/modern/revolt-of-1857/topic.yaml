@@ -1,0 +1,22 @@
+id: hist.modern.revolt-1857
+title:
+  en: The Revolt of 1857
+  bn: ১৮৫৭ সালের মহাবিদ্রোহ
+  hi: 1857 का विद्रोह
+summary:
+  en: Causes, outbreak, leaders, suppression, nature and consequences of the Revolt of 1857.
+  bn: ১৮৫৭ সালের মহাবিদ্রোহের কারণ, সূচনা, নেতৃবৃন্দ, দমন, প্রকৃতি ও ফলাফল।
+order: 3
+exams: [upsc-cse, wbcs, ssc-cgl, ssc-chsl, state-psc, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 40
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "When People Rebel"
+  - NCERT Class 12, Themes in Indian History III, Ch. "Rebels and the Raj"
+  - Bipan Chandra et al., India's Struggle for Independence, Ch. 1
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+  - Spectrum, A Brief History of Modern India, Ch. "The Revolt of 1857"
+retired: []

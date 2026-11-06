@@ -1,0 +1,271 @@
+# Questions for hist.modern.revolt-1857
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [outbreak]
+  stem:
+    en: Where did the Revolt of 1857 begin on 10 May 1857?
+    bn: ১৮৫৭ সালের ১০ মে কোথায় মহাবিদ্রোহের সূচনা হয়েছিল?
+    hi: 10 मई 1857 को 1857 का विद्रोह कहाँ से प्रारंभ हुआ?
+  options:
+    - { en: Meerut, bn: মিরাট, hi: मेरठ }
+    - { en: Delhi, bn: দিল্লি, hi: दिल्ली }
+    - { en: Kanpur, bn: কানপুর, hi: कानपुर }
+    - { en: Lucknow, bn: লখনউ, hi: लखनऊ }
+  answer: 0
+  explanation:
+    en: Sepoys at Meerut revolted on 10 May 1857 and reached Delhi the next day. Barrackpore saw Mangal Pandey's act earlier (March 1857), but the general outbreak began at Meerut.
+    bn: ১৮৫৭ সালের ১০ মে মিরাটের সিপাহিরা বিদ্রোহ করে এবং পরের দিন দিল্লি পৌঁছায়। এর আগে (মার্চ ১৮৫৭) ব্যারাকপুরে মঙ্গল পাণ্ডের ঘটনা ঘটলেও ব্যাপক বিদ্রোহের সূচনা হয় মিরাটে।
+    hi: 10 मई 1857 को मेरठ के सिपाहियों ने विद्रोह किया और अगले दिन दिल्ली पहुँचे। बैरकपुर में मंगल पांडे की घटना पहले (मार्च 1857) हुई थी, परंतु व्यापक विद्रोह मेरठ से प्रारंभ हुआ।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [background]
+  stem:
+    en: Who was the Governor-General of India during the Revolt of 1857?
+    bn: ১৮৫৭ সালের মহাবিদ্রোহের সময় ভারতের গভর্নর-জেনারেল কে ছিলেন?
+  options:
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+    - { en: Lord Canning, bn: লর্ড ক্যানিং }
+    - { en: Lord Elgin, bn: লর্ড এলগিন }
+    - { en: Lord Lawrence, bn: লর্ড লরেন্স }
+  answer: 1
+  explanation:
+    en: Lord Canning was Governor-General from 1856 and became the first Viceroy under the Government of India Act, 1858. Lord Dalhousie (1848–56) preceded him and is linked with the Doctrine of Lapse.
+    bn: লর্ড ক্যানিং ১৮৫৬ সাল থেকে গভর্নর-জেনারেল ছিলেন এবং ১৮৫৮ সালের ভারত শাসন আইন অনুযায়ী প্রথম ভাইসরয় হন। তাঁর পূর্বসূরি লর্ড ডালহৌসি (১৮৪৮–৫৬) স্বত্ববিলোপ নীতির জন্য পরিচিত।
+  status: ai-generated
+
+- id: q0003
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [leaders]
+  stem:
+    en: Match List I (Centre of the revolt) with List II (Leader).
+    bn: তালিকা I (বিদ্রোহের কেন্দ্র)-এর সঙ্গে তালিকা II (নেতা) মেলান।
+  left:
+    - { en: "A. Lucknow", bn: "ক. লখনউ" }
+    - { en: "B. Jagdishpur", bn: "খ. জগদীশপুর" }
+    - { en: "C. Jhansi", bn: "গ. ঝাঁসি" }
+    - { en: "D. Bareilly", bn: "ঘ. বেরিলি" }
+  right:
+    - { en: "1. Kunwar Singh", bn: "১. কুনওয়ার সিং" }
+    - { en: "2. Khan Bahadur Khan", bn: "২. খান বাহাদুর খান" }
+    - { en: "3. Begum Hazrat Mahal", bn: "৩. বেগম হজরত মহল" }
+    - { en: "4. Rani Lakshmibai", bn: "৪. রানি লক্ষ্মীবাঈ" }
+  options:
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Begum Hazrat Mahal led at Lucknow, Kunwar Singh at Jagdishpur (Bihar), Rani Lakshmibai at Jhansi and Khan Bahadur Khan at Bareilly.
+    bn: লখনউতে বেগম হজরত মহল, জগদীশপুরে (বিহার) কুনওয়ার সিং, ঝাঁসিতে রানি লক্ষ্মীবাঈ এবং বেরিলিতে খান বাহাদুর খান বিদ্রোহে নেতৃত্ব দেন।
+  status: ai-generated
+
+- id: q0004
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [consequences]
+  stem:
+    en: Consider the following statements about the Government of India Act, 1858.
+    bn: ১৮৫৮ সালের ভারত শাসন আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It transferred the power to govern India from the East India Company to the British Crown."
+      bn: "১. এই আইনের মাধ্যমে ভারত শাসনের ক্ষমতা ইস্ট ইন্ডিয়া কোম্পানির হাত থেকে ব্রিটিশ রাজশক্তির হাতে হস্তান্তরিত হয়।"
+    - en: "2. It created the post of Secretary of State for India."
+      bn: "২. এই আইনে ভারত-সচিব (Secretary of State for India) পদ সৃষ্টি করা হয়।"
+    - en: "3. It abolished the Board of Control and the Court of Directors."
+      bn: "৩. এই আইনে বোর্ড অব কন্ট্রোল ও কোর্ট অব ডিরেক্টরস বিলুপ্ত করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. The Act ended Company rule, created a Secretary of State for India assisted by a 15-member Council of India, and abolished the Board of Control and the Court of Directors (ending the dual system of Pitt's India Act, 1784).
+    bn: তিনটি বিবৃতিই সঠিক। এই আইন কোম্পানির শাসনের অবসান ঘটায়, ১৫ সদস্যের ভারত পরিষদ-সহ ভারত-সচিব পদ সৃষ্টি করে এবং বোর্ড অব কন্ট্রোল ও কোর্ট অব ডিরেক্টরস বিলুপ্ত করে। ফলে ১৭৮৪ সালের পিটের ভারত শাসন আইনের দ্বৈত শাসনব্যবস্থার অবসান ঘটে।
+  status: ai-generated
+
+- id: q0005
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [causes]
+  assertion:
+    en: The annexation of Awadh in 1856 caused widespread discontent in the Bengal Army.
+    bn: ১৮৫৬ সালে অযোধ্যা দখলের ফলে বেঙ্গল আর্মিতে ব্যাপক অসন্তোষ দেখা দেয়।
+  reason:
+    en: A large number of sepoys of the Bengal Army were recruited from Awadh.
+    bn: বেঙ্গল আর্মির বহু সিপাহি অযোধ্যা থেকে নিযুক্ত হয়েছিলেন।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Many Bengal Army sepoys came from Awadh, so its annexation and the hardship it caused to their families and to the taluqdars affected them directly.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। বেঙ্গল আর্মির বহু সিপাহি অযোধ্যার বাসিন্দা ছিলেন, তাই অযোধ্যা দখল এবং তার ফলে তাঁদের পরিবার ও তালুকদারদের দুর্দশা তাঁদের সরাসরি প্রভাবিত করে।
+  status: ai-generated
+
+- id: q0006
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [outbreak, consequences, causes]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Queen Victoria's Proclamation at Allahabad"
+      bn: "১. এলাহাবাদে মহারানি ভিক্টোরিয়ার ঘোষণাপত্র"
+    - en: "2. Annexation of Awadh"
+      bn: "২. অযোধ্যা দখল"
+    - en: "3. Outbreak of the revolt at Meerut"
+      bn: "৩. মিরাটে বিদ্রোহের সূচনা"
+    - en: "4. Mangal Pandey's attack on officers at Barrackpore"
+      bn: "৪. ব্যারাকপুরে মঙ্গল পাণ্ডের ব্রিটিশ অফিসারদের আক্রমণ"
+  options:
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+  answer: 0
+  explanation:
+    en: Awadh was annexed in 1856, Mangal Pandey's act took place on 29 March 1857, the Meerut outbreak on 10 May 1857, and the Queen's Proclamation was read on 1 November 1858.
+    bn: অযোধ্যা দখল হয় ১৮৫৬ সালে, মঙ্গল পাণ্ডের ঘটনা ঘটে ২৯ মার্চ ১৮৫৭, মিরাটে বিদ্রোহ শুরু হয় ১০ মে ১৮৫৭ এবং মহারানির ঘোষণাপত্র পাঠ করা হয় ১ নভেম্বর ১৮৫৮।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [causes]
+  stem:
+    en: Which one of the following was **NOT** annexed under the Doctrine of Lapse?
+    bn: নিম্নলিখিত কোনটি স্বত্ববিলোপ নীতি অনুযায়ী দখল করা **হয়নি**?
+  options:
+    - { en: Satara, bn: সাতারা }
+    - { en: Nagpur, bn: নাগপুর }
+    - { en: Awadh, bn: অযোধ্যা }
+    - { en: Jhansi, bn: ঝাঁসি }
+  answer: 2
+  explanation:
+    en: Awadh was annexed in 1856 on grounds of alleged misgovernance. Satara (1848), Jhansi (1853) and Nagpur (1854) were annexed under Dalhousie's Doctrine of Lapse.
+    bn: ১৮৫৬ সালে কুশাসনের অভিযোগে অযোধ্যা দখল করা হয়। সাতারা (১৮৪৮), ঝাঁসি (১৮৫৩) ও নাগপুর (১৮৫৪) ডালহৌসির স্বত্ববিলোপ নীতি অনুযায়ী দখল করা হয়েছিল।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [nature]
+  stem:
+    en: Who wrote the book "The Indian War of Independence" (1909) about the Revolt of 1857?
+    bn: ১৮৫৭ সালের বিদ্রোহ সম্পর্কে "দ্য ইন্ডিয়ান ওয়ার অব ইন্ডিপেনডেন্স" (১৯০৯) গ্রন্থটি কে রচনা করেন?
+  options:
+    - { en: R.C. Majumdar, bn: রমেশচন্দ্র মজুমদার }
+    - { en: S.N. Sen, bn: সুরেন্দ্রনাথ সেন }
+    - { en: Bipan Chandra, bn: বিপান চন্দ্র }
+    - { en: V.D. Savarkar, bn: বিনায়ক দামোদর সাভারকর }
+  answer: 3
+  explanation:
+    en: V.D. Savarkar called the revolt a planned war of national independence. R.C. Majumdar held the opposite view, calling it neither the first, nor national, nor a war of independence.
+    bn: বিনায়ক দামোদর সাভারকর এই বিদ্রোহকে পরিকল্পিত জাতীয় স্বাধীনতা যুদ্ধ বলে অভিহিত করেন। রমেশচন্দ্র মজুমদার এর বিপরীত মত পোষণ করতেন; তাঁর মতে এটি প্রথম নয়, জাতীয় নয়, স্বাধীনতা যুদ্ধও নয়।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs]
+  refs: [consequences]
+  stem:
+    en: Where was Queen Victoria's Proclamation of 1 November 1858 read out by Lord Canning?
+    bn: ১৮৫৮ সালের ১ নভেম্বর লর্ড ক্যানিং মহারানি ভিক্টোরিয়ার ঘোষণাপত্র কোথায় পাঠ করেন?
+  options:
+    - { en: Calcutta, bn: কলকাতা }
+    - { en: Allahabad, bn: এলাহাবাদ }
+    - { en: Delhi, bn: দিল্লি }
+    - { en: Lucknow, bn: লখনউ }
+  answer: 1
+  explanation:
+    en: Lord Canning read the Proclamation at a durbar in Allahabad. Calcutta was the capital at that time, which makes it a tempting but wrong choice.
+    bn: লর্ড ক্যানিং এলাহাবাদের একটি দরবারে ঘোষণাপত্রটি পাঠ করেন। সে সময় কলকাতা ছিল রাজধানী, তাই কলকাতা বিকল্পটি বিভ্রান্তিকর হলেও ভুল।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs]
+  refs: [leaders, suppression]
+  stem:
+    en: Which British officer captured Jhansi from Rani Lakshmibai in 1858?
+    bn: ১৮৫৮ সালে কোন ব্রিটিশ সেনাপতি রানি লক্ষ্মীবাঈয়ের কাছ থেকে ঝাঁসি দখল করেন?
+  options:
+    - { en: Colin Campbell, bn: কলিন ক্যাম্পবেল }
+    - { en: Henry Havelock, bn: হেনরি হ্যাভলক }
+    - { en: Hugh Rose, bn: হিউ রোজ }
+    - { en: John Nicholson, bn: জন নিকলসন }
+  answer: 2
+  explanation:
+    en: Sir Hugh Rose captured Jhansi in April 1858. Colin Campbell is associated with Lucknow and Kanpur, and John Nicholson with the recapture of Delhi.
+    bn: স্যার হিউ রোজ ১৮৫৮ সালের এপ্রিলে ঝাঁসি দখল করেন। কলিন ক্যাম্পবেল লখনউ ও কানপুরের সঙ্গে এবং জন নিকলসন দিল্লি পুনর্দখলের সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0011
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [nature, outbreak, suppression]
+  stem:
+    en: With reference to the Revolt of 1857, consider the following statements.
+    bn: ১৮৫৭ সালের মহাবিদ্রোহ প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: '1. R.C. Majumdar described it as "neither the First, nor National, nor a War of Independence".'
+      bn: '১. রমেশচন্দ্র মজুমদার এই বিদ্রোহকে "প্রথম নয়, জাতীয় নয়, স্বাধীনতা যুদ্ধও নয়" বলে বর্ণনা করেছেন।'
+    - en: "2. Punjab was one of the main centres of the revolt."
+      bn: "২. পাঞ্জাব ছিল বিদ্রোহের অন্যতম প্রধান কেন্দ্র।"
+    - en: "3. Rulers such as the Scindia of Gwalior and the Nizam of Hyderabad remained loyal to the British."
+      bn: "৩. গোয়ালিয়রের সিন্ধিয়া ও হায়দরাবাদের নিজামের মতো শাসকেরা ব্রিটিশদের প্রতি অনুগত ছিলেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statement 2 is wrong. Punjab remained largely quiet, and Sikh soldiers helped the British retake Delhi. Statements 1 and 3 are correct, though the Scindia's own troops joined the rebels in 1858.
+    bn: ২ নং বিবৃতিটি ভুল। পাঞ্জাব মোটামুটি শান্ত ছিল এবং শিখ সৈন্যরা দিল্লি পুনর্দখলে ব্রিটিশদের সাহায্য করে। ১ ও ৩ নং বিবৃতি সঠিক, যদিও ১৮৫৮ সালে সিন্ধিয়ার নিজের সৈন্যরা বিদ্রোহীদের সঙ্গে যোগ দিয়েছিল।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: [upsc-cse, ssc-cgl, wbcs]
+  refs: [outbreak]
+  stem:
+    en: Mangal Pandey, who attacked British officers at Barrackpore in March 1857, belonged to which regiment?
+    bn: ১৮৫৭ সালের মার্চ মাসে ব্যারাকপুরে ব্রিটিশ অফিসারদের আক্রমণকারী মঙ্গল পাণ্ডে কোন রেজিমেন্টের সিপাহি ছিলেন?
+  options:
+    - { en: 19th Bengal Native Infantry, bn: ১৯ নং বেঙ্গল নেটিভ ইনফ্যান্ট্রি }
+    - { en: 3rd Bengal Light Cavalry, bn: ৩ নং বেঙ্গল লাইট ক্যাভালরি }
+    - { en: 1st Madras Native Infantry, bn: ১ নং মাদ্রাজ নেটিভ ইনফ্যান্ট্রি }
+    - { en: 34th Bengal Native Infantry, bn: ৩৪ নং বেঙ্গল নেটিভ ইনফ্যান্ট্রি }
+  answer: 3
+  explanation:
+    en: Mangal Pandey was a sepoy of the 34th Bengal Native Infantry. The 19th Native Infantry had refused the cartridges at Berhampore in February 1857, and the 3rd Light Cavalry revolted at Meerut in May.
+    bn: মঙ্গল পাণ্ডে ছিলেন ৩৪ নং বেঙ্গল নেটিভ ইনফ্যান্ট্রির সিপাহি। ১৯ নং নেটিভ ইনফ্যান্ট্রি ১৮৫৭ সালের ফেব্রুয়ারিতে বহরমপুরে টোটা ব্যবহার করতে অস্বীকার করেছিল এবং মে মাসে মিরাটে ৩ নং লাইট ক্যাভালরি বিদ্রোহ করে।
+  status: ai-generated

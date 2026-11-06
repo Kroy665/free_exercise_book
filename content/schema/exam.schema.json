@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "exam.schema.json",
+  "title": "Exam pattern",
+  "type": "object",
+  "required": ["id", "name", "duration_minutes", "negative_marking", "sections", "source", "as_of"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "$ref": "localized.schema.json" },
+    "duration_minutes": { "type": "integer", "minimum": 1 },
+    "negative_marking": { "type": "number", "minimum": 0 },
+    "sections": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "questions", "marks_each", "subjects"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "$ref": "localized.schema.json" },
+          "questions": { "type": "integer", "minimum": 1 },
+          "marks_each": { "type": "number", "minimum": 0 },
+          "subjects": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "status": { "enum": ["ai-generated", "reviewed", "verified"] },
+    "source": { "type": "string" },
+    "as_of": { "type": "string", "format": "date" }
+  },
+  "additionalProperties": false
+}

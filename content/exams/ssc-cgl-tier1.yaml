@@ -1,0 +1,12 @@
+id: ssc-cgl-tier1
+name: { en: SSC CGL Tier I, bn: "এসএসসি সিজিএল টিয়ার I", hi: एसएससी सीजीएल टियर I }
+duration_minutes: 60
+negative_marking: 0.5         # marks deducted per wrong answer
+sections:
+  - { id: gi,  name: { en: General Intelligence & Reasoning, bn: সাধারণ বুদ্ধিমত্তা ও যুক্তি }, questions: 25, marks_each: 2, subjects: [reasoning] }
+  - { id: ga,  name: { en: General Awareness, bn: সাধারণ সচেতনতা },                questions: 25, marks_each: 2, subjects: [hist, polity, geo, econ, sci, ca] }
+  - { id: qa,  name: { en: Quantitative Aptitude, bn: পরিমাণগত দক্ষতা },            questions: 25, marks_each: 2, subjects: [quant] }
+  - { id: eng, name: { en: English Comprehension, bn: ইংরেজি বোধগম্যতা },            questions: 25, marks_each: 2, subjects: [english] }
+status: ai-generated          # verify against the latest SSC notification before use
+source: SSC CGL notification (official)
+as_of: "2026-11-06"

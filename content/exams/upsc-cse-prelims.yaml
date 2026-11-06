@@ -1,0 +1,13 @@
+id: upsc-cse-prelims-gs1
+name: { en: "UPSC CSE Prelims – GS Paper I", bn: "ইউপিএসসি সিভিল সার্ভিসেস প্রিলিমস – সাধারণ অধ্যয়ন পত্র I", hi: "यूपीएससी सीएसई प्रारंभिक – सामान्य अध्ययन प्रश्नपत्र I" }
+duration_minutes: 120
+negative_marking: 0.6667      # one-third of the 2 marks for the question
+sections:
+  - id: gs
+    name: { en: General Studies, bn: সাধারণ অধ্যয়ন }
+    questions: 100
+    marks_each: 2
+    subjects: [hist, polity, geo, econ, sci, env, art, ca]
+status: ai-generated          # verify against the latest UPSC notification before use
+source: UPSC Civil Services Examination notification (official)
+as_of: "2026-11-06"
