@@ -23,7 +23,7 @@ jobs:
             rust-targets: aarch64-apple-darwin,x86_64-apple-darwin
             args: --target universal-apple-darwin
           - name: Linux x64
-            os: ubuntu-22.04
+            os: ubuntu-24.04
             rust-targets: ""
             args: ""
           - name: Windows x64
@@ -31,21 +31,26 @@ jobs:
             rust-targets: ""
             args: ""
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
+      # Cached: the first run downloads the .debs, later runs restore them in seconds.
+      # (The Azure Ubuntu mirror can be very slow; see CI run 42198775762.)
       - name: Install Linux system dependencies (Tauri)
         if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+        timeout-minutes: 15
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: libwebkit2gtk-4.1-dev librsvg2-dev patchelf
+          version: 1
 
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.rust-targets }}
       - uses: Swatinem/rust-cache@v2
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: npm
