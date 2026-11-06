@@ -39,6 +39,8 @@
 
 ## 5. CI (GitHub Actions)
 
+> **CI is manual-only** (Actions minutes are limited). Pushes do not start workflows. Run the checks locally before pushing (README → Development), and start CI from the Actions tab when needed (e.g. before a release). *Release* runs on `v*` tags, *Publish content packs* is manual.
+
 | Job | Runs on |
 |---|---|
 | Rust fmt, clippy, test | Linux, Windows, macOS |

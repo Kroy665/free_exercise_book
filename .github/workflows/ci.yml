@@ -1,10 +1,10 @@
 # CI — docs/CODING_GUIDELINES.md §5
 name: CI
 
+# Manual only (Actions minutes are limited): run from the Actions tab or
+# `gh workflow run CI -R Kroy665/free_exercise_book`. Run the same checks locally first
+# (README → Development).
 on:
-  push:
-    branches: [main]
-  pull_request:
   workflow_dispatch:
 
 permissions:
