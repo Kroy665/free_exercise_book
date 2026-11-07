@@ -1,0 +1,21 @@
+id: hist.modern.revolutionaries
+title:
+  en: Revolutionary Nationalism
+  bn: বিপ্লবী জাতীয়তাবাদ
+summary:
+  en: Secret societies and revolutionary groups in India and abroad, from the Chapekar brothers, Anushilan Samiti and Jugantar through the Ghadar Party to the HRA, the HSRA of Bhagat Singh and the Chittagong Armoury Raid, with an assessment of their role.
+  bn: চাপেকর ভ্রাতৃদ্বয়, অনুশীলন সমিতি ও যুগান্তর থেকে গদর পার্টি, হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন, ভগৎ সিংয়ের হিন্দুস্তান সোশ্যালিস্ট রিপাবলিকান অ্যাসোসিয়েশন এবং চট্টগ্রাম অস্ত্রাগার লুণ্ঠন পর্যন্ত দেশে ও বিদেশে বিপ্লবী গোষ্ঠীগুলির কার্যকলাপ ও তাদের ভূমিকার মূল্যায়ন।
+order: 11
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 12, Themes in Indian History III and old NCERT Modern India (Bipan Chandra), Ch. on the growth of the national movement
+  - Bipan Chandra et al., India's Struggle for Independence, chapters on revolutionary terrorism and Bhagat Singh, Surya Sen and the revolutionaries
+  - Spectrum, A Brief History of Modern India, Ch. "First Phase of Revolutionary Activities" and Ch. "Second Phase of Revolutionary Activities"
+  - Sumit Sarkar, Modern India 1885–1947, sections on the Swadeshi era and the 1920s–30s
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

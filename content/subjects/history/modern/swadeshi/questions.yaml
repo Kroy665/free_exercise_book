@@ -1,0 +1,700 @@
+# hist.modern.swadeshi — Partition of Bengal and the Swadeshi Movement
+# 30 questions. Status: ai-generated (needs human review).
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [partition, curzon]
+  stem:
+    en: Who was the Viceroy of India when Bengal was partitioned in 1905?
+    bn: ১৯০৫ সালে বঙ্গভঙ্গের সময় ভারতের ভাইসরয় কে ছিলেন?
+  options:
+    - { en: Lord Curzon, bn: লর্ড কার্জন }
+    - { en: Lord Minto, bn: লর্ড মিন্টো }
+    - { en: Lord Ripon, bn: লর্ড রিপন }
+    - { en: Lord Hardinge, bn: লর্ড হার্ডিঞ্জ }
+  answer: 0
+  explanation:
+    en: The partition was decided and carried out under Lord Curzon (Viceroy 1899–1905). Lord Hardinge was Viceroy when the partition was annulled in 1911, which makes him a tempting but wrong choice.
+    bn: লর্ড কার্জনের (ভাইসরয় ১৮৯৯–১৯০৫) আমলে বঙ্গভঙ্গের সিদ্ধান্ত নেওয়া ও কার্যকর করা হয়। ১৯১১ সালে বঙ্গভঙ্গ রদের সময় ভাইসরয় ছিলেন লর্ড হার্ডিঞ্জ, তাই সেই বিকল্পটি বিভ্রান্তিকর হলেও ভুল।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [partition, anti-partition]
+  stem:
+    en: On which date did the Partition of Bengal come into effect?
+    bn: কোন তারিখে বঙ্গভঙ্গ কার্যকর হয়?
+  options:
+    - { en: 7 August 1905, bn: ৭ আগস্ট ১৯০৫ }
+    - { en: 30 December 1906, bn: ৩০ ডিসেম্বর ১৯০৬ }
+    - { en: 16 October 1905, bn: ১৬ অক্টোবর ১৯০৫ }
+    - { en: 12 December 1911, bn: ১২ ডিসেম্বর ১৯১১ }
+  answer: 2
+  explanation:
+    en: The partition came into force on 16 October 1905, which was observed as a day of mourning in Bengal. 7 August 1905 is the date of the Boycott resolution at the Calcutta Town Hall, not of the partition itself.
+    bn: ১৬ অক্টোবর ১৯০৫ তারিখে বঙ্গভঙ্গ কার্যকর হয় এবং দিনটি বাংলায় শোক দিবস হিসেবে পালিত হয়। ৭ আগস্ট ১৯০৫ হল কলকাতার টাউন হলে বয়কট প্রস্তাব গ্রহণের তারিখ, বঙ্গভঙ্গ কার্যকর হওয়ার নয়।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [partition]
+  stem:
+    en: Which city became the capital of the new province of Eastern Bengal and Assam formed in 1905?
+    bn: ১৯০৫ সালে গঠিত নতুন প্রদেশ পূর্ববঙ্গ ও আসামের রাজধানী কোন শহর হয়?
+  options:
+    - { en: Shillong, bn: শিলং }
+    - { en: Dacca, bn: ঢাকা }
+    - { en: Chittagong, bn: চট্টগ্রাম }
+    - { en: Calcutta, bn: কলকাতা }
+  answer: 1
+  explanation:
+    en: Dacca (Dhaka) was made the capital of Eastern Bengal and Assam. Calcutta remained the capital of the western province, still called Bengal.
+    bn: ঢাকাকে পূর্ববঙ্গ ও আসামের রাজধানী করা হয়। কলকাতা পশ্চিমের প্রদেশের, অর্থাৎ বাংলা নামে পরিচিত অংশের রাজধানী থেকে যায়।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [anti-partition]
+  stem:
+    en: On whose suggestion was Raksha Bandhan observed on 16 October 1905 as a symbol of the unity of Bengal?
+    bn: কার প্রস্তাবে ১৬ অক্টোবর ১৯০৫ তারিখে বাংলার ঐক্যের প্রতীক হিসেবে রাখিবন্ধন পালিত হয়?
+  options:
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+    - { en: Aurobindo Ghosh, bn: অরবিন্দ ঘোষ }
+    - { en: Bipin Chandra Pal, bn: বিপিনচন্দ্র পাল }
+    - { en: Rabindranath Tagore, bn: রবীন্দ্রনাথ ঠাকুর }
+  answer: 3
+  explanation:
+    en: Rabindranath Tagore proposed that people tie rakhis on each other's wrists on the day the partition came into force. Surendranath Banerjea was a leading organiser of the anti-partition protests, but the Raksha Bandhan idea is linked with Tagore.
+    bn: বঙ্গভঙ্গ কার্যকর হওয়ার দিনে পরস্পরের হাতে রাখি বাঁধার প্রস্তাব দেন রবীন্দ্রনাথ ঠাকুর। সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় বঙ্গভঙ্গবিরোধী প্রতিবাদের অন্যতম প্রধান সংগঠক ছিলেন, কিন্তু রাখিবন্ধনের ভাবনা রবীন্দ্রনাথের সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [league-morley-minto]
+  stem:
+    en: Where was the All-India Muslim League founded in December 1906?
+    bn: ডিসেম্বর ১৯০৬ সালে সর্বভারতীয় মুসলিম লিগ কোথায় প্রতিষ্ঠিত হয়?
+  options:
+    - { en: Dacca, bn: ঢাকা }
+    - { en: Aligarh, bn: আলিগড় }
+    - { en: Lucknow, bn: লখনউ }
+    - { en: Simla, bn: সিমলা }
+  answer: 0
+  explanation:
+    en: The League was founded at Dacca on 30 December 1906. Simla is where the Aga Khan's deputation met Lord Minto on 1 October 1906, a few months earlier.
+    bn: ৩০ ডিসেম্বর ১৯০৬ তারিখে ঢাকায় মুসলিম লিগ প্রতিষ্ঠিত হয়। সিমলায় কয়েক মাস আগে, ১ অক্টোবর ১৯০৬ তারিখে, আগা খানের নেতৃত্বে প্রতিনিধিদল লর্ড মিন্টোর সঙ্গে দেখা করেছিল।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc, upsc-cse]
+  refs: [congress-split]
+  stem:
+    en: Who presided over the Calcutta session of the Indian National Congress in 1906, where "Swaraj" was declared the goal?
+    bn: ১৯০৬ সালে জাতীয় কংগ্রেসের যে কলকাতা অধিবেশনে "স্বরাজ"-কে লক্ষ্য হিসেবে ঘোষণা করা হয়, তার সভাপতি কে ছিলেন?
+  options:
+    - { en: Gopal Krishna Gokhale, bn: গোপালকৃষ্ণ গোখলে }
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নওরোজি }
+    - { en: Rash Behari Ghosh, bn: রাসবিহারী ঘোষ }
+    - { en: Bal Gangadhar Tilak, bn: বাল গঙ্গাধর তিলক }
+  answer: 1
+  explanation:
+    en: Dadabhai Naoroji presided over the 1906 Calcutta session, which adopted Swaraj as the goal. Rash Behari Ghosh was the Moderates' choice as president at Surat in 1907, where the Congress split.
+    bn: ১৯০৬ সালের কলকাতা অধিবেশনে সভাপতিত্ব করেন দাদাভাই নওরোজি; এই অধিবেশনে স্বরাজকে লক্ষ্য হিসেবে গ্রহণ করা হয়। রাসবিহারী ঘোষ ছিলেন ১৯০৭ সালের সুরাট অধিবেশনে নরমপন্থীদের মনোনীত সভাপতি, যেখানে কংগ্রেস বিভক্ত হয়।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [annulment-assessment]
+  stem:
+    en: Who was the Viceroy when the annulment of the Partition of Bengal was announced at the Delhi Durbar of 1911?
+    bn: ১৯১১ সালের দিল্লি দরবারে যখন বঙ্গভঙ্গ রদের ঘোষণা করা হয়, তখন ভাইসরয় কে ছিলেন?
+  options:
+    - { en: Lord Curzon, bn: লর্ড কার্জন }
+    - { en: Lord Minto, bn: লর্ড মিন্টো }
+    - { en: Lord Chelmsford, bn: লর্ড চেমসফোর্ড }
+    - { en: Lord Hardinge, bn: লর্ড হার্ডিঞ্জ }
+  answer: 3
+  explanation:
+    en: Lord Hardinge (Hardinge II) was Viceroy at the time of the 1911 Delhi Durbar held for King George V. Lord Minto was the Viceroy at the time of the 1909 reforms, not of the annulment.
+    bn: পঞ্চম জর্জের সম্মানে আয়োজিত ১৯১১ সালের দিল্লি দরবারের সময় ভাইসরয় ছিলেন লর্ড হার্ডিঞ্জ (দ্বিতীয় হার্ডিঞ্জ)। লর্ড মিন্টো ছিলেন ১৯০৯ সালের সংস্কারের সময়কার ভাইসরয়, বঙ্গভঙ্গ রদের সময়ের নন।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc, upsc-cse]
+  refs: [league-morley-minto]
+  stem:
+    en: Which of the following was introduced by the Indian Councils Act, 1909?
+    bn: ভারতীয় কাউন্সিল আইন, ১৯০৯ দ্বারা নিম্নলিখিত কোনটি চালু হয়?
+  options:
+    - { en: Dyarchy in the provinces, bn: প্রদেশে দ্বৈত শাসন }
+    - { en: Direct elections to the central legislature, bn: কেন্দ্রীয় আইনসভায় প্রত্যক্ষ নির্বাচন }
+    - { en: Separate electorates for Muslims, bn: মুসলিমদের জন্য পৃথক নির্বাচন }
+    - { en: Provincial autonomy, bn: প্রাদেশিক স্বায়ত্তশাসন }
+  answer: 2
+  explanation:
+    en: The Morley-Minto Reforms of 1909 introduced separate electorates for Muslims, with indirect elections. Dyarchy came only with the Government of India Act, 1919, and provincial autonomy with the Act of 1935.
+    bn: ১৯০৯ সালের মর্লে-মিন্টো সংস্কার পরোক্ষ নির্বাচনের সঙ্গে মুসলিমদের জন্য পৃথক নির্বাচন চালু করে। দ্বৈত শাসন আসে ভারত শাসন আইন, ১৯১৯ অনুযায়ী এবং প্রাদেশিক স্বায়ত্তশাসন আসে ১৯৩৫ সালের আইনে।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, upsc-cse]
+  refs: [constructive-swadeshi]
+  stem:
+    en: Who founded the Swadeshi Steam Navigation Company at Tuticorin during the Swadeshi movement?
+    bn: স্বদেশি আন্দোলনের সময় তুতিকোরিনে স্বদেশি স্টিম নেভিগেশন কোম্পানি কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Subramania Bharati, bn: সুব্রহ্মণ্য ভারতী }
+    - { en: V.O. Chidambaram Pillai, bn: ভি. ও. চিদম্বরম পিল্লাই }
+    - { en: C. Rajagopalachari, bn: সি. রাজাগোপালাচারী }
+    - { en: Lala Lajpat Rai, bn: লালা লাজপত রায় }
+  answer: 1
+  explanation:
+    en: V.O. Chidambaram Pillai set up the Swadeshi Steam Navigation Company at Tuticorin to compete with British shipping. Subramania Bharati was a Tamil poet of the same period but did not found this company.
+    bn: ব্রিটিশ জাহাজ কোম্পানির সঙ্গে প্রতিযোগিতার জন্য ভি. ও. চিদম্বরম পিল্লাই তুতিকোরিনে স্বদেশি স্টিম নেভিগেশন কোম্পানি প্রতিষ্ঠা করেন। সুব্রহ্মণ্য ভারতী একই সময়ের তামিল কবি, কিন্তু তিনি এই কোম্পানির প্রতিষ্ঠাতা নন।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ibps-po, wbcs, state-psc, upsc-cse]
+  refs: [congress-split]
+  stem:
+    en: Whom did the Moderates put forward as president of the Surat session of the Congress in 1907?
+    bn: ১৯০৭ সালে কংগ্রেসের সুরাট অধিবেশনে নরমপন্থীরা কাকে সভাপতি হিসেবে মনোনীত করেন?
+  options:
+    - { en: Rash Behari Ghosh, bn: রাসবিহারী ঘোষ }
+    - { en: Lala Lajpat Rai, bn: লালা লাজপত রায় }
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নওরোজি }
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+  answer: 0
+  explanation:
+    en: The Moderates proposed Rash Behari Ghosh, and the session broke up amid the dispute, leading to the Surat split. Lala Lajpat Rai was the Extremists' preferred candidate, not the Moderates'.
+    bn: নরমপন্থীরা রাসবিহারী ঘোষকে মনোনীত করেন; এই বিরোধের মধ্যে অধিবেশন ভেঙে যায় এবং সুরাট বিচ্ছেদ ঘটে। লালা লাজপত রায় ছিলেন চরমপন্থীদের পছন্দের প্রার্থী, নরমপন্থীদের নন।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [constructive-swadeshi]
+  stem:
+    en: Who was the principal of the Bengal National College, started in Calcutta in 1906?
+    bn: ১৯০৬ সালে কলকাতায় প্রতিষ্ঠিত বেঙ্গল ন্যাশনাল কলেজের অধ্যক্ষ কে ছিলেন?
+  options:
+    - { en: Bipin Chandra Pal, bn: বিপিনচন্দ্র পাল }
+    - { en: Rabindranath Tagore, bn: রবীন্দ্রনাথ ঠাকুর }
+    - { en: Aurobindo Ghosh, bn: অরবিন্দ ঘোষ }
+    - { en: Prafulla Chandra Ray, bn: প্রফুল্লচন্দ্র রায় }
+  answer: 2
+  explanation:
+    en: Aurobindo Ghosh became the principal of the Bengal National College, set up under the national education programme. Tagore's school at Shantiniketan was admired as a model, but he did not head this college.
+    bn: জাতীয় শিক্ষা কর্মসূচির অধীনে প্রতিষ্ঠিত বেঙ্গল ন্যাশনাল কলেজের অধ্যক্ষ হন অরবিন্দ ঘোষ। রবীন্দ্রনাথের শান্তিনিকেতনের বিদ্যালয় আদর্শ হিসেবে প্রশংসিত হলেও তিনি এই কলেজের প্রধান ছিলেন না।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ibps-po, wbcs, state-psc, upsc-cse]
+  refs: [curzon]
+  stem:
+    en: Which one of the following measures was **NOT** taken during the viceroyalty of Lord Curzon?
+    bn: নিম্নলিখিত কোন পদক্ষেপটি লর্ড কার্জনের শাসনকালে গৃহীত **নয়**?
+  options:
+    - { en: Indian Universities Act, bn: ভারতীয় বিশ্ববিদ্যালয় আইন }
+    - { en: Calcutta Corporation Act, bn: কলকাতা কর্পোরেশন আইন }
+    - { en: Partition of Bengal, bn: বঙ্গভঙ্গ }
+    - { en: Vernacular Press Act, bn: দেশীয় ভাষা সংবাদপত্র আইন }
+  answer: 3
+  explanation:
+    en: The Vernacular Press Act was passed in 1878 under Lord Lytton. The Calcutta Corporation Act (1899), the Indian Universities Act (1904) and the Partition of Bengal (1905) all belong to Curzon's term.
+    bn: দেশীয় ভাষা সংবাদপত্র আইন ১৮৭৮ সালে লর্ড লিটনের আমলে পাস হয়। কলকাতা কর্পোরেশন আইন (১৮৯৯), ভারতীয় বিশ্ববিদ্যালয় আইন (১৯০৪) ও বঙ্গভঙ্গ (১৯০৫) সবই কার্জনের শাসনকালের ঘটনা।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [partition]
+  stem:
+    en: Consider the following statements about the Partition of Bengal (1905).
+    bn: বঙ্গভঙ্গ (১৯০৫) সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The official reason given was that Bengal was too large to be administered efficiently."
+      bn: "১. সরকারি কারণ হিসেবে বলা হয় যে বাংলা এত বড়ো ছিল যে তা দক্ষভাবে শাসন করা যাচ্ছিল না।"
+    - en: "2. The new province of Eastern Bengal and Assam had a Hindu majority."
+      bn: "২. নতুন প্রদেশ পূর্ববঙ্গ ও আসাম ছিল হিন্দু-সংখ্যাগরিষ্ঠ।"
+    - en: "3. The partition came into force on 16 October 1905."
+      bn: "৩. ১৬ অক্টোবর ১৯০৫ তারিখে বঙ্গভঙ্গ কার্যকর হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because the new eastern province had a Muslim majority, while the western province had a Hindu majority; nationalists saw this as dividing Bengalis on religious lines.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ নতুন পূর্বাঞ্চলীয় প্রদেশ ছিল মুসলিম-সংখ্যাগরিষ্ঠ এবং পশ্চিমের প্রদেশ হিন্দু-সংখ্যাগরিষ্ঠ; জাতীয়তাবাদীরা একে ধর্মের ভিত্তিতে বাঙালিদের বিভাজন বলে মনে করেন।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [congress-split]
+  stem:
+    en: Consider the following statements about the Calcutta session of the Indian National Congress (1906).
+    bn: জাতীয় কংগ্রেসের কলকাতা অধিবেশন (১৯০৬) সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was presided over by Bal Gangadhar Tilak."
+      bn: "১. এর সভাপতি ছিলেন বাল গঙ্গাধর তিলক।"
+    - en: "2. It passed resolutions on Swadeshi, Boycott, National Education and Self-Government."
+      bn: "২. এখানে স্বদেশি, বয়কট, জাতীয় শিক্ষা ও স্বায়ত্তশাসন বিষয়ে প্রস্তাব গৃহীত হয়।"
+    - en: "3. The Congress split into Moderates and Extremists at this session."
+      bn: "৩. এই অধিবেশনে কংগ্রেস নরমপন্থী ও চরমপন্থী দুই ভাগে বিভক্ত হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Only statement 2 is correct. The session was presided over by Dadabhai Naoroji, not Tilak, and the split came a year later at Surat in 1907.
+    bn: কেবল ২ নং বিবৃতি সঠিক। অধিবেশনের সভাপতি ছিলেন দাদাভাই নওরোজি, তিলক নন; আর কংগ্রেস বিভক্ত হয় এক বছর পরে, ১৯০৭ সালে সুরাটে।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [league-morley-minto]
+  stem:
+    en: Consider the following statements about the Morley-Minto Reforms (Indian Councils Act, 1909).
+    bn: মর্লে-মিন্টো সংস্কার (ভারতীয় কাউন্সিল আইন, ১৯০৯) সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. John Morley was the Secretary of State for India and Lord Minto was the Viceroy."
+      bn: "১. জন মর্লে ছিলেন ভারত-সচিব এবং লর্ড মিন্টো ছিলেন ভাইসরয়।"
+    - en: "2. The reforms introduced dyarchy in the provinces."
+      bn: "২. এই সংস্কার প্রদেশে দ্বৈত শাসন চালু করে।"
+    - en: "3. Members of the legislative councils were elected directly on a wide franchise."
+      bn: "৩. আইনসভার সদস্যরা ব্যাপক ভোটাধিকারের ভিত্তিতে প্রত্যক্ষভাবে নির্বাচিত হতেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Only statement 1 is correct. Dyarchy came with the Government of India Act, 1919, and elections under the 1909 Act were indirect, through bodies such as municipalities, district boards and chambers of commerce.
+    bn: কেবল ১ নং বিবৃতি সঠিক। দ্বৈত শাসন আসে ভারত শাসন আইন, ১৯১৯ অনুযায়ী, এবং ১৯০৯ সালের আইনে নির্বাচন ছিল পরোক্ষ; পৌরসভা, জেলা বোর্ড, বণিকসভা প্রভৃতি সংস্থার মাধ্যমে সদস্য নির্বাচিত হতেন।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [extremists]
+  stem:
+    en: Consider the following statements about the Extremist leaders.
+    bn: চরমপন্থী নেতাদের সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The trio Lal-Bal-Pal refers to Lala Lajpat Rai, Bal Gangadhar Tilak and Bipin Chandra Pal."
+      bn: "১. লাল-বাল-পাল বলতে লালা লাজপত রায়, বাল গঙ্গাধর তিলক ও বিপিনচন্দ্র পালকে বোঝায়।"
+    - en: "2. The Extremists relied mainly on petitions and prayers to the British government."
+      bn: "২. চরমপন্থীরা মূলত ব্রিটিশ সরকারের কাছে আবেদন-নিবেদনের উপর নির্ভর করতেন।"
+    - en: "3. Tilak used the Ganapati and Shivaji festivals to spread national feeling."
+      bn: "৩. জাতীয় চেতনা প্রসারের জন্য তিলক গণপতি ও শিবাজি উৎসবকে কাজে লাগান।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+  answer: 3
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 describes the Moderates; the Extremists favoured boycott, swadeshi, national education and passive resistance.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি নরমপন্থীদের বৈশিষ্ট্য; চরমপন্থীরা বয়কট, স্বদেশি, জাতীয় শিক্ষা ও নিষ্ক্রিয় প্রতিরোধের পক্ষে ছিলেন।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [league-morley-minto]
+  stem:
+    en: Consider the following statements.
+    bn: নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. A Muslim deputation led by the Aga Khan met Lord Minto at Simla in October 1906."
+      bn: "১. অক্টোবর ১৯০৬ সালে আগা খানের নেতৃত্বে একটি মুসলিম প্রতিনিধিদল সিমলায় লর্ড মিন্টোর সঙ্গে দেখা করে।"
+    - en: "2. The All-India Muslim League was founded at Dacca in December 1906."
+      bn: "২. ডিসেম্বর ১৯০৬ সালে ঢাকায় সর্বভারতীয় মুসলিম লিগ প্রতিষ্ঠিত হয়।"
+    - en: "3. In its early years the Muslim League opposed the Partition of Bengal."
+      bn: "৩. প্রথম দিকে মুসলিম লিগ বঙ্গভঙ্গের বিরোধিতা করেছিল।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because in its early years the League supported the partition, along with separate electorates and loyalty to the British government.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ প্রথম দিকে লিগ বঙ্গভঙ্গ সমর্থন করেছিল, পাশাপাশি পৃথক নির্বাচনের দাবি জানিয়েছিল ও ব্রিটিশ সরকারের প্রতি আনুগত্য প্রকাশ করেছিল।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [annulment-assessment]
+  stem:
+    en: Consider the following statements about the Delhi Durbar of 1911.
+    bn: ১৯১১ সালের দিল্লি দরবার সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was held in honour of King George V."
+      bn: "১. এটি সম্রাট পঞ্চম জর্জের সম্মানে আয়োজিত হয়।"
+    - en: "2. The annulment of the Partition of Bengal was announced at it."
+      bn: "২. এই দরবারে বঙ্গভঙ্গ রদের কথা ঘোষণা করা হয়।"
+    - en: "3. The transfer of the capital of British India from Calcutta to Delhi was announced at it."
+      bn: "৩. এই দরবারে ব্রিটিশ ভারতের রাজধানী কলকাতা থেকে দিল্লিতে স্থানান্তরের কথা ঘোষণা করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three statements are correct. The Durbar of 12 December 1911 was held for George V, and both the annulment and the shift of the capital to Delhi were announced there. New Delhi was formally inaugurated as the capital only in 1931, which sometimes leads people to doubt statement 3.
+    bn: তিনটি বিবৃতিই সঠিক। ১২ ডিসেম্বর ১৯১১ তারিখের দরবার পঞ্চম জর্জের সম্মানে আয়োজিত হয় এবং সেখানেই বঙ্গভঙ্গ রদ ও দিল্লিতে রাজধানী স্থানান্তর দুটিরই ঘোষণা হয়। নতুন দিল্লি আনুষ্ঠানিকভাবে রাজধানী হিসেবে উদ্বোধন হয় ১৯৩১ সালে, তাই অনেকে ৩ নং বিবৃতি নিয়ে সংশয়ে পড়েন।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc, upsc-cse]
+  refs: [anti-partition, constructive-swadeshi]
+  stem:
+    en: Match List I (Person) with List II (Contribution during the Swadeshi period).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (স্বদেশি যুগের অবদান) মেলান।
+  left:
+    - { en: "A. Rabindranath Tagore", bn: "ক. রবীন্দ্রনাথ ঠাকুর" }
+    - { en: "B. Abanindranath Tagore", bn: "খ. অবনীন্দ্রনাথ ঠাকুর" }
+    - { en: "C. Ashwini Kumar Dutt", bn: "গ. অশ্বিনীকুমার দত্ত" }
+    - { en: "D. Prafulla Chandra Ray", bn: "ঘ. প্রফুল্লচন্দ্র রায়" }
+  right:
+    - { en: "1. Swadesh Bandhab Samiti", bn: "১. স্বদেশ বান্ধব সমিতি" }
+    - { en: "2. Bengal Chemicals", bn: "২. বেঙ্গল কেমিক্যালস" }
+    - { en: "3. Painting \"Bharat Mata\"", bn: "৩. \"ভারতমাতা\" ছবি" }
+    - { en: "4. Song \"Amar Sonar Bangla\"", bn: "৪. \"আমার সোনার বাংলা\" গান" }
+  options:
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Rabindranath wrote "Amar Sonar Bangla", Abanindranath painted "Bharat Mata", Ashwini Kumar Dutt led the Swadesh Bandhab Samiti of Barisal, and P.C. Ray founded Bengal Chemicals. The two Tagores are easily swapped, which makes the first option tempting.
+    bn: রবীন্দ্রনাথ "আমার সোনার বাংলা" রচনা করেন, অবনীন্দ্রনাথ "ভারতমাতা" ছবি আঁকেন, অশ্বিনীকুমার দত্ত বরিশালের স্বদেশ বান্ধব সমিতির নেতৃত্ব দেন এবং প্রফুল্লচন্দ্র রায় বেঙ্গল কেমিক্যালস প্রতিষ্ঠা করেন। দুই ঠাকুরকে সহজেই গুলিয়ে ফেলা যায়, তাই প্রথম বিকল্পটি বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [extremists, anti-partition]
+  stem:
+    en: Match List I (Leader) with List II (Region where he led the Swadeshi or national movement).
+    bn: তালিকা I (নেতা)-এর সঙ্গে তালিকা II (যে অঞ্চলে তিনি স্বদেশি বা জাতীয় আন্দোলনের নেতৃত্ব দেন) মেলান।
+  left:
+    - { en: "A. Lala Lajpat Rai", bn: "ক. লালা লাজপত রায়" }
+    - { en: "B. Bal Gangadhar Tilak", bn: "খ. বাল গঙ্গাধর তিলক" }
+    - { en: "C. V.O. Chidambaram Pillai", bn: "গ. ভি. ও. চিদম্বরম পিল্লাই" }
+    - { en: "D. Bipin Chandra Pal", bn: "ঘ. বিপিনচন্দ্র পাল" }
+  right:
+    - { en: "1. Bengal", bn: "১. বাংলা" }
+    - { en: "2. Madras Presidency", bn: "২. মাদ্রাজ প্রেসিডেন্সি" }
+    - { en: "3. Punjab", bn: "৩. পাঞ্জাব" }
+    - { en: "4. Maharashtra", bn: "৪. মহারাষ্ট্র" }
+  options:
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Lajpat Rai led in Punjab, Tilak in Maharashtra (Bombay and Poona), V.O. Chidambaram Pillai in the Madras Presidency (Tuticorin) and Bipin Chandra Pal in Bengal. Lal-Bal-Pal in order stands for Punjab, Maharashtra and Bengal.
+    bn: লাজপত রায় পাঞ্জাবে, তিলক মহারাষ্ট্রে (বোম্বাই ও পুনা), ভি. ও. চিদম্বরম পিল্লাই মাদ্রাজ প্রেসিডেন্সিতে (তুতিকোরিন) এবং বিপিনচন্দ্র পাল বাংলায় নেতৃত্ব দেন। লাল-বাল-পাল ক্রমানুসারে পাঞ্জাব, মহারাষ্ট্র ও বাংলাকে বোঝায়।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc, upsc-cse]
+  refs: [league-morley-minto, congress-split, annulment-assessment]
+  stem:
+    en: Match List I (Event) with List II (Year).
+    bn: তালিকা I (ঘটনা)-এর সঙ্গে তালিকা II (বছর) মেলান।
+  left:
+    - { en: "A. Simla Deputation", bn: "ক. সিমলা প্রতিনিধিদল" }
+    - { en: "B. Surat split of the Congress", bn: "খ. কংগ্রেসের সুরাট বিচ্ছেদ" }
+    - { en: "C. Indian Councils Act", bn: "গ. ভারতীয় কাউন্সিল আইন" }
+    - { en: "D. Annulment of the Partition of Bengal", bn: "ঘ. বঙ্গভঙ্গ রদ" }
+  right:
+    - { en: "1. 1906", bn: "১. ১৯০৬" }
+    - { en: "2. 1907", bn: "২. ১৯০৭" }
+    - { en: "3. 1909", bn: "৩. ১৯০৯" }
+    - { en: "4. 1911", bn: "৪. ১৯১১" }
+  options:
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-1, B-3, C-2, D-4", bn: "ক-১, খ-৩, গ-২, ঘ-৪" }
+  answer: 0
+  explanation:
+    en: Simla Deputation (1 October 1906), Surat split (December 1907), Indian Councils Act (1909) and annulment at the Delhi Durbar (December 1911). The Simla Deputation and the founding of the Muslim League both fall in 1906, not 1907.
+    bn: সিমলা প্রতিনিধিদল (১ অক্টোবর ১৯০৬), সুরাট বিচ্ছেদ (ডিসেম্বর ১৯০৭), ভারতীয় কাউন্সিল আইন (১৯০৯) এবং দিল্লি দরবারে বঙ্গভঙ্গ রদ (ডিসেম্বর ১৯১১)। সিমলা প্রতিনিধিদল ও মুসলিম লিগের প্রতিষ্ঠা দুটিই ১৯০৬ সালের ঘটনা, ১৯০৭ সালের নয়।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [curzon, partition, league-morley-minto, annulment-assessment]
+  stem:
+    en: Match List I (Measure or event) with List II (Viceroy).
+    bn: তালিকা I (পদক্ষেপ বা ঘটনা)-এর সঙ্গে তালিকা II (ভাইসরয়) মেলান।
+  left:
+    - { en: "A. Partition of Bengal", bn: "ক. বঙ্গভঙ্গ" }
+    - { en: "B. Indian Councils Act, 1909", bn: "খ. ভারতীয় কাউন্সিল আইন, ১৯০৯" }
+    - { en: "C. Annulment of the partition", bn: "গ. বঙ্গভঙ্গ রদ" }
+    - { en: "D. Vernacular Press Act", bn: "ঘ. দেশীয় ভাষা সংবাদপত্র আইন" }
+  right:
+    - { en: "1. Lord Lytton", bn: "১. লর্ড লিটন" }
+    - { en: "2. Lord Hardinge", bn: "২. লর্ড হার্ডিঞ্জ" }
+    - { en: "3. Lord Minto", bn: "৩. লর্ড মিন্টো" }
+    - { en: "4. Lord Curzon", bn: "৪. লর্ড কার্জন" }
+  options:
+    - { en: "A-4, B-2, C-3, D-1", bn: "ক-৪, খ-২, গ-৩, ঘ-১" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Curzon partitioned Bengal (1905), Minto was Viceroy for the 1909 Act, Hardinge for the annulment (1911), and Lytton passed the Vernacular Press Act (1878). Mixing up Minto and Hardinge leads to the first option.
+    bn: কার্জন বঙ্গভঙ্গ করেন (১৯০৫), ১৯০৯ সালের আইনের সময় ভাইসরয় ছিলেন মিন্টো, বঙ্গভঙ্গ রদের (১৯১১) সময় হার্ডিঞ্জ, এবং লিটনের আমলে দেশীয় ভাষা সংবাদপত্র আইন (১৮৭৮) পাস হয়। মিন্টো ও হার্ডিঞ্জকে গুলিয়ে ফেললে প্রথম বিকল্পটি বেছে নেওয়ার ভুল হয়।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [partition]
+  assertion:
+    en: Indian nationalists regarded the Partition of Bengal as a political measure rather than an administrative one.
+    bn: ভারতীয় জাতীয়তাবাদীরা বঙ্গভঙ্গকে প্রশাসনিক নয়, বরং রাজনৈতিক পদক্ষেপ বলে মনে করতেন।
+  reason:
+    en: The partition divided Bengalis on territorial and religious lines and so threatened to weaken Bengal, the nerve centre of Indian nationalism.
+    bn: বঙ্গভঙ্গ বাঙালিদের ভৌগোলিক ও ধর্মীয় ভিত্তিতে বিভক্ত করে এবং এর ফলে ভারতীয় জাতীয়তাবাদের প্রাণকেন্দ্র বাংলাকে দুর্বল করার আশঙ্কা তৈরি করে।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Because the partition split Bengalis by territory and religion and weakened the main centre of nationalism, nationalists saw it as divide and rule rather than an administrative necessity.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। বঙ্গভঙ্গ বাঙালিদের ভৌগোলিক ও ধর্মীয় ভিত্তিতে ভাগ করে জাতীয়তাবাদের প্রধান কেন্দ্রকে দুর্বল করছিল বলেই জাতীয়তাবাদীরা একে প্রশাসনিক প্রয়োজন নয়, বিভাজন ও শাসন নীতি বলে মনে করতেন।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [congress-split, league-morley-minto]
+  assertion:
+    en: The Indian National Congress split into Moderates and Extremists at the Surat session of 1907.
+    bn: ১৯০৭ সালের সুরাট অধিবেশনে জাতীয় কংগ্রেস নরমপন্থী ও চরমপন্থী দুই ভাগে বিভক্ত হয়।
+  reason:
+    en: The All-India Muslim League was founded at Dacca in 1906.
+    bn: ১৯০৬ সালে ঢাকায় সর্বভারতীয় মুসলিম লিগ প্রতিষ্ঠিত হয়।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. The Surat split came from differences between Moderates and Extremists over the scope of boycott and swadeshi and the choice of president; it was not caused by the founding of the Muslim League.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়। বয়কট ও স্বদেশির পরিধি এবং সভাপতি নির্বাচন নিয়ে নরমপন্থী ও চরমপন্থীদের মতবিরোধ থেকেই সুরাট বিচ্ছেদ ঘটে; মুসলিম লিগের প্রতিষ্ঠা এর কারণ ছিল না।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [annulment-assessment, anti-partition]
+  assertion:
+    en: The Swadeshi movement largely failed to draw in the Muslim peasantry of East Bengal.
+    bn: স্বদেশি আন্দোলন পূর্ববঙ্গের মুসলিম কৃষকদের তেমনভাবে টানতে পারেনি।
+  reason:
+    en: The Swadeshi movement remained confined to Bengal and did not spread to any other part of India.
+    bn: স্বদেশি আন্দোলন বাংলার মধ্যেই সীমাবদ্ধ ছিল এবং ভারতের অন্য কোনো অঞ্চলে ছড়িয়ে পড়েনি।
+  answer: 2
+  explanation:
+    en: The assertion is true; it is one of the main weaknesses noted in assessments of the movement. The reason is false, because Tilak, Lajpat Rai, Ajit Singh and V.O. Chidambaram Pillai carried swadeshi to Maharashtra, Punjab and the Madras Presidency.
+    bn: বিবৃতিটি সত্য; আন্দোলনের মূল্যায়নে এটিকে অন্যতম প্রধান দুর্বলতা হিসেবে দেখা হয়। কারণটি মিথ্যা, কারণ তিলক, লাজপত রায়, অজিত সিং ও ভি. ও. চিদম্বরম পিল্লাই মহারাষ্ট্র, পাঞ্জাব ও মাদ্রাজ প্রেসিডেন্সিতে স্বদেশির বার্তা ছড়িয়ে দেন।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [league-morley-minto]
+  assertion:
+    en: The Indian Councils Act of 1909 introduced dyarchy in the provinces.
+    bn: ১৯০৯ সালের ভারতীয় কাউন্সিল আইন প্রদেশে দ্বৈত শাসন চালু করে।
+  reason:
+    en: The Indian Councils Act of 1909 provided separate electorates for Muslims.
+    bn: ১৯০৯ সালের ভারতীয় কাউন্সিল আইন মুসলিমদের জন্য পৃথক নির্বাচনের ব্যবস্থা করে।
+  answer: 3
+  explanation:
+    en: The assertion is false, because dyarchy in the provinces came with the Government of India Act, 1919. The reason is true, since the 1909 Act introduced separate electorates for Muslims.
+    bn: বিবৃতিটি মিথ্যা, কারণ প্রদেশে দ্বৈত শাসন চালু হয় ভারত শাসন আইন, ১৯১৯ অনুযায়ী। কারণটি সত্য, কেননা ১৯০৯ সালের আইন মুসলিমদের জন্য পৃথক নির্বাচন চালু করে।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [partition, congress-split, league-morley-minto]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Surat split of the Congress"
+      bn: "১. কংগ্রেসের সুরাট বিচ্ছেদ"
+    - en: "2. Partition of Bengal comes into force"
+      bn: "২. বঙ্গভঙ্গ কার্যকর হয়"
+    - en: "3. Indian Councils Act (Morley-Minto Reforms)"
+      bn: "৩. ভারতীয় কাউন্সিল আইন (মর্লে-মিন্টো সংস্কার)"
+    - en: "4. Founding of the Muslim League"
+      bn: "৪. মুসলিম লিগের প্রতিষ্ঠা"
+  options:
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+  answer: 2
+  explanation:
+    en: Partition in force (1905), Muslim League (1906), Surat split (1907), Indian Councils Act (1909). The League came a year before the Surat split, not after it.
+    bn: বঙ্গভঙ্গ কার্যকর (১৯০৫), মুসলিম লিগ (১৯০৬), সুরাট বিচ্ছেদ (১৯০৭), ভারতীয় কাউন্সিল আইন (১৯০৯)। মুসলিম লিগ সুরাট বিচ্ছেদের এক বছর আগে প্রতিষ্ঠিত হয়, পরে নয়।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [anti-partition, league-morley-minto]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Simla Deputation meets Lord Minto"
+      bn: "১. সিমলা প্রতিনিধিদল লর্ড মিন্টোর সঙ্গে দেখা করে"
+    - en: "2. Boycott resolution passed at the Calcutta Town Hall"
+      bn: "২. কলকাতার টাউন হলে বয়কট প্রস্তাব গৃহীত হয়"
+    - en: "3. Founding of the Muslim League at Dacca"
+      bn: "৩. ঢাকায় মুসলিম লিগের প্রতিষ্ঠা"
+    - en: "4. Partition of Bengal comes into force"
+      bn: "৪. বঙ্গভঙ্গ কার্যকর হয়"
+  options:
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+  answer: 3
+  explanation:
+    en: Boycott resolution (7 August 1905), partition in force (16 October 1905), Simla Deputation (1 October 1906), Muslim League (30 December 1906). The boycott resolution came before the partition took effect, which rules out options starting with 4.
+    bn: বয়কট প্রস্তাব (৭ আগস্ট ১৯০৫), বঙ্গভঙ্গ কার্যকর (১৬ অক্টোবর ১৯০৫), সিমলা প্রতিনিধিদল (১ অক্টোবর ১৯০৬), মুসলিম লিগ (৩০ ডিসেম্বর ১৯০৬)। বয়কট প্রস্তাব বঙ্গভঙ্গ কার্যকর হওয়ার আগেই গৃহীত হয়, তাই ৪ দিয়ে শুরু হওয়া বিকল্প বাদ যায়।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [curzon, constructive-swadeshi, annulment-assessment]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Indian Universities Act"
+      bn: "১. ভারতীয় বিশ্ববিদ্যালয় আইন"
+    - en: "2. Annulment of the Partition of Bengal"
+      bn: "২. বঙ্গভঙ্গ রদ"
+    - en: "3. Setting up of the National Council of Education"
+      bn: "৩. জাতীয় শিক্ষা পরিষদ গঠন"
+    - en: "4. Calcutta Corporation Act"
+      bn: "৪. কলকাতা কর্পোরেশন আইন"
+  options:
+    - { en: 4-1-3-2, bn: ৪-১-৩-২ }
+    - { en: 1-4-3-2, bn: ১-৪-৩-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 4-1-2-3, bn: ৪-১-২-৩ }
+  answer: 0
+  explanation:
+    en: Calcutta Corporation Act (1899), Indian Universities Act (1904), National Council of Education (1906), annulment (1911). Both Acts belong to Curzon's term, but the Corporation Act came first.
+    bn: কলকাতা কর্পোরেশন আইন (১৮৯৯), ভারতীয় বিশ্ববিদ্যালয় আইন (১৯০৪), জাতীয় শিক্ষা পরিষদ (১৯০৬), বঙ্গভঙ্গ রদ (১৯১১)। দুটি আইনই কার্জনের শাসনকালের, তবে কর্পোরেশন আইন আগে পাস হয়।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [extremists, curzon, congress-split, league-morley-minto]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Indian Councils Act (Morley-Minto Reforms)"
+      bn: "১. ভারতীয় কাউন্সিল আইন (মর্লে-মিন্টো সংস্কার)"
+    - en: "2. Calcutta Corporation Act"
+      bn: "২. কলকাতা কর্পোরেশন আইন"
+    - en: "3. Japan's victory over Russia"
+      bn: "৩. রাশিয়ার বিরুদ্ধে জাপানের জয়"
+    - en: "4. Tilak sentenced to six years and sent to Mandalay"
+      bn: "৪. তিলকের ছয় বছরের কারাদণ্ড ও মান্দালয়ে প্রেরণ"
+  options:
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+    - { en: 3-2-4-1, bn: ৩-২-৪-১ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+  answer: 1
+  explanation:
+    en: Calcutta Corporation Act (1899), Japan's victory over Russia (1905), Tilak's sentence (1908), Indian Councils Act (1909). Tilak was jailed a year before the Morley-Minto Reforms, not after them.
+    bn: কলকাতা কর্পোরেশন আইন (১৮৯৯), রাশিয়ার বিরুদ্ধে জাপানের জয় (১৯০৫), তিলকের কারাদণ্ড (১৯০৮), ভারতীয় কাউন্সিল আইন (১৯০৯)। তিলক মর্লে-মিন্টো সংস্কারের এক বছর আগে কারারুদ্ধ হন, পরে নয়।
+  status: ai-generated

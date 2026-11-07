@@ -1,0 +1,702 @@
+# Questions for hist.modern.peasant-tribal
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [kol-santhal]
+  stem:
+    en: Who led the Santhal Hul of 1855–56?
+    bn: ১৮৫৫–৫৬ সালের সাঁওতাল হুলের নেতৃত্ব দেন কারা?
+  options:
+    - { en: Birsa Munda, bn: বিরসা মুন্ডা }
+    - { en: Sidhu and Kanhu, bn: সিধু ও কানহু }
+    - { en: Buddhu Bhagat, bn: বুদ্ধু ভগত }
+    - { en: Bakshi Jagabandhu, bn: বক্সি জগবন্ধু }
+  answer: 1
+  explanation:
+    en: The brothers Sidhu and Kanhu declared the Hul at Bhognadih on 30 June 1855. Birsa Munda, the most tempting option, led the Munda Ulgulan of 1899–1900, more than forty years later.
+    bn: দুই ভাই সিধু ও কানহু ১৮৫৫ সালের ৩০ জুন ভগনাডিহিতে হুল ঘোষণা করেন। সবচেয়ে বিভ্রান্তিকর বিকল্প বিরসা মুন্ডা চল্লিশ বছরেরও বেশি পরে ১৮৯৯–১৯০০ সালের মুন্ডা উলগুলানের নেতা ছিলেন।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [indigo]
+  stem:
+    en: Who wrote the play "Nil Darpan", which exposed the oppression of indigo planters in Bengal?
+    bn: বাংলায় নীলকরদের অত্যাচার তুলে ধরা নাটক "নীলদর্পণ" কে রচনা করেন?
+  options:
+    - { en: Bankim Chandra Chattopadhyay, bn: বঙ্কিমচন্দ্র চট্টোপাধ্যায় }
+    - { en: Harish Chandra Mukherjee, bn: হরিশচন্দ্র মুখোপাধ্যায় }
+    - { en: Dinabandhu Mitra, bn: দীনবন্ধু মিত্র }
+    - { en: R.C. Dutt, bn: রমেশচন্দ্র দত্ত }
+  answer: 2
+  explanation:
+    en: Dinabandhu Mitra wrote Nil Darpan (1860) during the Indigo Revolt. Harish Chandra Mukherjee also backed the ryots, but through his newspaper, the Hindoo Patriot, not a play.
+    bn: নীল বিদ্রোহের সময় দীনবন্ধু মিত্র নীলদর্পণ (১৮৬০) রচনা করেন। হরিশচন্দ্র মুখোপাধ্যায়ও রায়তদের সমর্থন করেছিলেন, তবে নাটকের মাধ্যমে নয়, তাঁর সংবাদপত্র হিন্দু প্যাট্রিয়টের মাধ্যমে।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [munda]
+  stem:
+    en: By what name did his followers call Birsa Munda?
+    bn: অনুগামীরা বিরসা মুন্ডাকে কী নামে ডাকত?
+  options:
+    - { en: Deshbandhu, bn: দেশবন্ধু }
+    - { en: Lokmanya, bn: লোকমান্য }
+    - { en: Gurudev, bn: গুরুদেব }
+    - { en: Dharti Aba, bn: ধরতি আবা }
+  answer: 3
+  explanation:
+    en: The Mundas called Birsa "Dharti Aba", meaning father of the earth. Deshbandhu (C.R. Das), Lokmanya (Tilak) and Gurudev (Tagore) are titles of other, later figures.
+    bn: মুন্ডারা বিরসাকে "ধরতি আবা" অর্থাৎ পৃথিবীর পিতা বলে ডাকত। দেশবন্ধু (চিত্তরঞ্জন দাশ), লোকমান্য (তিলক) ও গুরুদেব (রবীন্দ্রনাথ) পরবর্তীকালের অন্য ব্যক্তিদের উপাধি।
+  status: ai-generated
+
+- id: q0004
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [kol-santhal, munda]
+  stem:
+    en: Consider the following statements about the Santhal Hul.
+    bn: সাঁওতাল হুল সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was declared at Bhognadih in 1855 under the leadership of Sidhu and Kanhu."
+      bn: "১. ১৮৫৫ সালে সিধু ও কানহুর নেতৃত্বে ভগনাডিহিতে এই বিদ্রোহ ঘোষিত হয়।"
+    - en: "2. After its suppression, the government passed the Chotanagpur Tenancy Act."
+      bn: "২. এই বিদ্রোহ দমনের পর সরকার ছোটোনাগপুর প্রজাস্বত্ব আইন পাস করে।"
+    - en: "3. The British declared martial law to suppress it."
+      bn: "৩. বিদ্রোহ দমনের জন্য ব্রিটিশরা সামরিক আইন জারি করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because the Chotanagpur Tenancy Act (1908) followed the Munda Ulgulan; the Hul led instead to the creation of the Santhal Parganas district.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল, কারণ ছোটোনাগপুর প্রজাস্বত্ব আইন (১৯০৮) মুন্ডা উলগুলানের পরে পাস হয়; হুলের ফলে গঠিত হয়েছিল সাঁওতাল পরগনা জেলা।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [wahabi-faraizi]
+  stem:
+    en: Where did Titu Mir build his famous bamboo fort?
+    bn: তিতুমীর তাঁর বিখ্যাত বাঁশের কেল্লা কোথায় নির্মাণ করেন?
+  options:
+    - { en: Narkelberia, bn: নারকেলবেড়িয়া }
+    - { en: Bhognadih, bn: ভগনাডিহি }
+    - { en: Govindpur, bn: গোবিন্দপুর }
+    - { en: Supa, bn: সুপা }
+  answer: 0
+  explanation:
+    en: Titu Mir built his bamboo fort at Narkelberia near Barasat; British troops destroyed it in 1831. Bhognadih is where the Santhal Hul was declared, Govindpur is linked with the Indigo Revolt, and Supa with the Deccan riots.
+    bn: তিতুমীর বারাসতের কাছে নারকেলবেড়িয়ায় বাঁশের কেল্লা নির্মাণ করেন; ১৮৩১ সালে ব্রিটিশ সেনা তা ধ্বংস করে। ভগনাডিহিতে সাঁওতাল হুল ঘোষিত হয়, গোবিন্দপুর নীল বিদ্রোহের সঙ্গে এবং সুপা দাক্ষিণাত্য হাঙ্গামার সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0006
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [kol-santhal, munda, early-revolts]
+  stem:
+    en: Match List I (Uprising) with List II (Leader).
+    bn: তালিকা I (বিদ্রোহ)-এর সঙ্গে তালিকা II (নেতা) মেলান।
+  left:
+    - { en: "A. Santhal Hul", bn: "ক. সাঁওতাল হুল" }
+    - { en: "B. Munda Ulgulan", bn: "খ. মুন্ডা উলগুলান" }
+    - { en: "C. Kol uprising", bn: "গ. কোল বিদ্রোহ" }
+    - { en: "D. Paika rebellion", bn: "ঘ. পাইক বিদ্রোহ" }
+  right:
+    - { en: "1. Buddhu Bhagat", bn: "১. বুদ্ধু ভগত" }
+    - { en: "2. Bakshi Jagabandhu", bn: "২. বক্সি জগবন্ধু" }
+    - { en: "3. Sidhu and Kanhu", bn: "৩. সিধু ও কানহু" }
+    - { en: "4. Birsa Munda", bn: "৪. বিরসা মুন্ডা" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-1, B-4, C-3, D-2", bn: "ক-১, খ-৪, গ-৩, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Sidhu and Kanhu led the Santhal Hul (1855–56), Birsa Munda the Ulgulan (1899–1900), Buddhu Bhagat the Kol uprising (1831–32) and Bakshi Jagabandhu the Paika rebellion in Odisha (1817). Swapping the two Santhal and Munda leaders is the commonest mistake.
+    bn: সিধু ও কানহু সাঁওতাল হুলের (১৮৫৫–৫৬), বিরসা মুন্ডা উলগুলানের (১৮৯৯–১৯০০), বুদ্ধু ভগত কোল বিদ্রোহের (১৮৩১–৩২) এবং বক্সি জগবন্ধু ওড়িশার পাইক বিদ্রোহের (১৮১৭) নেতা ছিলেন। সাঁওতাল ও মুন্ডা নেতাদের অদলবদল করে ফেলাই সবচেয়ে সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [early-revolts]
+  stem:
+    en: Bankim Chandra Chattopadhyay's novel "Anandamath" is set against the background of which rebellion?
+    bn: বঙ্কিমচন্দ্র চট্টোপাধ্যায়ের উপন্যাস "আনন্দমঠ" কোন বিদ্রোহের পটভূমিতে রচিত?
+  options:
+    - { en: The Indigo Revolt, bn: নীল বিদ্রোহ }
+    - { en: The Santhal Hul, bn: সাঁওতাল হুল }
+    - { en: The Sanyasi-Fakir rebellion, bn: সন্ন্যাসী-ফকির বিদ্রোহ }
+    - { en: The Paika rebellion, bn: পাইক বিদ্রোহ }
+  answer: 2
+  explanation:
+    en: Anandamath (1882), which contains the song Vande Mataram, draws on the Sanyasi-Fakir rebellion in late 18th-century Bengal. The Indigo Revolt is tempting because it too is a Bengal movement, but its best-known literary work is Dinabandhu Mitra's Nil Darpan.
+    bn: আনন্দমঠ (১৮৮২), যাতে বন্দে মাতরম্ গানটি আছে, অষ্টাদশ শতকের শেষভাগে বাংলার সন্ন্যাসী-ফকির বিদ্রোহের পটভূমিতে রচিত। নীল বিদ্রোহও বাংলার আন্দোলন বলে বিভ্রান্তি হতে পারে, কিন্তু তার সঙ্গে যুক্ত বিখ্যাত সাহিত্যকর্ম হল দীনবন্ধু মিত্রের নীলদর্পণ।
+  status: ai-generated
+
+- id: q0008
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [summary]
+  stem:
+    en: Arrange the following uprisings in chronological order.
+    bn: নিম্নলিখিত বিদ্রোহগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Santhal Hul"
+      bn: "১. সাঁওতাল হুল"
+    - en: "2. Munda Ulgulan"
+      bn: "২. মুন্ডা উলগুলান"
+    - en: "3. Paika rebellion"
+      bn: "৩. পাইক বিদ্রোহ"
+    - en: "4. Indigo Revolt"
+      bn: "৪. নীল বিদ্রোহ"
+  options:
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 1-3-4-2, bn: ১-৩-৪-২ }
+    - { en: 3-1-2-4, bn: ৩-১-২-৪ }
+  answer: 1
+  explanation:
+    en: Paika rebellion (1817), Santhal Hul (1855–56), Indigo Revolt (1859–60) and Munda Ulgulan (1899–1900). The Hul and the Indigo Revolt are only four years apart, so placing indigo first is the likely slip.
+    bn: পাইক বিদ্রোহ (১৮১৭), সাঁওতাল হুল (১৮৫৫–৫৬), নীল বিদ্রোহ (১৮৫৯–৬০) এবং মুন্ডা উলগুলান (১৮৯৯–১৯০০)। হুল ও নীল বিদ্রোহের মধ্যে মাত্র চার বছরের ব্যবধান, তাই নীল বিদ্রোহকে আগে বসানোর ভুল হতে পারে।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc]
+  refs: [early-revolts]
+  stem:
+    en: The Paika rebellion of 1817 took place in which present-day state?
+    bn: ১৮১৭ সালের পাইক বিদ্রোহ বর্তমান কোন রাজ্যে হয়েছিল?
+  options:
+    - { en: Odisha, bn: ওড়িশা }
+    - { en: Jharkhand, bn: ঝাড়খণ্ড }
+    - { en: West Bengal, bn: পশ্চিমবঙ্গ }
+    - { en: Maharashtra, bn: মহারাষ্ট্র }
+  answer: 0
+  explanation:
+    en: The Paikas, the traditional militia of the Raja of Khurda, rose in Odisha in 1817 under Bakshi Jagabandhu. Jharkhand is tempting because the Kol, Santhal and Munda risings took place there, but the Paika rising did not.
+    bn: খুরদার রাজার ঐতিহ্যবাহী সৈনিক পাইকরা ১৮১৭ সালে বক্সি জগবন্ধুর নেতৃত্বে ওড়িশায় বিদ্রোহ করে। কোল, সাঁওতাল ও মুন্ডা বিদ্রোহ ঝাড়খণ্ড অঞ্চলে হয়েছিল বলে বিভ্রান্তি হতে পারে, কিন্তু পাইক বিদ্রোহ সেখানে হয়নি।
+  status: ai-generated
+
+- id: q0010
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pabna-deccan, causes]
+  assertion:
+    en: The Deccan riots of 1875 were directed mainly against moneylenders rather than landlords.
+    bn: ১৮৭৫ সালের দাক্ষিণাত্য হাঙ্গামার প্রধান লক্ষ্য ছিল জমিদাররা নয়, মহাজনরা।
+  reason:
+    en: Under the Ryotwari system of the Bombay Deccan, peasants paid revenue directly to the State, and those who fell into debt lost their land to moneylenders through the courts.
+    bn: বোম্বাই দাক্ষিণাত্যের রায়তওয়ারি ব্যবস্থায় কৃষকরা সরাসরি রাষ্ট্রকে রাজস্ব দিত, এবং ঋণগ্রস্ত কৃষকরা আদালতের মাধ্যমে মহাজনদের হাতে জমি হারাত।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. With no zamindar between peasant and State, the main oppressor the Deccan peasant faced was the moneylender who took his land for debt, so the rioters attacked moneylenders and burnt their debt bonds.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। কৃষক ও রাষ্ট্রের মধ্যে কোনো জমিদার না থাকায় দাক্ষিণাত্যের কৃষকের প্রধান শোষক ছিল ঋণের দায়ে জমি দখলকারী মহাজন; তাই বিদ্রোহীরা মহাজনদের আক্রমণ করে তাদের ঋণপত্র পুড়িয়ে দেয়।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [wahabi-faraizi]
+  stem:
+    en: Who founded the Faraizi movement in eastern Bengal?
+    bn: পূর্ববঙ্গে ফরাজি আন্দোলন কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Syed Ahmad of Rae Bareli, bn: রায়বেরেলির সৈয়দ আহমদ }
+    - { en: Haji Shariatullah, bn: হাজি শরিয়তউল্লাহ }
+    - { en: Titu Mir, bn: তিতুমীর }
+    - { en: Dudu Miyan, bn: দুদু মিয়াঁ }
+  answer: 1
+  explanation:
+    en: Haji Shariatullah of Faridpur founded the Faraizi movement. Dudu Miyan was his son, who later turned it into an agrarian movement; Syed Ahmad and Titu Mir belong to the Wahabi tradition.
+    bn: ফরিদপুরের হাজি শরিয়তউল্লাহ ফরাজি আন্দোলন প্রতিষ্ঠা করেন। দুদু মিয়াঁ ছিলেন তাঁর পুত্র, যিনি পরে একে কৃষক আন্দোলনে পরিণত করেন; সৈয়দ আহমদ ও তিতুমীর ওয়াহাবি ধারার সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0012
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [indigo, pabna-deccan]
+  stem:
+    en: Consider the following statements about the Indigo Revolt.
+    bn: নীল বিদ্রোহ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It began in 1859 in Nadia district, when peasants refused to sow indigo."
+      bn: "১. ১৮৫৯ সালে নদিয়া জেলায় কৃষকরা নীল বুনতে অস্বীকার করলে এই বিদ্রোহের সূচনা হয়।"
+    - en: "2. Rev. James Long was punished for publishing an English translation of Nil Darpan."
+      bn: "২. নীলদর্পণের ইংরেজি অনুবাদ প্রকাশ করার জন্য পাদরি জেমস লং দণ্ডিত হন।"
+    - en: "3. The revolt was organised by the Indian Association under Surendranath Banerjea."
+      bn: "৩. সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়ের ভারত সভা এই বিদ্রোহ সংগঠিত করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+  answer: 3
+  explanation:
+    en: Statements 1 and 2 are correct; James Long was fined and imprisoned. Statement 3 is wrong. The Indian Association was founded only in 1876, years after the Indigo Revolt of 1859–60; it later supported the cause of the Pabna peasants.
+    bn: ১ ও ২ নং বিবৃতি সঠিক; জেমস লং-এর জরিমানা ও কারাদণ্ড হয়েছিল। ৩ নং বিবৃতি ভুল। ভারত সভা প্রতিষ্ঠিত হয় ১৮৭৬ সালে, ১৮৫৯–৬০ সালের নীল বিদ্রোহের বহু বছর পরে; পরে এটি পাবনার কৃষকদের পক্ষ সমর্থন করে।
+  status: ai-generated
+
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, ibps-po, state-psc, wbcs]
+  refs: [pabna-deccan]
+  stem:
+    en: The Deccan riots of 1875 were directed mainly against which group?
+    bn: ১৮৭৫ সালের দাক্ষিণাত্য হাঙ্গামা প্রধানত কোন গোষ্ঠীর বিরুদ্ধে পরিচালিত হয়েছিল?
+  options:
+    - { en: European indigo planters, bn: ইউরোপীয় নীলকর }
+    - { en: Zamindars, bn: জমিদার }
+    - { en: Christian missionaries, bn: খ্রিস্টান মিশনারি }
+    - { en: Moneylenders, bn: মহাজন }
+  answer: 3
+  explanation:
+    en: Indebted peasants of Poona and Ahmednagar attacked moneylenders (sahukars) and burnt their debt bonds. Zamindars is the tempting answer, but the Bombay Deccan was under the Ryotwari system, where there were no zamindars between the peasant and the State.
+    bn: পুনা ও আহমদনগরের ঋণগ্রস্ত কৃষকরা মহাজনদের (সাহুকার) আক্রমণ করে তাদের ঋণপত্র পুড়িয়ে দেয়। জমিদার উত্তরটি বিভ্রান্তিকর, কিন্তু বোম্বাই দাক্ষিণাত্যে রায়তওয়ারি ব্যবস্থা চালু ছিল, সেখানে কৃষক ও রাষ্ট্রের মধ্যে কোনো জমিদার ছিল না।
+  status: ai-generated
+
+- id: q0014
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [wahabi-faraizi, early-revolts, pabna-deccan, kol-santhal]
+  stem:
+    en: Match List I (Movement) with List II (Place associated with it).
+    bn: তালিকা I (আন্দোলন)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট স্থান) মেলান।
+  left:
+    - { en: "A. Faraizi movement", bn: "ক. ফরাজি আন্দোলন" }
+    - { en: "B. Paika rebellion", bn: "খ. পাইক বিদ্রোহ" }
+    - { en: "C. Deccan riots", bn: "গ. দাক্ষিণাত্য হাঙ্গামা" }
+    - { en: "D. Santhal Hul", bn: "ঘ. সাঁওতাল হুল" }
+  right:
+    - { en: "1. Khurda", bn: "১. খুরদা" }
+    - { en: "2. Supa", bn: "২. সুপা" }
+    - { en: "3. Bhognadih", bn: "৩. ভগনাডিহি" }
+    - { en: "4. Faridpur", bn: "৪. ফরিদপুর" }
+  options:
+    - { en: "A-4, B-2, C-1, D-3", bn: "ক-৪, খ-২, গ-১, ঘ-৩" }
+    - { en: "A-3, B-1, C-2, D-4", bn: "ক-৩, খ-১, গ-২, ঘ-৪" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+    - { en: "A-4, B-1, C-2, D-3", bn: "ক-৪, খ-১, গ-২, ঘ-৩" }
+  answer: 3
+  explanation:
+    en: The Faraizi movement was based in Faridpur, the Paikas served the Raja of Khurda, the Deccan riots began at Supa in Poona district, and the Santhal Hul was declared at Bhognadih. Supa and Bhognadih, both villages where a rising began, are the pair most often confused.
+    bn: ফরাজি আন্দোলনের কেন্দ্র ছিল ফরিদপুর, পাইকরা খুরদার রাজার সৈনিক ছিল, দাক্ষিণাত্য হাঙ্গামা পুনা জেলার সুপা গ্রামে শুরু হয় এবং সাঁওতাল হুল ভগনাডিহিতে ঘোষিত হয়। বিদ্রোহের সূচনাস্থল হিসেবে সুপা ও ভগনাডিহিকেই সবচেয়ে বেশি গুলিয়ে ফেলা হয়।
+  status: ai-generated
+
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ibps-po, state-psc, wbcs, upsc-cse]
+  refs: [pabna-deccan, british-response]
+  stem:
+    en: The agrarian league movement in Pabna (1873) prepared the ground for which law?
+    bn: পাবনার কৃষক সংঘের আন্দোলন (১৮৭৩) কোন আইনের পথ প্রস্তুত করে?
+  options:
+    - { en: "Deccan Agriculturists' Relief Act, 1879", bn: "দাক্ষিণাত্য কৃষক ত্রাণ আইন, ১৮৭৯" }
+    - { en: "Bengal Tenancy Act, 1885", bn: "বঙ্গীয় প্রজাস্বত্ব আইন, ১৮৮৫" }
+    - { en: "Chotanagpur Tenancy Act, 1908", bn: "ছোটোনাগপুর প্রজাস্বত্ব আইন, ১৯০৮" }
+    - { en: "Permanent Settlement, 1793", bn: "চিরস্থায়ী বন্দোবস্ত, ১৭৯৩" }
+  answer: 1
+  explanation:
+    en: The Pabna struggle over rents and occupancy rights led to the Bengal Tenancy Act, 1885. The Deccan Agriculturists' Relief Act, 1879 is tempting because it also came from a peasant movement of the 1870s, but it followed the Deccan riots in the Bombay Presidency.
+    bn: খাজনা ও দখলিস্বত্ব নিয়ে পাবনার সংগ্রাম বঙ্গীয় প্রজাস্বত্ব আইন, ১৮৮৫-এর পথ প্রস্তুত করে। দাক্ষিণাত্য কৃষক ত্রাণ আইন, ১৮৭৯-ও ১৮৭০-এর দশকের এক কৃষক আন্দোলনের ফল বলে বিভ্রান্তি হতে পারে, কিন্তু সেটি বোম্বাই প্রেসিডেন্সির দাক্ষিণাত্য হাঙ্গামার পরে আসে।
+  status: ai-generated
+
+- id: q0016
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [kol-santhal, indigo]
+  assertion:
+    en: The Santhal Hul was directed against the dikus, that is, outsiders such as zamindars, moneylenders and traders.
+    bn: সাঁওতাল হুল দিকু, অর্থাৎ জমিদার, মহাজন ও ব্যবসায়ীর মতো বহিরাগতদের বিরুদ্ধে পরিচালিত হয়েছিল।
+  reason:
+    en: Dinabandhu Mitra's play Nil Darpan exposed the oppression of indigo planters in Bengal.
+    bn: দীনবন্ধু মিত্রের নাটক নীলদর্পণ বাংলায় নীলকরদের অত্যাচার তুলে ধরে।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. Nil Darpan (1860) concerns indigo planters in Bengal, while the Hul (1855–56) arose from the exploitation of Santhals by outsiders in the Rajmahal hills.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়। নীলদর্পণ (১৮৬০) বাংলার নীলকরদের বিষয়ে, আর হুল (১৮৫৫–৫৬) হয়েছিল রাজমহল পাহাড় অঞ্চলে বহিরাগতদের হাতে সাঁওতালদের শোষণের ফলে।
+  status: ai-generated
+
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [munda]
+  stem:
+    en: The khuntkatti system of joint land ownership, which the Ulgulan sought to defend, belonged to which community?
+    bn: উলগুলানের মাধ্যমে যে খুঁৎকাঠি যৌথ ভূমি মালিকানা ব্যবস্থা রক্ষার চেষ্টা হয়েছিল, তা কোন সম্প্রদায়ের ছিল?
+  options:
+    - { en: The Paikas of Odisha, bn: ওড়িশার পাইক }
+    - { en: The peasants of the Bombay Deccan, bn: বোম্বাই দাক্ষিণাত্যের কৃষক }
+    - { en: The Faraizis of eastern Bengal, bn: পূর্ববঙ্গের ফরাজি }
+    - { en: The Mundas of Chotanagpur, bn: ছোটোনাগপুরের মুন্ডা }
+  answer: 3
+  explanation:
+    en: Under khuntkatti, Munda land was owned jointly by the lineage that had cleared the forest. Its breakdown under outside jagirdars and thikadars was a key cause of Birsa Munda's Ulgulan, and the Chotanagpur Tenancy Act, 1908 later recognised these rights.
+    bn: খুঁৎকাঠি ব্যবস্থায় যে গোষ্ঠী অরণ্য পরিষ্কার করেছিল, মুন্ডাদের জমির মালিক ছিল সেই গোষ্ঠী যৌথভাবে। বহিরাগত জায়গিরদার ও ঠিকাদারদের হাতে এই ব্যবস্থার ভাঙন বিরসা মুন্ডার উলগুলানের এক প্রধান কারণ; পরে ছোটোনাগপুর প্রজাস্বত্ব আইন, ১৯০৮ এই অধিকার স্বীকার করে।
+  status: ai-generated
+
+- id: q0018
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [summary, kol-santhal, pabna-deccan]
+  stem:
+    en: Arrange the following movements in chronological order.
+    bn: নিম্নলিখিত আন্দোলনগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Deccan riots"
+      bn: "১. দাক্ষিণাত্য হাঙ্গামা"
+    - en: "2. Kol uprising"
+      bn: "২. কোল বিদ্রোহ"
+    - en: "3. Formation of the agrarian league in Pabna"
+      bn: "৩. পাবনায় কৃষক সংঘ গঠন"
+    - en: "4. Santhal Hul"
+      bn: "৪. সাঁওতাল হুল"
+  options:
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+  answer: 0
+  explanation:
+    en: Kol uprising (1831–32), Santhal Hul (1855–56), Pabna agrarian league (1873) and Deccan riots (1875). Pabna and the Deccan riots are only two years apart; Pabna came first.
+    bn: কোল বিদ্রোহ (১৮৩১–৩২), সাঁওতাল হুল (১৮৫৫–৫৬), পাবনার কৃষক সংঘ (১৮৭৩) এবং দাক্ষিণাত্য হাঙ্গামা (১৮৭৫)। পাবনা ও দাক্ষিণাত্যের ঘটনার মধ্যে মাত্র দুই বছরের ব্যবধান; পাবনার আন্দোলন আগে।
+  status: ai-generated
+
+- id: q0019
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [wahabi-faraizi]
+  stem:
+    en: Consider the following statements about the Faraizi movement.
+    bn: ফরাজি আন্দোলন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Its name comes from the obligatory religious duties of Islam."
+      bn: "১. এর নাম এসেছে ইসলামের অবশ্যপালনীয় ধর্মীয় কর্তব্য থেকে।"
+    - en: "2. It was founded by Haji Shariatullah of Faridpur."
+      bn: "২. ফরিদপুরের হাজি শরিয়তউল্লাহ এটি প্রতিষ্ঠা করেন।"
+    - en: "3. Dudu Miyan declared that land belongs to God and urged peasants not to pay illegal taxes to zamindars."
+      bn: "৩. দুদু মিয়াঁ ঘোষণা করেন যে জমির মালিক ঈশ্বর এবং কৃষকদের জমিদারকে বেআইনি কর না দিতে বলেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. The name comes from faraiz (obligatory duties); Haji Shariatullah founded the movement in Faridpur; and under his son Dudu Miyan it became an agrarian movement against zamindars' taxes. Candidates often wrongly reject statement 3 by linking the agrarian turn to Titu Mir instead.
+    bn: তিনটি বিবৃতিই সঠিক। নামটি এসেছে ফরাইজ (অবশ্যপালনীয় কর্তব্য) থেকে; হাজি শরিয়তউল্লাহ ফরিদপুরে আন্দোলনটি প্রতিষ্ঠা করেন; আর তাঁর পুত্র দুদু মিয়াঁর নেতৃত্বে এটি জমিদারদের করের বিরুদ্ধে কৃষক আন্দোলনে পরিণত হয়। অনেকে ভুল করে এই কৃষিভিত্তিক মোড়কে তিতুমীরের সঙ্গে যুক্ত করে ৩ নং বিবৃতি বাদ দেন।
+  status: ai-generated
+
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, ibps-po, state-psc, wbcs]
+  refs: [indigo]
+  stem:
+    en: Which editor of the Hindoo Patriot campaigned for the ryots during the Indigo Revolt?
+    bn: নীল বিদ্রোহের সময় হিন্দু প্যাট্রিয়ট পত্রিকার কোন সম্পাদক রায়তদের পক্ষে প্রচার চালান?
+  options:
+    - { en: Harish Chandra Mukherjee, bn: হরিশচন্দ্র মুখোপাধ্যায় }
+    - { en: Dinabandhu Mitra, bn: দীনবন্ধু মিত্র }
+    - { en: James Long, bn: জেমস লং }
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+  answer: 0
+  explanation:
+    en: Harish Chandra Mukherjee used the Hindoo Patriot to expose the planters. Dinabandhu Mitra is tempting, but he supported the ryots as the author of the play Nil Darpan, not as a newspaper editor.
+    bn: হরিশচন্দ্র মুখোপাধ্যায় হিন্দু প্যাট্রিয়টের মাধ্যমে নীলকরদের অত্যাচার তুলে ধরেন। দীনবন্ধু মিত্র বিভ্রান্তিকর বিকল্প, কিন্তু তিনি সংবাদপত্রের সম্পাদক হিসেবে নয়, নীলদর্পণ নাটকের রচয়িতা হিসেবে রায়তদের পাশে দাঁড়ান।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [indigo, early-revolts, wahabi-faraizi]
+  stem:
+    en: Match List I (Person) with List II (Associated with).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট বিষয়) মেলান।
+  left:
+    - { en: "A. Dinabandhu Mitra", bn: "ক. দীনবন্ধু মিত্র" }
+    - { en: "B. Harish Chandra Mukherjee", bn: "খ. হরিশচন্দ্র মুখোপাধ্যায়" }
+    - { en: "C. Bankim Chandra Chattopadhyay", bn: "গ. বঙ্কিমচন্দ্র চট্টোপাধ্যায়" }
+    - { en: "D. Titu Mir", bn: "ঘ. তিতুমীর" }
+  right:
+    - { en: "1. Nil Darpan", bn: "১. নীলদর্পণ" }
+    - { en: "2. Anandamath", bn: "২. আনন্দমঠ" }
+    - { en: "3. Hindoo Patriot", bn: "৩. হিন্দু প্যাট্রিয়ট" }
+    - { en: "4. Bamboo fort at Narkelberia", bn: "৪. নারকেলবেড়িয়ার বাঁশের কেল্লা" }
+  options:
+    - { en: "A-1, B-3, C-2, D-4", bn: "ক-১, খ-৩, গ-২, ঘ-৪" }
+    - { en: "A-3, B-1, C-2, D-4", bn: "ক-৩, খ-১, গ-২, ঘ-৪" }
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+  answer: 0
+  explanation:
+    en: Dinabandhu Mitra wrote Nil Darpan, Harish Chandra Mukherjee edited the Hindoo Patriot, Bankim Chandra wrote Anandamath, and Titu Mir built the bamboo fort at Narkelberia. Swapping the play and the newspaper (A and B) is the usual error.
+    bn: দীনবন্ধু মিত্র নীলদর্পণ রচনা করেন, হরিশচন্দ্র মুখোপাধ্যায় হিন্দু প্যাট্রিয়টের সম্পাদক ছিলেন, বঙ্কিমচন্দ্র আনন্দমঠ লেখেন এবং তিতুমীর নারকেলবেড়িয়ায় বাঁশের কেল্লা গড়েন। নাটক ও সংবাদপত্র (ক ও খ) অদলবদল করাই সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pabna-deccan, british-response]
+  stem:
+    en: Consider the following statements about the Deccan riots of 1875.
+    bn: ১৮৭৫ সালের দাক্ষিণাত্য হাঙ্গামা সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The government responded to them by passing the Bengal Tenancy Act."
+      bn: "১. এর প্রতিক্রিয়ায় সরকার বঙ্গীয় প্রজাস্বত্ব আইন পাস করে।"
+    - en: "2. The affected districts were under the Ryotwari system."
+      bn: "২. ক্ষতিগ্রস্ত জেলাগুলিতে রায়তওয়ারি ব্যবস্থা চালু ছিল।"
+    - en: "3. The riots began at Supa village in Poona district."
+      bn: "৩. পুনা জেলার সুপা গ্রামে এই হাঙ্গামা শুরু হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong. The Deccan riots led to the Deccan Agriculturists' Relief Act, 1879; the Bengal Tenancy Act, 1885 followed the Pabna movement in Bengal.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতি ভুল। দাক্ষিণাত্য হাঙ্গামার ফলে দাক্ষিণাত্য কৃষক ত্রাণ আইন, ১৮৭৯ পাস হয়; বঙ্গীয় প্রজাস্বত্ব আইন, ১৮৮৫ এসেছিল বাংলার পাবনা আন্দোলনের পরে।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pabna-deccan]
+  assertion:
+    en: The peasants of the Pabna agrarian league demanded an end to British rule.
+    bn: পাবনার কৃষক সংঘের কৃষকরা ব্রিটিশ শাসনের অবসান দাবি করেছিল।
+  reason:
+    en: The Pabna league organised rent strikes and fought the zamindars in the courts.
+    bn: পাবনার কৃষক সংঘ খাজনা বন্ধ আন্দোলন সংগঠিত করে এবং আদালতে জমিদারদের বিরুদ্ধে লড়ে।
+  answer: 3
+  explanation:
+    en: The assertion is false and the reason is true. The Pabna peasants fought zamindars through rent strikes and lawsuits and did not oppose the British; they said they wished to be ryots of the Queen alone.
+    bn: বিবৃতিটি মিথ্যা এবং কারণটি সত্য। পাবনার কৃষকরা খাজনা বন্ধ ও মামলার মাধ্যমে জমিদারদের বিরুদ্ধে লড়েছিল, ব্রিটিশদের বিরোধিতা করেনি; তারা বলত, তারা কেবল মহারানির রায়ত হতে চায়।
+  status: ai-generated
+
+- id: q0024
+  type: single
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pabna-deccan]
+  stem:
+    en: Which one of the following was **NOT** a feature of the Pabna agrarian league movement?
+    bn: নিম্নলিখিত কোনটি পাবনার কৃষক সংঘের আন্দোলনের বৈশিষ্ট্য **নয়**?
+  options:
+    - { en: Rent strikes against zamindars, bn: জমিদারদের বিরুদ্ধে খাজনা বন্ধ আন্দোলন }
+    - { en: Fighting zamindars in the law courts, bn: আদালতে জমিদারদের বিরুদ্ধে মামলা লড়া }
+    - { en: A demand for the end of British rule, bn: ব্রিটিশ শাসনের অবসানের দাবি }
+    - { en: Joint participation of Hindu and Muslim peasants, bn: হিন্দু ও মুসলমান কৃষকদের যৌথ অংশগ্রহণ }
+  answer: 2
+  explanation:
+    en: The Pabna movement was aimed at zamindars and used legal, largely peaceful methods; the peasants did not challenge British rule. Rent strikes, court cases and Hindu–Muslim participation were all genuine features, so none of them is the answer.
+    bn: পাবনার আন্দোলনের লক্ষ্য ছিল জমিদাররা এবং পদ্ধতি ছিল আইনি ও মূলত শান্তিপূর্ণ; কৃষকরা ব্রিটিশ শাসনকে চ্যালেঞ্জ করেনি। খাজনা বন্ধ, মামলা ও হিন্দু-মুসলমানের যৌথ অংশগ্রহণ সবই এর প্রকৃত বৈশিষ্ট্য, তাই সেগুলি উত্তর নয়।
+  status: ai-generated
+
+- id: q0025
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [british-response, munda]
+  stem:
+    en: Arrange the following government measures in chronological order.
+    bn: নিম্নলিখিত সরকারি পদক্ষেপগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Bengal Tenancy Act"
+      bn: "১. বঙ্গীয় প্রজাস্বত্ব আইন"
+    - en: "2. Chotanagpur Tenancy Act"
+      bn: "২. ছোটোনাগপুর প্রজাস্বত্ব আইন"
+    - en: "3. Appointment of the Indigo Commission"
+      bn: "৩. নীল কমিশন গঠন"
+    - en: "4. Deccan Agriculturists' Relief Act"
+      bn: "৪. দাক্ষিণাত্য কৃষক ত্রাণ আইন"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+  answer: 2
+  explanation:
+    en: Indigo Commission (1860), Deccan Agriculturists' Relief Act (1879), Bengal Tenancy Act (1885) and Chotanagpur Tenancy Act (1908). The Deccan Act came six years before the Bengal Act, even though the Pabna movement (1873) began before the Deccan riots (1875).
+    bn: নীল কমিশন (১৮৬০), দাক্ষিণাত্য কৃষক ত্রাণ আইন (১৮৭৯), বঙ্গীয় প্রজাস্বত্ব আইন (১৮৮৫) এবং ছোটোনাগপুর প্রজাস্বত্ব আইন (১৯০৮)। পাবনা আন্দোলন (১৮৭৩) দাক্ষিণাত্য হাঙ্গামার (১৮৭৫) আগে শুরু হলেও দাক্ষিণাত্যের আইনটি বঙ্গীয় আইনের ছয় বছর আগে পাস হয়।
+  status: ai-generated
+
+- id: q0026
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [causes]
+  stem:
+    en: Consider the following statements about peasant and tribal movements of the 19th century.
+    bn: উনিশ শতকের কৃষক ও উপজাতি আন্দোলন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. They were mostly aimed at immediate oppressors such as zamindars, moneylenders and planters, rather than at colonial rule as a whole."
+      bn: "১. এগুলির লক্ষ্য ছিল মূলত জমিদার, মহাজন ও নীলকরের মতো সরাসরি শোষকরা, সমগ্র ঔপনিবেশিক শাসন নয়।"
+    - en: "2. They were coordinated across regions under an all-India leadership."
+      bn: "২. সর্বভারতীয় নেতৃত্বের অধীনে বিভিন্ন অঞ্চলের আন্দোলনগুলির মধ্যে সমন্বয় ছিল।"
+    - en: "3. Tribal revolts generally relied on petitions and lawsuits rather than armed action."
+      bn: "৩. উপজাতি বিদ্রোহগুলি সাধারণত সশস্ত্র পথের বদলে আবেদন ও মামলার উপর নির্ভর করত।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Only statement 1 is correct. The movements were local and scattered, with little coordination between regions, and tribal revolts were usually armed and violent. It was some later peasant movements, such as Pabna, that relied on legal methods.
+    bn: কেবল ১ নং বিবৃতি সঠিক। আন্দোলনগুলি ছিল স্থানীয় ও বিচ্ছিন্ন, অঞ্চলগুলির মধ্যে সমন্বয় প্রায় ছিল না; আর উপজাতি বিদ্রোহগুলি সাধারণত সশস্ত্র ও হিংসাত্মক ছিল। আইনি পথ অবলম্বন করেছিল পাবনার মতো পরবর্তীকালের কিছু কৃষক আন্দোলন।
+  status: ai-generated
+
+- id: q0027
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [british-response]
+  stem:
+    en: Match List I (Movement) with List II (Government response).
+    bn: তালিকা I (আন্দোলন)-এর সঙ্গে তালিকা II (সরকারের প্রতিক্রিয়া) মেলান।
+  left:
+    - { en: "A. Indigo Revolt", bn: "ক. নীল বিদ্রোহ" }
+    - { en: "B. Pabna agrarian league", bn: "খ. পাবনার কৃষক সংঘ" }
+    - { en: "C. Deccan riots", bn: "গ. দাক্ষিণাত্য হাঙ্গামা" }
+    - { en: "D. Munda Ulgulan", bn: "ঘ. মুন্ডা উলগুলান" }
+  right:
+    - { en: "1. Bengal Tenancy Act, 1885", bn: "১. বঙ্গীয় প্রজাস্বত্ব আইন, ১৮৮৫" }
+    - { en: "2. Indigo Commission, 1860", bn: "২. নীল কমিশন, ১৮৬০" }
+    - { en: "3. Chotanagpur Tenancy Act, 1908", bn: "৩. ছোটোনাগপুর প্রজাস্বত্ব আইন, ১৯০৮" }
+    - { en: "4. Deccan Agriculturists' Relief Act, 1879", bn: "৪. দাক্ষিণাত্য কৃষক ত্রাণ আইন, ১৮৭৯" }
+  options:
+    - { en: "A-2, B-4, C-1, D-3", bn: "ক-২, খ-৪, গ-১, ঘ-৩" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+  answer: 2
+  explanation:
+    en: The Indigo Revolt led to the Indigo Commission (1860), Pabna to the Bengal Tenancy Act (1885), the Deccan riots to the Deccan Agriculturists' Relief Act (1879), and the Ulgulan to the Chotanagpur Tenancy Act (1908). Mixing up the Bengal and Deccan laws (B and C) is the likely mistake.
+    bn: নীল বিদ্রোহের ফলে নীল কমিশন (১৮৬০), পাবনার ফলে বঙ্গীয় প্রজাস্বত্ব আইন (১৮৮৫), দাক্ষিণাত্য হাঙ্গামার ফলে দাক্ষিণাত্য কৃষক ত্রাণ আইন (১৮৭৯) এবং উলগুলানের ফলে ছোটোনাগপুর প্রজাস্বত্ব আইন (১৯০৮)। বঙ্গীয় ও দাক্ষিণাত্যের আইন (খ ও গ) গুলিয়ে ফেলাই সম্ভাব্য ভুল।
+  status: ai-generated
+
+- id: q0028
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [munda, kol-santhal]
+  stem:
+    en: Consider the following statements about Birsa Munda.
+    bn: বিরসা মুন্ডা সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. His followers called him Dharti Aba."
+      bn: "১. অনুগামীরা তাঁকে ধরতি আবা বলে ডাকত।"
+    - en: "2. He died in Ranchi jail in 1900."
+      bn: "২. ১৯০০ সালে রাঁচি জেলে তাঁর মৃত্যু হয়।"
+    - en: "3. The rising he led resulted in the creation of the Santhal Parganas district."
+      bn: "৩. তাঁর নেতৃত্বে হওয়া বিদ্রোহের ফলে সাঁওতাল পরগনা জেলা গঠিত হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the Santhal Parganas district was created after the Santhal Hul of 1855–56; Birsa's Ulgulan led to the Chotanagpur Tenancy Act, 1908.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল, কারণ সাঁওতাল পরগনা জেলা গঠিত হয়েছিল ১৮৫৫–৫৬ সালের সাঁওতাল হুলের পরে; বিরসার উলগুলানের ফলে এসেছিল ছোটোনাগপুর প্রজাস্বত্ব আইন, ১৯০৮।
+  status: ai-generated
+
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [munda, kol-santhal]
+  assertion:
+    en: The Chotanagpur Tenancy Act, 1908 followed the Munda Ulgulan and recognised khuntkatti rights.
+    bn: মুন্ডা উলগুলানের পরে ছোটোনাগপুর প্রজাস্বত্ব আইন, ১৯০৮ পাস হয় এবং এই আইন খুঁৎকাঠি অধিকার স্বীকার করে।
+  reason:
+    en: The Munda Ulgulan broke out in the Rajmahal hills under the leadership of Sidhu and Kanhu.
+    bn: সিধু ও কানহুর নেতৃত্বে রাজমহল পাহাড় অঞ্চলে মুন্ডা উলগুলান শুরু হয়।
+  answer: 2
+  explanation:
+    en: The assertion is true and the reason is false. The Ulgulan (1899–1900) was led by Birsa Munda around Ranchi; Sidhu and Kanhu led the Santhal Hul in the Rajmahal hills in 1855–56.
+    bn: বিবৃতিটি সত্য এবং কারণটি মিথ্যা। উলগুলান (১৮৯৯–১৯০০) রাঁচির আশপাশে বিরসা মুন্ডার নেতৃত্বে হয়েছিল; সিধু ও কানহু ১৮৫৫–৫৬ সালে রাজমহল পাহাড় অঞ্চলে সাঁওতাল হুলের নেতৃত্ব দেন।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [summary, early-revolts, wahabi-faraizi, indigo, munda]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Publication of Nil Darpan"
+      bn: "১. নীলদর্পণ প্রকাশ"
+    - en: "2. The great Bengal famine"
+      bn: "২. বাংলার ভয়াবহ দুর্ভিক্ষ (ছিয়াত্তরের মন্বন্তর)"
+    - en: "3. Death of Birsa Munda in Ranchi jail"
+      bn: "৩. রাঁচি জেলে বিরসা মুন্ডার মৃত্যু"
+    - en: "4. Destruction of Titu Mir's bamboo fort"
+      bn: "৪. তিতুমীরের বাঁশের কেল্লা ধ্বংস"
+  options:
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+  answer: 3
+  explanation:
+    en: Bengal famine (1770), destruction of Titu Mir's fort (1831), Nil Darpan (1860) and Birsa Munda's death (1900). The famine is the earliest event and fed the Sanyasi-Fakir rebellion.
+    bn: বাংলার দুর্ভিক্ষ (১৭৭০), তিতুমীরের কেল্লা ধ্বংস (১৮৩১), নীলদর্পণ (১৮৬০) এবং বিরসা মুন্ডার মৃত্যু (১৯০০)। দুর্ভিক্ষটিই প্রাচীনতম ঘটনা এবং তা সন্ন্যাসী-ফকির বিদ্রোহকে তীব্র করে তোলে।
+  status: ai-generated

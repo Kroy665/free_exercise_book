@@ -1,0 +1,21 @@
+id: hist.modern.education-press
+title:
+  en: Education, Press and the Indian Middle Class
+  bn: শিক্ষা, সংবাদপত্র ও ভারতীয় মধ্যবিত্ত শ্রেণি
+summary:
+  en: Growth of Western education from the early Orientalist institutions to the Indian Universities Act of 1904, the rise of the Indian press and its regulation, and the role of the English-educated middle class.
+  bn: প্রাচ্যবিদ্যাচর্চার প্রথম দিকের প্রতিষ্ঠান থেকে ১৯০৪ সালের ভারতীয় বিশ্ববিদ্যালয় আইন পর্যন্ত পাশ্চাত্য শিক্ষার বিস্তার, ভারতীয় সংবাদপত্রের উত্থান ও তার নিয়ন্ত্রণ, এবং ইংরেজি-শিক্ষিত মধ্যবিত্ত শ্রেণির ভূমিকা।
+order: 8
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+prerequisites: [hist.modern.company-acts]
+estimated_minutes: 40
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Spectrum, A Brief History of Modern India, Ch. "Development of Education" and Ch. "Development of Press"
+  - Bipan Chandra, History of Modern India (NCERT, old), Ch. "Administrative Organisation and Social and Cultural Policy"
+  - Bipan Chandra et al., India's Struggle for Independence, Ch. on the early nationalists and the press
+  - NCERT Class 8, Our Pasts III, Ch. "Civilising the 'Native', Educating the Nation"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

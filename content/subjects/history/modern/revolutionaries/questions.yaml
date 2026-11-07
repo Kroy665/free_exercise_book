@@ -1,0 +1,702 @@
+# Questions for hist.modern.revolutionaries
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [abroad]
+  stem:
+    en: Who founded India House in London in 1905?
+    bn: ১৯০৫ সালে লন্ডনে ইন্ডিয়া হাউস কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Shyamji Krishna Varma, bn: শ্যামজি কৃষ্ণবর্মা }
+    - { en: Lala Har Dayal, bn: লালা হরদয়াল }
+    - { en: Madan Lal Dhingra, bn: মদনলাল ধিংড়া }
+    - { en: Rash Behari Bose, bn: রাসবিহারী বসু }
+  answer: 0
+  explanation:
+    en: Shyamji Krishna Varma opened India House in London in 1905 and published The Indian Sociologist. Madan Lal Dhingra was linked to the India House circle but did not found it; Lala Har Dayal is associated with the Ghadar Party in San Francisco.
+    bn: শ্যামজি কৃষ্ণবর্মা ১৯০৫ সালে লন্ডনে ইন্ডিয়া হাউস চালু করেন এবং "দ্য ইন্ডিয়ান সোশিওলজিস্ট" প্রকাশ করতেন। মদনলাল ধিংড়া ইন্ডিয়া হাউস গোষ্ঠীর সঙ্গে যুক্ত ছিলেন, কিন্তু প্রতিষ্ঠাতা নন; লালা হরদয়াল সানফ্রান্সিসকোর গদর পার্টির সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [bengal-societies]
+  stem:
+    en: Which two revolutionaries threw a bomb at Muzaffarpur in 1908, aiming at Kingsford?
+    bn: ১৯০৮ সালে কিংসফোর্ডকে লক্ষ্য করে মজঃফরপুরে কোন দুজন বিপ্লবী বোমা ছোড়েন?
+  options:
+    - { en: Bhagat Singh and Batukeshwar Dutt, bn: ভগৎ সিং ও বটুকেশ্বর দত্ত }
+    - { en: Khudiram Bose and Prafulla Chaki, bn: ক্ষুদিরাম বসু ও প্রফুল্ল চাকী }
+    - { en: Benoy Basu and Dinesh Gupta, bn: বিনয় বসু ও দীনেশ গুপ্ত }
+    - { en: Ram Prasad Bismil and Ashfaqulla Khan, bn: রামপ্রসাদ বিসমিল ও আসফাকউল্লা খান }
+  answer: 1
+  explanation:
+    en: On 30 April 1908 Khudiram Bose and Prafulla Chaki bombed a carriage at Muzaffarpur that they believed carried Kingsford. Bhagat Singh and Batukeshwar Dutt are linked to the Assembly bomb of 1929, a different event.
+    bn: ১৯০৮ সালের ৩০ এপ্রিল ক্ষুদিরাম বসু ও প্রফুল্ল চাকী মজঃফরপুরে কিংসফোর্ডের গাড়ি ভেবে একটি গাড়িতে বোমা ছোড়েন। ভগৎ সিং ও বটুকেশ্বর দত্ত ১৯২৯ সালের আইনসভায় বোমা নিক্ষেপের সঙ্গে যুক্ত, যা একটি আলাদা ঘটনা।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [abroad]
+  stem:
+    en: Which city was the headquarters of the Ghadar Party, formed in 1913?
+    bn: ১৯১৩ সালে গঠিত গদর পার্টির সদর দফতর কোন শহরে ছিল?
+  options:
+    - { en: London, bn: লন্ডন }
+    - { en: Berlin, bn: বার্লিন }
+    - { en: San Francisco, bn: সানফ্রান্সিসকো }
+    - { en: Vancouver, bn: ভ্যাঙ্কুভার }
+  answer: 2
+  explanation:
+    en: The Ghadar Party was formed in 1913 by Indian immigrants, mostly Punjabis, on the Pacific coast, with its headquarters at San Francisco. Vancouver is tempting because of the Komagata Maru episode (1914), but the party's headquarters, Yugantar Ashram, was in San Francisco.
+    bn: ১৯১৩ সালে প্রশান্ত মহাসাগরীয় উপকূলের ভারতীয় অভিবাসীরা, যাঁদের অধিকাংশ পাঞ্জাবি, গদর পার্টি গঠন করেন; এর সদর দফতর ছিল সানফ্রান্সিসকোতে। কোমাগাতা মারুর ঘটনার (১৯১৪) জন্য ভ্যাঙ্কুভার বিভ্রান্তিকর মনে হতে পারে, কিন্তু দলের সদর দফতর যুগান্তর আশ্রম ছিল সানফ্রান্সিসকোতে।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [bengal-1930s]
+  stem:
+    en: Who led the Chittagong Armoury Raid of April 1930?
+    bn: ১৯৩০ সালের এপ্রিলে চট্টগ্রাম অস্ত্রাগার লুণ্ঠনের নেতৃত্ব কে দেন?
+  options:
+    - { en: Jatindranath Mukherjee, bn: যতীন্দ্রনাথ মুখোপাধ্যায় }
+    - { en: Pulin Behari Das, bn: পুলিনবিহারী দাস }
+    - { en: Barindra Kumar Ghosh, bn: বারীন্দ্রকুমার ঘোষ }
+    - { en: Surya Sen, bn: সূর্য সেন }
+  answer: 3
+  explanation:
+    en: Surya Sen (Masterda) led the Indian Republican Army, Chittagong Branch, which seized the Chittagong armouries on 18 April 1930. Jatindranath Mukherjee (Bagha Jatin) died in 1915, long before the raid.
+    bn: সূর্য সেন (মাস্টারদা) ইন্ডিয়ান রিপাবলিকান আর্মি, চট্টগ্রাম শাখার নেতৃত্ব দেন; এই গোষ্ঠী ১৯৩০ সালের ১৮ এপ্রিল চট্টগ্রামের অস্ত্রাগার দখল করে। যতীন্দ্রনাথ মুখোপাধ্যায় (বাঘা যতীন) এর অনেক আগে, ১৯১৫ সালে, মারা যান।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc]
+  refs: [hsra]
+  stem:
+    en: Who threw bombs in the Central Legislative Assembly along with Bhagat Singh on 8 April 1929?
+    bn: ১৯২৯ সালের ৮ এপ্রিল ভগৎ সিংয়ের সঙ্গে কে কেন্দ্রীয় আইনসভায় বোমা ছোড়েন?
+  options:
+    - { en: Sukhdev, bn: সুখদেব }
+    - { en: Rajguru, bn: রাজগুরু }
+    - { en: Batukeshwar Dutt, bn: বটুকেশ্বর দত্ত }
+    - { en: Chandrashekhar Azad, bn: চন্দ্রশেখর আজাদ }
+  answer: 2
+  explanation:
+    en: Bhagat Singh and Batukeshwar Dutt threw the bombs and courted arrest. Sukhdev and Rajguru were hanged with Bhagat Singh in 1931 in the Saunders case, which is why they are tempting choices.
+    bn: ভগৎ সিং ও বটুকেশ্বর দত্ত বোমা ছোড়েন এবং স্বেচ্ছায় গ্রেফতার বরণ করেন। সুখদেব ও রাজগুরুর ১৯৩১ সালে স্যান্ডার্স মামলায় ভগৎ সিংয়ের সঙ্গে ফাঁসি হয়, তাই তাঁদের নাম বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc]
+  refs: [hra-kakori]
+  stem:
+    en: The Kakori train action of 1925 was carried out by members of which organisation?
+    bn: ১৯২৫ সালের কাকোরি ট্রেন ডাকাতি কোন সংগঠনের সদস্যরা ঘটান?
+  options:
+    - { en: Hindustan Republican Association, bn: হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন }
+    - { en: Ghadar Party, bn: গদর পার্টি }
+    - { en: Anushilan Samiti, bn: অনুশীলন সমিতি }
+    - { en: Abhinav Bharat, bn: অভিনব ভারত }
+  answer: 0
+  explanation:
+    en: The HRA, founded at Kanpur in 1924, stopped a train at Kakori near Lucknow on 9 August 1925 to seize government cash. The Ghadar Party was active mainly among Punjabis abroad and in the 1915 rising plan, not at Kakori.
+    bn: ১৯২৪ সালে কানপুরে প্রতিষ্ঠিত হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন ১৯২৫ সালের ৯ আগস্ট লখনউয়ের কাছে কাকোরিতে ট্রেন থামিয়ে সরকারি অর্থ নিয়ে যায়। গদর পার্টি মূলত প্রবাসী পাঞ্জাবিদের মধ্যে এবং ১৯১৫ সালের অভ্যুত্থান পরিকল্পনায় সক্রিয় ছিল, কাকোরিতে নয়।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, wbcs, state-psc]
+  refs: [bengal-societies]
+  stem:
+    en: Which accused in the Alipore Bomb Case was defended by Chittaranjan Das and acquitted?
+    bn: আলিপুর বোমা মামলার কোন অভিযুক্তের পক্ষে চিত্তরঞ্জন দাশ মামলা লড়েন এবং তিনি খালাস পান?
+  options:
+    - { en: Barindra Kumar Ghosh, bn: বারীন্দ্রকুমার ঘোষ }
+    - { en: Aurobindo Ghosh, bn: অরবিন্দ ঘোষ }
+    - { en: Kanailal Dutta, bn: কানাইলাল দত্ত }
+    - { en: Narendranath Goswami, bn: নরেন্দ্রনাথ গোস্বামী }
+  answer: 1
+  explanation:
+    en: Aurobindo Ghosh was acquitted in 1909, with C.R. Das as his counsel. His brother Barindra Kumar Ghosh was convicted and sent to the Andamans, so the surname makes Barindra a tempting but wrong choice.
+    bn: ১৯০৯ সালে অরবিন্দ ঘোষ খালাস পান; তাঁর আইনজীবী ছিলেন চিত্তরঞ্জন দাশ। তাঁর ভাই বারীন্দ্রকুমার ঘোষ দণ্ডিত হয়ে আন্দামানে যান, তাই একই পদবির জন্য বারীন্দ্রের নাম বিভ্রান্তিকর হলেও ভুল।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [abroad, origins]
+  stem:
+    en: Madan Lal Dhingra was hanged in 1909 for killing which official in London?
+    bn: লন্ডনে কোন কর্মকর্তাকে হত্যার জন্য ১৯০৯ সালে মদনলাল ধিংড়ার ফাঁসি হয়?
+  options:
+    - { en: A.M.T. Jackson, bn: এ. এম. টি. জ্যাকসন }
+    - { en: W.C. Rand, bn: ডব্লিউ. সি. র‍্যান্ড }
+    - { en: Douglas Kingsford, bn: ডগলাস কিংসফোর্ড }
+    - { en: Sir William Curzon Wyllie, bn: স্যার উইলিয়াম কার্জন উইলি }
+  answer: 3
+  explanation:
+    en: Dhingra shot Sir William Curzon Wyllie of the India Office in London on 1 July 1909. A.M.T. Jackson was also killed in 1909, but in Nasik, by Anant Kanhere; Rand was killed in Pune in 1897.
+    bn: ১৯০৯ সালের ১ জুলাই ধিংড়া লন্ডনে ইন্ডিয়া অফিসের স্যার উইলিয়াম কার্জন উইলিকে গুলি করেন। এ. এম. টি. জ্যাকসনও ১৯০৯ সালে নিহত হন, তবে নাসিকে, অনন্ত কানহেরের হাতে; র‍্যান্ড নিহত হন ১৮৯৭ সালে পুনেতে।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, ibps-po]
+  refs: [hsra]
+  stem:
+    en: The killing of J.P. Saunders at Lahore in December 1928 was meant to avenge the death of which leader?
+    bn: ১৯২৮ সালের ডিসেম্বরে লাহোরে জে. পি. স্যান্ডার্সকে হত্যা কোন নেতার মৃত্যুর প্রতিশোধ হিসেবে পরিকল্পিত হয়েছিল?
+  options:
+    - { en: Jatin Das, bn: যতীন দাস }
+    - { en: Lala Lajpat Rai, bn: লালা লাজপত রায় }
+    - { en: Bal Gangadhar Tilak, bn: বাল গঙ্গাধর তিলক }
+    - { en: Ram Prasad Bismil, bn: রামপ্রসাদ বিসমিল }
+  answer: 1
+  explanation:
+    en: Lala Lajpat Rai died in November 1928 after being injured in a police lathi charge during a protest against the Simon Commission at Lahore. Jatin Das died later, in September 1929, so his death could not have been the motive.
+    bn: লাহোরে সাইমন কমিশন-বিরোধী বিক্ষোভে পুলিশের লাঠিচার্জে আহত হয়ে ১৯২৮ সালের নভেম্বরে লালা লাজপত রায়ের মৃত্যু হয়। যতীন দাস মারা যান পরে, ১৯২৯ সালের সেপ্টেম্বরে, তাই তাঁর মৃত্যু এর কারণ হতে পারে না।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc]
+  refs: [abroad]
+  stem:
+    en: The passengers of the Komagata Maru (1914) were refused entry into which country?
+    bn: কোমাগাতা মারুর (১৯১৪) যাত্রীদের কোন দেশে প্রবেশ করতে দেওয়া হয়নি?
+  options:
+    - { en: United States of America, bn: মার্কিন যুক্তরাষ্ট্র }
+    - { en: Australia, bn: অস্ট্রেলিয়া }
+    - { en: Canada, bn: কানাডা }
+    - { en: South Africa, bn: দক্ষিণ আফ্রিকা }
+  answer: 2
+  explanation:
+    en: The ship reached Vancouver in Canada, where most passengers were not allowed to land; it returned to Budge Budge near Calcutta. The USA is tempting because the Ghadar Party was based in San Francisco, but the ship's destination was Canada.
+    bn: জাহাজটি কানাডার ভ্যাঙ্কুভারে পৌঁছায়, কিন্তু অধিকাংশ যাত্রীকে নামতে দেওয়া হয়নি; পরে জাহাজটি কলকাতার কাছে বজবজে ফিরে আসে। গদর পার্টির ঘাঁটি সানফ্রান্সিসকোতে হওয়ায় মার্কিন যুক্তরাষ্ট্র বিভ্রান্তিকর মনে হতে পারে, কিন্তু জাহাজের গন্তব্য ছিল কানাডা।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [wbcs, state-psc, ssc-cgl]
+  refs: [bengal-1930s]
+  stem:
+    en: Which official was shot dead by Benoy, Badal and Dinesh in the Writers' Building on 8 December 1930?
+    bn: ১৯৩০ সালের ৮ ডিসেম্বর রাইটার্স বিল্ডিংয়ে বিনয়, বাদল ও দীনেশ কোন কর্মকর্তাকে গুলি করে হত্যা করেন?
+  options:
+    - { en: Sir Stanley Jackson, bn: স্যার স্ট্যানলি জ্যাকসন }
+    - { en: Douglas Kingsford, bn: ডগলাস কিংসফোর্ড }
+    - { en: Lt. Col. N.S. Simpson, bn: লেফটেন্যান্ট কর্নেল এন. এস. সিম্পসন }
+    - { en: J.P. Saunders, bn: জে. পি. স্যান্ডার্স }
+  answer: 2
+  explanation:
+    en: Lt. Col. N.S. Simpson, Inspector-General of Prisons in Bengal, was killed in the Writers' Building attack. Sir Stanley Jackson was the Governor of Bengal fired at by Bina Das in 1932, and he was not hurt.
+    bn: রাইটার্স বিল্ডিং অভিযানে বাংলার কারা বিভাগের ইনস্পেক্টর-জেনারেল লেফটেন্যান্ট কর্নেল এন. এস. সিম্পসন নিহত হন। স্যার স্ট্যানলি জ্যাকসন ছিলেন বাংলার গভর্নর, যাঁকে ১৯৩২ সালে বীণা দাস গুলি করেন; তিনি আহত হননি।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [hra-kakori]
+  stem:
+    en: Which one of the following was **NOT** hanged in the Kakori Conspiracy Case?
+    bn: নিম্নলিখিত কোনজনের কাকোরি ষড়যন্ত্র মামলায় ফাঁসি **হয়নি**?
+  options:
+    - { en: Ram Prasad Bismil, bn: রামপ্রসাদ বিসমিল }
+    - { en: Ashfaqulla Khan, bn: আসফাকউল্লা খান }
+    - { en: Rajendra Lahiri, bn: রাজেন্দ্র লাহিড়ী }
+    - { en: Chandrashekhar Azad, bn: চন্দ্রশেখর আজাদ }
+  answer: 3
+  explanation:
+    en: Bismil, Ashfaqulla Khan, Rajendra Lahiri and Roshan Singh were hanged in 1927. Chandrashekhar Azad escaped arrest after Kakori and died in an encounter at Alfred Park, Allahabad, in 1931.
+    bn: ১৯২৭ সালে বিসমিল, আসফাকউল্লা খান, রাজেন্দ্র লাহিড়ী ও রোশন সিংয়ের ফাঁসি হয়। কাকোরির পর চন্দ্রশেখর আজাদ গ্রেফতার এড়িয়ে যান এবং ১৯৩১ সালে এলাহাবাদের আলফ্রেড পার্কে পুলিশের সঙ্গে সংঘর্ষে মারা যান।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [bengal-societies]
+  stem:
+    en: With reference to the revolutionary societies of Bengal, consider the following statements.
+    bn: বাংলার বিপ্লবী সমিতিগুলি প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Pramathanath Mitra was a leading figure of the Anushilan Samiti founded in Calcutta in 1902."
+      bn: "১. ১৯০২ সালে কলকাতায় প্রতিষ্ঠিত অনুশীলন সমিতির অন্যতম প্রধান ব্যক্তি ছিলেন প্রমথনাথ মিত্র।"
+    - en: "2. Pulin Behari Das started the weekly paper Jugantar in Dhaka."
+      bn: "২. পুলিনবিহারী দাস ঢাকায় যুগান্তর সাপ্তাহিক পত্রিকা শুরু করেন।"
+    - en: "3. Bhupendranath Dutta, a brother of Swami Vivekananda, was associated with the Jugantar paper."
+      bn: "৩. স্বামী বিবেকানন্দের ভাই ভূপেন্দ্রনাথ দত্ত যুগান্তর পত্রিকার সঙ্গে যুক্ত ছিলেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because Pulin Behari Das organised the Dhaka Anushilan Samiti; the Jugantar weekly was started in 1906 by Barindra Kumar Ghosh and Bhupendranath Dutta.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল, কারণ পুলিনবিহারী দাস ঢাকা অনুশীলন সমিতি গড়ে তোলেন; যুগান্তর সাপ্তাহিক ১৯০৬ সালে শুরু করেন বারীন্দ্রকুমার ঘোষ ও ভূপেন্দ্রনাথ দত্ত।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [abroad]
+  stem:
+    en: Consider the following statements about the Ghadar Party.
+    bn: গদর পার্টি সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was formed in 1913, with its headquarters at San Francisco."
+      bn: "১. ১৯১৩ সালে এটি গঠিত হয় এবং এর সদর দফতর ছিল সানফ্রান্সিসকোতে।"
+    - en: "2. Lala Har Dayal was one of its leading figures."
+      bn: "২. লালা হরদয়াল ছিলেন এর অন্যতম প্রধান ব্যক্তি।"
+    - en: "3. It published a weekly paper called Ghadar."
+      bn: "৩. এটি গদর নামে একটি সাপ্তাহিক পত্রিকা প্রকাশ করত।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. The party was formed in 1913 with its headquarters at San Francisco, Lala Har Dayal was its main ideologue (Sohan Singh Bhakna was its first president), and its weekly Ghadar called on Indians to return home and fight British rule.
+    bn: তিনটি বিবৃতিই সঠিক। ১৯১৩ সালে দলটি গঠিত হয় এবং এর সদর দফতর ছিল সানফ্রান্সিসকোতে, লালা হরদয়াল ছিলেন এর প্রধান তাত্ত্বিক (প্রথম সভাপতি ছিলেন সোহন সিং ভাকনা), এবং এর সাপ্তাহিক "গদর" ভারতীয়দের দেশে ফিরে ব্রিটিশ শাসনের বিরুদ্ধে লড়াইয়ের আহ্বান জানাত।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [hsra]
+  stem:
+    en: Consider the following statements about the bombs thrown in the Central Legislative Assembly on 8 April 1929.
+    bn: ১৯২৯ সালের ৮ এপ্রিল কেন্দ্রীয় আইনসভায় বোমা নিক্ষেপ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The bombs were meant to kill members of the Assembly."
+      bn: "১. আইনসভার সদস্যদের হত্যা করাই ছিল বোমাগুলির উদ্দেশ্য।"
+    - en: "2. The action was a protest against the Public Safety Bill and the Trade Disputes Bill."
+      bn: "২. এটি ছিল জননিরাপত্তা বিল ও শিল্পবিরোধ বিলের বিরুদ্ধে প্রতিবাদ।"
+    - en: "3. Bhagat Singh and Batukeshwar Dutt did not try to escape and were arrested on the spot."
+      bn: "৩. ভগৎ সিং ও বটুকেশ্বর দত্ত পালানোর চেষ্টা করেননি এবং ঘটনাস্থলেই গ্রেফতার হন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong because the bombs were deliberately made not to kill, and nobody died; the aim was to draw attention to the two bills and to use the trial for propaganda.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতি ভুল, কারণ বোমাগুলি ইচ্ছাকৃতভাবে প্রাণঘাতী না করে তৈরি করা হয়েছিল এবং কেউ মারা যাননি; উদ্দেশ্য ছিল দুটি বিলের দিকে দৃষ্টি আকর্ষণ করা এবং বিচারকে প্রচারের কাজে লাগানো।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 2
+  exams: [wbcs, state-psc, upsc-cse, ssc-cgl]
+  refs: [bengal-1930s]
+  stem:
+    en: Consider the following statements about the Chittagong Armoury Raid.
+    bn: চট্টগ্রাম অস্ত্রাগার লুণ্ঠন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Surya Sen's group called itself the Hindustan Socialist Republican Army."
+      bn: "১. সূর্য সেনের গোষ্ঠী নিজেদের হিন্দুস্তান সোশ্যালিস্ট রিপাবলিকান আর্মি বলত।"
+    - en: "2. The armouries were seized on 18 April 1930."
+      bn: "২. ১৯৩০ সালের ১৮ এপ্রিল অস্ত্রাগারগুলি দখল করা হয়।"
+    - en: "3. Surya Sen was killed in the fight on the Jalalabad hills."
+      bn: "৩. জালালাবাদ পাহাড়ের লড়াইয়ে সূর্য সেন নিহত হন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Only statement 2 is correct. Surya Sen's group was the Indian Republican Army, Chittagong Branch; the HSRA was the north Indian group of Azad and Bhagat Singh. Surya Sen survived the Jalalabad fight, was arrested in 1933 and hanged in 1934.
+    bn: কেবল ২ নং বিবৃতি সঠিক। সূর্য সেনের গোষ্ঠীর নাম ছিল ইন্ডিয়ান রিপাবলিকান আর্মি, চট্টগ্রাম শাখা; এইচএসআরএ ছিল আজাদ ও ভগৎ সিংয়ের উত্তর ভারতীয় গোষ্ঠী। জালালাবাদের লড়াইয়ে সূর্য সেন বেঁচে যান; ১৯৩৩ সালে গ্রেফতার হন এবং ১৯৩৪ সালে তাঁর ফাঁসি হয়।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [wbcs, state-psc, upsc-cse]
+  refs: [bengal-1930s]
+  stem:
+    en: With reference to women revolutionaries of Bengal, consider the following statements.
+    bn: বাংলার নারী বিপ্লবীদের প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Pritilata Waddedar led an attack on the Pahartali European Club in 1932."
+      bn: "১. ১৯৩২ সালে প্রীতিলতা ওয়াদ্দেদার পাহাড়তলি ইউরোপীয় ক্লাব আক্রমণে নেতৃত্ব দেন।"
+    - en: "2. Bina Das fired at the Governor of Bengal at a Calcutta University convocation."
+      bn: "২. কলকাতা বিশ্ববিদ্যালয়ের সমাবর্তন অনুষ্ঠানে বীণা দাস বাংলার গভর্নরকে গুলি করেন।"
+    - en: "3. Kalpana Dutta was a member of Surya Sen's group."
+      bn: "৩. কল্পনা দত্ত ছিলেন সূর্য সেনের গোষ্ঠীর সদস্য।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+  answer: 2
+  explanation:
+    en: All three are correct. Pritilata led the Pahartali raid in September 1932, Bina Das fired at Governor Sir Stanley Jackson in February 1932 (he was unhurt), and Kalpana Dutta belonged to Surya Sen's Chittagong group.
+    bn: তিনটি বিবৃতিই সঠিক। ১৯৩২ সালের সেপ্টেম্বরে প্রীতিলতা পাহাড়তলি আক্রমণে নেতৃত্ব দেন, ১৯৩২ সালের ফেব্রুয়ারিতে বীণা দাস গভর্নর স্যার স্ট্যানলি জ্যাকসনকে গুলি করেন (গভর্নর অক্ষত ছিলেন), এবং কল্পনা দত্ত ছিলেন সূর্য সেনের চট্টগ্রাম গোষ্ঠীর সদস্য।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [abroad]
+  stem:
+    en: With reference to Indian revolutionaries abroad, consider the following statements.
+    bn: বিদেশে ভারতীয় বিপ্লবীদের প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Madame Bhikaji Cama unfurled an Indian national flag at Stuttgart in 1907."
+      bn: "১. ১৯০৭ সালে মাদাম ভিকাজি কামা স্টুটগার্টে ভারতের একটি জাতীয় পতাকা উত্তোলন করেন।"
+    - en: "2. A Provisional Government of India was set up at Kabul in 1915 with Raja Mahendra Pratap as President."
+      bn: "২. ১৯১৫ সালে কাবুলে রাজা মহেন্দ্র প্রতাপকে রাষ্ট্রপতি করে একটি অস্থায়ী ভারত সরকার গঠিত হয়।"
+    - en: "3. India House was opened by Shyamji Krishna Varma in Paris."
+      bn: "৩. শ্যামজি কৃষ্ণবর্মা প্যারিসে ইন্ডিয়া হাউস চালু করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because India House was in London (1905); Paris was Madame Cama's base, which is why it is a tempting distractor.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল, কারণ ইন্ডিয়া হাউস ছিল লন্ডনে (১৯০৫); প্যারিস ছিল মাদাম কামার কর্মক্ষেত্র, তাই এটি বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [bengal-societies, abroad, hra-kakori]
+  stem:
+    en: Match List I (Person) with List II (Organisation).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (সংগঠন) মেলান।
+  left:
+    - { en: "A. Pramathanath Mitra", bn: "ক. প্রমথনাথ মিত্র" }
+    - { en: "B. Shyamji Krishna Varma", bn: "খ. শ্যামজি কৃষ্ণবর্মা" }
+    - { en: "C. Lala Har Dayal", bn: "গ. লালা হরদয়াল" }
+    - { en: "D. Sachindranath Sanyal", bn: "ঘ. শচীন্দ্রনাথ সান্যাল" }
+  right:
+    - { en: "1. Ghadar Party", bn: "১. গদর পার্টি" }
+    - { en: "2. Hindustan Republican Association", bn: "২. হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন" }
+    - { en: "3. Anushilan Samiti", bn: "৩. অনুশীলন সমিতি" }
+    - { en: "4. India House", bn: "৪. ইন্ডিয়া হাউস" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+  answer: 3
+  explanation:
+    en: Pramathanath Mitra led the Anushilan Samiti, Shyamji Krishna Varma founded India House, Lala Har Dayal was the Ghadar ideologue and Sachindranath Sanyal was a founder of the HRA (1924). Swapping Har Dayal and Sanyal gives the tempting wrong option.
+    bn: প্রমথনাথ মিত্র অনুশীলন সমিতির প্রধান ব্যক্তি, শ্যামজি কৃষ্ণবর্মা ইন্ডিয়া হাউসের প্রতিষ্ঠাতা, লালা হরদয়াল গদর পার্টির তাত্ত্বিক এবং শচীন্দ্রনাথ সান্যাল হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশনের (১৯২৪) অন্যতম প্রতিষ্ঠাতা। হরদয়াল ও সান্যালকে অদলবদল করলেই বিভ্রান্তিকর ভুল বিকল্পটি পাওয়া যায়।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, state-psc, wbcs, rrb-ntpc]
+  refs: [bengal-societies, delhi-balasore, hra-kakori, hsra]
+  stem:
+    en: Match List I (Event) with List II (Place).
+    bn: তালিকা I (ঘটনা)-এর সঙ্গে তালিকা II (স্থান) মেলান।
+  left:
+    - { en: "A. Bomb thrown at Kingsford's supposed carriage (1908)", bn: "ক. কিংসফোর্ডের গাড়ি ভেবে বোমা নিক্ষেপ (১৯০৮)" }
+    - { en: "B. Bagha Jatin's last fight (1915)", bn: "খ. বাঘা যতীনের শেষ লড়াই (১৯১৫)" }
+    - { en: "C. Train action by the HRA (1925)", bn: "গ. হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশনের ট্রেন ডাকাতি (১৯২৫)" }
+    - { en: "D. Killing of J.P. Saunders (1928)", bn: "ঘ. জে. পি. স্যান্ডার্স হত্যা (১৯২৮)" }
+  right:
+    - { en: "1. Kakori", bn: "১. কাকোরি" }
+    - { en: "2. Lahore", bn: "২. লাহোর" }
+    - { en: "3. Muzaffarpur", bn: "৩. মজঃফরপুর" }
+    - { en: "4. Balasore", bn: "৪. বালেশ্বর" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Khudiram Bose and Prafulla Chaki threw the bomb at Muzaffarpur, Bagha Jatin fought his last battle near Balasore, the HRA stopped the train at Kakori, and Saunders was shot at Lahore. Kakori is near Lucknow, not Lahore, so C and D should not be swapped.
+    bn: ক্ষুদিরাম বসু ও প্রফুল্ল চাকী মজঃফরপুরে বোমা ছোড়েন, বাঘা যতীন শেষ লড়াই করেন বালেশ্বরের কাছে, হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন কাকোরিতে ট্রেন থামায় এবং স্যান্ডার্সকে গুলি করা হয় লাহোরে। কাকোরি লখনউয়ের কাছে, লাহোরের কাছে নয়; তাই গ ও ঘ অদলবদল করা ভুল।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [wbcs, state-psc, ssc-cgl]
+  refs: [bengal-1930s, abroad]
+  stem:
+    en: Match List I (Revolutionary) with List II (Action).
+    bn: তালিকা I (বিপ্লবী)-এর সঙ্গে তালিকা II (কার্যকলাপ) মেলান।
+  left:
+    - { en: "A. Benoy, Badal and Dinesh", bn: "ক. বিনয়, বাদল ও দীনেশ" }
+    - { en: "B. Pritilata Waddedar", bn: "খ. প্রীতিলতা ওয়াদ্দেদার" }
+    - { en: "C. Bina Das", bn: "গ. বীণা দাস" }
+    - { en: "D. Madan Lal Dhingra", bn: "ঘ. মদনলাল ধিংড়া" }
+  right:
+    - { en: "1. Attack in the Writers' Building, Calcutta", bn: "১. কলকাতার রাইটার্স বিল্ডিংয়ে আক্রমণ" }
+    - { en: "2. Raid on the Pahartali European Club", bn: "২. পাহাড়তলি ইউরোপীয় ক্লাবে আক্রমণ" }
+    - { en: "3. Shooting of Curzon Wyllie in London", bn: "৩. লন্ডনে কার্জন উইলিকে গুলি" }
+    - { en: "4. Firing at the Governor at a university convocation", bn: "৪. বিশ্ববিদ্যালয়ের সমাবর্তনে গভর্নরকে গুলি" }
+  options:
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-1, B-4, C-2, D-3", bn: "ক-১, খ-৪, গ-২, ঘ-৩" }
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+  answer: 0
+  explanation:
+    en: Benoy, Badal and Dinesh attacked the Writers' Building (1930), Pritilata led the Pahartali raid (1932), Bina Das fired at Governor Stanley Jackson at the convocation (1932) and Dhingra shot Curzon Wyllie in London (1909). Pritilata and Bina Das are often swapped.
+    bn: বিনয়, বাদল ও দীনেশ রাইটার্স বিল্ডিংয়ে আক্রমণ করেন (১৯৩০), প্রীতিলতা পাহাড়তলি আক্রমণে নেতৃত্ব দেন (১৯৩২), বীণা দাস সমাবর্তনে গভর্নর স্ট্যানলি জ্যাকসনকে গুলি করেন (১৯৩২) এবং ধিংড়া লন্ডনে কার্জন উইলিকে গুলি করেন (১৯০৯)। প্রীতিলতা ও বীণা দাসকে প্রায়ই গুলিয়ে ফেলা হয়।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [bengal-societies, abroad, hsra]
+  stem:
+    en: Match List I (Publication) with List II (Person associated).
+    bn: তালিকা I (প্রকাশনা)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট ব্যক্তি) মেলান।
+  left:
+    - { en: "A. Jugantar (weekly)", bn: "ক. যুগান্তর (সাপ্তাহিক)" }
+    - { en: "B. The Indian Sociologist", bn: "খ. দ্য ইন্ডিয়ান সোশিওলজিস্ট" }
+    - { en: "C. The Philosophy of the Bomb", bn: "গ. দ্য ফিলোজফি অব দ্য বম্ব" }
+    - { en: "D. Why I am an Atheist", bn: "ঘ. হোয়াই আই অ্যাম অ্যান এথিস্ট" }
+  right:
+    - { en: "1. Bhagat Singh", bn: "১. ভগৎ সিং" }
+    - { en: "2. Barindra Kumar Ghosh", bn: "২. বারীন্দ্রকুমার ঘোষ" }
+    - { en: "3. Bhagwati Charan Vohra", bn: "৩. ভগবতীচরণ ভোরা" }
+    - { en: "4. Shyamji Krishna Varma", bn: "৪. শ্যামজি কৃষ্ণবর্মা" }
+  options:
+    - { en: "A-2, B-4, C-1, D-3", bn: "ক-২, খ-৪, গ-১, ঘ-৩" }
+    - { en: "A-4, B-2, C-3, D-1", bn: "ক-৪, খ-২, গ-৩, ঘ-১" }
+    - { en: "A-2, B-4, C-3, D-1", bn: "ক-২, খ-৪, গ-৩, ঘ-১" }
+    - { en: "A-2, B-3, C-4, D-1", bn: "ক-২, খ-৩, গ-৪, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Barindra Kumar Ghosh (with Bhupendranath Dutta) started Jugantar, Shyamji Krishna Varma published The Indian Sociologist, Bhagwati Charan Vohra wrote The Philosophy of the Bomb and Bhagat Singh wrote Why I am an Atheist. Since both Vohra and Bhagat Singh were HSRA leaders, C and D are easily swapped.
+    bn: বারীন্দ্রকুমার ঘোষ (ভূপেন্দ্রনাথ দত্তের সঙ্গে) যুগান্তর শুরু করেন, শ্যামজি কৃষ্ণবর্মা "দ্য ইন্ডিয়ান সোশিওলজিস্ট" প্রকাশ করতেন, ভগবতীচরণ ভোরা "দ্য ফিলোজফি অব দ্য বম্ব" রচনা করেন এবং ভগৎ সিং "হোয়াই আই অ্যাম অ্যান এথিস্ট" লেখেন। ভোরা ও ভগৎ সিং দুজনেই এইচএসআরএ-র নেতা ছিলেন বলে গ ও ঘ সহজেই গুলিয়ে যায়।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [hsra]
+  assertion:
+    en: Bhagat Singh and Batukeshwar Dutt made no attempt to escape after throwing bombs in the Central Legislative Assembly.
+    bn: কেন্দ্রীয় আইনসভায় বোমা ছোড়ার পর ভগৎ সিং ও বটুকেশ্বর দত্ত পালানোর কোনো চেষ্টা করেননি।
+  reason:
+    en: They wanted to be arrested so that they could use their trial to spread revolutionary ideas.
+    bn: তাঁরা গ্রেফতার হতে চেয়েছিলেন, যাতে বিচারকে বিপ্লবী ভাবধারা প্রচারের কাজে লাগানো যায়।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. They deliberately courted arrest and used the court as a platform to explain their aims to the public.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। তাঁরা ইচ্ছা করেই গ্রেফতার বরণ করেন এবং আদালতকে জনসাধারণের কাছে নিজেদের লক্ষ্য ব্যাখ্যা করার মঞ্চ হিসেবে ব্যবহার করেন।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [bengal-societies]
+  assertion:
+    en: Douglas Kingsford was killed in the Muzaffarpur bomb attack of 1908.
+    bn: ১৯০৮ সালে মজঃফরপুরের বোমা আক্রমণে ডগলাস কিংসফোর্ড নিহত হন।
+  reason:
+    en: As Chief Presidency Magistrate of Calcutta, Kingsford had given harsh sentences to young Swadeshi workers.
+    bn: কলকাতার চিফ প্রেসিডেন্সি ম্যাজিস্ট্রেট হিসেবে কিংসফোর্ড তরুণ স্বদেশি কর্মীদের কঠোর শাস্তি দিয়েছিলেন।
+  answer: 3
+  explanation:
+    en: The assertion is false and the reason is true. Kingsford was the target because of his harsh sentences, but the bomb hit a carriage carrying two English women, who were killed; Kingsford was unhurt.
+    bn: বিবৃতিটি মিথ্যা, কিন্তু কারণটি সত্য। কঠোর শাস্তির জন্যই কিংসফোর্ড লক্ষ্য হয়েছিলেন, কিন্তু বোমাটি পড়ে দুজন ইংরেজ মহিলার গাড়িতে, যাঁরা নিহত হন; কিংসফোর্ড অক্ষত থাকেন।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [abroad]
+  assertion:
+    en: Most passengers of the Komagata Maru were not allowed to land at Vancouver in 1914.
+    bn: ১৯১৪ সালে কোমাগাতা মারুর অধিকাংশ যাত্রীকে ভ্যাঙ্কুভারে নামতে দেওয়া হয়নি।
+  reason:
+    en: When the ship returned to India, its passengers clashed with the police at Budge Budge in September 1914.
+    bn: জাহাজটি ভারতে ফিরলে ১৯১৪ সালের সেপ্টেম্বরে বজবজে যাত্রীদের সঙ্গে পুলিশের সংঘর্ষ হয়।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. The passengers were turned back because of Canadian rules that kept out Indian immigrants; the Budge Budge clash happened months later, after the ship's return, so it is a consequence of the episode and cannot explain the refusal at Vancouver.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির ব্যাখ্যা নয়। ভারতীয় অভিবাসীদের আটকানোর জন্য কানাডার নিয়মের কারণেই যাত্রীদের ফিরিয়ে দেওয়া হয়; বজবজের সংঘর্ষ ঘটে কয়েক মাস পরে, জাহাজ ফেরার পর, তাই এটি ঘটনার পরিণতি, ভ্যাঙ্কুভারে নামতে না দেওয়ার কারণ নয়।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [hra-kakori]
+  assertion:
+    en: Many young nationalists turned to revolutionary methods in the early 1920s.
+    bn: ১৯২০-এর দশকের গোড়ায় বহু তরুণ জাতীয়তাবাদী বিপ্লবী পথে ঝোঁকেন।
+  reason:
+    en: Gandhi launched the Non-Cooperation Movement in February 1922 after the Chauri Chaura incident.
+    bn: চৌরিচৌরার ঘটনার পর ১৯২২ সালের ফেব্রুয়ারিতে গান্ধিজি অসহযোগ আন্দোলন শুরু করেন।
+  answer: 2
+  explanation:
+    en: The assertion is true but the reason is false. After Chauri Chaura, Gandhi withdrew the Non-Cooperation Movement in February 1922; it had been launched in 1920. The disappointment caused by the withdrawal pushed many young people towards revolutionary groups.
+    bn: বিবৃতিটি সত্য, কিন্তু কারণটি মিথ্যা। চৌরিচৌরার ঘটনার পর ১৯২২ সালের ফেব্রুয়ারিতে গান্ধিজি অসহযোগ আন্দোলন প্রত্যাহার করেন; আন্দোলনটি শুরু হয়েছিল ১৯২০ সালে। প্রত্যাহারজনিত হতাশাই বহু তরুণকে বিপ্লবী গোষ্ঠীর দিকে ঠেলে দেয়।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [origins, bengal-societies, delhi-balasore, hra-kakori]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Bomb thrown at Lord Hardinge in Delhi"
+      bn: "১. দিল্লিতে লর্ড হার্ডিঞ্জের উপর বোমা নিক্ষেপ"
+    - en: "2. Kakori train action"
+      bn: "২. কাকোরি ট্রেন ডাকাতি"
+    - en: "3. Killing of Rand and Ayerst in Pune"
+      bn: "৩. পুনেতে র‍্যান্ড ও আয়ার্স্ট হত্যা"
+    - en: "4. Muzaffarpur bomb incident"
+      bn: "৪. মজঃফরপুরে বোমার ঘটনা"
+  options:
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+  answer: 3
+  explanation:
+    en: Rand and Ayerst were killed in 1897, the Muzaffarpur bomb was in 1908, the bomb at Hardinge in 1912 and the Kakori action in 1925. The Muzaffarpur bomb came before the Delhi bomb, not after it.
+    bn: র‍্যান্ড ও আয়ার্স্ট নিহত হন ১৮৯৭ সালে, মজঃফরপুরের বোমা ১৯০৮ সালে, হার্ডিঞ্জের উপর বোমা ১৯১২ সালে এবং কাকোরি ট্রেন ডাকাতি ১৯২৫ সালে। মজঃফরপুরের ঘটনা দিল্লির বোমার আগে, পরে নয়।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [hsra, bengal-1930s]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Chittagong Armoury Raid"
+      bn: "১. চট্টগ্রাম অস্ত্রাগার লুণ্ঠন"
+    - en: "2. Killing of J.P. Saunders"
+      bn: "২. জে. পি. স্যান্ডার্স হত্যা"
+    - en: "3. Execution of Bhagat Singh, Sukhdev and Rajguru"
+      bn: "৩. ভগৎ সিং, সুখদেব ও রাজগুরুর ফাঁসি"
+    - en: "4. Bombs in the Central Legislative Assembly"
+      bn: "৪. কেন্দ্রীয় আইনসভায় বোমা নিক্ষেপ"
+  options:
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+  answer: 1
+  explanation:
+    en: Saunders was killed in December 1928, the Assembly bombs were thrown in April 1929, the Chittagong raid took place in April 1930 and the executions on 23 March 1931. The Saunders killing came before the Assembly bomb, although the Assembly bomb is better known.
+    bn: স্যান্ডার্স নিহত হন ১৯২৮ সালের ডিসেম্বরে, আইনসভায় বোমা ছোড়া হয় ১৯২৯ সালের এপ্রিলে, চট্টগ্রাম অস্ত্রাগার লুণ্ঠন হয় ১৯৩০ সালের এপ্রিলে এবং ফাঁসি হয় ১৯৩১ সালের ২৩ মার্চ। আইনসভার ঘটনা বেশি পরিচিত হলেও স্যান্ডার্স হত্যা তার আগে ঘটে।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [abroad, delhi-balasore]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Madan Lal Dhingra shoots Curzon Wyllie in London"
+      bn: "১. লন্ডনে মদনলাল ধিংড়া কার্জন উইলিকে গুলি করেন"
+    - en: "2. Founding of the Ghadar Party"
+      bn: "২. গদর পার্টির প্রতিষ্ঠা"
+    - en: "3. Komagata Maru reaches Vancouver"
+      bn: "৩. কোমাগাতা মারু ভ্যাঙ্কুভারে পৌঁছায়"
+    - en: "4. Bagha Jatin's fight near Balasore"
+      bn: "৪. বালেশ্বরের কাছে বাঘা যতীনের লড়াই"
+  options:
+    - { en: 1-2-3-4, bn: ১-২-৩-৪ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+    - { en: 1-3-2-4, bn: ১-৩-২-৪ }
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+  answer: 0
+  explanation:
+    en: Dhingra's action was in 1909, the Ghadar Party was founded in 1913, the Komagata Maru reached Vancouver in 1914 and Bagha Jatin's fight was in 1915. The Komagata Maru episode came after the Ghadar Party was formed, not before.
+    bn: ধিংড়ার ঘটনা ১৯০৯ সালে, গদর পার্টির প্রতিষ্ঠা ১৯১৩ সালে, কোমাগাতা মারু ভ্যাঙ্কুভারে পৌঁছায় ১৯১৪ সালে এবং বাঘা যতীনের লড়াই ১৯১৫ সালে। কোমাগাতা মারুর ঘটনা গদর পার্টি গঠনের পরে, আগে নয়।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [hra-kakori, hsra, bengal-1930s]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিতগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Formation of the HSRA at Feroz Shah Kotla"
+      bn: "১. ফিরোজ শাহ কোটলায় এইচএসআরএ (HSRA) গঠন"
+    - en: "2. Execution of Surya Sen"
+      bn: "২. সূর্য সেনের ফাঁসি"
+    - en: "3. Founding of the Hindustan Republican Association at Kanpur"
+      bn: "৩. কানপুরে হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন প্রতিষ্ঠা"
+    - en: "4. Attack in the Writers' Building"
+      bn: "৪. রাইটার্স বিল্ডিংয়ে আক্রমণ"
+  options:
+    - { en: 1-3-4-2, bn: ১-৩-৪-২ }
+    - { en: 3-1-2-4, bn: ৩-১-২-৪ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+  answer: 3
+  explanation:
+    en: The HRA was founded in 1924, the HSRA in 1928, the Writers' Building attack took place in December 1930 and Surya Sen was hanged in January 1934. The HSRA was a reorganisation of the HRA, so it cannot come first.
+    bn: হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশন প্রতিষ্ঠিত হয় ১৯২৪ সালে, এইচএসআরএ ১৯২৮ সালে, রাইটার্স বিল্ডিংয়ে আক্রমণ হয় ১৯৩০ সালের ডিসেম্বরে এবং সূর্য সেনের ফাঁসি হয় ১৯৩৪ সালের জানুয়ারিতে। এইচএসআরএ ছিল হিন্দুস্তান রিপাবলিকান অ্যাসোসিয়েশনের পুনর্গঠিত রূপ, তাই তা প্রথমে আসতে পারে না।
+  status: ai-generated

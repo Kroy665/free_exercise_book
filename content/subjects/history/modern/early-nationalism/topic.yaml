@@ -1,0 +1,21 @@
+id: hist.modern.early-nationalism
+title:
+  en: Rise of Nationalism and the Moderates
+  bn: জাতীয়তাবাদের উত্থান ও নরমপন্থীরা
+summary:
+  en: Factors behind modern Indian nationalism, pre-Congress associations, the Ilbert Bill controversy, the founding and early sessions of the Indian National Congress, the Moderates' leaders, methods and demands, the Indian Councils Act 1892 and an assessment of the Moderate phase.
+  bn: আধুনিক ভারতীয় জাতীয়তাবাদের উত্থানের কারণ, কংগ্রেস-পূর্ব রাজনৈতিক সংগঠন, ইলবার্ট বিল বিতর্ক, ভারতীয় জাতীয় কংগ্রেসের প্রতিষ্ঠা ও প্রথম দিকের অধিবেশন, নরমপন্থী নেতৃবৃন্দ, তাঁদের পদ্ধতি ও দাবি, ১৮৯২ সালের ভারতীয় পরিষদ আইন এবং নরমপন্থী পর্বের মূল্যায়ন।
+order: 9
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "The Making of the National Movement 1870s–1947"
+  - NCERT Class 12 (old), Modern India (Bipan Chandra), Ch. "Growth of New India — The Nationalist Movement 1858–1905"
+  - Bipan Chandra et al., India's Struggle for Independence, Chs. 5–7 (foundation of the Congress and the early nationalists)
+  - Spectrum, A Brief History of Modern India, Ch. "Emergence of Indian Nationalism" and Ch. "Era of Moderates (1885–1905)"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

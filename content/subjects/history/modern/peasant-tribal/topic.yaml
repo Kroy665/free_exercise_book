@@ -1,0 +1,22 @@
+id: hist.modern.peasant-tribal
+title:
+  en: Peasant and Tribal Movements (to 1900)
+  bn: কৃষক ও উপজাতি আন্দোলন (১৯০০ পর্যন্ত)
+summary:
+  en: Peasant and tribal resistance to Company and Crown rule up to 1900, from the Sanyasi-Fakir, Chuar, Paika, Kol, Santhal and Munda risings to the Wahabi and Faraizi movements, the Indigo Revolt, Pabna and the Deccan riots, with their causes, nature and the British response.
+  bn: ১৯০০ সাল পর্যন্ত কোম্পানি ও ব্রিটিশ রাজশক্তির বিরুদ্ধে কৃষক ও উপজাতিদের প্রতিরোধ। সন্ন্যাসী-ফকির, চুয়াড়, পাইক, কোল, সাঁওতাল ও মুন্ডা বিদ্রোহ থেকে ওয়াহাবি ও ফরাজি আন্দোলন, নীল বিদ্রোহ, পাবনা বিদ্রোহ ও দাক্ষিণাত্য হাঙ্গামা, সেইসঙ্গে এগুলির কারণ, প্রকৃতি ও ব্রিটিশ প্রতিক্রিয়া।
+order: 6
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+prerequisites: [hist.modern.economic-impact]
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "Ruling the Countryside" and Ch. "Tribals, Dikus and the Vision of a Golden Age"
+  - Bipan Chandra, Modern India (old NCERT; later revised as History of Modern India), chapters on popular and peasant uprisings
+  - Bipan Chandra et al., India's Struggle for Independence, chapters on civil rebellions, tribal uprisings and peasant movements
+  - Spectrum, A Brief History of Modern India, chapters on people's resistance before 1857 and on peasant movements
+  - Sekhar Bandyopadhyay, From Plassey to Partition, sections on peasant and tribal rebellions
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

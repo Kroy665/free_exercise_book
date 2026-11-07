@@ -1,0 +1,686 @@
+# Questions for hist.modern.education-press
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [early-institutions]
+  stem:
+    en: Who set up the Calcutta Madrasa in 1781?
+    bn: ১৭৮১ সালে কলকাতা মাদ্রাসা কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord Wellesley, bn: লর্ড ওয়েলেসলি }
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Jonathan Duncan, bn: জোনাথন ডানকান }
+  answer: 2
+  explanation:
+    en: Warren Hastings founded the Calcutta Madrasa in 1781 for the study of Muslim law in Arabic and Persian. Jonathan Duncan founded the Sanskrit College at Benares (1791), not the Madrasa.
+    bn: ওয়ারেন হেস্টিংস ১৭৮১ সালে আরবি ও ফারসি ভাষায় মুসলিম আইন চর্চার জন্য কলকাতা মাদ্রাসা প্রতিষ্ঠা করেন। জোনাথন ডানকান প্রতিষ্ঠা করেছিলেন বারাণসীর সংস্কৃত কলেজ (১৭৯১), মাদ্রাসা নয়।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [early-institutions]
+  stem:
+    en: Who founded the Asiatic Society of Bengal in 1784?
+    bn: ১৭৮৪ সালে এশিয়াটিক সোসাইটি অব বেঙ্গল কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Sir William Jones, bn: স্যার উইলিয়াম জোন্স }
+    - { en: William Carey, bn: উইলিয়াম কেরি }
+    - { en: David Hare, bn: ডেভিড হেয়ার }
+    - { en: Charles Wilkins, bn: চার্লস উইলকিন্স }
+  answer: 0
+  explanation:
+    en: Sir William Jones, a Supreme Court judge in Calcutta and a Sanskrit scholar, founded the Asiatic Society in 1784. William Carey was a missionary associated with Serampore, and David Hare with Hindu College.
+    bn: কলকাতার সুপ্রিম কোর্টের বিচারপতি ও সংস্কৃত পণ্ডিত স্যার উইলিয়াম জোন্স ১৭৮৪ সালে এশিয়াটিক সোসাইটি প্রতিষ্ঠা করেন। উইলিয়াম কেরি ছিলেন শ্রীরামপুরের মিশনারি, আর ডেভিড হেয়ার যুক্ত ছিলেন হিন্দু কলেজের সঙ্গে।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [woods-despatch]
+  stem:
+    en: Which document is known as the "Magna Carta of English Education in India"?
+    bn: কোন নথিকে "ভারতে ইংরেজি শিক্ষার ম্যাগনা কার্টা" বলা হয়?
+  options:
+    - { en: "Charter Act of 1813", bn: "১৮১৩ সালের সনদ আইন" }
+    - { en: Macaulay's Minute, bn: মেকলে মিনিট }
+    - { en: Report of the Hunter Commission, bn: হান্টার কমিশনের প্রতিবেদন }
+    - { en: Wood's Despatch, bn: উডের ডেসপ্যাচ }
+  answer: 3
+  explanation:
+    en: Wood's Despatch of 1854 laid down a complete scheme of education from primary school to university for the first time, so it is called the Magna Carta of English Education in India. Macaulay's Minute (1835) settled the medium of instruction but did not give such a complete plan.
+    bn: ১৮৫৪ সালের উডের ডেসপ্যাচ প্রথমবার প্রাথমিক বিদ্যালয় থেকে বিশ্ববিদ্যালয় পর্যন্ত শিক্ষার পূর্ণাঙ্গ পরিকল্পনা দেয়, তাই একে ভারতে ইংরেজি শিক্ষার ম্যাগনা কার্টা বলা হয়। মেকলে মিনিট (১৮৩৫) শিক্ষার মাধ্যম স্থির করেছিল, কিন্তু এমন পূর্ণাঙ্গ পরিকল্পনা দেয়নি।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [early-institutions]
+  stem:
+    en: Who founded Fort William College in Calcutta in 1800?
+    bn: ১৮০০ সালে কলকাতায় ফোর্ট উইলিয়াম কলেজ কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Lord Wellesley, bn: লর্ড ওয়েলেসলি }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+  answer: 1
+  explanation:
+    en: Lord Wellesley set up Fort William College in 1800 to train young British civil servants in Indian languages and customs. Warren Hastings is linked with the Calcutta Madrasa (1781), an earlier institution.
+    bn: তরুণ ব্রিটিশ সিভিল সার্ভেন্টদের ভারতীয় ভাষা ও রীতিনীতি শেখানোর জন্য লর্ড ওয়েলেসলি ১৮০০ সালে ফোর্ট উইলিয়াম কলেজ প্রতিষ্ঠা করেন। ওয়ারেন হেস্টিংস যুক্ত আগের প্রতিষ্ঠান কলকাতা মাদ্রাসার (১৭৮১) সঙ্গে।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [early-press]
+  stem:
+    en: Who started The Bengal Gazette in 1780, regarded as the first newspaper published in India?
+    bn: ভারতে প্রকাশিত প্রথম সংবাদপত্র হিসেবে গণ্য বেঙ্গল গেজেট ১৭৮০ সালে কে প্রকাশ করেন?
+  options:
+    - { en: Raja Rammohun Roy, bn: রাজা রামমোহন রায় }
+    - { en: William Carey, bn: উইলিয়াম কেরি }
+    - { en: James Augustus Hicky, bn: জেমস অগাস্টাস হিকি }
+    - { en: Charles Metcalfe, bn: চার্লস মেটকাফ }
+  answer: 2
+  explanation:
+    en: James Augustus Hicky started The Bengal Gazette (Calcutta General Advertiser) in 1780. Rammohun Roy's papers came much later, in 1821 and 1822.
+    bn: জেমস অগাস্টাস হিকি ১৭৮০ সালে বেঙ্গল গেজেট (ক্যালকাটা জেনারেল অ্যাডভার্টাইজার) প্রকাশ করেন। রামমোহন রায়ের পত্রিকাগুলি এসেছিল অনেক পরে, ১৮২১ ও ১৮২২ সালে।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [early-press]
+  stem:
+    en: Who is known as the "liberator of the Indian press"?
+    bn: কাকে "ভারতীয় সংবাদপত্রের মুক্তিদাতা" বলা হয়?
+  options:
+    - { en: Sir Charles Metcalfe, bn: স্যার চার্লস মেটকাফ }
+    - { en: Lord Ripon, bn: লর্ড রিপন }
+    - { en: John Adam, bn: জন অ্যাডাম }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+  answer: 0
+  explanation:
+    en: As acting Governor-General, Sir Charles Metcalfe passed the Press Act of 1835, which repealed the restrictive Licensing Regulations of 1823. Lord Ripon repealed the Vernacular Press Act in 1882 but is not given this title; John Adam imposed the 1823 restrictions.
+    bn: অস্থায়ী গভর্নর-জেনারেল হিসেবে স্যার চার্লস মেটকাফ ১৮৩৫ সালের সংবাদপত্র আইন পাস করেন, যা ১৮২৩ সালের কঠোর লাইসেন্সিং রেগুলেশন বাতিল করে। লর্ড রিপন ১৮৮২ সালে দেশীয় ভাষা সংবাদপত্র আইন প্রত্যাহার করলেও এই উপাধি তাঁর নয়; জন অ্যাডাম ১৮২৩ সালের বিধিনিষেধ আরোপ করেছিলেন।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [woods-despatch, later-commissions]
+  stem:
+    en: Which one of the following universities was **NOT** among those set up in 1857?
+    bn: নিম্নলিখিত কোনটি ১৮৫৭ সালে প্রতিষ্ঠিত বিশ্ববিদ্যালয়গুলির মধ্যে **নয়**?
+  options:
+    - { en: University of Calcutta, bn: কলকাতা বিশ্ববিদ্যালয় }
+    - { en: University of Bombay, bn: বোম্বাই বিশ্ববিদ্যালয় }
+    - { en: University of Madras, bn: মাদ্রাজ বিশ্ববিদ্যালয় }
+    - { en: University of Allahabad, bn: এলাহাবাদ বিশ্ববিদ্যালয় }
+  answer: 3
+  explanation:
+    en: Following Wood's Despatch, the universities of Calcutta, Bombay and Madras were set up in 1857. Allahabad University came later, in 1887.
+    bn: উডের ডেসপ্যাচ অনুসারে ১৮৫৭ সালে কলকাতা, বোম্বাই ও মাদ্রাজ বিশ্ববিদ্যালয় প্রতিষ্ঠিত হয়। এলাহাবাদ বিশ্ববিদ্যালয় প্রতিষ্ঠিত হয় পরে, ১৮৮৭ সালে।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [vernacular-press-act]
+  stem:
+    en: Who repealed the Vernacular Press Act of 1878 in 1882?
+    bn: ১৮৭৮ সালের দেশীয় ভাষা সংবাদপত্র আইন ১৮৮২ সালে কে প্রত্যাহার করেন?
+  options:
+    - { en: Lord Lytton, bn: লর্ড লিটন }
+    - { en: Lord Ripon, bn: লর্ড রিপন }
+    - { en: Lord Dufferin, bn: লর্ড ডাফরিন }
+    - { en: Lord Curzon, bn: লর্ড কার্জন }
+  answer: 1
+  explanation:
+    en: Lord Ripon, who succeeded Lytton, repealed the Act in 1882. Lord Lytton is the tempting wrong option because he passed the Act in 1878.
+    bn: লিটনের উত্তরসূরি লর্ড রিপন ১৮৮২ সালে আইনটি প্রত্যাহার করেন। লর্ড লিটন বিভ্রান্তিকর বিকল্প, কারণ তিনিই ১৮৭৮ সালে আইনটি পাস করেছিলেন।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [vernacular-press-act]
+  stem:
+    en: Which newspaper changed from Bengali to English almost overnight to escape the Vernacular Press Act of 1878?
+    bn: ১৮৭৮ সালের দেশীয় ভাষা সংবাদপত্র আইন এড়াতে কোন সংবাদপত্র প্রায় রাতারাতি বাংলা থেকে ইংরেজিতে রূপান্তরিত হয়?
+  options:
+    - { en: The Bengalee, bn: দ্য বেঙ্গলি }
+    - { en: Bangadarshan, bn: বঙ্গদর্শন }
+    - { en: Amrita Bazar Patrika, bn: অমৃতবাজার পত্রিকা }
+    - { en: Sambad Kaumudi, bn: সম্বাদ কৌমুদী }
+  answer: 2
+  explanation:
+    en: The Act applied only to papers in Indian languages, so the Bengali Amrita Bazar Patrika turned itself into an English paper. The Bengalee is tempting, but it was linked with Surendranath Banerjea and was already an English paper.
+    bn: আইনটি কেবল ভারতীয় ভাষার পত্রিকায় প্রযোজ্য ছিল, তাই বাংলা অমৃতবাজার পত্রিকা নিজেকে ইংরেজি পত্রিকায় রূপান্তরিত করে। দ্য বেঙ্গলি বিভ্রান্তিকর বিকল্প, কিন্তু সেটি সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়ের সঙ্গে যুক্ত এবং আগে থেকেই ইংরেজি পত্রিকা ছিল।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [later-commissions]
+  stem:
+    en: The Hunter Commission of 1882 was mainly concerned with which area of education?
+    bn: ১৮৮২ সালের হান্টার কমিশন মূলত শিক্ষার কোন ক্ষেত্র নিয়ে কাজ করেছিল?
+  options:
+    - { en: Primary and secondary education, bn: প্রাথমিক ও মাধ্যমিক শিক্ষা }
+    - { en: University education, bn: বিশ্ববিদ্যালয় শিক্ষা }
+    - { en: Training of British civil servants, bn: ব্রিটিশ সিভিল সার্ভেন্টদের প্রশিক্ষণ }
+    - { en: Teaching of classical languages, bn: ধ্রুপদি ভাষার শিক্ষা }
+  answer: 0
+  explanation:
+    en: The Hunter Commission reviewed progress since Wood's Despatch, especially in primary and secondary education, and asked the state to take special care of primary education. University education was the subject of the Raleigh Commission of 1902.
+    bn: হান্টার কমিশন উডের ডেসপ্যাচের পর থেকে অগ্রগতি, বিশেষত প্রাথমিক ও মাধ্যমিক শিক্ষার অগ্রগতি পর্যালোচনা করে এবং প্রাথমিক শিক্ষার প্রতি রাষ্ট্রকে বিশেষ যত্ন নিতে বলে। বিশ্ববিদ্যালয় শিক্ষা ছিল ১৯০২ সালের র‍্যালে কমিশনের বিষয়।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [later-commissions]
+  stem:
+    en: The Indian Universities Act of 1904 was based on the recommendations of which body?
+    bn: ১৯০৪ সালের ভারতীয় বিশ্ববিদ্যালয় আইন কোন সংস্থার সুপারিশের ভিত্তিতে তৈরি হয়?
+  options:
+    - { en: Hunter Commission, bn: হান্টার কমিশন }
+    - { en: General Committee of Public Instruction, bn: জনশিক্ষা কমিটি }
+    - { en: Macaulay Committee, bn: মেকলে কমিটি }
+    - { en: Raleigh Commission, bn: র‍্যালে কমিশন }
+  answer: 3
+  explanation:
+    en: Lord Curzon appointed the Universities Commission under Sir Thomas Raleigh in 1902, and the 1904 Act followed its recommendations. The Hunter Commission (1882) dealt mainly with primary and secondary education.
+    bn: লর্ড কার্জন ১৯০২ সালে স্যার টমাস র‍্যালের নেতৃত্বে বিশ্ববিদ্যালয় কমিশন নিয়োগ করেন, এবং ১৯০৪ সালের আইন তার সুপারিশ অনুসরণ করে। হান্টার কমিশন (১৮৮২) মূলত প্রাথমিক ও মাধ্যমিক শিক্ষা নিয়ে কাজ করেছিল।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [early-press, nationalist-press]
+  stem:
+    en: In which language did Raja Rammohun Roy publish Mirat-ul-Akbar?
+    bn: রাজা রামমোহন রায় কোন ভাষায় মিরাত-উল-আখবার প্রকাশ করেন?
+  options:
+    - { en: Bengali, bn: বাংলা }
+    - { en: Persian, bn: ফারসি }
+    - { en: Urdu, bn: উর্দু }
+    - { en: English, bn: ইংরেজি }
+  answer: 1
+  explanation:
+    en: Mirat-ul-Akbar (1822) was a Persian paper. Bengali is the tempting option, but that was the language of his other paper, Sambad Kaumudi (1821).
+    bn: মিরাত-উল-আখবার (১৮২২) ছিল ফারসি পত্রিকা। বাংলা বিভ্রান্তিকর বিকল্প, কিন্তু সেটি ছিল তাঁর অন্য পত্রিকা সম্বাদ কৌমুদীর (১৮২১) ভাষা।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [orientalist-anglicist]
+  stem:
+    en: Consider the following statements about the early education policy of the Company.
+    bn: কোম্পানির প্রথম দিকের শিক্ষানীতি সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Charter Act of 1813 set aside ₹1 lakh a year for education."
+      bn: "১. ১৮১৩ সালের সনদ আইন শিক্ষার জন্য বছরে ১ লক্ষ টাকা বরাদ্দ করে।"
+    - en: "2. The General Committee of Public Instruction was set up in 1823."
+      bn: "২. জনশিক্ষা কমিটি গঠিত হয় ১৮২৩ সালে।"
+    - en: "3. The Charter Act of 1813 made English the medium of instruction in Company-funded institutions."
+      bn: "৩. ১৮১৩ সালের সনদ আইন কোম্পানির অর্থে চলা প্রতিষ্ঠানে ইংরেজিকে শিক্ষার মাধ্যম করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong; the 1813 Act did not name any language, which is why the Orientalist–Anglicist debate arose. English was chosen only in 1835.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল; ১৮১৩ সালের আইনে কোনো ভাষার উল্লেখ ছিল না, সেই কারণেই প্রাচ্যবাদী–পাশ্চাত্যবাদী বিতর্ক শুরু হয়। ইংরেজিকে বেছে নেওয়া হয় কেবল ১৮৩৫ সালে।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [macaulay-minute]
+  stem:
+    en: Consider the following statements about the education policy of 1835.
+    bn: ১৮৩৫ সালের শিক্ষানীতি সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Macaulay's Minute argued that the education grant should be spent on Western learning through English."
+      bn: "১. মেকলে মিনিটে যুক্তি দেওয়া হয় যে শিক্ষার অনুদান ইংরেজির মাধ্যমে পাশ্চাত্য বিদ্যার জন্য ব্যয় করা উচিত।"
+    - en: "2. Lord William Bentinck's government accepted this view in a resolution of March 1835."
+      bn: "২. লর্ড উইলিয়াম বেন্টিঙ্কের সরকার ১৮৩৫ সালের মার্চ মাসের একটি প্রস্তাবে এই মত গ্রহণ করে।"
+    - en: "3. When he wrote the Minute, Macaulay was the law member of the Governor-General's council."
+      bn: "৩. মিনিট লেখার সময় মেকলে ছিলেন গভর্নর-জেনারেলের পরিষদের আইন সদস্য।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. Macaulay, the first law member (from 1834), wrote his Minute on 2 February 1835, and Bentinck's resolution of 7 March 1835 accepted it. Many learners drop statement 3 because they think Macaulay was Governor-General, but he was the law member.
+    bn: তিনটি বিবৃতিই সঠিক। প্রথম আইন সদস্য মেকলে (১৮৩৪ থেকে) ২ ফেব্রুয়ারি ১৮৩৫ তারিখে মিনিট লেখেন, এবং ৭ মার্চ ১৮৩৫ তারিখের বেন্টিঙ্কের প্রস্তাব তা গ্রহণ করে। অনেকে মেকলেকে গভর্নর-জেনারেল ভেবে ৩ নং বিবৃতি বাদ দেন, কিন্তু তিনি ছিলেন আইন সদস্য।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [woods-despatch]
+  stem:
+    en: Consider the following statements about Wood's Despatch of 1854.
+    bn: ১৮৫৪ সালের উডের ডেসপ্যাচ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It recommended Indian languages as the medium of instruction at the primary level."
+      bn: "১. এটি প্রাথমিক স্তরে ভারতীয় ভাষাকে শিক্ষার মাধ্যম করার সুপারিশ করে।"
+    - en: "2. It proposed a system of grants-in-aid to encourage private schools and colleges."
+      bn: "২. এটি বেসরকারি বিদ্যালয় ও কলেজকে উৎসাহ দিতে সরকারি অনুদান ব্যবস্থার প্রস্তাব দেয়।"
+    - en: "3. It recommended that English replace Indian languages at every level of education."
+      bn: "৩. এটি শিক্ষার সব স্তরে ভারতীয় ভাষার জায়গায় ইংরেজি চালুর সুপারিশ করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong; the Despatch wanted Indian languages at the primary stage and English only at the higher stages.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল; ডেসপ্যাচ প্রাথমিক স্তরে ভারতীয় ভাষা এবং কেবল উচ্চতর স্তরে ইংরেজি চেয়েছিল।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [later-commissions]
+  stem:
+    en: Consider the following statements about the Indian Universities Act, 1904.
+    bn: ১৯০৪ সালের ভারতীয় বিশ্ববিদ্যালয় আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It gave the government the power to veto regulations passed by a university senate."
+      bn: "১. এই আইন বিশ্ববিদ্যালয়ের সেনেটে পাস হওয়া বিধিতে ভেটো দেওয়ার ক্ষমতা সরকারকে দেয়।"
+    - en: "2. Under it, most fellows of a university were to be nominated by the government."
+      bn: "২. এই আইন অনুযায়ী বিশ্ববিদ্যালয়ের বেশিরভাগ ফেলো সরকার মনোনীত হবেন।"
+    - en: "3. It was based on the recommendations of the Hunter Commission."
+      bn: "৩. এটি হান্টার কমিশনের সুপারিশের ভিত্তিতে তৈরি হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct; both increased government control over universities. Statement 3 is wrong; the Act was based on the Raleigh Commission (1902), while the Hunter Commission (1882) dealt with primary and secondary education.
+    bn: ১ ও ২ নং বিবৃতি সঠিক; দুটিই বিশ্ববিদ্যালয়ের ওপর সরকারি নিয়ন্ত্রণ বাড়ায়। ৩ নং বিবৃতি ভুল; আইনটি র‍্যালে কমিশনের (১৯০২) ভিত্তিতে তৈরি, আর হান্টার কমিশন (১৮৮২) প্রাথমিক ও মাধ্যমিক শিক্ষা নিয়ে কাজ করেছিল।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [vernacular-press-act]
+  stem:
+    en: Consider the following statements about the Vernacular Press Act, 1878.
+    bn: ১৮৭৮ সালের দেশীয় ভাষা সংবাদপত্র আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It applied equally to English-language and Indian-language newspapers."
+      bn: "১. এটি ইংরেজি ও ভারতীয় ভাষার সংবাদপত্রে সমানভাবে প্রযোজ্য ছিল।"
+    - en: "2. There was no right of appeal to a court of law against the magistrate's action under it."
+      bn: "২. এই আইনে জেলাশাসকের পদক্ষেপের বিরুদ্ধে আদালতে আপিলের অধিকার ছিল না।"
+    - en: "3. It was passed when Lord Lytton was the Viceroy."
+      bn: "৩. লর্ড লিটন যখন ভাইসরয়, তখন এই আইন পাস হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong; the Act covered only Indian-language papers, which is why it was seen as discriminatory and why Amrita Bazar Patrika switched to English.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতি ভুল; আইনটি কেবল ভারতীয় ভাষার পত্রিকায় প্রযোজ্য ছিল, সেই কারণেই একে বৈষম্যমূলক মনে করা হয় এবং অমৃতবাজার পত্রিকা ইংরেজিতে রূপান্তরিত হয়।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [early-press]
+  stem:
+    en: Consider the following statements about press regulation before 1857.
+    bn: ১৮৫৭ সালের আগের সংবাদপত্র নিয়ন্ত্রণ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Licensing Regulations of 1823 were issued by the acting Governor-General John Adam."
+      bn: "১. ১৮২৩ সালের লাইসেন্সিং রেগুলেশন জারি করেন অস্থায়ী গভর্নর-জেনারেল জন অ্যাডাম।"
+    - en: "2. Metcalfe's Press Act of 1835 introduced pre-censorship of all newspapers."
+      bn: "২. ১৮৩৫ সালের মেটকাফের সংবাদপত্র আইন সব সংবাদপত্রে প্রাক-প্রকাশ নিয়ন্ত্রণ চালু করে।"
+    - en: "3. The Censorship of Press Act of 1799 was passed under Lord Wellesley."
+      bn: "৩. ১৭৯৯ সালের সংবাদপত্র নিয়ন্ত্রণ আইন লর্ড ওয়েলেসলির আমলে পাস হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong; Metcalfe's Act of 1835 was a liberal law that repealed the 1823 regulations and only required a declaration of the press's location. Pre-censorship belonged to Wellesley's Act of 1799.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল; ১৮৩৫ সালের মেটকাফ আইন ছিল একটি উদার আইন, যা ১৮২৩ সালের বিধি বাতিল করে এবং কেবল ছাপাখানার ঠিকানা ঘোষণা করতে বলে। প্রাক-প্রকাশ নিয়ন্ত্রণ ছিল ওয়েলেসলির ১৭৯৯ সালের আইনের বৈশিষ্ট্য।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [early-institutions]
+  stem:
+    en: Match List I (Institution) with List II (Founder).
+    bn: তালিকা I (প্রতিষ্ঠান)-এর সঙ্গে তালিকা II (প্রতিষ্ঠাতা) মেলান।
+  left:
+    - { en: "A. Calcutta Madrasa", bn: "ক. কলকাতা মাদ্রাসা" }
+    - { en: "B. Asiatic Society of Bengal", bn: "খ. এশিয়াটিক সোসাইটি অব বেঙ্গল" }
+    - { en: "C. Sanskrit College, Benares", bn: "গ. বারাণসীর সংস্কৃত কলেজ" }
+    - { en: "D. Fort William College", bn: "ঘ. ফোর্ট উইলিয়াম কলেজ" }
+  right:
+    - { en: "1. Jonathan Duncan", bn: "১. জোনাথন ডানকান" }
+    - { en: "2. Lord Wellesley", bn: "২. লর্ড ওয়েলেসলি" }
+    - { en: "3. Warren Hastings", bn: "৩. ওয়ারেন হেস্টিংস" }
+    - { en: "4. William Jones", bn: "৪. উইলিয়াম জোন্স" }
+  options:
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-1, B-4, C-3, D-2", bn: "ক-১, খ-৪, গ-৩, ঘ-২" }
+  answer: 0
+  explanation:
+    en: Warren Hastings founded the Calcutta Madrasa (1781), William Jones the Asiatic Society (1784), Jonathan Duncan the Sanskrit College at Benares (1791) and Lord Wellesley Fort William College (1800). The option with C-2, D-1 swaps Duncan and Wellesley.
+    bn: ওয়ারেন হেস্টিংস কলকাতা মাদ্রাসা (১৭৮১), উইলিয়াম জোন্স এশিয়াটিক সোসাইটি (১৭৮৪), জোনাথন ডানকান বারাণসীর সংস্কৃত কলেজ (১৭৯১) এবং লর্ড ওয়েলেসলি ফোর্ট উইলিয়াম কলেজ (১৮০০) প্রতিষ্ঠা করেন। গ-২, ঘ-১ বিকল্পে ডানকান ও ওয়েলেসলিকে অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [nationalist-press, early-press]
+  stem:
+    en: Match List I (Newspaper) with List II (Person associated).
+    bn: তালিকা I (সংবাদপত্র)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট ব্যক্তি) মেলান।
+  left:
+    - { en: "A. Kesari", bn: "ক. কেশরী" }
+    - { en: "B. Sambad Kaumudi", bn: "খ. সম্বাদ কৌমুদী" }
+    - { en: "C. The Bengalee", bn: "গ. দ্য বেঙ্গলি" }
+    - { en: "D. Al-Hilal", bn: "ঘ. আল-হিলাল" }
+  right:
+    - { en: "1. Rammohun Roy", bn: "১. রামমোহন রায়" }
+    - { en: "2. Abul Kalam Azad", bn: "২. আবুল কালাম আজাদ" }
+    - { en: "3. Surendranath Banerjea", bn: "৩. সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়" }
+    - { en: "4. Bal Gangadhar Tilak", bn: "৪. বাল গঙ্গাধর তিলক" }
+  options:
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-4, B-2, C-3, D-1", bn: "ক-৪, খ-২, গ-৩, ঘ-১" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+  answer: 3
+  explanation:
+    en: Kesari was Tilak's Marathi paper, Sambad Kaumudi was Rammohun Roy's Bengali paper, The Bengalee is linked with Surendranath Banerjea and Al-Hilal was Abul Kalam Azad's Urdu paper. The option A-3, C-4 swaps Tilak and Surendranath.
+    bn: কেশরী ছিল তিলকের মারাঠি পত্রিকা, সম্বাদ কৌমুদী রামমোহন রায়ের বাংলা পত্রিকা, দ্য বেঙ্গলি সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়ের সঙ্গে যুক্ত এবং আল-হিলাল আবুল কালাম আজাদের উর্দু পত্রিকা। ক-৩, গ-৪ বিকল্পে তিলক ও সুরেন্দ্রনাথকে অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [woods-despatch, later-commissions, vernacular-press-act]
+  stem:
+    en: Match List I (Measure) with List II (Governor-General or Viceroy at the time).
+    bn: তালিকা I (পদক্ষেপ)-এর সঙ্গে তালিকা II (তৎকালীন গভর্নর-জেনারেল বা ভাইসরয়) মেলান।
+  left:
+    - { en: "A. Wood's Despatch", bn: "ক. উডের ডেসপ্যাচ" }
+    - { en: "B. Hunter Commission", bn: "খ. হান্টার কমিশন" }
+    - { en: "C. Raleigh Commission", bn: "গ. র‍্যালে কমিশন" }
+    - { en: "D. Vernacular Press Act", bn: "ঘ. দেশীয় ভাষা সংবাদপত্র আইন" }
+  right:
+    - { en: "1. Lord Lytton", bn: "১. লর্ড লিটন" }
+    - { en: "2. Lord Dalhousie", bn: "২. লর্ড ডালহৌসি" }
+    - { en: "3. Lord Curzon", bn: "৩. লর্ড কার্জন" }
+    - { en: "4. Lord Ripon", bn: "৪. লর্ড রিপন" }
+  options:
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-2, B-4, C-3, D-1", bn: "ক-২, খ-৪, গ-৩, ঘ-১" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-2, B-3, C-4, D-1", bn: "ক-২, খ-৩, গ-৪, ঘ-১" }
+  answer: 1
+  explanation:
+    en: Wood's Despatch (1854) came under Dalhousie, the Hunter Commission (1882) under Ripon, the Raleigh Commission (1902) under Curzon and the Vernacular Press Act (1878) under Lytton. The option B-1, D-4 swaps Lytton and Ripon, a common confusion because Ripon repealed Lytton's Act.
+    bn: উডের ডেসপ্যাচ (১৮৫৪) ডালহৌসির আমলে, হান্টার কমিশন (১৮৮২) রিপনের আমলে, র‍্যালে কমিশন (১৯০২) কার্জনের আমলে এবং দেশীয় ভাষা সংবাদপত্র আইন (১৮৭৮) লিটনের আমলে। খ-১, ঘ-৪ বিকল্পে লিটন ও রিপনকে অদলবদল করা হয়েছে; রিপন লিটনের আইন প্রত্যাহার করেছিলেন বলে এই ভুলটি প্রায়ই হয়।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 3
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [nationalist-press]
+  stem:
+    en: Match List I (Newspaper) with List II (Language).
+    bn: তালিকা I (সংবাদপত্র)-এর সঙ্গে তালিকা II (ভাষা) মেলান।
+  left:
+    - { en: "A. Swadesamitran", bn: "ক. স্বদেশমিত্রন" }
+    - { en: "B. Kesari", bn: "খ. কেশরী" }
+    - { en: "C. Rast Goftar", bn: "গ. রাস্ত গোফতার" }
+    - { en: "D. Al-Hilal", bn: "ঘ. আল-হিলাল" }
+  right:
+    - { en: "1. Gujarati", bn: "১. গুজরাটি" }
+    - { en: "2. Urdu", bn: "২. উর্দু" }
+    - { en: "3. Tamil", bn: "৩. তামিল" }
+    - { en: "4. Marathi", bn: "৪. মারাঠি" }
+  options:
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Swadesamitran (G. Subramania Iyer) was in Tamil, Kesari (Tilak) in Marathi, Rast Goftar (Dadabhai Naoroji) in Gujarati and Al-Hilal (Abul Kalam Azad) in Urdu. The option C-2, D-1 swaps the languages of Rast Goftar and Al-Hilal.
+    bn: স্বদেশমিত্রন (জি. সুব্রহ্মণ্য আইয়ার) ছিল তামিল, কেশরী (তিলক) মারাঠি, রাস্ত গোফতার (দাদাভাই নওরোজি) গুজরাটি এবং আল-হিলাল (আবুল কালাম আজাদ) উর্দু পত্রিকা। গ-২, ঘ-১ বিকল্পে রাস্ত গোফতার ও আল-হিলালের ভাষা অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [vernacular-press-act]
+  assertion:
+    en: In 1878 Amrita Bazar Patrika changed almost overnight from a Bengali paper into an English-language paper.
+    bn: ১৮৭৮ সালে অমৃতবাজার পত্রিকা প্রায় রাতারাতি বাংলা পত্রিকা থেকে ইংরেজি পত্রিকায় রূপান্তরিত হয়।
+  reason:
+    en: The Vernacular Press Act of 1878 applied only to newspapers in Indian languages.
+    bn: ১৮৭৮ সালের দেশীয় ভাষা সংবাদপত্র আইন কেবল ভারতীয় ভাষার সংবাদপত্রে প্রযোজ্য ছিল।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Because English-language papers were outside the Act, switching to English was a direct way for the paper to escape it.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। ইংরেজি পত্রিকা আইনের আওতার বাইরে থাকায় ইংরেজিতে রূপান্তরই ছিল আইন এড়ানোর সরাসরি উপায়।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [woods-despatch, macaulay-minute]
+  assertion:
+    en: Wood's Despatch is often called the "Magna Carta of English Education in India".
+    bn: উডের ডেসপ্যাচকে প্রায়ই "ভারতে ইংরেজি শিক্ষার ম্যাগনা কার্টা" বলা হয়।
+  reason:
+    en: Wood's Despatch was written by T.B. Macaulay as law member of the Governor-General's council.
+    bn: উডের ডেসপ্যাচ লিখেছিলেন গভর্নর-জেনারেলের পরিষদের আইন সদস্য টি. বি. মেকলে।
+  answer: 2
+  explanation:
+    en: The assertion is true, but the reason is false. The Despatch was sent in 1854 by Sir Charles Wood, President of the Board of Control. Macaulay, the law member, wrote the earlier Minute of 1835.
+    bn: বিবৃতিটি সত্য, কিন্তু কারণটি মিথ্যা। ডেসপ্যাচটি ১৮৫৪ সালে পাঠিয়েছিলেন বোর্ড অব কন্ট্রোলের সভাপতি স্যার চার্লস উড। আইন সদস্য মেকলে লিখেছিলেন আগের, ১৮৩৫ সালের মিনিট।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [early-press]
+  assertion:
+    en: The press of James Augustus Hicky was seized by the authorities in 1782.
+    bn: ১৭৮২ সালে কর্তৃপক্ষ জেমস অগাস্টাস হিকির ছাপাখানা বাজেয়াপ্ত করে।
+  reason:
+    en: Hicky's Bengal Gazette is regarded as the first newspaper published in India.
+    bn: হিকির বেঙ্গল গেজেটকে ভারতে প্রকাশিত প্রথম সংবাদপত্র বলে গণ্য করা হয়।
+  answer: 1
+  explanation:
+    en: Both are true, but the reason does not explain the assertion. The press was seized because the paper attacked senior officials, including Warren Hastings; being the first newspaper was not the cause.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির ব্যাখ্যা নয়। ওয়ারেন হেস্টিংস-সহ উচ্চপদস্থ আধিকারিকদের আক্রমণ করার জন্যই ছাপাখানা বাজেয়াপ্ত হয়েছিল; প্রথম সংবাদপত্র হওয়া এর কারণ ছিল না।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [orientalist-anglicist]
+  assertion:
+    en: In 1823 Raja Rammohun Roy supported the plan to set up a new Sanskrit college in Calcutta.
+    bn: ১৮২৩ সালে রাজা রামমোহন রায় কলকাতায় নতুন সংস্কৃত কলেজ স্থাপনের পরিকল্পনা সমর্থন করেন।
+  reason:
+    en: Rammohun Roy wanted the government to promote the teaching of mathematics, natural science and other modern subjects.
+    bn: রামমোহন রায় চেয়েছিলেন সরকার গণিত, প্রকৃতিবিজ্ঞান ও অন্যান্য আধুনিক বিষয়ের শিক্ষায় উৎসাহ দিক।
+  answer: 3
+  explanation:
+    en: The assertion is false, but the reason is true. In his 1823 letter to Lord Amherst, Rammohun Roy protested against the planned Sanskrit college and asked for modern subjects such as mathematics and natural science to be taught instead.
+    bn: বিবৃতিটি মিথ্যা, কিন্তু কারণটি সত্য। ১৮২৩ সালে লর্ড আমহার্স্টকে লেখা চিঠিতে রামমোহন রায় প্রস্তাবিত সংস্কৃত কলেজের প্রতিবাদ করেন এবং তার বদলে গণিত ও প্রকৃতিবিজ্ঞানের মতো আধুনিক বিষয় শেখানোর অনুরোধ জানান।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [early-institutions]
+  stem:
+    en: Arrange the following institutions in chronological order of their founding.
+    bn: নিম্নলিখিত প্রতিষ্ঠানগুলিকে প্রতিষ্ঠার কালানুক্রমিকভাবে সাজান।
+  items:
+    - { en: "1. Fort William College", bn: "১. ফোর্ট উইলিয়াম কলেজ" }
+    - { en: "2. Asiatic Society of Bengal", bn: "২. এশিয়াটিক সোসাইটি অব বেঙ্গল" }
+    - { en: "3. Sanskrit College, Benares", bn: "৩. বারাণসীর সংস্কৃত কলেজ" }
+    - { en: "4. Calcutta Madrasa", bn: "৪. কলকাতা মাদ্রাসা" }
+  options:
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 4-3-2-1, bn: ৪-৩-২-১ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+  answer: 3
+  explanation:
+    en: Calcutta Madrasa (1781), Asiatic Society (1784), Sanskrit College at Benares (1791) and Fort William College (1800). The option beginning with the Asiatic Society is wrong because the Madrasa came three years earlier.
+    bn: কলকাতা মাদ্রাসা (১৭৮১), এশিয়াটিক সোসাইটি (১৭৮৪), বারাণসীর সংস্কৃত কলেজ (১৭৯১) এবং ফোর্ট উইলিয়াম কলেজ (১৮০০)। এশিয়াটিক সোসাইটি দিয়ে শুরু হওয়া বিকল্পটি ভুল, কারণ মাদ্রাসা তিন বছর আগে প্রতিষ্ঠিত হয়।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs, upsc-cse]
+  refs: [macaulay-minute, woods-despatch, later-commissions]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিতগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - { en: "1. Hunter Commission", bn: "১. হান্টার কমিশন" }
+    - { en: "2. Macaulay's Minute", bn: "২. মেকলে মিনিট" }
+    - { en: "3. Indian Universities Act", bn: "৩. ভারতীয় বিশ্ববিদ্যালয় আইন" }
+    - { en: "4. Wood's Despatch", bn: "৪. উডের ডেসপ্যাচ" }
+  options:
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+  answer: 0
+  explanation:
+    en: Macaulay's Minute (1835), Wood's Despatch (1854), Hunter Commission (1882) and the Indian Universities Act (1904). The option starting with Wood's Despatch is wrong because Macaulay's Minute came nearly two decades earlier.
+    bn: মেকলে মিনিট (১৮৩৫), উডের ডেসপ্যাচ (১৮৫৪), হান্টার কমিশন (১৮৮২) এবং ভারতীয় বিশ্ববিদ্যালয় আইন (১৯০৪)। উডের ডেসপ্যাচ দিয়ে শুরু হওয়া বিকল্পটি ভুল, কারণ মেকলে মিনিট প্রায় দুই দশক আগে লেখা হয়।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [early-press, vernacular-press-act]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিতগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - { en: "1. Licensing Regulations of John Adam", bn: "১. জন অ্যাডামের লাইসেন্সিং রেগুলেশন" }
+    - { en: "2. Hicky's Bengal Gazette", bn: "২. হিকির বেঙ্গল গেজেট" }
+    - { en: "3. Vernacular Press Act", bn: "৩. দেশীয় ভাষা সংবাদপত্র আইন" }
+    - { en: "4. Metcalfe's Press Act", bn: "৪. মেটকাফের সংবাদপত্র আইন" }
+  options:
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+  answer: 1
+  explanation:
+    en: Hicky's Bengal Gazette (1780), Licensing Regulations (1823), Metcalfe's Act (1835) and the Vernacular Press Act (1878). The option with Metcalfe before Adam is wrong; Metcalfe's Act repealed Adam's regulations, so it must come after them.
+    bn: হিকির বেঙ্গল গেজেট (১৭৮০), লাইসেন্সিং রেগুলেশন (১৮২৩), মেটকাফ আইন (১৮৩৫) এবং দেশীয় ভাষা সংবাদপত্র আইন (১৮৭৮)। অ্যাডামের আগে মেটকাফ রাখা বিকল্পটি ভুল; মেটকাফ আইন অ্যাডামের বিধি বাতিল করেছিল, তাই সেটি পরে আসবে।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [middle-class, vernacular-press-act, nationalist-press, later-commissions]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - { en: "1. Founding of Kesari", bn: "১. কেশরী প্রতিষ্ঠা" }
+    - { en: "2. Founding of the Indian Association", bn: "২. ভারত সভা প্রতিষ্ঠা" }
+    - { en: "3. Passing of the Vernacular Press Act", bn: "৩. দেশীয় ভাষা সংবাদপত্র আইন পাস" }
+    - { en: "4. Appointment of the Hunter Commission", bn: "৪. হান্টার কমিশন নিয়োগ" }
+  options:
+    - { en: 3-2-1-4, bn: ৩-২-১-৪ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+  answer: 2
+  explanation:
+    en: Indian Association (1876), Vernacular Press Act (1878), Kesari (1881) and Hunter Commission (1882). The option with the Hunter Commission before Kesari is wrong because Kesari began a year earlier.
+    bn: ভারত সভা (১৮৭৬), দেশীয় ভাষা সংবাদপত্র আইন (১৮৭৮), কেশরী (১৮৮১) এবং হান্টার কমিশন (১৮৮২)। কেশরীর আগে হান্টার কমিশন রাখা বিকল্পটি ভুল, কারণ কেশরী এক বছর আগে শুরু হয়।
+  status: ai-generated

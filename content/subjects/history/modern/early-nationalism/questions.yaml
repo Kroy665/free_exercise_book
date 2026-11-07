@@ -1,0 +1,702 @@
+# Questions for hist.modern.early-nationalism
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn.
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [inc-founding]
+  stem:
+    en: Who presided over the first session of the Indian National Congress in 1885?
+    bn: ১৮৮৫ সালে ভারতীয় জাতীয় কংগ্রেসের প্রথম অধিবেশনে কে সভাপতিত্ব করেন?
+  options:
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নওরোজি }
+    - { en: W.C. Bonnerjee, bn: উমেশচন্দ্র বন্দ্যোপাধ্যায় }
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+    - { en: A.O. Hume, bn: এ. ও. হিউম }
+  answer: 1
+  explanation:
+    en: W.C. (Womesh Chandra) Bonnerjee presided over the first session at Bombay. A.O. Hume is a tempting choice because he organised the session and became general secretary, but he never presided over a Congress session.
+    bn: বোম্বাইয়ে প্রথম অধিবেশনে সভাপতিত্ব করেন উমেশচন্দ্র বন্দ্যোপাধ্যায়। এ. ও. হিউম অধিবেশনটি সংগঠিত করেন ও সাধারণ সম্পাদক হন বলে তাঁর নাম বিভ্রান্তিকর, কিন্তু তিনি কখনো কংগ্রেস অধিবেশনে সভাপতিত্ব করেননি।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [inc-founding]
+  stem:
+    en: In which city was the first session of the Indian National Congress held in December 1885?
+    bn: ১৮৮৫ সালের ডিসেম্বরে ভারতীয় জাতীয় কংগ্রেসের প্রথম অধিবেশন কোন শহরে হয়েছিল?
+  options:
+    - { en: Bombay, bn: বোম্বাই }
+    - { en: Poona, bn: পুনা }
+    - { en: Calcutta, bn: কলকাতা }
+    - { en: Madras, bn: মাদ্রাজ }
+  answer: 0
+  explanation:
+    en: The session met on 28 December 1885 at the Gokuldas Tejpal Sanskrit College, Bombay. Poona is the tempting option because the session was first planned there, but it was shifted to Bombay because of an outbreak of cholera.
+    bn: ২৮ ডিসেম্বর ১৮৮৫ তারিখে বোম্বাইয়ের গোকুলদাস তেজপাল সংস্কৃত কলেজে অধিবেশন বসে। পুনা বিভ্রান্তিকর, কারণ প্রথমে সেখানেই অধিবেশনের পরিকল্পনা ছিল, কিন্তু কলেরার প্রাদুর্ভাবের জন্য তা বোম্বাইয়ে সরানো হয়।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+  refs: [associations]
+  stem:
+    en: Who founded the Indian Association in Calcutta in 1876 along with Ananda Mohan Bose?
+    bn: ১৮৭৬ সালে কলকাতায় আনন্দমোহন বসুর সঙ্গে মিলে কে ভারত সভা প্রতিষ্ঠা করেন?
+  options:
+    - { en: Sisir Kumar Ghosh, bn: শিশিরকুমার ঘোষ }
+    - { en: Dwarkanath Tagore, bn: দ্বারকানাথ ঠাকুর }
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+    - { en: W.C. Bonnerjee, bn: উমেশচন্দ্র বন্দ্যোপাধ্যায় }
+  answer: 2
+  explanation:
+    en: Surendranath Banerjea and Ananda Mohan Bose founded the Indian Association in 1876. Sisir Kumar Ghosh is tempting because he too founded a Calcutta body, but his was the Indian League (1875).
+    bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় ও আনন্দমোহন বসু ১৮৭৬ সালে ভারত সভা প্রতিষ্ঠা করেন। শিশিরকুমার ঘোষও কলকাতায় একটি সংগঠন গড়েছিলেন বলে তাঁর নাম বিভ্রান্তিকর, কিন্তু সেটি ছিল ইন্ডিয়ান লিগ (১৮৭৫)।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [associations]
+  stem:
+    en: Who founded the East India Association in London in 1866?
+    bn: ১৮৬৬ সালে লন্ডনে ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Pherozeshah Mehta, bn: ফিরোজশাহ মেহতা }
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+    - { en: Gopal Krishna Gokhale, bn: গোপালকৃষ্ণ গোখলে }
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নওরোজি }
+  answer: 3
+  explanation:
+    en: Dadabhai Naoroji set up the East India Association in London to place Indian questions before the British public. Pherozeshah Mehta is tempting as a leading Bombay Moderate, but he is linked with the Bombay Presidency Association (1885).
+    bn: ভারতের সমস্যাগুলি ব্রিটিশ জনসাধারণের সামনে তুলে ধরার জন্য দাদাভাই নওরোজি লন্ডনে ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন প্রতিষ্ঠা করেন। ফিরোজশাহ মেহতা বোম্বাইয়ের প্রধান নরমপন্থী নেতা হওয়ায় বিভ্রান্তিকর, কিন্তু তিনি বোম্বাই প্রেসিডেন্সি অ্যাসোসিয়েশনের (১৮৮৫) সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc, upsc-cse]
+  refs: [ilbert-bill]
+  stem:
+    en: The Ilbert Bill of 1883 was introduced during the viceroyalty of
+    bn: ১৮৮৩ সালের ইলবার্ট বিল কোন ভাইসরয়ের শাসনকালে পেশ করা হয়?
+  options:
+    - { en: Lord Lytton, bn: লর্ড লিটন }
+    - { en: Lord Ripon, bn: লর্ড রিপন }
+    - { en: Lord Dufferin, bn: লর্ড ডাফরিন }
+    - { en: Lord Lansdowne, bn: লর্ড ল্যান্সডাউন }
+  answer: 1
+  explanation:
+    en: The bill was introduced in 1883 under Lord Ripon by the Law Member C.P. Ilbert. Lord Dufferin is tempting because he was Viceroy when the Congress was founded in 1885, two years later.
+    bn: ১৮৮৩ সালে লর্ড রিপনের আমলে আইন সদস্য সি. পি. ইলবার্ট বিলটি পেশ করেন। লর্ড ডাফরিন বিভ্রান্তিকর, কারণ দুই বছর পরে, ১৮৮৫ সালে কংগ্রেস প্রতিষ্ঠার সময় তিনি ভাইসরয় ছিলেন।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [early-sessions]
+  stem:
+    en: Who was the first Muslim president of the Indian National Congress?
+    bn: ভারতীয় জাতীয় কংগ্রেসের প্রথম মুসলমান সভাপতি কে ছিলেন?
+  options:
+    - { en: Maulana Abul Kalam Azad, bn: মৌলানা আবুল কালাম আজাদ }
+    - { en: M.A. Jinnah, bn: মহম্মদ আলি জিন্না }
+    - { en: Badruddin Tyabji, bn: বদরুদ্দিন তায়েবজি }
+    - { en: Sir Syed Ahmad Khan, bn: স্যার সৈয়দ আহমদ খান }
+  answer: 2
+  explanation:
+    en: Badruddin Tyabji presided over the 1887 Madras session, the third session of the Congress. Abul Kalam Azad also became Congress president, but only in the 20th century, long after Tyabji.
+    bn: বদরুদ্দিন তায়েবজি ১৮৮৭ সালে কংগ্রেসের তৃতীয় অধিবেশন, মাদ্রাজ অধিবেশনে সভাপতিত্ব করেন। আবুল কালাম আজাদও কংগ্রেস সভাপতি হয়েছিলেন, কিন্তু অনেক পরে, বিশ শতকে।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+  refs: [councils-act-1892]
+  stem:
+    en: The Indian Councils Act of 1892 was passed during the viceroyalty of
+    bn: ১৮৯২ সালের ভারতীয় পরিষদ আইন কোন ভাইসরয়ের শাসনকালে পাস হয়?
+  options:
+    - { en: Lord Lansdowne, bn: লর্ড ল্যান্সডাউন }
+    - { en: Lord Ripon, bn: লর্ড রিপন }
+    - { en: Lord Lytton, bn: লর্ড লিটন }
+    - { en: Lord Dufferin, bn: লর্ড ডাফরিন }
+  answer: 0
+  explanation:
+    en: The Act was passed in 1892 under Lord Lansdowne. Lord Ripon is tempting because of his liberal reforms, such as the 1882 resolution on local self-government, but his term ended in 1884.
+    bn: আইনটি ১৮৯২ সালে লর্ড ল্যান্সডাউনের আমলে পাস হয়। ১৮৮২ সালের স্থানীয় স্বায়ত্তশাসন প্রস্তাবের মতো উদারনৈতিক সংস্কারের জন্য লর্ড রিপন বিভ্রান্তিকর, কিন্তু তাঁর শাসনকাল ১৮৮৪ সালেই শেষ হয়।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+  refs: [demands]
+  stem:
+    en: Who wrote "Poverty and Un-British Rule in India"?
+    bn: "\"পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া\" গ্রন্থটি কে লেখেন?"
+  options:
+    - { en: R.C. Dutt, bn: রমেশচন্দ্র দত্ত }
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+    - { en: Gopal Krishna Gokhale, bn: গোপালকৃষ্ণ গোখলে }
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নওরোজি }
+  answer: 3
+  explanation:
+    en: The book is by Dadabhai Naoroji and sets out his drain theory. R.C. Dutt is the tempting option because he also wrote an economic critique of British rule, but his book is the "Economic History of India".
+    bn: গ্রন্থটি দাদাভাই নওরোজির লেখা এবং এতে তাঁর সম্পদ নির্গমন তত্ত্ব ব্যাখ্যা করা হয়েছে। রমেশচন্দ্র দত্তও ব্রিটিশ শাসনের অর্থনৈতিক সমালোচনা করেছিলেন বলে বিভ্রান্তিকর, কিন্তু তাঁর গ্রন্থ "ইকনমিক হিস্টরি অব ইন্ডিয়া"।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [inc-founding]
+  stem:
+    en: Which nationalist leader used the "safety valve" interpretation of the Congress's founding in his book "Young India" (1916) to criticise the Moderates?
+    bn: কোন জাতীয়তাবাদী নেতা তাঁর "ইয়ং ইন্ডিয়া" (১৯১৬) গ্রন্থে কংগ্রেস প্রতিষ্ঠার "নিরাপত্তা-কপাটক" ব্যাখ্যা ব্যবহার করে নরমপন্থীদের সমালোচনা করেন?
+  options:
+    - { en: Lala Lajpat Rai, bn: লালা লাজপত রায় }
+    - { en: Gopal Krishna Gokhale, bn: গোপালকৃষ্ণ গোখলে }
+    - { en: Pherozeshah Mehta, bn: ফিরোজশাহ মেহতা }
+    - { en: Surendranath Banerjea, bn: সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় }
+  answer: 0
+  explanation:
+    en: Lala Lajpat Rai used the safety-valve view in "Young India" to attack the Moderates. Gokhale, Mehta and Banerjea were themselves leading Moderates, so they were the targets of this criticism, not its authors.
+    bn: লালা লাজপত রায় "ইয়ং ইন্ডিয়া" গ্রন্থে নিরাপত্তা-কপাটক মত ব্যবহার করে নরমপন্থীদের আক্রমণ করেন। গোখলে, মেহতা ও সুরেন্দ্রনাথ নিজেরাই প্রধান নরমপন্থী নেতা ছিলেন, তাই তাঁরা এই সমালোচনার লক্ষ্য ছিলেন, প্রবক্তা নন।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [wbcs, state-psc, ssc-cgl, ssc-chsl]
+  refs: [associations]
+  stem:
+    en: The British Indian Association (1851) was formed by the merger of the Landholders' Society and which other body?
+    bn: জমিদার সভা ও অন্য কোন সংগঠন মিলিত হয়ে ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন (১৮৫১) গঠিত হয়?
+  options:
+    - { en: The Indian League, bn: ইন্ডিয়ান লিগ }
+    - { en: The Indian Association, bn: ভারত সভা }
+    - { en: The Bengal British India Society, bn: বেঙ্গল ব্রিটিশ ইন্ডিয়া সোসাইটি }
+    - { en: The East India Association, bn: ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন }
+  answer: 2
+  explanation:
+    en: The Landholders' Society (1838) and the Bengal British India Society (1843) merged to form the British Indian Association in 1851. The Indian Association is tempting because of its similar name, but it was founded much later, in 1876.
+    bn: জমিদার সভা (১৮৩৮) ও বেঙ্গল ব্রিটিশ ইন্ডিয়া সোসাইটি (১৮৪৩) মিলিত হয়ে ১৮৫১ সালে ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন গঠিত হয়। নামের মিলের জন্য ভারত সভা (Indian Association) বিভ্রান্তিকর, কিন্তু সেটি অনেক পরে, ১৮৭৬ সালে প্রতিষ্ঠিত হয়।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [associations]
+  stem:
+    en: Which association was founded in Bombay in 1885 by Pherozeshah Mehta, K.T. Telang and Badruddin Tyabji?
+    bn: ১৮৮৫ সালে বোম্বাইয়ে ফিরোজশাহ মেহতা, কে. টি. তেলাং ও বদরুদ্দিন তায়েবজি কোন সংগঠন প্রতিষ্ঠা করেন?
+  options:
+    - { en: Poona Sarvajanik Sabha, bn: পুনা সার্বজনিক সভা }
+    - { en: Bombay Presidency Association, bn: বোম্বাই প্রেসিডেন্সি অ্যাসোসিয়েশন }
+    - { en: East India Association, bn: ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন }
+    - { en: Madras Mahajan Sabha, bn: মাদ্রাজ মহাজন সভা }
+  answer: 1
+  explanation:
+    en: The Bombay Presidency Association was set up in 1885 by these three leaders. The Poona Sarvajanik Sabha is tempting as another western Indian body, but it was an older association based in Poona, not Bombay, and is linked with M.G. Ranade.
+    bn: এই তিন নেতা ১৮৮৫ সালে বোম্বাই প্রেসিডেন্সি অ্যাসোসিয়েশন প্রতিষ্ঠা করেন। পশ্চিম ভারতের আর একটি সংগঠন হওয়ায় পুনা সার্বজনিক সভা বিভ্রান্তিকর, কিন্তু সেটি বোম্বাই নয়, পুনাভিত্তিক একটি পুরোনো সংগঠন এবং মহাদেব গোবিন্দ রানাডের সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [early-sessions]
+  stem:
+    en: Who presided over the 1888 Allahabad session, becoming the first English president of the Indian National Congress?
+    bn: ১৮৮৮ সালের এলাহাবাদ অধিবেশনে কে সভাপতিত্ব করে ভারতীয় জাতীয় কংগ্রেসের প্রথম ইংরেজ সভাপতি হন?
+  options:
+    - { en: William Wedderburn, bn: উইলিয়াম ওয়েডারবার্ন }
+    - { en: A.O. Hume, bn: এ. ও. হিউম }
+    - { en: Annie Besant, bn: অ্যানি বেসান্ত }
+    - { en: George Yule, bn: জর্জ ইউল }
+  answer: 3
+  explanation:
+    en: George Yule presided over the 1888 session at Allahabad. William Wedderburn is the tempting option, but he presided a year later, in 1889 at Bombay.
+    bn: ১৮৮৮ সালের এলাহাবাদ অধিবেশনে সভাপতিত্ব করেন জর্জ ইউল। উইলিয়াম ওয়েডারবার্ন বিভ্রান্তিকর, কিন্তু তিনি এক বছর পরে, ১৮৮৯ সালে বোম্বাই অধিবেশনে সভাপতিত্ব করেন।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [associations]
+  stem:
+    en: Consider the following statements about the Indian Association.
+    bn: ভারত সভা সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was founded in Calcutta in 1876."
+      bn: "১. এটি ১৮৭৬ সালে কলকাতায় প্রতিষ্ঠিত হয়।"
+    - en: "2. It was founded by Dwarkanath Tagore."
+      bn: "২. এটি দ্বারকানাথ ঠাকুর প্রতিষ্ঠা করেন।"
+    - en: "3. It organised an all-India National Conference, which later merged with the Indian National Congress."
+      bn: "৩. এটি একটি সর্বভারতীয় জাতীয় সম্মেলন আহ্বান করে, যা পরে ভারতীয় জাতীয় কংগ্রেসের সঙ্গে মিশে যায়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct; the National Conference met in 1883 and 1885 and merged with the Congress in 1886. Statement 2 is wrong because the Association was founded by Surendranath Banerjea and Ananda Mohan Bose; Dwarkanath Tagore is linked with the much earlier Landholders' Society (1838).
+    bn: ১ ও ৩ নং বিবৃতি সঠিক; জাতীয় সম্মেলন ১৮৮৩ ও ১৮৮৫ সালে বসে এবং ১৮৮৬ সালে কংগ্রেসের সঙ্গে মিশে যায়। ২ নং বিবৃতিটি ভুল, কারণ ভারত সভা প্রতিষ্ঠা করেন সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় ও আনন্দমোহন বসু; দ্বারকানাথ ঠাকুর অনেক আগের জমিদার সভার (১৮৩৮) সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [ilbert-bill]
+  stem:
+    en: Consider the following statements about the Ilbert Bill.
+    bn: ইলবার্ট বিল সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was introduced in 1883 during the viceroyalty of Lord Ripon."
+      bn: "১. এটি ১৮৮৩ সালে লর্ড রিপনের শাসনকালে পেশ করা হয়।"
+    - en: "2. It sought to allow Indian judges to try European offenders in criminal cases."
+      bn: "২. এর উদ্দেশ্য ছিল ফৌজদারি মামলায় ভারতীয় বিচারকদের ইউরোপীয় অভিযুক্তদের বিচারের অধিকার দেওয়া।"
+    - en: "3. It was passed in its original form despite European opposition."
+      bn: "৩. ইউরোপীয়দের বিরোধিতা সত্ত্বেও এটি মূল রূপেই পাস হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the government gave way and passed a diluted version in 1884, under which a European accused could claim a jury at least half of whose members were Europeans.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ সরকার নতিস্বীকার করে ১৮৮৪ সালে একটি দুর্বল রূপ পাস করে, যাতে ইউরোপীয় অভিযুক্ত অন্তত অর্ধেক ইউরোপীয় সদস্যযুক্ত জুরি দাবি করতে পারতেন।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [inc-founding]
+  stem:
+    en: Consider the following statements about the first session of the Indian National Congress.
+    bn: ভারতীয় জাতীয় কংগ্রেসের প্রথম অধিবেশন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was held in Bombay in December 1885."
+      bn: "১. এটি ১৮৮৫ সালের ডিসেম্বরে বোম্বাইয়ে অনুষ্ঠিত হয়।"
+    - en: "2. It was presided over by A.O. Hume."
+      bn: "২. এতে সভাপতিত্ব করেন এ. ও. হিউম।"
+    - en: "3. It was attended by 72 delegates."
+      bn: "৩. এতে ৭২ জন প্রতিনিধি উপস্থিত ছিলেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+  answer: 3
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because W.C. Bonnerjee presided; Hume organised the session and became general secretary but was never Congress president.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ সভাপতিত্ব করেন উমেশচন্দ্র বন্দ্যোপাধ্যায়; হিউম অধিবেশন সংগঠিত করেন ও সাধারণ সম্পাদক হন, কিন্তু কখনো কংগ্রেস সভাপতি হননি।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [councils-act-1892]
+  stem:
+    en: Consider the following statements about the Indian Councils Act, 1892.
+    bn: ১৮৯২ সালের ভারতীয় পরিষদ আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Members of the councils were given the right to vote on the budget."
+      bn: "১. আইনসভার সদস্যদের বাজেটের উপর ভোটদানের অধিকার দেওয়া হয়।"
+    - en: "2. Members could discuss the annual budget."
+      bn: "২. সদস্যরা বার্ষিক বাজেট নিয়ে আলোচনা করতে পারতেন।"
+    - en: "3. Some non-official members were nominated on the recommendation of bodies such as universities, municipalities and chambers of commerce."
+      bn: "৩. কিছু বেসরকারি সদস্যকে বিশ্ববিদ্যালয়, পৌরসভা ও বণিকসভার মতো সংস্থার সুপারিশে মনোনীত করা হত।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 2 and 3 are correct; the nomination system introduced a limited, indirect element of election. Statement 1 is wrong because the 1892 Act allowed only discussion of the budget, not voting on it.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক; এই মনোনয়ন ব্যবস্থার মাধ্যমে সীমিত, পরোক্ষ নির্বাচনের উপাদান চালু হয়। ১ নং বিবৃতিটি ভুল, কারণ ১৮৯২ সালের আইনে কেবল বাজেট আলোচনার সুযোগ ছিল, ভোটদানের নয়।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [demands]
+  stem:
+    en: Consider the following demands. Which of them were raised by the Moderates?
+    bn: নিম্নলিখিত দাবিগুলি বিবেচনা করুন। এর মধ্যে কোনগুলি নরমপন্থীরা তুলেছিলেন?
+  statements:
+    - en: "1. Simultaneous ICS examinations in India and England"
+      bn: "১. ভারত ও ইংল্যান্ডে একসঙ্গে ICS পরীক্ষা"
+    - en: "2. Expansion and reform of the legislative councils"
+      bn: "২. আইনসভার সম্প্রসারণ ও সংস্কার"
+    - en: "3. Reduction of land revenue and military expenditure"
+      bn: "৩. ভূমিরাজস্ব ও সামরিক ব্যয় হ্রাস"
+  question:
+    en: Select the correct answer using the code given below.
+    bn: নিচের সংকেত ব্যবহার করে সঠিক উত্তর বেছে নিন।
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three were Moderate demands, covering administrative, constitutional and economic reform. A tempting error is to leave out statement 3, but the economic critique of colonial rule was central to the Moderates' programme.
+    bn: তিনটিই নরমপন্থীদের দাবি ছিল, যা প্রশাসনিক, সাংবিধানিক ও অর্থনৈতিক সংস্কারকে বোঝায়। ৩ নং বাদ দেওয়ার ভুল হতে পারে, কিন্তু ঔপনিবেশিক শাসনের অর্থনৈতিক সমালোচনা ছিল নরমপন্থীদের কর্মসূচির কেন্দ্রে।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl]
+  refs: [moderate-leaders, early-sessions, associations]
+  stem:
+    en: Consider the following statements about Dadabhai Naoroji.
+    bn: দাদাভাই নওরোজি সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. He is known as the \"Grand Old Man of India\"."
+      bn: "১. তিনি \"ভারতের বৃদ্ধ পিতামহ\" (Grand Old Man of India) নামে পরিচিত।"
+    - en: "2. He presided over the Calcutta session of the Congress in 1886."
+      bn: "২. তিনি ১৮৮৬ সালে কংগ্রেসের কলকাতা অধিবেশনে সভাপতিত্ব করেন।"
+    - en: "3. He founded the Poona Sarvajanik Sabha."
+      bn: "৩. তিনি পুনা সার্বজনিক সভা প্রতিষ্ঠা করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the Poona Sarvajanik Sabha was a Poona body led by local leaders such as M.G. Ranade; Naoroji founded the East India Association in London (1866).
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ পুনা সার্বজনিক সভা ছিল মহাদেব গোবিন্দ রানাডের মতো স্থানীয় নেতাদের পরিচালিত পুনার একটি সংগঠন; নওরোজি লন্ডনে ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন (১৮৬৬) প্রতিষ্ঠা করেন।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc, upsc-cse]
+  refs: [associations]
+  stem:
+    en: Match List I (Association) with List II (Founder or leading figure).
+    bn: তালিকা I (সংগঠন)-এর সঙ্গে তালিকা II (প্রতিষ্ঠাতা বা প্রধান ব্যক্তিত্ব) মেলান।
+  left:
+    - { en: "A. East India Association", bn: "ক. ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন" }
+    - { en: "B. Indian Association", bn: "খ. ভারত সভা" }
+    - { en: "C. Indian League", bn: "গ. ইন্ডিয়ান লিগ" }
+    - { en: "D. Landholders' Society", bn: "ঘ. জমিদার সভা" }
+  right:
+    - { en: "1. Sisir Kumar Ghosh", bn: "১. শিশিরকুমার ঘোষ" }
+    - { en: "2. Dadabhai Naoroji", bn: "২. দাদাভাই নওরোজি" }
+    - { en: "3. Dwarkanath Tagore", bn: "৩. দ্বারকানাথ ঠাকুর" }
+    - { en: "4. Surendranath Banerjea", bn: "৪. সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়" }
+  options:
+    - { en: "A-2, B-4, C-1, D-3", bn: "ক-২, খ-৪, গ-১, ঘ-৩" }
+    - { en: "A-4, B-2, C-1, D-3", bn: "ক-৪, খ-২, গ-১, ঘ-৩" }
+    - { en: "A-2, B-3, C-1, D-4", bn: "ক-২, খ-৩, গ-১, ঘ-৪" }
+    - { en: "A-1, B-4, C-2, D-3", bn: "ক-১, খ-৪, গ-২, ঘ-৩" }
+  answer: 0
+  explanation:
+    en: Naoroji founded the East India Association (1866, London), Surendranath Banerjea the Indian Association (1876, with Ananda Mohan Bose), Sisir Kumar Ghosh the Indian League (1875) and Dwarkanath Tagore was among the founders of the Landholders' Society (1838). Option C is tempting because Dwarkanath Tagore and Surendranath were both Bengal leaders, but they belong to different generations and different bodies.
+    bn: নওরোজি ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন (১৮৬৬, লন্ডন), সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় ভারত সভা (১৮৭৬, আনন্দমোহন বসুর সঙ্গে) এবং শিশিরকুমার ঘোষ ইন্ডিয়ান লিগ (১৮৭৫) প্রতিষ্ঠা করেন; দ্বারকানাথ ঠাকুর ছিলেন জমিদার সভার (১৮৩৮) প্রতিষ্ঠাতাদের অন্যতম। দ্বারকানাথ ও সুরেন্দ্রনাথ দুজনেই বাংলার নেতা হওয়ায় তৃতীয় বিকল্পটি বিভ্রান্তিকর, কিন্তু তাঁরা ভিন্ন প্রজন্মের এবং ভিন্ন সংগঠনের সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, wbcs, state-psc, upsc-cse]
+  refs: [associations]
+  stem:
+    en: Match List I (Association) with List II (Year of founding).
+    bn: তালিকা I (সংগঠন)-এর সঙ্গে তালিকা II (প্রতিষ্ঠার বছর) মেলান।
+  left:
+    - { en: "A. Landholders' Society", bn: "ক. জমিদার সভা" }
+    - { en: "B. British Indian Association", bn: "খ. ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন" }
+    - { en: "C. East India Association", bn: "গ. ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন" }
+    - { en: "D. Madras Mahajan Sabha", bn: "ঘ. মাদ্রাজ মহাজন সভা" }
+  right:
+    - { en: "1. 1866", bn: "১. ১৮৬৬" }
+    - { en: "2. 1884", bn: "২. ১৮৮৪" }
+    - { en: "3. 1838", bn: "৩. ১৮৩৮" }
+    - { en: "4. 1851", bn: "৪. ১৮৫১" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Landholders' Society 1838, British Indian Association 1851, East India Association 1866, Madras Mahajan Sabha 1884. Option A is tempting because it swaps the two Bengal bodies, but the British Indian Association was formed by merging the older Landholders' Society.
+    bn: জমিদার সভা ১৮৩৮, ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন ১৮৫১, ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন ১৮৬৬, মাদ্রাজ মহাজন সভা ১৮৮৪। প্রথম বিকল্পটি বাংলার দুটি সংগঠনের বছর উল্টে দেয় বলে বিভ্রান্তিকর, কিন্তু পুরোনো জমিদার সভা মিলিত হয়েই ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন গঠিত হয়েছিল।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [early-sessions]
+  stem:
+    en: Match List I (Congress session) with List II (President).
+    bn: তালিকা I (কংগ্রেস অধিবেশন)-এর সঙ্গে তালিকা II (সভাপতি) মেলান।
+  left:
+    - { en: "A. 1885, Bombay", bn: "ক. ১৮৮৫, বোম্বাই" }
+    - { en: "B. 1886, Calcutta", bn: "খ. ১৮৮৬, কলকাতা" }
+    - { en: "C. 1887, Madras", bn: "গ. ১৮৮৭, মাদ্রাজ" }
+    - { en: "D. 1888, Allahabad", bn: "ঘ. ১৮৮৮, এলাহাবাদ" }
+  right:
+    - { en: "1. George Yule", bn: "১. জর্জ ইউল" }
+    - { en: "2. Badruddin Tyabji", bn: "২. বদরুদ্দিন তায়েবজি" }
+    - { en: "3. W.C. Bonnerjee", bn: "৩. উমেশচন্দ্র বন্দ্যোপাধ্যায়" }
+    - { en: "4. Dadabhai Naoroji", bn: "৪. দাদাভাই নওরোজি" }
+  options:
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Bonnerjee (1885, Bombay), Naoroji (1886, Calcutta), Tyabji (1887, Madras) and Yule (1888, Allahabad). Option A is tempting because Naoroji is the best-known early leader, but he presided over the second session, not the first.
+    bn: উমেশচন্দ্র বন্দ্যোপাধ্যায় (১৮৮৫, বোম্বাই), দাদাভাই নওরোজি (১৮৮৬, কলকাতা), বদরুদ্দিন তায়েবজি (১৮৮৭, মাদ্রাজ) এবং জর্জ ইউল (১৮৮৮, এলাহাবাদ)। নওরোজি সবচেয়ে পরিচিত প্রথম যুগের নেতা হওয়ায় প্রথম বিকল্পটি বিভ্রান্তিকর, কিন্তু তিনি দ্বিতীয় অধিবেশনে সভাপতিত্ব করেন, প্রথমটিতে নয়।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs, state-psc]
+  refs: [moderate-leaders, inc-founding, early-sessions]
+  stem:
+    en: Match List I (Person) with List II (Description).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (পরিচয়) মেলান।
+  left:
+    - { en: "A. Dadabhai Naoroji", bn: "ক. দাদাভাই নওরোজি" }
+    - { en: "B. A.O. Hume", bn: "খ. এ. ও. হিউম" }
+    - { en: "C. Gopal Krishna Gokhale", bn: "গ. গোপালকৃষ্ণ গোখলে" }
+    - { en: "D. Badruddin Tyabji", bn: "ঘ. বদরুদ্দিন তায়েবজি" }
+  right:
+    - { en: "1. First Muslim president of the Congress", bn: "১. কংগ্রেসের প্রথম মুসলমান সভাপতি" }
+    - { en: "2. Founder of the Servants of India Society", bn: "২. সার্ভেন্টস অব ইন্ডিয়া সোসাইটির প্রতিষ্ঠাতা" }
+    - { en: "3. Retired ICS officer who helped found the Congress", bn: "৩. কংগ্রেস প্রতিষ্ঠায় সাহায্যকারী অবসরপ্রাপ্ত ICS কর্মচারী" }
+    - { en: "4. Grand Old Man of India", bn: "৪. ভারতের বৃদ্ধ পিতামহ" }
+  options:
+    - { en: "A-4, B-2, C-3, D-1", bn: "ক-৪, খ-২, গ-৩, ঘ-১" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+  answer: 3
+  explanation:
+    en: Naoroji is the Grand Old Man of India, Hume the retired ICS officer, Gokhale the founder of the Servants of India Society (1905) and Tyabji the first Muslim president (1887). Option A is tempting if Hume and Gokhale are mixed up as organisers.
+    bn: নওরোজি "ভারতের বৃদ্ধ পিতামহ", হিউম অবসরপ্রাপ্ত ICS কর্মচারী, গোখলে সার্ভেন্টস অব ইন্ডিয়া সোসাইটির (১৯০৫) প্রতিষ্ঠাতা এবং তায়েবজি প্রথম মুসলমান সভাপতি (১৮৮৭)। সংগঠক হিসেবে হিউম ও গোখলেকে গুলিয়ে ফেললে প্রথম বিকল্পটি বিভ্রান্তিকর মনে হতে পারে।
+  status: ai-generated
+
+- id: q0023
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [associations]
+  stem:
+    en: Arrange the following associations in chronological order of their founding.
+    bn: নিম্নলিখিত সংগঠনগুলিকে প্রতিষ্ঠার ভিত্তিতে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Landholders' Society"
+      bn: "১. জমিদার সভা"
+    - en: "2. British Indian Association"
+      bn: "২. ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন"
+    - en: "3. East India Association"
+      bn: "৩. ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন"
+    - en: "4. Indian Association"
+      bn: "৪. ভারত সভা"
+  options:
+    - { en: 1-2-3-4, bn: ১-২-৩-৪ }
+    - { en: 1-3-2-4, bn: ১-৩-২-৪ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+  answer: 0
+  explanation:
+    en: Landholders' Society (1838), British Indian Association (1851), East India Association (1866), Indian Association (1876). Option C is wrong because the British Indian Association was formed by merging the older Landholders' Society.
+    bn: জমিদার সভা (১৮৩৮), ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন (১৮৫১), ইস্ট ইন্ডিয়া অ্যাসোসিয়েশন (১৮৬৬), ভারত সভা (১৮৭৬)। তৃতীয় বিকল্পটি ভুল, কারণ পুরোনো জমিদার সভা মিলিত হয়েই ব্রিটিশ ইন্ডিয়ান অ্যাসোসিয়েশন গঠিত হয়েছিল।
+  status: ai-generated
+
+- id: q0024
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+  refs: [factors, ilbert-bill, inc-founding, councils-act-1892]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Ilbert Bill introduced"
+      bn: "১. ইলবার্ট বিল পেশ"
+    - en: "2. First session of the Indian National Congress"
+      bn: "২. ভারতীয় জাতীয় কংগ্রেসের প্রথম অধিবেশন"
+    - en: "3. Indian Councils Act passed"
+      bn: "৩. ভারতীয় পরিষদ আইন পাস"
+    - en: "4. Vernacular Press Act passed"
+      bn: "৪. দেশীয় সংবাদপত্র আইন পাস"
+  options:
+    - { en: 1-4-2-3, bn: ১-৪-২-৩ }
+    - { en: 4-1-3-2, bn: ৪-১-৩-২ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 4-1-2-3, bn: ৪-১-২-৩ }
+  answer: 3
+  explanation:
+    en: Vernacular Press Act (1878), Ilbert Bill (1883), first Congress session (1885), Indian Councils Act (1892). Option B is wrong because the Councils Act came seven years after the Congress was founded and was partly a response to its demands.
+    bn: দেশীয় সংবাদপত্র আইন (১৮৭৮), ইলবার্ট বিল (১৮৮৩), কংগ্রেসের প্রথম অধিবেশন (১৮৮৫), ভারতীয় পরিষদ আইন (১৮৯২)। দ্বিতীয় বিকল্পটি ভুল, কারণ পরিষদ আইন কংগ্রেস প্রতিষ্ঠার সাত বছর পরে আসে এবং আংশিকভাবে কংগ্রেসের দাবির ফল।
+  status: ai-generated
+
+- id: q0025
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [associations, councils-act-1892]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Founding of the Madras Mahajan Sabha"
+      bn: "১. মাদ্রাজ মহাজন সভার প্রতিষ্ঠা"
+    - en: "2. Founding of the Poona Sarvajanik Sabha"
+      bn: "২. পুনা সার্বজনিক সভার প্রতিষ্ঠা"
+    - en: "3. Indian Councils Act"
+      bn: "৩. ভারতীয় পরিষদ আইন"
+    - en: "4. Founding of the Indian Association"
+      bn: "৪. ভারত সভার প্রতিষ্ঠা"
+  options:
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+  answer: 1
+  explanation:
+    en: Poona Sarvajanik Sabha (1870; 1867 in some books), Indian Association (1876), Madras Mahajan Sabha (1884), Indian Councils Act (1892). Option A is tempting because the Indian Association is the best known of these bodies, but the Poona Sarvajanik Sabha is older (it is dated 1870, or 1867 in some books; either way before 1876).
+    bn: পুনা সার্বজনিক সভা (১৮৭০; কিছু গ্রন্থে ১৮৬৭), ভারত সভা (১৮৭৬), মাদ্রাজ মহাজন সভা (১৮৮৪), ভারতীয় পরিষদ আইন (১৮৯২)। ভারত সভা সবচেয়ে পরিচিত বলে প্রথম বিকল্পটি বিভ্রান্তিকর, কিন্তু পুনা সার্বজনিক সভা তার চেয়ে পুরোনো (১৮৭০, কিছু গ্রন্থে ১৮৬৭; উভয় ক্ষেত্রেই ১৮৭৬-এর আগে)।
+  status: ai-generated
+
+- id: q0026
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [early-sessions]
+  stem:
+    en: Arrange the following Congress presidents in the chronological order of the sessions they presided over.
+    bn: নিম্নলিখিত কংগ্রেস সভাপতিদের তাঁদের সভাপতিত্ব করা অধিবেশনের ভিত্তিতে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Badruddin Tyabji"
+      bn: "১. বদরুদ্দিন তায়েবজি"
+    - en: "2. George Yule"
+      bn: "২. জর্জ ইউল"
+    - en: "3. W.C. Bonnerjee"
+      bn: "৩. উমেশচন্দ্র বন্দ্যোপাধ্যায়"
+    - en: "4. Dadabhai Naoroji (first presidency)"
+      bn: "৪. দাদাভাই নওরোজি (প্রথমবার সভাপতিত্ব)"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+  answer: 2
+  explanation:
+    en: Bonnerjee (1885), Naoroji (1886), Tyabji (1887), Yule (1888). Option D is tempting if Yule is placed before Tyabji, but the Madras session of 1887 came before the Allahabad session of 1888.
+    bn: উমেশচন্দ্র বন্দ্যোপাধ্যায় (১৮৮৫), দাদাভাই নওরোজি (১৮৮৬), বদরুদ্দিন তায়েবজি (১৮৮৭), জর্জ ইউল (১৮৮৮)। ইউলকে তায়েবজির আগে বসালে চতুর্থ বিকল্পটি বিভ্রান্তিকর হয়, কিন্তু ১৮৮৭ সালের মাদ্রাজ অধিবেশন ১৮৮৮ সালের এলাহাবাদ অধিবেশনের আগে হয়েছিল।
+  status: ai-generated
+
+- id: q0027
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [ilbert-bill]
+  assertion:
+    en: The Ilbert Bill of 1883 faced strong opposition from Europeans living in India.
+    bn: ১৮৮৩ সালের ইলবার্ট বিল ভারতে বসবাসকারী ইউরোপীয়দের তীব্র বিরোধিতার মুখে পড়ে।
+  reason:
+    en: The Bill sought to allow Indian judges to try Europeans in criminal cases.
+    bn: বিলটির উদ্দেশ্য ছিল ফৌজদারি মামলায় ভারতীয় বিচারকদের ইউরোপীয়দের বিচারের অধিকার দেওয়া।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Europeans in India objected precisely because the Bill would have placed them under the jurisdiction of Indian judges; their agitation forced the government to dilute it in 1884.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। বিলটি ইউরোপীয়দের ভারতীয় বিচারকদের এক্তিয়ারের অধীনে আনত বলেই ভারতে বসবাসকারী ইউরোপীয়রা আপত্তি তোলে; তাদের আন্দোলনের চাপে সরকার ১৮৮৪ সালে বিলটি দুর্বল করতে বাধ্য হয়।
+  status: ai-generated
+
+- id: q0028
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [demands, moderate-leaders]
+  assertion:
+    en: Dadabhai Naoroji put forward the theory that India's wealth was being drained to Britain.
+    bn: দাদাভাই নওরোজি এই তত্ত্ব উপস্থাপন করেন যে ভারতের সম্পদ ব্রিটেনে নির্গত হচ্ছে।
+  reason:
+    en: In 1892 Dadabhai Naoroji became the first Indian to be elected to the British House of Commons.
+    bn: ১৮৯২ সালে দাদাভাই নওরোজি ব্রিটিশ হাউস অব কমন্সে নির্বাচিত প্রথম ভারতীয় হন।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. The drain theory came from his study of India's poverty and of the flow of payments to Britain; his election to Parliament was a separate achievement.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়। সম্পদ নির্গমন তত্ত্ব এসেছিল ভারতের দারিদ্র্য ও ব্রিটেনে অর্থ প্রেরণ নিয়ে তাঁর অনুসন্ধান থেকে; পার্লামেন্টে নির্বাচিত হওয়া ছিল একটি পৃথক কৃতিত্ব।
+  status: ai-generated
+
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [councils-act-1892]
+  assertion:
+    en: The Moderates were dissatisfied with the Indian Councils Act of 1892.
+    bn: নরমপন্থীরা ১৮৯২ সালের ভারতীয় পরিষদ আইনে অসন্তুষ্ট ছিলেন।
+  reason:
+    en: The Act gave members of the legislative councils the right to vote on the budget.
+    bn: এই আইন আইনসভার সদস্যদের বাজেটের উপর ভোটদানের অধিকার দেয়।
+  answer: 2
+  explanation:
+    en: The assertion is true but the reason is false. The Act allowed members only to discuss the budget, not to vote on it, and kept the official majority; these limits are why the Moderates were dissatisfied.
+    bn: বিবৃতিটি সত্য, কিন্তু কারণটি মিথ্যা। আইনটিতে সদস্যরা কেবল বাজেট নিয়ে আলোচনা করতে পারতেন, ভোট দিতে পারতেন না, এবং সরকারি সংখ্যাগরিষ্ঠতা বজায় ছিল; এই সীমাবদ্ধতার জন্যই নরমপন্থীরা অসন্তুষ্ট ছিলেন।
+  status: ai-generated
+
+- id: q0030
+  type: assertion-reason
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, wbcs, state-psc, upsc-cse]
+  refs: [inc-founding, early-sessions]
+  assertion:
+    en: A.O. Hume presided over the first session of the Indian National Congress.
+    bn: এ. ও. হিউম ভারতীয় জাতীয় কংগ্রেসের প্রথম অধিবেশনে সভাপতিত্ব করেন।
+  reason:
+    en: A.O. Hume was a retired British officer of the Indian Civil Service.
+    bn: এ. ও. হিউম ভারতীয় সিভিল সার্ভিসের একজন অবসরপ্রাপ্ত ব্রিটিশ কর্মচারী ছিলেন।
+  answer: 3
+  explanation:
+    en: The assertion is false and the reason is true. Hume, a retired ICS officer, organised the first session and became general secretary, but W.C. Bonnerjee presided over it.
+    bn: বিবৃতিটি মিথ্যা, কিন্তু কারণটি সত্য। অবসরপ্রাপ্ত ICS কর্মচারী হিউম প্রথম অধিবেশন সংগঠিত করেন ও সাধারণ সম্পাদক হন, কিন্তু সভাপতিত্ব করেন উমেশচন্দ্র বন্দ্যোপাধ্যায়।
+  status: ai-generated

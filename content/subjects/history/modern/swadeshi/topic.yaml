@@ -1,0 +1,22 @@
+id: hist.modern.swadeshi
+title:
+  en: Partition of Bengal and the Swadeshi Movement
+  bn: বঙ্গভঙ্গ ও স্বদেশি আন্দোলন
+summary:
+  en: Rise of the Extremists, Lord Curzon's policies, the Partition of Bengal (1905), the Swadeshi and Boycott movement, national education, the Calcutta and Surat sessions, the Muslim League, the Morley-Minto Reforms (1909) and the annulment of the partition (1911).
+  bn: চরমপন্থীদের উত্থান, লর্ড কার্জনের নীতি, বঙ্গভঙ্গ (১৯০৫), স্বদেশি ও বয়কট আন্দোলন, জাতীয় শিক্ষা, কলকাতা ও সুরাট অধিবেশন, মুসলিম লিগ, মর্লে-মিন্টো সংস্কার (১৯০৯) এবং বঙ্গভঙ্গ রদ (১৯১১)।
+order: 10
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, ibps-po, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 12 (old), Modern India (Bipan Chandra), Ch. "Growth of New India — The Nationalist Movement 1905–1918"
+  - NCERT Class 8, Our Pasts III, Ch. "The Making of the National Movement 1870s–1947"
+  - Bipan Chandra et al., India's Struggle for Independence, Ch. "The Swadeshi Movement 1903–08" and Ch. "The Split in the Congress and the Rise of Revolutionary Terrorism"
+  - Sumit Sarkar, The Swadeshi Movement in Bengal 1903–1908
+  - Spectrum, A Brief History of Modern India, Ch. "Era of Militant Nationalism (1905–1909)"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []
