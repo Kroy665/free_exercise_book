@@ -114,7 +114,7 @@ fn streaks_heatmap_weak_topics_and_goal() {
     );
     assert_eq!(v.today, 1);
     assert_eq!(v.total_attempts, 5);
-    let t = &v.topics[0];
+    let t = v.topics.iter().find(|t| t.topic_id == TOPIC).unwrap();
     assert_eq!(
         (t.title.as_str(), t.attempted, t.correct, t.accuracy),
         ("১৮৫৭ সালের মহাবিদ্রোহ", 5, 0, 0.0)

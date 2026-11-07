@@ -1,0 +1,21 @@
+id: hist.modern.british-expansion
+title:
+  en: Expansion of British Power
+  bn: ব্রিটিশ শক্তির বিস্তার
+summary:
+  en: How the East India Company became a territorial power, from Plassey and Buxar in Bengal through the Mysore, Maratha and Sikh wars to Wellesley's Subsidiary Alliance and Dalhousie's Doctrine of Lapse.
+  bn: পলাশি ও বক্সারের যুদ্ধ থেকে শুরু করে ইঙ্গ-মহীশূর, ইঙ্গ-মারাঠা ও ইঙ্গ-শিখ যুদ্ধ, ওয়েলেসলির অধীনতামূলক মিত্রতা এবং ডালহৌসির স্বত্ববিলোপ নীতির মাধ্যমে ইস্ট ইন্ডিয়া কোম্পানির রাজ্যবিস্তার।
+order: 2
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "From Trade to Territory"
+  - Bipan Chandra, Modern India (old NCERT; later revised as History of Modern India), Ch. "The British Conquest of India"
+  - Spectrum, A Brief History of Modern India, Ch. "Expansion and Consolidation of British Power in India"
+  - Sekhar Bandyopadhyay, From Plassey to Partition, Ch. 1
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

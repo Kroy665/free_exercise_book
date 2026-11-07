@@ -111,8 +111,21 @@ fn index_follows_pack_install_and_remove() {
     std::fs::create_dir_all(&dir).unwrap();
     let subjects =
         import::load_dir(&PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content")).unwrap();
-    let (s, u) = (&subjects[0], &subjects[0].units[0]);
-    let t = &u.topics[0];
+    let s = subjects.iter().find(|s| s.subject.id == "hist").unwrap();
+    let u = s
+        .units
+        .iter()
+        .find(|u| {
+            u.topics
+                .iter()
+                .any(|t| t.topic.id == "hist.modern.revolt-1857")
+        })
+        .unwrap();
+    let t = u
+        .topics
+        .iter()
+        .find(|t| t.topic.id == "hist.modern.revolt-1857")
+        .unwrap();
     let pack = dir.join("p.db");
     feb_core::packs::build_pack_db(&pack, s, u, t).unwrap();
     drop(c0);

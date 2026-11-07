@@ -22,7 +22,12 @@ fn library_tree_in_bengali() {
     let tree = library::tree(&c, &u, "bn").unwrap();
     let hist = tree.iter().find(|s| s.id == "hist").unwrap();
     assert_eq!(hist.title, "ইতিহাস");
-    let topic = &hist.units[0].topics[0];
+    let topic = hist
+        .units
+        .iter()
+        .flat_map(|u| &u.topics)
+        .find(|t| t.id == TOPIC)
+        .unwrap();
     assert_eq!(topic.title, "১৮৫৭ সালের মহাবিদ্রোহ");
     assert_eq!(topic.question_count, 12);
 }
@@ -106,9 +111,13 @@ fn pack_build_install_update_remove() {
     let dir = std::env::temp_dir().join(format!("feb-pack-test-{}", std::process::id()));
     std::fs::create_dir_all(&dir).unwrap();
     let subjects = import::load_dir(&content_dir()).unwrap();
-    let s = &subjects[0];
-    let u = &s.units[0];
-    let t = &u.topics[0];
+    let s = subjects.iter().find(|s| s.subject.id == "hist").unwrap();
+    let u = s
+        .units
+        .iter()
+        .find(|u| u.topics.iter().any(|t| t.topic.id == TOPIC))
+        .unwrap();
+    let t = u.topics.iter().find(|t| t.topic.id == TOPIC).unwrap();
     let pack = dir.join("p.db");
     let counts = feb_core::packs::build_pack_db(&pack, s, u, t).unwrap();
     assert_eq!((counts.sections, counts.questions), (14, 12));

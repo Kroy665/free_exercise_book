@@ -1,0 +1,702 @@
+# Questions for hist.modern.economic-impact
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn.
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [permanent-settlement]
+  stem:
+    en: Who introduced the Permanent Settlement in Bengal?
+    bn: বাংলায় চিরস্থায়ী বন্দোবস্ত কে চালু করেন?
+  options:
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord Wellesley, bn: লর্ড ওয়েলেসলি }
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+  answer: 1
+  explanation:
+    en: Lord Cornwallis introduced the Permanent Settlement in 1793 in Bengal, Bihar and Orissa. Warren Hastings is linked with the earlier five-year (Panchsala) settlement of 1772, not the Permanent Settlement.
+    bn: লর্ড কর্নওয়ালিস ১৭৯৩ সালে বাংলা, বিহার ও ওড়িশায় চিরস্থায়ী বন্দোবস্ত চালু করেন। ওয়ারেন হেস্টিংস এর আগের ১৭৭২ সালের পাঁচসালা বন্দোবস্তের সঙ্গে যুক্ত, চিরস্থায়ী বন্দোবস্তের সঙ্গে নয়।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [ryotwari-mahalwari]
+  stem:
+    en: The Ryotwari system in the Madras Presidency is most closely associated with
+    bn: মাদ্রাজ প্রেসিডেন্সির রায়তওয়ারি বন্দোবস্ত সবচেয়ে বেশি কার নামের সঙ্গে যুক্ত?
+  options:
+    - { en: Holt Mackenzie, bn: হোল্ট ম্যাকেঞ্জি }
+    - { en: John Shore, bn: জন শোর }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Thomas Munro, bn: টমাস মনরো }
+  answer: 3
+  explanation:
+    en: Thomas Munro, together with Alexander Read, is associated with the Ryotwari system in Madras. Holt Mackenzie proposed the Mahalwari system (1822), while John Shore and Cornwallis are linked with the Permanent Settlement.
+    bn: আলেকজান্ডার রিডের সঙ্গে টমাস মনরো মাদ্রাজের রায়তওয়ারি বন্দোবস্তের সঙ্গে যুক্ত। হোল্ট ম্যাকেঞ্জি মহলওয়ারি বন্দোবস্তের (১৮২২) প্রস্তাব দেন, আর জন শোর ও কর্নওয়ালিস চিরস্থায়ী বন্দোবস্তের সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0003
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [permanent-settlement]
+  stem:
+    en: Consider the following statements about the Permanent Settlement.
+    bn: চিরস্থায়ী বন্দোবস্ত সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The zamindars were recognised as owners of the land."
+      bn: "১. জমিদারদের জমির মালিক হিসেবে স্বীকৃতি দেওয়া হয়।"
+    - en: "2. The revenue to be paid by the zamindars to the state was fixed permanently."
+      bn: "২. জমিদারদের রাষ্ট্রকে দেয় রাজস্বের পরিমাণ চিরকালের জন্য নির্দিষ্ট করা হয়।"
+    - en: "3. It was first introduced in the Madras Presidency."
+      bn: "৩. এটি প্রথম মাদ্রাজ প্রেসিডেন্সিতে চালু করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the Permanent Settlement was introduced in Bengal, Bihar and Orissa in 1793; Madras was mainly under the Ryotwari system.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ চিরস্থায়ী বন্দোবস্ত ১৭৯৩ সালে বাংলা, বিহার ও ওড়িশায় চালু হয়; মাদ্রাজে প্রধানত রায়তওয়ারি বন্দোবস্ত চালু ছিল।
+  status: ai-generated
+
+- id: q0004
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, state-psc, wbcs]
+  refs: [permanent-settlement, ryotwari-mahalwari]
+  stem:
+    en: Match List I (Land revenue arrangement) with List II (Person associated).
+    bn: তালিকা I (ভূমিরাজস্ব ব্যবস্থা)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট ব্যক্তি) মেলান।
+  left:
+    - { en: "A. Permanent Settlement", bn: "ক. চিরস্থায়ী বন্দোবস্ত" }
+    - { en: "B. Ryotwari system", bn: "খ. রায়তওয়ারি বন্দোবস্ত" }
+    - { en: "C. Mahalwari system", bn: "গ. মহলওয়ারি বন্দোবস্ত" }
+    - { en: "D. Panchsala (five-year) settlement", bn: "ঘ. পাঁচসালা বন্দোবস্ত" }
+  right:
+    - { en: "1. Holt Mackenzie", bn: "১. হোল্ট ম্যাকেঞ্জি" }
+    - { en: "2. Warren Hastings", bn: "২. ওয়ারেন হেস্টিংস" }
+    - { en: "3. Lord Cornwallis", bn: "৩. লর্ড কর্নওয়ালিস" }
+    - { en: "4. Thomas Munro", bn: "৪. টমাস মনরো" }
+  options:
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-2, B-4, C-1, D-3", bn: "ক-২, খ-৪, গ-১, ঘ-৩" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Cornwallis introduced the Permanent Settlement (1793), Munro the Ryotwari system in Madras, Holt Mackenzie proposed the Mahalwari system (1822), and Warren Hastings introduced the five-year settlement (1772). The first option wrongly swaps Munro and Mackenzie.
+    bn: কর্নওয়ালিস চিরস্থায়ী বন্দোবস্ত (১৭৯৩), মনরো মাদ্রাজে রায়তওয়ারি বন্দোবস্ত চালু করেন, হোল্ট ম্যাকেঞ্জি মহলওয়ারি বন্দোবস্তের (১৮২২) প্রস্তাব দেন এবং ওয়ারেন হেস্টিংস পাঁচসালা বন্দোবস্ত (১৭৭২) চালু করেন। প্রথম বিকল্পে মনরো ও ম্যাকেঞ্জিকে ভুলভাবে অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0005
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [permanent-settlement]
+  assertion:
+    en: In the long run, the Permanent Settlement prevented the state from sharing in the rising income from agriculture in Bengal.
+    bn: দীর্ঘমেয়াদে চিরস্থায়ী বন্দোবস্তের ফলে বাংলায় কৃষি থেকে ক্রমবর্ধমান আয়ের ভাগ রাষ্ট্র পায়নি।
+  reason:
+    en: Under the Permanent Settlement, the revenue demand on the zamindars was fixed permanently.
+    bn: চিরস্থায়ী বন্দোবস্তে জমিদারদের দেয় রাজস্বের পরিমাণ চিরকালের জন্য নির্দিষ্ট করে দেওয়া হয়েছিল।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Because the state's demand could never be raised, the extra income from expanding cultivation went to the zamindars, not the government. This is also why later settlements were made temporary.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। রাষ্ট্রের প্রাপ্য কখনও বাড়ানো যেত না বলে চাষের প্রসারে বাড়তি আয় জমিদারদের হাতে যেত, সরকারের হাতে নয়। এই কারণেই পরবর্তী বন্দোবস্তগুলি অস্থায়ী করা হয়।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [drain-of-wealth]
+  stem:
+    en: Who wrote the book "Poverty and Un-British Rule in India"?
+    bn: "\"পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া\" গ্রন্থটি কে রচনা করেন?"
+  options:
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নৌরজি }
+    - { en: R.C. Dutt, bn: রমেশচন্দ্র দত্ত }
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+    - { en: Bipan Chandra, bn: বিপান চন্দ্র }
+  answer: 0
+  explanation:
+    en: Dadabhai Naoroji set out the drain theory in "Poverty and Un-British Rule in India" (1901). R.C. Dutt, the most tempting option, wrote "The Economic History of India".
+    bn: দাদাভাই নৌরজি "পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া" (১৯০১) গ্রন্থে নির্গমন তত্ত্ব ব্যাখ্যা করেন। সবচেয়ে বিভ্রান্তিকর বিকল্প রমেশচন্দ্র দত্ত লিখেছিলেন "দ্য ইকোনমিক হিস্ট্রি অব ইন্ডিয়া"।
+  status: ai-generated
+
+- id: q0007
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [permanent-settlement, ryotwari-mahalwari]
+  stem:
+    en: Arrange the following land revenue arrangements in chronological order.
+    bn: নিম্নলিখিত ভূমিরাজস্ব ব্যবস্থাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Permanent Settlement in Bengal"
+      bn: "১. বাংলায় চিরস্থায়ী বন্দোবস্ত"
+    - en: "2. Panchsala (five-year) settlement of Warren Hastings"
+      bn: "২. ওয়ারেন হেস্টিংসের পাঁচসালা বন্দোবস্ত"
+    - en: "3. Mahalwari system proposed by Holt Mackenzie"
+      bn: "৩. হোল্ট ম্যাকেঞ্জির প্রস্তাবিত মহলওয়ারি বন্দোবস্ত"
+    - en: "4. Decennial (ten-year) settlement in Bengal"
+      bn: "৪. বাংলায় দশসালা বন্দোবস্ত"
+  options:
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+  answer: 0
+  explanation:
+    en: The Panchsala settlement came in 1772, the decennial settlement in 1790, the Permanent Settlement in 1793 and the Mahalwari proposal in 1822. The decennial settlement came before the Permanent Settlement, because it was the arrangement that was declared permanent in 1793.
+    bn: পাঁচসালা বন্দোবস্ত ১৭৭২ সালে, দশসালা বন্দোবস্ত ১৭৯০ সালে, চিরস্থায়ী বন্দোবস্ত ১৭৯৩ সালে এবং মহলওয়ারি প্রস্তাব ১৮২২ সালে। দশসালা বন্দোবস্ত চিরস্থায়ী বন্দোবস্তের আগে, কারণ ১৭৯৩ সালে সেটিকেই চিরস্থায়ী ঘোষণা করা হয়।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs]
+  refs: [permanent-settlement]
+  stem:
+    en: Under the Sunset Law of the Permanent Settlement, what happened if a zamindar failed to pay the fixed revenue by sunset on the due date?
+    bn: চিরস্থায়ী বন্দোবস্তের সূর্যাস্ত আইন অনুযায়ী নির্দিষ্ট দিনে সূর্যাস্তের মধ্যে জমিদার ধার্য রাজস্ব জমা দিতে না পারলে কী হত?
+  options:
+    - { en: His revenue demand was raised for the next year, bn: পরের বছরের জন্য তাঁর রাজস্বের পরিমাণ বাড়ানো হত }
+    - { en: His land was handed over to the ryots, bn: তাঁর জমি রায়তদের হাতে তুলে দেওয়া হত }
+    - { en: His estate was sold by auction, bn: তাঁর জমিদারি নিলামে বিক্রি করা হত }
+    - { en: He lost the right to collect rent for one year, bn: এক বছরের জন্য তিনি খাজনা আদায়ের অধিকার হারাতেন }
+  answer: 2
+  explanation:
+    en: Under the Sunset Law, an estate whose revenue was not paid by sunset on the due date was liable to be sold by auction, and many old zamindari families lost their lands this way. The revenue demand itself could never be raised, so the first option is wrong.
+    bn: সূর্যাস্ত আইন অনুযায়ী নির্দিষ্ট দিনে সূর্যাস্তের মধ্যে রাজস্ব জমা না পড়লে জমিদারি নিলামে বিক্রি করা হত; এভাবে বহু পুরোনো জমিদার পরিবার জমি হারায়। রাজস্বের পরিমাণ কখনও বাড়ানো যেত না, তাই প্রথম বিকল্পটি ভুল।
+  status: ai-generated
+
+- id: q0009
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [ryotwari-mahalwari]
+  stem:
+    en: With reference to the Ryotwari system, consider the following statements.
+    bn: রায়তওয়ারি বন্দোবস্ত প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The settlement was made directly with individual cultivators."
+      bn: "১. বন্দোবস্ত সরাসরি প্রত্যেক কৃষকের সঙ্গে করা হত।"
+    - en: "2. The revenue demand was fixed permanently, as in Bengal."
+      bn: "২. বাংলার মতোই রাজস্বের পরিমাণ চিরকালের জন্য নির্দিষ্ট করা হয়েছিল।"
+    - en: "3. Alexander Read first tried it in the Baramahal region."
+      bn: "৩. আলেকজান্ডার রিড প্রথম বারামহল অঞ্চলে এটি প্রয়োগ করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because Ryotwari was a temporary settlement; the revenue was revised periodically and was not fixed for ever as under the Permanent Settlement.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ রায়তওয়ারি ছিল অস্থায়ী বন্দোবস্ত; চিরস্থায়ী বন্দোবস্তের মতো রাজস্ব চিরকালের জন্য নির্দিষ্ট না করে নির্দিষ্ট সময় অন্তর পুনর্নির্ধারণ করা হত।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, wbcs]
+  refs: [permanent-settlement]
+  stem:
+    en: In which year was the Permanent Settlement introduced?
+    bn: কোন সালে চিরস্থায়ী বন্দোবস্ত চালু করা হয়?
+  options:
+    - { en: "1765", bn: "১৭৬৫" }
+    - { en: "1772", bn: "১৭৭২" }
+    - { en: "1793", bn: "১৭৯৩" }
+    - { en: "1813", bn: "১৮১৩" }
+  answer: 2
+  explanation:
+    en: Lord Cornwallis made the Permanent Settlement in 1793. In 1765 the Company obtained the Diwani, and 1772 was the year of Warren Hastings's five-year settlement.
+    bn: লর্ড কর্নওয়ালিস ১৭৯৩ সালে চিরস্থায়ী বন্দোবস্ত করেন। ১৭৬৫ সালে কোম্পানি দেওয়ানি লাভ করে এবং ১৭৭২ সালে ওয়ারেন হেস্টিংসের পাঁচসালা বন্দোবস্ত হয়।
+  status: ai-generated
+
+- id: q0011
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [ryotwari-mahalwari]
+  assertion:
+    en: The Ryotwari system did not place a zamindar as an intermediary between the state and the cultivator.
+    bn: রায়তওয়ারি বন্দোবস্তে রাষ্ট্র ও কৃষকের মাঝে জমিদারকে মধ্যস্বত্বভোগী হিসেবে রাখা হয়নি।
+  reason:
+    en: Under the Ryotwari system, the revenue demand was fixed permanently.
+    bn: রায়তওয়ারি বন্দোবস্তে রাজস্বের পরিমাণ চিরকালের জন্য নির্দিষ্ট করা হয়েছিল।
+  answer: 2
+  explanation:
+    en: The assertion is true because the settlement was made directly with each ryot. The reason is false, because Ryotwari revenue was revised periodically; only the Permanent Settlement fixed the demand for ever.
+    bn: বিবৃতিটি সত্য, কারণ বন্দোবস্ত সরাসরি প্রত্যেক রায়তের সঙ্গে করা হত। কারণটি মিথ্যা, কারণ রায়তওয়ারি বন্দোবস্তে রাজস্ব নির্দিষ্ট সময় অন্তর পুনর্নির্ধারিত হত; কেবল চিরস্থায়ী বন্দোবস্তেই রাজস্ব চিরকালের জন্য নির্দিষ্ট ছিল।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs]
+  refs: [ryotwari-mahalwari]
+  stem:
+    en: In which year did Holt Mackenzie propose the Mahalwari system?
+    bn: হোল্ট ম্যাকেঞ্জি কোন সালে মহলওয়ারি বন্দোবস্তের প্রস্তাব দেন?
+  options:
+    - { en: "1822", bn: "১৮২২" }
+    - { en: "1793", bn: "১৭৯৩" }
+    - { en: "1820", bn: "১৮২০" }
+    - { en: "1833", bn: "১৮৩৩" }
+  answer: 0
+  explanation:
+    en: Holt Mackenzie proposed the Mahalwari system in 1822. The tempting 1833 is the year it was revised under Lord William Bentinck, with R.M. Bird playing a major role.
+    bn: হোল্ট ম্যাকেঞ্জি ১৮২২ সালে মহলওয়ারি বন্দোবস্তের প্রস্তাব দেন। বিভ্রান্তিকর বিকল্প ১৮৩৩ হল লর্ড উইলিয়াম বেন্টিঙ্কের আমলে এর সংশোধনের বছর, যাতে আর. এম. বার্ড প্রধান ভূমিকা নেন।
+  status: ai-generated
+
+- id: q0013
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [drain-of-wealth, commercialisation]
+  stem:
+    en: Match List I (Book) with List II (Author).
+    bn: তালিকা I (গ্রন্থ)-এর সঙ্গে তালিকা II (লেখক) মেলান।
+  left:
+    - { en: "A. Poverty and Un-British Rule in India", bn: "ক. পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া" }
+    - { en: "B. The Economic History of India", bn: "খ. দ্য ইকোনমিক হিস্ট্রি অব ইন্ডিয়া" }
+    - { en: "C. Nil Darpan", bn: "গ. নীলদর্পণ" }
+    - { en: "D. The Rise and Growth of Economic Nationalism in India", bn: "ঘ. দ্য রাইজ অ্যান্ড গ্রোথ অব ইকোনমিক ন্যাশনালিজম ইন ইন্ডিয়া" }
+  right:
+    - { en: "1. R.C. Dutt", bn: "১. রমেশচন্দ্র দত্ত" }
+    - { en: "2. Dadabhai Naoroji", bn: "২. দাদাভাই নৌরজি" }
+    - { en: "3. Bipan Chandra", bn: "৩. বিপান চন্দ্র" }
+    - { en: "4. Dinabandhu Mitra", bn: "৪. দীনবন্ধু মিত্র" }
+  options:
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-4, B-1, C-2, D-3", bn: "ক-৪, খ-১, গ-২, ঘ-৩" }
+  answer: 0
+  explanation:
+    en: Naoroji wrote "Poverty and Un-British Rule in India", R.C. Dutt "The Economic History of India", Dinabandhu Mitra the play "Nil Darpan", and Bipan Chandra "The Rise and Growth of Economic Nationalism in India". The second option swaps Naoroji and Dutt, a common confusion.
+    bn: নৌরজি লেখেন "পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া", রমেশচন্দ্র দত্ত "দ্য ইকোনমিক হিস্ট্রি অব ইন্ডিয়া", দীনবন্ধু মিত্র নাটক "নীলদর্পণ" এবং বিপান চন্দ্র "দ্য রাইজ অ্যান্ড গ্রোথ অব ইকোনমিক ন্যাশনালিজম ইন ইন্ডিয়া"। দ্বিতীয় বিকল্পে নৌরজি ও দত্তকে অদলবদল করা হয়েছে, যা একটি সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0014
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [ryotwari-mahalwari]
+  stem:
+    en: Under the Mahalwari system, the land revenue settlement was made with
+    bn: মহলওয়ারি বন্দোবস্তে ভূমিরাজস্বের বন্দোবস্ত কার সঙ্গে করা হত?
+  options:
+    - { en: each individual cultivator, bn: প্রত্যেক কৃষকের সঙ্গে আলাদাভাবে }
+    - { en: the zamindar of the area, bn: এলাকার জমিদারের সঙ্গে }
+    - { en: the highest bidder at an auction, bn: নিলামে সর্বোচ্চ দর হাঁকা ব্যক্তির সঙ্গে }
+    - { en: the village community as a whole, bn: সমগ্র গ্রামসমাজের সঙ্গে }
+  answer: 3
+  explanation:
+    en: In the Mahalwari system the unit was the mahal (village or estate), and the village community was jointly responsible for the revenue. Settlement with each individual cultivator is the Ryotwari system.
+    bn: মহলওয়ারি বন্দোবস্তে একক ছিল মহল (গ্রাম বা মৌজা) এবং রাজস্বের দায়িত্ব ছিল সমগ্র গ্রামসমাজের যৌথভাবে। প্রত্যেক কৃষকের সঙ্গে আলাদা বন্দোবস্ত হল রায়তওয়ারি ব্যবস্থা।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [drain-of-wealth, railways]
+  stem:
+    en: With reference to the drain of wealth from India, consider the following statements.
+    bn: ভারত থেকে সম্পদের নির্গমন প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Home Charges included pensions of British officials and interest on public debt raised in Britain."
+      bn: "১. হোম চার্জেসের মধ্যে ব্রিটিশ কর্মচারীদের পেনশন এবং ব্রিটেনে নেওয়া সরকারি ঋণের সুদ অন্তর্ভুক্ত ছিল।"
+    - en: "2. The nationalists counted the guaranteed interest on railway capital as part of the drain."
+      bn: "২. জাতীয়তাবাদীরা রেলপথের মূলধনের উপর নিশ্চিত সুদকে নির্গমনের অংশ বলে গণ্য করতেন।"
+    - en: "3. R.C. Dutt, a critic of British economic policy, presided over the Indian National Congress session of 1899."
+      bn: "৩. ব্রিটিশ অর্থনৈতিক নীতির সমালোচক রমেশচন্দ্র দত্ত ১৮৯৯ সালে জাতীয় কংগ্রেসের অধিবেশনে সভাপতিত্ব করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. Home Charges covered salaries, pensions, India Office expenses and interest on debt; guaranteed railway interest paid from Indian revenues was also seen as drain; and R.C. Dutt presided over the Lucknow session of 1899.
+    bn: তিনটি বিবৃতিই সঠিক। হোম চার্জেসের মধ্যে ছিল বেতন, পেনশন, ইন্ডিয়া অফিসের খরচ ও ঋণের সুদ; ভারতের রাজস্ব থেকে দেওয়া রেলপথের নিশ্চিত সুদকেও নির্গমন বলে ধরা হত; আর রমেশচন্দ্র দত্ত ১৮৯৯ সালের লখনউ অধিবেশনে সভাপতিত্ব করেন।
+  status: ai-generated
+
+- id: q0016
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [overview, deindustrialisation, railways, commercialisation]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. First passenger train in India, from Bombay to Thane"
+      bn: "১. বোম্বাই থেকে থানে পর্যন্ত ভারতের প্রথম যাত্রীবাহী ট্রেন"
+    - en: "2. Charter Act ending the Company's trade monopoly in India"
+      bn: "২. ভারতে কোম্পানির একচেটিয়া বাণিজ্যের অবসান ঘটানো সনদ আইন"
+    - en: "3. Grant of the Diwani of Bengal, Bihar and Orissa to the Company"
+      bn: "৩. কোম্পানিকে বাংলা, বিহার ও ওড়িশার দেওয়ানি প্রদান"
+    - en: "4. Beginning of the Indigo Revolt in Bengal"
+      bn: "৪. বাংলায় নীল বিদ্রোহের সূচনা"
+  options:
+    - { en: 3-2-4-1, bn: ৩-২-৪-১ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+    - { en: 3-2-1-4, bn: ৩-২-১-৪ }
+    - { en: 3-1-2-4, bn: ৩-১-২-৪ }
+  answer: 2
+  explanation:
+    en: The Diwani was granted in 1765, the Charter Act ended the trade monopoly in 1813, the first passenger train ran in 1853, and the Indigo Revolt began in 1859.
+    bn: দেওয়ানি প্রদান ১৭৬৫ সালে, সনদ আইনে একচেটিয়া বাণিজ্যের অবসান ১৮১৩ সালে, প্রথম যাত্রীবাহী ট্রেন ১৮৫৩ সালে এবং নীল বিদ্রোহের সূচনা ১৮৫৯ সালে।
+  status: ai-generated
+
+- id: q0017
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [drain-of-wealth]
+  stem:
+    en: Who wrote "The Economic History of India"?
+    bn: "\"দ্য ইকোনমিক হিস্ট্রি অব ইন্ডিয়া\" গ্রন্থটি কে রচনা করেন?"
+  options:
+    - { en: Dadabhai Naoroji, bn: দাদাভাই নৌরজি }
+    - { en: R.C. Dutt, bn: রমেশচন্দ্র দত্ত }
+    - { en: R.C. Majumdar, bn: রমেশচন্দ্র মজুমদার }
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+  answer: 1
+  explanation:
+    en: R.C. (Romesh Chunder) Dutt wrote "The Economic History of India", criticising heavy land revenue and the ruin of Indian industries. Naoroji's best-known work is "Poverty and Un-British Rule in India"; R.C. Majumdar is a different historian with similar initials.
+    bn: রমেশচন্দ্র দত্ত "দ্য ইকোনমিক হিস্ট্রি অব ইন্ডিয়া" রচনা করেন, যেখানে তিনি উচ্চ ভূমিরাজস্ব ও ভারতীয় শিল্পের ধ্বংসের সমালোচনা করেন। নৌরজির সবচেয়ে পরিচিত গ্রন্থ "পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া"; রমেশচন্দ্র মজুমদার একই নামের আদ্যাংশযুক্ত ভিন্ন এক ঐতিহাসিক।
+  status: ai-generated
+
+- id: q0018
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [permanent-settlement, ryotwari-mahalwari]
+  assertion:
+    en: The Permanent Settlement was first introduced in the Madras Presidency.
+    bn: চিরস্থায়ী বন্দোবস্ত প্রথম মাদ্রাজ প্রেসিডেন্সিতে চালু করা হয়।
+  reason:
+    en: Lord Cornwallis introduced the Permanent Settlement in 1793.
+    bn: লর্ড কর্নওয়ালিস ১৭৯৩ সালে চিরস্থায়ী বন্দোবস্ত চালু করেন।
+  answer: 3
+  explanation:
+    en: The assertion is false because the Permanent Settlement was introduced in Bengal, Bihar and Orissa; Madras was mainly under the Ryotwari system. The reason is true.
+    bn: বিবৃতিটি মিথ্যা, কারণ চিরস্থায়ী বন্দোবস্ত চালু হয় বাংলা, বিহার ও ওড়িশায়; মাদ্রাজে প্রধানত রায়তওয়ারি বন্দোবস্ত চালু ছিল। কারণটি সত্য।
+  status: ai-generated
+
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [deindustrialisation, overview]
+  stem:
+    en: Which Charter Act ended the East India Company's monopoly of trade with India?
+    bn: কোন সনদ আইনের মাধ্যমে ভারতের সঙ্গে বাণিজ্যে ইস্ট ইন্ডিয়া কোম্পানির একচেটিয়া অধিকারের অবসান ঘটে?
+  options:
+    - { en: Charter Act of 1793, bn: ১৭৯৩ সালের সনদ আইন }
+    - { en: Charter Act of 1813, bn: ১৮১৩ সালের সনদ আইন }
+    - { en: Charter Act of 1833, bn: ১৮৩৩ সালের সনদ আইন }
+    - { en: Charter Act of 1853, bn: ১৮৫৩ সালের সনদ আইন }
+  answer: 1
+  explanation:
+    en: The Charter Act of 1813 ended the Company's monopoly of trade with India, though it kept the tea trade and the trade with China. The Act of 1833, a tempting option, came later and is not the one that first opened Indian trade.
+    bn: ১৮১৩ সালের সনদ আইন ভারতের সঙ্গে বাণিজ্যে কোম্পানির একচেটিয়া অধিকারের অবসান ঘটায়, যদিও চা-বাণিজ্য ও চিনের সঙ্গে বাণিজ্যের অধিকার বজায় থাকে। বিভ্রান্তিকর বিকল্প ১৮৩৩ সালের আইন পরে আসে; ভারতের বাণিজ্য প্রথম উন্মুক্ত করেছিল ১৮১৩ সালের আইন।
+  status: ai-generated
+
+- id: q0020
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [deindustrialisation]
+  stem:
+    en: With reference to deindustrialisation in 19th-century India, consider the following statements.
+    bn: উনিশ শতকের ভারতে অব-শিল্পায়ন প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Charter Act of 1813 opened Indian trade to British merchants in general."
+      bn: "১. ১৮১৩ সালের সনদ আইন ভারতের বাণিজ্য সাধারণভাবে ব্রিটিশ বণিকদের জন্য উন্মুক্ত করে।"
+    - en: "2. The first modern cotton mill in India was set up in Calcutta in 1854."
+      bn: "২. ভারতের প্রথম আধুনিক কাপড়ের কল ১৮৫৪ সালে কলকাতায় স্থাপিত হয়।"
+    - en: "3. The decline of Indian princely courts reduced the demand for luxury handicrafts."
+      bn: "৩. দেশীয় রাজদরবারের পতনে বিলাসদ্রব্য ও হস্তশিল্পের চাহিদা কমে যায়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because standard texts credit the first modern cotton mill to Bombay (C.N. Davar, 1854; some books give 1853); Bengal's early factory industry was jute (Rishra, 1855).
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ প্রচলিত পাঠ্যবইয়ে প্রথম আধুনিক কাপড়ের কলের কৃতিত্ব দেওয়া হয় বোম্বাইকে (কাওয়াসজি নানাভাই দাভর, ১৮৫৪; কোনো কোনো বইয়ে ১৮৫৩); বাংলার প্রথম দিকের কারখানাশিল্প ছিল পাটশিল্প (রিষড়া, ১৮৫৫)।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, state-psc, ssc-cgl, wbcs]
+  refs: [commercialisation, deindustrialisation]
+  stem:
+    en: Match List I (Commercial crop) with List II (Associated fact).
+    bn: তালিকা I (বাণিজ্যিক ফসল)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট তথ্য) মেলান।
+  left:
+    - { en: "A. Indigo", bn: "ক. নীল" }
+    - { en: "B. Cotton", bn: "খ. তুলো" }
+    - { en: "C. Opium", bn: "গ. আফিম" }
+    - { en: "D. Jute", bn: "ঘ. পাট" }
+  right:
+    - { en: "1. Boom during the American Civil War", bn: "১. আমেরিকার গৃহযুদ্ধের সময় চাহিদার রমরমা" }
+    - { en: "2. First modern mill at Rishra", bn: "২. রিষড়ায় প্রথম আধুনিক কারখানা" }
+    - { en: "3. Tinkathia system in Champaran", bn: "৩. চম্পারনের তিনকাঠিয়া প্রথা" }
+    - { en: "4. Company monopoly and export to China", bn: "৪. কোম্পানির একচেটিয়া অধিকার ও চিনে রপ্তানি" }
+  options:
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 3
+  explanation:
+    en: Indigo is linked with the tinkathia system in Champaran, cotton with the boom during the American Civil War (1861–65), opium with the Company's monopoly and exports to China, and jute with the first mill at Rishra (1855).
+    bn: নীল চম্পারনের তিনকাঠিয়া প্রথার সঙ্গে, তুলো আমেরিকার গৃহযুদ্ধের (১৮৬১–৬৫) সময়ের রমরমার সঙ্গে, আফিম কোম্পানির একচেটিয়া অধিকার ও চিনে রপ্তানির সঙ্গে এবং পাট রিষড়ার প্রথম কারখানার (১৮৫৫) সঙ্গে যুক্ত।
+  status: ai-generated
+
+- id: q0022
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po, state-psc, wbcs]
+  refs: [railways]
+  stem:
+    en: Between which two places did the first passenger train in India run in 1853?
+    bn: ১৮৫৩ সালে ভারতের প্রথম যাত্রীবাহী ট্রেন কোন দুটি স্থানের মধ্যে চলেছিল?
+  options:
+    - { en: Howrah and Hooghly, bn: হাওড়া ও হুগলি }
+    - { en: Bombay and Thane, bn: বোম্বাই ও থানে }
+    - { en: Calcutta and Delhi, bn: কলকাতা ও দিল্লি }
+    - { en: Madras and Bangalore, bn: মাদ্রাজ ও বাঙ্গালোর }
+  answer: 1
+  explanation:
+    en: The first passenger train ran from Bombay to Thane on 16 April 1853, under Lord Dalhousie. The Howrah–Hooghly line in Bengal opened a year later, in 1854.
+    bn: প্রথম যাত্রীবাহী ট্রেন ১৮৫৩ সালের ১৬ এপ্রিল লর্ড ডালহৌসির আমলে বোম্বাই থেকে থানে পর্যন্ত চলে। বাংলায় হাওড়া–হুগলি রেলপথ চালু হয় এক বছর পরে, ১৮৫৪ সালে।
+  status: ai-generated
+
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [railways]
+  stem:
+    en: Consider the following statements about railways in British India.
+    bn: ব্রিটিশ ভারতের রেলপথ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The first passenger train ran during the tenure of Lord Dalhousie."
+      bn: "১. প্রথম যাত্রীবাহী ট্রেন লর্ড ডালহৌসির শাসনকালে চলে।"
+    - en: "2. The government guaranteed a minimum rate of interest to private British railway companies."
+      bn: "২. সরকার বেসরকারি ব্রিটিশ রেল কোম্পানিগুলিকে ন্যূনতম সুদের নিশ্চয়তা দিয়েছিল।"
+    - en: "3. Railways were planned mainly to promote Indian-owned industries."
+      bn: "৩. প্রধানত ভারতীয় মালিকানাধীন শিল্পের প্রসারের জন্যই রেলপথের পরিকল্পনা করা হয়েছিল।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because railways were planned mainly to link the interior with the ports for British trade, to move troops and to give British capital a safe outlet, not to promote Indian industry.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ রেলপথের পরিকল্পনা মূলত ব্রিটিশ বাণিজ্যের জন্য দেশের অভ্যন্তরকে বন্দরের সঙ্গে যুক্ত করা, সৈন্য চলাচল এবং ব্রিটিশ পুঁজির নিরাপদ বিনিয়োগের উদ্দেশ্যে করা হয়েছিল, ভারতীয় শিল্পের প্রসারের জন্য নয়।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [drain-of-wealth]
+  assertion:
+    en: Dadabhai Naoroji is known as the "Grand Old Man of India".
+    bn: দাদাভাই নৌরজি "ভারতের বৃদ্ধ পিতামহ" নামে পরিচিত।
+  reason:
+    en: Dadabhai Naoroji was elected to the British House of Commons in 1892.
+    bn: দাদাভাই নৌরজি ১৮৯২ সালে ব্রিটিশ হাউস অব কমন্সের সদস্য নির্বাচিত হন।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. The title reflects his long role as a senior leader of early nationalism and its economic critique, not his election to the House of Commons.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়। এই উপাধি আদি জাতীয়তাবাদ ও তার অর্থনৈতিক সমালোচনায় প্রবীণ নেতা হিসেবে তাঁর দীর্ঘ ভূমিকার স্বীকৃতি, হাউস অব কমন্সে নির্বাচনের জন্য নয়।
+  status: ai-generated
+
+- id: q0025
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [famines]
+  stem:
+    en: Arrange the following Famine Commissions in chronological order.
+    bn: নিম্নলিখিত দুর্ভিক্ষ কমিশনগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. MacDonnell Commission"
+      bn: "১. ম্যাকডোনেল কমিশন"
+    - en: "2. Woodhead Commission"
+      bn: "২. উডহেড কমিশন"
+    - en: "3. Strachey Commission"
+      bn: "৩. স্ট্র্যাচি কমিশন"
+    - en: "4. Lyall Commission"
+      bn: "৪. লায়াল কমিশন"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+  answer: 3
+  explanation:
+    en: Strachey (1880), Lyall (1898), MacDonnell (1901) and Woodhead (1944). Lyall and MacDonnell are only three years apart, which makes the first option tempting.
+    bn: স্ট্র্যাচি (১৮৮০), লায়াল (১৮৯৮), ম্যাকডোনেল (১৯০১) এবং উডহেড (১৯৪৪)। লায়াল ও ম্যাকডোনেল কমিশনের মধ্যে মাত্র তিন বছরের ব্যবধান, তাই প্রথম বিকল্পটি বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0026
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [commercialisation]
+  stem:
+    en: Who wrote the play "Nil Darpan", which exposed the oppression of indigo planters in Bengal?
+    bn: বাংলায় নীলকরদের অত্যাচার তুলে ধরা "নীলদর্পণ" নাটকটি কে রচনা করেন?
+  options:
+    - { en: Bankim Chandra Chattopadhyay, bn: বঙ্কিমচন্দ্র চট্টোপাধ্যায় }
+    - { en: Michael Madhusudan Dutt, bn: মাইকেল মধুসূদন দত্ত }
+    - { en: Harish Chandra Mukherjee, bn: হরিশচন্দ্র মুখোপাধ্যায় }
+    - { en: Dinabandhu Mitra, bn: দীনবন্ধু মিত্র }
+  answer: 3
+  explanation:
+    en: Dinabandhu Mitra wrote "Nil Darpan" (1860) during the Indigo Revolt. Harish Chandra Mukherjee also supported the ryots, but through his paper Hindoo Patriot, not this play.
+    bn: নীল বিদ্রোহের সময় দীনবন্ধু মিত্র "নীলদর্পণ" (১৮৬০) রচনা করেন। হরিশচন্দ্র মুখোপাধ্যায়ও রায়তদের সমর্থন করেছিলেন, তবে তাঁর পত্রিকা হিন্দু প্যাট্রিয়টের মাধ্যমে, এই নাটকের মাধ্যমে নয়।
+  status: ai-generated
+
+- id: q0027
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [famines]
+  stem:
+    en: Consider the following statements about Famine Commissions in British India.
+    bn: ব্রিটিশ ভারতের দুর্ভিক্ষ কমিশন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Strachey Commission was appointed after the famine of 1876–78."
+      bn: "১. ১৮৭৬–৭৮ সালের দুর্ভিক্ষের পর স্ট্র্যাচি কমিশন নিয়োগ করা হয়।"
+    - en: "2. Famine Codes were framed on the basis of the recommendations of the 1880 Commission."
+      bn: "২. ১৮৮০ সালের কমিশনের সুপারিশের ভিত্তিতে দুর্ভিক্ষ বিধি তৈরি করা হয়।"
+    - en: "3. The MacDonnell Commission was appointed during the viceroyalty of Lord Lytton."
+      bn: "৩. লর্ড লিটনের শাসনকালে ম্যাকডোনেল কমিশন নিয়োগ করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the MacDonnell Commission (1901) was appointed in Lord Curzon's time; Lord Lytton was Viceroy during the famine of 1876–78, which led to the Strachey Commission.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিটি ভুল, কারণ ম্যাকডোনেল কমিশন (১৯০১) লর্ড কার্জনের আমলে নিযুক্ত হয়; লর্ড লিটন ছিলেন ১৮৭৬–৭৮ সালের দুর্ভিক্ষের সময়ের ভাইসরয়, যার পরে স্ট্র্যাচি কমিশন গঠিত হয়।
+  status: ai-generated
+
+- id: q0028
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, state-psc, ssc-cgl, wbcs]
+  refs: [famines]
+  stem:
+    en: Match List I (Chairman of Famine Commission) with List II (Year).
+    bn: তালিকা I (দুর্ভিক্ষ কমিশনের সভাপতি)-এর সঙ্গে তালিকা II (বছর) মেলান।
+  left:
+    - { en: "A. Richard Strachey", bn: "ক. রিচার্ড স্ট্র্যাচি" }
+    - { en: "B. James Lyall", bn: "খ. জেমস লায়াল" }
+    - { en: "C. Antony MacDonnell", bn: "গ. অ্যান্টনি ম্যাকডোনেল" }
+    - { en: "D. John Woodhead", bn: "ঘ. জন উডহেড" }
+  right:
+    - { en: "1. 1901", bn: "১. ১৯০১" }
+    - { en: "2. 1944", bn: "২. ১৯৪৪" }
+    - { en: "3. 1880", bn: "৩. ১৮৮০" }
+    - { en: "4. 1898", bn: "৪. ১৮৯৮" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+    - { en: "A-1, B-4, C-3, D-2", bn: "ক-১, খ-৪, গ-৩, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Strachey headed the commission of 1880, Lyall that of 1898, MacDonnell that of 1901 and Woodhead the inquiry of 1944 into the Bengal Famine of 1943. The third option swaps Lyall and MacDonnell, whose commissions were close in time.
+    bn: স্ট্র্যাচি ১৮৮০ সালের, লায়াল ১৮৯৮ সালের, ম্যাকডোনেল ১৯০১ সালের কমিশনের এবং উডহেড ১৯৪৩ সালের বাংলার দুর্ভিক্ষ বিষয়ে ১৯৪৪ সালের তদন্তের সভাপতি ছিলেন। তৃতীয় বিকল্পে কাছাকাছি সময়ের লায়াল ও ম্যাকডোনেল কমিশনকে অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0029
+  type: single
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [famines]
+  stem:
+    en: Who headed the first Famine Commission, whose report came out in 1880?
+    bn: ১৮৮০ সালে প্রতিবেদন পেশ করা প্রথম দুর্ভিক্ষ কমিশনের সভাপতি কে ছিলেন?
+  options:
+    - { en: Sir Richard Strachey, bn: স্যার রিচার্ড স্ট্র্যাচি }
+    - { en: Sir James Lyall, bn: স্যার জেমস লায়াল }
+    - { en: Sir Antony MacDonnell, bn: স্যার অ্যান্টনি ম্যাকডোনেল }
+    - { en: Sir John Woodhead, bn: স্যার জন উডহেড }
+  answer: 0
+  explanation:
+    en: Sir Richard Strachey headed the first Famine Commission, appointed in 1878 in Lord Lytton's time after the famine of 1876–78 (report 1880); its work led to the Famine Codes. Lyall (1898) and MacDonnell (1901) headed later commissions.
+    bn: লর্ড লিটনের আমলে ১৮৭৬–৭৮ সালের দুর্ভিক্ষের পর ১৮৭৮ সালে নিযুক্ত প্রথম দুর্ভিক্ষ কমিশনের (প্রতিবেদন ১৮৮০) সভাপতি ছিলেন স্যার রিচার্ড স্ট্র্যাচি; এর সুপারিশে দুর্ভিক্ষ বিধি তৈরি হয়। লায়াল (১৮৯৮) ও ম্যাকডোনেল (১৯০১) পরবর্তী কমিশনগুলির সভাপতি ছিলেন।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [famines, deindustrialisation, commercialisation, drain-of-wealth]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: '1. Publication of Dadabhai Naoroji''s "Poverty and Un-British Rule in India"'
+      bn: '১. দাদাভাই নৌরজির "পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া" গ্রন্থের প্রকাশ'
+    - en: "2. Great Bengal Famine (Chhiyattorer Manwantar)"
+      bn: "২. বাংলার মহাদুর্ভিক্ষ (ছিয়াত্তরের মন্বন্তর)"
+    - en: "3. First cotton mill in Bombay"
+      bn: "৩. বোম্বাইয়ে প্রথম কাপড়ের কল"
+    - en: "4. Outbreak of the American Civil War, which led to a cotton boom in India"
+      bn: "৪. আমেরিকার গৃহযুদ্ধের সূচনা, যার ফলে ভারতে তুলোর চাহিদা বেড়ে যায়"
+  options:
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+    - { en: 3-2-4-1, bn: ৩-২-৪-১ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+  answer: 1
+  explanation:
+    en: The Bengal famine occurred in 1770, the first cotton mill was set up in Bombay in 1854 (some books say 1853), the American Civil War began in 1861, and "Poverty and Un-British Rule in India" was published in 1901. The first option wrongly puts the Civil War before the Bombay mill.
+    bn: বাংলার মহাদুর্ভিক্ষ হয় ১৭৭০ সালে, বোম্বাইয়ে প্রথম কাপড়ের কল স্থাপিত হয় ১৮৫৪ সালে (কোনো কোনো বইয়ে ১৮৫৩), আমেরিকার গৃহযুদ্ধ শুরু হয় ১৮৬১ সালে এবং "পভার্টি অ্যান্ড আন-ব্রিটিশ রুল ইন ইন্ডিয়া" প্রকাশিত হয় ১৯০১ সালে। প্রথম বিকল্পে গৃহযুদ্ধকে বোম্বাইয়ের কাপড়ের কলের আগে রাখা হয়েছে, যা ভুল।
+  status: ai-generated

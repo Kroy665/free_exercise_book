@@ -1,0 +1,21 @@
+id: hist.modern.european-arrival
+title:
+  en: Advent of the Europeans
+  bn: ইউরোপীয়দের আগমন
+summary:
+  en: Portuguese, Dutch, English, Danish and French trading companies in India, the Anglo-French rivalry and the three Carnatic Wars, and why the English won.
+  bn: ভারতে পোর্তুগিজ, ওলন্দাজ, ইংরেজ, দিনেমার ও ফরাসি বণিক কোম্পানি, ইঙ্গ-ফরাসি দ্বন্দ্ব ও তিনটি কর্ণাটকের যুদ্ধ এবং ইংরেজদের সাফল্যের কারণ।
+order: 1
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 40
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Spectrum, A Brief History of Modern India, Ch. "Advent of the Europeans in India"
+  - NCERT Class 8, Our Pasts III, Ch. "From Trade to Territory"
+  - Bipan Chandra, History of Modern India (Orient BlackSwan), Ch. on the European trading companies
+  - Sekhar Bandyopadhyay, From Plassey to Partition, Ch. 1
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

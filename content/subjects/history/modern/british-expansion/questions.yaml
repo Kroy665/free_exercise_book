@@ -1,0 +1,702 @@
+# Questions for hist.modern.british-expansion
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [plassey]
+  stem:
+    en: In which year was the Battle of Plassey fought?
+    bn: পলাশির যুদ্ধ কোন বছরে হয়েছিল?
+  options:
+    - { en: "1764", bn: "১৭৬৪" }
+    - { en: "1757", bn: "১৭৫৭" }
+    - { en: "1765", bn: "১৭৬৫" }
+    - { en: "1756", bn: "১৭৫৬" }
+  answer: 1
+  explanation:
+    en: The Battle of Plassey was fought on 23 June 1757, when Robert Clive defeated Siraj-ud-Daulah. 1756 is the year Siraj became Nawab and captured Calcutta, and 1764 is the Battle of Buxar.
+    bn: ১৭৫৭ সালের ২৩ জুন পলাশির যুদ্ধে রবার্ট ক্লাইভ সিরাজ-উদ-দৌলাকে পরাজিত করেন। ১৭৫৬ সালে সিরাজ নবাব হন ও কলকাতা দখল করেন, আর ১৭৬৪ হল বক্সারের যুদ্ধের বছর।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [buxar]
+  stem:
+    en: Who commanded the English forces in the Battle of Buxar (1764)?
+    bn: বক্সারের যুদ্ধে (১৭৬৪) ইংরেজ বাহিনীর সেনাপতি কে ছিলেন?
+  options:
+    - { en: Robert Clive, bn: রবার্ট ক্লাইভ }
+    - { en: Hector Munro, bn: হেক্টর মনরো }
+    - { en: Eyre Coote, bn: আয়ার কূট }
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+  answer: 1
+  explanation:
+    en: Major Hector Munro led the English at Buxar. Robert Clive, the most tempting option, won at Plassey (1757) and later signed the Treaty of Allahabad (1765), but he did not fight at Buxar.
+    bn: বক্সারে ইংরেজ বাহিনীর নেতৃত্ব দেন মেজর হেক্টর মনরো। রবার্ট ক্লাইভ পলাশির যুদ্ধে (১৭৫৭) জয়ী হন এবং পরে এলাহাবাদের সন্ধি (১৭৬৫) স্বাক্ষর করেন, কিন্তু বক্সারের যুদ্ধে তিনি ছিলেন না।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [subsidiary-alliance]
+  stem:
+    en: Which Governor-General introduced the system of Subsidiary Alliance?
+    bn: কোন গভর্নর-জেনারেল অধীনতামূলক মিত্রতা নীতি প্রবর্তন করেন?
+  options:
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Lord Wellesley, bn: লর্ড ওয়েলেসলি }
+  answer: 3
+  explanation:
+    en: Lord Wellesley (1798–1805) used the Subsidiary Alliance to bring Indian states under British control. Lord Dalhousie is linked with the Doctrine of Lapse, a different policy.
+    bn: লর্ড ওয়েলেসলি (১৭৯৮–১৮০৫) অধীনতামূলক মিত্রতার মাধ্যমে ভারতীয় রাজ্যগুলিকে ব্রিটিশ নিয়ন্ত্রণে আনেন। লর্ড ডালহৌসি যুক্ত স্বত্ববিলোপ নীতির সঙ্গে, যা একটি আলাদা নীতি।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [doctrine-of-lapse]
+  stem:
+    en: Which was the first state annexed under the Doctrine of Lapse?
+    bn: স্বত্ববিলোপ নীতি অনুযায়ী দখল করা প্রথম রাজ্য কোনটি?
+  options:
+    - { en: Jhansi, bn: ঝাঁসি }
+    - { en: Nagpur, bn: নাগপুর }
+    - { en: Satara, bn: সাতারা }
+    - { en: Sambalpur, bn: সম্বলপুর }
+  answer: 2
+  explanation:
+    en: Satara was annexed in 1848, the first under Dalhousie's Doctrine of Lapse. Jhansi (1853) is the best-known case because of Rani Lakshmibai, but it came later.
+    bn: ১৮৪৮ সালে সাতারা দখল করা হয়, যা ডালহৌসির স্বত্ববিলোপ নীতিতে প্রথম রাজ্যগ্রাস। রানি লক্ষ্মীবাঈয়ের জন্য ঝাঁসি (১৮৫৩) সবচেয়ে পরিচিত উদাহরণ হলেও তা পরে দখল করা হয়।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [subsidiary-alliance]
+  stem:
+    en: Which was the first Indian state to accept Wellesley's Subsidiary Alliance?
+    bn: ওয়েলেসলির অধীনতামূলক মিত্রতা গ্রহণকারী প্রথম ভারতীয় রাজ্য কোনটি?
+  options:
+    - { en: Hyderabad, bn: হায়দরাবাদ }
+    - { en: Mysore, bn: মহীশূর }
+    - { en: Awadh, bn: অযোধ্যা }
+    - { en: The Peshwa's state, bn: পেশোয়ার রাজ্য }
+  answer: 0
+  explanation:
+    en: The Nizam of Hyderabad accepted the Subsidiary Alliance in 1798. Mysore came under it only in 1799, after Tipu Sultan was defeated and killed in the Fourth Anglo-Mysore War.
+    bn: হায়দরাবাদের নিজাম ১৭৯৮ সালে অধীনতামূলক মিত্রতা গ্রহণ করেন। মহীশূর এর আওতায় আসে ১৭৯৯ সালে, চতুর্থ ইঙ্গ-মহীশূর যুদ্ধে টিপু সুলতানের পরাজয় ও মৃত্যুর পরে।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs]
+  refs: [mir-qasim]
+  stem:
+    en: Mir Qasim shifted the capital of Bengal from Murshidabad to which place?
+    bn: মীরকাশিম মুরশিদাবাদ থেকে বাংলার রাজধানী কোথায় সরিয়ে নেন?
+  options:
+    - { en: Dhaka, bn: ঢাকা }
+    - { en: Patna, bn: পাটনা }
+    - { en: Monghyr (Munger), bn: মুঙ্গের }
+    - { en: Rajmahal, bn: রাজমহল }
+  answer: 2
+  explanation:
+    en: Mir Qasim moved his capital to Monghyr, away from the Company's influence in Calcutta, and built a modern army there. Patna, also in Bihar, is a tempting choice but was not his capital.
+    bn: কলকাতায় কোম্পানির প্রভাব থেকে দূরে থাকতে মীরকাশিম মুঙ্গেরে রাজধানী সরিয়ে নেন এবং সেখানে আধুনিক সেনাবাহিনী গড়ে তোলেন। পাটনাও বিহারে অবস্থিত বলে বিভ্রান্তি হতে পারে, কিন্তু তা তাঁর রাজধানী ছিল না।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [buxar]
+  stem:
+    en: Under the Treaty of Allahabad (1765), how much did the Company agree to pay Shah Alam II every year in return for the Diwani?
+    bn: এলাহাবাদের সন্ধি (১৭৬৫) অনুযায়ী দেওয়ানির বিনিময়ে কোম্পানি দ্বিতীয় শাহ আলমকে প্রতি বছর কত টাকা দিতে রাজি হয়?
+  options:
+    - { en: ₹26 lakh, bn: ২৬ লক্ষ টাকা }
+    - { en: ₹50 lakh, bn: ৫০ লক্ষ টাকা }
+    - { en: ₹16 lakh, bn: ১৬ লক্ষ টাকা }
+    - { en: ₹32 lakh, bn: ৩২ লক্ষ টাকা }
+  answer: 0
+  explanation:
+    en: The Company promised Shah Alam II ₹26 lakh a year and the districts of Kora and Allahabad. The figure of ₹50 lakh was the war indemnity paid by Shuja-ud-Daulah of Awadh, not the emperor's annual payment.
+    bn: কোম্পানি দ্বিতীয় শাহ আলমকে বছরে ২৬ লক্ষ টাকা এবং কোরা ও এলাহাবাদ জেলা দেওয়ার প্রতিশ্রুতি দেয়। ৫০ লক্ষ টাকা ছিল অযোধ্যার নবাব সুজা-উদ-দৌলার দেওয়া যুদ্ধের ক্ষতিপূরণ, সম্রাটের বার্ষিক প্রাপ্য নয়।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [mysore]
+  stem:
+    en: Tipu Sultan was killed while defending Seringapatam in which Anglo-Mysore War?
+    bn: কোন ইঙ্গ-মহীশূর যুদ্ধে শ্রীরঙ্গপত্তনম রক্ষা করতে গিয়ে টিপু সুলতান নিহত হন?
+  options:
+    - { en: Third Anglo-Mysore War, bn: তৃতীয় ইঙ্গ-মহীশূর যুদ্ধ }
+    - { en: Fourth Anglo-Mysore War, bn: চতুর্থ ইঙ্গ-মহীশূর যুদ্ধ }
+    - { en: Second Anglo-Mysore War, bn: দ্বিতীয় ইঙ্গ-মহীশূর যুদ্ধ }
+    - { en: First Anglo-Mysore War, bn: প্রথম ইঙ্গ-মহীশূর যুদ্ধ }
+  answer: 1
+  explanation:
+    en: Tipu died in May 1799 in the Fourth Anglo-Mysore War, fought under Lord Wellesley. In the Third war (1790–92) he was defeated by Cornwallis and lost half his territory, but survived.
+    bn: ১৭৯৯ সালের মে মাসে লর্ড ওয়েলেসলির আমলে চতুর্থ ইঙ্গ-মহীশূর যুদ্ধে টিপু নিহত হন। তৃতীয় যুদ্ধে (১৭৯০–৯২) কর্নওয়ালিসের কাছে পরাজিত হয়ে তিনি রাজ্যের অর্ধেক হারান, কিন্তু জীবিত ছিলেন।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [maratha, subsidiary-alliance]
+  stem:
+    en: Which Peshwa signed the Treaty of Bassein (1802) and accepted the Subsidiary Alliance?
+    bn: কোন পেশোয়া বেসিনের সন্ধি (১৮০২) স্বাক্ষর করে অধীনতামূলক মিত্রতা গ্রহণ করেন?
+  options:
+    - { en: Baji Rao II, bn: দ্বিতীয় বাজিরাও }
+    - { en: Madhav Rao I, bn: প্রথম মাধব রাও }
+    - { en: Raghunath Rao, bn: রঘুনাথ রাও }
+    - { en: Balaji Baji Rao, bn: বালাজি বাজিরাও }
+  answer: 0
+  explanation:
+    en: Baji Rao II fled to the English after being defeated by Holkar and signed the Treaty of Bassein on 31 December 1802. Raghunath Rao had sought English help earlier, which led to the First Anglo-Maratha War, not the Treaty of Bassein.
+    bn: হোলকারের কাছে পরাজিত হয়ে দ্বিতীয় বাজিরাও ইংরেজদের আশ্রয় নেন এবং ১৮০২ সালের ৩১ ডিসেম্বর বেসিনের সন্ধি স্বাক্ষর করেন। রঘুনাথ রাও এর অনেক আগে ইংরেজদের সাহায্য চেয়েছিলেন, যার ফলে প্রথম ইঙ্গ-মারাঠা যুদ্ধ বাধে; বেসিনের সন্ধির সঙ্গে তাঁর সম্পর্ক নেই।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [punjab]
+  stem:
+    en: Punjab was annexed to British India in 1849 during the tenure of which Governor-General?
+    bn: ১৮৪৯ সালে কোন গভর্নর-জেনারেলের আমলে পাঞ্জাব ব্রিটিশ ভারতের অন্তর্ভুক্ত হয়?
+  options:
+    - { en: Lord Hardinge, bn: লর্ড হার্ডিঞ্জ }
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+    - { en: Lord Ellenborough, bn: লর্ড এলেনবরা }
+    - { en: Lord Auckland, bn: লর্ড অকল্যান্ড }
+  answer: 1
+  explanation:
+    en: Lord Dalhousie annexed Punjab in 1849 after the Second Anglo-Sikh War. Lord Hardinge was Governor-General during the First Anglo-Sikh War, which ended with the Treaty of Lahore (1846) without annexation.
+    bn: দ্বিতীয় ইঙ্গ-শিখ যুদ্ধের পর ১৮৪৯ সালে লর্ড ডালহৌসি পাঞ্জাব দখল করেন। প্রথম ইঙ্গ-শিখ যুদ্ধের সময় গভর্নর-জেনারেল ছিলেন লর্ড হার্ডিঞ্জ; সেই যুদ্ধ লাহোরের সন্ধিতে (১৮৪৬) শেষ হয়, তখন পাঞ্জাব দখল করা হয়নি।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [doctrine-of-lapse]
+  stem:
+    en: On what ground did Lord Dalhousie annex Awadh in 1856?
+    bn: ১৮৫৬ সালে লর্ড ডালহৌসি কোন অভিযোগে অযোধ্যা দখল করেন?
+  options:
+    - { en: The Doctrine of Lapse, bn: স্বত্ববিলোপ নীতি }
+    - { en: Failure to pay for a subsidiary force, bn: অধীনতামূলক সেনাবাহিনীর খরচ দিতে ব্যর্থতা }
+    - { en: Defeat of the Nawab in a war with the Company, bn: কোম্পানির সঙ্গে যুদ্ধে নবাবের পরাজয় }
+    - { en: Alleged misgovernance, bn: কুশাসনের অভিযোগ }
+  answer: 3
+  explanation:
+    en: Awadh was annexed in 1856 on the charge of misgovernance, and Nawab Wajid Ali Shah was removed. The Doctrine of Lapse, the most common wrong answer, did not apply because Awadh had a ruling Nawab with heirs.
+    bn: ১৮৫৬ সালে কুশাসনের অভিযোগে অযোধ্যা দখল করা হয় এবং নবাব ওয়াজিদ আলি শাহকে সরিয়ে দেওয়া হয়। স্বত্ববিলোপ নীতি এখানে প্রযোজ্য ছিল না, কারণ অযোধ্যায় শাসক নবাব ও তাঁর উত্তরাধিকারী ছিলেন।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [plassey]
+  stem:
+    en: The main account of the "Black Hole" incident of 1756 in Calcutta was given by whom?
+    bn: ১৭৫৬ সালে কলকাতার "অন্ধকূপ হত্যা"-র প্রধান বিবরণ কে দিয়েছিলেন?
+  options:
+    - { en: Robert Clive, bn: রবার্ট ক্লাইভ }
+    - { en: Admiral Watson, bn: অ্যাডমিরাল ওয়াটসন }
+    - { en: J.Z. Holwell, bn: জে. জেড. হলওয়েল }
+    - { en: Hector Munro, bn: হেক্টর মনরো }
+  answer: 2
+  explanation:
+    en: J.Z. Holwell, an English survivor, wrote the account of the Black Hole incident; historians dispute his figures. Clive arrived later to retake Calcutta and was not a witness.
+    bn: জীবিত ইংরেজ জে. জেড. হলওয়েল অন্ধকূপ হত্যার বিবরণ লেখেন; তাঁর দেওয়া সংখ্যা নিয়ে ঐতিহাসিকদের মধ্যে বিতর্ক আছে। ক্লাইভ পরে কলকাতা পুনর্দখল করতে আসেন, তিনি ঘটনার প্রত্যক্ষদর্শী ছিলেন না।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [buxar]
+  stem:
+    en: With reference to the Treaties of Allahabad (1765), consider the following statements.
+    bn: এলাহাবাদের সন্ধি (১৭৬৫) প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Shah Alam II granted the Diwani of Bengal, Bihar and Orissa to the East India Company."
+      bn: "১. দ্বিতীয় শাহ আলম ইস্ট ইন্ডিয়া কোম্পানিকে বাংলা, বিহার ও ওড়িশার দেওয়ানি প্রদান করেন।"
+    - en: "2. The districts of Kora and Allahabad were given to Shuja-ud-Daulah."
+      bn: "২. কোরা ও এলাহাবাদ জেলা সুজা-উদ-দৌলাকে দেওয়া হয়।"
+    - en: "3. Shuja-ud-Daulah agreed to pay a war indemnity of ₹50 lakh."
+      bn: "৩. সুজা-উদ-দৌলা যুদ্ধের ক্ষতিপূরণ হিসেবে ৫০ লক্ষ টাকা দিতে রাজি হন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+  answer: 3
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because Kora and Allahabad were taken from Shuja-ud-Daulah and given to the emperor Shah Alam II; Shuja got back the rest of Awadh.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল, কারণ কোরা ও এলাহাবাদ সুজা-উদ-দৌলার কাছ থেকে নিয়ে সম্রাট দ্বিতীয় শাহ আলমকে দেওয়া হয়; সুজা অযোধ্যার বাকি অংশ ফিরে পান।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [dual-government]
+  stem:
+    en: Consider the following statements about the Dual Government in Bengal.
+    bn: বাংলার দ্বৈত শাসন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was introduced by Robert Clive after the Company obtained the Diwani."
+      bn: "১. কোম্পানি দেওয়ানি লাভ করার পর রবার্ট ক্লাইভ এই ব্যবস্থা প্রবর্তন করেন।"
+    - en: "2. Under it, the Company collected the revenue while the Nizamat nominally remained with the Nawab."
+      bn: "২. এই ব্যবস্থায় কোম্পানি রাজস্ব আদায় করত এবং নিজামত নামে নবাবের হাতে থাকত।"
+    - en: "3. It was abolished by Lord Cornwallis in 1793."
+      bn: "৩. ১৭৯৩ সালে লর্ড কর্নওয়ালিস এই ব্যবস্থার অবসান ঘটান।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because Warren Hastings ended the Dual Government in 1772; 1793 is the year of Cornwallis's Permanent Settlement, which makes it a tempting distractor.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল, কারণ ১৭৭২ সালে ওয়ারেন হেস্টিংস দ্বৈত শাসনের অবসান ঘটান; ১৭৯৩ হল কর্নওয়ালিসের চিরস্থায়ী বন্দোবস্তের বছর, তাই এটি বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [mysore]
+  stem:
+    en: With reference to the Anglo-Mysore Wars, consider the following statements.
+    bn: ইঙ্গ-মহীশূর যুদ্ধ প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The First Anglo-Mysore War ended with the Treaty of Madras."
+      bn: "১. মাদ্রাজের সন্ধির মাধ্যমে প্রথম ইঙ্গ-মহীশূর যুদ্ধের অবসান ঘটে।"
+    - en: "2. Hyder Ali was killed in the Fourth Anglo-Mysore War."
+      bn: "২. চতুর্থ ইঙ্গ-মহীশূর যুদ্ধে হায়দার আলি নিহত হন।"
+    - en: "3. Under the Treaty of Seringapatam (1792), Tipu Sultan ceded about half of his territory."
+      bn: "৩. শ্রীরঙ্গপত্তনমের সন্ধি (১৭৯২) অনুযায়ী টিপু সুলতান তাঁর রাজ্যের প্রায় অর্ধেক ছেড়ে দেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because Hyder Ali died in 1782, during the Second war; it was his son Tipu Sultan who was killed in the Fourth war (1799).
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল, কারণ হায়দার আলির মৃত্যু হয় ১৭৮২ সালে, দ্বিতীয় যুদ্ধের সময়; চতুর্থ যুদ্ধে (১৭৯৯) নিহত হন তাঁর পুত্র টিপু সুলতান।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [subsidiary-alliance]
+  stem:
+    en: Consider the following statements about the Subsidiary Alliance.
+    bn: অধীনতামূলক মিত্রতা সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Indian ally was free to make alliances with other powers without British consent."
+      bn: "১. ব্রিটিশদের সম্মতি ছাড়াই মিত্র ভারতীয় রাজ্য অন্য শক্তির সঙ্গে মিত্রতা করতে পারত।"
+    - en: "2. The Indian ally had to pay for the British troops stationed in its territory."
+      bn: "২. মিত্র ভারতীয় রাজ্যকে তার এলাকায় রাখা ব্রিটিশ সেনাবাহিনীর খরচ বহন করতে হত।"
+    - en: "3. A British Resident was posted at the court of the Indian ally."
+      bn: "৩. মিত্র ভারতীয় রাজ্যের দরবারে একজন ব্রিটিশ রেসিডেন্ট নিযুক্ত থাকতেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong because the ally could not make war, peace or alliances without British consent; the Company controlled its foreign relations.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতি ভুল, কারণ ব্রিটিশদের সম্মতি ছাড়া মিত্র রাজ্য যুদ্ধ, শান্তি বা মিত্রতা করতে পারত না; তার বৈদেশিক সম্পর্ক কোম্পানি নিয়ন্ত্রণ করত।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [maratha]
+  stem:
+    en: With reference to the Anglo-Maratha Wars, consider the following statements.
+    bn: ইঙ্গ-মারাঠা যুদ্ধ প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The First Anglo-Maratha War ended with the Treaty of Salbai."
+      bn: "১. সলবাইয়ের সন্ধির মাধ্যমে প্রথম ইঙ্গ-মারাঠা যুদ্ধের অবসান ঘটে।"
+    - en: "2. Peshwa Baji Rao II accepted the Subsidiary Alliance by the Treaty of Bassein."
+      bn: "২. বেসিনের সন্ধির মাধ্যমে পেশোয়া দ্বিতীয় বাজিরাও অধীনতামূলক মিত্রতা গ্রহণ করেন।"
+    - en: "3. After the Third Anglo-Maratha War, the office of Peshwa was abolished."
+      bn: "৩. তৃতীয় ইঙ্গ-মারাঠা যুদ্ধের পর পেশোয়া পদ বিলুপ্ত করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. Salbai (1782) ended the First war, Bassein (1802) brought the Peshwa under the Subsidiary Alliance, and after the Third war (1817–18) the Peshwaship was abolished and Baji Rao II was sent to Bithur.
+    bn: তিনটি বিবৃতিই সঠিক। সলবাইয়ের সন্ধি (১৭৮২) প্রথম যুদ্ধের অবসান ঘটায়, বেসিনের সন্ধি (১৮০২) পেশোয়াকে অধীনতামূলক মিত্রতার আওতায় আনে এবং তৃতীয় যুদ্ধের (১৮১৭–১৮) পর পেশোয়া পদ বিলুপ্ত করে দ্বিতীয় বাজিরাওকে বিঠুরে পাঠানো হয়।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [punjab]
+  stem:
+    en: Consider the following statements about the Anglo-Sikh relations.
+    bn: ইঙ্গ-শিখ সম্পর্ক বিষয়ে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Ranjit Singh signed the Treaty of Amritsar with the Company in 1809."
+      bn: "১. ১৮০৯ সালে রণজিৎ সিং কোম্পানির সঙ্গে অমৃতসরের সন্ধি স্বাক্ষর করেন।"
+    - en: "2. The First Anglo-Sikh War ended with the Treaty of Lahore."
+      bn: "২. লাহোরের সন্ধির মাধ্যমে প্রথম ইঙ্গ-শিখ যুদ্ধের অবসান ঘটে।"
+    - en: "3. Punjab was annexed immediately after the First Anglo-Sikh War."
+      bn: "৩. প্রথম ইঙ্গ-শিখ যুদ্ধের পরেই পাঞ্জাব দখল করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because Punjab was annexed in 1849, after the Second Anglo-Sikh War; after the First war the minor Dalip Singh remained Maharaja.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল, কারণ দ্বিতীয় ইঙ্গ-শিখ যুদ্ধের পর ১৮৪৯ সালে পাঞ্জাব দখল করা হয়; প্রথম যুদ্ধের পর নাবালক দলীপ সিং মহারাজা ছিলেন।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [mysore, maratha]
+  stem:
+    en: Match List I (War) with List II (Treaty that ended it).
+    bn: তালিকা I (যুদ্ধ)-এর সঙ্গে তালিকা II (যে সন্ধিতে যুদ্ধ শেষ হয়) মেলান।
+  left:
+    - { en: "A. First Anglo-Mysore War", bn: "ক. প্রথম ইঙ্গ-মহীশূর যুদ্ধ" }
+    - { en: "B. Second Anglo-Mysore War", bn: "খ. দ্বিতীয় ইঙ্গ-মহীশূর যুদ্ধ" }
+    - { en: "C. Third Anglo-Mysore War", bn: "গ. তৃতীয় ইঙ্গ-মহীশূর যুদ্ধ" }
+    - { en: "D. First Anglo-Maratha War", bn: "ঘ. প্রথম ইঙ্গ-মারাঠা যুদ্ধ" }
+  right:
+    - { en: "1. Treaty of Salbai", bn: "১. সলবাইয়ের সন্ধি" }
+    - { en: "2. Treaty of Seringapatam", bn: "২. শ্রীরঙ্গপত্তনমের সন্ধি" }
+    - { en: "3. Treaty of Madras", bn: "৩. মাদ্রাজের সন্ধি" }
+    - { en: "4. Treaty of Mangalore", bn: "৪. ম্যাঙ্গালোরের সন্ধি" }
+  options:
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+  answer: 2
+  explanation:
+    en: Madras (1769) ended the First Mysore war, Mangalore (1784) the Second, Seringapatam (1792) the Third, and Salbai (1782) the First Anglo-Maratha War. Swapping Madras and Mangalore is the commonest mistake.
+    bn: মাদ্রাজের সন্ধি (১৭৬৯) প্রথম, ম্যাঙ্গালোরের সন্ধি (১৭৮৪) দ্বিতীয় এবং শ্রীরঙ্গপত্তনমের সন্ধি (১৭৯২) তৃতীয় ইঙ্গ-মহীশূর যুদ্ধের অবসান ঘটায়; সলবাইয়ের সন্ধি (১৭৮২) প্রথম ইঙ্গ-মারাঠা যুদ্ধ শেষ করে। মাদ্রাজ ও ম্যাঙ্গালোর গুলিয়ে ফেলাই সবচেয়ে সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [plassey, buxar, maratha, punjab]
+  stem:
+    en: Match List I (Battle) with List II (Year).
+    bn: তালিকা I (যুদ্ধ)-এর সঙ্গে তালিকা II (বছর) মেলান।
+  left:
+    - { en: "A. Plassey", bn: "ক. পলাশি" }
+    - { en: "B. Buxar", bn: "খ. বক্সার" }
+    - { en: "C. Assaye", bn: "গ. আসাই" }
+    - { en: "D. Chillianwala", bn: "ঘ. চিলিয়ানওয়ালা" }
+  right:
+    - { en: "1. 1803", bn: "১. ১৮০৩" }
+    - { en: "2. 1849", bn: "২. ১৮৪৯" }
+    - { en: "3. 1764", bn: "৩. ১৭৬৪" }
+    - { en: "4. 1757", bn: "৪. ১৭৫৭" }
+  options:
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+  answer: 3
+  explanation:
+    en: Plassey was fought in 1757, Buxar in 1764, Assaye (Second Anglo-Maratha War) in 1803 and Chillianwala (Second Anglo-Sikh War) in 1849. Do not mix up Plassey and Buxar.
+    bn: পলাশির যুদ্ধ ১৭৫৭, বক্সারের যুদ্ধ ১৭৬৪, আসাইয়ের যুদ্ধ (দ্বিতীয় ইঙ্গ-মারাঠা যুদ্ধ) ১৮০৩ এবং চিলিয়ানওয়ালার যুদ্ধ (দ্বিতীয় ইঙ্গ-শিখ যুদ্ধ) ১৮৪৯ সালে হয়। পলাশি ও বক্সারের বছর গুলিয়ে ফেলবেন না।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [doctrine-of-lapse]
+  stem:
+    en: Match List I (State annexed under the Doctrine of Lapse) with List II (Year of annexation).
+    bn: তালিকা I (স্বত্ববিলোপ নীতিতে দখল করা রাজ্য)-এর সঙ্গে তালিকা II (দখলের বছর) মেলান।
+  left:
+    - { en: "A. Satara", bn: "ক. সাতারা" }
+    - { en: "B. Sambalpur", bn: "খ. সম্বলপুর" }
+    - { en: "C. Jhansi", bn: "গ. ঝাঁসি" }
+    - { en: "D. Nagpur", bn: "ঘ. নাগপুর" }
+  right:
+    - { en: "1. 1848", bn: "১. ১৮৪৮" }
+    - { en: "2. 1849", bn: "২. ১৮৪৯" }
+    - { en: "3. 1853", bn: "৩. ১৮৫৩" }
+    - { en: "4. 1854", bn: "৪. ১৮৫৪" }
+  options:
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-1, B-3, C-2, D-4", bn: "ক-১, খ-৩, গ-২, ঘ-৪" }
+  answer: 0
+  explanation:
+    en: Satara (1848) was the first, followed by Sambalpur (1849), Jhansi (1853) and Nagpur (1854). Jhansi and Nagpur are often swapped; Jhansi came a year before Nagpur.
+    bn: প্রথম দখল করা হয় সাতারা (১৮৪৮), তারপর সম্বলপুর (১৮৪৯), ঝাঁসি (১৮৫৩) ও নাগপুর (১৮৫৪)। ঝাঁসি ও নাগপুর প্রায়ই গুলিয়ে যায়; ঝাঁসি দখল হয় নাগপুরের এক বছর আগে।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [dual-government, subsidiary-alliance, doctrine-of-lapse, mysore]
+  stem:
+    en: Match List I (Governor / Governor-General) with List II (Associated policy or event).
+    bn: তালিকা I (গভর্নর / গভর্নর-জেনারেল)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট নীতি বা ঘটনা) মেলান।
+  left:
+    - { en: "A. Robert Clive", bn: "ক. রবার্ট ক্লাইভ" }
+    - { en: "B. Lord Wellesley", bn: "খ. লর্ড ওয়েলেসলি" }
+    - { en: "C. Lord Dalhousie", bn: "গ. লর্ড ডালহৌসি" }
+    - { en: "D. Lord Cornwallis", bn: "ঘ. লর্ড কর্নওয়ালিস" }
+  right:
+    - { en: "1. Third Anglo-Mysore War", bn: "১. তৃতীয় ইঙ্গ-মহীশূর যুদ্ধ" }
+    - { en: "2. Dual Government in Bengal", bn: "২. বাংলায় দ্বৈত শাসন" }
+    - { en: "3. Doctrine of Lapse", bn: "৩. স্বত্ববিলোপ নীতি" }
+    - { en: "4. Subsidiary Alliance", bn: "৪. অধীনতামূলক মিত্রতা" }
+  options:
+    - { en: "A-2, B-3, C-4, D-1", bn: "ক-২, খ-৩, গ-৪, ঘ-১" }
+    - { en: "A-2, B-4, C-3, D-1", bn: "ক-২, খ-৪, গ-৩, ঘ-১" }
+    - { en: "A-1, B-4, C-3, D-2", bn: "ক-১, খ-৪, গ-৩, ঘ-২" }
+    - { en: "A-4, B-2, C-3, D-1", bn: "ক-৪, খ-২, গ-৩, ঘ-১" }
+  answer: 1
+  explanation:
+    en: Clive set up the Dual Government (1765), Wellesley the Subsidiary Alliance, Dalhousie the Doctrine of Lapse, and Cornwallis fought the Third Anglo-Mysore War (1790–92). Wellesley and Dalhousie are the pair most often confused.
+    bn: ক্লাইভ দ্বৈত শাসন (১৭৬৫), ওয়েলেসলি অধীনতামূলক মিত্রতা ও ডালহৌসি স্বত্ববিলোপ নীতি প্রবর্তন করেন, আর কর্নওয়ালিসের আমলে তৃতীয় ইঙ্গ-মহীশূর যুদ্ধ (১৭৯০–৯২) হয়। ওয়েলেসলি ও ডালহৌসির নীতি সবচেয়ে বেশি গুলিয়ে যায়।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [mir-qasim]
+  assertion:
+    en: Mir Qasim came into conflict with the East India Company in 1763.
+    bn: ১৭৬৩ সালে ইস্ট ইন্ডিয়া কোম্পানির সঙ্গে মীরকাশিমের সংঘাত বাধে।
+  reason:
+    en: Mir Qasim abolished all internal duties, which removed the advantage the English had gained by misusing the dastak.
+    bn: মীরকাশিম সমস্ত অভ্যন্তরীণ বাণিজ্যশুল্ক তুলে দেন, ফলে দস্তকের অপব্যবহার করে ইংরেজরা যে সুবিধা পেত তা শেষ হয়ে যায়।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. By removing duties for everyone, Mir Qasim put Indian merchants on an equal footing with the English, who saw it as an attack on their privileges; war followed in 1763.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। সকলের জন্য শুল্ক তুলে দেওয়ায় ভারতীয় বণিকরা ইংরেজদের সমান সুবিধা পায়; ইংরেজরা একে তাদের বিশেষ অধিকারের উপর আঘাত মনে করে এবং ১৭৬৩ সালে যুদ্ধ বাধে।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [buxar, plassey]
+  assertion:
+    en: Many historians regard the Battle of Buxar as more decisive than the Battle of Plassey.
+    bn: বহু ঐতিহাসিক বক্সারের যুদ্ধকে পলাশির যুদ্ধের চেয়ে বেশি নির্ণায়ক বলে মনে করেন।
+  reason:
+    en: At Buxar the English defeated the combined forces of Mir Qasim, the Nawab of Awadh and the Mughal emperor in an open battle.
+    bn: বক্সারে ইংরেজরা মীরকাশিম, অযোধ্যার নবাব ও মুঘল সম্রাটের মিলিত বাহিনীকে প্রকাশ্য যুদ্ধে পরাজিত করে।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Plassey was won largely through conspiracy, while Buxar was a military victory over three Indian powers together, which confirmed English supremacy.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। পলাশির জয় এসেছিল মূলত ষড়যন্ত্রের মাধ্যমে, কিন্তু বক্সারে একসঙ্গে তিনটি ভারতীয় শক্তির বিরুদ্ধে সামরিক জয় ইংরেজ আধিপত্যকে পাকা করে।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [doctrine-of-lapse]
+  assertion:
+    en: Awadh was annexed in 1856 under the Doctrine of Lapse.
+    bn: ১৮৫৬ সালে স্বত্ববিলোপ নীতি অনুযায়ী অযোধ্যা দখল করা হয়।
+  reason:
+    en: Lord Dalhousie annexed Awadh on the charge of misgovernance.
+    bn: লর্ড ডালহৌসি কুশাসনের অভিযোগে অযোধ্যা দখল করেন।
+  answer: 3
+  explanation:
+    en: The assertion is false and the reason is true. Awadh had a ruling Nawab, Wajid Ali Shah, and was annexed on the ground of misgovernance, not under the Doctrine of Lapse.
+    bn: বিবৃতিটি মিথ্যা এবং কারণটি সত্য। অযোধ্যায় নবাব ওয়াজিদ আলি শাহ শাসন করছিলেন; রাজ্যটি কুশাসনের অভিযোগে দখল করা হয়, স্বত্ববিলোপ নীতিতে নয়।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [subsidiary-alliance, mysore]
+  assertion:
+    en: States that accepted the Subsidiary Alliance lost control over their foreign relations.
+    bn: অধীনতামূলক মিত্রতা গ্রহণকারী রাজ্যগুলি তাদের বৈদেশিক সম্পর্কের উপর নিয়ন্ত্রণ হারায়।
+  reason:
+    en: Mysore was the first state to accept the Subsidiary Alliance.
+    bn: মহীশূর ছিল অধীনতামূলক মিত্রতা গ্রহণকারী প্রথম রাজ্য।
+  answer: 2
+  explanation:
+    en: The assertion is true and the reason is false. Allies could not make war, peace or alliances without British consent. The first state to accept the system was Hyderabad (1798); Mysore came under it only in 1799 after Tipu's death.
+    bn: বিবৃতিটি সত্য এবং কারণটি মিথ্যা। মিত্র রাজ্যগুলি ব্রিটিশদের সম্মতি ছাড়া যুদ্ধ, শান্তি বা মিত্রতা করতে পারত না। এই ব্যবস্থা প্রথম গ্রহণ করে হায়দরাবাদ (১৭৯৮); মহীশূর এর আওতায় আসে ১৭৯৯ সালে, টিপুর মৃত্যুর পরে।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [plassey, buxar, maratha]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Treaty of Allahabad"
+      bn: "১. এলাহাবাদের সন্ধি"
+    - en: "2. Treaty of Salbai"
+      bn: "২. সলবাইয়ের সন্ধি"
+    - en: "3. Battle of Plassey"
+      bn: "৩. পলাশির যুদ্ধ"
+    - en: "4. Battle of Buxar"
+      bn: "৪. বক্সারের যুদ্ধ"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+  answer: 2
+  explanation:
+    en: Plassey (1757), Buxar (1764), the Treaty of Allahabad (1765) and the Treaty of Salbai (1782). The Treaty of Allahabad followed Buxar, so it cannot come before it.
+    bn: পলাশির যুদ্ধ (১৭৫৭), বক্সারের যুদ্ধ (১৭৬৪), এলাহাবাদের সন্ধি (১৭৬৫) এবং সলবাইয়ের সন্ধি (১৭৮২)। এলাহাবাদের সন্ধি বক্সারের যুদ্ধের পরে হয়, তাই তা বক্সারের আগে আসতে পারে না।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [mysore]
+  stem:
+    en: Arrange the following events related to Mysore in chronological order.
+    bn: মহীশূর সংক্রান্ত নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Treaty of Seringapatam"
+      bn: "১. শ্রীরঙ্গপত্তনমের সন্ধি"
+    - en: "2. Treaty of Madras"
+      bn: "২. মাদ্রাজের সন্ধি"
+    - en: "3. Death of Tipu Sultan"
+      bn: "৩. টিপু সুলতানের মৃত্যু"
+    - en: "4. Treaty of Mangalore"
+      bn: "৪. ম্যাঙ্গালোরের সন্ধি"
+  options:
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+  answer: 3
+  explanation:
+    en: Treaty of Madras (1769), Treaty of Mangalore (1784), Treaty of Seringapatam (1792) and Tipu's death (1799). Mangalore is easily placed first by mistake, but it ended the Second war, not the First.
+    bn: মাদ্রাজের সন্ধি (১৭৬৯), ম্যাঙ্গালোরের সন্ধি (১৭৮৪), শ্রীরঙ্গপত্তনমের সন্ধি (১৭৯২) এবং টিপুর মৃত্যু (১৭৯৯)। ম্যাঙ্গালোরের সন্ধিকে ভুল করে প্রথমে রাখা সহজ, কিন্তু তা দ্বিতীয় যুদ্ধের অবসান ঘটায়, প্রথমটির নয়।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [maratha, punjab, doctrine-of-lapse]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Annexation of Jhansi"
+      bn: "১. ঝাঁসি দখল"
+    - en: "2. Treaty of Bassein"
+      bn: "২. বেসিনের সন্ধি"
+    - en: "3. Annexation of Punjab"
+      bn: "৩. পাঞ্জাব দখল"
+    - en: "4. Treaty of Amritsar between Ranjit Singh and the Company"
+      bn: "৪. রণজিৎ সিং ও কোম্পানির মধ্যে অমৃতসরের সন্ধি"
+  options:
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+  answer: 1
+  explanation:
+    en: Treaty of Bassein (1802), Treaty of Amritsar (1809), annexation of Punjab (1849) and annexation of Jhansi (1853). Bassein and Amritsar are only seven years apart, so check both dates carefully.
+    bn: বেসিনের সন্ধি (১৮০২), অমৃতসরের সন্ধি (১৮০৯), পাঞ্জাব দখল (১৮৪৯) এবং ঝাঁসি দখল (১৮৫৩)। বেসিন ও অমৃতসরের সন্ধির মধ্যে ব্যবধান মাত্র সাত বছর, তাই দুটি তারিখ ভালো করে মিলিয়ে নিন।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [plassey, mir-qasim]
+  stem:
+    en: Arrange the following events in Bengal in chronological order.
+    bn: বাংলার নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. The Black Hole incident"
+      bn: "১. অন্ধকূপ হত্যা"
+    - en: "2. Mir Qasim becomes Nawab"
+      bn: "২. মীরকাশিমের নবাব হওয়া"
+    - en: "3. Treaty of Alinagar"
+      bn: "৩. আলিনগরের সন্ধি"
+    - en: "4. Battle of Plassey"
+      bn: "৪. পলাশির যুদ্ধ"
+  options:
+    - { en: 1-3-4-2, bn: ১-৩-৪-২ }
+    - { en: 1-4-3-2, bn: ১-৪-৩-২ }
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 1-3-2-4, bn: ১-৩-২-৪ }
+  answer: 0
+  explanation:
+    en: The Black Hole incident (June 1756), the Treaty of Alinagar (February 1757), the Battle of Plassey (June 1757) and Mir Qasim's accession (1760). The Treaty of Alinagar came before Plassey, not after it.
+    bn: অন্ধকূপ হত্যা (জুন ১৭৫৬), আলিনগরের সন্ধি (ফেব্রুয়ারি ১৭৫৭), পলাশির যুদ্ধ (জুন ১৭৫৭) এবং মীরকাশিমের নবাব হওয়া (১৭৬০)। আলিনগরের সন্ধি পলাশির যুদ্ধের আগে হয়েছিল, পরে নয়।
+  status: ai-generated

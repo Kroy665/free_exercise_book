@@ -16,7 +16,14 @@ root = pathlib.Path(sys.argv[1])
 schemas = {p.name: json.loads(p.read_text()) for p in (root/"schema").glob("*.json")}
 reg = Registry().with_resources([(n, Resource.from_contents(s)) for n, s in schemas.items()])
 def check(schema, path):
-    data = yaml.safe_load(path.read_text())
+    if not path.exists():
+        print(f"ERR {path}: missing file")
+        return None, False
+    try:
+        data = yaml.safe_load(path.read_text())
+    except yaml.YAMLError as e:
+        print(f"ERR {path}: invalid YAML: {str(e).splitlines()[0]}")
+        return None, False
     errs = list(Draft202012Validator(schemas[schema], registry=reg).iter_errors(data))
     for e in errs: print(f"ERR {path}: {list(e.path)} {e.message[:150]}")
     return data, not errs
@@ -31,8 +38,8 @@ for p in root.glob("current-affairs/*/unit.yaml"): ok &= check("subject.schema.j
 for t in root.glob("current-affairs/*/*/topic.yaml"):
     ok &= check("topic.schema.json", t)[1]
     items, good = check("ca_items.schema.json", t.parent/"items.yaml"); ok &= good
-    qs, good = check("question.schema.json", t.parent/"questions.yaml"); ok &= good
-    if not good: continue
+    qs, good2 = check("question.schema.json", t.parent/"questions.yaml"); ok &= good2
+    if items is None or qs is None or not (good and good2): continue
     item_ids = [i["id"] for i in items]
     if len(item_ids) != len(set(item_ids)): print(f"ERR {t.parent}: duplicate item ids"); ok = False
     for i in items:
@@ -52,6 +59,7 @@ for t in root.glob("current-affairs/*/*/topic.yaml"):
 for t in root.glob("subjects/*/*/*/topic.yaml"):
     ok &= check("topic.schema.json", t)[1]
     qs, good = check("question.schema.json", t.parent/"questions.yaml"); ok &= good
+    if qs is None: continue
     anchors = None
     for lang in REQUIRED_LANGS:
         note = t.parent/f"notes.{lang}.md"

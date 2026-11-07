@@ -1,0 +1,700 @@
+# Questions for hist.modern.social-reform
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn.
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, ibps-po]
+  refs: [rammohun-roy]
+  stem:
+    en: Who founded the Brahmo Sabha in 1828, which was later renamed the Brahmo Samaj?
+    bn: ১৮২৮ সালে কে ব্রাহ্মসভা প্রতিষ্ঠা করেন, যার নাম পরে হয় ব্রাহ্মসমাজ?
+  options:
+    - { en: Raja Rammohun Roy, bn: রাজা রামমোহন রায় }
+    - { en: Debendranath Tagore, bn: দেবেন্দ্রনাথ ঠাকুর }
+    - { en: Keshab Chandra Sen, bn: কেশবচন্দ্র সেন }
+    - { en: Ishwar Chandra Vidyasagar, bn: ঈশ্বরচন্দ্র বিদ্যাসাগর }
+  answer: 0
+  explanation:
+    en: Rammohun Roy founded the Brahmo Sabha on 20 August 1828. Debendranath Tagore revived the Samaj later and led the Adi Brahmo Samaj, but he was not its founder.
+    bn: রামমোহন রায় ২০ আগস্ট ১৮২৮ সালে ব্রাহ্মসভা প্রতিষ্ঠা করেন। দেবেন্দ্রনাথ ঠাকুর পরে ব্রাহ্মসমাজকে পুনরুজ্জীবিত করেন ও আদি ব্রাহ্মসমাজের নেতা হন, কিন্তু তিনি প্রতিষ্ঠাতা নন।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc, ibps-po]
+  refs: [rammohun-roy, social-laws]
+  stem:
+    en: Under which Governor-General was sati declared illegal by Regulation XVII of 1829?
+    bn: কোন গভর্নর-জেনারেলের আমলে ১৮২৯ সালের ১৭ নং রেগুলেশন দ্বারা সতীদাহ প্রথা বেআইনি ঘোষিত হয়?
+  options:
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord Canning, bn: লর্ড ক্যানিং }
+  answer: 1
+  explanation:
+    en: Lord William Bentinck banned sati in December 1829, after a long campaign by Rammohun Roy. Lord Dalhousie is a tempting choice because of his many reforms, but he came to India only in 1848.
+    bn: রামমোহন রায়ের দীর্ঘ আন্দোলনের পর ১৮২৯ সালের ডিসেম্বরে লর্ড উইলিয়াম বেন্টিঙ্ক সতীদাহ প্রথা নিষিদ্ধ করেন। বহু সংস্কারের জন্য লর্ড ডালহৌসির নাম মনে আসতে পারে, কিন্তু তিনি ভারতে আসেন ১৮৪৮ সালে।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, ibps-po]
+  refs: [young-bengal-vidyasagar, social-laws]
+  stem:
+    en: The Hindu Widows' Remarriage Act of 1856 is mainly associated with the efforts of whom?
+    bn: ১৮৫৬ সালের হিন্দু বিধবা পুনর্বিবাহ আইন প্রধানত কার প্রচেষ্টার সঙ্গে যুক্ত?
+  options:
+    - { en: Raja Rammohun Roy, bn: রাজা রামমোহন রায় }
+    - { en: Keshab Chandra Sen, bn: কেশবচন্দ্র সেন }
+    - { en: Ishwar Chandra Vidyasagar, bn: ঈশ্বরচন্দ্র বিদ্যাসাগর }
+    - { en: Henry Louis Vivian Derozio, bn: হেনরি লুই ভিভিয়ান ডিরোজিও }
+  answer: 2
+  explanation:
+    en: Vidyasagar used the ancient texts to argue for widow remarriage, and his campaign led to the 1856 Act. Rammohun Roy is linked with the abolition of sati (1829), not with widow remarriage.
+    bn: বিদ্যাসাগর প্রাচীন শাস্ত্রের সাহায্যে বিধবাবিবাহের পক্ষে যুক্তি দেন এবং তাঁর আন্দোলনের ফলে ১৮৫৬ সালের আইন পাস হয়। রামমোহন রায় সতীদাহ প্রথা রদের (১৮২৯) সঙ্গে যুক্ত, বিধবাবিবাহের সঙ্গে নয়।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc, ibps-po]
+  refs: [prarthana-arya]
+  stem:
+    en: Who founded the Arya Samaj in 1875?
+    bn: ১৮৭৫ সালে আর্য সমাজ কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Swami Vivekananda, bn: স্বামী বিবেকানন্দ }
+    - { en: Atmaram Pandurang, bn: আত্মারাম পাণ্ডুরং }
+    - { en: Swami Shraddhanand, bn: স্বামী শ্রদ্ধানন্দ }
+    - { en: Swami Dayananda Saraswati, bn: স্বামী দয়ানন্দ সরস্বতী }
+  answer: 3
+  explanation:
+    en: Swami Dayananda Saraswati founded the Arya Samaj at Bombay in 1875. Swami Shraddhanand was a later Arya Samaj leader who founded the Gurukul at Kangri, not the founder of the Samaj.
+    bn: স্বামী দয়ানন্দ সরস্বতী ১৮৭৫ সালে বোম্বাইয়ে আর্য সমাজ প্রতিষ্ঠা করেন। স্বামী শ্রদ্ধানন্দ ছিলেন আর্য সমাজের পরবর্তীকালের নেতা, যিনি কাংড়িতে গুরুকুল প্রতিষ্ঠা করেন; তিনি সমাজের প্রতিষ্ঠাতা নন।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, ibps-po]
+  refs: [caste-movements]
+  stem:
+    en: Who founded the Satyashodhak Samaj in 1873?
+    bn: ১৮৭৩ সালে সত্যশোধক সমাজ কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Jyotiba Phule, bn: জ্যোতিবা ফুলে }
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+    - { en: Sree Narayana Guru, bn: শ্রীনারায়ণ গুরু }
+    - { en: R.G. Bhandarkar, bn: রামকৃষ্ণ গোপাল ভাণ্ডারকর }
+  answer: 0
+  explanation:
+    en: Jyotiba Phule founded the Satyashodhak Samaj in 1873 to fight for the rights of lower castes and women. M.G. Ranade, also from Maharashtra, was a leader of the Prarthana Samaj.
+    bn: নিম্নবর্ণ ও নারীর অধিকারের জন্য জ্যোতিবা ফুলে ১৮৭৩ সালে সত্যশোধক সমাজ প্রতিষ্ঠা করেন। মহারাষ্ট্রের আরেক সংস্কারক মহাদেব গোবিন্দ রানাডে ছিলেন প্রার্থনা সমাজের নেতা।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, ibps-po]
+  refs: [ramakrishna-theosophy]
+  stem:
+    en: In which city did Swami Vivekananda address the Parliament of Religions in 1893?
+    bn: ১৮৯৩ সালে স্বামী বিবেকানন্দ কোন শহরে ধর্মমহাসভায় বক্তৃতা দেন?
+  options:
+    - { en: New York, bn: নিউ ইয়র্ক }
+    - { en: Chicago, bn: শিকাগো }
+    - { en: London, bn: লন্ডন }
+    - { en: Boston, bn: বস্টন }
+  answer: 1
+  explanation:
+    en: Vivekananda spoke at the Parliament of Religions in Chicago in 1893. New York is tempting because the Theosophical Society was founded there in 1875, but that is a different event.
+    bn: বিবেকানন্দ ১৮৯৩ সালে শিকাগো ধর্মমহাসভায় বক্তৃতা দেন। নিউ ইয়র্ক বিভ্রান্তিকর হতে পারে, কারণ সেখানে ১৮৭৫ সালে থিওসফিক্যাল সোসাইটি প্রতিষ্ঠিত হয়েছিল; সেটি সম্পূর্ণ আলাদা ঘটনা।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, wbcs, state-psc, upsc-cse]
+  refs: [young-bengal-vidyasagar]
+  stem:
+    en: The Young Bengal Movement was inspired by a teacher of which institution?
+    bn: ইয়ং বেঙ্গল আন্দোলন কোন প্রতিষ্ঠানের এক শিক্ষকের দ্বারা অনুপ্রাণিত হয়েছিল?
+  options:
+    - { en: Sanskrit College, bn: সংস্কৃত কলেজ }
+    - { en: Fort William College, bn: ফোর্ট উইলিয়াম কলেজ }
+    - { en: Hindu College, bn: হিন্দু কলেজ }
+    - { en: Vedanta College, bn: বেদান্ত কলেজ }
+  answer: 2
+  explanation:
+    en: Henry Louis Vivian Derozio taught at the Hindu College, Calcutta, from 1826 to 1831, and his students formed Young Bengal. The Sanskrit College is linked with Vidyasagar, who became its principal.
+    bn: হেনরি লুই ভিভিয়ান ডিরোজিও ১৮২৬ থেকে ১৮৩১ সাল পর্যন্ত কলকাতার হিন্দু কলেজে পড়াতেন এবং তাঁর ছাত্রেরাই ইয়ং বেঙ্গল নামে পরিচিত হন। সংস্কৃত কলেজ বিদ্যাসাগরের সঙ্গে যুক্ত, যিনি তার অধ্যক্ষ হয়েছিলেন।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [wbcs, state-psc, upsc-cse, ssc-cgl]
+  refs: [brahmo-samaj]
+  stem:
+    en: Which event led to the formation of the Sadharan Brahmo Samaj in 1878?
+    bn: কোন ঘটনার ফলে ১৮৭৮ সালে সাধারণ ব্রাহ্মসমাজ গঠিত হয়?
+  options:
+    - { en: The death of Raja Rammohun Roy in England, bn: ইংল্যান্ডে রাজা রামমোহন রায়ের মৃত্যু }
+    - { en: The founding of the Tattvabodhini Sabha, bn: তত্ত্ববোধিনী সভার প্রতিষ্ঠা }
+    - { en: The passing of the Hindu Widows' Remarriage Act, bn: হিন্দু বিধবা পুনর্বিবাহ আইন পাস হওয়া }
+    - { en: "Keshab Chandra Sen's marriage of his under-age daughter to the Maharaja of Cooch Behar", bn: কেশবচন্দ্র সেনের নাবালিকা কন্যার সঙ্গে কোচবিহারের মহারাজার বিবাহ }
+  answer: 3
+  explanation:
+    en: In 1878 Keshab married his under-age daughter to the Maharaja of Cooch Behar, against the rule of the 1872 Act he had campaigned for, so many followers broke away to form the Sadharan Brahmo Samaj. The founding of the Tattvabodhini Sabha (1839) came much earlier and was not linked to any split.
+    bn: ১৮৭৮ সালে কেশবচন্দ্র তাঁর নাবালিকা কন্যার সঙ্গে কোচবিহারের মহারাজার বিবাহ দেন, যা তাঁরই প্রচারিত ১৮৭২ সালের আইনের নিয়মের বিরোধী ছিল। ফলে বহু অনুগামী সরে গিয়ে সাধারণ ব্রাহ্মসমাজ গঠন করেন। তত্ত্ববোধিনী সভা (১৮৩৯) অনেক আগে প্রতিষ্ঠিত হয় এবং কোনো বিভাজনের সঙ্গে যুক্ত নয়।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [ramakrishna-theosophy]
+  stem:
+    en: Where was the Theosophical Society founded in 1875?
+    bn: ১৮৭৫ সালে থিওসফিক্যাল সোসাইটি কোথায় প্রতিষ্ঠিত হয়?
+  options:
+    - { en: Adyar, bn: আদেয়ার }
+    - { en: New York, bn: নিউ ইয়র্ক }
+    - { en: Benaras, bn: বারাণসী }
+    - { en: Bombay, bn: বোম্বাই }
+  answer: 1
+  explanation:
+    en: Madame Blavatsky and Colonel Olcott founded the Society in New York in 1875. Adyar, near Madras, is the most tempting option, but it became the headquarters only later.
+    bn: মাদাম ব্লাভাটস্কি ও কর্নেল অলকট ১৮৭৫ সালে নিউ ইয়র্কে এই সোসাইটি প্রতিষ্ঠা করেন। মাদ্রাজের কাছে আদেয়ার সবচেয়ে বিভ্রান্তিকর বিকল্প, কিন্তু সেটি পরে এর সদর দফতর হয়।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [muslim-reform]
+  stem:
+    en: Where did Sir Syed Ahmad Khan found the Muhammadan Anglo-Oriental College in 1875?
+    bn: ১৮৭৫ সালে স্যার সৈয়দ আহমদ খান কোথায় মহামেডান অ্যাংলো-ওরিয়েন্টাল কলেজ প্রতিষ্ঠা করেন?
+  options:
+    - { en: Deoband, bn: দেওবন্দ }
+    - { en: Lucknow, bn: লখনউ }
+    - { en: Aligarh, bn: আলিগড় }
+    - { en: Delhi, bn: দিল্লি }
+  answer: 2
+  explanation:
+    en: The MAO College was set up at Aligarh in 1875 and became the Aligarh Muslim University in 1920. Deoband was the centre of a different, revivalist movement that began in 1866 and did not seek Western education.
+    bn: ১৮৭৫ সালে আলিগড়ে এম.এ.ও. কলেজ স্থাপিত হয়, যা ১৯২০ সালে আলিগড় মুসলিম বিশ্ববিদ্যালয়ে পরিণত হয়। দেওবন্দ ছিল ১৮৬৬ সালে শুরু হওয়া একটি আলাদা পুনরুজ্জীবনবাদী আন্দোলনের কেন্দ্র, যা পাশ্চাত্য শিক্ষা গ্রহণ করতে চায়নি।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [prarthana-arya]
+  stem:
+    en: Who founded the Prarthana Samaj in Bombay in 1867?
+    bn: ১৮৬৭ সালে বোম্বাইয়ে প্রার্থনা সমাজ কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: M.G. Ranade, bn: মহাদেব গোবিন্দ রানাডে }
+    - { en: Keshab Chandra Sen, bn: কেশবচন্দ্র সেন }
+    - { en: Swami Dayananda Saraswati, bn: স্বামী দয়ানন্দ সরস্বতী }
+    - { en: Atmaram Pandurang, bn: আত্মারাম পাণ্ডুরং }
+  answer: 3
+  explanation:
+    en: Atmaram Pandurang founded the Prarthana Samaj, inspired by Keshab Chandra Sen's visit. M.G. Ranade is the most tempting option, but he joined later as a leading member and was not the founder.
+    bn: কেশবচন্দ্র সেনের সফরে অনুপ্রাণিত হয়ে আত্মারাম পাণ্ডুরং প্রার্থনা সমাজ প্রতিষ্ঠা করেন। মহাদেব গোবিন্দ রানাডে সবচেয়ে বিভ্রান্তিকর বিকল্প, কিন্তু তিনি পরে প্রধান সদস্য হিসেবে যোগ দেন; প্রতিষ্ঠাতা নন।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc]
+  refs: [caste-movements]
+  stem:
+    en: Who founded the Sree Narayana Dharma Paripalana (SNDP) Yogam in Kerala in 1903?
+    bn: ১৯০৩ সালে কেরলে শ্রীনারায়ণ ধর্ম পরিপালন (SNDP) যোগম কে প্রতিষ্ঠা করেন?
+  options:
+    - { en: Sree Narayana Guru, bn: শ্রীনারায়ণ গুরু }
+    - { en: Jyotiba Phule, bn: জ্যোতিবা ফুলে }
+    - { en: Swami Vivekananda, bn: স্বামী বিবেকানন্দ }
+    - { en: Annie Besant, bn: অ্যানি বেসান্ত }
+  answer: 0
+  explanation:
+    en: Sree Narayana Guru founded the SNDP Yogam in 1903 for the social and educational progress of the Ezhava community. Jyotiba Phule also fought caste discrimination, but in Maharashtra, through the Satyashodhak Samaj.
+    bn: এঝাভা সম্প্রদায়ের সামাজিক ও শিক্ষাগত উন্নতির জন্য শ্রীনারায়ণ গুরু ১৯০৩ সালে এস.এন.ডি.পি. যোগম প্রতিষ্ঠা করেন। জ্যোতিবা ফুলেও জাতিভেদের বিরুদ্ধে লড়েছিলেন, তবে মহারাষ্ট্রে, সত্যশোধক সমাজের মাধ্যমে।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [rammohun-roy]
+  stem:
+    en: Consider the following statements about Raja Rammohun Roy.
+    bn: রাজা রামমোহন রায় সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. He founded the Atmiya Sabha in Calcutta."
+      bn: "১. তিনি কলকাতায় আত্মীয় সভা প্রতিষ্ঠা করেন।"
+    - en: "2. The title of \"Raja\" was given to him by Bahadur Shah II."
+      bn: "২. দ্বিতীয় বাহাদুর শাহ তাঁকে \"রাজা\" উপাধি দেন।"
+    - en: "3. He died at Bristol in England in 1833."
+      bn: "৩. ১৮৩৩ সালে ইংল্যান্ডের ব্রিস্টলে তাঁর মৃত্যু হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because the title was given by the Mughal emperor Akbar II, who sent him to England; Bahadur Shah II was the next and last Mughal emperor.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ মুঘল সম্রাট দ্বিতীয় আকবর তাঁকে "রাজা" উপাধি দিয়ে ইংল্যান্ডে পাঠান; দ্বিতীয় বাহাদুর শাহ ছিলেন পরবর্তী ও শেষ মুঘল সম্রাট।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [prarthana-arya]
+  stem:
+    en: With reference to the Arya Samaj, consider the following statements.
+    bn: আর্য সমাজ প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It was founded at Lahore in 1875."
+      bn: "১. এটি ১৮৭৫ সালে লাহোরে প্রতিষ্ঠিত হয়।"
+    - en: "2. It started the shuddhi movement to bring converts back into Hinduism."
+      bn: "২. ধর্মান্তরিতদের হিন্দুধর্মে ফিরিয়ে আনার জন্য এটি শুদ্ধি আন্দোলন শুরু করে।"
+    - en: "3. Dayanand Anglo-Vedic (DAV) institutions were set up by followers of Dayananda after his death."
+      bn: "৩. দয়ানন্দের মৃত্যুর পর তাঁর অনুগামীরা দয়ানন্দ অ্যাংলো-বৈদিক (DAV) প্রতিষ্ঠানগুলি স্থাপন করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong because the Arya Samaj was founded at Bombay; Lahore is tempting because the Samaj later became strongest in Punjab and the first DAV institution was opened there.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতিটি ভুল, কারণ আর্য সমাজ বোম্বাইয়ে প্রতিষ্ঠিত হয়। লাহোর বিভ্রান্তিকর, কারণ পরে পাঞ্জাবেই আর্য সমাজ সবচেয়ে শক্তিশালী হয় এবং প্রথম DAV প্রতিষ্ঠান সেখানেই খোলা হয়।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 2
+  exams: [wbcs, state-psc, ssc-cgl]
+  refs: [young-bengal-vidyasagar]
+  stem:
+    en: Consider the following statements about Ishwar Chandra Vidyasagar.
+    bn: ঈশ্বরচন্দ্র বিদ্যাসাগর সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. He became the principal of the Sanskrit College, Calcutta."
+      bn: "১. তিনি কলকাতার সংস্কৃত কলেজের অধ্যক্ষ হয়েছিলেন।"
+    - en: "2. He wrote the Bengali primer Barnaparichay."
+      bn: "২. তিনি বাংলা প্রাথমিক পাঠ্যপুস্তক বর্ণপরিচয় রচনা করেন।"
+    - en: "3. He was associated with the Bethune School for girls in Calcutta."
+      bn: "৩. তিনি কলকাতায় মেয়েদের বেথুন স্কুলের সঙ্গে যুক্ত ছিলেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. Vidyasagar headed the Sanskrit College, wrote Barnaparichay and worked for girls' education, including through the Bethune School. Do not confuse him with Derozio, who taught at the Hindu College.
+    bn: তিনটি বিবৃতিই সঠিক। বিদ্যাসাগর সংস্কৃত কলেজের অধ্যক্ষ ছিলেন, বর্ণপরিচয় রচনা করেন এবং বেথুন স্কুল-সহ নানা উপায়ে নারীশিক্ষার জন্য কাজ করেন। হিন্দু কলেজের শিক্ষক ডিরোজিওর সঙ্গে তাঁকে গুলিয়ে ফেলবেন না।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [ramakrishna-theosophy]
+  stem:
+    en: Consider the following statements.
+    bn: নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Ramakrishna Mission was founded by Ramakrishna Paramahamsa in 1886."
+      bn: "১. ১৮৮৬ সালে শ্রীরামকৃষ্ণ পরমহংসদেব রামকৃষ্ণ মিশন প্রতিষ্ঠা করেন।"
+    - en: "2. Annie Besant founded the Central Hindu College at Benaras."
+      bn: "২. অ্যানি বেসান্ত বারাণসীতে সেন্ট্রাল হিন্দু কলেজ প্রতিষ্ঠা করেন।"
+    - en: "3. The headquarters of the Theosophical Society moved to Adyar, near Madras."
+      bn: "৩. থিওসফিক্যাল সোসাইটির সদর দফতর মাদ্রাজের কাছে আদেয়ারে স্থানান্তরিত হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong because Ramakrishna died in 1886; the Mission was founded by his disciple Swami Vivekananda in 1897.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতিটি ভুল, কারণ ১৮৮৬ সালে শ্রীরামকৃষ্ণের মৃত্যু হয়; রামকৃষ্ণ মিশন প্রতিষ্ঠা করেন তাঁর শিষ্য স্বামী বিবেকানন্দ, ১৮৯৭ সালে।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [brahmo-samaj]
+  stem:
+    en: With reference to the Brahmo Samaj, consider the following statements.
+    bn: ব্রাহ্মসমাজ প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. After the split of 1866, Debendranath Tagore's group came to be known as the Adi Brahmo Samaj."
+      bn: "১. ১৮৬৬ সালের বিভাজনের পর দেবেন্দ্রনাথ ঠাকুরের গোষ্ঠী আদি ব্রাহ্মসমাজ নামে পরিচিত হয়।"
+    - en: "2. The Sadharan Brahmo Samaj was formed in 1866."
+      bn: "২. সাধারণ ব্রাহ্মসমাজ ১৮৬৬ সালে গঠিত হয়।"
+    - en: "3. The Native Marriage Act of 1872 legalised inter-caste marriages."
+      bn: "৩. ১৮৭২ সালের দেশীয় বিবাহ আইন অসবর্ণ বিবাহকে বৈধ করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because 1866 saw the first split (Adi Brahmo Samaj and Brahmo Samaj of India); the Sadharan Brahmo Samaj was formed in 1878 after the second split.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতিটি ভুল, কারণ ১৮৬৬ সালে প্রথম বিভাজন হয় (আদি ব্রাহ্মসমাজ ও ভারতবর্ষীয় ব্রাহ্মসমাজ); সাধারণ ব্রাহ্মসমাজ গঠিত হয় ১৮৭৮ সালে, দ্বিতীয় বিভাজনের পর।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [muslim-reform]
+  stem:
+    en: Consider the following statements about Muslim reform movements.
+    bn: মুসলিম সংস্কার আন্দোলন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Deoband Movement encouraged Muslims to take up Western education."
+      bn: "১. দেওবন্দ আন্দোলন মুসলিমদের পাশ্চাত্য শিক্ষা গ্রহণে উৎসাহিত করে।"
+    - en: "2. Sir Syed Ahmad Khan founded the Scientific Society to translate English works on science into Urdu."
+      bn: "২. ইংরেজি বিজ্ঞানগ্রন্থ উর্দুতে অনুবাদের জন্য স্যার সৈয়দ আহমদ খান সায়েন্টিফিক সোসাইটি প্রতিষ্ঠা করেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: Both 1 and 2, bn: ১ ও ২ উভয়ই }
+    - { en: Neither 1 nor 2, bn: ১ বা ২ কোনোটিই নয় }
+  answer: 1
+  explanation:
+    en: Only statement 2 is correct. It was the Aligarh Movement of Sir Syed that promoted Western education; the Deoband Movement was revivalist and focused on traditional religious learning.
+    bn: কেবল ২ নং বিবৃতিটি সঠিক। পাশ্চাত্য শিক্ষার প্রসার ঘটিয়েছিল স্যার সৈয়দের আলিগড় আন্দোলন; দেওবন্দ আন্দোলন ছিল পুনরুজ্জীবনবাদী এবং প্রথাগত ধর্মশিক্ষায় গুরুত্ব দিত।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs, upsc-cse]
+  refs: [social-laws, caste-movements, prarthana-arya, ramakrishna-theosophy]
+  stem:
+    en: Match List I (Organisation) with List II (Founder).
+    bn: তালিকা I (সংগঠন)-এর সঙ্গে তালিকা II (প্রতিষ্ঠাতা) মেলান।
+  left:
+    - { en: "A. Satyashodhak Samaj", bn: "ক. সত্যশোধক সমাজ" }
+    - { en: "B. Prarthana Samaj", bn: "খ. প্রার্থনা সমাজ" }
+    - { en: "C. Arya Samaj", bn: "গ. আর্য সমাজ" }
+    - { en: "D. Ramakrishna Mission", bn: "ঘ. রামকৃষ্ণ মিশন" }
+  right:
+    - { en: "1. Swami Vivekananda", bn: "১. স্বামী বিবেকানন্দ" }
+    - { en: "2. Dayananda Saraswati", bn: "২. দয়ানন্দ সরস্বতী" }
+    - { en: "3. Jyotiba Phule", bn: "৩. জ্যোতিবা ফুলে" }
+    - { en: "4. Atmaram Pandurang", bn: "৪. আত্মারাম পাণ্ডুরং" }
+  options:
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-2, B-4, C-3, D-1", bn: "ক-২, খ-৪, গ-৩, ঘ-১" }
+  answer: 0
+  explanation:
+    en: Phule founded the Satyashodhak Samaj (1873), Atmaram Pandurang the Prarthana Samaj (1867), Dayananda Saraswati the Arya Samaj (1875) and Vivekananda the Ramakrishna Mission (1897). Both Phule and Atmaram Pandurang were active in Maharashtra, which makes option B tempting.
+    bn: জ্যোতিবা ফুলে সত্যশোধক সমাজ (১৮৭৩), আত্মারাম পাণ্ডুরং প্রার্থনা সমাজ (১৮৬৭), দয়ানন্দ সরস্বতী আর্য সমাজ (১৮৭৫) এবং বিবেকানন্দ রামকৃষ্ণ মিশন (১৮৯৭) প্রতিষ্ঠা করেন। ফুলে ও আত্মারাম পাণ্ডুরং দুজনেই মহারাষ্ট্রে সক্রিয় ছিলেন, তাই দ্বিতীয় বিকল্পটি বিভ্রান্তিকর।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [prarthana-arya, caste-movements, brahmo-samaj, young-bengal-vidyasagar]
+  stem:
+    en: Match List I (Book or journal) with List II (Author or founder).
+    bn: তালিকা I (গ্রন্থ বা পত্রিকা)-এর সঙ্গে তালিকা II (লেখক বা প্রতিষ্ঠাতা) মেলান।
+  left:
+    - { en: "A. Satyarth Prakash", bn: "ক. সত্যার্থ প্রকাশ" }
+    - { en: "B. Gulamgiri", bn: "খ. গুলামগিরি" }
+    - { en: "C. Tattvabodhini Patrika", bn: "গ. তত্ত্ববোধিনী পত্রিকা" }
+    - { en: "D. Barnaparichay", bn: "ঘ. বর্ণপরিচয়" }
+  right:
+    - { en: "1. Jyotiba Phule", bn: "১. জ্যোতিবা ফুলে" }
+    - { en: "2. Ishwar Chandra Vidyasagar", bn: "২. ঈশ্বরচন্দ্র বিদ্যাসাগর" }
+    - { en: "3. Dayananda Saraswati", bn: "৩. দয়ানন্দ সরস্বতী" }
+    - { en: "4. Debendranath Tagore", bn: "৪. দেবেন্দ্রনাথ ঠাকুর" }
+  options:
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+    - { en: "A-3, B-1, C-2, D-4", bn: "ক-৩, খ-১, গ-২, ঘ-৪" }
+    - { en: "A-4, B-1, C-3, D-2", bn: "ক-৪, খ-১, গ-৩, ঘ-২" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 3
+  explanation:
+    en: Satyarth Prakash is by Dayananda Saraswati, Gulamgiri by Jyotiba Phule, the Tattvabodhini Patrika was started by Debendranath Tagore's Tattvabodhini Sabha, and Barnaparichay is by Vidyasagar. Option B wrongly swaps the two Bengal names.
+    bn: সত্যার্থ প্রকাশ দয়ানন্দ সরস্বতীর, গুলামগিরি জ্যোতিবা ফুলের রচনা; তত্ত্ববোধিনী পত্রিকা প্রকাশ করে দেবেন্দ্রনাথ ঠাকুরের তত্ত্ববোধিনী সভা এবং বর্ণপরিচয় বিদ্যাসাগরের রচনা। দ্বিতীয় বিকল্পে বাংলার দুই ব্যক্তির নাম ভুলভাবে অদলবদল করা হয়েছে।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [social-laws]
+  stem:
+    en: Match List I (Law) with List II (Year).
+    bn: তালিকা I (আইন)-এর সঙ্গে তালিকা II (বছর) মেলান।
+  left:
+    - { en: "A. Regulation XVII banning sati", bn: "ক. সতীদাহ নিষিদ্ধকারী ১৭ নং রেগুলেশন" }
+    - { en: "B. Hindu Widows' Remarriage Act", bn: "খ. হিন্দু বিধবা পুনর্বিবাহ আইন" }
+    - { en: "C. Native (Brahmo) Marriage Act", bn: "গ. দেশীয় (ব্রাহ্ম) বিবাহ আইন" }
+    - { en: "D. Age of Consent Act", bn: "ঘ. সম্মতি বয়স আইন" }
+  right:
+    - { en: "1. 1872", bn: "১. ১৮৭২" }
+    - { en: "2. 1891", bn: "২. ১৮৯১" }
+    - { en: "3. 1829", bn: "৩. ১৮২৯" }
+    - { en: "4. 1856", bn: "৪. ১৮৫৬" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-1, B-4, C-3, D-2", bn: "ক-১, খ-৪, গ-৩, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Sati was banned in 1829, widow remarriage was legalised in 1856, the Native Marriage Act was passed in 1872 and the Age of Consent Act in 1891. Option A wrongly links sati with 1856, a common confusion.
+    bn: সতীদাহ নিষিদ্ধ হয় ১৮২৯ সালে, বিধবাবিবাহ বৈধ হয় ১৮৫৬ সালে, দেশীয় বিবাহ আইন পাস হয় ১৮৭২ সালে এবং সম্মতি বয়স আইন ১৮৯১ সালে। প্রথম বিকল্পে সতীদাহকে ১৮৫৬ সালের সঙ্গে যুক্ত করা হয়েছে, যা একটি সাধারণ বিভ্রান্তি।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [ramakrishna-theosophy, muslim-reform]
+  stem:
+    en: Match List I (Institution) with List II (Place).
+    bn: তালিকা I (প্রতিষ্ঠান)-এর সঙ্গে তালিকা II (স্থান) মেলান।
+  left:
+    - { en: "A. Headquarters of the Ramakrishna Mission", bn: "ক. রামকৃষ্ণ মিশনের সদর দফতর" }
+    - { en: "B. Headquarters of the Theosophical Society in India", bn: "খ. ভারতে থিওসফিক্যাল সোসাইটির সদর দফতর" }
+    - { en: "C. Muhammadan Anglo-Oriental College", bn: "গ. মহামেডান অ্যাংলো-ওরিয়েন্টাল কলেজ" }
+    - { en: "D. Dar-ul-Ulum", bn: "ঘ. দার-উল-উলুম" }
+  right:
+    - { en: "1. Aligarh", bn: "১. আলিগড়" }
+    - { en: "2. Deoband", bn: "২. দেওবন্দ" }
+    - { en: "3. Adyar", bn: "৩. আদেয়ার" }
+    - { en: "4. Belur", bn: "৪. বেলুড়" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-1, B-3, C-4, D-2", bn: "ক-১, খ-৩, গ-৪, ঘ-২" }
+  answer: 0
+  explanation:
+    en: The Ramakrishna Mission has its headquarters at Belur, the Theosophical Society at Adyar near Madras, the MAO College was at Aligarh, and the Dar-ul-Ulum is at Deoband. Option C swaps Aligarh and Deoband, the two centres of very different Muslim movements.
+    bn: রামকৃষ্ণ মিশনের সদর দফতর বেলুড়ে, থিওসফিক্যাল সোসাইটির সদর দফতর মাদ্রাজের কাছে আদেয়ারে, এম.এ.ও. কলেজ আলিগড়ে এবং দার-উল-উলুম দেওবন্দে। তৃতীয় বিকল্পে আলিগড় ও দেওবন্দ অদলবদল করা হয়েছে, যারা দুটি সম্পূর্ণ ভিন্ন মুসলিম আন্দোলনের কেন্দ্র।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [young-bengal-vidyasagar]
+  assertion:
+    en: Henry Louis Vivian Derozio was removed from the Hindu College in 1831.
+    bn: ১৮৩১ সালে হেনরি লুই ভিভিয়ান ডিরোজিওকে হিন্দু কলেজ থেকে অপসারিত করা হয়।
+  reason:
+    en: Derozio encouraged his students to think freely and question religious and social customs.
+    bn: ডিরোজিও তাঁর ছাত্রদের স্বাধীনভাবে চিন্তা করতে এবং ধর্মীয় ও সামাজিক রীতিনীতি নিয়ে প্রশ্ন তুলতে উৎসাহ দিতেন।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. His radical teaching, which inspired the Young Bengal group to challenge social customs, led to his removal from the college in 1831.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। তাঁর প্রগতিশীল শিক্ষা ইয়ং বেঙ্গল গোষ্ঠীকে সামাজিক রীতিনীতিকে চ্যালেঞ্জ করতে অনুপ্রাণিত করেছিল, যার ফলে ১৮৩১ সালে তাঁকে কলেজ থেকে অপসারিত করা হয়।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [brahmo-samaj, social-laws]
+  assertion:
+    en: Many followers of Keshab Chandra Sen left him in 1878 and formed the Sadharan Brahmo Samaj.
+    bn: ১৮৭৮ সালে কেশবচন্দ্র সেনের বহু অনুগামী তাঁকে ছেড়ে সাধারণ ব্রাহ্মসমাজ গঠন করেন।
+  reason:
+    en: The Native (Brahmo) Marriage Act of 1872 abolished the practice of sati.
+    bn: ১৮৭২ সালের দেশীয় (ব্রাহ্ম) বিবাহ আইন সতীদাহ প্রথা রদ করে।
+  answer: 2
+  explanation:
+    en: The assertion is true but the reason is false. Sati was banned by Regulation XVII of 1829; the 1872 Act legalised Brahmo and inter-caste marriages and fixed a minimum age of marriage. The 1878 split followed Keshab's marriage of his under-age daughter to the Maharaja of Cooch Behar.
+    bn: বিবৃতিটি সত্য, কিন্তু কারণটি মিথ্যা। সতীদাহ নিষিদ্ধ হয় ১৮২৯ সালের ১৭ নং রেগুলেশন দ্বারা; ১৮৭২ সালের আইন ব্রাহ্ম ও অসবর্ণ বিবাহকে বৈধ করে এবং বিবাহের ন্যূনতম বয়স নির্দিষ্ট করে। ১৮৭৮ সালের বিভাজন ঘটে কোচবিহারের মহারাজার সঙ্গে কেশবচন্দ্রের নাবালিকা কন্যার বিবাহের পর।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [ramakrishna-theosophy]
+  assertion:
+    en: The Ramakrishna Mission was founded by Ramakrishna Paramahamsa.
+    bn: রামকৃষ্ণ মিশন প্রতিষ্ঠা করেন শ্রীরামকৃষ্ণ পরমহংসদেব।
+  reason:
+    en: Ramakrishna Paramahamsa taught that all religions are different paths to the same God.
+    bn: শ্রীরামকৃষ্ণ পরমহংসদেব শিক্ষা দেন যে সব ধর্মই একই ঈশ্বরে পৌঁছোনোর ভিন্ন ভিন্ন পথ।
+  answer: 3
+  explanation:
+    en: The assertion is false and the reason is true. Ramakrishna died in 1886; his disciple Swami Vivekananda founded the Ramakrishna Mission in 1897. Ramakrishna did teach the harmony of religions.
+    bn: বিবৃতিটি মিথ্যা, কিন্তু কারণটি সত্য। শ্রীরামকৃষ্ণের মৃত্যু হয় ১৮৮৬ সালে; তাঁর শিষ্য স্বামী বিবেকানন্দ ১৮৯৭ সালে রামকৃষ্ণ মিশন প্রতিষ্ঠা করেন। শ্রীরামকৃষ্ণ সত্যিই সর্বধর্মসমন্বয়ের শিক্ষা দিয়েছিলেন।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [prarthana-arya]
+  assertion:
+    en: Dayananda Saraswati rejected idol worship.
+    bn: দয়ানন্দ সরস্বতী মূর্তিপূজা অস্বীকার করেন।
+  reason:
+    en: The main centres of the Arya Samaj developed in Punjab.
+    bn: আর্য সমাজের প্রধান কেন্দ্রগুলি পাঞ্জাবে গড়ে ওঠে।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason does not explain the assertion. Dayananda rejected idol worship because he regarded the Vedas as the only true authority; where the Samaj later grew strongest has nothing to do with that belief.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়। দয়ানন্দ বেদকেই একমাত্র প্রকৃত প্রামাণ্য বলে মনে করতেন বলে মূর্তিপূজা অস্বীকার করেন; আর্য সমাজ পরে কোথায় শক্তিশালী হয়েছিল, তার সঙ্গে এই বিশ্বাসের কোনো সম্পর্ক নেই।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [social-laws]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Founding of the Arya Samaj"
+      bn: "১. আর্য সমাজের প্রতিষ্ঠা"
+    - en: "2. Founding of the Brahmo Sabha"
+      bn: "২. ব্রাহ্মসভার প্রতিষ্ঠা"
+    - en: "3. Founding of the Ramakrishna Mission"
+      bn: "৩. রামকৃষ্ণ মিশনের প্রতিষ্ঠা"
+    - en: "4. Hindu Widows' Remarriage Act"
+      bn: "৪. হিন্দু বিধবা পুনর্বিবাহ আইন"
+  options:
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+  answer: 2
+  explanation:
+    en: Brahmo Sabha (1828), Hindu Widows' Remarriage Act (1856), Arya Samaj (1875), Ramakrishna Mission (1897).
+    bn: ব্রাহ্মসভা (১৮২৮), হিন্দু বিধবা পুনর্বিবাহ আইন (১৮৫৬), আর্য সমাজ (১৮৭৫), রামকৃষ্ণ মিশন (১৮৯৭)।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [social-laws]
+  stem:
+    en: Arrange the following organisations in the chronological order of their founding.
+    bn: নিম্নলিখিত সংগঠনগুলিকে প্রতিষ্ঠার কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Tattvabodhini Sabha"
+      bn: "১. তত্ত্ববোধিনী সভা"
+    - en: "2. SNDP Yogam"
+      bn: "২. এস.এন.ডি.পি. যোগম"
+    - en: "3. Atmiya Sabha"
+      bn: "৩. আত্মীয় সভা"
+    - en: "4. Prarthana Samaj"
+      bn: "৪. প্রার্থনা সমাজ"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 1-3-4-2, bn: ১-৩-৪-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-1-2-4, bn: ৩-১-২-৪ }
+  answer: 0
+  explanation:
+    en: Atmiya Sabha (1814 or 1815), Tattvabodhini Sabha (1839), Prarthana Samaj (1867), SNDP Yogam (1903).
+    bn: আত্মীয় সভা (১৮১৪ বা ১৮১৫), তত্ত্ববোধিনী সভা (১৮৩৯), প্রার্থনা সমাজ (১৮৬৭), এস.এন.ডি.পি. যোগম (১৯০৩)।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc]
+  refs: [brahmo-samaj]
+  stem:
+    en: Arrange the following events in the history of the Brahmo Samaj in chronological order.
+    bn: ব্রাহ্মসমাজের ইতিহাসের নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Formation of the Sadharan Brahmo Samaj"
+      bn: "১. সাধারণ ব্রাহ্মসমাজ গঠন"
+    - en: "2. Founding of the Tattvabodhini Sabha"
+      bn: "২. তত্ত্ববোধিনী সভার প্রতিষ্ঠা"
+    - en: "3. Passing of the Native (Brahmo) Marriage Act"
+      bn: "৩. দেশীয় (ব্রাহ্ম) বিবাহ আইন পাস"
+    - en: "4. Split into the Adi Brahmo Samaj and the Brahmo Samaj of India"
+      bn: "৪. আদি ব্রাহ্মসমাজ ও ভারতবর্ষীয় ব্রাহ্মসমাজে বিভাজন"
+  options:
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+    - { en: 2-3-4-1, bn: ২-৩-৪-১ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+  answer: 3
+  explanation:
+    en: Tattvabodhini Sabha (1839), first split (1866), Native Marriage Act (1872), Sadharan Brahmo Samaj (1878). Option B is tempting, but the Act came after the 1866 split, as a result of Keshab's campaign.
+    bn: তত্ত্ববোধিনী সভা (১৮৩৯), প্রথম বিভাজন (১৮৬৬), দেশীয় বিবাহ আইন (১৮৭২), সাধারণ ব্রাহ্মসমাজ (১৮৭৮)। দ্বিতীয় বিকল্পটি বিভ্রান্তিকর, কিন্তু আইনটি পাস হয় ১৮৬৬ সালের বিভাজনের পরে, কেশবচন্দ্রের আন্দোলনের ফলে।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, wbcs, state-psc, ssc-cgl]
+  refs: [caste-movements, ramakrishna-theosophy, muslim-reform, social-laws]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Founding of the Satyashodhak Samaj"
+      bn: "১. সত্যশোধক সমাজের প্রতিষ্ঠা"
+    - en: "2. Vivekananda at the Parliament of Religions in Chicago"
+      bn: "২. শিকাগো ধর্মমহাসভায় বিবেকানন্দ"
+    - en: "3. Beginning of the Deoband Movement"
+      bn: "৩. দেওবন্দ আন্দোলনের সূচনা"
+    - en: "4. Age of Consent Act"
+      bn: "৪. সম্মতি বয়স আইন"
+  options:
+    - { en: 1-3-4-2, bn: ১-৩-৪-২ }
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 1-3-2-4, bn: ১-৩-২-৪ }
+  answer: 1
+  explanation:
+    en: Deoband (1866), Satyashodhak Samaj (1873), Age of Consent Act (1891), Chicago Parliament of Religions (1893). The Age of Consent Act came two years before Vivekananda's Chicago address.
+    bn: দেওবন্দ (১৮৬৬), সত্যশোধক সমাজ (১৮৭৩), সম্মতি বয়স আইন (১৮৯১), শিকাগো ধর্মমহাসভা (১৮৯৩)। বিবেকানন্দের শিকাগো বক্তৃতার দুই বছর আগে সম্মতি বয়স আইন পাস হয়।
+  status: ai-generated

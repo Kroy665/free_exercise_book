@@ -1,0 +1,21 @@
+id: hist.modern.company-acts
+title:
+  en: "Company Rule: Acts of 1773–1853"
+  bn: "কোম্পানির শাসন: ১৭৭৩–১৮৫৩ সালের আইনসমূহ"
+summary:
+  en: The Regulating Act, Pitt's India Act, the Act of 1786 and the Charter Acts of 1793, 1813, 1833 and 1853, and how they led to Crown rule in 1858.
+  bn: রেগুলেটিং আইন, পিটের ভারত শাসন আইন, ১৭৮৬ সালের আইন এবং ১৭৯৩, ১৮১৩, ১৮৩৩ ও ১৮৫৩ সালের সনদ আইন, আর কীভাবে এগুলি ১৮৫৮ সালে রাজশক্তির শাসনের পথ তৈরি করে।
+order: 3
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 35
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - M. Laxmikanth, Indian Polity, Ch. "Historical Background"
+  - Spectrum, A Brief History of Modern India, Ch. "Constitutional, Administrative and Judicial Developments"
+  - Bipan Chandra, History of Modern India (NCERT, old), Ch. "Administrative Organisation and Social and Cultural Policy"
+  - NCERT Class 8, Our Pasts III, Ch. "From Trade to Territory"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

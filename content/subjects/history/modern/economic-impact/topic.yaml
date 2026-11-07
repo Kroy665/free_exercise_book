@@ -1,0 +1,21 @@
+id: hist.modern.economic-impact
+title:
+  en: Economic Impact of British Rule
+  bn: ব্রিটিশ শাসনের অর্থনৈতিক প্রভাব
+summary:
+  en: Land revenue systems (Permanent Settlement, Ryotwari, Mahalwari), drain of wealth, deindustrialisation, commercialisation of agriculture, railways and famines under British rule.
+  bn: ভূমিরাজস্ব ব্যবস্থা (চিরস্থায়ী, রায়তওয়ারি ও মহলওয়ারি বন্দোবস্ত), সম্পদের নির্গমন, অব-শিল্পায়ন, কৃষির বাণিজ্যিকীকরণ, রেলপথ এবং ব্রিটিশ শাসনকালের দুর্ভিক্ষ।
+order: 4
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "Ruling the Countryside" and Ch. "Weavers, Iron Smelters and Factory Owners"
+  - NCERT Class 12, Themes in Indian History III, Ch. "Colonialism and the Countryside"
+  - Bipan Chandra, History of Modern India (Orient BlackSwan), chapters on economic impact of British rule
+  - Spectrum, A Brief History of Modern India, Ch. "Economic Impact of British Rule in India"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

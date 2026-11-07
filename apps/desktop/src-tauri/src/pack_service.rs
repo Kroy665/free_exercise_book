@@ -517,7 +517,7 @@ mod tests {
 
     #[test]
     fn lifecycle_bundled_update_tamper_remove() {
-        // The sample content has two packs (a History topic and a current-affairs month).
+        // The sample content has several packs; every one has a newer version on the server.
         let item = |v: &PacksView| v.items.iter().find(|i| i.id == TOPIC).cloned().unwrap();
         let tmp = std::env::temp_dir().join(format!("feb-app-packs-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&tmp);
@@ -560,7 +560,7 @@ mod tests {
         // The server has 1.1.0 → shown as an update and installed from the server.
         packs.check_remote().unwrap();
         let v = view(&packs, &content.lock().unwrap(), "en", None).unwrap();
-        assert_eq!((item(&v).state, v.updates), ("update", 2));
+        assert_eq!((item(&v).state, v.updates), ("update", v.items.len()));
         let (entry, source) = packs.best(TOPIC).unwrap();
         assert!(matches!(source, Source::Remote(_)));
         let mut phases = Vec::new();

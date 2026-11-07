@@ -1,0 +1,702 @@
+# Questions for hist.modern.european-arrival
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [portuguese]
+  stem:
+    en: At which place did Vasco da Gama land in India in 1498?
+    bn: ১৪৯৮ সালে ভাস্কো দা গামা ভারতের কোন স্থানে পৌঁছেছিলেন?
+  options:
+    - { en: Goa, bn: গোয়া }
+    - { en: Cochin, bn: কোচিন }
+    - { en: Calicut, bn: কালিকট }
+    - { en: Diu, bn: দিউ }
+  answer: 2
+  explanation:
+    en: Vasco da Gama reached Calicut on the Malabar coast in May 1498, where the Zamorin received him. Goa came under Portuguese control only in 1510, when Albuquerque captured it.
+    bn: ভাস্কো দা গামা ১৪৯৮ সালের মে মাসে মালাবার উপকূলের কালিকটে পৌঁছান, সেখানে জামোরিন তাঁকে অভ্যর্থনা জানান। গোয়া পোর্তুগিজদের অধীনে আসে অনেক পরে, ১৫১০ সালে আলবুকার্কের দখলের মাধ্যমে।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [english]
+  stem:
+    en: Which English ruler granted the charter to the East India Company in 1600?
+    bn: ১৬০০ সালে কোন ইংরেজ শাসক ইস্ট ইন্ডিয়া কোম্পানিকে সনদ দিয়েছিলেন?
+  options:
+    - { en: Queen Elizabeth I, bn: রানি প্রথম এলিজাবেথ }
+    - { en: King James I, bn: রাজা প্রথম জেমস }
+    - { en: King Charles II, bn: রাজা দ্বিতীয় চার্লস }
+    - { en: King William III, bn: রাজা তৃতীয় উইলিয়াম }
+  answer: 0
+  explanation:
+    en: Queen Elizabeth I granted the charter on 31 December 1600, giving the Company a monopoly of English trade with the East. James I was the king who later sent Sir Thomas Roe to Jahangir's court.
+    bn: রানি প্রথম এলিজাবেথ ১৬০০ সালের ৩১ ডিসেম্বর সনদ দিয়ে কোম্পানিকে প্রাচ্যের সঙ্গে ইংল্যান্ডের বাণিজ্যে একচেটিয়া অধিকার দেন। প্রথম জেমস ছিলেন সেই রাজা, যিনি পরে স্যার টমাস রোকে জাহাঙ্গিরের দরবারে পাঠান।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [carnatic-wars]
+  stem:
+    en: Who commanded the English forces in the Battle of Wandiwash (1760)?
+    bn: বন্দিবাসের যুদ্ধে (১৭৬০) ইংরেজ বাহিনীর নেতৃত্ব কে দিয়েছিলেন?
+  options:
+    - { en: Robert Clive, bn: রবার্ট ক্লাইভ }
+    - { en: Sir Eyre Coote, bn: স্যার আয়ার কুট }
+    - { en: Stringer Lawrence, bn: স্ট্রিঙ্গার লরেন্স }
+    - { en: Hector Munro, bn: হেক্টর মনরো }
+  answer: 1
+  explanation:
+    en: Sir Eyre Coote defeated the French commander Count de Lally at Wandiwash on 22 January 1760. Robert Clive is associated with Arcot (1751) in the Second Carnatic War and with Plassey (1757), not Wandiwash.
+    bn: ১৭৬০ সালের ২২ জানুয়ারি বন্দিবাসের যুদ্ধে স্যার আয়ার কুট ফরাসি সেনাপতি কাউন্ট দ্য লালিকে পরাজিত করেন। রবার্ট ক্লাইভের নাম যুক্ত দ্বিতীয় কর্ণাটকের যুদ্ধে আর্কট (১৭৫১) এবং পলাশির (১৭৫৭) সঙ্গে, বন্দিবাসের সঙ্গে নয়।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [portuguese]
+  stem:
+    en: Who captured Goa from the Sultan of Bijapur in 1510?
+    bn: ১৫১০ সালে বিজাপুরের সুলতানের কাছ থেকে কে গোয়া দখল করেন?
+  options:
+    - { en: Vasco da Gama, bn: ভাস্কো দা গামা }
+    - { en: Francisco de Almeida, bn: ফ্রান্সিসকো দ্য আলমেইদা }
+    - { en: Pedro Álvares Cabral, bn: পেড্রো আলভারেজ কাব্রাল }
+    - { en: Afonso de Albuquerque, bn: আলফোনসো দ্য আলবুকার্ক }
+  answer: 3
+  explanation:
+    en: Afonso de Albuquerque captured Goa in 1510 and is regarded as the real founder of Portuguese power in India. Almeida, his predecessor and the first viceroy, is known for the Blue Water Policy, not for the capture of Goa.
+    bn: আলফোনসো দ্য আলবুকার্ক ১৫১০ সালে গোয়া দখল করেন; তাঁকে ভারতে পোর্তুগিজ শক্তির প্রকৃত প্রতিষ্ঠাতা মনে করা হয়। তাঁর পূর্বসূরি ও প্রথম ভাইসরয় আলমেইদা নীল জলনীতির জন্য পরিচিত, গোয়া দখলের জন্য নয়।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [danes-french]
+  stem:
+    en: The French East India Company was formed in 1664 at the initiative of which French minister?
+    bn: কোন ফরাসি মন্ত্রীর উদ্যোগে ১৬৬৪ সালে ফরাসি ইস্ট ইন্ডিয়া কোম্পানি গঠিত হয়েছিল?
+  options:
+    - { en: Dupleix, bn: ডুপ্লে }
+    - { en: François Martin, bn: ফ্রাঁসোয়া মার্তাঁ }
+    - { en: Colbert, bn: কোলবেয়ার }
+    - { en: Count de Lally, bn: কাউন্ট দ্য লালি }
+  answer: 2
+  explanation:
+    en: The company was set up in 1664, during the reign of Louis XIV, at the initiative of his minister Colbert. François Martin founded Pondicherry in 1674, and Dupleix became its governor only in 1742.
+    bn: চতুর্দশ লুইয়ের রাজত্বকালে তাঁর মন্ত্রী কোলবেয়ারের উদ্যোগে ১৬৬৪ সালে কোম্পানিটি গঠিত হয়। ফ্রাঁসোয়া মার্তাঁ ১৬৭৪ সালে পন্ডিচেরি প্রতিষ্ঠা করেন, আর ডুপ্লে সেখানকার গভর্নর হন অনেক পরে, ১৭৪২ সালে।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [english]
+  stem:
+    en: Sir Thomas Roe came to the court of which Mughal emperor as the ambassador of King James I?
+    bn: রাজা প্রথম জেমসের দূত হিসেবে স্যার টমাস রো কোন মুঘল সম্রাটের দরবারে এসেছিলেন?
+  options:
+    - { en: Akbar, bn: আকবর }
+    - { en: Jahangir, bn: জাহাঙ্গির }
+    - { en: Shah Jahan, bn: শাহজাহান }
+    - { en: Aurangzeb, bn: ঔরঙ্গজেব }
+  answer: 1
+  explanation:
+    en: Roe stayed at Jahangir's court from 1615 and obtained permission for the English to trade and set up factories. Shah Jahan is linked with this topic through the capture of Hooghly from the Portuguese in 1632, not with Roe.
+    bn: স্যার টমাস রো ১৬১৫ সাল থেকে জাহাঙ্গিরের দরবারে ছিলেন এবং ইংরেজদের জন্য বাণিজ্য ও কুঠি স্থাপনের অনুমতি আদায় করেন। এই অধ্যায়ে শাহজাহানের নাম আসে ১৬৩২ সালে পোর্তুগিজদের কাছ থেকে হুগলি দখলের প্রসঙ্গে, রোর সঙ্গে নয়।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs, state-psc]
+  refs: [danes-french]
+  stem:
+    en: Tranquebar and Serampore were settlements of which European power?
+    bn: ট্রাঙ্কুবার ও শ্রীরামপুর কোন ইউরোপীয় শক্তির বসতি ছিল?
+  options:
+    - { en: The Danes, bn: দিনেমার }
+    - { en: The Dutch, bn: ওলন্দাজ }
+    - { en: The French, bn: ফরাসি }
+    - { en: The Portuguese, bn: পোর্তুগিজ }
+  answer: 0
+  explanation:
+    en: The Danes settled at Tranquebar (1620) and Serampore, and sold their Indian settlements to the English in 1845. The Dutch settlement on the Hooghly was Chinsura, which is often confused with Serampore.
+    bn: দিনেমাররা ট্রাঙ্কুবার (১৬২০) ও শ্রীরামপুরে বসতি স্থাপন করে এবং ১৮৪৫ সালে ভারতের বসতিগুলি ইংরেজদের কাছে বিক্রি করে দেয়। হুগলি নদীর তীরে ওলন্দাজদের বসতি ছিল চুঁচুড়া, যা প্রায়ই শ্রীরামপুরের সঙ্গে গুলিয়ে যায়।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, rrb-ntpc, state-psc, wbcs]
+  refs: [dutch]
+  stem:
+    en: Where did the Dutch set up their first factory in India in 1605?
+    bn: ১৬০৫ সালে ওলন্দাজরা ভারতে তাদের প্রথম কুঠি কোথায় স্থাপন করেছিল?
+  options:
+    - { en: Pulicat, bn: পুলিকট }
+    - { en: Chinsura, bn: চুঁচুড়া }
+    - { en: Surat, bn: সুরাট }
+    - { en: Masulipatnam, bn: মসুলিপট্টম }
+  answer: 3
+  explanation:
+    en: The first Dutch factory was at Masulipatnam on the Andhra coast in 1605. Pulicat is the tempting option because it later became the main Dutch centre on the Coromandel coast, but it was not the first factory.
+    bn: ১৬০৫ সালে অন্ধ্র উপকূলের মসুলিপট্টমে প্রথম ওলন্দাজ কুঠি স্থাপিত হয়। পুলিকট পরে করমণ্ডল উপকূলে ওলন্দাজদের প্রধান কেন্দ্র হয়ে উঠেছিল বলে বিভ্রান্তি হয়, কিন্তু সেটি প্রথম কুঠি ছিল না।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [portuguese]
+  stem:
+    en: In the context of Portuguese activity in the Indian Ocean, what was a "cartaz"?
+    bn: ভারত মহাসাগরে পোর্তুগিজ কার্যকলাপের প্রসঙ্গে "কার্তাজ" কী ছিল?
+  options:
+    - { en: A pass that Asian merchant ships had to buy from the Portuguese, bn: পোর্তুগিজদের কাছ থেকে এশীয় বাণিজ্যতরিগুলিকে কিনতে হওয়া একটি অনুমতিপত্র }
+    - { en: A land grant made by the Mughals to the Portuguese, bn: মুঘলদের দ্বারা পোর্তুগিজদের দেওয়া একটি ভূমিদান }
+    - { en: A fortified Portuguese warehouse on the coast, bn: উপকূলে পোর্তুগিজদের একটি সুরক্ষিত গুদাম }
+    - { en: A treaty between the Portuguese and the Zamorin, bn: পোর্তুগিজ ও জামোরিনের মধ্যে একটি সন্ধি }
+  answer: 0
+  explanation:
+    en: The cartaz was a naval pass or licence. Asian ships trading in waters the Portuguese claimed had to buy one, or risk being seized. A coastal trading post with warehouses is what the Europeans called a factory, not a cartaz.
+    bn: কার্তাজ ছিল একটি নৌ-অনুমতিপত্র বা লাইসেন্স। পোর্তুগিজদের দাবি করা জলসীমায় বাণিজ্য করতে হলে এশীয় জাহাজগুলিকে তা কিনতে হত, নইলে জাহাজ বাজেয়াপ্ত হওয়ার আশঙ্কা থাকত। উপকূলের গুদামসহ বাণিজ্যকেন্দ্রকে ইউরোপীয়রা কুঠি (Factory) বলত, কার্তাজ নয়।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, rrb-ntpc, state-psc, wbcs, upsc-cse]
+  refs: [english, portuguese]
+  stem:
+    en: How did Bombay first come into English hands?
+    bn: বোম্বাই প্রথম কীভাবে ইংরেজদের হাতে আসে?
+  options:
+    - { en: It was bought from the Mughal emperor Aurangzeb, bn: মুঘল সম্রাট ঔরঙ্গজেবের কাছ থেকে কেনা হয় }
+    - { en: It was granted by the Sultan of Bijapur, bn: বিজাপুরের সুলতান তা দান করেন }
+    - { en: It was part of the dowry when Catherine of Braganza married Charles II, bn: ক্যাথরিন অব ব্রাগাঞ্জার সঙ্গে দ্বিতীয় চার্লসের বিবাহে যৌতুক হিসেবে }
+    - { en: It was captured from the Dutch after the Battle of Bedara, bn: বেদারার যুদ্ধের পর ওলন্দাজদের কাছ থেকে দখল করা হয় }
+  answer: 2
+  explanation:
+    en: In 1661 the Portuguese gave Bombay to Charles II as part of Catherine of Braganza's dowry; he leased it to the Company in 1668 for £10 a year. Bedara (1759) was a defeat of the Dutch in Bengal and had nothing to do with Bombay.
+    bn: ১৬৬১ সালে ক্যাথরিন অব ব্রাগাঞ্জার যৌতুক হিসেবে পোর্তুগিজরা বোম্বাই দ্বিতীয় চার্লসকে দেয়; তিনি ১৬৬৮ সালে বছরে ১০ পাউন্ড খাজনায় তা কোম্পানিকে ইজারা দেন। বেদারার যুদ্ধ (১৭৫৯) ছিল বাংলায় ওলন্দাজদের পরাজয়, বোম্বাইয়ের সঙ্গে এর কোনো সম্পর্ক নেই।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [carnatic-wars]
+  stem:
+    en: Which treaty ended the First Carnatic War and restored Madras to the English?
+    bn: কোন সন্ধির মাধ্যমে প্রথম কর্ণাটকের যুদ্ধ শেষ হয় এবং মাদ্রাজ ইংরেজদের ফিরিয়ে দেওয়া হয়?
+  options:
+    - { en: Treaty of Paris, bn: প্যারিসের সন্ধি }
+    - { en: Treaty of Aix-la-Chapelle, bn: আই-লা-শ্যাপেলের সন্ধি }
+    - { en: Treaty of Allahabad, bn: এলাহাবাদের সন্ধি }
+    - { en: Treaty of Salbai, bn: সলবাইয়ের সন্ধি }
+  answer: 1
+  explanation:
+    en: The Treaty of Aix-la-Chapelle (1748), which ended the War of the Austrian Succession, also ended the First Carnatic War, and Madras was returned to the English. The Treaty of Paris (1763) ended the Third Carnatic War.
+    bn: অস্ট্রিয়ার উত্তরাধিকার যুদ্ধের অবসান ঘটানো আই-লা-শ্যাপেলের সন্ধির (১৭৪৮) মাধ্যমে প্রথম কর্ণাটকের যুদ্ধও শেষ হয় এবং মাদ্রাজ ইংরেজদের ফিরিয়ে দেওয়া হয়। প্যারিসের সন্ধি (১৭৬৩) তৃতীয় কর্ণাটকের যুদ্ধের অবসান ঘটায়।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [english]
+  stem:
+    en: Which Englishman set up a settlement at Sutanati in 1690, which grew into the city of Calcutta?
+    bn: ১৬৯০ সালে কোন ইংরেজ সুতানুটিতে বসতি স্থাপন করেন, যা পরে কলকাতা শহরে পরিণত হয়?
+  options:
+    - { en: Francis Day, bn: ফ্রান্সিস ডে }
+    - { en: Sir Thomas Roe, bn: স্যার টমাস রো }
+    - { en: William Hawkins, bn: উইলিয়াম হকিন্স }
+    - { en: Job Charnock, bn: জোব চার্নক }
+  answer: 3
+  explanation:
+    en: Job Charnock settled at Sutanati in 1690; in 1698 the Company acquired the zamindari of Sutanati, Kalikata and Gobindapur. Francis Day is linked with Madras (1639), not Calcutta.
+    bn: ১৬৯০ সালে জোব চার্নক সুতানুটিতে বসতি স্থাপন করেন; ১৬৯৮ সালে কোম্পানি সুতানুটি, কলিকাতা ও গোবিন্দপুরের জমিদারি স্বত্ব লাভ করে। ফ্রান্সিস ডের নাম যুক্ত মাদ্রাজের (১৬৩৯) সঙ্গে, কলকাতার সঙ্গে নয়।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [portuguese]
+  stem:
+    en: Consider the following statements about the Portuguese in India.
+    bn: ভারতে পোর্তুগিজদের সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Francisco de Almeida, the first Portuguese viceroy, followed the Blue Water Policy."
+      bn: "১. প্রথম পোর্তুগিজ ভাইসরয় ফ্রান্সিসকো দ্য আলমেইদা নীল জলনীতি অনুসরণ করেন।"
+    - en: "2. Albuquerque captured Goa from the Sultan of Bijapur."
+      bn: "২. আলবুকার্ক বিজাপুরের সুলতানের কাছ থেকে গোয়া দখল করেন।"
+    - en: "3. Nino da Cunha shifted the Portuguese headquarters from Goa to Cochin."
+      bn: "৩. নিনো দ্য কুনহা পোর্তুগিজ প্রধান কেন্দ্র গোয়া থেকে কোচিনে সরিয়ে নেন।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 reverses the direction of the move. Nino da Cunha shifted the headquarters from Cochin to Goa in 1530.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতিতে স্থানান্তরের দিক উলটে দেওয়া হয়েছে। নিনো দ্য কুনহা ১৫৩০ সালে প্রধান কেন্দ্র কোচিন থেকে গোয়ায় সরিয়ে আনেন।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [dutch]
+  stem:
+    en: Consider the following statements about the Dutch in India.
+    bn: ভারতে ওলন্দাজদের সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Dutch United East India Company (VOC) was formed in 1602."
+      bn: "১. ওলন্দাজ সম্মিলিত ইস্ট ইন্ডিয়া কোম্পানি (ভি ও সি) ১৬০২ সালে গঠিত হয়।"
+    - en: "2. Chinsura in Bengal was a Dutch settlement."
+      bn: "২. বাংলার চুঁচুড়া ছিল একটি ওলন্দাজ বসতি।"
+    - en: "3. The English defeated the Dutch in the Battle of Bedara in 1759."
+      bn: "৩. ১৭৫৯ সালে বেদারার যুদ্ধে ইংরেজরা ওলন্দাজদের পরাজিত করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. The VOC was formed in 1602, Chinsura on the Hooghly was a Dutch settlement, and the Battle of Bedara (1759) ended the Dutch challenge to the English in Bengal. Chinsura is often confused with French Chandernagore or Danish Serampore.
+    bn: তিনটি বিবৃতিই সঠিক। ভি ও সি ১৬০২ সালে গঠিত হয়, হুগলি নদীর তীরে চুঁচুড়া ছিল ওলন্দাজ বসতি, এবং বেদারার যুদ্ধ (১৭৫৯) বাংলায় ইংরেজদের প্রতি ওলন্দাজদের প্রতিদ্বন্দ্বিতার অবসান ঘটায়। চুঁচুড়াকে প্রায়ই ফরাসি চন্দননগর বা দিনেমার শ্রীরামপুরের সঙ্গে গুলিয়ে ফেলা হয়।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [english]
+  stem:
+    en: Consider the following statements about the early English East India Company.
+    bn: প্রথম যুগের ইংরেজ ইস্ট ইন্ডিয়া কোম্পানি সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. Sir Thomas Roe came to the Mughal court as the ambassador of Queen Elizabeth I."
+      bn: "১. স্যার টমাস রো রানি প্রথম এলিজাবেথের দূত হিসেবে মুঘল দরবারে আসেন।"
+    - en: "2. Jahangir allowed the English to set up a permanent factory at Surat in 1613."
+      bn: "২. ১৬১৩ সালে জাহাঙ্গির ইংরেজদের সুরাটে স্থায়ী কুঠি স্থাপনের অনুমতি দেন।"
+    - en: "3. Bombay was handed over directly to the East India Company in 1661 as a dowry."
+      bn: "৩. ১৬৬১ সালে যৌতুক হিসেবে বোম্বাই সরাসরি ইস্ট ইন্ডিয়া কোম্পানির হাতে দেওয়া হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 2 only, bn: কেবল ২ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Only statement 2 is correct. Roe was sent by King James I, not Elizabeth I. In 1661 Bombay went to King Charles II as dowry, and he leased it to the Company only in 1668.
+    bn: কেবল ২ নং বিবৃতি সঠিক। রোকে পাঠিয়েছিলেন রাজা প্রথম জেমস, প্রথম এলিজাবেথ নন। ১৬৬১ সালে যৌতুক হিসেবে বোম্বাই পান রাজা দ্বিতীয় চার্লস; তিনি ১৬৬৮ সালে তা কোম্পানিকে ইজারা দেন।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [danes-french]
+  stem:
+    en: Consider the following statements.
+    bn: নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The French East India Company was a state-controlled company formed in 1664."
+      bn: "১. ফরাসি ইস্ট ইন্ডিয়া কোম্পানি ছিল ১৬৬৪ সালে গঠিত একটি রাষ্ট্র-নিয়ন্ত্রিত কোম্পানি।"
+    - en: "2. The first French factory in India was set up at Pondicherry."
+      bn: "২. ভারতে প্রথম ফরাসি কুঠি পন্ডিচেরিতে স্থাপিত হয়।"
+    - en: "3. The Danes sold their Indian settlements to the English in 1845."
+      bn: "৩. ১৮৪৫ সালে দিনেমাররা ভারতের বসতিগুলি ইংরেজদের কাছে বিক্রি করে দেয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+  answer: 2
+  explanation:
+    en: Statements 1 and 3 are correct. Statement 2 is wrong because the first French factory was at Surat (1668); Pondicherry was founded later, in 1674, and became the French headquarters.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক। ২ নং বিবৃতি ভুল, কারণ প্রথম ফরাসি কুঠি স্থাপিত হয় সুরাটে (১৬৬৮); পন্ডিচেরি প্রতিষ্ঠিত হয় পরে, ১৬৭৪ সালে, এবং ফরাসিদের প্রধান কেন্দ্র হয়ে ওঠে।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [carnatic-wars]
+  stem:
+    en: Consider the following statements about the Carnatic Wars.
+    bn: কর্ণাটকের যুদ্ধ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The First Carnatic War was an extension of the War of the Austrian Succession in Europe."
+      bn: "১. প্রথম কর্ণাটকের যুদ্ধ ছিল ইউরোপে অস্ট্রিয়ার উত্তরাধিকার যুদ্ধের সম্প্রসারণ।"
+    - en: "2. In the Second Carnatic War, the French supported Chanda Sahib for the Carnatic."
+      bn: "২. দ্বিতীয় কর্ণাটকের যুদ্ধে ফরাসিরা কর্ণাটকের সিংহাসনের জন্য চাঁদা সাহেবকে সমর্থন করে।"
+    - en: "3. The Treaty of Paris (1763) allowed the French to fortify Pondicherry."
+      bn: "৩. প্যারিসের সন্ধি (১৭৬৩) ফরাসিদের পন্ডিচেরিতে দুর্গ নির্মাণের অনুমতি দেয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+  answer: 3
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong because the Treaty of Paris returned Pondicherry to the French only as a trading post that could not be fortified.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল, কারণ প্যারিসের সন্ধি অনুযায়ী পন্ডিচেরি ফরাসিদের ফিরিয়ে দেওয়া হয়েছিল কেবল বাণিজ্যকেন্দ্র হিসেবে, সেখানে দুর্গ নির্মাণ করা যেত না।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [why-english-won]
+  stem:
+    en: Consider the following statements about the reasons for English success over the French in India.
+    bn: ভারতে ফরাসিদের বিরুদ্ধে ইংরেজদের সাফল্যের কারণ সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The English Company was a private body, while the French Company was controlled by the state."
+      bn: "১. ইংরেজ কোম্পানি ছিল একটি বেসরকারি প্রতিষ্ঠান, অথচ ফরাসি কোম্পানি ছিল রাষ্ট্র-নিয়ন্ত্রিত।"
+    - en: "2. The English had a stronger navy than the French."
+      bn: "২. ফরাসিদের তুলনায় ইংরেজদের নৌবাহিনী বেশি শক্তিশালী ছিল।"
+    - en: "3. After Plassey, the resources of Bengal helped the English finance their wars in the south."
+      bn: "৩. পলাশির পর বাংলার সম্পদ দক্ষিণে ইংরেজদের যুদ্ধের খরচ জোগাতে সাহায্য করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 3 only, bn: কেবল ৩ }
+  answer: 1
+  explanation:
+    en: All three are standard reasons for English success. The private character of the English Company, naval superiority and the revenue of Bengal after Plassey (1757) together gave the English an edge the French could not match.
+    bn: তিনটিই ইংরেজদের সাফল্যের স্বীকৃত কারণ। ইংরেজ কোম্পানির বেসরকারি চরিত্র, নৌশক্তির শ্রেষ্ঠত্ব এবং পলাশির (১৭৫৭) পর বাংলার রাজস্ব মিলিতভাবে ইংরেজদের এমন সুবিধা দেয়, যা ফরাসিরা অর্জন করতে পারেনি।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, rrb-ntpc, state-psc, wbcs]
+  refs: [background, danes-french]
+  stem:
+    en: Match List I (Trading company) with List II (Year of formation).
+    bn: তালিকা I (বণিক কোম্পানি)-এর সঙ্গে তালিকা II (গঠনের বছর) মেলান।
+  left:
+    - { en: "A. English East India Company", bn: "ক. ইংরেজ ইস্ট ইন্ডিয়া কোম্পানি" }
+    - { en: "B. Dutch VOC", bn: "খ. ওলন্দাজ ভি ও সি" }
+    - { en: "C. Danish East India Company", bn: "গ. ডেনিশ ইস্ট ইন্ডিয়া কোম্পানি" }
+    - { en: "D. French East India Company", bn: "ঘ. ফরাসি ইস্ট ইন্ডিয়া কোম্পানি" }
+  right:
+    - { en: "1. 1600", bn: "১. ১৬০০" }
+    - { en: "2. 1602", bn: "২. ১৬০২" }
+    - { en: "3. 1616", bn: "৩. ১৬১৬" }
+    - { en: "4. 1664", bn: "৪. ১৬৬৪" }
+  options:
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+  answer: 0
+  explanation:
+    en: The English company was chartered in 1600, the Dutch VOC was formed in 1602, the Danish company in 1616 and the French company in 1664. Many candidates swap the English and Dutch dates because the Dutch are usually listed before the English in the order of arrival.
+    bn: ইংরেজ কোম্পানি সনদ পায় ১৬০০ সালে, ওলন্দাজ ভি ও সি গঠিত হয় ১৬০২ সালে, ডেনিশ কোম্পানি ১৬১৬ সালে এবং ফরাসি কোম্পানি ১৬৬৪ সালে। আগমনের ক্রমে সাধারণত ওলন্দাজদের নাম ইংরেজদের আগে লেখা হয় বলে অনেকেই ইংরেজ ও ওলন্দাজদের তারিখ গুলিয়ে ফেলেন।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [english, danes-french, portuguese]
+  stem:
+    en: Match List I (Person) with List II (Settlement associated).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট বসতি) মেলান।
+  left:
+    - { en: "A. Francis Day", bn: "ক. ফ্রান্সিস ডে" }
+    - { en: "B. Job Charnock", bn: "খ. জোব চার্নক" }
+    - { en: "C. François Martin", bn: "গ. ফ্রাঁসোয়া মার্তাঁ" }
+    - { en: "D. Afonso de Albuquerque", bn: "ঘ. আলফোনসো দ্য আলবুকার্ক" }
+  right:
+    - { en: "1. Goa", bn: "১. গোয়া" }
+    - { en: "2. Pondicherry", bn: "২. পন্ডিচেরি" }
+    - { en: "3. Calcutta", bn: "৩. কলকাতা" }
+    - { en: "4. Madras", bn: "৪. মাদ্রাজ" }
+  options:
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+  answer: 2
+  explanation:
+    en: Francis Day obtained the land for Madras (1639), Job Charnock settled at Sutanati, the nucleus of Calcutta (1690), François Martin founded Pondicherry (1674) and Albuquerque captured Goa (1510). Day and Charnock are the pair most often swapped.
+    bn: ফ্রান্সিস ডে মাদ্রাজের জমি পান (১৬৩৯), জোব চার্নক কলকাতার সূচনাস্থল সুতানুটিতে বসতি স্থাপন করেন (১৬৯০), ফ্রাঁসোয়া মার্তাঁ পন্ডিচেরি প্রতিষ্ঠা করেন (১৬৭৪) এবং আলবুকার্ক গোয়া দখল করেন (১৫১০)। ফ্রান্সিস ডে ও জোব চার্নককেই সবচেয়ে বেশি গুলিয়ে ফেলা হয়।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [portuguese]
+  stem:
+    en: Match List I (Portuguese figure) with List II (Associated with).
+    bn: তালিকা I (পোর্তুগিজ ব্যক্তি)-এর সঙ্গে তালিকা II (সংশ্লিষ্ট বিষয়) মেলান।
+  left:
+    - { en: "A. Vasco da Gama", bn: "ক. ভাস্কো দা গামা" }
+    - { en: "B. Francisco de Almeida", bn: "খ. ফ্রান্সিসকো দ্য আলমেইদা" }
+    - { en: "C. Afonso de Albuquerque", bn: "গ. আলফোনসো দ্য আলবুকার্ক" }
+    - { en: "D. Nino da Cunha", bn: "ঘ. নিনো দ্য কুনহা" }
+  right:
+    - { en: "1. Arrival at Calicut", bn: "১. কালিকটে আগমন" }
+    - { en: "2. Blue Water Policy", bn: "২. নীল জলনীতি" }
+    - { en: "3. Capture of Goa", bn: "৩. গোয়া দখল" }
+    - { en: "4. Shifting the headquarters to Goa", bn: "৪. প্রধান কেন্দ্র গোয়ায় স্থানান্তর" }
+  options:
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-3, C-2, D-4", bn: "ক-১, খ-৩, গ-২, ঘ-৪" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+  answer: 0
+  explanation:
+    en: Vasco da Gama reached Calicut (1498), Almeida followed the Blue Water Policy, Albuquerque captured Goa (1510) and Nino da Cunha shifted the headquarters from Cochin to Goa (1530). Albuquerque took Goa, but it was Nino da Cunha who made it the headquarters.
+    bn: ভাস্কো দা গামা কালিকটে পৌঁছান (১৪৯৮), আলমেইদা নীল জলনীতি অনুসরণ করেন, আলবুকার্ক গোয়া দখল করেন (১৫১০) এবং নিনো দ্য কুনহা প্রধান কেন্দ্র কোচিন থেকে গোয়ায় সরিয়ে আনেন (১৫৩০)। গোয়া দখল করেছিলেন আলবুকার্ক, কিন্তু একে প্রধান কেন্দ্র করেন নিনো দ্য কুনহা।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs, ssc-cgl]
+  refs: [carnatic-wars, dutch]
+  stem:
+    en: Match List I (Battle) with List II (Context).
+    bn: তালিকা I (যুদ্ধ)-এর সঙ্গে তালিকা II (প্রেক্ষাপট) মেলান।
+  left:
+    - { en: "A. St. Thomé (Adyar)", bn: "ক. সেন্ট টোমে (আদিয়ার)" }
+    - { en: "B. Arcot", bn: "খ. আর্কট" }
+    - { en: "C. Wandiwash", bn: "গ. বন্দিবাস" }
+    - { en: "D. Bedara", bn: "ঘ. বেদারা" }
+  right:
+    - { en: "1. Third Carnatic War", bn: "১. তৃতীয় কর্ণাটকের যুদ্ধ" }
+    - { en: "2. English versus the Dutch", bn: "২. ইংরেজ বনাম ওলন্দাজ" }
+    - { en: "3. First Carnatic War", bn: "৩. প্রথম কর্ণাটকের যুদ্ধ" }
+    - { en: "4. Second Carnatic War", bn: "৪. দ্বিতীয় কর্ণাটকের যুদ্ধ" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 2
+  explanation:
+    en: St. Thomé (1746) belongs to the First Carnatic War, Clive's capture of Arcot (1751) to the Second, Wandiwash (1760) to the Third, and Bedara (1759) was an English victory over the Dutch in Bengal. Arcot and Wandiwash are the pair most often swapped.
+    bn: সেন্ট টোমের যুদ্ধ (১৭৪৬) প্রথম কর্ণাটকের যুদ্ধের, ক্লাইভের আর্কট দখল (১৭৫১) দ্বিতীয় কর্ণাটকের যুদ্ধের এবং বন্দিবাস (১৭৬০) তৃতীয় কর্ণাটকের যুদ্ধের অংশ; বেদারা (১৭৫৯) ছিল বাংলায় ওলন্দাজদের বিরুদ্ধে ইংরেজদের জয়। আর্কট ও বন্দিবাসকেই সবচেয়ে বেশি গুলিয়ে ফেলা হয়।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [portuguese]
+  assertion:
+    en: In the 16th century, many Asian merchant ships in the Arabian Sea bought a cartaz from the Portuguese.
+    bn: ষোড়শ শতকে আরব সাগরে বহু এশীয় বাণিজ্যতরি পোর্তুগিজদের কাছ থেকে কার্তাজ কিনত।
+  reason:
+    en: The Portuguese used their naval power to seize ships that sailed without a cartaz.
+    bn: কার্তাজ ছাড়া চলা জাহাজ বাজেয়াপ্ত করতে পোর্তুগিজরা তাদের নৌশক্তি ব্যবহার করত।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. Merchants bought the pass because Portuguese warships could seize any ship found without one.
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। পোর্তুগিজ যুদ্ধজাহাজ অনুমতিপত্রহীন যে-কোনো জাহাজ বাজেয়াপ্ত করতে পারত বলেই বণিকরা কার্তাজ কিনত।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [danes-french]
+  assertion:
+    en: François Martin founded Pondicherry in 1674.
+    bn: ১৬৭৪ সালে ফ্রাঁসোয়া মার্তাঁ পন্ডিচেরি প্রতিষ্ঠা করেন।
+  reason:
+    en: Dupleix became governor of Pondicherry in 1742.
+    bn: ১৭৪২ সালে ডুপ্লে পন্ডিচেরির গভর্নর হন।
+  answer: 1
+  explanation:
+    en: Both statements are true, but the reason cannot explain the assertion. Dupleix took charge in 1742, almost seventy years after François Martin founded Pondicherry in 1674.
+    bn: দুটি বক্তব্যই সত্য, কিন্তু কারণটি বিবৃতির ব্যাখ্যা হতে পারে না। ১৬৭৪ সালে ফ্রাঁসোয়া মার্তাঁ পন্ডিচেরি প্রতিষ্ঠা করেন, আর ডুপ্লে দায়িত্ব নেন প্রায় সত্তর বছর পরে, ১৭৪২ সালে।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [carnatic-wars, why-english-won, danes-french]
+  assertion:
+    en: Dupleix was recalled to France in 1754.
+    bn: ১৭৫৪ সালে ডুপ্লেকে ফ্রান্সে ফিরিয়ে নেওয়া হয়।
+  reason:
+    en: The French East India Company was a private trading body free from government control.
+    bn: ফরাসি ইস্ট ইন্ডিয়া কোম্পানি ছিল সরকারি নিয়ন্ত্রণমুক্ত একটি বেসরকারি বাণিজ্যিক প্রতিষ্ঠান।
+  answer: 2
+  explanation:
+    en: The assertion is true; Dupleix was recalled in 1754 and replaced by Godeheu. The reason is false. The French company was state-controlled; it was the English company that was a private body.
+    bn: বিবৃতিটি সত্য; ১৭৫৪ সালে ডুপ্লেকে ফিরিয়ে নেওয়া হয় এবং তাঁর জায়গায় আসেন গোদেহু। কারণটি মিথ্যা। ফরাসি কোম্পানি ছিল রাষ্ট্র-নিয়ন্ত্রিত; বেসরকারি প্রতিষ্ঠান ছিল ইংরেজ কোম্পানি।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [carnatic-wars]
+  assertion:
+    en: The French bid for power in India was finally ended by their defeat in the Battle of Plassey.
+    bn: পলাশির যুদ্ধে পরাজয়ের ফলেই ভারতে ফরাসিদের ক্ষমতা দখলের চেষ্টার চূড়ান্ত অবসান ঘটে।
+  reason:
+    en: In the Battle of Wandiwash (1760), the English under Sir Eyre Coote defeated the French under Count de Lally.
+    bn: বন্দিবাসের যুদ্ধে (১৭৬০) স্যার আয়ার কুটের নেতৃত্বে ইংরেজরা কাউন্ট দ্য লালির নেতৃত্বাধীন ফরাসিদের পরাজিত করে।
+  answer: 3
+  explanation:
+    en: The assertion is false. Plassey (1757) was fought against Siraj-ud-daulah, the Nawab of Bengal; the decisive defeat of the French came at Wandiwash. The reason is true.
+    bn: বিবৃতিটি মিথ্যা। পলাশির যুদ্ধ (১৭৫৭) হয়েছিল বাংলার নবাব সিরাজউদ্দৌলার বিরুদ্ধে; ফরাসিদের চূড়ান্ত পরাজয় ঘটে বন্দিবাসে। কারণটি সত্য।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [portuguese, english, dutch]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Capture of Goa by Albuquerque"
+      bn: "১. আলবুকার্কের গোয়া দখল"
+    - en: "2. Arrival of Vasco da Gama at Calicut"
+      bn: "২. কালিকটে ভাস্কো দা গামার আগমন"
+    - en: "3. Charter to the English East India Company"
+      bn: "৩. ইংরেজ ইস্ট ইন্ডিয়া কোম্পানিকে সনদ প্রদান"
+    - en: "4. Formation of the Dutch VOC"
+      bn: "৪. ওলন্দাজ ভি ও সি গঠন"
+  options:
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+    - { en: 1-2-3-4, bn: ১-২-৩-৪ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+  answer: 1
+  explanation:
+    en: Vasco da Gama reached Calicut in 1498, Albuquerque took Goa in 1510, the English company was chartered in 1600 and the VOC was formed in 1602. Option 2-1-4-3 is tempting because the Dutch are usually listed before the English, but the English charter came two years earlier.
+    bn: ভাস্কো দা গামা কালিকটে পৌঁছান ১৪৯৮ সালে, আলবুকার্ক গোয়া দখল করেন ১৫১০ সালে, ইংরেজ কোম্পানি সনদ পায় ১৬০০ সালে এবং ভি ও সি গঠিত হয় ১৬০২ সালে। ওলন্দাজদের নাম সাধারণত ইংরেজদের আগে লেখা হয় বলে ২-১-৪-৩ বিকল্পটি আকর্ষণীয় মনে হয়, কিন্তু ইংরেজদের সনদ দুই বছর আগের।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, upsc-cse]
+  refs: [english]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Bombay leased to the East India Company"
+      bn: "১. ইস্ট ইন্ডিয়া কোম্পানিকে বোম্বাই ইজারা"
+    - en: "2. Job Charnock's settlement at Sutanati"
+      bn: "২. সুতানুটিতে জোব চার্নকের বসতি স্থাপন"
+    - en: "3. Permanent English factory at Surat"
+      bn: "৩. সুরাটে স্থায়ী ইংরেজ কুঠি"
+    - en: "4. Grant of land for Madras to Francis Day"
+      bn: "৪. ফ্রান্সিস ডেকে মাদ্রাজের জমি প্রদান"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+  answer: 3
+  explanation:
+    en: Surat factory (1613), Madras (1639), Bombay leased to the Company (1668), and Job Charnock at Sutanati (1690). Calcutta was the last of the three presidency towns to begin.
+    bn: সুরাটে কুঠি (১৬১৩), মাদ্রাজ (১৬৩৯), কোম্পানিকে বোম্বাই ইজারা (১৬৬৮) এবং সুতানুটিতে জোব চার্নক (১৬৯০)। তিনটি প্রেসিডেন্সি শহরের মধ্যে কলকাতার সূচনা হয় সবার শেষে।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [carnatic-wars]
+  stem:
+    en: Arrange the following events in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Battle of Wandiwash"
+      bn: "১. বন্দিবাসের যুদ্ধ"
+    - en: "2. Clive's capture of Arcot"
+      bn: "২. ক্লাইভের আর্কট দখল"
+    - en: "3. Battle of St. Thomé"
+      bn: "৩. সেন্ট টোমের যুদ্ধ"
+    - en: "4. Treaty of Paris"
+      bn: "৪. প্যারিসের সন্ধি"
+  options:
+    - { en: 3-2-1-4, bn: ৩-২-১-৪ }
+    - { en: 2-3-1-4, bn: ২-৩-১-৪ }
+    - { en: 3-2-4-1, bn: ৩-২-৪-১ }
+    - { en: 3-1-2-4, bn: ৩-১-২-৪ }
+  answer: 0
+  explanation:
+    en: St. Thomé (1746, First Carnatic War), Arcot (1751, Second), Wandiwash (1760, Third) and the Treaty of Paris (1763), which ended the Third Carnatic War. The Treaty came after Wandiwash, so 3-2-4-1 is wrong.
+    bn: সেন্ট টোমে (১৭৪৬, প্রথম কর্ণাটকের যুদ্ধ), আর্কট (১৭৫১, দ্বিতীয়), বন্দিবাস (১৭৬০, তৃতীয়) এবং প্যারিসের সন্ধি (১৭৬৩), যা তৃতীয় কর্ণাটকের যুদ্ধের অবসান ঘটায়। সন্ধিটি বন্দিবাসের পরে হয়েছিল, তাই ৩-২-৪-১ ভুল।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, wbcs]
+  refs: [background]
+  stem:
+    en: Arrange the following European powers in the order in which they began trading in India.
+    bn: নিম্নলিখিত ইউরোপীয় শক্তিগুলিকে ভারতে বাণিজ্য শুরুর ক্রম অনুযায়ী কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. The Danes"
+      bn: "১. দিনেমার"
+    - en: "2. The French"
+      bn: "২. ফরাসি"
+    - en: "3. The Portuguese"
+      bn: "৩. পোর্তুগিজ"
+    - en: "4. The English"
+      bn: "৪. ইংরেজ"
+  options:
+    - { en: 3-1-4-2, bn: ৩-১-৪-২ }
+    - { en: 4-3-1-2, bn: ৪-৩-১-২ }
+    - { en: 3-4-1-2, bn: ৩-৪-১-২ }
+    - { en: 3-4-2-1, bn: ৩-৪-২-১ }
+  answer: 2
+  explanation:
+    en: The Portuguese came first (1498), followed by the English (first factories at Masulipatnam 1611 and Surat 1613), the Danes (Tranquebar 1620) and the French (first factory at Surat 1668). The French were the last of the major European companies to arrive.
+    bn: সবার আগে আসে পোর্তুগিজরা (১৪৯৮), তারপর ইংরেজ (প্রথম কুঠি মসুলিপট্টমে ১৬১১ ও সুরাটে ১৬১৩), দিনেমার (ট্রাঙ্কুবার ১৬২০) এবং ফরাসি (প্রথম কুঠি সুরাটে ১৬৬৮)। প্রধান ইউরোপীয় কোম্পানিগুলির মধ্যে ফরাসিরাই সবার শেষে আসে।
+  status: ai-generated

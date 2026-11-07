@@ -1,0 +1,20 @@
+id: hist.modern.social-reform
+title:
+  en: Socio-Religious Reform Movements
+  bn: সামাজিক ও ধর্মীয় সংস্কার আন্দোলন
+summary:
+  en: Background, Raja Rammohun Roy and the Brahmo Samaj, Young Bengal, Vidyasagar, the Prarthana Samaj, Arya Samaj, Ramakrishna Mission, Theosophical Society, Muslim reform, anti-caste movements and key social laws.
+  bn: পটভূমি, রাজা রামমোহন রায় ও ব্রাহ্মসমাজ, ইয়ং বেঙ্গল, বিদ্যাসাগর, প্রার্থনা সমাজ, আর্য সমাজ, রামকৃষ্ণ মিশন, থিওসফিক্যাল সোসাইটি, মুসলিম সংস্কার, জাতিভেদবিরোধী আন্দোলন এবং গুরুত্বপূর্ণ সামাজিক আইন।
+order: 5
+exams: [upsc-cse, wbcs, state-psc, ssc-cgl, ssc-chsl, rrb-ntpc, ibps-po]
+prerequisites: []
+estimated_minutes: 45
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - NCERT Class 8, Our Pasts III, Ch. "Women, Caste and Reform"
+  - NCERT Class 12 (old), Modern India (Bipan Chandra), Ch. "Social and Cultural Awakening in the First Half of the 19th Century" and Ch. "Religious and Social Reforms after 1858"
+  - Spectrum, A Brief History of Modern India, Ch. "Religious and Social Reform Movements"
+  - WBBSE Bengali-medium History textbooks (for Bengali terminology)
+retired: []

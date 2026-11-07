@@ -2,5 +2,11 @@ id: hist.modern
 subject: hist
 title: { en: Modern India, bn: আধুনিক ভারত, hi: आधुनिक भारत }
 order: 3
+# Planned order: docs/SYLLABUS.md. Only written topics are listed.
 topics:
+  - hist.modern.european-arrival
+  - hist.modern.british-expansion
+  - hist.modern.company-acts
+  - hist.modern.economic-impact
+  - hist.modern.social-reform
   - hist.modern.revolt-1857

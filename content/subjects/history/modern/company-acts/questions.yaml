@@ -1,0 +1,702 @@
+# Questions for hist.modern.company-acts
+# Format: docs/CONTENT_STRUCTURE.md §7 · Rules: docs/CONTENT_GUIDELINES.md §3 and §7 (Bengali style)
+# Required languages: en, bn. Optional: hi (shown only when complete).
+# All items are status: ai-generated until a human reviewer checks them.
+
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [regulating-act]
+  stem:
+    en: Who became the first Governor-General of Bengal under the Regulating Act of 1773?
+    bn: ১৭৭৩ সালের রেগুলেটিং আইন অনুযায়ী বাংলার প্রথম গভর্নর-জেনারেল কে হন?
+  options:
+    - { en: Robert Clive, bn: রবার্ট ক্লাইভ }
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+  answer: 1
+  explanation:
+    en: The Regulating Act made the Governor of Bengal the Governor-General of Bengal, and Warren Hastings was the first to hold the post. Lord William Bentinck was the first Governor-General of India, a post created only in 1833.
+    bn: রেগুলেটিং আইন বাংলার গভর্নরকে বাংলার গভর্নর-জেনারেল করে, এবং ওয়ারেন হেস্টিংস প্রথম এই পদে বসেন। লর্ড উইলিয়াম বেন্টিঙ্ক ছিলেন ভারতের প্রথম গভর্নর-জেনারেল, যে পদ সৃষ্টি হয় কেবল ১৮৩৩ সালে।
+  status: ai-generated
+
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [regulating-act]
+  stem:
+    en: Under which Act was the Supreme Court at Calcutta established in 1774?
+    bn: কোন আইন অনুযায়ী ১৭৭৪ সালে কলকাতায় সুপ্রিম কোর্ট প্রতিষ্ঠিত হয়?
+  options:
+    - { en: "Pitt's India Act, 1784", bn: "পিটের ভারত শাসন আইন, ১৭৮৪" }
+    - { en: "Charter Act, 1793", bn: "সনদ আইন, ১৭৯৩" }
+    - { en: "Regulating Act, 1773", bn: "রেগুলেটিং আইন, ১৭৭৩" }
+    - { en: "Charter Act, 1813", bn: "সনদ আইন, ১৮১৩" }
+  answer: 2
+  explanation:
+    en: The Regulating Act of 1773 provided for a Supreme Court at Calcutta, which was set up in 1774 with Sir Elijah Impey as Chief Justice. Pitt's India Act came later and is known for the Board of Control, not for the Supreme Court.
+    bn: ১৭৭৩ সালের রেগুলেটিং আইনে কলকাতায় সুপ্রিম কোর্ট স্থাপনের ব্যবস্থা করা হয়; ১৭৭৪ সালে স্যার এলিজা ইম্পেকে প্রধান বিচারপতি করে সেটি প্রতিষ্ঠিত হয়। পিটের ভারত শাসন আইন পরে আসে এবং তা বোর্ড অব কন্ট্রোলের জন্য পরিচিত, সুপ্রিম কোর্টের জন্য নয়।
+  status: ai-generated
+
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [charter-act-1833]
+  stem:
+    en: Who was the first Governor-General of India?
+    bn: ভারতের প্রথম গভর্নর-জেনারেল কে ছিলেন?
+  options:
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+    - { en: Lord Dalhousie, bn: লর্ড ডালহৌসি }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+  answer: 3
+  explanation:
+    en: The Charter Act of 1833 turned the Governor-General of Bengal into the Governor-General of India, and Lord William Bentinck was the first holder. Warren Hastings is a tempting choice, but he was the first Governor-General of Bengal (1773).
+    bn: ১৮৩৩ সালের সনদ আইন বাংলার গভর্নর-জেনারেলকে ভারতের গভর্নর-জেনারেলে পরিণত করে, এবং লর্ড উইলিয়াম বেন্টিঙ্ক প্রথম এই পদে বসেন। ওয়ারেন হেস্টিংস বিকল্পটি বিভ্রান্তিকর, কারণ তিনি ছিলেন বাংলার প্রথম গভর্নর-জেনারেল (১৭৭৩)।
+  status: ai-generated
+
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [pitts-india-act]
+  stem:
+    en: Which Act created the Board of Control to supervise the political affairs of the East India Company?
+    bn: ইস্ট ইন্ডিয়া কোম্পানির রাজনৈতিক বিষয় তত্ত্বাবধানের জন্য কোন আইন বোর্ড অব কন্ট্রোল গঠন করে?
+  options:
+    - { en: "Pitt's India Act, 1784", bn: "পিটের ভারত শাসন আইন, ১৭৮৪" }
+    - { en: "Regulating Act, 1773", bn: "রেগুলেটিং আইন, ১৭৭৩" }
+    - { en: "Charter Act, 1813", bn: "সনদ আইন, ১৮১৩" }
+    - { en: "Charter Act, 1833", bn: "সনদ আইন, ১৮৩৩" }
+  answer: 0
+  explanation:
+    en: Pitt's India Act, 1784 created the Board of Control for political affairs and left commercial affairs with the Court of Directors. The Regulating Act of 1773 did not create any such board; it set up the post of Governor-General of Bengal and the Supreme Court.
+    bn: ১৭৮৪ সালের পিটের ভারত শাসন আইন রাজনৈতিক বিষয়ের জন্য বোর্ড অব কন্ট্রোল গঠন করে এবং বাণিজ্যিক বিষয় কোর্ট অব ডিরেক্টরসের হাতে রাখে। ১৭৭৩ সালের রেগুলেটিং আইন এমন কোনো বোর্ড গঠন করেনি; এটি বাংলার গভর্নর-জেনারেল পদ ও সুপ্রিম কোর্ট প্রতিষ্ঠা করে।
+  status: ai-generated
+
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [charter-act-1853]
+  stem:
+    en: Which was the last Charter Act passed for the East India Company?
+    bn: ইস্ট ইন্ডিয়া কোম্পানির জন্য পাস হওয়া শেষ সনদ আইন কোনটি?
+  options:
+    - { en: Charter Act of 1793, bn: ১৭৯৩ সালের সনদ আইন }
+    - { en: Charter Act of 1813, bn: ১৮১৩ সালের সনদ আইন }
+    - { en: Charter Act of 1833, bn: ১৮৩৩ সালের সনদ আইন }
+    - { en: Charter Act of 1853, bn: ১৮৫৩ সালের সনদ আইন }
+  answer: 3
+  explanation:
+    en: The Charter Act of 1853 was the last Charter Act. It did not renew the charter for a fixed term, and Company rule ended in 1858. The 1833 Act is a tempting choice because it ended the Company's trade, but it was followed by the 1853 Act.
+    bn: ১৮৫৩ সালের সনদ আইনই ছিল শেষ সনদ আইন। এটি নির্দিষ্ট মেয়াদের জন্য সনদ নবীকরণ করেনি, এবং ১৮৫৮ সালে কোম্পানির শাসনের অবসান ঘটে। ১৮৩৩ সালের আইন কোম্পানির বাণিজ্যের অবসান ঘটিয়েছিল বলে বিকল্পটি বিভ্রান্তিকর, কিন্তু তার পরে ১৮৫৩ সালের আইন পাস হয়।
+  status: ai-generated
+
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [charter-act-1813]
+  stem:
+    en: How much money did the Charter Act of 1813 set aside every year for education in India?
+    bn: ১৮১৩ সালের সনদ আইনে ভারতে শিক্ষার জন্য প্রতি বছর কত টাকা বরাদ্দ করা হয়?
+  options:
+    - { en: "₹10,000", bn: "১০ হাজার টাকা" }
+    - { en: "₹50,000", bn: "৫০ হাজার টাকা" }
+    - { en: ₹1 lakh, bn: ১ লক্ষ টাকা }
+    - { en: ₹10 lakh, bn: ১০ লক্ষ টাকা }
+  answer: 2
+  explanation:
+    en: The Charter Act of 1813 provided ₹1 lakh a year for literature, learning and science. It is treated as the first grant of public money for education in British India. The other amounts are not linked to this Act.
+    bn: ১৮১৩ সালের সনদ আইনে সাহিত্য, শিক্ষা ও বিজ্ঞানচর্চার জন্য বছরে ১ লক্ষ টাকা বরাদ্দ করা হয়। ব্রিটিশ ভারতে শিক্ষাখাতে এটিকেই প্রথম সরকারি অর্থ বরাদ্দ বলে ধরা হয়। অন্য অঙ্কগুলির সঙ্গে এই আইনের কোনো সম্পর্ক নেই।
+  status: ai-generated
+
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: [ssc-cgl, upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1833]
+  stem:
+    en: Who was the first law member of the Governor-General's council under the Charter Act of 1833?
+    bn: ১৮৩৩ সালের সনদ আইন অনুযায়ী গভর্নর-জেনারেলের পরিষদের প্রথম আইন সদস্য কে ছিলেন?
+  options:
+    - { en: Sir Elijah Impey, bn: স্যার এলিজা ইম্পে }
+    - { en: Thomas Babington Macaulay, bn: টমাস ব্যাবিংটন মেকলে }
+    - { en: Philip Francis, bn: ফিলিপ ফ্রান্সিস }
+    - { en: Lord William Bentinck, bn: লর্ড উইলিয়াম বেন্টিঙ্ক }
+  answer: 1
+  explanation:
+    en: The 1833 Act added a fourth member, the law member, to the council, and T.B. Macaulay was the first. Sir Elijah Impey is linked with the law, but he was the first Chief Justice of the Supreme Court at Calcutta (1774).
+    bn: ১৮৩৩ সালের আইন পরিষদে চতুর্থ সদস্য হিসেবে আইন সদস্য যুক্ত করে, এবং টমাস ব্যাবিংটন মেকলে ছিলেন প্রথম আইন সদস্য। স্যার এলিজা ইম্পেও আইনের সঙ্গে যুক্ত, তবে তিনি ছিলেন কলকাতা সুপ্রিম কোর্টের প্রথম প্রধান বিচারপতি (১৭৭৪)।
+  status: ai-generated
+
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [charter-act-1813]
+  stem:
+    en: Which Act ended the East India Company's monopoly of trade with India but kept its monopoly of the tea trade and the trade with China?
+    bn: কোন আইন ভারতের সঙ্গে বাণিজ্যে ইস্ট ইন্ডিয়া কোম্পানির একচেটিয়া অধিকারের অবসান ঘটায়, কিন্তু চা-বাণিজ্য ও চিনের সঙ্গে বাণিজ্যে তার একচেটিয়া অধিকার বজায় রাখে?
+  options:
+    - { en: Charter Act of 1833, bn: ১৮৩৩ সালের সনদ আইন }
+    - { en: Charter Act of 1853, bn: ১৮৫৩ সালের সনদ আইন }
+    - { en: Charter Act of 1813, bn: ১৮১৩ সালের সনদ আইন }
+    - { en: Charter Act of 1793, bn: ১৭৯৩ সালের সনদ আইন }
+  answer: 2
+  explanation:
+    en: The Charter Act of 1813 opened Indian trade to all British merchants but kept the Company's monopoly of tea and the China trade. The 1833 Act is the tempting wrong choice; it ended even these, and with them all the Company's commercial activities.
+    bn: ১৮১৩ সালের সনদ আইন ভারতের বাণিজ্য সব ব্রিটিশ বণিকের জন্য খুলে দেয়, কিন্তু চা ও চিন-বাণিজ্যে কোম্পানির একচেটিয়া অধিকার বজায় রাখে। ১৮৩৩ সালের আইন বিকল্পটি বিভ্রান্তিকর; সেই আইন এগুলিরও অবসান ঘটায় এবং কোম্পানির সমস্ত বাণিজ্যিক কাজকর্ম বন্ধ করে।
+  status: ai-generated
+
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [charter-act-1853]
+  stem:
+    en: Which Act separated, for the first time, the legislative and executive functions of the Governor-General's council?
+    bn: কোন আইন প্রথমবার গভর্নর-জেনারেলের পরিষদের আইন প্রণয়ন ও শাসন বিভাগীয় কাজ পৃথক করে?
+  options:
+    - { en: Charter Act of 1853, bn: ১৮৫৩ সালের সনদ আইন }
+    - { en: Charter Act of 1833, bn: ১৮৩৩ সালের সনদ আইন }
+    - { en: "Pitt's India Act, 1784", bn: "পিটের ভারত শাসন আইন, ১৭৮৪" }
+    - { en: "Regulating Act, 1773", bn: "রেগুলেটিং আইন, ১৭৭৩" }
+  answer: 0
+  explanation:
+    en: The Charter Act of 1853 added six legislative members and separated legislative work from executive work, creating the Indian (Central) Legislative Council. The 1833 Act added a law member but did not create a separate legislative wing.
+    bn: ১৮৫৩ সালের সনদ আইন ছয়জন আইন পরিষদ সদস্য যুক্ত করে আইন প্রণয়নের কাজকে শাসন বিভাগীয় কাজ থেকে পৃথক করে এবং ভারতীয় (কেন্দ্রীয়) আইন পরিষদ গঠন করে। ১৮৩৩ সালের আইন একজন আইন সদস্য যুক্ত করেছিল, কিন্তু পৃথক আইন প্রণয়ন শাখা গঠন করেনি।
+  status: ai-generated
+
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [charter-act-1833]
+  stem:
+    en: Which Act ended all the commercial activities of the East India Company and made it a purely administrative body?
+    bn: কোন আইন ইস্ট ইন্ডিয়া কোম্পানির সমস্ত বাণিজ্যিক কাজকর্মের অবসান ঘটিয়ে তাকে একটি নিছক প্রশাসনিক সংস্থায় পরিণত করে?
+  options:
+    - { en: Charter Act of 1813, bn: ১৮১৩ সালের সনদ আইন }
+    - { en: Charter Act of 1833, bn: ১৮৩৩ সালের সনদ আইন }
+    - { en: Charter Act of 1853, bn: ১৮৫৩ সালের সনদ আইন }
+    - { en: "Government of India Act, 1858", bn: "ভারত শাসন আইন, ১৮৫৮" }
+  answer: 1
+  explanation:
+    en: The Charter Act of 1833 ended the Company's remaining trade, including tea and the China trade, so it became a purely administrative body. The 1813 Act is tempting, but it ended only the general monopoly of trade with India.
+    bn: ১৮৩৩ সালের সনদ আইন চা ও চিন-বাণিজ্য-সহ কোম্পানির অবশিষ্ট বাণিজ্যের অবসান ঘটায়, ফলে কোম্পানি একটি নিছক প্রশাসনিক সংস্থায় পরিণত হয়। ১৮১৩ সালের আইন বিকল্পটি বিভ্রান্তিকর, কারণ সেই আইন কেবল ভারতের সঙ্গে বাণিজ্যে সাধারণ একচেটিয়া অধিকারের অবসান ঘটিয়েছিল।
+  status: ai-generated
+
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [acts-1786-1793]
+  stem:
+    en: The Act of 1786, which allowed the Governor-General to override his council and also to act as Commander-in-Chief, was passed to meet the demands of whom?
+    bn: ১৭৮৬ সালের যে আইন গভর্নর-জেনারেলকে পরিষদের সিদ্ধান্ত অগ্রাহ্য করার এবং প্রধান সেনাপতি হওয়ার ক্ষমতা দেয়, সেটি কার দাবি মেনে পাস করা হয়?
+  options:
+    - { en: Lord Wellesley, bn: লর্ড ওয়েলেসলি }
+    - { en: Warren Hastings, bn: ওয়ারেন হেস্টিংস }
+    - { en: Robert Clive, bn: রবার্ট ক্লাইভ }
+    - { en: Lord Cornwallis, bn: লর্ড কর্নওয়ালিস }
+  answer: 3
+  explanation:
+    en: Lord Cornwallis accepted the post of Governor-General on the condition that he would have stronger powers, and the Act of 1786 gave him these. Warren Hastings is tempting because he suffered from being outvoted by his council, but the Act was passed for his successor.
+    bn: লর্ড কর্নওয়ালিস বেশি ক্ষমতা পাওয়ার শর্তে গভর্নর-জেনারেল পদ গ্রহণ করেন, এবং ১৭৮৬ সালের আইন তাঁকে সেই ক্ষমতা দেয়। ওয়ারেন হেস্টিংস বিকল্পটি বিভ্রান্তিকর, কারণ তিনি পরিষদের ভোটে বারবার হেরে যেতেন; কিন্তু আইনটি পাস হয় তাঁর উত্তরসূরির জন্য।
+  status: ai-generated
+
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [regulating-act, pitts-india-act]
+  stem:
+    en: Which one of the following was **NOT** a provision of the Regulating Act of 1773?
+    bn: নিম্নলিখিত কোনটি ১৭৭৩ সালের রেগুলেটিং আইনের বিধান **নয়**?
+  options:
+    - { en: A Governor-General of Bengal with a council of four members, bn: চার সদস্যের পরিষদ-সহ বাংলার গভর্নর-জেনারেল }
+    - { en: A Supreme Court at Calcutta, bn: কলকাতায় একটি সুপ্রিম কোর্ট }
+    - { en: Creation of the Board of Control, bn: বোর্ড অব কন্ট্রোল গঠন }
+    - { en: A ban on private trade by Company servants, bn: কোম্পানির কর্মচারীদের ব্যক্তিগত বাণিজ্য নিষিদ্ধ }
+  answer: 2
+  explanation:
+    en: The Board of Control was created by Pitt's India Act, 1784. The other three options were all provisions of the Regulating Act, including the ban on private trade and on accepting presents.
+    bn: বোর্ড অব কন্ট্রোল গঠিত হয় ১৭৮৪ সালের পিটের ভারত শাসন আইনে। বাকি তিনটি বিকল্পই রেগুলেটিং আইনের বিধান, যার মধ্যে ব্যক্তিগত বাণিজ্য ও উপহার গ্রহণ নিষিদ্ধ করাও রয়েছে।
+  status: ai-generated
+
+- id: q0013
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [regulating-act]
+  stem:
+    en: Consider the following statements about the Regulating Act of 1773.
+    bn: ১৭৭৩ সালের রেগুলেটিং আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It made the Governors of Bombay and Madras subordinate to the Governor-General of Bengal."
+      bn: "১. এই আইন বোম্বাই ও মাদ্রাজের গভর্নরদের বাংলার গভর্নর-জেনারেলের অধীন করে।"
+    - en: "2. The Supreme Court set up under it had a Chief Justice and three other judges."
+      bn: "২. এই আইন অনুযায়ী গঠিত সুপ্রিম কোর্টে একজন প্রধান বিচারপতি ও আরও তিনজন বিচারপতি ছিলেন।"
+    - en: "3. It gave the Governor-General the power to override his council."
+      bn: "৩. এই আইন গভর্নর-জেনারেলকে পরিষদের সিদ্ধান্ত অগ্রাহ্য করার ক্ষমতা দেয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong; under the Regulating Act the Governor-General could be outvoted by his council. The power to override the council came with the Act of 1786.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল; রেগুলেটিং আইনে গভর্নর-জেনারেল পরিষদের ভোটে হেরে যেতে পারতেন। পরিষদের সিদ্ধান্ত অগ্রাহ্য করার ক্ষমতা আসে ১৭৮৬ সালের আইনে।
+  status: ai-generated
+
+- id: q0014
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pitts-india-act]
+  stem:
+    en: With reference to Pitt's India Act of 1784, consider the following statements.
+    bn: ১৭৮৪ সালের পিটের ভারত শাসন আইন প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: '1. The Company''s territories in India were called the "British possessions in India" for the first time.'
+      bn: '১. ভারতে কোম্পানির অধিকৃত অঞ্চলকে প্রথমবার "ভারতে ব্রিটিশ অধিকৃত অঞ্চল" বলা হয়।'
+    - en: "2. The Court of Directors continued to manage the commercial affairs of the Company."
+      bn: "২. কোর্ট অব ডিরেক্টরস আগের মতোই কোম্পানির বাণিজ্যিক বিষয় পরিচালনা করত।"
+    - en: "3. It ended the Company's monopoly of trade with India."
+      bn: "৩. এই আইন ভারতের সঙ্গে বাণিজ্যে কোম্পানির একচেটিয়া অধিকারের অবসান ঘটায়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 2 are correct; the Act created a dual system in which the Court of Directors handled commerce and the Board of Control handled political affairs. Statement 3 is wrong, because the monopoly of trade with India was ended by the Charter Act of 1813.
+    bn: ১ ও ২ নং বিবৃতি সঠিক; এই আইন দ্বৈত শাসনব্যবস্থা চালু করে, যেখানে বাণিজ্য দেখত কোর্ট অব ডিরেক্টরস এবং রাজনৈতিক বিষয় দেখত বোর্ড অব কন্ট্রোল। ৩ নং বিবৃতি ভুল, কারণ ভারতের সঙ্গে বাণিজ্যে একচেটিয়া অধিকারের অবসান ঘটায় ১৮১৩ সালের সনদ আইন।
+  status: ai-generated
+
+- id: q0015
+  type: statements
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1813]
+  stem:
+    en: Consider the following statements about the Charter Act of 1813.
+    bn: ১৮১৩ সালের সনদ আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It ended the Company's monopoly of the tea trade."
+      bn: "১. এই আইন চা-বাণিজ্যে কোম্পানির একচেটিয়া অধিকারের অবসান ঘটায়।"
+    - en: "2. It permitted Christian missionaries to come to India."
+      bn: "২. এই আইন খ্রিস্টান মিশনারিদের ভারতে আসার অনুমতি দেয়।"
+    - en: "3. It provided ₹1 lakh a year for education."
+      bn: "৩. এই আইনে শিক্ষার জন্য বছরে ১ লক্ষ টাকা বরাদ্দ করা হয়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 3 only, bn: কেবল ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 2
+  explanation:
+    en: Statements 2 and 3 are correct. Statement 1 is wrong; the 1813 Act kept the Company's monopoly of tea and the China trade, which ended only with the Charter Act of 1833.
+    bn: ২ ও ৩ নং বিবৃতি সঠিক। ১ নং বিবৃতি ভুল; ১৮১৩ সালের আইন চা ও চিন-বাণিজ্যে কোম্পানির একচেটিয়া অধিকার বজায় রাখে, যার অবসান ঘটে কেবল ১৮৩৩ সালের সনদ আইনে।
+  status: ai-generated
+
+- id: q0016
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1833]
+  stem:
+    en: With reference to the Charter Act of 1833, consider the following statements.
+    bn: ১৮৩৩ সালের সনদ আইন প্রসঙ্গে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Governors of Bombay and Madras lost their legislative powers."
+      bn: "১. বোম্বাই ও মাদ্রাজের গভর্নররা আইন প্রণয়নের ক্ষমতা হারান।"
+    - en: "2. Laws made under this Act were called Acts instead of Regulations."
+      bn: "২. এই আইনের অধীনে প্রণীত আইনগুলিকে রেগুলেশনের বদলে অ্যাক্ট বলা হয়।"
+    - en: "3. It laid down that no Indian should be barred from any office under the Company because of religion, place of birth, descent or colour."
+      bn: "৩. এতে বলা হয় যে ধর্ম, জন্মস্থান, বংশ বা গায়ের রঙের কারণে কোনো ভারতীয়কে কোম্পানির অধীনে কোনো পদ থেকে বঞ্চিত করা যাবে না।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 3
+  explanation:
+    en: All three are correct. The 1833 Act gave exclusive legislative power to the Governor-General of India, renamed new laws as Acts, and declared that Indians should not be barred from office on such grounds. Statement 3 is the one most often doubted, but it is a well-known feature of this Act.
+    bn: তিনটি বিবৃতিই সঠিক। ১৮৩৩ সালের আইন আইন প্রণয়নের একচ্ছত্র ক্ষমতা ভারতের গভর্নর-জেনারেলকে দেয়, নতুন আইনগুলিকে অ্যাক্ট নামে অভিহিত করে এবং ঘোষণা করে যে এসব কারণে ভারতীয়দের কোনো পদ থেকে বঞ্চিত করা যাবে না। ৩ নং বিবৃতি নিয়েই সবচেয়ে বেশি সন্দেহ জাগে, কিন্তু এটি এই আইনের একটি সুপরিচিত বৈশিষ্ট্য।
+  status: ai-generated
+
+- id: q0017
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1853]
+  stem:
+    en: Consider the following statements about the Charter Act of 1853.
+    bn: ১৮৫৩ সালের সনদ আইন সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. It introduced open competition for recruitment to the civil services."
+      bn: "১. এই আইন অসামরিক চাকরিতে নিয়োগের জন্য প্রকাশ্য প্রতিযোগিতা চালু করে।"
+    - en: "2. It renewed the Company's charter for another 20 years."
+      bn: "২. এই আইন কোম্পানির সনদ আরও ২০ বছরের জন্য নবীকরণ করে।"
+    - en: "3. It introduced local representation in the central legislative council."
+      bn: "৩. এই আইন কেন্দ্রীয় আইন পরিষদে স্থানীয় প্রতিনিধিত্ব চালু করে।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 1 and 3 only, bn: কেবল ১ ও ৩ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 1
+  explanation:
+    en: Statements 1 and 3 are correct; four of the six new legislative members represented the provincial governments. Statement 2 is wrong; unlike earlier charters, the 1853 Act fixed no period and let the Company hold its territories until Parliament decided otherwise.
+    bn: ১ ও ৩ নং বিবৃতি সঠিক; ছয়জন নতুন আইন পরিষদ সদস্যের মধ্যে চারজন ছিলেন প্রাদেশিক সরকারের প্রতিনিধি। ২ নং বিবৃতি ভুল; আগের সনদগুলির মতো ১৮৫৩ সালের আইন কোনো নির্দিষ্ট মেয়াদ ঠিক করেনি, বরং পার্লামেন্ট অন্যরকম সিদ্ধান্ত না নেওয়া পর্যন্ত কোম্পানিকে অঞ্চলগুলি শাসনের অধিকার দেয়।
+  status: ai-generated
+
+- id: q0018
+  type: statements
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [acts-1786-1793]
+  stem:
+    en: Consider the following statements.
+    bn: নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।
+  statements:
+    - en: "1. The Act of 1786 allowed the Governor-General to override his council in special cases."
+      bn: "১. ১৭৮৬ সালের আইন বিশেষ ক্ষেত্রে গভর্নর-জেনারেলকে পরিষদের সিদ্ধান্ত অগ্রাহ্য করার অনুমতি দেয়।"
+    - en: "2. Under the Charter Act of 1793, the salaries of the members of the Board of Control were to be paid out of Indian revenues."
+      bn: "২. ১৭৯৩ সালের সনদ আইন অনুযায়ী বোর্ড অব কন্ট্রোলের সদস্যদের বেতন ভারতের রাজস্ব থেকে দেওয়ার কথা বলা হয়।"
+    - en: "3. The Charter Act of 1793 ended the Company's trade monopoly."
+      bn: "৩. ১৭৯৩ সালের সনদ আইন কোম্পানির একচেটিয়া বাণিজ্যের অবসান ঘটায়।"
+  question:
+    en: Which of the statements given above is/are correct?
+    bn: উপরের কোন বিবৃতিটি/বিবৃতিগুলি সঠিক?
+  options:
+    - { en: 1 and 2 only, bn: কেবল ১ ও ২ }
+    - { en: 1 only, bn: কেবল ১ }
+    - { en: 2 and 3 only, bn: কেবল ২ ও ৩ }
+    - { en: "1, 2 and 3", bn: "১, ২ ও ৩" }
+  answer: 0
+  explanation:
+    en: Statements 1 and 2 are correct. Statement 3 is wrong; the 1793 Act renewed the Company's charter and trade monopoly for 20 years. The monopoly of trade with India was ended in 1813.
+    bn: ১ ও ২ নং বিবৃতি সঠিক। ৩ নং বিবৃতি ভুল; ১৭৯৩ সালের আইন কোম্পানির সনদ ও একচেটিয়া বাণিজ্যের অধিকার ২০ বছরের জন্য নবীকরণ করে। ভারতের সঙ্গে বাণিজ্যে একচেটিয়া অধিকারের অবসান ঘটে ১৮১৩ সালে।
+  status: ai-generated
+
+- id: q0019
+  type: match
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, upsc-cse, wbcs]
+  refs: [comparison, regulating-act, pitts-india-act, charter-act-1813, charter-act-1853]
+  stem:
+    en: Match List I (Act) with List II (Provision).
+    bn: তালিকা I (আইন)-এর সঙ্গে তালিকা II (বিধান) মেলান।
+  left:
+    - { en: "A. Regulating Act, 1773", bn: "ক. রেগুলেটিং আইন, ১৭৭৩" }
+    - { en: "B. Pitt's India Act, 1784", bn: "খ. পিটের ভারত শাসন আইন, ১৭৮৪" }
+    - { en: "C. Charter Act, 1813", bn: "গ. সনদ আইন, ১৮১৩" }
+    - { en: "D. Charter Act, 1853", bn: "ঘ. সনদ আইন, ১৮৫৩" }
+  right:
+    - { en: "1. Open competition for the civil services", bn: "১. অসামরিক চাকরিতে প্রকাশ্য প্রতিযোগিতা" }
+    - { en: "2. ₹1 lakh a year for education", bn: "২. শিক্ষার জন্য বছরে ১ লক্ষ টাকা" }
+    - { en: "3. Supreme Court at Calcutta", bn: "৩. কলকাতায় সুপ্রিম কোর্ট" }
+    - { en: "4. Board of Control", bn: "৪. বোর্ড অব কন্ট্রোল" }
+  options:
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+  answer: 3
+  explanation:
+    en: The Regulating Act provided the Supreme Court at Calcutta, Pitt's India Act created the Board of Control, the 1813 Act granted ₹1 lakh for education, and the 1853 Act introduced open competition. Option A-4, B-3 swaps the first two Acts, a common confusion.
+    bn: রেগুলেটিং আইনে কলকাতায় সুপ্রিম কোর্ট, পিটের ভারত শাসন আইনে বোর্ড অব কন্ট্রোল, ১৮১৩ সালের আইনে শিক্ষার জন্য ১ লক্ষ টাকা এবং ১৮৫৩ সালের আইনে প্রকাশ্য প্রতিযোগিতা চালু হয়। ক-৪, খ-৩ বিকল্পে প্রথম দুটি আইন অদলবদল করা হয়েছে, যা একটি সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0020
+  type: match
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [regulating-act, charter-act-1833]
+  stem:
+    en: Match List I (Person) with List II (Position held first).
+    bn: তালিকা I (ব্যক্তি)-এর সঙ্গে তালিকা II (প্রথম পদাধিকারী) মেলান।
+  left:
+    - { en: "A. Warren Hastings", bn: "ক. ওয়ারেন হেস্টিংস" }
+    - { en: "B. Lord William Bentinck", bn: "খ. লর্ড উইলিয়াম বেন্টিঙ্ক" }
+    - { en: "C. Sir Elijah Impey", bn: "গ. স্যার এলিজা ইম্পে" }
+    - { en: "D. T.B. Macaulay", bn: "ঘ. টমাস ব্যাবিংটন মেকলে" }
+  right:
+    - { en: "1. First Governor-General of Bengal", bn: "১. বাংলার প্রথম গভর্নর-জেনারেল" }
+    - { en: "2. First Governor-General of India", bn: "২. ভারতের প্রথম গভর্নর-জেনারেল" }
+    - { en: "3. First Chief Justice of the Supreme Court at Calcutta", bn: "৩. কলকাতা সুপ্রিম কোর্টের প্রথম প্রধান বিচারপতি" }
+    - { en: "4. First law member of the Governor-General's council", bn: "৪. গভর্নর-জেনারেলের পরিষদের প্রথম আইন সদস্য" }
+  options:
+    - { en: "A-1, B-2, C-3, D-4", bn: "ক-১, খ-২, গ-৩, ঘ-৪" }
+    - { en: "A-2, B-1, C-3, D-4", bn: "ক-২, খ-১, গ-৩, ঘ-৪" }
+    - { en: "A-1, B-2, C-4, D-3", bn: "ক-১, খ-২, গ-৪, ঘ-৩" }
+    - { en: "A-2, B-1, C-4, D-3", bn: "ক-২, খ-১, গ-৪, ঘ-৩" }
+  answer: 0
+  explanation:
+    en: Warren Hastings was the first Governor-General of Bengal (1773), Lord William Bentinck the first Governor-General of India (1833), Sir Elijah Impey the first Chief Justice at Calcutta (1774) and Macaulay the first law member (1833). Mixing up Hastings and Bentinck is the most common error.
+    bn: ওয়ারেন হেস্টিংস বাংলার প্রথম গভর্নর-জেনারেল (১৭৭৩), লর্ড উইলিয়াম বেন্টিঙ্ক ভারতের প্রথম গভর্নর-জেনারেল (১৮৩৩), স্যার এলিজা ইম্পে কলকাতা সুপ্রিম কোর্টের প্রথম প্রধান বিচারপতি (১৭৭৪) এবং মেকলে প্রথম আইন সদস্য (১৮৩৩)। হেস্টিংস ও বেন্টিঙ্ককে গুলিয়ে ফেলাই সবচেয়ে সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0021
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [comparison, acts-1786-1793, charter-act-1833, charter-act-1853]
+  stem:
+    en: Match List I (Act) with List II (Governor-General associated with it).
+    bn: তালিকা I (আইন)-এর সঙ্গে তালিকা II (আইনটির সঙ্গে যুক্ত গভর্নর-জেনারেল) মেলান।
+  left:
+    - { en: "A. Regulating Act, 1773", bn: "ক. রেগুলেটিং আইন, ১৭৭৩" }
+    - { en: "B. Act of 1786", bn: "খ. ১৭৮৬ সালের আইন" }
+    - { en: "C. Charter Act, 1833", bn: "গ. সনদ আইন, ১৮৩৩" }
+    - { en: "D. Charter Act, 1853", bn: "ঘ. সনদ আইন, ১৮৫৩" }
+  right:
+    - { en: "1. Lord Dalhousie", bn: "১. লর্ড ডালহৌসি" }
+    - { en: "2. Lord William Bentinck", bn: "২. লর্ড উইলিয়াম বেন্টিঙ্ক" }
+    - { en: "3. Warren Hastings", bn: "৩. ওয়ারেন হেস্টিংস" }
+    - { en: "4. Lord Cornwallis", bn: "৪. লর্ড কর্নওয়ালিস" }
+  options:
+    - { en: "A-4, B-3, C-2, D-1", bn: "ক-৪, খ-৩, গ-২, ঘ-১" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-2, C-4, D-1", bn: "ক-৩, খ-২, গ-৪, ঘ-১" }
+  answer: 2
+  explanation:
+    en: Warren Hastings became Governor-General of Bengal under the Regulating Act; the Act of 1786 was made for Lord Cornwallis; Lord William Bentinck became the first Governor-General of India under the 1833 Act; and the 1853 Act came during Lord Dalhousie's tenure. The option swapping Bentinck and Dalhousie is the closest trap.
+    bn: রেগুলেটিং আইনে ওয়ারেন হেস্টিংস বাংলার গভর্নর-জেনারেল হন; ১৭৮৬ সালের আইন লর্ড কর্নওয়ালিসের জন্য তৈরি; ১৮৩৩ সালের আইনে লর্ড উইলিয়াম বেন্টিঙ্ক ভারতের প্রথম গভর্নর-জেনারেল হন; আর ১৮৫৩ সালের আইন পাস হয় লর্ড ডালহৌসির শাসনকালে। বেন্টিঙ্ক ও ডালহৌসিকে অদলবদল করা বিকল্পটিই সবচেয়ে বড়ো ফাঁদ।
+  status: ai-generated
+
+- id: q0022
+  type: match
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [comparison, pitts-india-act, acts-1786-1793, charter-act-1813, charter-act-1833]
+  stem:
+    en: Match List I (Act) with List II (Feature).
+    bn: তালিকা I (আইন)-এর সঙ্গে তালিকা II (বৈশিষ্ট্য) মেলান।
+  left:
+    - { en: "A. Pitt's India Act, 1784", bn: "ক. পিটের ভারত শাসন আইন, ১৭৮৪" }
+    - { en: "B. Charter Act, 1793", bn: "খ. সনদ আইন, ১৭৯৩" }
+    - { en: "C. Charter Act, 1813", bn: "গ. সনদ আইন, ১৮১৩" }
+    - { en: "D. Charter Act, 1833", bn: "ঘ. সনদ আইন, ১৮৩৩" }
+  right:
+    - { en: "1. Christian missionaries allowed to come to India", bn: "১. খ্রিস্টান মিশনারিদের ভারতে আসার অনুমতি" }
+    - { en: "2. End of all commercial activities of the Company", bn: "২. কোম্পানির সমস্ত বাণিজ্যিক কাজকর্মের অবসান" }
+    - { en: "3. Dual system of Board of Control and Court of Directors", bn: "৩. বোর্ড অব কন্ট্রোল ও কোর্ট অব ডিরেক্টরসের দ্বৈত শাসনব্যবস্থা" }
+    - { en: "4. Board of Control salaries paid from Indian revenues", bn: "৪. বোর্ড অব কন্ট্রোলের বেতন ভারতের রাজস্ব থেকে" }
+  options:
+    - { en: "A-4, B-3, C-1, D-2", bn: "ক-৪, খ-৩, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-1, D-2", bn: "ক-৩, খ-৪, গ-১, ঘ-২" }
+    - { en: "A-3, B-4, C-2, D-1", bn: "ক-৩, খ-৪, গ-২, ঘ-১" }
+    - { en: "A-3, B-1, C-4, D-2", bn: "ক-৩, খ-১, গ-৪, ঘ-২" }
+  answer: 1
+  explanation:
+    en: Pitt's India Act set up the dual system, the 1793 Act charged Board of Control salaries to Indian revenues, the 1813 Act admitted missionaries, and the 1833 Act ended the Company's trade. Swapping C and D is tempting, but the 1813 Act left the tea and China trade with the Company.
+    bn: পিটের ভারত শাসন আইন দ্বৈত শাসনব্যবস্থা চালু করে, ১৭৯৩ সালের আইন বোর্ড অব কন্ট্রোলের বেতন ভারতের রাজস্ব থেকে দেওয়ার ব্যবস্থা করে, ১৮১৩ সালের আইন মিশনারিদের প্রবেশের অনুমতি দেয় এবং ১৮৩৩ সালের আইন কোম্পানির বাণিজ্যের অবসান ঘটায়। গ ও ঘ অদলবদল করা বিকল্পটি বিভ্রান্তিকর, কিন্তু ১৮১৩ সালের আইন চা ও চিন-বাণিজ্য কোম্পানির হাতেই রেখেছিল।
+  status: ai-generated
+
+- id: q0023
+  type: assertion-reason
+  difficulty: 2
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [pitts-india-act]
+  assertion:
+    en: Pitt's India Act of 1784 established a dual system of control over the Company's affairs in India.
+    bn: ১৭৮৪ সালের পিটের ভারত শাসন আইন ভারতে কোম্পানির কাজকর্মের ওপর দ্বৈত নিয়ন্ত্রণব্যবস্থা প্রতিষ্ঠা করে।
+  reason:
+    en: The Act left commercial affairs with the Court of Directors and placed political affairs under a Board of Control.
+    bn: এই আইন বাণিজ্যিক বিষয় কোর্ট অব ডিরেক্টরসের হাতে রাখে এবং রাজনৈতিক বিষয় বোর্ড অব কন্ট্রোলের অধীনে আনে।
+  answer: 0
+  explanation:
+    en: Both are true, and the reason explains the assertion. The "dual system" means exactly this sharing of control between the Court of Directors (Company) and the Board of Control (British Government).
+    bn: দুটি বক্তব্যই সত্য এবং কারণটি বিবৃতির সঠিক ব্যাখ্যা। "দ্বৈত শাসনব্যবস্থা" বলতে কোর্ট অব ডিরেক্টরস (কোম্পানি) ও বোর্ড অব কন্ট্রোল (ব্রিটিশ সরকার)-এর মধ্যে নিয়ন্ত্রণের এই ভাগাভাগিকেই বোঝায়।
+  status: ai-generated
+
+- id: q0024
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [regulating-act, charter-act-1833]
+  assertion:
+    en: The Regulating Act of 1773 created the post of Governor-General of India.
+    bn: ১৭৭৩ সালের রেগুলেটিং আইন ভারতের গভর্নর-জেনারেল পদ সৃষ্টি করে।
+  reason:
+    en: The Regulating Act made the Governors of Bombay and Madras subordinate to the Governor-General of Bengal.
+    bn: রেগুলেটিং আইন বোম্বাই ও মাদ্রাজের গভর্নরদের বাংলার গভর্নর-জেনারেলের অধীন করে।
+  answer: 3
+  explanation:
+    en: The assertion is false; the Regulating Act created the post of Governor-General of Bengal, and the Governor-General of India came only in 1833. The reason is true, which makes it tempting to accept the assertion as well.
+    bn: বিবৃতিটি মিথ্যা; রেগুলেটিং আইন বাংলার গভর্নর-জেনারেল পদ সৃষ্টি করে, আর ভারতের গভর্নর-জেনারেল পদ আসে কেবল ১৮৩৩ সালে। কারণটি সত্য, আর সেজন্যই বিবৃতিটিকেও সত্য বলে মনে হতে পারে।
+  status: ai-generated
+
+- id: q0025
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1813]
+  assertion:
+    en: The Charter Act of 1813 allowed Christian missionaries to come to India.
+    bn: ১৮১৩ সালের সনদ আইন খ্রিস্টান মিশনারিদের ভারতে আসার অনুমতি দেয়।
+  reason:
+    en: The Charter Act of 1813 set aside ₹1 lakh a year for education in India.
+    bn: ১৮১৩ সালের সনদ আইনে ভারতে শিক্ষার জন্য বছরে ১ লক্ষ টাকা বরাদ্দ করা হয়।
+  answer: 1
+  explanation:
+    en: Both statements are true and both are provisions of the 1813 Act, but they are separate provisions. The education grant does not explain why missionaries were admitted, so the reason is not the correct explanation of the assertion.
+    bn: দুটি বক্তব্যই সত্য এবং দুটিই ১৮১৩ সালের আইনের বিধান, কিন্তু এগুলি আলাদা বিধান। শিক্ষার জন্য অর্থ বরাদ্দ মিশনারিদের প্রবেশের অনুমতির কারণ ব্যাখ্যা করে না, তাই কারণটি বিবৃতির সঠিক ব্যাখ্যা নয়।
+  status: ai-generated
+
+- id: q0026
+  type: assertion-reason
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [charter-act-1853, acts-1786-1793]
+  assertion:
+    en: The Charter Act of 1853 was the last of the Charter Acts.
+    bn: ১৮৫৩ সালের সনদ আইন ছিল সনদ আইনগুলির মধ্যে শেষ।
+  reason:
+    en: The Charter Act of 1853 renewed the Company's charter for another 20 years.
+    bn: ১৮৫৩ সালের সনদ আইন কোম্পানির সনদ আরও ২০ বছরের জন্য নবীকরণ করে।
+  answer: 2
+  explanation:
+    en: The assertion is true but the reason is false. Earlier charters (1793, 1813, 1833) ran for 20 years, but the 1853 Act fixed no period; the Company held its territories until Parliament decided otherwise, and Crown rule followed in 1858.
+    bn: বিবৃতিটি সত্য, কিন্তু কারণটি মিথ্যা। আগের সনদগুলি (১৭৯৩, ১৮১৩, ১৮৩৩) ২০ বছরের জন্য ছিল, কিন্তু ১৮৫৩ সালের আইন কোনো মেয়াদ নির্দিষ্ট করেনি; পার্লামেন্ট অন্যরকম সিদ্ধান্ত না নেওয়া পর্যন্ত কোম্পানি অঞ্চলগুলি শাসন করবে বলা হয়, এবং ১৮৫৮ সালে রাজশক্তির শাসন শুরু হয়।
+  status: ai-generated
+
+- id: q0027
+  type: chronology
+  difficulty: 1
+  exams: [ssc-cgl, ssc-chsl, rrb-ntpc, state-psc, wbcs]
+  refs: [background, comparison]
+  stem:
+    en: Arrange the following Acts in chronological order.
+    bn: নিম্নলিখিত আইনগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Charter Act abolishing the Company's trade monopoly with India (except tea and China)"
+      bn: "১. চা ও চিন-বাণিজ্য ছাড়া ভারতের সঙ্গে কোম্পানির একচেটিয়া বাণিজ্যের অবসানকারী সনদ আইন"
+    - en: "2. Regulating Act"
+      bn: "২. রেগুলেটিং আইন"
+    - en: "3. Last Charter Act"
+      bn: "৩. শেষ সনদ আইন"
+    - en: "4. Pitt's India Act"
+      bn: "৪. পিটের ভারত শাসন আইন"
+  options:
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 2-4-3-1, bn: ২-৪-৩-১ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+  answer: 3
+  explanation:
+    en: The Regulating Act came in 1773, Pitt's India Act in 1784, the Charter Act ending the general trade monopoly in 1813, and the last Charter Act in 1853. The option starting with Pitt's India Act is wrong because the Regulating Act came first.
+    bn: রেগুলেটিং আইন ১৭৭৩ সালে, পিটের ভারত শাসন আইন ১৭৮৪ সালে, সাধারণ একচেটিয়া বাণিজ্যের অবসানকারী সনদ আইন ১৮১৩ সালে এবং শেষ সনদ আইন ১৮৫৩ সালে পাস হয়। পিটের ভারত শাসন আইন দিয়ে শুরু হওয়া বিকল্পটি ভুল, কারণ রেগুলেটিং আইন আগে এসেছিল।
+  status: ai-generated
+
+- id: q0028
+  type: chronology
+  difficulty: 2
+  exams: [upsc-cse, ssc-cgl, state-psc, wbcs]
+  refs: [regulating-act, pitts-india-act, charter-act-1833, charter-act-1853]
+  stem:
+    en: Arrange the following developments in chronological order.
+    bn: নিম্নলিখিত ঘটনাগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Establishment of the Supreme Court at Calcutta"
+      bn: "১. কলকাতায় সুপ্রিম কোর্ট প্রতিষ্ঠা"
+    - en: "2. Creation of the Board of Control"
+      bn: "২. বোর্ড অব কন্ট্রোল গঠন"
+    - en: "3. Creation of the post of Governor-General of India"
+      bn: "৩. ভারতের গভর্নর-জেনারেল পদ সৃষ্টি"
+    - en: "4. Separation of the legislative and executive functions of the Governor-General's council"
+      bn: "৪. গভর্নর-জেনারেলের পরিষদের আইন প্রণয়ন ও শাসন বিভাগীয় কাজের পৃথকীকরণ"
+  options:
+    - { en: 1-2-3-4, bn: ১-২-৩-৪ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+    - { en: 1-3-2-4, bn: ১-৩-২-৪ }
+  answer: 0
+  explanation:
+    en: The Supreme Court at Calcutta was set up in 1774, the Board of Control in 1784, the post of Governor-General of India in 1833, and legislative and executive functions were separated in 1853. Putting the Board of Control first is wrong because the Supreme Court came ten years earlier.
+    bn: কলকাতায় সুপ্রিম কোর্ট প্রতিষ্ঠিত হয় ১৭৭৪ সালে, বোর্ড অব কন্ট্রোল গঠিত হয় ১৭৮৪ সালে, ভারতের গভর্নর-জেনারেল পদ সৃষ্টি হয় ১৮৩৩ সালে এবং আইন প্রণয়ন ও শাসন বিভাগীয় কাজ পৃথক হয় ১৮৫৩ সালে। বোর্ড অব কন্ট্রোলকে প্রথমে রাখা ভুল, কারণ সুপ্রিম কোর্ট তার দশ বছর আগে প্রতিষ্ঠিত হয়েছিল।
+  status: ai-generated
+
+- id: q0029
+  type: chronology
+  difficulty: 2
+  exams: [ssc-cgl, state-psc, wbcs, rrb-ntpc]
+  refs: [comparison, regulating-act, acts-1786-1793, charter-act-1833, charter-act-1853]
+  stem:
+    en: Arrange the following Governors-General in the chronological order of their tenure.
+    bn: নিম্নলিখিত গভর্নর-জেনারেলদের শাসনকালের কালানুক্রম অনুযায়ী সাজান।
+  items:
+    - en: "1. Lord William Bentinck"
+      bn: "১. লর্ড উইলিয়াম বেন্টিঙ্ক"
+    - en: "2. Lord Cornwallis (first tenure)"
+      bn: "২. লর্ড কর্নওয়ালিস (প্রথম দফা)"
+    - en: "3. Lord Dalhousie"
+      bn: "৩. লর্ড ডালহৌসি"
+    - en: "4. Warren Hastings"
+      bn: "৪. ওয়ারেন হেস্টিংস"
+  options:
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 4-2-3-1, bn: ৪-২-৩-১ }
+    - { en: 4-2-1-3, bn: ৪-২-১-৩ }
+    - { en: 4-1-2-3, bn: ৪-১-২-৩ }
+  answer: 2
+  explanation:
+    en: Warren Hastings was Governor-General when the Regulating Act took effect, Lord Cornwallis followed under the Act of 1786, Lord William Bentinck held office when the 1833 Act was passed, and Lord Dalhousie when the 1853 Act was passed. Placing Dalhousie before Bentinck is the tempting error.
+    bn: রেগুলেটিং আইন কার্যকর হওয়ার সময় গভর্নর-জেনারেল ছিলেন ওয়ারেন হেস্টিংস, ১৭৮৬ সালের আইনের অধীনে তাঁর পরে আসেন লর্ড কর্নওয়ালিস, ১৮৩৩ সালের আইন পাসের সময় ছিলেন লর্ড উইলিয়াম বেন্টিঙ্ক এবং ১৮৫৩ সালের আইন পাসের সময় লর্ড ডালহৌসি। ডালহৌসিকে বেন্টিঙ্কের আগে রাখাই সাধারণ ভুল।
+  status: ai-generated
+
+- id: q0030
+  type: chronology
+  difficulty: 3
+  exams: [upsc-cse, state-psc, wbcs]
+  refs: [acts-1786-1793, charter-act-1833, comparison]
+  stem:
+    en: Arrange the following in chronological order.
+    bn: নিম্নলিখিতগুলিকে কালানুক্রমিকভাবে সাজান।
+  items:
+    - en: "1. Charter Act extending the overriding power to the Governors of the presidencies"
+      bn: "১. প্রেসিডেন্সির গভর্নরদেরও পরিষদের সিদ্ধান্ত অগ্রাহ্য করার ক্ষমতা প্রদানকারী সনদ আইন"
+    - en: "2. Act allowing the Governor-General to be Commander-in-Chief as well"
+      bn: "২. গভর্নর-জেনারেলকে প্রধান সেনাপতি হওয়ারও অনুমতিদানকারী আইন"
+    - en: "3. Act abolishing the Board of Control and the Court of Directors"
+      bn: "৩. বোর্ড অব কন্ট্রোল ও কোর্ট অব ডিরেক্টরস বিলোপকারী আইন"
+    - en: "4. Act adding a law member to the Governor-General's council"
+      bn: "৪. গভর্নর-জেনারেলের পরিষদে আইন সদস্য যুক্তকারী আইন"
+  options:
+    - { en: 1-2-4-3, bn: ১-২-৪-৩ }
+    - { en: 2-1-4-3, bn: ২-১-৪-৩ }
+    - { en: 2-4-1-3, bn: ২-৪-১-৩ }
+    - { en: 2-1-3-4, bn: ২-১-৩-৪ }
+  answer: 1
+  explanation:
+    en: The Act of 1786 let the Governor-General also be Commander-in-Chief, the Charter Act of 1793 extended the overriding power to the presidency Governors, the Charter Act of 1833 added the law member, and the Government of India Act of 1858 abolished the Board of Control and the Court of Directors. Putting the 1793 Act first is tempting, but the 1786 Act came earlier.
+    bn: ১৭৮৬ সালের আইন গভর্নর-জেনারেলকে প্রধান সেনাপতি হওয়ারও অনুমতি দেয়, ১৭৯৩ সালের সনদ আইন প্রেসিডেন্সির গভর্নরদেরও পরিষদের সিদ্ধান্ত অগ্রাহ্য করার ক্ষমতা দেয়, ১৮৩৩ সালের সনদ আইন আইন সদস্য যুক্ত করে এবং ১৮৫৮ সালের ভারত শাসন আইন বোর্ড অব কন্ট্রোল ও কোর্ট অব ডিরেক্টরস বিলুপ্ত করে। ১৭৯৩ সালের আইনকে প্রথমে রাখা বিভ্রান্তিকর, কিন্তু ১৭৮৬ সালের আইন তার আগে এসেছিল।
+  status: ai-generated
