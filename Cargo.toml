@@ -3,7 +3,7 @@ resolver = "3"
 members = ["apps/desktop/src-tauri", "crates/core", "crates/packs", "tools/packer"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 license = "GPL-3.0-or-later"
 repository = "https://github.com/Kroy665/free_exercise_book"

@@ -127,7 +127,7 @@
     <section class="card group">
     <strong>{t("settings.about")}</strong>
     <p class="muted">{t("settings.about_text")}</p>
-    <p class="muted small">v0.1.0</p>
+    <p class="muted small">v0.2.0</p>
   </section>
 </div>
 

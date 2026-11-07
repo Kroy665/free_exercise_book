@@ -1033,7 +1033,7 @@ dependencies = [
 
 [[package]]
 name = "feb-core"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "regex",
  "rusqlite",
@@ -1046,7 +1046,7 @@ dependencies = [
 
 [[package]]
 name = "feb-packer"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "feb-core",
  "feb-packs",
@@ -1055,7 +1055,7 @@ dependencies = [
 
 [[package]]
 name = "feb-packs"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "hex",
  "minisign",
@@ -1151,7 +1151,7 @@ dependencies = [
 
 [[package]]
 name = "free-exercise-book"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "feb-core",
  "feb-packs",
