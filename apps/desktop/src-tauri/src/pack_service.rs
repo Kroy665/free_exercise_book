@@ -415,7 +415,7 @@ mod tests {
     /// Build a signed pack directory from the sample content, forcing `version`.
     fn make_packs(dir: &Path, version: &str, secret: &str) {
         std::fs::create_dir_all(dir).unwrap();
-        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../../content");
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../../crates/core/tests/fixtures/content");
         let mut packs = Vec::new();
         for s in load_dir(&root).unwrap() {
             for u in &s.units {
