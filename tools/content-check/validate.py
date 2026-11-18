@@ -28,6 +28,9 @@ def check(schema, path):
     for e in errs: print(f"ERR {path}: {list(e.path)} {e.message[:150]}")
     return data, not errs
 ok = True
+# Texts for the maths check (formulas and graphs), sent to apps/desktop/scripts/check-math.ts.
+math_texts = []
+CONTROL = re.compile(r"[\x07\x08\x0b\x0c\r]")
 for p in root.glob("subjects/*/subject.yaml"): ok &= check("subject.schema.json", p)[1]
 for p in root.glob("subjects/*/*/unit.yaml"): ok &= check("subject.schema.json", p)[1]
 for p in root.glob("exams/*.yaml"): ok &= check("exam.schema.json", p)[1]
@@ -66,6 +69,7 @@ for t in root.glob("subjects/*/*/*/topic.yaml"):
         note = t.parent/f"notes.{lang}.md"
         if not note.exists(): print(f"ERR missing {note}"); ok = False; continue
         text = note.read_text()
+        math_texts.append({"where": str(note.relative_to(root)), "text": text})
         if unicodedata.normalize("NFC", text) != text: print(f"ERR {note} is not NFC-normalised"); ok = False
         a = re.findall(r"\{#([a-z0-9-]+)\}", text)
         if anchors is None: anchors = a
@@ -78,9 +82,23 @@ for t in root.glob("subjects/*/*/*/topic.yaml"):
             if r not in anchors: print(f"ERR {q['id']} bad ref {r}"); ok = False
     for q in qs:
         for path, val in walk(q):
+            math_texts.append({"where": f"{t.parent.relative_to(root)}/{q['id']}{path}", "text": val})
+            if CONTROL.search(val) or ("\t" in val):
+                print(f"ERR {q['id']} {path}: control character, probably LaTeX inside a double-quoted YAML string "
+                      "(\\frac becomes form-feed + 'rac'). Use single quotes or a block scalar (|) for LaTeX"); ok = False
             if path.endswith(".bn"):
                 if re.search(r"[0-9]", val): print(f"ERR {q['id']} {path}: ASCII digits in Bengali text (use ০-৯)"); ok = False
                 if unicodedata.normalize("NFC", val) != val: print(f"ERR {q['id']} {path}: not NFC"); ok = False
     dist = collections.Counter(q["answer"] for q in qs if q["type"] != "assertion-reason")
     print(t.parent.name, "questions:", len(qs), "answer spread:", dict(sorted(dist.items())), "anchors:", sorted(anchors))
+# Formulas and graphs must render (needs Node 23.6+ and `npm ci` in apps/desktop).
+import shutil, subprocess
+script = pathlib.Path(__file__).resolve().parents[2]/"apps/desktop/scripts/check-math.ts"
+if math_texts:
+    if shutil.which("node") and (script.parent.parent/"node_modules/katex").exists():
+        r = subprocess.run(["node", str(script)], input=json.dumps(math_texts), text=True, capture_output=True, cwd=script.parent.parent)
+        print(r.stdout.strip() or r.stderr.strip())
+        if r.returncode != 0: ok = False
+    else:
+        print("ERR maths check needs node and `npm ci` in apps/desktop"); ok = False
 print("VALID" if ok else "INVALID")

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { api, errorMessage, type AttemptResult, type Grade, type QuestionView } from "$lib/api";
   import { refreshDueBadge } from "$lib/stores/packs.svelte";
-  import { renderInline } from "$lib/markdown/render";
+  import { renderInline, renderRich } from "$lib/markdown/render";
   import { optionLabel, settings, t } from "$lib/stores/settings.svelte";
   import { openUrl } from "@tauri-apps/plugin-opener";
   import { untrack } from "svelte";
@@ -180,7 +180,7 @@
           <p class="muted small">{t("srs.wrong_note", { t: "10 min" })}</p>
         {/if}
         <h3>{t("q.explanation")}</h3>
-        <p lang={q.lang}>{@html renderInline(q.explanation)}</p>
+        <div class="prose solution" lang={q.lang}>{@html renderRich(q.explanation)}</div>
         <div class="links">
           {#if q.refs[0]}
             <a class="btn btn-ghost" href="/topic/{q.topic_id}#{q.refs[0]}">

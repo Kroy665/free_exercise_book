@@ -4,7 +4,7 @@
   import ErrorBox from "$lib/components/ErrorBox.svelte";
   import QuestionCard from "$lib/components/QuestionCard.svelte";
   import { duration } from "$lib/format";
-  import { renderInline } from "$lib/markdown/render";
+  import { renderInline, renderRich } from "$lib/markdown/render";
   import { settings, t } from "$lib/stores/settings.svelte";
   import BookOpen from "@lucide/svelte/icons/book-open";
 
@@ -69,7 +69,7 @@
         <QuestionCard q={item.question} selected={item.chosen} result={result(item)} onselect={() => {}} />
         <div class="expl">
           <h3>{t("q.explanation")}</h3>
-          <p lang={item.question.lang}>{@html renderInline(item.question.explanation)}</p>
+          <div class="prose solution" lang={item.question.lang}>{@html renderRich(item.question.explanation)}</div>
           {#if item.question.refs[0]}
             <a class="btn btn-ghost" href="/topic/{item.question.topic_id}#{item.question.refs[0]}">
               <BookOpen size={16} aria-hidden="true" />{t("q.revise_notes")}

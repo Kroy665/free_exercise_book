@@ -16,10 +16,10 @@ concurrency:
 
 env:
   CARGO_TERM_COLOR: always
-  NODE_VERSION: "22"
+  NODE_VERSION: "24"   # runs TypeScript scripts directly (Node 23.6+)
 
 jobs:
-  # Content: schemas, anchors, en/bn completeness, Bengali digit rules.
+  # Content: schemas, anchors, translations, and every formula and graph renders.
   content:
     name: Content validation
     runs-on: ubuntu-latest
@@ -29,6 +29,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: apps/desktop/package-lock.json
+      - run: npm ci --ignore-scripts
+        working-directory: apps/desktop
       - run: pip install pyyaml jsonschema
       - run: python3 tools/content-check/validate.py content
 
@@ -48,6 +55,7 @@ jobs:
           cache: npm
           cache-dependency-path: apps/desktop/package-lock.json
       - run: npm ci
+      - run: npm run test:figures
       - run: npm run check
       - run: npm run build
 

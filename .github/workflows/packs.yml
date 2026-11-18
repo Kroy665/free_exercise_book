@@ -23,8 +23,12 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
 
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
       - name: Validate content
         run: |
+          (cd apps/desktop && npm ci --ignore-scripts)
           pip install pyyaml jsonschema
           python3 tools/content-check/validate.py content
 

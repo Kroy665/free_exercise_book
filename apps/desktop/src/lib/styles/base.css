@@ -123,11 +123,41 @@ a {
 .prose th, .prose td {
   border: 1px solid var(--border);
   padding: var(--space-2) var(--space-3);
-  text-align: left;
+  text-align: left; /* GFM column alignment (:---:) sets an inline style that overrides this */
   vertical-align: top;
 }
 .prose thead th { background: var(--surface-2); position: sticky; top: 0; }
 .prose tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface-2) 50%, transparent); }
+
+/* ---------- Maths (KaTeX), graphs and charts ---------- */
+.math-display { display: block; overflow-x: auto; overflow-y: hidden; margin: var(--space-3) 0; }
+.math-display .katex-display { margin: 0; }
+.katex { font-size: 1.08em; }
+.prose td .katex, .prose th .katex { font-size: 1em; }
+.solution > :first-child { margin-top: 0; }
+.solution ol, .solution ul { padding-left: var(--space-5); }
+
+.fig { margin: var(--space-5) 0; max-width: 640px; }
+.fig-svg { display: block; width: 100%; height: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.fig figcaption { font-size: 0.875rem; color: var(--text-muted); text-align: center; margin-top: var(--space-2); }
+.fig-grid { stroke: var(--fig-grid); stroke-width: 1; }
+.fig-axis { stroke: var(--text-muted); stroke-width: 1.2; }
+.fig-tick { fill: var(--text-muted); font-size: 12px; font-family: var(--font-ui); }
+.fig-label, .fig-note { fill: var(--text); font-size: 12.5px; font-family: var(--font-ui); }
+.fig-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2) var(--space-4); margin-top: var(--space-2); font-size: 0.875rem; }
+.fig-key { display: inline-flex; align-items: center; gap: var(--space-2); }
+.fig-key line.fig-curve { stroke-width: 3; }
+.fig-curve { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.fig-guide { stroke: var(--text-muted); stroke-width: 1.2; stroke-dasharray: 5 4; }
+.fig-shade { fill: var(--series-1); fill-opacity: 0.18; stroke: none; }
+.fig-point { fill: var(--text); stroke: var(--surface); stroke-width: 1.5; }
+.fig-bar { stroke: var(--surface); stroke-width: 1; }
+.fig-curve.fig-s1 { stroke: var(--series-1); } .fig-fill.fig-s1, .fig-dot.fig-s1 { fill: var(--series-1); }
+.fig-curve.fig-s2 { stroke: var(--series-2); } .fig-fill.fig-s2, .fig-dot.fig-s2 { fill: var(--series-2); }
+.fig-curve.fig-s3 { stroke: var(--series-3); } .fig-fill.fig-s3, .fig-dot.fig-s3 { fill: var(--series-3); }
+.fig-curve.fig-s4 { stroke: var(--series-4); } .fig-fill.fig-s4, .fig-dot.fig-s4 { fill: var(--series-4); }
+.fig-curve.fig-s5 { stroke: var(--series-5); } .fig-fill.fig-s5, .fig-dot.fig-s5 { fill: var(--series-5); }
+.fig-error { border: 1px dashed var(--wrong); color: var(--wrong); background: var(--wrong-bg); padding: var(--space-3); border-radius: var(--radius-sm); font-size: 0.875rem; }
 
 .callout {
   border-left: 4px solid var(--accent);

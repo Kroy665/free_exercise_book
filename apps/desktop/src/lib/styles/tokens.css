@@ -16,6 +16,13 @@
   --review: #8a5a00;
   --review-bg: #fff4db;
   --focus-ring: #1f5fad;
+  /* Graph and chart series (figures.ts), distinguishable in colour-blind palettes. */
+  --series-1: #1f5fad;
+  --series-2: #c2410c;
+  --series-3: #15803d;
+  --series-4: #7e22ce;
+  --series-5: #a16207;
+  --fig-grid: #ebe9e2;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -58,6 +65,12 @@
   --review: #f5b83d;
   --review-bg: #2c2210;
   --focus-ring: #6ea8fe;
+  --series-1: #6ea8fe;
+  --series-2: #fb923c;
+  --series-3: #4ade80;
+  --series-4: #c084fc;
+  --series-5: #facc15;
+  --fig-grid: #2a2e35;
   color-scheme: dark;
 }
 

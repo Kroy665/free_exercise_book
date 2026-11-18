@@ -142,6 +142,76 @@ Time-sensitive fact here.
 
 Tables use GitHub-flavoured Markdown. Images: `![Alt text required](assets/map-1857.webp)`. Alt text is mandatory.
 
+### 6.1 Maths, tables, graphs and charts
+
+**Formulas** are LaTeX, rendered offline by KaTeX, in notes **and** in every question field (stem, options, statements, explanation).
+
+| Write | Shows |
+|---|---|
+| `$\sqrt{2}$` | inline maths. No space just inside the `$` signs. |
+| `$$ … $$` on its own lines | display maths (centred block, may span several lines) |
+| `$$ … $$` inside a sentence | display maths inside a paragraph or question |
+| `\$5` | a literal dollar sign |
+
+- Shortcuts: `\R \N \Z \Q \C` for ℝ ℕ ℤ ℚ ℂ.
+- Inside a table cell, write `\lvert x \rvert`, not `|x|`, because `|` separates table columns.
+- **YAML:** put LaTeX in single quotes (`'$\frac{1}{2}$'`) or a block scalar (`|`). Never use double quotes: `"\frac"` turns `\f` into a form-feed. The validator catches this.
+- Explanations are full Markdown. Write worked solutions as steps, with display maths and lists:
+  ```yaml
+  explanation:
+    en: |
+      Write $z$ in polar form: $z = \sqrt2\,(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4})$.
+
+      By De Moivre, $$z^8 = (\sqrt2)^8(\cos 2\pi + i\sin 2\pi) = 16.$$
+  ```
+
+**Tables** use GitHub-flavoured Markdown, and maths works in cells. Column alignment uses `:---` (left), `:---:` (centre) and `---:` (right).
+
+**Graphs** go in a fenced block with the language `plot`. They are drawn as SVG in the app, offline. Use one `key: value` per line; ` | text` adds a legend label (maths allowed); `#` starts a comment.
+
+````markdown
+```plot
+title: $y = x^2 - 2$ and its tangent at $x = \sqrt2$
+x: -3, 3                     # x range (default -5, 5); expressions allowed: -2pi, 2pi
+y: -4, 8                     # optional; automatic otherwise
+f: x^2 - 2 | $y = x^2 - 2$   # y = f(x); repeat for more curves
+f: 2sqrt(2)(x - sqrt(2)) | tangent
+shade: x^2 - 2, -sqrt(2), sqrt(2)      # area between f and the x-axis (or a 4th value g(x)) from a to b
+point: sqrt(2), 0 | $\sqrt2$
+```
+````
+
+| Key | Meaning |
+|---|---|
+| `f: expr` | graph of y = f(x) |
+| `param: x(t), y(t)` | parametric curve; range `t: 0, 2pi` (the default) |
+| `polar: r(t)` | polar curve r = f(θ) (write `t` or `θ`); range `t:` |
+| `implicit: F(x,y) = G(x,y)` | implicit curve: conics, circles, Cartesian ovals (`=` optional, default `= 0`) |
+| `shade: f, a, b[, g]` | shaded region (definite integrals, area between curves) |
+| `point: x, y` · `vline: a` · `hline: b` | marked point; dashed vertical or horizontal line (asymptotes, bounds) |
+| `equal: true` | same scale on both axes (circles look round) |
+| `xticks: pi` | x-axis ticks in multiples of π/2 (trigonometry) |
+| `xlabel:` · `ylabel:` · `title:` | labels; the title appears as the caption |
+
+Expressions use `+ - * / ^`, brackets, `|x|` and implicit multiplication (`2x`, `3(x+1)`, `xy`). The constants are `pi` (or `π`) and `e`. The functions are `sin cos tan sec cosec cot`, their inverses `asin acos atan`, the hyperbolic `sinh cosh tanh`, and `exp ln log log10 sqrt cbrt abs floor sign min max`. `log` = `ln` (natural log). `sin^2(x)` means (sin x)². Write `sin(2x)`, not `sin 2x`.
+
+**Charts** go in a fenced block with the language `chart`:
+
+````markdown
+```chart
+type: histogram              # bar | line | histogram | pie | scatter
+title: Marks of 50 students
+labels: 0, 10, 20, 30, 40, 50   # histogram: class boundaries (one more than the frequencies)
+data: 4, 9, 17, 12, 8           # bar/line: one data line per series, "| name" for the legend
+xlabel: Marks
+ylabel: Frequency
+```
+````
+
+`scatter` takes `points: x, y; x, y; …` and an optional `fit: a + bx | label` (a regression line). `pie` takes `labels:` and one `data:` line.
+
+The validator renders every formula and figure (through `apps/desktop/scripts/check-math.ts`, which needs Node 23.6+ and `npm ci` in `apps/desktop`). A broken formula or graph fails validation. In the app, a broken graph shows an error box instead of crashing the page.
+
 ## 7. Questions (`questions.yaml`)
 
 All languages live in one file. **`en` is required** on every localized field; `bn` and others are optional. Other languages are optional, and a language is used only when its item is complete.
