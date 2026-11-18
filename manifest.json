@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": 1794980296,
+  "generated_at": 1794981786,
   "min_app_version": "0.1.0",
   "packs": [
     {
@@ -39,6 +39,376 @@
       "file": "math.algebra.complex-numbers@0.1.0.pack",
       "size": 10994,
       "sha256": "5f6279c10fb856b5db21fd5ab5c9edd3b09f4449631607bab5a0b3509da5ab56"
+    },
+    {
+      "id": "math.algebra.complex-functions",
+      "version": "0.1.0",
+      "title": {
+        "en": "Functions of a Complex Variable"
+      },
+      "summary": {
+        "en": "The exponential, circular, hyperbolic and logarithmic functions of a complex variable, general powers a^z, inverse circular and hyperbolic functions in logarithmic form, and separation into real and imaginary parts."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.algebra.complex-functions@0.1.0.pack",
+      "size": 13552,
+      "sha256": "ba1df35608db3ce48a6a21a135ea698ef705ef082c39596c9db7f8c74b3ff95b"
+    },
+    {
+      "id": "math.algebra.polynomials",
+      "version": "0.1.0",
+      "title": {
+        "en": "Polynomials and Nature of Roots"
+      },
+      "summary": {
+        "en": "Synthetic division, the remainder and factor theorems, the fundamental theorem of algebra, conjugate and surd roots, Descartes' rule of signs, multiple roots, and Rolle's theorem with the location of real roots."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.algebra.polynomials@0.1.0.pack",
+      "size": 14103,
+      "sha256": "34bf31fcacc0c7243fb16a02ddfab0f85891270ae95088063088bdf787b1e39b"
+    },
+    {
+      "id": "math.algebra.roots-coefficients",
+      "version": "0.1.0",
+      "title": {
+        "en": "Roots, Coefficients and Transformations"
+      },
+      "summary": {
+        "en": "Relations between roots and coefficients, symmetric functions of roots and Newton's power sums, solving equations whose roots obey a given relation, transformation of equations, and reciprocal equations."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 4,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.algebra.roots-coefficients@0.1.0.pack",
+      "size": 13809,
+      "sha256": "b86a3553964de7890c4c8031c1d7732c4821738e5b98694c9ca628f49db86241"
+    },
+    {
+      "id": "math.algebra.cubic-biquadratic",
+      "version": "0.1.0",
+      "title": {
+        "en": "Cubic and Biquadratic Equations"
+      },
+      "summary": {
+        "en": "Reducing the cubic to y³ + 3Hy + G = 0, Cardan's method, the discriminant and nature of roots, the trigonometric solution of the irreducible case, Ferrari's method and the resolvent cubic, and Descartes's method for the biquadratic."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 5,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.algebra.cubic-biquadratic@0.1.0.pack",
+      "size": 12742,
+      "sha256": "e483f04d44a0f4b4ad309e7b9d44e78daa2ddc13abedde8c1353fb51b4238d95"
+    },
+    {
+      "id": "math.algebra.inequalities",
+      "version": "0.1.0",
+      "title": {
+        "en": "Inequalities"
+      },
+      "summary": {
+        "en": "AM ≥ GM ≥ HM and their weighted forms, the power mean inequality, the Cauchy–Schwarz inequality with its Engel (Titu) form, and their use for constrained maxima and minima and standard bounds."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 6,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.algebra.inequalities@0.1.0.pack",
+      "size": 12849,
+      "sha256": "c96ba2c9d6b7b035c2f050dc956fb5af2f5e82f00846d265f3eeb1bdad988049"
+    },
+    {
+      "id": "math.algebra.number-theory",
+      "version": "0.1.0",
+      "title": {
+        "en": "Integers and Divisibility"
+      },
+      "summary": {
+        "en": "Well-ordering and induction, the division algorithm, gcd and Bézout's identity, the Euclidean algorithm, coprime integers and lcm, primes and Euclid's theorems, unique factorisation, divisor counts and sums, and linear Diophantine equations."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 7,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.algebra.number-theory@0.1.0.pack",
+      "size": 13617,
+      "sha256": "458aba1ae26ed1e95bf639562502885cefecf38b0027004354d593d32435e696"
+    },
+    {
+      "id": "math.linalg.determinants",
+      "version": "0.1.0",
+      "title": {
+        "en": "Determinants"
+      },
+      "summary": {
+        "en": "Definition and Laplace expansion, properties, minors and cofactors, product of determinants, the adjoint determinant, symmetric and skew-symmetric determinants, standard determinants, and Cramer's rule."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.determinants@0.1.0.pack",
+      "size": 13562,
+      "sha256": "69716bb8876d8ee84219d5ae35399ee2c1b3fb473ac3dce9843efd2fbfcbea2a"
+    },
+    {
+      "id": "math.linalg.matrices-rank",
+      "version": "0.1.0",
+      "title": {
+        "en": "Matrices, Inverse and Rank"
+      },
+      "summary": {
+        "en": "Matrix algebra over R and C, transpose, symmetric, skew-symmetric and Hermitian matrices, the adjoint and inverse, elementary operations and elementary matrices, rank by minors and by echelon form, normal form and equivalence, congruence and orthogonal matrices."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.matrices-rank@0.1.0.pack",
+      "size": 13575,
+      "sha256": "6dc0de7064ed6416ef41f594005644423dcef6fc1b69040f8e3b140137c1527b"
+    },
+    {
+      "id": "math.linalg.linear-systems",
+      "version": "0.1.0",
+      "title": {
+        "en": "Systems of Linear Equations"
+      },
+      "summary": {
+        "en": "Matrix form and the rank test for consistency, unique versus infinitely many solutions, homogeneous systems and the solution space, Gauss–Jordan elimination, the matrix method, and systems with a parameter."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.linear-systems@0.1.0.pack",
+      "size": 13766,
+      "sha256": "0eed4efa5f520df42d9dfbb0965d9d220a45efa42caad209f92d13db833e60d9"
+    },
+    {
+      "id": "math.linalg.eigen-cayley-hamilton",
+      "version": "0.1.0",
+      "title": {
+        "en": "Eigenvalues and Cayley–Hamilton"
+      },
+      "summary": {
+        "en": "The characteristic polynomial, eigenvalues and eigenvectors, algebraic and geometric multiplicity, eigenvalues of related and special matrices, the Cayley–Hamilton theorem with inverses and high powers, diagonalisation and the minimal polynomial."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 4,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.eigen-cayley-hamilton@0.1.0.pack",
+      "size": 13730,
+      "sha256": "9b97cb6e8db1cc8990f67d526ed384e556b21ba191c41b6531258c40753981c2"
     }
   ],
   "exams": [
