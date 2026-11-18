@@ -1,0 +1,701 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - division
+  stem:
+    en: 'The remainder when $x^4 - 3x^3 + 2x - 5$ is divided by $x - 2$ is'
+  options:
+  - en: '$-9$'
+  - en: '$31$'
+  - en: '$-1$'
+  - en: '$7$'
+  answer: 0
+  explanation:
+    en: |-
+      By the remainder theorem the remainder is $f(2)$:
+      $$f(2) = 16 - 24 + 4 - 5 = -9.$$
+
+      $31 = f(-2)$ comes from substituting the wrong sign: for the divisor $x - a$ substitute $x = a$, not $-a$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - division
+  stem:
+    en: 'Dividing $2x^3 - 3x^2 + 4x - 5$ by $x - 1$ using synthetic division gives'
+  options:
+  - en: 'quotient $2x^2 - 5x + 9$, remainder $-14$'
+  - en: 'quotient $2x^2 - x + 3$, remainder $2$'
+  - en: 'quotient $2x^2 - x - 3$, remainder $-2$'
+  - en: 'quotient $2x^2 - x + 3$, remainder $-2$'
+  answer: 3
+  explanation:
+    en: |-
+      Use $1$ as the multiplier with the coefficients $2, -3, 4, -5$:
+
+      | | $2$ | $-3$ | $4$ | $-5$ |
+      |:---|:---:|:---:|:---:|:---:|
+      | $\times 1$ | | $2$ | $-1$ | $3$ |
+      | | $2$ | $-1$ | $3$ | $-2$ |
+
+      So the quotient is $2x^2 - x + 3$ and the remainder is $-2$. Check: $f(1) = 2 - 3 + 4 - 5 = -2$.
+
+      The option with remainder $-14$ is the result of using the multiplier $-1$, that is, dividing by $x + 1$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - division
+  stem:
+    en: 'If $x - 3$ is a factor of $x^3 - 2x^2 + kx + 6$, then $k$ equals'
+  options:
+  - en: '$-5$'
+  - en: '$5$'
+  - en: '$-13$'
+  - en: '$13$'
+  answer: 0
+  explanation:
+    en: |-
+      By the factor theorem, $f(3) = 0$:
+      $$27 - 18 + 3k + 6 = 0 \implies 3k = -15 \implies k = -5.$$
+
+      $-13$ comes from putting $x = -3$ instead of $x = 3$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - division
+  stem:
+    en: 'A polynomial $f(x)$ leaves remainder $3$ when divided by $x - 1$ and remainder $5$ when divided by $x - 2$. The remainder when $f(x)$ is divided by $(x - 1)(x - 2)$ is'
+  options:
+  - en: '$2x + 1$'
+  - en: '$x + 2$'
+  - en: '$2x - 1$'
+  - en: '$3x + 5$'
+  answer: 0
+  explanation:
+    en: |-
+      The divisor has degree 2, so the remainder is $ax + b$:
+      $$f(x) = (x - 1)(x - 2)q(x) + ax + b.$$
+      Put $x = 1$ and $x = 2$: $a + b = 3$ and $2a + b = 5$. So $a = 2$, $b = 1$, and the remainder is $2x + 1$.
+
+      Check: $2(1) + 1 = 3$ and $2(2) + 1 = 5$. The option $x + 2$ swaps $a$ and $b$; it gives $4$ at $x = 2$, not $5$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - division
+  stem:
+    en: 'The remainder when $x^{101}$ is divided by $x^2 - 1$ is'
+  options:
+  - en: '$1$'
+  - en: '$x$'
+  - en: '$-x$'
+  - en: '$x + 1$'
+  answer: 1
+  explanation:
+    en: |-
+      Write $x^{101} = (x^2 - 1)q(x) + ax + b$.
+
+      - $x = 1$: $1 = a + b$.
+      - $x = -1$: $-1 = -a + b$.
+
+      So $b = 0$, $a = 1$, and the remainder is $x$.
+
+      Fast check: $x^{101} = x\,(x^2)^{50}$, and $x^2 \equiv 1 \pmod{x^2 - 1}$, so $x^{101} \equiv x$. The answer $1$ is right for an even power such as $x^{100}$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  stem:
+    en: 'By the fundamental theorem of classical algebra, a polynomial equation of degree $n \ge 1$ with complex coefficients has'
+  options:
+  - en: 'exactly $n$ distinct roots in $\C$'
+  - en: 'exactly $n$ roots in $\C$, counted with multiplicity'
+  - en: 'at least $n$ real roots'
+  - en: 'at most $n - 1$ roots in $\C$'
+  answer: 1
+  explanation:
+    en: |-
+      The theorem says every non-constant polynomial over $\C$ has at least one root in $\C$. Applying it repeatedly with the factor theorem gives
+      $$f(x) = a_0(x - \alpha_1)(x - \alpha_2)\cdots(x - \alpha_n),$$
+      so there are exactly $n$ roots **counted with multiplicity**.
+
+      The roots need not be distinct: $(x - 1)^2 = 0$ has degree 2 but only one distinct root.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  - division
+  stem:
+    en: 'A monic polynomial $f(x)$ of degree $4$ satisfies $f(1) = 1$, $f(2) = 2$, $f(3) = 3$ and $f(4) = 4$. Then $f(5)$ equals'
+  options:
+  - en: '$5$'
+  - en: '$24$'
+  - en: '$30$'
+  - en: '$29$'
+  answer: 3
+  explanation:
+    en: |-
+      Let $g(x) = f(x) - x$. Then $g$ is monic of degree 4 and vanishes at $1, 2, 3, 4$. By the factor theorem
+      $$g(x) = (x - 1)(x - 2)(x - 3)(x - 4).$$
+      So $f(5) = g(5) + 5 = 4\cdot3\cdot2\cdot1 + 5 = 29$.
+
+      The answer $5$ assumes $f(x) = x$, which is not of degree 4. The answer $24$ forgets to add back the $x$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate-roots
+  stem:
+    en: 'The monic cubic with real coefficients having $2$ and $1 + i$ as roots is'
+  options:
+  - en: '$x^3 - 2x - 4$'
+  - en: '$x^3 - 4x^2 + 6x - 4$'
+  - en: '$x^3 - 2x + 4$'
+  - en: '$x^3 - 4x^2 + 6x + 4$'
+  answer: 1
+  explanation:
+    en: |-
+      Real coefficients force the conjugate $1 - i$ to be a root too. The pair gives the quadratic factor
+      $$(x - 1 - i)(x - 1 + i) = (x - 1)^2 + 1 = x^2 - 2x + 2.$$
+      So
+      $$f(x) = (x - 2)(x^2 - 2x + 2) = x^3 - 4x^2 + 6x - 4.$$
+
+      $x^3 - 2x - 4 = (x - 2)(x^2 + 2x + 2)$ has roots $-1 \pm i$, a sign slip in the quadratic factor. Check: the product of the roots is $2(1 + i)(1 - i) = 4 = -(-4)$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate-roots
+  stem:
+    en: 'One root of $x^3 - 5x^2 + 5x - 1 = 0$ is $2 + \sqrt3$. The other two roots are'
+  options:
+  - en: '$2 - \sqrt3$ and $-1$'
+  - en: '$-2 + \sqrt3$ and $-1$'
+  - en: '$-2 - \sqrt3$ and $1$'
+  - en: '$2 - \sqrt3$ and $1$'
+  answer: 3
+  explanation:
+    en: |-
+      The coefficients are rational, so $2 - \sqrt3$ is also a root. The pair gives
+      $$(x - 2)^2 - 3 = x^2 - 4x + 1.$$
+      Divide: $x^3 - 5x^2 + 5x - 1 = (x^2 - 4x + 1)(x - 1)$, so the third root is $1$.
+
+      Fast check: the sum of the coefficients is $1 - 5 + 5 - 1 = 0$, so $x = 1$ is a root at once. The surd partner changes the sign of the surd part only, not of the rational part, so $-2 + \sqrt3$ is wrong.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate-roots
+  stem:
+    en: 'If $1 + i$ is a root of $x^3 + ax + b = 0$, where $a, b$ are real, then $(a, b)$ is'
+  options:
+  - en: '$(2, -4)$'
+  - en: '$(-2, -4)$'
+  - en: '$(-2, 4)$'
+  - en: '$(4, -2)$'
+  answer: 2
+  explanation:
+    en: |-
+      Since $a, b$ are real, $1 - i$ is also a root, so $x^2 - 2x + 2$ is a factor. The $x^2$ coefficient of the cubic is $0$, so the third root $\gamma$ satisfies $(1 + i) + (1 - i) + \gamma = 0$, giving $\gamma = -2$:
+      $$(x^2 - 2x + 2)(x + 2) = x^3 - 2x + 4.$$
+      So $a = -2$, $b = 4$.
+
+      Without the sum of roots: divide $x^3 + ax + b$ by $x^2 - 2x + 2$ and set the remainder $(a + 2)x + (b - 4)$ to zero.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - conjugate-roots
+  stem:
+    en: 'Given that $2 + i\sqrt3$ is a root of $x^4 - 2x^3 + 4x^2 - 6x + 35 = 0$, the remaining roots are'
+  options:
+  - en: '$2 - i\sqrt3$ and $1 \pm 2i$'
+  - en: '$-2 \pm i\sqrt3$ and $2 - i\sqrt3$'
+  - en: '$2 - i\sqrt3$ and $-1 \pm i\sqrt2$'
+  - en: '$2 - i\sqrt3$ and $-1 \pm 2i$'
+  answer: 3
+  explanation:
+    en: |-
+      Real coefficients, so $2 - i\sqrt3$ is a root, and the pair gives
+      $$(x - 2)^2 + 3 = x^2 - 4x + 7.$$
+      Divide:
+      $$x^4 - 2x^3 + 4x^2 - 6x + 35 = (x^2 - 4x + 7)(x^2 + 2x + 5).$$
+      The roots of $x^2 + 2x + 5 = 0$ are $-1 \pm 2i$.
+
+      Check with the constant term: $7 \times 5 = 35$. The option $1 \pm 2i$ comes from $x^2 - 2x + 5$, which gives an $x^3$ coefficient of $-6$, not $-2$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - descartes
+  stem:
+    en: 'By Descartes'' rule of signs, the number of negative real roots of $x^5 - 3x^3 + 2x^2 - x + 4 = 0$ is'
+  options:
+  - en: '$4$, $2$ or $0$'
+  - en: 'exactly $1$'
+  - en: '$3$ or $1$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Replace $x$ by $-x$:
+      $$f(-x) = -x^5 + 3x^3 + 2x^2 + x + 4.$$
+      The signs are $-,+,+,+,+$: one change. The number of negative roots is $1$ or less by an even number, and it cannot be negative, so it is exactly $1$.
+
+      "$4$, $2$ or $0$" is the count for **positive** roots: $f(x)$ itself has signs $+,-,+,-,+$, four changes.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - descartes
+  stem:
+    en: 'The number of non-real roots of $x^6 + 3x^2 - 5 = 0$ is'
+  options:
+  - en: '$2$'
+  - en: '$4$'
+  - en: '$6$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Signs of $f(x)$: $+,+,-$, one change, so exactly one positive root.
+
+      $f(-x) = x^6 + 3x^2 - 5$ is the same, so exactly one negative root.
+
+      $f(0) = -5 \ne 0$, so $0$ is not a root. That accounts for $2$ real roots out of $6$, and the other $6 - 2 = 4$ are non-real (a conjugate-pair count, as it must be).
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - descartes
+  - general-properties
+  stem:
+    en: 'The number of real roots of $x^5 - 6x^2 - 4x + 5 = 0$ is'
+  options:
+  - en: '$3$'
+  - en: '$1$'
+  - en: '$5$'
+  - en: '$2$'
+  answer: 0
+  explanation:
+    en: |-
+      Signs of $f(x) = x^5 - 6x^2 - 4x + 5$: $+,-,-,+$, two changes, so $2$ or $0$ positive roots.
+
+      $f(-x) = -x^5 - 6x^2 + 4x + 5$: $-,-,+,+$, one change, so exactly $1$ negative root.
+
+      To decide between $2$ and $0$: $f(0) = 5 > 0$, $f(1) = 1 - 6 - 4 + 5 = -4 < 0$ and $f(2) = 32 - 24 - 8 + 5 = 5 > 0$. So there is a root in $(0, 1)$ and another in $(1, 2)$: two positive roots.
+
+      Total: $3$ real roots and $2$ non-real ones. A real quintic always has an odd number of real roots, so $2$ is impossible.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - general-properties
+  stem:
+    en: 'The roots of $2x^3 - 3x^2 - 3x + 2 = 0$ are'
+  options:
+  - en: '$1,\ -\tfrac12,\ -2$'
+  - en: '$-1,\ -\tfrac12,\ 2$'
+  - en: '$-1,\ \tfrac12,\ 2$'
+  - en: '$1,\ \tfrac12,\ -2$'
+  answer: 2
+  explanation:
+    en: |-
+      By the rational root theorem a rational root $p/q$ has $p \mid 2$ and $q \mid 2$: try $\pm1, \pm2, \pm\tfrac12$.
+
+      $f(2) = 16 - 12 - 6 + 2 = 0$, so divide by $x - 2$:
+      $$2x^3 - 3x^2 - 3x + 2 = (x - 2)(2x^2 + x - 1) = (x - 2)(2x - 1)(x + 1).$$
+      The roots are $2, \tfrac12, -1$.
+
+      The option $1, -\tfrac12, -2$ is the root set of $f(-x) = 0$, a sign slip. Check: the product of the roots is $-\frac{2}{2} = -1$ and $2\cdot\tfrac12\cdot(-1) = -1$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - multiple-roots
+  stem:
+    en: 'If $\alpha$ is a root of multiplicity $4$ of a polynomial $f(x)$, then $\alpha$ is a root of $f''(x)$ of multiplicity'
+  options:
+  - en: '$4$'
+  - en: '$3$'
+  - en: '$5$'
+  - en: '$2$'
+  answer: 1
+  explanation:
+    en: |-
+      Write $f(x) = (x - \alpha)^4 g(x)$ with $g(\alpha) \ne 0$. Then
+      $$f'(x) = (x - \alpha)^3\big[4g(x) + (x - \alpha)g'(x)\big],$$
+      and the bracket equals $4g(\alpha) \ne 0$ at $x = \alpha$. So the multiplicity drops by exactly one, to $3$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - multiple-roots
+  stem:
+    en: 'The equation $x^3 - 3x + k = 0$ has a repeated root if and only if $k$ equals'
+  options:
+  - en: '$\pm 2$'
+  - en: '$\pm 1$'
+  - en: '$\pm 3$'
+  - en: '$0$'
+  answer: 0
+  explanation:
+    en: |-
+      A repeated root is a common root of $f$ and $f'$. Here $f'(x) = 3x^2 - 3 = 0$ gives $x = \pm1$.
+
+      - $x = 1$: $1 - 3 + k = 0$, so $k = 2$.
+      - $x = -1$: $-1 + 3 + k = 0$, so $k = -2$.
+
+      So $k = \pm2$. The value $\pm1$ is the root of $f'$, not the value of $k$. For $k = 0$ the roots $0, \pm\sqrt3$ are distinct.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - multiple-roots
+  stem:
+    en: 'For $f(x) = x^4 - 6x^3 + 12x^2 - 10x + 3$, the monic $\gcd\big(f(x), f''(x)\big)$ is'
+  options:
+  - en: '$x - 1$'
+  - en: '$(x - 1)^2$'
+  - en: '$(x - 1)^3$'
+  - en: '$(x - 1)(x - 3)$'
+  answer: 1
+  explanation:
+    en: |-
+      The sum of the coefficients is $1 - 6 + 12 - 10 + 3 = 0$, so $x = 1$ is a root. Repeated synthetic division by $x - 1$ gives
+      $$f(x) = (x - 1)^3(x - 3).$$
+      A root of multiplicity $r$ of $f$ is a root of multiplicity $r - 1$ of $f'$, and simple roots of $f$ are not roots of $f'$. So
+      $$\gcd(f, f') = (x - 1)^{3 - 1} = (x - 1)^2.$$
+
+      $(x - 1)^3$ is the factor of $f$, not the gcd. The simple root $3$ does not appear in the gcd.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rolle-location
+  stem:
+    en: 'If $f(x) = (x - 1)(x - 2)(x - 3)(x - 4)$, the number of real roots of $f''(x) = 0$ is'
+  options:
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$3$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      $f$ has the four real roots $1, 2, 3, 4$. By Rolle's theorem $f'$ has a root in each of $(1,2)$, $(2,3)$ and $(3,4)$. Since $f'$ is a cubic, these are all its roots: exactly $3$ real roots.
+
+      $4$ is the degree of $f$; $f'$ has degree $3$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rolle-location
+  stem:
+    en: 'The real root of $x^3 - 2x - 5 = 0$ lies in the interval'
+  options:
+  - en: '$(1, 2)$'
+  - en: '$(3, 4)$'
+  - en: '$(2, 3)$'
+  - en: '$(-2, -1)$'
+  answer: 2
+  explanation:
+    en: |-
+      Tabulate the signs:
+      $$f(1) = -6,\quad f(2) = 8 - 4 - 5 = -1,\quad f(3) = 27 - 6 - 5 = 16.$$
+      $f(2) < 0 < f(3)$, so a root lies in $(2, 3)$.
+
+      It is the only real root: $f'(x) = 3x^2 - 2$ vanishes at $\pm\sqrt{2/3}$, and the local maximum $f(-\sqrt{2/3}) \approx -3.9$ is negative, so $f < 0$ on $(-\infty, \sqrt{2/3}]$ and $f$ increases after that.
+
+      For $(1, 2)$: $f(1) = -6$ and $f(2) = -1$ have the same sign, so there is no sign change there.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rolle-location
+  stem:
+    en: 'The number of distinct real roots of $3x^4 - 4x^3 - 12x^2 + 3 = 0$ is'
+  options:
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$0$'
+  - en: '$3$'
+  answer: 0
+  explanation:
+    en: |-
+      $f'(x) = 12x^3 - 12x^2 - 24x = 12x(x + 1)(x - 2)$, so the critical points are $-1, 0, 2$. Tabulate the signs:
+
+      | $x$ | $-\infty$ | $-1$ | $0$ | $2$ | $+\infty$ |
+      |:---|:---:|:---:|:---:|:---:|:---:|
+      | $f(x)$ | $+$ | $-2$ | $3$ | $-29$ | $+$ |
+
+      There are four sign changes, so a root lies in each of $(-\infty, -1)$, $(-1, 0)$, $(0, 2)$, $(2, \infty)$. Since $f$ is monotonic between consecutive critical points, each interval holds exactly one root: $4$ real roots.
+
+      Descartes alone gives only "$2$ or $0$ positive, $2$ or $0$ negative", so it cannot decide.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate-roots
+  - general-properties
+  stem:
+    en: 'Consider the following statements about polynomial equations:'
+  statements:
+  - en: Every cubic equation with real coefficients has at least one real root.
+  - en: 'If $\alpha$ is a non-real root of a polynomial equation with complex coefficients, then $\bar\alpha$ is also a root.'
+  - en: 'If $1 + \sqrt2$ is a root of a polynomial equation with rational coefficients, then $1 - \sqrt2$ is also a root.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 3 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True. Non-real roots of a real polynomial come in conjugate pairs, so the number of non-real roots is even and a cubic has at least one real root.
+      2. False. The conjugate-pair theorem needs **real** coefficients. Counterexample: $x - i = 0$ has the root $i$ but not $-i$.
+      3. True. With rational coefficients, $a + \sqrt b$ and $a - \sqrt b$ (with $\sqrt b$ irrational) occur together.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - descartes
+  stem:
+    en: 'Let $f(x)$ be a polynomial with real coefficients and $f(0) \ne 0$. Consider the following statements about Descartes'' rule of signs:'
+  statements:
+  - en: 'The number of positive roots of $f(x) = 0$ equals the number of sign changes in its coefficients, or is less than it by an even number.'
+  - en: 'If the coefficients of $f(x)$ have exactly one sign change, then $f(x) = 0$ has exactly one positive root.'
+  - en: 'If the coefficients of $f(x)$ have exactly two sign changes, then $f(x) = 0$ has exactly two positive roots.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True: this is the rule (roots counted with multiplicity).
+      2. True: by statement 1 the count is $1$ or $1 - 2 < 0$, so it is exactly $1$.
+      3. False: the count may be $2$ or $0$. Counterexample: $x^2 - x + 1$ has signs $+,-,+$ (two changes) but no real root at all, since its discriminant is $-3$.
+  status: ai-generated
+- id: q0024
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - multiple-roots
+  - rolle-location
+  stem:
+    en: 'Let $f(x)$ be a polynomial of degree $n \ge 2$ with real coefficients. Consider the following statements:'
+  statements:
+  - en: 'If $\alpha$ is a root of $f(x) = 0$ of multiplicity exactly $2$, then $f(\alpha) = f''(\alpha) = 0$ and $f''''(\alpha) \ne 0$.'
+  - en: 'Between any two real roots of $f''(x) = 0$ there lies a real root of $f(x) = 0$.'
+  - en: 'If all $n$ roots of $f(x) = 0$ are real and distinct, then all roots of $f''(x) = 0$ are real and distinct.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      1. True. $\alpha$ has multiplicity $r$ exactly when $f, f', \ldots, f^{(r-1)}$ vanish at $\alpha$ and $f^{(r)}(\alpha) \ne 0$.
+      2. False: Rolle's theorem goes the other way (a root of $f'$ between two roots of $f$). Counterexample: $f(x) = x^3 - 3x + 5$ has $f'(x) = 0$ at $\pm1$, but $f(-1) = 7$ and $f(1) = 3$ are both positive and $f$ is decreasing on $[-1, 1]$, so there is no root of $f$ in between.
+      3. True. Rolle gives a root of $f'$ in each of the $n - 1$ gaps between consecutive roots of $f$; these are distinct and $f'$ has degree $n - 1$, so they are all its roots.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - descartes
+  - rolle-location
+  stem:
+    en: Match each equation in List I with the number of its real roots in List II.
+  left:
+  - en: '$x^3 + x + 1 = 0$'
+  - en: '$x^4 + x^2 + 1 = 0$'
+  - en: '$x^3 - 3x + 1 = 0$'
+  - en: '$x^4 - 1 = 0$'
+  right:
+  - en: no real root
+  - en: exactly one real root
+  - en: exactly two real roots
+  - en: three real roots
+  options:
+  - en: 'A-4, B-1, C-2, D-3'
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-2, B-1, C-4, D-3'
+  - en: 'A-2, B-1, C-3, D-4'
+  answer: 2
+  explanation:
+    en: |-
+      - **A.** $f(x)$ has no sign change, $f(-x) = -x^3 - x + 1$ has one: exactly one (negative) real root. **(2)**
+      - **B.** All terms are positive for real $x$, so there is no real root. **(1)**
+      - **C.** $f'(x) = 3x^2 - 3$ vanishes at $\pm1$; $f(-1) = 3 > 0$ and $f(1) = -1 < 0$, with $f(\mp\infty) = \mp\infty$. Three sign changes, three real roots. **(4)**
+      - **D.** $x^4 - 1 = (x - 1)(x + 1)(x^2 + 1)$: two real roots $\pm1$. **(3)**
+  status: ai-generated
+- id: q0026
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - multiple-roots
+  stem:
+    en: Match each polynomial in List I with the description of its roots in List II.
+  left:
+  - en: '$x^3 - 3x^2 + 3x - 1$'
+  - en: '$x^3 - 3x - 2$'
+  - en: '$x^3 - x^2 - x + 1$'
+  - en: '$x^4 - 2x^2 + 1$'
+  right:
+  - en: 'double roots at $1$ and at $-1$'
+  - en: 'double root $1$, simple root $-1$'
+  - en: 'triple root $1$'
+  - en: 'double root $-1$, simple root $2$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-4, C-2, D-3'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      Factorise each one:
+      - **A.** $x^3 - 3x^2 + 3x - 1 = (x - 1)^3$. **(3)**
+      - **B.** $x^3 - 3x - 2$: $f(-1) = 0$ and $f'(-1) = 3 - 3 = 0$, so $-1$ is a double root, and $(x + 1)^2(x - 2)$. **(4)**
+      - **C.** $x^3 - x^2 - x + 1 = x^2(x - 1) - (x - 1) = (x - 1)^2(x + 1)$. **(2)**
+      - **D.** $x^4 - 2x^2 + 1 = (x^2 - 1)^2 = (x - 1)^2(x + 1)^2$. **(1)**
+
+      B and C are easily swapped: test $f'$ at the candidate root to see which one is double.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate-roots
+  assertion:
+    en: 'Since $i$ is a root of $x^2 - (2 + i)x + 2i = 0$, the number $-i$ is also a root.'
+  reason:
+    en: Non-real roots of a polynomial equation with real coefficients occur in conjugate pairs.
+  answer: 3
+  explanation:
+    en: |-
+      A is false: $x^2 - (2 + i)x + 2i = (x - 2)(x - i)$, so the roots are $2$ and $i$, and $-i$ is not a root ($(-i)^2 + (2 + i)i + 2i = -1 + 2i - 1 + 2i = -2 + 4i \ne 0$).
+
+      R is true, but it does not apply: the coefficients $-(2 + i)$ and $2i$ are not real.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - descartes
+  - general-properties
+  assertion:
+    en: 'The equation $x^4 + 3x^2 + 2 = 0$ has no real root.'
+  reason:
+    en: A polynomial equation of even degree with real coefficients need not have a real root.
+  answer: 1
+  explanation:
+    en: |-
+      A is true: for real $x$, $x^4 + 3x^2 + 2 \ge 2 > 0$. (Descartes agrees: neither $f(x)$ nor $f(-x)$ has a sign change, and $f(0) \ne 0$.)
+
+      R is true ($x^2 + 1 = 0$ is an example), but "need not have" says nothing about this particular equation. So R does not explain A.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - multiple-roots
+  assertion:
+    en: 'The equation $x^3 - 3x + 2 = 0$ has a repeated root.'
+  reason:
+    en: 'Every root of $f''(x) = 0$ is a repeated root of $f(x) = 0$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $x^3 - 3x + 2 = (x - 1)^2(x + 2)$, with $1$ a double root.
+
+      R is false. The correct statement is the converse: a repeated root of $f$ is a root of $f'$. Here $f'(x) = 3x^2 - 3$ has the root $-1$, but $f(-1) = -1 + 3 + 2 = 4 \ne 0$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rolle-location
+  - general-properties
+  assertion:
+    en: 'The equation $x^5 + x - 1 = 0$ cannot have two distinct real roots.'
+  reason:
+    en: '$\frac{d}{dx}(x^5 + x - 1) = 5x^4 + 1$ has no real zero, and by Rolle''s theorem a zero of $f''$ lies strictly between any two distinct real roots of $f$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      R: $5x^4 + 1 \ge 1 > 0$ for all real $x$, and the Rolle statement is standard. A: if $a < b$ were two real roots, R would give a real zero of $5x^4 + 1$ in $(a, b)$, which is impossible.
+
+      (The degree is odd, so there is in fact exactly one real root: $f(0) = -1 < 0 < 1 = f(1)$.)
+  status: ai-generated

@@ -1,0 +1,18 @@
+id: math.algebra.number-theory
+title:
+  en: Integers and Divisibility
+summary:
+  en: Well-ordering and induction, the division algorithm, gcd and Bézout's identity, the Euclidean algorithm, coprime integers and lcm, primes and Euclid's theorems, unique factorisation, divisor counts and sums, and linear Diophantine equations.
+order: 7
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on the theory of numbers
+  - D. M. Burton, Elementary Number Theory, ch. 1–3
+  - I. Niven, H. S. Zuckerman and H. L. Montgomery, An Introduction to the Theory of Numbers, ch. 1
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) I.A.1
+retired: []

@@ -1,0 +1,18 @@
+id: math.algebra.roots-coefficients
+title:
+  en: Roots, Coefficients and Transformations
+summary:
+  en: Relations between roots and coefficients, symmetric functions of roots and Newton's power sums, solving equations whose roots obey a given relation, transformation of equations, and reciprocal equations.
+order: 4
+exams: [slst-0910, slst-1112]
+prerequisites: [math.algebra.polynomials]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), chs. on relations between roots and coefficients and transformation of equations
+  - S. Barnard and J. M. Child, Higher Algebra, chs. on the theory of equations
+  - W. S. Burnside and A. W. Panton, The Theory of Equations, vol. 1
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.2 and (PG) A.3
+retired: []

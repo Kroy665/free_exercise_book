@@ -1,0 +1,18 @@
+id: math.linalg.linear-systems
+title:
+  en: Systems of Linear Equations
+summary:
+  en: Matrix form and the rank test for consistency, unique versus infinitely many solutions, homogeneous systems and the solution space, Gauss–Jordan elimination, the matrix method, and systems with a parameter.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.matrices-rank]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on systems of linear equations
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 1"
+  - "G. Strang, Linear Algebra and Its Applications, ch. 1–2"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.4 and (PG) C.6
+retired: []

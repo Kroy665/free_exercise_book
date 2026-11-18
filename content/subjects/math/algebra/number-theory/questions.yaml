@@ -1,0 +1,658 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - division-algorithm
+  - exam-tips
+  stem:
+    en: 'When $-17$ is divided by $5$ according to the division algorithm $a = bq + r$, $0 \le r < |b|$, the quotient $q$ and remainder $r$ are'
+  options:
+  - en: '$q = -4,\ r = 3$'
+  - en: '$q = -3,\ r = -2$'
+  - en: '$q = -4,\ r = -3$'
+  - en: '$q = 3,\ r = 2$'
+  answer: 0
+  explanation:
+    en: |-
+      The remainder must satisfy $0 \le r < 5$. Take the quotient one step further from zero:
+      $$-17 = 5 \cdot (-4) + 3.$$
+      So $q = -4$, $r = 3$.
+
+      $-17 = 5(-3) - 2$ is true arithmetic, but $r = -2$ is negative, so it is not the division algorithm. Check: $5(-4) + 3 = -20 + 3 = -17$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - gcd
+  stem:
+    en: '$\gcd(252, 198)$ equals'
+  options:
+  - en: '$18$'
+  - en: '$36$'
+  - en: '$54$'
+  - en: '$6$'
+  answer: 0
+  explanation:
+    en: |-
+      Euclidean algorithm:
+      $$252 = 1 \cdot 198 + 54,\quad 198 = 3 \cdot 54 + 36,\quad 54 = 1 \cdot 36 + 18,\quad 36 = 2 \cdot 18.$$
+      The last non-zero remainder is $18$.
+
+      $36$ and $54$ are intermediate remainders, not the gcd. Check: $252 = 18 \cdot 14$, $198 = 18 \cdot 11$, and $\gcd(14, 11) = 1$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - gcd
+  stem:
+    en: 'Which pair $(x, y)$ satisfies $252x + 198y = \gcd(252, 198)$?'
+  options:
+  - en: '$(-4, 5)$'
+  - en: '$(5, -4)$'
+  - en: '$(4, -5)$'
+  - en: '$(3, -4)$'
+  answer: 2
+  explanation:
+    en: |-
+      From the Euclidean algorithm, $54 = 252 - 198$, $36 = 198 - 3 \cdot 54$, $18 = 54 - 36$. Back-substitute:
+      $$18 = 54 - (198 - 3 \cdot 54) = 4 \cdot 54 - 198 = 4(252 - 198) - 198 = 4 \cdot 252 - 5 \cdot 198.$$
+      So $(x, y) = (4, -5)$. Check: $1008 - 990 = 18$.
+
+      $(-4, 5)$ gives $-18$ (a sign slip); $(5, -4)$ gives $468$; $(3, -4)$ gives $-36$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - coprime-lcm
+  stem:
+    en: 'Two positive integers have gcd $12$ and product $4320$. Their lcm is'
+  options:
+  - en: '$360$'
+  - en: '$4320$'
+  - en: '$51840$'
+  - en: '$180$'
+  answer: 0
+  explanation:
+    en: |-
+      For two positive integers, $\gcd(a, b)\cdot\operatorname{lcm}(a, b) = ab$. So
+      $$\operatorname{lcm} = \frac{4320}{12} = 360.$$
+      $51840 = 4320 \cdot 12$ multiplies instead of dividing. (An example pair: $a = 24$, $b = 180$.)
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: 'The number of positive divisors of $360$ is'
+  options:
+  - en: '$24$'
+  - en: '$23$'
+  - en: '$12$'
+  - en: '$30$'
+  answer: 0
+  explanation:
+    en: |-
+      $360 = 2^3 \cdot 3^2 \cdot 5$, so
+      $$\tau(360) = (3 + 1)(2 + 1)(1 + 1) = 24.$$
+      $12 = 3 \cdot 2 \cdot 2$ multiplies the exponents without adding $1$; $23$ forgets the divisor $1$ (or $360$).
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: 'The sum of all positive divisors of $360$ is'
+  options:
+  - en: '$1170$'
+  - en: '$810$'
+  - en: '$168$'
+  - en: '$975$'
+  answer: 0
+  explanation:
+    en: |-
+      $360 = 2^3 \cdot 3^2 \cdot 5$, so
+      $$\sigma(360) = (1 + 2 + 4 + 8)(1 + 3 + 9)(1 + 5) = 15 \cdot 13 \cdot 6 = 1170.$$
+      $810 = 1170 - 360$ is the sum of the **proper** divisors only. $168 = (1 + 2 + 4)(1 + 3)(1 + 5)$ stops each bracket one power too early.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - diophantine
+  stem:
+    en: 'The number of solutions of $5x + 3y = 52$ in positive integers $x, y$ is'
+  options:
+  - en: '$2$'
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$5$'
+  answer: 1
+  explanation:
+    en: |-
+      $3y = 52 - 5x$ must leave remainder $2$ on division by $5$, so $y$ leaves remainder $4$: $y = 4, 9, 14, \ldots$ Also $3y < 52$ forces $y \le 15$.
+      $$y = 4 \Rightarrow x = 8,\qquad y = 9 \Rightarrow x = 5,\qquad y = 14 \Rightarrow x = 2.$$
+      So there are $3$ solutions. Equivalently, the general solution is $x = 8 - 3t$, $y = 4 + 5t$, and $x, y > 0$ allow $t = 0, 1, 2$.
+
+      $4$ comes from also counting $t = -1$, which gives $y = -1$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - diophantine
+  stem:
+    en: 'Which of the following equations has **no** solution in integers?'
+  options:
+  - en: '$6x + 10y = 14$'
+  - en: '$6x + 10y = 15$'
+  - en: '$7x + 11y = 5$'
+  - en: '$12x + 18y = 30$'
+  answer: 1
+  explanation:
+    en: |-
+      $ax + by = c$ is solvable in integers if and only if $\gcd(a, b) \mid c$.
+
+      - $6x + 10y = 15$: $\gcd = 2$, and $2 \nmid 15$. **No solution** (the left side is always even).
+      - $6x + 10y = 14$: $2 \mid 14$; e.g. $(-1, 2)$.
+      - $7x + 11y = 5$: $\gcd = 1$; e.g. $(-15, 10)$.
+      - $12x + 18y = 30$: $\gcd = 6 \mid 30$; e.g. $(1, 1)$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - diophantine
+  stem:
+    en: 'One solution of $3x + 5y = 1$ is $(2, -1)$. The general integer solution is ($t \in \mathbb{Z}$)'
+  options:
+  - en: '$x = 2 + 3t,\ y = -1 - 5t$'
+  - en: '$x = 2 + 5t,\ y = -1 + 3t$'
+  - en: '$x = 2 + 10t,\ y = -1 - 6t$'
+  - en: '$x = 2 + 5t,\ y = -1 - 3t$'
+  answer: 3
+  explanation:
+    en: |-
+      With $d = \gcd(3, 5) = 1$, the general solution is $x = x_0 + \frac{b}{d}t$, $y = y_0 - \frac{a}{d}t$:
+      $$x = 2 + 5t, \qquad y = -1 - 3t.$$
+      Check: $3(2 + 5t) + 5(-1 - 3t) = 6 - 5 + 15t - 15t = 1$.
+
+      Swapping the steps ($x = 2 + 3t$) gives $3 \cdot 3t - 5 \cdot 5t \ne 0$; equal signs ($y = -1 + 3t$) give $30t \ne 0$. The family $x = 2 + 10t$, $y = -1 - 6t$ consists of solutions but misses half of them, e.g. $(7, -4)$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - divisor-functions
+  - exam-tips
+  stem:
+    en: 'The product of all the positive divisors of $36$ is'
+  options:
+  - en: '$6^8$'
+  - en: '$6^{18}$'
+  - en: '$6^{10}$'
+  - en: '$6^9$'
+  answer: 3
+  explanation:
+    en: |-
+      The divisors pair off as $d \leftrightarrow 36/d$, each pair having product $36$. With $\tau(36) = (2 + 1)(2 + 1) = 9$ divisors, the product is
+      $$36^{9/2} = 6^9.$$
+      $6^{18} = 36^9$ forgets to halve: it counts each pair twice. (Direct: $1 \cdot 2 \cdot 3 \cdot 4 \cdot 6 \cdot 9 \cdot 12 \cdot 18 \cdot 36 = 10077696 = 6^9$.)
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - coprime-lcm
+  stem:
+    en: 'If $a, b$ are positive integers with $\gcd(a, b) = 1$, then $\gcd(a + b, a - b)$ (for $a \ne b$) is'
+  options:
+  - en: 'always $1$'
+  - en: 'always $2$'
+  - en: '$1$, $2$ or $4$'
+  - en: 'either $1$ or $2$'
+  answer: 3
+  explanation:
+    en: |-
+      Let $g = \gcd(a + b, a - b)$. Then $g$ divides the sum $2a$ and the difference $2b$, so
+      $$g \mid \gcd(2a, 2b) = 2\gcd(a, b) = 2.$$
+      So $g = 1$ or $2$, and both occur: $(a, b) = (2, 1)$ gives $\gcd(3, 1) = 1$; $(a, b) = (3, 1)$ gives $\gcd(4, 2) = 2$. Hence "always $1$" and "always $2$" are both wrong, and $4$ is impossible.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - primes
+  stem:
+    en: 'Let $N = 2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 + 1 = 30031$. Then'
+  options:
+  - en: '$N$ is prime, as Euclid''s proof shows'
+  - en: '$N$ is divisible by $13$'
+  - en: '$N$ is divisible by $7$'
+  - en: '$N = 59 \times 509$ is composite'
+  answer: 3
+  explanation:
+    en: |-
+      Each of $2, 3, 5, 7, 11, 13$ leaves remainder $1$ on dividing $N$, so none of them divides $N$ (this rules out the last two options). But $N$ is not prime:
+      $$30031 = 59 \times 509.$$
+      Euclid's proof shows only that every prime factor of $N$ is **different** from the listed primes, not that $N$ itself is prime.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - induction
+  - exam-tips
+  stem:
+    en: 'The largest positive integer that divides $n^5 - n$ for every integer $n$ is'
+  options:
+  - en: '$5$'
+  - en: '$30$'
+  - en: '$10$'
+  - en: '$60$'
+  answer: 1
+  explanation:
+    en: |-
+      At $n = 2$: $2^5 - 2 = 30$, so the answer is at most $30$.
+
+      Now $n^5 - n = (n - 1)n(n + 1)(n^2 + 1)$.
+      - $(n - 1)n(n + 1)$ is a product of three consecutive integers, so $6$ divides it.
+      - For $5$: if $n$ leaves remainder $0, 1, 4$ on division by $5$, one of $n, n - 1, n + 1$ is a multiple of $5$; if the remainder is $2$ or $3$, then $n^2 + 1$ is (e.g. $4 + 1$, $9 + 1$).
+
+      So $30 \mid n^5 - n$ always, and the answer is $30$. $60$ fails at $n = 2$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - induction
+  stem:
+    en: 'The largest positive integer that divides $3^{2n+2} - 8n - 9$ for every positive integer $n$ is'
+  options:
+  - en: '$8$'
+  - en: '$16$'
+  - en: '$64$'
+  - en: '$32$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $f(n) = 3^{2n+2} - 8n - 9$. At $n = 1$: $f(1) = 81 - 17 = 64$, so the answer is at most $64$.
+
+      Induction shows $64 \mid f(n)$ for all $n$:
+      $$f(k + 1) - 9f(k) = -8k - 17 + 72k + 81 = 64(k + 1),$$
+      so $f(k + 1) = 9f(k) + 64(k + 1)$. Hence the answer is $64$.
+
+      $8$, $16$ and $32$ also divide every $f(n)$, but they are not the largest.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coprime-lcm
+  stem:
+    en: 'If $a = 2^3 \cdot 3^2 \cdot 5$ and $b = 2^2 \cdot 3^4 \cdot 7$, then $\operatorname{lcm}(a, b)$ is'
+  options:
+  - en: '$2520$'
+  - en: '$11340$'
+  - en: '$22680$'
+  - en: '$36$'
+  answer: 2
+  explanation:
+    en: |-
+      The lcm takes the **larger** exponent of each prime:
+      $$\operatorname{lcm}(a, b) = 2^3 \cdot 3^4 \cdot 5 \cdot 7 = 8 \cdot 81 \cdot 35 = 22680.$$
+      $36 = 2^2 \cdot 3^2$ is the gcd (smaller exponents). $2520 = 2^3 \cdot 3^2 \cdot 5 \cdot 7$ takes the smaller power of $3$; $11340$ takes the smaller power of $2$. Check: $\gcd \cdot \operatorname{lcm} = 36 \cdot 22680 = 816480 = 360 \cdot 2268 = ab$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: 'The number of **odd** positive divisors of $720$ is'
+  options:
+  - en: '$30$'
+  - en: '$6$'
+  - en: '$24$'
+  - en: '$5$'
+  answer: 1
+  explanation:
+    en: |-
+      $720 = 2^4 \cdot 3^2 \cdot 5$. An odd divisor uses $2^0$ only, so it divides $3^2 \cdot 5 = 45$:
+      $$\tau(45) = (2 + 1)(1 + 1) = 6.$$
+      $30 = \tau(720)$ counts all divisors; $24 = 30 - 6$ counts the even ones.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: 'The smallest positive integer with exactly $12$ positive divisors is'
+  options:
+  - en: '$72$'
+  - en: '$60$'
+  - en: '$96$'
+  - en: '$48$'
+  answer: 1
+  explanation:
+    en: |-
+      $12 = (\alpha_1 + 1)(\alpha_2 + 1)\cdots$ can be split as $12$, $6 \cdot 2$, $4 \cdot 3$, $3 \cdot 2 \cdot 2$. Give the larger exponents to the smaller primes:
+      $$2^{11} = 2048,\quad 2^5 \cdot 3 = 96,\quad 2^3 \cdot 3^2 = 72,\quad 2^2 \cdot 3 \cdot 5 = 60.$$
+      The smallest is $60$. $48 = 2^4 \cdot 3$ has only $5 \cdot 2 = 10$ divisors; $72$ and $96$ have $12$ but are larger.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: 'The sum of the reciprocals of all the positive divisors of $360$ is'
+  options:
+  - en: '$\dfrac{9}{4}$'
+  - en: '$\dfrac{1}{15}$'
+  - en: '$\dfrac{7}{2}$'
+  - en: '$\dfrac{13}{4}$'
+  answer: 3
+  explanation:
+    en: |-
+      As $d$ runs over the divisors of $n$, so does $n/d$. Hence
+      $$\sum_{d \mid n}\frac1d = \frac1n\sum_{d \mid n}\frac nd = \frac{\sigma(n)}{n} = \frac{1170}{360} = \frac{13}{4}.$$
+      $\frac94 = \frac{810}{360}$ uses only the proper divisors.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - induction
+  stem:
+    en: 'Under the usual order, which of the following sets has a least element?'
+  options:
+  - en: The set of positive rational numbers
+  - en: The set of positive even integers
+  - en: The set of negative integers
+  - en: 'The open interval $(0, 1)$'
+  answer: 1
+  explanation:
+    en: |-
+      By the well-ordering principle, every non-empty set of positive integers has a least element. The positive even integers form such a set; the least element is $2$.
+
+      The positive rationals and $(0, 1)$ have infimum $0$, which is not in the set. The negative integers are unbounded below.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - division-algorithm
+  - exam-tips
+  stem:
+    en: 'When $37$ is divided by $-7$ according to the division algorithm ($0 \le r < |b|$), the quotient and remainder are'
+  options:
+  - en: '$q = 5,\ r = 2$'
+  - en: '$q = -6,\ r = -5$'
+  - en: '$q = -5,\ r = 2$'
+  - en: '$q = -5,\ r = -2$'
+  answer: 2
+  explanation:
+    en: |-
+      We need $37 = (-7)q + r$ with $0 \le r < 7$:
+      $$37 = (-7)(-5) + 2.$$
+      So $q = -5$, $r = 2$. With $q = 5$ the product is $-35$ and $-35 + 2 \ne 37$. Remainders $-5$ and $-2$ are negative, so they are not allowed.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - primes
+  stem:
+    en: Which of the following is prime?
+  options:
+  - en: '$221$'
+  - en: '$217$'
+  - en: '$223$'
+  - en: '$209$'
+  answer: 2
+  explanation:
+    en: |-
+      Test primes up to $\sqrt{n}$; here $\sqrt{223} < 15$, so try $2, 3, 5, 7, 11, 13$. None divides $223$, so $223$ is prime.
+
+      The others: $221 = 13 \cdot 17$, $217 = 7 \cdot 31$, $209 = 11 \cdot 19$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coprime-lcm
+  - gcd
+  stem:
+    en: 'Consider the following statements, where $a, b, c$ are non-zero integers:'
+  statements:
+  - en: 'If $a \mid bc$ and $\gcd(a, b) = 1$, then $a \mid c$.'
+  - en: '$\gcd(a, b) \cdot \operatorname{lcm}(a, b) = |ab|$.'
+  - en: '$\gcd(a, b) = 1$ if and only if $ax + by = 1$ for some integers $x, y$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 and 3 only
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      All three are standard results.
+
+      1. Euclid's lemma: from $1 = ax + by$, $c = acx + bcy$, and $a$ divides both terms.
+      2. Exponent-wise, $\min(\alpha, \beta) + \max(\alpha, \beta) = \alpha + \beta$.
+      3. Bézout gives "only if". Conversely, any common divisor of $a, b$ divides $ax + by = 1$.
+
+      Note that 3 needs the value $1$: $ax + by = 2$ does **not** force $\gcd(a, b) = 2$ (e.g. $3 \cdot 4 + 5 \cdot (-2) = 2$, but $\gcd(3, 5) = 1$).
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - primes
+  stem:
+    en: 'Consider the following statements about primes:'
+  statements:
+  - en: 'If $p_1, p_2, \ldots, p_n$ are the first $n$ primes, then $p_1 p_2 \cdots p_n + 1$ is prime for every $n$.'
+  - en: 'If $p$ is prime and $p \mid ab$, then $p \mid a$ or $p \mid b$.'
+  - en: 'If an integer $n > 1$ has no prime divisor $p \le \sqrt n$, then $n$ is prime.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      1. **False.** $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 + 1 = 30031 = 59 \times 509$. Euclid's proof only shows that its prime factors are new primes.
+      2. **True.** This is Euclid's first theorem.
+      3. **True.** A composite $n = rs$ with $1 < r \le s$ has $r \le \sqrt n$, and any prime factor of $r$ is $\le \sqrt n$.
+
+      So 2 and 3 only.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - divisor-functions
+  stem:
+    en: Match each number in List I with its number of positive divisors in List II.
+  left:
+  - en: '$12$'
+  - en: '$36$'
+  - en: '$64$'
+  - en: '$30$'
+  right:
+  - en: '$7$'
+  - en: '$8$'
+  - en: '$6$'
+  - en: '$9$'
+  options:
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 3
+  explanation:
+    en: |-
+      Use $\tau(n) = \prod(\alpha_i + 1)$:
+      - $12 = 2^2 \cdot 3$: $3 \cdot 2 = 6$
+      - $36 = 2^2 \cdot 3^2$: $3 \cdot 3 = 9$
+      - $64 = 2^6$: $7$
+      - $30 = 2 \cdot 3 \cdot 5$: $2 \cdot 2 \cdot 2 = 8$
+
+      So A-3, B-4, C-1, D-2. Check: the two perfect squares, $36$ and $64$, are the ones with an odd number of divisors.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - gcd
+  - coprime-lcm
+  stem:
+    en: Match each expression in List I with its value in List II.
+  left:
+  - en: '$\gcd(1001, 385)$'
+  - en: '$\operatorname{lcm}(18, 24)$'
+  - en: '$\gcd(-48, 180)$'
+  - en: '$\operatorname{lcm}(21, 6)$'
+  right:
+  - en: '$72$'
+  - en: '$12$'
+  - en: '$42$'
+  - en: '$77$'
+  options:
+  - en: 'A-4, B-1, C-2, D-3'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-4, B-1, C-3, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      - $1001 = 7 \cdot 11 \cdot 13$, $385 = 5 \cdot 7 \cdot 11$: gcd $= 77$.
+      - $18 = 2 \cdot 3^2$, $24 = 2^3 \cdot 3$: lcm $= 2^3 \cdot 3^2 = 72$.
+      - $\gcd(-48, 180) = \gcd(48, 180) = 12$ (the gcd is always positive).
+      - $\operatorname{lcm}(21, 6) = \frac{21 \cdot 6}{3} = 42$, not $126$, since $\gcd(21, 6) = 3$.
+
+      So A-4, B-1, C-2, D-3.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - primes
+  assertion:
+    en: There are infinitely many primes.
+  reason:
+    en: 'If $p_1, \ldots, p_n$ are primes, then no $p_i$ divides $p_1 p_2 \cdots p_n + 1$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      R: each $p_i$ leaves remainder $1$ on dividing $N = p_1 \cdots p_n + 1$. Since $N > 1$, it has a prime factor, which by R is not in the list. So no finite list contains all primes, which is Euclid's second theorem.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coprime-lcm
+  assertion:
+    en: 'If $4 \mid n$ and $6 \mid n$, then $24 \mid n$.'
+  reason:
+    en: 'If $a \mid n$, $b \mid n$ and $\gcd(a, b) = 1$, then $ab \mid n$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false: $n = 12$ is divisible by $4$ and $6$ but not by $24$. (In general we only get $\operatorname{lcm}(4, 6) = 12 \mid n$.)
+
+      R is true: write $n = ak$; then $b \mid ak$ with $\gcd(a, b) = 1$, so $b \mid k$ by Euclid's lemma, and $ab \mid n$. R does not apply to A because $\gcd(4, 6) = 2$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - diophantine
+  assertion:
+    en: 'The equation $6x + 9y = 21$ has a solution in integers.'
+  reason:
+    en: 'A linear equation $ax + by = c$ has integer solutions only when $\gcd(a, b) = 1$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $\gcd(6, 9) = 3$ and $3 \mid 21$. Dividing by $3$, $2x + 3y = 7$ has the solution $(2, 1)$; check $12 + 9 = 21$.
+
+      R is false: the correct condition is $\gcd(a, b) \mid c$. Coprime coefficients are sufficient, not necessary. A itself is a counterexample to R.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - induction
+  assertion:
+    en: 'For every integer $n \ge 1$, $3$ divides $n^3 + 2n$.'
+  reason:
+    en: The product of any two consecutive integers is even.
+  answer: 1
+  explanation:
+    en: |-
+      Both are true, but R does not explain A.
+
+      A: $n^3 + 2n = (n^3 - n) + 3n = (n - 1)n(n + 1) + 3n$. A product of **three** consecutive integers is divisible by $3$, so $3$ divides the sum. (Induction also works: $f(k + 1) - f(k) = 3k^2 + 3k + 3$.)
+
+      R is true, but divisibility by $2$ says nothing about divisibility by $3$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - division-algorithm
+  assertion:
+    en: 'When $-17$ is divided by $5$, the remainder given by the division algorithm is $3$.'
+  reason:
+    en: 'In the division algorithm $a = bq + r$ ($b \ne 0$), the remainder satisfies $0 \le r < |b|$.'
+  answer: 0
+  explanation:
+    en: 'Both are true, and R explains A. $-17 = 5(-4) + 3$ with $0 \le 3 < 5$. R is exactly why $-2$ (from $-17 = 5(-3) - 2$) is rejected and $3$ is the remainder.'
+  status: ai-generated

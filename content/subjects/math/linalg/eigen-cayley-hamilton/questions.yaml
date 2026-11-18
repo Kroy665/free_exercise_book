@@ -1,0 +1,675 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - characteristic-polynomial
+  stem:
+    en: 'The characteristic equation of $A = \begin{pmatrix} 1 & 2\\ 3 & 4\end{pmatrix}$ is'
+  options:
+  - en: '$\lambda^2 + 5\lambda - 2 = 0$'
+  - en: '$\lambda^2 - 5\lambda + 2 = 0$'
+  - en: '$\lambda^2 - 5\lambda - 2 = 0$'
+  - en: '$\lambda^2 - 5\lambda + 10 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      For a $2 \times 2$ matrix, $\chi_A(\lambda) = \lambda^2 - (\operatorname{tr} A)\lambda + \det A$.
+
+      Here $\operatorname{tr} A = 5$ and $\det A = 4 - 6 = -2$, so
+      $$\lambda^2 - 5\lambda - 2 = 0.$$
+
+      $\lambda^2 - 5\lambda + 10$ comes from adding the cross product instead of subtracting it ($4 + 6$); $\lambda^2 + 5\lambda - 2$ has the wrong sign on the trace term.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - characteristic-polynomial
+  - exam-tips
+  stem:
+    en: 'The eigenvalues of $\begin{pmatrix} 2 & 1\\ 1 & 2\end{pmatrix}$ are'
+  options:
+  - en: '$1$ and $3$'
+  - en: '$0$ and $4$'
+  - en: '$2$ and $2$'
+  - en: '$-1$ and $3$'
+  answer: 0
+  explanation:
+    en: |-
+      $\operatorname{tr} A = 4$ and $\det A = 3$, so $\lambda^2 - 4\lambda + 3 = (\lambda - 1)(\lambda - 3) = 0$, giving $\lambda = 1, 3$.
+
+      Check: $1 + 3 = 4$ (trace) and $1 \cdot 3 = 3$ (determinant). The pair $0, 4$ has the right sum but product $0 \ne 3$; the pair $-1, 3$ has the wrong sum.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'The eigenvalues of $\begin{pmatrix} 2 & 5 & 7\\ 0 & -3 & 1\\ 0 & 0 & 4\end{pmatrix}$ are'
+  options:
+  - en: '$2, 5, 7$'
+  - en: '$2, -3, 4$'
+  - en: '$7, 1, 4$'
+  - en: '$-2, 3, -4$'
+  answer: 1
+  explanation:
+    en: |-
+      The matrix is upper triangular, so $\det(\lambda I - A) = (\lambda - 2)(\lambda + 3)(\lambda - 4)$. The eigenvalues are the **diagonal entries** $2, -3, 4$.
+
+      The entries above the diagonal play no part. Check: their sum $3$ equals the trace.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'A $3 \times 3$ matrix $A$ has eigenvalues $2, 3, -1$. Then $\det A$ equals'
+  options:
+  - en: '$-6$'
+  - en: '$6$'
+  - en: '$4$'
+  - en: '$-4$'
+  answer: 0
+  explanation:
+    en: |-
+      The determinant is the **product** of the eigenvalues:
+      $$\det A = 2 \cdot 3 \cdot (-1) = -6.$$
+
+      $4$ is the sum of the eigenvalues, which is the trace, not the determinant. $6$ drops the sign of $-1$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'A $3 \times 3$ matrix $A$ has eigenvalues $1, 2, 3$. The eigenvalues of $\operatorname{adj} A$ are'
+  options:
+  - en: '$6, 3, 2$'
+  - en: '$1, \tfrac12, \tfrac13$'
+  - en: '$1, 4, 9$'
+  - en: '$6, 12, 18$'
+  answer: 0
+  explanation:
+    en: |-
+      $\det A = 1 \cdot 2 \cdot 3 = 6 \ne 0$, so $A$ is invertible and $\operatorname{adj} A = (\det A)A^{-1}$.
+
+      The eigenvalues of $A^{-1}$ are $1/\lambda$, so those of $\operatorname{adj} A$ are $\det A/\lambda$:
+      $$\frac61, \frac62, \frac63 = 6, 3, 2.$$
+
+      $1, \frac12, \frac13$ are the eigenvalues of $A^{-1}$; it forgets the factor $\det A$. $6, 12, 18$ multiplies by $\lambda$ instead of dividing.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'A $2 \times 2$ matrix $A$ has eigenvalues $2$ and $-1$. The eigenvalues of $A^2 - 3A + I$ are'
+  options:
+  - en: '$11$ and $-1$'
+  - en: '$1$ and $5$'
+  - en: '$-1$ and $5$'
+  - en: '$-1$ and $-5$'
+  answer: 2
+  explanation:
+    en: |-
+      If $Ax = \lambda x$, then $p(A)x = p(\lambda)x$. With $p(\lambda) = \lambda^2 - 3\lambda + 1$:
+      $$p(2) = 4 - 6 + 1 = -1, \qquad p(-1) = 1 + 3 + 1 = 5.$$
+
+      The option $11, -1$ comes from using $\lambda^2 + 3\lambda + 1$ (a sign slip).
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - special-matrices
+  stem:
+    en: Which of the following can be an eigenvalue of a real orthogonal matrix?
+  options:
+  - en: '$2$'
+  - en: '$-1$'
+  - en: '$\tfrac12$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      If $A^TA = I$ and $Ax = \lambda x$ with $x \neq 0$, then $\lVert Ax\rVert = \lVert x\rVert$, so $\lvert\lambda\rvert = 1$.
+
+      Among the options only $-1$ has modulus $1$. For example, $\begin{pmatrix}-1 & 0\\ 0 & 1\end{pmatrix}$ is orthogonal with eigenvalue $-1$. $0$ is impossible because an orthogonal matrix is invertible.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cayley-hamilton
+  stem:
+    en: 'For $A = \begin{pmatrix} 3 & 1\\ 2 & 2\end{pmatrix}$, the Cayley–Hamilton theorem gives $A^{-1} =$'
+  options:
+  - en: '$\dfrac{A - 5I}{4}$'
+  - en: '$\dfrac{A + 5I}{4}$'
+  - en: '$\dfrac{4I - A}{5}$'
+  - en: '$\dfrac{5I - A}{4}$'
+  answer: 3
+  explanation:
+    en: |-
+      $\operatorname{tr} A = 5$, $\det A = 6 - 2 = 4$, so $A^2 - 5A + 4I = O$.
+
+      Rearrange: $A(5I - A) = 4I$, hence
+      $$A^{-1} = \frac{5I - A}{4} = \frac14\begin{pmatrix} 2 & -1\\ -2 & 3\end{pmatrix}.$$
+
+      Check: this agrees with $\frac{1}{\det A}\operatorname{adj} A$. $\frac{A - 5I}{4}$ has the wrong sign; $\frac{4I - A}{5}$ swaps the roles of trace and determinant.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cayley-hamilton
+  stem:
+    en: 'Let $A = \begin{pmatrix} 2 & -1\\ 1 & 0\end{pmatrix}$. Then $A^{50}$ equals'
+  options:
+  - en: '$49A - 50I$'
+  - en: '$50A + 49I$'
+  - en: '$50A - 49I$'
+  - en: '$I$'
+  answer: 2
+  explanation:
+    en: |-
+      $\operatorname{tr} A = 2$, $\det A = 1$, so $\chi_A = \lambda^2 - 2\lambda + 1 = (\lambda - 1)^2$ and, by Cayley–Hamilton, $A^2 = 2A - I$.
+
+      Write $A^m = aA + bI$. Then $\lambda^m = a\lambda + b$ at $\lambda = 1$, and, because $1$ is a double root, also the derivative $m\lambda^{m-1} = a$ at $\lambda = 1$. So $a = m$ and $b = 1 - m$:
+      $$A^{50} = 50A - 49I.$$
+
+      Check with $m = 2$: $2A - I$. The tempting answer $I$ assumes that "all eigenvalues are $1$" forces $A^{50} = I$. That holds only for a diagonalisable $A$, which would then equal $I$; here $A \ne I$, so $A$ is not diagonalisable.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cayley-hamilton
+  stem:
+    en: 'The characteristic polynomial of a $3 \times 3$ matrix $A$ is $\lambda^3 - 6\lambda^2 + 11\lambda - 6$. Then $A^{-1}$ equals'
+  options:
+  - en: '$-\dfrac{A^2 - 6A + 11I}{6}$'
+  - en: '$\dfrac{A^2 - 6A + 11I}{11}$'
+  - en: '$\dfrac{A^2 + 6A + 11I}{6}$'
+  - en: '$\dfrac{A^2 - 6A + 11I}{6}$'
+  answer: 3
+  explanation:
+    en: |-
+      By Cayley–Hamilton, $A^3 - 6A^2 + 11A - 6I = O$, so
+      $$A\left(A^2 - 6A + 11I\right) = 6I \quad\Longrightarrow\quad A^{-1} = \frac{A^2 - 6A + 11I}{6}.$$
+
+      The constant term $-6$ moves to the right as $+6I$; the option with the minus sign misses this. $\det A = 6 \ne 0$, so the inverse exists.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - eigenvectors
+  stem:
+    en: 'An eigenvector of $\begin{pmatrix} 4 & 1\\ 2 & 3\end{pmatrix}$ belonging to the eigenvalue $2$ is'
+  options:
+  - en: '$(1, 1)^T$'
+  - en: '$(2, -1)^T$'
+  - en: '$(1, 2)^T$'
+  - en: '$(1, -2)^T$'
+  answer: 3
+  explanation:
+    en: |-
+      Solve $(A - 2I)x = 0$: $A - 2I = \begin{pmatrix} 2 & 1\\ 2 & 1\end{pmatrix}$, so $2x + y = 0$, i.e. $y = -2x$. Take $x = (1, -2)^T$.
+
+      Check: $A(1, -2)^T = (2, -4)^T = 2(1, -2)^T$. The vector $(1, 1)^T$ is the eigenvector for the other eigenvalue $5$; $(2, -1)^T$ gives $A x = (7, 1)^T$, not a multiple.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - eigenvectors
+  stem:
+    en: 'For $A = \begin{pmatrix} 3 & 1 & 1\\ 0 & 3 & 0\\ 0 & 0 & 3\end{pmatrix}$, the algebraic and geometric multiplicities of the eigenvalue $3$ are, respectively,'
+  options:
+  - en: '$3$ and $1$'
+  - en: '$3$ and $3$'
+  - en: '$2$ and $1$'
+  - en: '$3$ and $2$'
+  answer: 3
+  explanation:
+    en: |-
+      $A$ is triangular with all diagonal entries $3$, so $\chi_A = (\lambda - 3)^3$: algebraic multiplicity $3$.
+
+      $$A - 3I = \begin{pmatrix} 0 & 1 & 1\\ 0 & 0 & 0\\ 0 & 0 & 0\end{pmatrix}$$
+      has rank $1$, so the geometric multiplicity is $3 - 1 = 2$ (eigenspace $y + z = 0$).
+
+      $3$ and $1$ would be right for a single Jordan block; here the two off-diagonal $1$s sit in the same row, so the rank is only $1$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - diagonalisation
+  stem:
+    en: 'Let $A = \begin{pmatrix} 2 & 0 & 0\\ a & 2 & 0\\ b & c & 3\end{pmatrix}$ with real $a, b, c$. Then $A$ is diagonalisable if and only if'
+  options:
+  - en: '$c = 0$'
+  - en: '$b = 0$'
+  - en: '$a = b = c = 0$'
+  - en: '$a = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      The eigenvalues are $2, 2, 3$. The simple eigenvalue $3$ causes no trouble; $A$ is diagonalisable iff the geometric multiplicity of $2$ is $2$, i.e. $\operatorname{rank}(A - 2I) = 1$.
+
+      $$A - 2I = \begin{pmatrix} 0 & 0 & 0\\ a & 0 & 0\\ b & c & 1\end{pmatrix}.$$
+      The third row is non-zero. If $a \neq 0$, rows 2 and 3 are independent (rank $2$); if $a = 0$, the rank is $1$.
+
+      So the condition is $a = 0$, whatever $b$ and $c$ are. "$a = b = c = 0$" is sufficient but not necessary.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - diagonalisation
+  - properties
+  stem:
+    en: 'For $A = \begin{pmatrix} 1 & 2\\ 2 & 1\end{pmatrix}$, the trace of $A^5$ is'
+  options:
+  - en: '$242$'
+  - en: '$244$'
+  - en: '$243$'
+  - en: '$32$'
+  answer: 0
+  explanation:
+    en: |-
+      $\operatorname{tr} A = 2$, $\det A = -3$, so $\lambda^2 - 2\lambda - 3 = 0$ and $\lambda = 3, -1$.
+
+      The eigenvalues of $A^5$ are $3^5$ and $(-1)^5$, so
+      $$\operatorname{tr}(A^5) = 243 - 1 = 242.$$
+
+      $244$ uses $(-1)^5 = +1$; $32 = (\operatorname{tr} A)^5$ wrongly treats the trace as multiplicative.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - diagonalisation
+  stem:
+    en: 'For $A = \begin{pmatrix} 4 & 1\\ 2 & 3\end{pmatrix}$ and every positive integer $n$, the $(1,1)$ entry of $A^n$ is'
+  options:
+  - en: '$\dfrac{5^n + 2\cdot 2^n}{3}$'
+  - en: '$\dfrac{2\cdot 5^n + 2^n}{3}$'
+  - en: '$\dfrac{2\cdot 5^n - 2^n}{3}$'
+  - en: '$5^n - 2^n$'
+  answer: 1
+  explanation:
+    en: |-
+      Eigenvalues $5, 2$ with eigenvectors $(1, 1)^T$ and $(1, -2)^T$. Take
+      $$P = \begin{pmatrix} 1 & 1\\ 1 & -2\end{pmatrix},\quad P^{-1} = \frac13\begin{pmatrix} 2 & 1\\ 1 & -1\end{pmatrix}.$$
+
+      Then $A^n = P\operatorname{diag}(5^n, 2^n)P^{-1}$, whose $(1,1)$ entry is
+      $$\frac{2\cdot 5^n + 2^n}{3}.$$
+
+      Check at $n = 1$: $(10 + 2)/3 = 4$. The option $(5^n + 2\cdot 2^n)/3$ gives $3$ at $n = 1$, and $(2\cdot5^n - 2^n)/3$ gives $\frac83$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - characteristic-polynomial
+  - properties
+  stem:
+    en: 'A $2 \times 2$ matrix has trace $7$ and determinant $10$. Its eigenvalues are'
+  options:
+  - en: '$-2$ and $-5$'
+  - en: '$3$ and $4$'
+  - en: '$2$ and $5$'
+  - en: '$1$ and $10$'
+  answer: 2
+  explanation:
+    en: |-
+      The characteristic equation is $\lambda^2 - 7\lambda + 10 = 0$, i.e. $(\lambda - 2)(\lambda - 5) = 0$.
+
+      The eigenvalues must add to $7$ and multiply to $10$: only $2, 5$ does both. $3, 4$ has the right sum but product $12$; $1, 10$ has the right product but sum $11$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - characteristic-polynomial
+  stem:
+    en: 'The characteristic equation of $A = \begin{pmatrix} 1 & 2 & 0\\ 0 & 3 & 1\\ 1 & 0 & 2\end{pmatrix}$ is'
+  options:
+  - en: '$\lambda^3 + 6\lambda^2 + 11\lambda + 8 = 0$'
+  - en: '$\lambda^3 - 6\lambda^2 + 11\lambda - 6 = 0$'
+  - en: '$\lambda^3 - 6\lambda^2 + 11\lambda - 8 = 0$'
+  - en: '$\lambda^3 - 6\lambda^2 + 9\lambda - 8 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      Use $\lambda^3 - (\operatorname{tr} A)\lambda^2 + S_2\lambda - \det A = 0$.
+
+      - $\operatorname{tr} A = 1 + 3 + 2 = 6$.
+      - Principal minors of order 2: $\begin{vmatrix} 1 & 2\\ 0 & 3\end{vmatrix} = 3$, $\begin{vmatrix} 1 & 0\\ 1 & 2\end{vmatrix} = 2$, $\begin{vmatrix} 3 & 1\\ 0 & 2\end{vmatrix} = 6$, so $S_2 = 11$.
+      - $\det A = 1(6 - 0) - 2(0 - 1) + 0 = 8$.
+
+      $$\lambda^3 - 6\lambda^2 + 11\lambda - 8 = 0.$$
+
+      The option ending in $-6$ takes the product of the diagonal entries instead of the determinant; that works only for triangular matrices.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - special-matrices
+  stem:
+    en: 'Which of the following can be the complete list of eigenvalues of a real $3 \times 3$ skew-symmetric matrix?'
+  options:
+  - en: '$0, 1, -1$'
+  - en: '$0, 2i, -2i$'
+  - en: '$1, i, -i$'
+  - en: '$0, 2i, 2i$'
+  answer: 1
+  explanation:
+    en: |-
+      Eigenvalues of a real skew-symmetric matrix are $0$ or purely imaginary, and, since the matrix is real, non-real ones come in conjugate pairs. So $0, 2i, -2i$ is possible: for example, $\begin{pmatrix} 0 & -2 & 0\\ 2 & 0 & 0\\ 0 & 0 & 0\end{pmatrix}$.
+
+      $0, \pm1$ and $1, \pm i$ contain non-zero real eigenvalues. $0, 2i, 2i$ is not closed under conjugation (and its sum $4i$ cannot be the real trace $0$).
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - special-matrices
+  stem:
+    en: 'A real symmetric $2 \times 2$ matrix has eigenvalues $3$ and $-1$, and $(1, 2)^T$ is an eigenvector for $3$. An eigenvector for $-1$ is'
+  options:
+  - en: '$(2, -1)^T$'
+  - en: '$(1, -2)^T$'
+  - en: '$(2, 1)^T$'
+  - en: '$(-1, 2)^T$'
+  answer: 0
+  explanation:
+    en: |-
+      For a real symmetric matrix, eigenvectors belonging to distinct eigenvalues are **orthogonal**. In $\R^2$ the vectors orthogonal to $(1, 2)^T$ are multiples of $(2, -1)^T$.
+
+      Check dot products with $(1, 2)$: $(2, -1) \to 0$; $(1, -2) \to -3$; $(2, 1) \to 4$; $(-1, 2) \to 3$. Only the first is orthogonal.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - minimal-polynomial
+  stem:
+    en: 'The minimal polynomial of $\begin{pmatrix} 2 & 1 & 0\\ 0 & 2 & 0\\ 0 & 0 & 2\end{pmatrix}$ is'
+  options:
+  - en: '$(x - 2)^3$'
+  - en: '$(x - 2)^2$'
+  - en: '$x - 2$'
+  - en: '$(x - 2)(x + 2)$'
+  answer: 1
+  explanation:
+    en: |-
+      $\chi_A = (x - 2)^3$, so $m_A$ is $(x - 2)^k$ for some $k \le 3$.
+
+      - $A - 2I = \begin{pmatrix} 0 & 1 & 0\\ 0 & 0 & 0\\ 0 & 0 & 0\end{pmatrix} \ne O$, so $k \ne 1$.
+      - $(A - 2I)^2 = O$, so $k = 2$.
+
+      $$m_A(x) = (x - 2)^2.$$
+
+      $(x - 2)^3$ is the characteristic polynomial, not the least-degree one. $(x - 2)(x + 2)$ has the root $-2$, which is not an eigenvalue.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cayley-hamilton
+  stem:
+    en: 'For $A = \begin{pmatrix} 1 & 2\\ 3 & 4\end{pmatrix}$, Cayley–Hamilton gives $A^3 =$'
+  options:
+  - en: '$25A + 10I$'
+  - en: '$27A + 2I$'
+  - en: '$23A - 10I$'
+  - en: '$27A + 10I$'
+  answer: 3
+  explanation:
+    en: |-
+      $\chi_A = \lambda^2 - 5\lambda - 2$, so $A^2 = 5A + 2I$. Then
+      $$A^3 = 5A^2 + 2A = 5(5A + 2I) + 2A = 27A + 10I.$$
+
+      $25A + 10I$ forgets the $2A$ from the second step. Check one entry: $A^3$ has $(1,1)$ entry $37 = 27 + 10$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'Consider the following statements about an $n \times n$ real matrix $A$:'
+  statements:
+  - en: '$A$ and $A^T$ have the same eigenvalues.'
+  - en: '$A$ and $A^T$ have the same eigenvectors.'
+  - en: 'If $A$ is invertible, then $0$ is not an eigenvalue of $A$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      1. True: $\det(\lambda I - A^T) = \det\big((\lambda I - A)^T\big) = \det(\lambda I - A)$.
+      2. False: for $A = \begin{pmatrix} 1 & 1\\ 0 & 2\end{pmatrix}$, $(1, 0)^T$ is an eigenvector of $A$, but $A^T(1, 0)^T = (1, 1)^T$ is not a multiple of it.
+      3. True: $\det A = \prod\lambda_i \ne 0$, so no eigenvalue is $0$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - diagonalisation
+  - eigenvectors
+  stem:
+    en: 'Consider the following statements about $n \times n$ real matrices:'
+  statements:
+  - en: 'A matrix with $n$ distinct real eigenvalues is diagonalisable over $\R$.'
+  - en: 'A matrix that is diagonalisable must have $n$ distinct eigenvalues.'
+  - en: 'If the characteristic polynomial of a matrix splits into real linear factors, the matrix is diagonalisable over $\R$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. True: eigenvectors for distinct eigenvalues are linearly independent, so there are $n$ independent eigenvectors.
+      2. False: $I_n$ is diagonal (hence diagonalisable) but has the single eigenvalue $1$.
+      3. False: $\begin{pmatrix} 1 & 1\\ 0 & 1\end{pmatrix}$ has $\chi = (\lambda - 1)^2$, which splits, but the geometric multiplicity of $1$ is only $1$.
+
+      Splitting is necessary, but one also needs geometric multiplicity = algebraic multiplicity for every eigenvalue.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'A $2 \times 2$ matrix $A$ has eigenvalues $2$ and $3$. Match each matrix in List I with its eigenvalues in List II.'
+  left:
+  - en: '$A^{-1}$'
+  - en: '$A^2$'
+  - en: '$A - 2I$'
+  - en: '$3A$'
+  right:
+  - en: '$4, 9$'
+  - en: '$6, 9$'
+  - en: '$\tfrac12, \tfrac13$'
+  - en: '$0, 1$'
+  options:
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-4, B-1, C-3, D-2'
+  - en: 'A-3, B-1, C-2, D-4'
+  answer: 0
+  explanation:
+    en: |-
+      Apply $\lambda \mapsto f(\lambda)$ to $2$ and $3$:
+      - $A^{-1}$: $\frac12, \frac13$ (3)
+      - $A^2$: $4, 9$ (1)
+      - $A - 2I$: $0, 1$ (4)
+      - $3A$: $6, 9$ (2)
+
+      So A-3, B-1, C-4, D-2.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - special-matrices
+  - characteristic-polynomial
+  stem:
+    en: Match each matrix in List I with its eigenvalues in List II.
+  left:
+  - en: '$\begin{pmatrix} 0 & 1\\ -1 & 0\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 1 & 1\\ 1 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 1 & 1\\ 0 & 1\end{pmatrix}$'
+  right:
+  - en: '$0, 2$'
+  - en: '$i, -i$'
+  - en: '$1, 1$'
+  - en: '$1, -1$'
+  options:
+  - en: 'A-4, B-2, C-1, D-3'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-1, C-4, D-3'
+  answer: 1
+  explanation:
+    en: |-
+      Use $\lambda^2 - (\operatorname{tr})\lambda + \det = 0$:
+      - A: trace $0$, det $1$: $\lambda^2 + 1 = 0$, so $\pm i$ (2). (Skew-symmetric, also orthogonal.)
+      - B: trace $0$, det $-1$: $\lambda^2 - 1 = 0$, so $\pm 1$ (4).
+      - C: trace $2$, det $0$: $\lambda(\lambda - 2) = 0$, so $0, 2$ (1).
+      - D: triangular, diagonal $1, 1$ (3).
+
+      So A-2, B-4, C-1, D-3. Swapping A and B is the usual slip: the symmetric one has real eigenvalues.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - special-matrices
+  assertion:
+    en: 'The eigenvalues of $\begin{pmatrix} 1 & 2\\ 2 & -2\end{pmatrix}$ are real.'
+  reason:
+    en: Every eigenvalue of a real symmetric matrix is real.
+  answer: 0
+  explanation:
+    en: |-
+      The matrix is real symmetric, so by the reason its eigenvalues are real. Directly: $\lambda^2 + \lambda - 6 = 0$, so $\lambda = 2, -3$.
+
+      Both statements are true, and the reason explains the assertion.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  assertion:
+    en: 'The sum of the eigenvalues of $\begin{pmatrix} 1 & 2\\ 3 & 4\end{pmatrix}$ is $5$.'
+  reason:
+    en: The product of the eigenvalues of a square matrix equals its determinant.
+  answer: 1
+  explanation:
+    en: |-
+      Assertion: true, because the sum of the eigenvalues is the trace, $1 + 4 = 5$.
+
+      Reason: true ($\prod\lambda_i = \det A$; here $-2$). But it is about the **product**, so it does not explain a statement about the **sum**. The explanation is $\sum\lambda_i = \operatorname{tr} A$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - diagonalisation
+  - eigenvectors
+  assertion:
+    en: 'The matrix $\begin{pmatrix} 1 & 1\\ 0 & 1\end{pmatrix}$ is not diagonalisable.'
+  reason:
+    en: A square matrix with a repeated eigenvalue is never diagonalisable.
+  answer: 2
+  explanation:
+    en: |-
+      Assertion: true. The eigenvalue $1$ has algebraic multiplicity $2$, but $A - I = \begin{pmatrix} 0 & 1\\ 0 & 0\end{pmatrix}$ has rank $1$, so the geometric multiplicity is $1$.
+
+      Reason: false. $I_2$ has the repeated eigenvalue $1$ and is diagonal. A repeated eigenvalue only makes failure *possible*; what matters is whether the geometric multiplicity equals the algebraic one.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - minimal-polynomial
+  assertion:
+    en: 'The minimal polynomial of $\begin{pmatrix} 1 & 1\\ 0 & 1\end{pmatrix}$ is $x - 1$.'
+  reason:
+    en: The minimal polynomial of a square matrix divides its characteristic polynomial.
+  answer: 3
+  explanation:
+    en: |-
+      Assertion: false. If $m_A = x - 1$ then $A - I = O$, but $A - I = \begin{pmatrix} 0 & 1\\ 0 & 0\end{pmatrix} \ne O$. In fact $(A - I)^2 = O$, so $m_A = (x - 1)^2 = \chi_A$.
+
+      Reason: true, because $\chi_A(A) = O$ by Cayley–Hamilton and $m_A$ divides every polynomial that annihilates $A$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cayley-hamilton
+  assertion:
+    en: 'If the characteristic polynomial of a $3 \times 3$ matrix $A$ is $\lambda^3 - 2\lambda^2 + \lambda - 5$, then $A^3 - 2A^2 + A = 5I$.'
+  reason:
+    en: Every square matrix satisfies its own characteristic equation.
+  answer: 0
+  explanation:
+    en: |-
+      The reason is the Cayley–Hamilton theorem. Applied here it gives $A^3 - 2A^2 + A - 5I = O$, which is exactly the assertion.
+
+      Both are true, and the reason explains the assertion.
+  status: ai-generated

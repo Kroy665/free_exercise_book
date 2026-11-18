@@ -1,0 +1,18 @@
+id: math.algebra.cubic-biquadratic
+title:
+  en: Cubic and Biquadratic Equations
+summary:
+  en: Reducing the cubic to y³ + 3Hy + G = 0, Cardan's method, the discriminant and nature of roots, the trigonometric solution of the irreducible case, Ferrari's method and the resolvent cubic, and Descartes's method for the biquadratic.
+order: 5
+exams: [slst-0910, slst-1112]
+prerequisites: [math.algebra.roots-coefficients]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on cubic and biquadratic equations
+  - S. Barnard and J. M. Child, Higher Algebra, ch. on the cubic and biquadratic
+  - W. S. Burnside and A. W. Panton, The Theory of Equations, vol. 1, ch. on the algebraic solution of the cubic and biquadratic
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.2 and (PG) A.3
+retired: []

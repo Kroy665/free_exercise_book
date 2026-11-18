@@ -1,0 +1,677 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - reduced-cubic
+  - exam-tips
+  stem:
+    en: 'To remove the $x^2$ term from $x^3 - 6x^2 + 11x - 6 = 0$, the substitution is'
+  options:
+  - en: '$x = y + 2$'
+  - en: '$x = y - 2$'
+  - en: '$x = y + 6$'
+  - en: '$x = y + 3$'
+  answer: 0
+  explanation:
+    en: |-
+      For a monic cubic $x^3 + bx^2 + \cdots$, put $x = y - \frac{b}{3}$. Here $b = -6$, so $x = y + 2$.
+
+      Check: the $y^2$ coefficient of $(y + 2)^3 - 6(y + 2)^2$ is $3\cdot 2 - 6 = 0$.
+
+      $x = y - 2$ is the sign slip; $x = y + 6$ forgets to divide by $3$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - reduced-cubic
+  stem:
+    en: 'The substitution $x = y + 3$ transforms $x^3 - 9x^2 + 33x - 65 = 0$ into'
+  options:
+  - en: '$y^3 + 6y + 20 = 0$'
+  - en: '$y^3 + 6y - 20 = 0$'
+  - en: '$y^3 - 6y - 20 = 0$'
+  - en: '$y^3 + 33y - 65 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Expand:
+      $$(y + 3)^3 - 9(y + 3)^2 + 33(y + 3) - 65.$$
+      - $y^2$: $9 - 9 = 0$.
+      - $y$: $27 - 54 + 33 = 6$.
+      - constant: $27 - 81 + 99 - 65 = -20$.
+
+      So $y^3 + 6y - 20 = 0$. Check: $x = 5$ is a root of the original, and $y = 2$ is a root of $y^3 + 6y - 20$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - reduced-cubic
+  stem:
+    en: 'The substitution $z = a_0x + a_1$ reduces $a_0x^3 + 3a_1x^2 + 3a_2x + a_3 = 0$ to $z^3 + 3Hz + G = 0$. Then $H$ equals'
+  options:
+  - en: '$a_0a_2 - a_1^2$'
+  - en: '$a_1^2 - a_0a_2$'
+  - en: '$a_0a_2 - 3a_1^2$'
+  - en: '$a_0a_3 - a_1a_2$'
+  answer: 0
+  explanation:
+    en: |-
+      Multiply the cubic by $a_0^2$ and write $a_0x = z - a_1$:
+      $$(z - a_1)^3 + 3a_1(z - a_1)^2 + 3a_0a_2(z - a_1) + a_0^2a_3 = 0.$$
+      The $z$-coefficient is $3a_1^2 - 6a_1^2 + 3a_0a_2 = 3(a_0a_2 - a_1^2)$, so
+      $$H = a_0a_2 - a_1^2.$$
+      $a_1^2 - a_0a_2$ is the sign slip.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - reduced-cubic
+  stem:
+    en: 'Write $x^3 + 3x^2 + 6x + 1 = 0$ as $a_0x^3 + 3a_1x^2 + 3a_2x + a_3 = 0$ and reduce it to $z^3 + 3Hz + G = 0$ with $z = a_0x + a_1$. Then $(H, G)$ is'
+  options:
+  - en: '$(1, 3)$'
+  - en: '$(-1, -3)$'
+  - en: '$(3, -3)$'
+  - en: '$(1, -3)$'
+  answer: 3
+  explanation:
+    en: |-
+      Here $a_0 = 1$, $a_1 = 1$, $a_2 = 2$, $a_3 = 1$. So
+      $$H = a_0a_2 - a_1^2 = 1, \qquad G = a_0^2a_3 - 3a_0a_1a_2 + 2a_1^3 = 1 - 6 + 2 = -3.$$
+      Direct check: with $x = z - 1$ the cubic becomes $z^3 + 3z - 3 = 0$.
+
+      $(3, -3)$ uses the coefficient of $z$ itself as $H$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cardan
+  stem:
+    en: 'In Cardan''s method for $y^3 + 3Hy + G = 0$, put $y = u + v$ with $uv = -H$. Then $u^3$ and $v^3$ are the roots of'
+  options:
+  - en: '$t^2 - Gt - H^3 = 0$'
+  - en: '$t^2 + Gt - H^3 = 0$'
+  - en: '$t^2 + Gt + H^3 = 0$'
+  - en: '$t^2 + 3Ht + G = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Since $(u + v)^3 = u^3 + v^3 + 3uv(u + v)$, the condition $uv = -H$ leaves
+      $$u^3 + v^3 = -G, \qquad u^3v^3 = -H^3.$$
+      A quadratic with this sum and product is $t^2 + Gt - H^3 = 0$.
+
+      $t^2 - Gt - H^3$ uses $+G$ as the sum; $t^2 + Gt + H^3$ uses $H^3$ as the product.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cardan
+  stem:
+    en: 'The non-real roots of $x^3 - 15x - 126 = 0$ are'
+  options:
+  - en: '$3 \pm 2\sqrt3\,i$'
+  - en: '$-3 \pm \sqrt3\,i$'
+  - en: '$-3 \pm 2\sqrt3\,i$'
+  - en: '$-3 \pm 4\sqrt3\,i$'
+  answer: 2
+  explanation:
+    en: |-
+      Here $H = -5$, $G = -126$. So $u^3 + v^3 = 126$ and $u^3v^3 = 125$, giving $t^2 - 126t + 125 = 0$, $t = 125, 1$. So $u = 5$, $v = 1$, and the real root is $6$.
+
+      The other roots are $5\omega + \omega^2$ and $5\omega^2 + \omega$:
+      $$5\omega + \omega^2 = \frac{-5 + 5\sqrt3\,i}{2} + \frac{-1 - \sqrt3\,i}{2} = -3 + 2\sqrt3\,i.$$
+      **Check:** the three roots must sum to $0$, so the complex pair sums to $-6$, which rules out $3 \pm 2\sqrt3\,i$. Their product must be $126/6 = 21 = 9 + 12$, which picks $-3 \pm 2\sqrt3\,i$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cardan
+  - exam-tips
+  stem:
+    en: 'Cardan''s formula for $y^3 + 6y - 20 = 0$ gives $y = \sqrt[3]{10 + 6\sqrt3} + \sqrt[3]{10 - 6\sqrt3}$. This number equals'
+  options:
+  - en: '$1$'
+  - en: '$2\sqrt3$'
+  - en: '$\sqrt[3]{20}$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      Note $(1 + \sqrt3)^3 = 1 + 3\sqrt3 + 9 + 3\sqrt3 = 10 + 6\sqrt3$, and similarly $(1 - \sqrt3)^3 = 10 - 6\sqrt3$. So
+      $$y = (1 + \sqrt3) + (1 - \sqrt3) = 2.$$
+      **Check:** $8 + 12 - 20 = 0$. The cube root of a sum is not the sum of cube roots, so $\sqrt[3]{20}$ is wrong.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: 'The cubic $y^3 + 3Hy + G = 0$, with $H, G$ real, has one real root and two non-real roots if and only if'
+  options:
+  - en: '$G^2 + 4H^3 < 0$'
+  - en: '$G^2 + 4H^3 = 0$'
+  - en: '$G^2 + 4H^3 > 0$'
+  - en: '$G^2 - 4H^3 > 0$'
+  answer: 2
+  explanation:
+    en: |-
+      The sign of $G^2 + 4H^3$, the discriminant of Cardan's quadratic $t^2 + Gt - H^3 = 0$, decides:
+      - $> 0$: one real root, two non-real conjugates;
+      - $= 0$: all real, at least two equal;
+      - $< 0$: three distinct real roots.
+
+      $G^2 + 4H^3 < 0$ is the irreducible case (three real roots), so it is the swapped condition.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: 'The equation $x^3 - 3x + 2 = 0$ has'
+  options:
+  - en: three distinct real roots
+  - en: 'all roots real, two of them equal'
+  - en: one real root and two non-real roots
+  - en: all three roots equal
+  answer: 1
+  explanation:
+    en: |-
+      Here $H = -1$, $G = 2$, so $G^2 + 4H^3 = 4 - 4 = 0$: all roots are real and at least two are equal. In fact
+      $$x^3 - 3x + 2 = (x - 1)^2(x + 2),$$
+      so the roots are $1, 1, -2$. All three are equal only when $G = H = 0$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: 'The equation $x^3 - 12x + k = 0$ ($k$ real) has three distinct real roots if and only if'
+  options:
+  - en: '$\lvert k\rvert > 16$'
+  - en: '$\lvert k\rvert < 16$'
+  - en: '$\lvert k\rvert \le 16$'
+  - en: '$\lvert k\rvert < 4$'
+  answer: 1
+  explanation:
+    en: |-
+      Here $3H = -12$, so $H = -4$, and $G = k$. Three distinct real roots need
+      $$G^2 + 4H^3 = k^2 - 256 < 0 \iff \lvert k\rvert < 16.$$
+      At $\lvert k\rvert = 16$ there is a double root (e.g. $x^3 - 12x + 16 = (x - 2)^2(x + 4)$), so $\le$ is wrong. $\lvert k\rvert < 4$ compares $k$ with $\lvert H\rvert$ instead of using $G^2 + 4H^3$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: 'For $y^3 + py + q = 0$ write $p = 3H$, $q = G$. The discriminant $\Delta = -4p^3 - 27q^2$ equals'
+  options:
+  - en: '$27(G^2 + 4H^3)$'
+  - en: '$-(G^2 + 4H^3)$'
+  - en: '$-27(G^2 + 4H^3)$'
+  - en: '$-108(G^2 + 4H^3)$'
+  answer: 2
+  explanation:
+    en: |-
+      Substitute:
+      $$\Delta = -4(3H)^3 - 27G^2 = -108H^3 - 27G^2 = -27(G^2 + 4H^3).$$
+      So $\Delta > 0$ (three distinct real roots) exactly when $G^2 + 4H^3 < 0$. The signs are opposite, which is why $27(G^2 + 4H^3)$ is the tempting slip.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - trigonometric
+  stem:
+    en: 'The roots of $y^3 - 3y + 1 = 0$ are'
+  options:
+  - en: '$2\cos\frac{\pi}{9},\ 2\cos\frac{5\pi}{9},\ 2\cos\frac{7\pi}{9}$'
+  - en: '$\cos\frac{2\pi}{9},\ \cos\frac{4\pi}{9},\ \cos\frac{8\pi}{9}$'
+  - en: '$2\cos\frac{2\pi}{9},\ 2\cos\frac{4\pi}{9},\ 2\cos\frac{8\pi}{9}$'
+  - en: '$2\sin\frac{2\pi}{9},\ 2\sin\frac{4\pi}{9},\ 2\sin\frac{8\pi}{9}$'
+  answer: 2
+  explanation:
+    en: |-
+      $H = -1$, $G = 1$, and $G^2 + 4H^3 = -3 < 0$: the irreducible case. Put $y = 2\sqrt{-H}\cos\theta = 2\cos\theta$:
+      $$8\cos^3\theta - 6\cos\theta + 1 = 2\cos 3\theta + 1 = 0, \qquad \cos 3\theta = -\tfrac12.$$
+      So $\theta = \frac{2\pi}{9} + \frac{2k\pi}{3}$, giving $2\cos\frac{2\pi}{9}$, $2\cos\frac{8\pi}{9}$, $2\cos\frac{14\pi}{9} = 2\cos\frac{4\pi}{9}$.
+
+      The set with $\frac{\pi}{9}, \frac{5\pi}{9}, \frac{7\pi}{9}$ solves $\cos 3\theta = +\frac12$, i.e. $y^3 - 3y - 1 = 0$. The set without the factor $2$ has the wrong scale.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - trigonometric
+  stem:
+    en: 'In the irreducible case of $y^3 + 3Hy + G = 0$ (so $H < 0$), the substitution $y = 2\sqrt{-H}\cos\theta$ leads to'
+  options:
+  - en: '$\cos 3\theta = \dfrac{G}{2(-H)^{3/2}}$'
+  - en: '$\cos 3\theta = -\dfrac{G}{(-H)^{3/2}}$'
+  - en: '$\cos 3\theta = -\dfrac{G}{4(-H)^{3/2}}$'
+  - en: '$\cos 3\theta = -\dfrac{G}{2(-H)^{3/2}}$'
+  answer: 3
+  explanation:
+    en: |-
+      Let $h = \sqrt{-H}$, so $H = -h^2$. Then
+      $$y^3 + 3Hy + G = 8h^3\cos^3\theta - 6h^3\cos\theta + G = 2h^3(4\cos^3\theta - 3\cos\theta) + G = 2h^3\cos 3\theta + G.$$
+      Setting this to $0$ gives $\cos 3\theta = -\dfrac{G}{2(-H)^{3/2}}$. Dropping the minus sign is the usual slip.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - trigonometric
+  stem:
+    en: 'The largest root of $x^3 - 3x - 1 = 0$ is'
+  options:
+  - en: '$2\cos\frac{2\pi}{9}$'
+  - en: '$2\cos\frac{\pi}{18}$'
+  - en: '$2\cos\frac{\pi}{9}$'
+  - en: '$\sqrt3$'
+  answer: 2
+  explanation:
+    en: |-
+      $H = -1$, $G = -1$. Put $x = 2\cos\theta$: $2\cos 3\theta - 1 = 0$, so $\cos 3\theta = \frac12$ and $\theta = \frac{\pi}{9}, \frac{7\pi}{9}, \frac{13\pi}{9}$.
+
+      The largest of $2\cos\theta$ is $2\cos\frac{\pi}{9} \approx 1.879$.
+
+      $2\cos\frac{2\pi}{9} \approx 1.532$ is the largest root of $y^3 - 3y + 1 = 0$ (the sign slip $\cos 3\theta = -\frac12$). $\sqrt3$ is not a root: $3\sqrt3 - 3\sqrt3 - 1 = -1 \ne 0$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ferrari
+  stem:
+    en: 'Ferrari''s method writes $x^4 + 2px^3 + qx^2 + 2rx + s = 0$ as $(x^2 + px + \lambda)^2 = (2\lambda + p^2 - q)x^2 + 2(p\lambda - r)x + (\lambda^2 - s)$. The resolvent cubic in $\lambda$ is'
+  options:
+  - en: '$(p\lambda + r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s)$'
+  - en: '$(p\lambda - r)^2 = (2\lambda - p^2 + q)(\lambda^2 - s)$'
+  - en: '$(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 + s)$'
+  - en: '$(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s)$'
+  answer: 3
+  explanation:
+    en: |-
+      The right side $Ax^2 + 2Bx + C$, with $A = 2\lambda + p^2 - q$, $B = p\lambda - r$, $C = \lambda^2 - s$, is a perfect square iff $B^2 = AC$:
+      $$(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s).$$
+      The other options copy a coefficient with the wrong sign.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ferrari
+  stem:
+    en: 'To solve $x^4 - 2x^3 - x^2 + 6x - 3 = 0$ by Ferrari''s method, write it as $(x^2 - x + \lambda)^2 = (\text{a quadratic in } x)$. A rational value of $\lambda$ that makes the right side a perfect square is'
+  options:
+  - en: '$\lambda = 1$'
+  - en: '$\lambda = -1$'
+  - en: '$\lambda = 3$'
+  - en: '$\lambda = \frac12$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $p = -1$, $q = -1$, $r = 3$, $s = -3$. The right side is
+      $$(2\lambda + 2)x^2 - 2(\lambda + 3)x + (\lambda^2 + 3).$$
+      It is a square iff $(\lambda + 3)^2 = (2\lambda + 2)(\lambda^2 + 3)$, i.e.
+      $$2\lambda^3 + \lambda^2 - 3 = 0.$$
+      $\lambda = 1$ works: $2 + 1 - 3 = 0$. Then the right side is $4x^2 - 8x + 4 = (2x - 2)^2$. The other values do not satisfy the resolvent.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ferrari
+  stem:
+    en: 'The roots of $x^4 - 2x^3 - x^2 + 6x - 3 = 0$ are'
+  options:
+  - en: '$\frac{-1 \pm \sqrt5}{2},\ \frac{3 \pm i\sqrt3}{2}$'
+  - en: '$\frac{1 \pm \sqrt5}{2},\ \frac{3 \pm i\sqrt3}{2}$'
+  - en: '$\frac{-1 \pm \sqrt5}{2},\ \frac{-3 \pm i\sqrt3}{2}$'
+  - en: '$\frac{-1 \pm \sqrt3}{2},\ \frac{3 \pm i\sqrt5}{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      With $\lambda = 1$ (a root of the resolvent $2\lambda^3 + \lambda^2 - 3 = 0$):
+      $$(x^2 - x + 1)^2 = (2x - 2)^2.$$
+      - $x^2 - x + 1 = 2x - 2$ gives $x^2 - 3x + 3 = 0$, so $x = \frac{3 \pm i\sqrt3}{2}$.
+      - $x^2 - x + 1 = -(2x - 2)$ gives $x^2 + x - 1 = 0$, so $x = \frac{-1 \pm \sqrt5}{2}$.
+
+      **Check:** the four roots must sum to $2$: $(-1) + 3 = 2$. The second and third options sum to $4$ and $-4$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ferrari
+  stem:
+    en: '$\alpha, \beta, \gamma, \delta$ are the roots of $x^4 + 2px^3 + qx^2 + 2rx + s = 0$. The roots of Ferrari''s resolvent cubic $(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s)$ are'
+  options:
+  - en: '$\frac12(\alpha\beta + \gamma\delta),\ \frac12(\alpha\gamma + \beta\delta),\ \frac12(\alpha\delta + \beta\gamma)$'
+  - en: '$\alpha\beta + \gamma\delta,\ \alpha\gamma + \beta\delta,\ \alpha\delta + \beta\gamma$'
+  - en: '$(\alpha + \beta)^2,\ (\alpha + \gamma)^2,\ (\alpha + \delta)^2$'
+  - en: '$\frac12(\alpha + \beta)(\gamma + \delta),\ \frac12(\alpha + \gamma)(\beta + \delta),\ \frac12(\alpha + \delta)(\beta + \gamma)$'
+  answer: 0
+  explanation:
+    en: |-
+      For a root $\lambda$, the quartic splits as $x^2 + px + \lambda \mp (mx + n)$. The two factors have constant terms $\lambda - n$ and $\lambda + n$, which are the products of the root pairs, say $\alpha\beta$ and $\gamma\delta$. Adding,
+      $$\lambda = \frac{\alpha\beta + \gamma\delta}{2}.$$
+      The other two pairings give the other two roots.
+
+      Example: $x^4 - 2x^3 - x^2 + 6x - 3$ has pair products $-1$ and $3$, and $\lambda = 1$ is a resolvent root. The squares $(\alpha + \beta)^2$ belong to Descartes's cubic for a reduced quartic, not to Ferrari's.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - descartes-method
+  - exam-tips
+  stem:
+    en: 'Before applying Descartes''s method to $x^4 - 8x^3 + 3x^2 + x - 5 = 0$, the cubic term is removed by putting'
+  options:
+  - en: '$x = y - 2$'
+  - en: '$x = y + 8$'
+  - en: '$x = y + 4$'
+  - en: '$x = y + 2$'
+  answer: 3
+  explanation:
+    en: |-
+      For $x^4 + ax^3 + \cdots$, put $x = y - \frac{a}{4}$. Here $a = -8$, so $x = y + 2$.
+
+      Check: the $y^3$ coefficient of $(y + 2)^4 - 8(y + 2)^3$ is $4\cdot 2 - 8 = 0$. $x = y + 4$ divides by $2$ instead of $4$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - descartes-method
+  stem:
+    en: 'In Descartes''s method, $y^4 + qy^2 + ry + s = (y^2 + ky + l)(y^2 - ky + m)$. Then $t = k^2$ satisfies'
+  options:
+  - en: '$t^3 + 2qt^2 + (q^2 + 4s)t - r^2 = 0$'
+  - en: '$t^3 + 2qt^2 + (q^2 - 4s)t - r^2 = 0$'
+  - en: '$t^3 - 2qt^2 + (q^2 - 4s)t - r^2 = 0$'
+  - en: '$t^3 + 2qt^2 + (q^2 - 4s)t + r^2 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Comparing coefficients: $l + m = q + k^2$, $m - l = r/k$, $lm = s$. Since $4lm = (l + m)^2 - (m - l)^2$,
+      $$4s = (q + k^2)^2 - \frac{r^2}{k^2}.$$
+      Multiply by $k^2$ and put $t = k^2$:
+      $$t^3 + 2qt^2 + (q^2 - 4s)t - r^2 = 0.$$
+      **Check:** the constant term is $-r^2 \le 0$, which is why this cubic has a positive root when $r \ne 0$; the option with $+r^2$ fails this.
+  status: ai-generated
+- id: q0021
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nature-of-roots
+  - trigonometric
+  stem:
+    en: 'Consider the equation $x^3 - 7x + 6 = 0$, written as $x^3 + 3Hx + G = 0$:'
+  statements:
+  - en: It has three distinct real roots.
+  - en: 'Cardan''s formula expresses its roots using cube roots of non-real complex numbers.'
+  - en: 'Because its roots are integers, $G^2 + 4H^3 \ge 0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      $x^3 - 7x + 6 = (x - 1)(x - 2)(x + 3)$, so statement 1 is true.
+
+      $H = -\frac73$, $G = 6$, and
+      $$G^2 + 4H^3 = 36 - \frac{1372}{27} = -\frac{400}{27} < 0.$$
+      So $\sqrt{G^2 + 4H^3}$ is imaginary, and Cardan's $u^3, v^3$ are non-real: statement 2 is true and statement 3 is false.
+
+      This is the irreducible case: the roots being rational does not help Cardan's formula.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ferrari
+  - descartes-method
+  stem:
+    en: 'Consider the following statements about solving a real quartic:'
+  statements:
+  - en: 'Ferrari''s resolvent of a quartic is a cubic equation.'
+  - en: 'In Ferrari''s method, any one root of the resolvent is enough to split the quartic into two quadratics.'
+  - en: 'For $y^4 + qy^2 + ry + s$ with $r \ne 0$, Descartes''s cubic $t^3 + 2qt^2 + (q^2 - 4s)t - r^2 = 0$ has a positive root.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      1. True: $(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s)$ has degree $3$ in $\lambda$.
+      2. True: one $\lambda$ makes the right side $(mx + n)^2$, and then $x^2 + px + \lambda = \pm(mx + n)$.
+      3. True: the cubic is $-r^2 < 0$ at $t = 0$ and tends to $+\infty$, so it crosses zero at some $t > 0$.
+
+      So all three are correct.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: 'For the cubic $y^3 + 3Hy + G = 0$ with real $H, G$, consider:'
+  statements:
+  - en: 'If $H > 0$, the equation has exactly one real root.'
+  - en: 'If $G^2 + 4H^3 = 0$, all three roots are equal.'
+  - en: 'If $H < 0$, the equation has three real roots.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: 1 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True: $H > 0$ makes $G^2 + 4H^3 > 0$ (also $y^3 + 3Hy$ is strictly increasing).
+      2. False: $y^3 - 3y + 2 = (y - 1)^2(y + 2)$ has $G^2 + 4H^3 = 0$ but roots $1, 1, -2$. All three are equal only if $G = H = 0$.
+      3. False: $y^3 - 3y + 3 = 0$ has $H = -1$ but $G^2 + 4H^3 = 9 - 4 = 5 > 0$, so only one real root.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - nature-of-roots
+  stem:
+    en: Match each cubic in List I with the nature of its roots in List II.
+  left:
+  - en: '$x^3 - 3x + 1 = 0$'
+  - en: '$x^3 - 3x + 2 = 0$'
+  - en: '$x^3 - 3x + 3 = 0$'
+  - en: '$x^3 - 3x^2 + 3x - 1 = 0$'
+  right:
+  - en: all three roots equal
+  - en: one real and two non-real roots
+  - en: three distinct real roots
+  - en: 'all real, exactly two equal'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-4, B-3, C-2, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      For $x^3 - 3x + c$: $H = -1$, $G = c$, so $G^2 + 4H^3 = c^2 - 4$.
+      - A ($c = 1$): $-3 < 0$, three distinct real roots (3).
+      - B ($c = 2$): $0$, roots $1, 1, -2$ (4).
+      - C ($c = 3$): $5 > 0$, one real root (2).
+      - D: $(x - 1)^3 = 0$, all three equal (1).
+
+      So A-3, B-4, C-2, D-1.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cardan
+  - exam-tips
+  stem:
+    en: 'Each expression in List I is a real root given by Cardan''s formula (real cube roots throughout). Match it with its value in List II.'
+  left:
+  - en: '$\sqrt[3]{2 + \sqrt5} + \sqrt[3]{2 - \sqrt5}$'
+  - en: '$\sqrt[3]{10 + 6\sqrt3} + \sqrt[3]{10 - 6\sqrt3}$'
+  - en: '$\sqrt[3]{9 + 4\sqrt5} + \sqrt[3]{9 - 4\sqrt5}$'
+  - en: '$\sqrt[3]{20 + 14\sqrt2} + \sqrt[3]{20 - 14\sqrt2}$'
+  right:
+  - en: '$3$'
+  - en: '$1$'
+  - en: '$4$'
+  - en: '$2$'
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-1, D-3'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-1, C-4, D-3'
+  answer: 0
+  explanation:
+    en: |-
+      For $s = \sqrt[3]{A + \sqrt B} + \sqrt[3]{A - \sqrt B}$, cubing gives $s^3 = 2A + 3\sqrt[3]{A^2 - B}\,s$.
+      - A: $A^2 - B = -1$, so $s^3 + 3s - 4 = 0$, $s = 1$ (2).
+      - B: $100 - 108 = -8$, so $s^3 + 6s - 20 = 0$, $s = 2$ (4).
+      - C: $81 - 80 = 1$, so $s^3 - 3s - 18 = 0$, $s = 3$ (1).
+      - D: $400 - 392 = 8$, so $s^3 - 6s - 40 = 0$, $s = 4$ (3).
+
+      Each cubic has $G^2 + 4H^3 > 0$, so $s$ is its only real root. Equivalently, $\left(\frac{1 + \sqrt5}{2}\right)^3 = 2 + \sqrt5$, $(1 + \sqrt3)^3 = 10 + 6\sqrt3$, $\left(\frac{3 + \sqrt5}{2}\right)^3 = 9 + 4\sqrt5$, $(2 + \sqrt2)^3 = 20 + 14\sqrt2$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cardan
+  - nature-of-roots
+  assertion:
+    en: '$x^3 - 15x - 126 = 0$ has exactly one real root.'
+  reason:
+    en: 'If $G^2 + 4H^3 > 0$, the real cubic $y^3 + 3Hy + G = 0$ has one real root and two non-real roots.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true. For this cubic $H = -5$, $G = -126$, and
+      $$G^2 + 4H^3 = 15876 - 500 = 15376 > 0.$$
+      So R applies and explains A. (The roots are $6$ and $-3 \pm 2\sqrt3\,i$.)
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - trigonometric
+  - nature-of-roots
+  assertion:
+    en: '$x^3 - 7x + 6 = 0$ has three distinct real roots.'
+  reason:
+    en: 'Cardan''s formula gives every root of $x^3 - 7x + 6 = 0$ without using complex numbers.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $x^3 - 7x + 6 = (x - 1)(x - 2)(x + 3)$.
+
+      R is false: $G^2 + 4H^3 = 36 - \frac{1372}{27} < 0$, so $\sqrt{G^2 + 4H^3}$ is imaginary and $u^3, v^3$ are non-real. This is the irreducible case.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - trigonometric
+  assertion:
+    en: 'The roots of $y^3 - 3y + 1 = 0$ are of the form $2\cos\theta$ for real $\theta$.'
+  reason:
+    en: Every cubic equation with real coefficients has at least one real root.
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $G^2 + 4H^3 = 1 - 4 < 0$, so the substitution $y = 2\cos\theta$ gives $\cos 3\theta = -\frac12$ and three real roots $2\cos\frac{2\pi}{9}, 2\cos\frac{4\pi}{9}, 2\cos\frac{8\pi}{9}$.
+
+      R is true (non-real roots of a real polynomial occur in conjugate pairs, and the degree is odd). But R gives only one real root; it does not say that all three roots are real or lie in $[-2, 2]$. So R does not explain A.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nature-of-roots
+  assertion:
+    en: 'All three roots of $x^3 - 3x + 2 = 0$ are equal.'
+  reason:
+    en: 'If $G^2 + 4H^3 = 0$, the real cubic $y^3 + 3Hy + G = 0$ has all its roots real, with at least two equal.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false: $x^3 - 3x + 2 = (x - 1)^2(x + 2)$, with roots $1, 1, -2$.
+
+      R is true. Here $G^2 + 4H^3 = 4 - 4 = 0$, which gives a repeated root. All three are equal only when $G = H = 0$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - descartes-method
+  assertion:
+    en: 'For $y^4 + qy^2 + ry + s = 0$ with real coefficients and $r \ne 0$, Descartes''s method always gives a factorisation into two quadratics with real coefficients.'
+  reason:
+    en: A real cubic with positive leading coefficient and negative constant term has a positive real root.
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      Descartes's cubic $t^3 + 2qt^2 + (q^2 - 4s)t - r^2 = 0$ has constant term $-r^2 < 0$. By R (the cubic is negative at $0$ and tends to $+\infty$) it has a root $t = k^2 > 0$. So $k$ is real, and $l, m$ come from $l + m = q + k^2$ and $m - l = r/k$, both real.
+  status: ai-generated

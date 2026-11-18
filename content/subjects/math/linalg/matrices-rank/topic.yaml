@@ -1,0 +1,18 @@
+id: math.linalg.matrices-rank
+title:
+  en: Matrices, Inverse and Rank
+summary:
+  en: Matrix algebra over R and C, transpose, symmetric, skew-symmetric and Hermitian matrices, the adjoint and inverse, elementary operations and elementary matrices, rank by minors and by echelon form, normal form and equivalence, congruence and orthogonal matrices.
+order: 2
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.determinants]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on matrices, rank and normal forms
+  - "B. S. Vatsa and S. Vatsa, Theory of Matrices, ch. 1–4"
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 1"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.4 and (PG) C.1, C.3
+retired: []

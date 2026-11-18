@@ -1,0 +1,707 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - matrix-form
+  stem:
+    en: 'A system $AX = B$ of $m$ linear equations in $n$ unknowns is consistent if and only if'
+  options:
+  - en: '$\rho(A) = n$'
+  - en: '$\det A \ne 0$'
+  - en: '$\rho(A) = \rho([A \mid B])$'
+  - en: '$\rho([A \mid B]) = \rho(A) + 1$'
+  answer: 2
+  explanation:
+    en: |-
+      By the Rouché–Capelli theorem, $AX = B$ has a solution exactly when $B$ lies in the column space of $A$, that is, when
+      $$\rho(A) = \rho([A \mid B]).$$
+
+      - $\rho(A) = n$ concerns **uniqueness**, not existence: $x + y = 1$, $x + y = 2$, $x - y = 0$ has $\rho(A) = 2 = n$ but no solution.
+      - $\det A \ne 0$ is sufficient (for square $A$) but not necessary: $x + y = 2$, $2x + 2y = 4$ is consistent with $\det A = 0$.
+      - $\rho([A\mid B]) = \rho(A) + 1$ is precisely the **inconsistent** case.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - matrix-form
+  stem:
+    en: 'The augmented matrix of the system $2x - y = 3,\ x + 4z = 1$ in the unknowns $x, y, z$ (in that order) is'
+  options:
+  - en: '$\left(\begin{array}{cc|c} 2 & -1 & 3 \\ 1 & 4 & 1 \end{array}\right)$'
+  - en: '$\left(\begin{array}{ccc|c} 2 & 1 & 0 & 3 \\ 1 & 0 & 4 & 1 \end{array}\right)$'
+  - en: '$\left(\begin{array}{ccc|c} 2 & -1 & 0 & 3 \\ 1 & 0 & 4 & 1 \end{array}\right)$'
+  - en: '$\left(\begin{array}{ccc|c} 2 & -1 & 3 & 0 \\ 1 & 4 & 1 & 0 \end{array}\right)$'
+  answer: 2
+  explanation:
+    en: |-
+      Write each equation with all three unknowns, using $0$ for a missing one:
+      $$2x - 1y + 0z = 3, \qquad 1x + 0y + 4z = 1.$$
+      So $[A \mid B] = \left(\begin{array}{ccc|c} 2 & -1 & 0 & 3 \\ 1 & 0 & 4 & 1 \end{array}\right)$.
+
+      The $2 \times 3$ option drops the zero coefficients and puts $4$ under $y$; the third loses the sign of $-y$; the last one is not an augmented matrix of this system at all.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - matrix-form
+  - elimination
+  stem:
+    en: 'While reducing the augmented matrix of a system in $x, y, z$, one row becomes $(0\ \ 0\ \ 0 \mid 5)$. Then the system'
+  options:
+  - en: has infinitely many solutions
+  - en: 'has a unique solution with $z = 5$'
+  - en: 'has the unique solution $x = y = z = 0$'
+  - en: has no solution
+  answer: 3
+  explanation:
+    en: |-
+      The row reads $0x + 0y + 0z = 5$, that is, $0 = 5$, which no $(x, y, z)$ satisfies. Equivalently, $\rho([A \mid B]) = \rho(A) + 1$, so the system is **inconsistent**.
+
+      A zero row $(0\ 0\ 0 \mid 0)$ would only signal a dependent equation; it is the non-zero last entry that makes the system impossible.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - solution-cases
+  stem:
+    en: 'A consistent system in $6$ unknowns has $\rho(A) = \rho([A \mid B]) = 4$. The number of arbitrary parameters in its general solution is'
+  options:
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$6$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      When $\rho(A) = \rho([A\mid B]) = r < n$, the solution has $n - r$ free parameters:
+      $$n - r = 6 - 4 = 2.$$
+      $4$ is the number of basic (pivot) unknowns, not free ones; $0$ would need $r = n$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - parameter-systems
+  - solution-cases
+  stem:
+    en: 'The system $2x + 3y = 5,\ 4x + ky = 10$ has infinitely many solutions when $k$ equals'
+  options:
+  - en: '$-6$'
+  - en: '$3$'
+  - en: '$6$'
+  - en: 'no real value of $k$'
+  answer: 2
+  explanation:
+    en: |-
+      For infinitely many solutions the two equations must be the same line. The right-hand sides are in the ratio $10 : 5 = 2$, so we need
+      $$\frac{4}{2} = \frac{k}{3} = \frac{10}{5} = 2 \implies k = 6.$$
+      Then the second equation is twice the first, and $\rho(A) = \rho([A\mid B]) = 1 < 2$.
+
+      For $k \ne 6$, $\det A = 2k - 12 \ne 0$ and the solution is unique, so no other value works.
+  status: ai-generated
+- id: q0006
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - solution-cases
+  stem:
+    en: 'A system $AX = B$ has $3$ unknowns. Match each rank condition in List I with the nature of its solution set in List II.'
+  left:
+  - en: '$\rho(A) = \rho([A \mid B]) = 3$'
+  - en: '$\rho(A) = \rho([A \mid B]) = 2$'
+  - en: '$\rho(A) = 2,\ \rho([A \mid B]) = 3$'
+  - en: '$\rho(A) = \rho([A \mid B]) = 1$'
+  right:
+  - en: no solution
+  - en: exactly one solution
+  - en: a one-parameter family of solutions
+  - en: a two-parameter family of solutions
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-2, B-3, C-1, D-4'
+  - en: 'A-2, B-3, C-4, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      Use $r = \rho(A)$, $r' = \rho([A\mid B])$ and $n = 3$:
+
+      - A: $r = r' = n$, so exactly one solution (2).
+      - B: $r = r' = 2$, so $3 - 2 = 1$ parameter (3).
+      - C: $r < r'$, so inconsistent (1).
+      - D: $r = r' = 1$, so $3 - 1 = 2$ parameters (4).
+
+      Hence A-2, B-3, C-1, D-4. Swapping B and D comes from counting parameters as $r$ instead of $n - r$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - solution-structure
+  stem:
+    en: '$X_1$ and $X_2$ are two distinct solutions of $AX = B$, where $B \ne O$. Which of the following is also a solution of $AX = B$?'
+  options:
+  - en: '$\tfrac12(X_1 + X_2)$'
+  - en: '$X_1 + X_2$'
+  - en: '$X_1 - X_2$'
+  - en: '$2X_1 + X_2$'
+  answer: 0
+  explanation:
+    en: |-
+      Apply $A$ to each option:
+      $$A\left(\tfrac12(X_1 + X_2)\right) = \tfrac12(B + B) = B. \;\checkmark$$
+
+      - $A(X_1 + X_2) = 2B \ne B$, since $B \ne O$.
+      - $A(X_1 - X_2) = O$: this solves the **homogeneous** system instead.
+      - $A(2X_1 + X_2) = 3B \ne B$.
+
+      In general, $\lambda X_1 + \mu X_2$ solves $AX = B$ exactly when $\lambda + \mu = 1$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - solution-structure
+  - elimination
+  stem:
+    en: 'The general solution of $x + y + z = 3,\ x + 2y + 3z = 4,\ 2x + 3y + 4z = 7$ is ($t$ arbitrary)'
+  options:
+  - en: '$(x, y, z) = (1 + t,\ 2 - 2t,\ t)$'
+  - en: '$(x, y, z) = (2 + t,\ 1 - 2t,\ t)$'
+  - en: '$(x, y, z) = (2 - t,\ 1 + 2t,\ t)$'
+  - en: '$(x, y, z) = (2,\ 1,\ 0)$ only'
+  answer: 1
+  explanation:
+    en: |-
+      The third equation is the sum of the first two, so $\rho(A) = \rho([A\mid B]) = 2$, and there is $3 - 2 = 1$ parameter.
+
+      Subtracting the first equation from the second gives $y + 2z = 1$. Put $z = t$: then $y = 1 - 2t$ and $x = 3 - y - z = 2 + t$.
+      $$(x, y, z) = (2, 1, 0) + t(1, -2, 1).$$
+
+      **Check:** $(1 + t, 2 - 2t, t)$ satisfies the first equation but gives $5$, not $4$, in the second. $(2 - t, 1 + 2t, t)$ fails the first. $(2, 1, 0)$ is only one particular solution.
+  status: ai-generated
+- id: q0009
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - solution-structure
+  - homogeneous
+  stem:
+    en: '$A$ is an $m \times n$ real matrix and $B \ne O$. Consider the following statements:'
+  statements:
+  - en: 'The set of all solutions of $AX = B$ is a subspace of $\R^n$.'
+  - en: 'The difference of any two solutions of $AX = B$ is a solution of $AX = O$.'
+  - en: 'If $X_0$ is one solution of $AX = B$, every solution is $X_0 + Y$ for some $Y$ with $AY = O$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  - en: 2 only
+  - en: 1 and 3 only
+  answer: 1
+  explanation:
+    en: |-
+      - **1 is false.** A subspace contains $O$, but $AO = O \ne B$. The solution set is the translate $X_0 + N(A)$, not a subspace.
+      - **2 is true.** $A(X_1 - X_2) = B - B = O$.
+      - **3 is true.** For any solution $X$, put $Y = X - X_0$; by statement 2, $AY = O$.
+
+      So the answer is 2 and 3 only.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'A homogeneous system of $3$ linear equations in $5$ unknowns'
+  options:
+  - en: has only the trivial solution
+  - en: may be inconsistent
+  - en: always has a non-trivial solution
+  - en: 'has a non-trivial solution only if its rank is $3$'
+  answer: 2
+  explanation:
+    en: |-
+      $\rho(A) \le 3 < 5 = n$, so the solution space has dimension $5 - \rho(A) \ge 2$. A non-trivial solution always exists.
+
+      A homogeneous system is never inconsistent: $X = O$ always works. The rank can be $1$, $2$ or $3$; non-trivial solutions exist in every case.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The dimension of the solution space of the single equation $x + y + z = 0$ in $\R^3$ is'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$0$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $A = (1\ 1\ 1)$ has rank $1$, so
+      $$\dim N(A) = n - \rho(A) = 3 - 1 = 2.$$
+      The solutions form a plane through the origin, with basis $(1, -1, 0)$ and $(1, 0, -1)$.
+
+      $1$ is the number of equations (the rank), not the dimension of the solution space.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The solution space of $x - y + z = 0,\ 2x + y - z = 0$ is spanned by'
+  options:
+  - en: '$(0, 1, 1)$'
+  - en: '$(1, 1, 0)$'
+  - en: '$(0, 1, -1)$'
+  - en: '$(1, 0, -1)$'
+  answer: 0
+  explanation:
+    en: |-
+      Add the equations: $3x = 0$, so $x = 0$. Then $-y + z = 0$, so $y = z$. With $z = t$:
+      $$(x, y, z) = t(0, 1, 1).$$
+      The rank is $2$, so the dimension is $3 - 2 = 1$, as found.
+
+      **Check the others:** $(1, 1, 0)$ and $(1, 0, -1)$ satisfy the first equation but give $3$ in the second; $(0, 1, -1)$ gives $-2$ in the first.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  - parameter-systems
+  stem:
+    en: 'The system $kx + y + z = 0,\ x + ky + z = 0,\ x + y + kz = 0$ has a non-trivial solution if and only if'
+  options:
+  - en: '$k = -1$ or $k = 2$'
+  - en: '$k = 1$ only'
+  - en: '$k \ne 1$ and $k \ne -2$'
+  - en: '$k = 1$ or $k = -2$'
+  answer: 3
+  explanation:
+    en: |-
+      A square homogeneous system has a non-trivial solution iff $\det A = 0$. Adding all columns to the first,
+      $$\det A = (k + 2)\begin{vmatrix} 1 & 1 & 1 \\ 1 & k & 1 \\ 1 & 1 & k \end{vmatrix} = (k + 2)(k - 1)^2.$$
+      So $k = 1$ or $k = -2$.
+
+      "$k = 1$ only" forgets the factor $k + 2$ from the column sum. "$k \ne 1, -2$" is the condition for **only** the trivial solution.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  - parameter-systems
+  stem:
+    en: 'The system $x + y + z = 0,\ x + 2y + 3z = 0,\ x + 3y + kz = 0$ has a non-trivial solution for'
+  options:
+  - en: '$k = 4$'
+  - en: '$k = -5$'
+  - en: 'every $k \ne 5$'
+  - en: '$k = 5$'
+  answer: 3
+  explanation:
+    en: |-
+      Set $\det A = 0$:
+      $$\begin{vmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & k \end{vmatrix} = (2k - 9) - (k - 3) + (3 - 2) = k - 5.$$
+      So $k = 5$. Then the rows $(1,1,1), (1,2,3), (1,3,5)$ are in arithmetic progression ($R_1 + R_3 = 2R_2$), and the solution space is the line $t(1, -2, 1)$.
+
+      $k = 4$ comes from continuing the pattern $1, 2, 3$ instead of solving. For $k \ne 5$ only the trivial solution exists.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The dimension of the solution space of $x + 2y - z + w = 0,\ 2x + 4y - 2z + 2w = 0,\ x + 2y + z + 3w = 0$ in $\R^4$ is'
+  options:
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$0$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      The second equation is twice the first, so
+      $$A \sim \begin{pmatrix} 1 & 2 & -1 & 1 \\ 0 & 0 & 2 & 2 \\ 0 & 0 & 0 & 0 \end{pmatrix}, \qquad \rho(A) = 2.$$
+      Hence $\dim N(A) = 4 - 2 = 2$. A basis is $(-2, 1, 0, 0)$ and $(-2, 0, -1, 1)$.
+
+      The trap is $4 - 3 = 1$: it counts **equations** instead of the **rank**.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  - parameter-systems
+  stem:
+    en: 'For the system $kx + y + z = 0,\ x + ky + z = 0,\ x + y + kz = 0$, let $d_1$ and $d_{-2}$ be the dimensions of its solution space when $k = 1$ and $k = -2$. Then'
+  options:
+  - en: '$d_1 = 1,\ d_{-2} = 2$'
+  - en: '$d_1 = 2,\ d_{-2} = 1$'
+  - en: '$d_1 = d_{-2} = 1$'
+  - en: '$d_1 = d_{-2} = 2$'
+  answer: 1
+  explanation:
+    en: |-
+      - $k = 1$: all three equations are $x + y + z = 0$, so $\rho(A) = 1$ and $d_1 = 3 - 1 = 2$ (a plane).
+      - $k = -2$: the rows $(-2, 1, 1)$, $(1, -2, 1)$, $(1, 1, -2)$ sum to zero, but any two are independent. So $\rho(A) = 2$ and $d_{-2} = 3 - 2 = 1$, the line $t(1, 1, 1)$.
+
+      The double root $(k - 1)^2$ of $\det A$ matches the larger solution space at $k = 1$, but the dimension must still be found from the rank.
+  status: ai-generated
+- id: q0017
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'Consider the following statements about a homogeneous system $AX = O$ with $A$ an $m \times n$ real matrix:'
+  statements:
+  - en: It is always consistent.
+  - en: 'If $m < n$, it has a non-trivial solution.'
+  - en: 'If $m = n$ and $\det A \ne 0$, it has infinitely many solutions.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      - **1 is true:** $X = O$ is a solution.
+      - **2 is true:** $\rho(A) \le m < n$, so $\dim N(A) = n - \rho(A) \ge 1$.
+      - **3 is false:** $\det A \ne 0$ means $\rho(A) = n$, so $N(A) = \{O\}$: only the trivial solution.
+
+      So the answer is 1 and 2 only.
+  status: ai-generated
+- id: q0018
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  assertion:
+    en: 'The system $x + 2y + 3z = 0,\ 4x + 5y + 6z = 0,\ 7x + 8y + 9z = 0$ has a non-trivial solution.'
+  reason:
+    en: 'A homogeneous system of $n$ equations in $n$ unknowns has a non-trivial solution if and only if the determinant of its coefficient matrix is zero.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** a non-trivial solution exists iff $\rho(A) < n$, and for square $A$ that means $\det A = 0$.
+
+      **A is true, by R:** $R_3 - R_2 = R_2 - R_1 = (3, 3, 3)$, so the rows are dependent and $\det A = 0$. Indeed $(1, -2, 1)$ is a solution: $1 - 4 + 3 = 0$, $4 - 10 + 6 = 0$, $7 - 16 + 9 = 0$.
+
+      R is exactly the reason, so the answer is (0).
+  status: ai-generated
+- id: q0019
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  - solution-cases
+  assertion:
+    en: 'Every system of $3$ linear equations in $4$ unknowns has infinitely many solutions.'
+  reason:
+    en: A homogeneous system with fewer equations than unknowns has a non-trivial solution.
+  answer: 3
+  explanation:
+    en: |-
+      **R is true:** $\rho(A) \le 3 < 4$, so the solution space has dimension at least $1$.
+
+      **A is false:** a non-homogeneous system can be inconsistent. For example,
+      $$x + y + z + w = 1,\quad x + y + z + w = 2,\quad x - y = 0$$
+      has $\rho(A) = 2$ but $\rho([A\mid B]) = 3$, so no solution. A consistent system of this size does have infinitely many solutions.
+
+      So A is false and R is true: (3).
+  status: ai-generated
+- id: q0020
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  - solution-structure
+  assertion:
+    en: 'For an $m \times n$ real matrix $A$, the set of solutions of $AX = O$ is a subspace of $\R^n$.'
+  reason:
+    en: 'For an $m \times n$ real matrix $A$, the set of solutions of $AX = B$ is a subspace of $\R^n$ for every $B \in \R^m$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** $O$ is a solution, and if $AY_1 = AY_2 = O$ then $A(\alpha Y_1 + \beta Y_2) = O$.
+
+      **R is false:** for $B \ne O$ the zero vector is not a solution, since $AO = O \ne B$. The set is a translate $X_0 + N(A)$, or empty. For example, $x + y = 1$ has solutions $(1, 0)$ and $(0, 1)$, but their sum $(1, 1)$ is not a solution.
+
+      So (2).
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - matrix-method
+  stem:
+    en: 'Solving $x + y + z = 6,\ x - y + z = 2,\ 2x + y - z = 1$ by the matrix method gives $(x, y, z) =$'
+  options:
+  - en: '$(1, 2, 3)$'
+  - en: '$(3, 2, 1)$'
+  - en: '$(1, 3, 2)$'
+  - en: '$(2, 1, 3)$'
+  answer: 0
+  explanation:
+    en: |-
+      $\det A = 1(1 - 1) - 1(-1 - 2) + 1(1 + 2) = 6 \ne 0$, so $X = A^{-1}B$ is unique. With
+      $$\operatorname{adj}A = \begin{pmatrix} 0 & 2 & 2 \\ 3 & -3 & 0 \\ 3 & 1 & -2 \end{pmatrix}, \qquad X = \frac16\begin{pmatrix} 0 & 2 & 2 \\ 3 & -3 & 0 \\ 3 & 1 & -2 \end{pmatrix}\begin{pmatrix} 6 \\ 2 \\ 1 \end{pmatrix} = \frac16\begin{pmatrix} 6 \\ 12 \\ 18 \end{pmatrix} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}.$$
+
+      **Fast check:** subtracting the first two equations gives $2y = 4$, so $y = 2$; then $x + z = 4$ and $2x - z = -1$ give $x = 1$, $z = 3$. $(3, 2, 1)$ fails the third equation ($6 + 2 - 1 = 7$).
+  status: ai-generated
+- id: q0022
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - matrix-method
+  stem:
+    en: 'For a square system $AX = B$, suppose $\det A = 0$ and $(\operatorname{adj}A)B \ne O$. Then the system'
+  options:
+  - en: is inconsistent
+  - en: has a unique solution
+  - en: has infinitely many solutions
+  - en: may have infinitely many solutions or none
+  answer: 0
+  explanation:
+    en: |-
+      If $X$ were a solution, then multiplying $AX = B$ by $\operatorname{adj}A$ gives
+      $$(\operatorname{adj}A)B = (\operatorname{adj}A)AX = (\det A)X = O,$$
+      a contradiction. So there is **no** solution.
+
+      Example: $x + 2y = 1$, $2x + 4y = 3$ has $\det A = 0$ and $(\operatorname{adj}A)B = (-2, 1)^T \ne O$; it is inconsistent.
+
+      "Infinitely many or none" is the (inconclusive) verdict for $(\operatorname{adj}A)B = O$, not for $\ne O$.
+  status: ai-generated
+- id: q0023
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - matrix-method
+  stem:
+    en: 'By Cramer''s rule, the value of $y$ satisfying $x + 2y + 3z = 3,\ 2x - y + z = 6,\ 3x + y - 2z = 3$ is'
+  options:
+  - en: '$-1$'
+  - en: '$1$'
+  - en: '$2$'
+  - en: '$-2$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\Delta = \begin{vmatrix} 1 & 2 & 3 \\ 2 & -1 & 1 \\ 3 & 1 & -2 \end{vmatrix} = 30, \qquad \Delta_2 = \begin{vmatrix} 1 & 3 & 3 \\ 2 & 6 & 1 \\ 3 & 3 & -2 \end{vmatrix} = -30.$$
+      So $y = \Delta_2 / \Delta = -1$. The full solution is $(x, y, z) = (2, -1, 1)$, with $\Delta_1 = 60$ and $\Delta_3 = 30$.
+
+      $2$ is $x = \Delta_1/\Delta$, the value of the wrong unknown. **Check:** $2 - 2 + 3 = 3$, $4 + 1 + 1 = 6$, $6 - 1 - 2 = 3$.
+  status: ai-generated
+- id: q0024
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - matrix-method
+  - solution-cases
+  stem:
+    en: 'Consider the following statements about a non-homogeneous system $AX = B$ of $m$ equations in $n$ unknowns:'
+  statements:
+  - en: 'If $m < n$, the system always has infinitely many solutions.'
+  - en: 'If $m = n$ and $\det A \ne 0$, the system has the unique solution $X = A^{-1}B$.'
+  - en: 'If $m = n$, $\det A = 0$ and $(\operatorname{adj}A)B = O$, the system has infinitely many solutions.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      - **1 is false:** $x + y + z = 1$, $x + y + z = 2$ ($m = 2 < 3 = n$) has no solution. Fewer equations only guarantee infinitely many solutions **if** the system is consistent.
+      - **2 is true:** $A^{-1}$ exists, and $AX = B \iff X = A^{-1}B$.
+      - **3 is false:** if every entry of $A$ is $1$ ($3 \times 3$), then $\operatorname{adj}A = O$, so $(\operatorname{adj}A)B = O$ for every $B$. Yet $x + y + z = 1, 2, 3$ is inconsistent.
+
+      So the answer is 2 only.
+  status: ai-generated
+- id: q0025
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - matrix-method
+  - solution-cases
+  assertion:
+    en: 'The system $x + y = 2,\ 2x + 2y = 4$ has infinitely many solutions.'
+  reason:
+    en: The determinant of the coefficient matrix of this system is zero.
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** the second equation is twice the first, so $\rho(A) = \rho([A\mid B]) = 1 < 2$, with solutions $(2 - t, t)$.
+
+      **R is true:** $\det\begin{pmatrix} 1 & 1 \\ 2 & 2 \end{pmatrix} = 0$.
+
+      But R does not explain A. A zero determinant only rules out a unique solution: $x + y = 2$, $2x + 2y = 5$ has the same $A$ and **no** solution. The real reason is the rank equality $\rho(A) = \rho([A\mid B]) < n$. So (1).
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - matrix-form
+  - solution-cases
+  assertion:
+    en: 'The system $x + y + z = 1,\ x + y + z = 2$ has no solution.'
+  reason:
+    en: 'Here $\rho(A) = 1$ and $\rho([A \mid B]) = 2$, and a linear system is consistent if and only if these two ranks are equal.'
+  answer: 0
+  explanation:
+    en: |-
+      $[A \mid B] = \left(\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 2 \end{array}\right) \to \left(\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{array}\right)$, so $\rho(A) = 1$ and $\rho([A\mid B]) = 2$.
+
+      R is true (it states the ranks and the Rouché–Capelli theorem), and it is exactly why A holds: the ranks differ, so there is no solution. Answer (0).
+  status: ai-generated
+- id: q0027
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - parameter-systems
+  stem:
+    en: 'The system $x + y + z = 1,\ x + 2y + 4z = k,\ x + 4y + 10z = k^2$ is consistent if and only if'
+  options:
+  - en: '$k = -1$ or $k = -2$'
+  - en: '$k = 1$ or $k = 2$'
+  - en: '$k = 1$ or $k = -2$'
+  - en: '$k$ is any real number'
+  answer: 1
+  explanation:
+    en: |-
+      $\det A = 0$, so check consistency by elimination:
+      $$R_2 - R_1:\ y + 3z = k - 1, \qquad R_3 - R_1:\ 3y + 9z = k^2 - 1.$$
+      The left side of the second is $3$ times the first, so we need
+      $$k^2 - 1 = 3(k - 1) \iff k^2 - 3k + 2 = 0 \iff k = 1 \text{ or } 2.$$
+      For these values $\rho(A) = \rho([A\mid B]) = 2$, with infinitely many solutions; otherwise $\rho([A\mid B]) = 3$.
+
+      "Any real $k$" ignores that $\det A = 0$.
+  status: ai-generated
+- id: q0028
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - parameter-systems
+  stem:
+    en: 'The system $ax + y + z = 1,\ x + ay + z = 1,\ x + y + az = 1$ has no solution if and only if'
+  options:
+  - en: '$a = -2$'
+  - en: '$a = 1$'
+  - en: '$a = 2$'
+  - en: '$a = 1$ or $a = -2$'
+  answer: 0
+  explanation:
+    en: |-
+      $\det A = (a + 2)(a - 1)^2$. For $a \ne 1, -2$ the solution is unique. Test each root separately:
+
+      - $a = 1$: all three equations are $x + y + z = 1$, so there are infinitely many solutions.
+      - $a = -2$: adding the three equations gives $0 = 3$, so $\rho(A) = 2 < 3 = \rho([A\mid B])$, and there is **no** solution.
+
+      So only $a = -2$. "$a = 1$ or $a = -2$" is the trap of treating every root of $\det A = 0$ as inconsistent.
+  status: ai-generated
+- id: q0029
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - parameter-systems
+  stem:
+    en: 'For real $k$, the system $x + y + z = 1,\ 2x + 3y + kz = 3,\ x + ky + 3z = 2$ has'
+  options:
+  - en: 'infinitely many solutions for $k = 0$ and for $k = 3$, and a unique solution otherwise'
+  - en: 'no solution for $k = 0$ and infinitely many for $k = 3$'
+  - en: 'no solution for $k = 0$ and for $k = 3$, and a unique solution otherwise'
+  - en: 'a unique solution for every real $k$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\det A = \begin{vmatrix} 1 & 1 & 1 \\ 2 & 3 & k \\ 1 & k & 3 \end{vmatrix} = (9 - k^2) - (6 - k) + (2k - 3) = -k(k - 3).$$
+      For $k \ne 0, 3$ the solution is unique. Test the roots:
+
+      - $k = 0$: $R_2 - 2R_1$: $y - 2z = 1$; $R_3 - R_1$: $-y + 2z = 1$. Adding gives $0 = 2$: **no** solution.
+      - $k = 3$: $R_2 - 2R_1$: $y + z = 1$; $R_3 - R_1$: $2y + 2z = 1$, so $y + z = \tfrac12$. These contradict: **no** solution.
+
+      In both cases $\rho(A) = 2$ and $\rho([A\mid B]) = 3$. Assuming $\det A = 0$ means "infinitely many" is the trap.
+  status: ai-generated
+- id: q0030
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - parameter-systems
+  stem:
+    en: 'For the system $x + y + z = 6,\ x + 2y + 3z = 10,\ x + 2y + \lambda z = \mu$, match the values in List I with the outcome in List II.'
+  left:
+  - en: '$\lambda = 3,\ \mu = 10$'
+  - en: '$\lambda = 3,\ \mu = 11$'
+  - en: '$\lambda = 4,\ \mu = 13$'
+  - en: '$\lambda = 5,\ \mu = 12$'
+  right:
+  - en: no solution
+  - en: infinitely many solutions
+  - en: 'a unique solution, with $z = 3$'
+  - en: 'a unique solution, with $z = 1$'
+  options:
+  - en: 'A-1, B-2, C-3, D-4'
+  - en: 'A-2, B-1, C-4, D-3'
+  - en: 'A-2, B-3, C-1, D-4'
+  - en: 'A-2, B-1, C-3, D-4'
+  answer: 3
+  explanation:
+    en: |-
+      Subtract the second equation from the third:
+      $$(\lambda - 3)z = \mu - 10.$$
+
+      - A: $0 \cdot z = 0$, so $\rho(A) = \rho([A\mid B]) = 2$: infinitely many (2).
+      - B: $0 \cdot z = 1$: no solution (1).
+      - C: $z = \frac{3}{1} = 3$, unique (3).
+      - D: $z = \frac{2}{2} = 1$, unique (4).
+
+      So A-2, B-1, C-3, D-4. Swapping A and B mixes up $\mu = 10$ (consistent) with $\mu \ne 10$.
+  status: ai-generated

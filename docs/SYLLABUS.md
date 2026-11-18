@@ -2,7 +2,7 @@
 
 The content plan and study plan for **WBSSC SLST (Assistant Teacher) Mathematics**: Class IX–X (GRAD, code 86) and Class XI–XII (PG, code 19). The official syllabus is transcribed in [syllabus/wbssc-slst-mathematics.md](syllabus/wbssc-slst-mathematics.md).
 
-**80 topics, 1 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
+**80 topics, 11 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
 
 ## The plan: 6 months at 1–2 hours a day
 
@@ -47,12 +47,12 @@ Concrete computation rebuilds speed and confidence after a long gap.
 | Q | ID | Topic | Covers | Level | Status |
 |---|---|---|---|---|---|
 | 1 | `math.algebra.complex-numbers` | Complex Numbers and De Moivre's Theorem | Ordered-pair definition, modulus, amplitude, Argand diagram, De Moivre, roots of unity | IX–XII | ✅ |
-| 2 | `math.algebra.complex-functions` | Functions of a Complex Variable | exp, sin, cos, Log of z; a^z; inverse circular and hyperbolic functions | IX–XII | 🔲 |
-| 3 | `math.algebra.polynomials` | Polynomials and Nature of Roots | Synthetic division, remainder theorem, fundamental theorem, conjugate roots, Descartes' rule, multiple roots, Rolle | IX–XII | 🔲 |
-| 4 | `math.algebra.roots-coefficients` | Roots, Coefficients and Transformations | Relations between roots and coefficients, symmetric functions, transformation of equations, reciprocal equations | IX–XII | 🔲 |
-| 5 | `math.algebra.cubic-biquadratic` | Cubic and Biquadratic Equations | Cardan's method, Ferrari's method | IX–XII | 🔲 |
-| 6 | `math.algebra.inequalities` | Inequalities | AM ≥ GM ≥ HM, Cauchy–Schwarz inequality and applications | XI–XII | 🔲 |
-| 7 | `math.algebra.number-theory` | Integers and Divisibility | Well-ordering, induction, division algorithm, GCD, primes, Euclid's theorems, unique factorisation | XI–XII | 🔲 |
+| 2 | `math.algebra.complex-functions` | Functions of a Complex Variable | exp, sin, cos, Log of z; a^z; inverse circular and hyperbolic functions | IX–XII | ✅ |
+| 3 | `math.algebra.polynomials` | Polynomials and Nature of Roots | Synthetic division, remainder theorem, fundamental theorem, conjugate roots, Descartes' rule, multiple roots, Rolle | IX–XII | ✅ |
+| 4 | `math.algebra.roots-coefficients` | Roots, Coefficients and Transformations | Relations between roots and coefficients, symmetric functions, transformation of equations, reciprocal equations | IX–XII | ✅ |
+| 5 | `math.algebra.cubic-biquadratic` | Cubic and Biquadratic Equations | Cardan's method, Ferrari's method | IX–XII | ✅ |
+| 6 | `math.algebra.inequalities` | Inequalities | AM ≥ GM ≥ HM, Cauchy–Schwarz inequality and applications | XI–XII | ✅ |
+| 7 | `math.algebra.number-theory` | Integers and Divisibility | Well-ordering, induction, division algorithm, GCD, primes, Euclid's theorems, unique factorisation | XI–XII | ✅ |
 
 ### Block 2: Matrices and Linear Algebra (Weeks 3–4)
 
@@ -60,10 +60,10 @@ Mostly mechanical (determinants, rank, eigenvalues), then the vector-space theor
 
 | Q | ID | Topic | Covers | Level | Status |
 |---|---|---|---|---|---|
-| 8 | `math.linalg.determinants` | Determinants | Properties, minors and cofactors, product, adjoint, symmetric/skew-symmetric, Cramer's rule | IX–XII | 🔲 |
-| 9 | `math.linalg.matrices-rank` | Matrices, Inverse and Rank | Matrix algebra, adj A, inverse, elementary operations, rank, normal form, congruence | IX–XII | 🔲 |
-| 10 | `math.linalg.linear-systems` | Systems of Linear Equations | Consistency, homogeneous systems, solution space, matrix method | IX–XII | 🔲 |
-| 11 | `math.linalg.eigen-cayley-hamilton` | Eigenvalues and Cayley–Hamilton | Characteristic equation, eigenvalues/eigenvectors, Cayley–Hamilton, diagonalisation | IX–XII | 🔲 |
+| 8 | `math.linalg.determinants` | Determinants | Properties, minors and cofactors, product, adjoint, symmetric/skew-symmetric, Cramer's rule | IX–XII | ✅ |
+| 9 | `math.linalg.matrices-rank` | Matrices, Inverse and Rank | Matrix algebra, adj A, inverse, elementary operations, rank, normal form, congruence | IX–XII | ✅ |
+| 10 | `math.linalg.linear-systems` | Systems of Linear Equations | Consistency, homogeneous systems, solution space, matrix method | IX–XII | ✅ |
+| 11 | `math.linalg.eigen-cayley-hamilton` | Eigenvalues and Cayley–Hamilton | Characteristic equation, eigenvalues/eigenvectors, Cayley–Hamilton, diagonalisation | IX–XII | ✅ |
 | 12 | `math.linalg.quadratic-forms` | Real Quadratic Forms | Matrix of a form, reduction to normal form, rank, signature, definiteness | IX–XII | 🔲 |
 | 13 | `math.linalg.vector-spaces` | Vector Spaces | Subspaces, span, linear independence, basis, dimension, row/column space | IX–XII | 🔲 |
 | 14 | `math.linalg.linear-transformations` | Linear Transformations | Null space, range, rank–nullity, Sylvester's law of nullity, matrix w.r.t. bases | XI–XII | 🔲 |

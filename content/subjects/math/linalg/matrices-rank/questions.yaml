@@ -1,0 +1,668 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - matrix-algebra
+  - exam-tips
+  stem:
+    en: 'If $A$ is a $3\times 2$ matrix and $B$ is a $2\times 3$ matrix, then the order of $AB$ is'
+  options:
+  - en: '$2\times 2$'
+  - en: '$3\times 2$'
+  - en: '$3\times 3$'
+  - en: '$AB$ is not defined'
+  answer: 2
+  explanation:
+    en: |-
+      $(m\times n)(n\times p)$ is $m\times p$. Here $(3\times 2)(2\times 3)$ has matching inner size $2$, so
+      $$AB \text{ is } 3\times 3.$$
+      $2\times 2$ is the order of $BA$, not $AB$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  stem:
+    en: 'The inverse of $A = \begin{pmatrix}2 & 3\\ 1 & 2\end{pmatrix}$ is'
+  options:
+  - en: '$\begin{pmatrix}2 & -1\\ -3 & 2\end{pmatrix}$'
+  - en: '$\begin{pmatrix}-2 & 3\\ 1 & -2\end{pmatrix}$'
+  - en: '$\begin{pmatrix}2 & -3\\ -1 & 2\end{pmatrix}$'
+  - en: '$\begin{pmatrix}2 & 3\\ 1 & 2\end{pmatrix}$'
+  answer: 2
+  explanation:
+    en: |-
+      $\det A = 4 - 3 = 1$. For a $2\times 2$ matrix, swap the diagonal and negate the off-diagonal:
+      $$A^{-1} = \frac{1}{1}\begin{pmatrix}2 & -3\\ -1 & 2\end{pmatrix}.$$
+      Check: $A A^{-1} = \begin{pmatrix}4 - 3 & -6 + 6\\ 2 - 2 & -3 + 4\end{pmatrix} = I$. The option with $-1$ and $-3$ swapped is the transpose of the adjoint (the cofactor matrix), a common slip.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - transpose-symmetric
+  - exam-tips
+  stem:
+    en: 'For matrices $A$ ($m\times n$) and $B$ ($n\times p$), $(AB)^T$ equals'
+  options:
+  - en: '$A^TB^T$'
+  - en: '$B^TA^T$'
+  - en: '$AB$'
+  - en: '$BA$'
+  answer: 1
+  explanation:
+    en: |-
+      The reversal law: $\big((AB)^T\big)_{ij} = (AB)_{ji} = \sum_k a_{jk}b_{ki} = \sum_k (B^T)_{ik}(A^T)_{kj}$, so
+      $$(AB)^T = B^TA^T.$$
+      $A^TB^T$ is not even defined here unless $p = m$ (it would be $(n\times m)(p\times n)$).
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - transpose-symmetric
+  stem:
+    en: 'If $A = \begin{pmatrix}2 & 3 + i\\ x & 5\end{pmatrix}$ is Hermitian, then $x$ equals'
+  options:
+  - en: '$3 + i$'
+  - en: '$-3 + i$'
+  - en: '$-3 - i$'
+  - en: '$3 - i$'
+  answer: 3
+  explanation:
+    en: |-
+      Hermitian means $A^* = A$, that is, $a_{21} = \overline{a_{12}}$. So
+      $$x = \overline{3 + i} = 3 - i.$$
+      $x = 3 + i$ would make $A$ symmetric, not Hermitian; $-3 + i$ is the skew-Hermitian condition $a_{21} = -\overline{a_{12}}$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rank-properties
+  - rank
+  stem:
+    en: 'The rank of $\begin{pmatrix}1 & 2 & 3\\ 2 & 4 & 6\\ 3 & 6 & 9\end{pmatrix}$ is'
+  options:
+  - en: '$1$'
+  - en: '$2$'
+  - en: '$3$'
+  - en: '$0$'
+  answer: 0
+  explanation:
+    en: |-
+      Rows 2 and 3 are $2\times$ and $3\times$ row 1. After $R_2 - 2R_1$ and $R_3 - 3R_1$ only one non-zero row remains:
+      $$\rho = 1.$$
+      The rank is not $0$ because the matrix is non-zero (any entry is a non-zero $1\times1$ minor). It is not $2$: every $2\times 2$ minor is $0$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  - exam-tips
+  stem:
+    en: 'If $A = \begin{pmatrix}1 & 2 & 3\\ 0 & 1 & 4\\ 0 & 0 & 2\end{pmatrix}$, then $A\,(\operatorname{adj}A)$ equals'
+  options:
+  - en: '$2I$'
+  - en: '$4I$'
+  - en: '$I$'
+  - en: '$8I$'
+  answer: 0
+  explanation:
+    en: |-
+      Always $A\,(\operatorname{adj}A) = (\det A)\,I$. $A$ is upper triangular, so
+      $$\det A = 1\cdot 1\cdot 2 = 2, \qquad A\,(\operatorname{adj}A) = 2I.$$
+      $4I$ and $8I$ come from mixing this up with $\det(\operatorname{adj}A) = \lvert A\rvert^{2} = 4$ or with $\lvert A\rvert^3$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - transpose-symmetric
+  stem:
+    en: '$A = \begin{pmatrix}1 & 2 & 3\\ 4 & 5 & 6\\ 7 & 8 & 9\end{pmatrix}$ is written as $P + Q$ with $P$ symmetric and $Q$ skew-symmetric. The $(1,3)$ entry of $Q$ is'
+  options:
+  - en: '$2$'
+  - en: '$5$'
+  - en: '$-4$'
+  - en: '$-2$'
+  answer: 3
+  explanation:
+    en: |-
+      $Q = \frac12(A - A^T)$, so
+      $$q_{13} = \frac{a_{13} - a_{31}}{2} = \frac{3 - 7}{2} = -2.$$
+      $5$ is $p_{13} = \frac{3 + 7}{2}$ (the symmetric part); $-4$ forgets the factor $\frac12$; $2$ is $q_{31}$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  - exam-tips
+  stem:
+    en: '$A$ is a $3\times 3$ matrix with $\det A = 5$. Then $\det(\operatorname{adj}A)$ is'
+  options:
+  - en: '$125$'
+  - en: '$5$'
+  - en: '$25$'
+  - en: '$\dfrac15$'
+  answer: 2
+  explanation:
+    en: |-
+      Take determinants in $A\,\operatorname{adj}A = (\det A)I_3$: $\det A\cdot\det(\operatorname{adj}A) = (\det A)^3$. So
+      $$\det(\operatorname{adj}A) = (\det A)^{n-1} = 5^2 = 25.$$
+      $125 = 5^3$ uses the exponent $n$ instead of $n - 1$; $\frac15$ is $\det(A^{-1})$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  stem:
+    en: 'If $A$ is a $3\times 3$ matrix with $\det A = 4$, then $\operatorname{adj}(\operatorname{adj}A)$ equals'
+  options:
+  - en: '$16A$'
+  - en: '$A$'
+  - en: '$64A$'
+  - en: '$4A$'
+  answer: 3
+  explanation:
+    en: |-
+      For order $n$, $\operatorname{adj}(\operatorname{adj}A) = (\det A)^{n-2}A$. With $n = 3$:
+      $$\operatorname{adj}(\operatorname{adj}A) = 4^{1}A = 4A.$$
+      $16A$ uses $(\det A)^{n-1}$, which is the formula for $\det(\operatorname{adj}A)$. The answer $A$ is correct only for $n = 2$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rank
+  stem:
+    en: 'The rank of $\begin{pmatrix}1 & 2 & -1 & 3\\ 2 & 4 & 1 & -2\\ 3 & 6 & 3 & -7\end{pmatrix}$ is'
+  options:
+  - en: '$3$'
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$4$'
+  answer: 1
+  explanation:
+    en: |-
+      Sweep out the first column:
+      $$\xrightarrow[R_3 - 3R_1]{R_2 - 2R_1}\begin{pmatrix}1 & 2 & -1 & 3\\ 0 & 0 & 3 & -8\\ 0 & 0 & 6 & -16\end{pmatrix}\xrightarrow{R_3 - 2R_2}\begin{pmatrix}1 & 2 & -1 & 3\\ 0 & 0 & 3 & -8\\ 0 & 0 & 0 & 0\end{pmatrix}.$$
+      Two non-zero rows, so $\rho = 2$. The rank of a $3\times 4$ matrix is at most $3$, so $4$ is impossible; $3$ misses the dependence $R_3 = 2R_2 - R_1$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rank
+  stem:
+    en: 'The matrix $\begin{pmatrix}1 & 1 & 1\\ 1 & 2 & 3\\ 2 & 3 & k\end{pmatrix}$ has rank $2$ when $k$ equals'
+  options:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$5$'
+  - en: '$-4$'
+  answer: 1
+  explanation:
+    en: |-
+      The first two rows are independent, so the rank is at least $2$. It is exactly $2$ iff the determinant is $0$:
+      $$\det = 1(2k - 9) - 1(k - 6) + 1(3 - 4) = k - 4 = 0 \iff k = 4.$$
+      Check: for $k = 4$, $R_3 = R_1 + R_2$. For every other $k$ the rank is $3$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - elementary-operations
+  stem:
+    en: 'The inverse of the elementary matrix $E = \begin{pmatrix}1 & 0 & 2\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}$ is'
+  options:
+  - en: '$\begin{pmatrix}1 & 0 & -2\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ 2 & 0 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 0 & \frac12\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ -2 & 0 & 1\end{pmatrix}$'
+  answer: 0
+  explanation:
+    en: |-
+      $E$ comes from $I_3$ by $R_1 \to R_1 + 2R_3$. The inverse operation is $R_1 \to R_1 - 2R_3$, so
+      $$E^{-1} = \begin{pmatrix}1 & 0 & -2\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}.$$
+      Check: $EE^{-1}$ has $(1,3)$ entry $-2 + 2 = 0$. The transpose $E^T$ is not the inverse (that holds only for orthogonal matrices), and $\frac12$ is the rule for the scaling type, not the adding type.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  - exam-tips
+  stem:
+    en: 'If $A^{-1} = \begin{pmatrix}1 & 2\\ 0 & 1\end{pmatrix}$ and $B^{-1} = \begin{pmatrix}1 & 0\\ 3 & 1\end{pmatrix}$, then $(AB)^{-1}$ is'
+  options:
+  - en: '$\begin{pmatrix}7 & 2\\ 3 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 2\\ 3 & 1\end{pmatrix}$'
+  - en: '$\begin{pmatrix}2 & 2\\ 3 & 2\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 2\\ 3 & 7\end{pmatrix}$'
+  answer: 3
+  explanation:
+    en: |-
+      By the reversal law $(AB)^{-1} = B^{-1}A^{-1}$:
+      $$\begin{pmatrix}1 & 0\\ 3 & 1\end{pmatrix}\begin{pmatrix}1 & 2\\ 0 & 1\end{pmatrix} = \begin{pmatrix}1 & 2\\ 3 & 7\end{pmatrix}.$$
+      $\begin{pmatrix}7 & 2\\ 3 & 1\end{pmatrix}$ is $A^{-1}B^{-1}$, the wrong order. Quick check: $\det = 7 - 6 = 1 = \det A^{-1}\det B^{-1}$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - normal-form
+  - rank
+  stem:
+    en: 'The matrix $\begin{pmatrix}1 & 2 & 3 & 4\\ 2 & 4 & 6 & 8\\ 1 & 0 & 1 & 0\end{pmatrix}$ is equivalent to'
+  options:
+  - en: '$\begin{bmatrix}I_2 & O\\ O & O\end{bmatrix}_{3\times 4}$'
+  - en: '$\begin{bmatrix}I_3 & O\end{bmatrix}_{3\times 4}$'
+  - en: '$\begin{bmatrix}I_1 & O\\ O & O\end{bmatrix}_{3\times 4}$'
+  - en: '$I_3$'
+  answer: 0
+  explanation:
+    en: |-
+      Equivalent matrices have the same order and the same rank. Here $R_2 = 2R_1$, and rows 1 and 3 are not proportional, so
+      $$\rho = 2,$$
+      and the normal form is $\begin{bmatrix}I_2 & O\\ O & O\end{bmatrix}$ of order $3\times 4$. $I_3$ has the wrong order, and $[I_3\ O]$ needs rank $3$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - normal-form
+  stem:
+    en: '$A = \dfrac13\begin{pmatrix}1 & 2 & 2\\ 2 & 1 & -2\\ x & 2 & -1\end{pmatrix}$ is orthogonal. Then $x$ equals'
+  options:
+  - en: '$2$'
+  - en: '$-2$'
+  - en: '$1$'
+  - en: '$-1$'
+  answer: 1
+  explanation:
+    en: |-
+      The rows of an orthogonal matrix are orthonormal. Row 3 must be orthogonal to row 1:
+      $$x + 4 - 2 = 0 \implies x = -2.$$
+      Check with row 2: $2(-2) + 2 + 2 = 0$, and the length of row 3 is $\frac13\sqrt{4 + 4 + 1} = 1$. $x = 2$ makes the length right but breaks orthogonality.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  stem:
+    en: 'A square matrix $A$ satisfies $A^2 - A + I = O$. Then $A^{-1}$'
+  options:
+  - en: 'exists and equals $A - I$'
+  - en: 'exists and equals $I - A$'
+  - en: 'exists and equals $A + I$'
+  - en: does not exist
+  answer: 1
+  explanation:
+    en: |-
+      Rewrite: $A - A^2 = I$, that is,
+      $$A(I - A) = (I - A)A = I.$$
+      So $A$ is invertible and $A^{-1} = I - A$. The sign slip gives $A - I$, which is $-A^{-1}$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rank-properties
+  stem:
+    en: '$A$ is a $4\times 4$ matrix of rank $3$. The rank of $\operatorname{adj}A$ is'
+  options:
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$0$'
+  - en: '$4$'
+  answer: 0
+  explanation:
+    en: |-
+      For order $n$: $\rho(\operatorname{adj}A) = n, 1, 0$ according as $\rho(A) = n$, $n - 1$, or $\le n - 2$.
+
+      Here $\rho(A) = 3 = n - 1$. Some $3\times 3$ minor is non-zero, so $\operatorname{adj}A \ne O$. Also $A\operatorname{adj}A = (\det A)I = O$, which forces $\rho(\operatorname{adj}A) \le n - \rho(A) = 1$. Hence
+      $$\rho(\operatorname{adj}A) = 1.$$
+      $0$ is the answer only when $\rho(A) \le 2$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rank-properties
+  - exam-tips
+  stem:
+    en: 'If $A$ is a $3\times 2$ real matrix and $B$ is a $2\times 3$ real matrix, then $\det(AB)$'
+  options:
+  - en: 'is always $0$'
+  - en: 'equals $\det A\cdot\det B$'
+  - en: 'is always $1$'
+  - en: can be any real number
+  answer: 0
+  explanation:
+    en: |-
+      $AB$ is $3\times 3$, but
+      $$\rho(AB) \le \min\{\rho(A), \rho(B)\} \le 2 < 3,$$
+      so $AB$ is singular and $\det(AB) = 0$ always. $\det A$ and $\det B$ are not defined (the matrices are not square). By contrast, $BA$ is $2\times 2$ and can be non-singular.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rank
+  stem:
+    en: 'The rank of $\begin{pmatrix}k & 1 & 1\\ 1 & k & 1\\ 1 & 1 & k\end{pmatrix}$ is exactly $2$ when $k$ equals'
+  options:
+  - en: '$1$'
+  - en: '$-2$'
+  - en: '$2$'
+  - en: '$-1$'
+  answer: 1
+  explanation:
+    en: |-
+      Adding all rows to the first gives the factor $k + 2$, and
+      $$\det = (k + 2)(k - 1)^2.$$
+      The rank is $3$ unless $k = 1$ or $k = -2$.
+
+      - $k = 1$: all rows equal $(1,1,1)$, so the rank is $1$, not $2$.
+      - $k = -2$: the minor $\begin{vmatrix}-2 & 1\\ 1 & -2\end{vmatrix} = 3 \ne 0$, so the rank is $2$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  stem:
+    en: 'For $A = \begin{pmatrix}1 & 2 & 3\\ 0 & 1 & 4\\ 5 & 6 & 0\end{pmatrix}$, the $(1,2)$ entry of $A^{-1}$ is'
+  options:
+  - en: '$20$'
+  - en: '$-18$'
+  - en: '$18$'
+  - en: '$-20$'
+  answer: 2
+  explanation:
+    en: |-
+      $\det A = 1(0 - 24) - 2(0 - 20) + 3(0 - 5) = 1$, so $A^{-1} = \operatorname{adj}A$.
+
+      The $(1,2)$ entry of $\operatorname{adj}A$ is the cofactor $C_{21}$ (transpose!):
+      $$C_{21} = -\begin{vmatrix}2 & 3\\ 6 & 0\end{vmatrix} = -(0 - 18) = 18.$$
+      $20$ is $C_{12}$, the answer you get if you forget to transpose; $-18$ forgets the sign $(-1)^{2+1}$.
+  status: ai-generated
+- id: q0021
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rank-properties
+  stem:
+    en: 'Consider the following statements about real matrices $A$ and $B$ for which the operations are defined:'
+  statements:
+  - en: '$\rho(A^T) = \rho(A)$'
+  - en: '$\rho(AB) \le \min\{\rho(A), \rho(B)\}$'
+  - en: '$\rho(A + B) = \rho(A) + \rho(B)$'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  - en: 2 only
+  - en: 1 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      Statement 1 holds: the minors of $A^T$ are exactly the minors of $A$.
+
+      Statement 2 holds: the rows of $AB$ are combinations of the rows of $B$, and its columns are combinations of the columns of $A$.
+
+      Statement 3 fails. Only $\rho(A + B) \le \rho(A) + \rho(B)$ is true. With $A = I_2$, $B = -I_2$:
+      $$\rho(A + B) = \rho(O) = 0 \ne 2 + 2.$$
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - matrix-algebra
+  - adjoint-inverse
+  stem:
+    en: 'Consider the following statements about square matrices $A, B, C$ of order $n \ge 2$:'
+  statements:
+  - en: 'If $AB = O$, then $A = O$ or $B = O$.'
+  - en: 'If $A$ is non-singular and $AB = AC$, then $B = C$.'
+  - en: '$(A + B)^2 = A^2 + 2AB + B^2$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 2 only
+  answer: 3
+  explanation:
+    en: |-
+      Statement 1 is false (zero divisors): $A = \begin{pmatrix}1 & 0\\ 0 & 0\end{pmatrix}$, $B = \begin{pmatrix}0 & 0\\ 1 & 0\end{pmatrix}$ give $AB = O$.
+
+      Statement 2 is true: multiply on the left by $A^{-1}$.
+
+      Statement 3 is false in general: $(A + B)^2 = A^2 + AB + BA + B^2$, and $AB \ne BA$. With the same $A, B$: $AB = O$ but $BA \ne O$, so the two sides differ by $BA - AB = BA \ne O$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - normal-form
+  stem:
+    en: 'Let $B = P^TAP$, where $A$ is a real $n\times n$ matrix and $P$ is a real non-singular $n\times n$ matrix. Consider:'
+  statements:
+  - en: '$\rho(B) = \rho(A)$.'
+  - en: '$\det B = \det A$.'
+  - en: 'If $A$ is symmetric, then $B$ is symmetric.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      $B$ is **congruent** to $A$.
+
+      1. True: multiplying by non-singular $P^T$ and $P$ does not change rank.
+      2. False: $\det B = (\det P)^2\det A$. With $A = I_2$ and $P = 2I_2$, $\det B = 16 \ne 1$.
+      3. True: $B^T = P^TA^TP = P^TAP = B$.
+
+      So congruence preserves rank and symmetry, but not the determinant (over $\R$, only its sign).
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  - exam-tips
+  stem:
+    en: '$A$ is a $3\times 3$ matrix with $\det A = 2$. Match each quantity in List I with its value in List II.'
+  left:
+  - en: '$\det(A^T)$'
+  - en: '$\det(\operatorname{adj}A)$'
+  - en: '$\det(2A)$'
+  - en: '$\det(A^{-1})$'
+  right:
+  - en: '$\frac12$'
+  - en: '$2$'
+  - en: '$4$'
+  - en: '$16$'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-1, B-3, C-4, D-2'
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-2, B-3, C-1, D-4'
+  answer: 2
+  explanation:
+    en: |-
+      - $\det A^T = \det A = 2$.
+      - $\det(\operatorname{adj}A) = (\det A)^{n-1} = 2^2 = 4$.
+      - $\det(2A) = 2^3\det A = 16$ (each of the 3 rows is doubled, not just one).
+      - $\det(A^{-1}) = \frac{1}{\det A} = \frac12$.
+
+      So A-2, B-3, C-4, D-1. The trap is $\det(2A) = 4$, which treats $2A$ as if one row were scaled.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - transpose-symmetric
+  - matrix-algebra
+  - normal-form
+  stem:
+    en: Match each matrix in List I with the property in List II that it has.
+  left:
+  - en: '$\begin{pmatrix}2 & 1 + i\\ 1 - i & 3\end{pmatrix}$'
+  - en: '$\begin{pmatrix}0 & 2\\ -2 & 0\end{pmatrix}$'
+  - en: '$\begin{pmatrix}\frac35 & -\frac45\\ \frac45 & \frac35\end{pmatrix}$'
+  - en: '$\begin{pmatrix}1 & 1\\ 0 & 0\end{pmatrix}$'
+  right:
+  - en: idempotent
+  - en: orthogonal
+  - en: Hermitian
+  - en: skew-symmetric
+  options:
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  answer: 3
+  explanation:
+    en: |-
+      - A: $a_{21} = 1 - i = \overline{a_{12}}$ and the diagonal is real, so $A^* = A$: **Hermitian** (3).
+      - B: $B^T = -B$: **skew-symmetric** (4). It is not orthogonal, since $BB^T = 4I$.
+      - C: the columns are orthonormal ($\frac{9}{25} + \frac{16}{25} = 1$, and $-\frac{12}{25} + \frac{12}{25} = 0$): **orthogonal** (2), a rotation.
+      - D: $D^2 = \begin{pmatrix}1 & 1\\ 0 & 0\end{pmatrix} = D$: **idempotent** (1).
+
+      So A-3, B-4, C-2, D-1. Each matrix has only its own property from List II.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - adjoint-inverse
+  assertion:
+    en: 'The matrix $\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix}$ has no inverse.'
+  reason:
+    en: 'A square matrix $A$ is invertible if and only if $\det A \ne 0$.'
+  answer: 0
+  explanation:
+    en: |-
+      $\det\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix} = 4 - 4 = 0$, so by R the matrix is not invertible. Both are true and R is exactly the reason for A.
+
+      (R holds because $A\,\operatorname{adj}A = (\det A)I$ gives the inverse when $\det A \ne 0$, and $\det A\det A^{-1} = 1$ rules out an inverse when $\det A = 0$.)
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rank
+  - rank-properties
+  assertion:
+    en: 'The rank of $\begin{pmatrix}1 & 2\\ 3 & 6\end{pmatrix}$ is $1$.'
+  reason:
+    en: 'For every matrix $A$, $\rho(A^T) = \rho(A)$.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: the second row is $3\times$ the first, so $\det = 0$, while the matrix is non-zero. Hence $\rho = 1$.
+
+      R is true: minors of $A^T$ are minors of $A$.
+
+      But R does not explain A. The rank in A comes from the vanishing determinant and the proportional rows, not from comparing with the transpose.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - matrix-algebra
+  assertion:
+    en: 'There exist non-zero $2\times 2$ real matrices $A$ and $B$ with $AB = O$.'
+  reason:
+    en: 'For square matrices $A$ and $B$ of the same order, $AB = O$ implies $BA = O$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $A = \begin{pmatrix}1 & 0\\ 0 & 0\end{pmatrix}$, $B = \begin{pmatrix}0 & 0\\ 1 & 0\end{pmatrix}$ give $AB = O$.
+
+      R is false for the same pair:
+      $$BA = \begin{pmatrix}0 & 0\\ 1 & 0\end{pmatrix} \ne O.$$
+      Matrix multiplication is not commutative, so nothing about $BA$ follows from $AB$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - transpose-symmetric
+  assertion:
+    en: 'Every real skew-symmetric matrix of order $3$ is non-singular.'
+  reason:
+    en: 'Every diagonal entry of a real skew-symmetric matrix is $0$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false. For skew-symmetric $A$ of odd order $n$,
+      $$\det A = \det(A^T) = \det(-A) = (-1)^n\det A = -\det A,$$
+      so $\det A = 0$: every such matrix is **singular**.
+
+      R is true: $a_{ii} = -a_{ii}$ gives $a_{ii} = 0$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - normal-form
+  assertion:
+    en: 'Any two $3\times 4$ real matrices of rank $2$ are equivalent.'
+  reason:
+    en: 'Every $m\times n$ matrix of rank $r \ge 1$ can be reduced by elementary row and column operations to the normal form $\begin{bmatrix}I_r & O\\ O & O\end{bmatrix}$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is the normal-form theorem: there are non-singular $P, Q$ with $PAQ = N_r$.
+
+      A follows from R: if $P_1AQ_1 = N_2 = P_2BQ_2$, then
+      $$B = (P_2^{-1}P_1)\,A\,(Q_1Q_2^{-1}),$$
+      so $B$ is equivalent to $A$. Both are true and R explains A.
+  status: ai-generated

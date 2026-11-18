@@ -1,0 +1,19 @@
+id: math.algebra.inequalities
+title:
+  en: Inequalities
+summary:
+  en: AM ≥ GM ≥ HM and their weighted forms, the power mean inequality, the Cauchy–Schwarz inequality with its Engel (Titu) form, and their use for constrained maxima and minima and standard bounds.
+order: 6
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on inequalities
+  - H. S. Hall and S. R. Knight, Higher Algebra, ch. on inequalities
+  - S. Barnard and J. M. Child, Higher Algebra, ch. on inequalities
+  - G. H. Hardy, J. E. Littlewood and G. Pólya, Inequalities, ch. 2
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) A.4 Inequalities
+retired: []

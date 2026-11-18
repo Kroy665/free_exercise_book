@@ -5,3 +5,9 @@ order: 1
 # Planned topics: docs/SYLLABUS.md (Block 1). Only written topics are listed.
 topics:
   - math.algebra.complex-numbers
+  - math.algebra.complex-functions
+  - math.algebra.polynomials
+  - math.algebra.roots-coefficients
+  - math.algebra.cubic-biquadratic
+  - math.algebra.inequalities
+  - math.algebra.number-theory

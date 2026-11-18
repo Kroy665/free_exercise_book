@@ -1,0 +1,673 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - extrema
+  - am-gm-hm
+  stem:
+    en: 'For $x > 0$, the least value of $x + \dfrac{1}{x}$ is'
+  options:
+  - en: '$1$'
+  - en: '$2\sqrt2$'
+  - en: '$0$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      By AM ≥ GM on the positive numbers $x$ and $\frac1x$:
+      $$x + \frac1x \ge 2\sqrt{x\cdot\frac1x} = 2,$$
+      with equality iff $x = \frac1x$, that is, $x = 1$. So the least value is $2$.
+
+      The value $1$ is $\sqrt{x\cdot\frac1x}$, the GM itself; the sum is twice the GM.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'If $x, y > 0$ and $x + y = 10$, the greatest value of $xy$ is'
+  options:
+  - en: '$50$'
+  - en: '$100$'
+  - en: '$25$'
+  - en: '$20$'
+  answer: 2
+  explanation:
+    en: |-
+      With the sum fixed, the product is greatest when the numbers are equal:
+      $$\sqrt{xy} \le \frac{x + y}{2} = 5 \implies xy \le 25,$$
+      attained at $x = y = 5$.
+
+      $100 = (x + y)^2$ forgets to divide by $4$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - am-gm-hm
+  - exam-tips
+  stem:
+    en: 'The arithmetic mean of two positive numbers is $\dfrac{13}{2}$ and their geometric mean is $6$. Their harmonic mean is'
+  options:
+  - en: '$\dfrac{11}{2}$'
+  - en: '$\dfrac{72}{13}$'
+  - en: '$\dfrac{13}{72}$'
+  - en: '$\dfrac{78}{13}$'
+  answer: 1
+  explanation:
+    en: |-
+      For two positive numbers $G^2 = AH$, so
+      $$H = \frac{G^2}{A} = \frac{36}{13/2} = \frac{72}{13}.$$
+      (The numbers are $4$ and $9$: $H = \frac{2\cdot 36}{13}$.)
+
+      Check: $H = \frac{72}{13} \approx 5.54 < G = 6$, as it must be. $\frac{11}{2}$ comes from guessing an arithmetic pattern $A, G, H$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-bounds
+  stem:
+    en: 'For positive reals $a, b, c$, the least value of $(a + b + c)\left(\dfrac1a + \dfrac1b + \dfrac1c\right)$ is'
+  options:
+  - en: '$3$'
+  - en: '$6$'
+  - en: '$9$'
+  - en: '$27$'
+  answer: 2
+  explanation:
+    en: |-
+      By $A \ge H$ for $a, b, c$:
+      $$\frac{a + b + c}{3} \ge \frac{3}{\frac1a + \frac1b + \frac1c} \implies (a + b + c)\Big(\frac1a + \frac1b + \frac1c\Big) \ge 9,$$
+      with equality at $a = b = c$ (put $a = b = c = 1$: $3 \cdot 3 = 9$).
+
+      In general the bound is $n^2$, not $n$ or $n^3$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - am-gm-hm
+  stem:
+    en: 'For positive reals $a_1, \dots, a_n$, equality holds in $\dfrac{a_1 + \cdots + a_n}{n} \ge (a_1 a_2 \cdots a_n)^{1/n}$ if and only if'
+  options:
+  - en: '$a_1 a_2 \cdots a_n = 1$'
+  - en: '$a_1 + a_2 + \cdots + a_n = n$'
+  - en: '$n = 2$'
+  - en: '$a_1 = a_2 = \cdots = a_n$'
+  answer: 3
+  explanation:
+    en: |-
+      AM = GM exactly when all the numbers are equal. If two of them differ, replacing both by their mean keeps the sum and strictly increases the product, so AM > GM.
+
+      A product equal to $1$ does not force equality: for $2$ and $\frac12$, the AM is $\frac54$ but the GM is $1$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'For $x > 0$, the least value of $4x + \dfrac{9}{x}$ is'
+  options:
+  - en: '$13$'
+  - en: '$6$'
+  - en: '$36$'
+  - en: '$12$'
+  answer: 3
+  explanation:
+    en: |-
+      $$4x + \frac9x \ge 2\sqrt{4x\cdot\frac9x} = 2\sqrt{36} = 12,$$
+      with equality when $4x = \frac9x$, i.e. $x = \frac32$.
+
+      $13$ is the value at $x = 1$, which is not the minimiser; $6 = \sqrt{36}$ forgets the factor $2$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - weighted
+  stem:
+    en: 'If $x, y > 0$ and $x + y = 3$, the greatest value of $x^2 y$ is'
+  options:
+  - en: '$\dfrac{27}{8}$'
+  - en: '$4$'
+  - en: '$1$'
+  - en: '$\dfrac{9}{4}$'
+  answer: 1
+  explanation:
+    en: |-
+      Split $x$ into two equal parts, so that the sum stays fixed: $\frac x2 + \frac x2 + y = 3$. By AM ≥ GM,
+      $$\frac x2\cdot\frac x2\cdot y \le \Big(\frac{3}{3}\Big)^3 = 1 \implies x^2 y \le 4,$$
+      with equality at $\frac x2 = y = 1$, i.e. $x = 2,\ y = 1$.
+
+      Check by calculus: $f(x) = x^2(3 - x)$, $f'(x) = 6x - 3x^2 = 0 \Rightarrow x = 2$, $f(2) = 4$. $\frac{27}{8}$ is the value at $x = y = \frac32$, which is not the maximum.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'If $x, y > 0$ and $xy = 6$, the least value of $2x + 3y$ is'
+  options:
+  - en: '$12$'
+  - en: '$6$'
+  - en: '$2\sqrt6$'
+  - en: '$24$'
+  answer: 0
+  explanation:
+    en: |-
+      $$2x + 3y \ge 2\sqrt{2x\cdot 3y} = 2\sqrt{6\cdot 6} = 12,$$
+      with equality when $2x = 3y$; with $xy = 6$ this gives $x = 3,\ y = 2$.
+
+      $2\sqrt6$ is the bound for $x + y$, ignoring the coefficients.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cauchy-schwarz
+  stem:
+    en: 'If $x^2 + y^2 = 1$, the greatest value of $3x + 4y$ is'
+  options:
+  - en: '$7$'
+  - en: '$5$'
+  - en: '$1$'
+  - en: '$\sqrt7$'
+  answer: 1
+  explanation:
+    en: |-
+      By Cauchy–Schwarz,
+      $$(3x + 4y)^2 \le (3^2 + 4^2)(x^2 + y^2) = 25,$$
+      so $3x + 4y \le 5$, with equality at $(x, y) = \big(\frac35, \frac45\big)$.
+
+      $7 = 3 + 4$ would need $x = y = 1$, which is not on the circle.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-schwarz
+  stem:
+    en: 'If $x + 2y + 2z = 9$, the least value of $x^2 + y^2 + z^2$ is'
+  options:
+  - en: '$3$'
+  - en: '$9$'
+  - en: '$81$'
+  - en: '$27$'
+  answer: 1
+  explanation:
+    en: |-
+      By Cauchy–Schwarz,
+      $$81 = (x + 2y + 2z)^2 \le (1 + 4 + 4)(x^2 + y^2 + z^2),$$
+      so $x^2 + y^2 + z^2 \ge 9$. Equality holds when $(x, y, z) \propto (1, 2, 2)$, i.e. at $(1, 2, 2)$.
+
+      $3$ is the least **distance** $\frac{9}{\sqrt9}$, not its square.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-schwarz
+  stem:
+    en: 'If $x, y > 0$ and $x + y = 1$, the least value of $\dfrac1x + \dfrac4y$ is'
+  options:
+  - en: '$9$'
+  - en: '$8$'
+  - en: '$5$'
+  - en: '$10$'
+  answer: 0
+  explanation:
+    en: |-
+      By Engel's form of Cauchy–Schwarz,
+      $$\frac{1^2}{x} + \frac{2^2}{y} \ge \frac{(1 + 2)^2}{x + y} = 9,$$
+      with equality when $\frac1x = \frac2y$, i.e. $x = \frac13,\ y = \frac23$.
+
+      $8$ comes from $\frac1x + \frac4y \ge \frac{4}{\sqrt{xy}} \ge 8$ using $xy \le \frac14$; but the two equality cases ($y = 4x$ and $x = y$) cannot hold together, so $8$ is never attained. $10$ is the value at $x = y = \frac12$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-bounds
+  stem:
+    en: 'For every integer $n \ge 2$,'
+  options:
+  - en: '$n! > \left(\dfrac{n + 1}{2}\right)^n$'
+  - en: '$n! < \left(\dfrac{n}{2}\right)^n$'
+  - en: '$n! < \left(\dfrac{n + 1}{2}\right)^n$'
+  - en: '$n! < \left(\dfrac{n - 1}{2}\right)^n$'
+  answer: 2
+  explanation:
+    en: |-
+      Apply AM ≥ GM to $1, 2, \dots, n$:
+      $$\sqrt[n]{n!} \le \frac{1 + 2 + \cdots + n}{n} = \frac{n + 1}{2},$$
+      and the inequality is strict since the numbers are not all equal. So $n! < \left(\frac{n + 1}{2}\right)^n$.
+
+      $n! < \left(\frac n2\right)^n$ fails at $n = 2$: $2 > 1$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - weighted
+  stem:
+    en: 'If $x, y > 0$ and $x + y = 5$, the greatest value of $x^3 y^2$ is'
+  options:
+  - en: '$\dfrac{3125}{32}$'
+  - en: '$108$'
+  - en: '$72$'
+  - en: '$144$'
+  answer: 1
+  explanation:
+    en: |-
+      Split into $\frac x3, \frac x3, \frac x3, \frac y2, \frac y2$; their sum is $x + y = 5$. By AM ≥ GM,
+      $$\Big(\frac x3\Big)^3\Big(\frac y2\Big)^2 \le \Big(\frac55\Big)^5 = 1 \implies x^3 y^2 \le 27\cdot 4 = 108.$$
+      Equality holds at $\frac x3 = \frac y2 = 1$, i.e. $x = 3,\ y = 2$ (in general $x : y = 3 : 2$).
+
+      $\frac{3125}{32}$ is the value at $x = y = \frac52$, which is smaller.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'If $a, b, c > 0$ and $a + b + c = 1$, the greatest value of $abc$ is'
+  options:
+  - en: '$\dfrac19$'
+  - en: '$\dfrac13$'
+  - en: '$\dfrac{1}{27}$'
+  - en: '$\dfrac18$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\sqrt[3]{abc} \le \frac{a + b + c}{3} = \frac13 \implies abc \le \frac{1}{27},$$
+      with equality at $a = b = c = \frac13$.
+
+      $\frac19$ forgets to cube; $\frac18$ uses the two-variable bound $\frac{s^2}{4}$ wrongly.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basics
+  - extrema
+  stem:
+    en: 'If $a, b, c$ are real and $a + b + c = 6$, the greatest value of $ab + bc + ca$ is'
+  options:
+  - en: '$36$'
+  - en: '$12$'
+  - en: '$9$'
+  - en: '$18$'
+  answer: 1
+  explanation:
+    en: |-
+      From $a^2 + b^2 + c^2 \ge ab + bc + ca$:
+      $$36 = (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) \ge 3(ab + bc + ca),$$
+      so $ab + bc + ca \le 12$, with equality at $a = b = c = 2$.
+
+      $18 = \frac{36}{2}$ forgets that $a^2 + b^2 + c^2$ is at least $ab + bc + ca$, not zero.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - power-means
+  stem:
+    en: 'If $a, b > 0$ and $a + b = 2$, the least value of $a^4 + b^4$ is'
+  options:
+  - en: '$1$'
+  - en: '$8$'
+  - en: '$16$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      By the $m$th power theorem with $m = 4 > 1$:
+      $$\frac{a^4 + b^4}{2} \ge \Big(\frac{a + b}{2}\Big)^4 = 1 \implies a^4 + b^4 \ge 2,$$
+      with equality at $a = b = 1$.
+
+      $8 = \frac{(a + b)^4}{2}$ divides by $2$ instead of $2^4/2$; $1$ forgets to multiply by $2$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'If $x, y > 0$ and $x + y = 1$, the least value of $\left(x + \dfrac1x\right)^2 + \left(y + \dfrac1y\right)^2$ is'
+  options:
+  - en: '$8$'
+  - en: '$\dfrac{25}{4}$'
+  - en: '$9$'
+  - en: '$\dfrac{25}{2}$'
+  answer: 3
+  explanation:
+    en: |-
+      By the power mean inequality $u^2 + v^2 \ge \frac{(u + v)^2}{2}$:
+      $$\text{expression} \ge \frac12\Big(1 + \frac1x + \frac1y\Big)^2.$$
+      Also $\frac1x + \frac1y \ge \frac{4}{x + y} = 4$. Hence the expression is $\ge \frac12\cdot 5^2 = \frac{25}{2}$, with equality at $x = y = \frac12$ (each bracket is $\frac52$).
+
+      $8$ comes from $x + \frac1x \ge 2$ for each term, but that needs $x = y = 1$, which violates $x + y = 1$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - am-gm-hm
+  stem:
+    en: 'If $a, b, c > 0$ and $abc = 1$, the least value of $(1 + a)(1 + b)(1 + c)$ is'
+  options:
+  - en: '$1$'
+  - en: '$2$'
+  - en: '$27$'
+  - en: '$8$'
+  answer: 3
+  explanation:
+    en: |-
+      Each factor satisfies $1 + a \ge 2\sqrt a$. Multiplying,
+      $$(1 + a)(1 + b)(1 + c) \ge 8\sqrt{abc} = 8,$$
+      with equality at $a = b = c = 1$.
+
+      $27$ would be $3^3$, from wrongly taking each factor $\ge 3$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'If $x, y, z > 0$ and $xy + yz + zx = 12$, the greatest value of $xyz$ is'
+  options:
+  - en: '$8$'
+  - en: '$64$'
+  - en: '$4$'
+  - en: '$16$'
+  answer: 0
+  explanation:
+    en: |-
+      AM ≥ GM on $xy, yz, zx$:
+      $$\sqrt[3]{(xyz)^2} \le \frac{xy + yz + zx}{3} = 4 \implies (xyz)^2 \le 64 \implies xyz \le 8,$$
+      with equality at $x = y = z = 2$.
+
+      $64$ is $(xyz)^2$: forgetting the last square root.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - basics
+  - exam-tips
+  stem:
+    en: 'If $a, b, c$ are real and $a^2 + b^2 + c^2 = 1$, then $ab + bc + ca$ lies in'
+  options:
+  - en: '$[-1, 1]$'
+  - en: '$[0, 1]$'
+  - en: '$\left[-\dfrac12, 1\right]$'
+  - en: '$\left[-\dfrac12, \dfrac12\right]$'
+  answer: 2
+  explanation:
+    en: |-
+      Upper bound: $ab + bc + ca \le a^2 + b^2 + c^2 = 1$, attained at $a = b = c = \frac{1}{\sqrt3}$.
+
+      Lower bound: $0 \le (a + b + c)^2 = 1 + 2(ab + bc + ca)$, so $ab + bc + ca \ge -\frac12$. It is attained when $a + b + c = 0$, e.g. $(a, b, c) = \big(\frac{1}{\sqrt2}, -\frac{1}{\sqrt2}, 0\big)$.
+
+      $[0, 1]$ forgets that the variables may be negative.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - power-means
+  stem:
+    en: 'Let $a_1, \dots, a_n$ be positive and not all equal, and let $0 < m < 1$. Then $\dfrac{a_1^m + \cdots + a_n^m}{n}$ is'
+  options:
+  - en: 'less than $\left(\dfrac{a_1 + \cdots + a_n}{n}\right)^m$'
+  - en: 'greater than $\left(\dfrac{a_1 + \cdots + a_n}{n}\right)^m$'
+  - en: 'equal to $\left(\dfrac{a_1 + \cdots + a_n}{n}\right)^m$'
+  - en: 'greater or less, depending on the $a_i$'
+  answer: 0
+  explanation:
+    en: |-
+      $t \mapsto t^m$ is concave on $(0, \infty)$ for $0 < m < 1$, so by Jensen's inequality the mean of the powers is **less** than the power of the mean. (For $m > 1$ or $m < 0$ it is greater.)
+
+      Quick check with $a = 1$, $b = 9$, $m = \frac12$: $\frac{1 + 3}{2} = 2 < \sqrt5$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basics
+  - am-gm-hm
+  - standard-bounds
+  stem:
+    en: 'Consider the following statements for all positive reals $a, b, c$:'
+  statements:
+  - en: '$a^2 + b^2 + c^2 \ge ab + bc + ca$'
+  - en: '$(a + b)(b + c)(c + a) \ge 8abc$'
+  - en: '$(a + b + c)^3 \ge 81abc$'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. True: the difference is $\frac12\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right] \ge 0$.
+      2. True: $a + b \ge 2\sqrt{ab}$, and similarly for the other two factors; multiply them.
+      3. False: AM ≥ GM gives $(a + b + c)^3 \ge 27abc$. At $a = b = c = 1$ the claim reads $27 \ge 81$.
+
+      Testing at $a = b = c$ kills a wrong constant at once.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-schwarz
+  - am-gm-hm
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'For all real $a_1, \dots, a_n, b_1, \dots, b_n$: $\left(\sum a_i b_i\right)^2 \le \left(\sum a_i^2\right)\left(\sum b_i^2\right)$, with equality iff one tuple is a scalar multiple of the other.'
+  - en: 'For all real $x_1, \dots, x_n$ and all non-zero real $y_1, \dots, y_n$ with $\sum y_i \ne 0$: $\sum \dfrac{x_i^2}{y_i} \ge \dfrac{\left(\sum x_i\right)^2}{\sum y_i}$.'
+  - en: 'For all non-zero reals $a, b$ with $ab > 0$: $\dfrac{a + b}{2} \ge \sqrt{ab}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. True: this is Cauchy–Schwarz, and it needs no sign condition. Equality holds iff the tuples are proportional.
+      2. False: Engel's form needs $y_i > 0$. With $x = (1, 1)$ and $y = \big(1, -\frac12\big)$: the left side is $1 - 2 = -1$, the right side is $\frac{4}{1/2} = 8$.
+      3. False: $ab > 0$ allows both negative. For $a = -1$, $b = -4$: $\frac{a + b}{2} = -\frac52 < 2 = \sqrt{ab}$.
+
+      So only statement 1 is correct.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - extrema
+  stem:
+    en: 'For $x > 0$, match each expression in List I with its least value in List II.'
+  left:
+  - en: '$x + \dfrac1x$'
+  - en: '$x + \dfrac4x$'
+  - en: '$x^2 + \dfrac2x$'
+  - en: '$x + \dfrac{1}{4x}$'
+  right:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$1$'
+  - en: '$2$'
+  options:
+  - en: 'A-4, B-2, C-1, D-3'
+  - en: 'A-4, B-1, C-2, D-3'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $x + \frac1x \ge 2$ (at $x = 1$).
+      - B: $x + \frac4x \ge 2\sqrt4 = 4$ (at $x = 2$).
+      - C: $x^2 + \frac1x + \frac1x \ge 3\sqrt[3]{x^2\cdot\frac1x\cdot\frac1x} = 3$ (at $x = 1$).
+      - D: $x + \frac{1}{4x} \ge 2\sqrt{\frac14} = 1$ (at $x = \frac12$).
+
+      So A-4, B-2, C-1, D-3.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - am-gm-hm
+  - power-means
+  stem:
+    en: 'Match each mean of the numbers $2$ and $8$ in List I with its value in List II.'
+  left:
+  - en: arithmetic mean
+  - en: geometric mean
+  - en: harmonic mean
+  - en: 'root mean square $\sqrt{\dfrac{a^2 + b^2}{2}}$'
+  right:
+  - en: '$\sqrt{34}$'
+  - en: '$\dfrac{16}{5}$'
+  - en: '$5$'
+  - en: '$4$'
+  options:
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-4, C-2, D-3'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-4, B-3, C-2, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      - AM $= \frac{2 + 8}{2} = 5$.
+      - GM $= \sqrt{16} = 4$.
+      - HM $= \frac{2\cdot 2\cdot 8}{2 + 8} = \frac{16}{5}$ (check: $G^2 = AH = 5\cdot\frac{16}{5} = 16$).
+      - RMS $= \sqrt{\frac{4 + 64}{2}} = \sqrt{34} \approx 5.83$.
+
+      The order $H < G < A < M_2$ is the power mean chain. So A-3, B-4, C-2, D-1.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - extrema
+  - am-gm-hm
+  assertion:
+    en: 'For every $x > 0$, $x + \dfrac1x \ge 2$.'
+  reason:
+    en: 'For positive reals $a$ and $b$, $\dfrac{a + b}{2} \ge \sqrt{ab}$.'
+  answer: 0
+  explanation:
+    en: 'Both are true. Taking $a = x$ and $b = \frac1x$ in R gives $\frac{x + 1/x}{2} \ge 1$, which is A. So R explains A.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - am-gm-hm
+  - exam-tips
+  assertion:
+    en: 'For every $x < 0$, $x + \dfrac1x \le -2$.'
+  reason:
+    en: 'The inequality $\dfrac{a + b}{2} \ge \sqrt{ab}$ holds for all non-zero reals $a, b$ with $ab > 0$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: put $t = -x > 0$; then $t + \frac1t \ge 2$, so $x + \frac1x = -\big(t + \frac1t\big) \le -2$.
+
+      R is false: for $a = b = -1$, $\frac{a + b}{2} = -1 < 1 = \sqrt{ab}$. AM ≥ GM needs non-negative numbers.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-bounds
+  - basics
+  assertion:
+    en: 'If $a, b, c > 0$ and $a + b + c = 1$, then $\left(\dfrac1a - 1\right)\left(\dfrac1b - 1\right)\left(\dfrac1c - 1\right) \ge 8$.'
+  reason:
+    en: 'For all real $a, b, c$, $a^2 + b^2 + c^2 \ge ab + bc + ca$.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $\frac1a - 1 = \frac{b + c}{a}$, so the product is $\frac{(b + c)(c + a)(a + b)}{abc} \ge \frac{2\sqrt{bc}\cdot 2\sqrt{ca}\cdot 2\sqrt{ab}}{abc} = 8$.
+
+      R is true (a sum of squares), but A is proved by AM ≥ GM on each pair, not by R. So R does not explain A.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-bounds
+  - exam-tips
+  assertion:
+    en: 'For every positive integer $n$, $n! < \left(\dfrac{n + 1}{2}\right)^n$.'
+  reason:
+    en: 'The geometric mean of $1, 2, \dots, n$ does not exceed their arithmetic mean $\dfrac{n + 1}{2}$.'
+  answer: 3
+  explanation:
+    en: |-
+      R is true (AM ≥ GM), and it gives $n! \le \left(\frac{n + 1}{2}\right)^n$, strictly only when the numbers are not all equal, i.e. $n \ge 2$.
+
+      A is false because of $n = 1$: both sides equal $1$. The strict inequality holds only for $n \ge 2$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-bounds
+  assertion:
+    en: 'If $n \ge 2$ and $0 < a_i < 1$ for $i = 1, \dots, n$, then $(1 - a_1)(1 - a_2)\cdots(1 - a_n) > 1 - (a_1 + a_2 + \cdots + a_n)$.'
+  reason:
+    en: 'If $0 < a, b < 1$, then $(1 - a)(1 - b) > 1 - a - b$; and if $P > 1 - s$ with $0 < c < 1$, then $P(1 - c) > (1 - s)(1 - c) > 1 - s - c$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true. R gives the case $n = 2$, since $(1 - a)(1 - b) = 1 - a - b + ab$ and $ab > 0$. Its second part is the induction step: multiplying by $1 - c > 0$ keeps the inequality, and $(1 - s)(1 - c) = 1 - s - c + sc > 1 - s - c$ since $s, c > 0$.
+
+      So R proves A (Weierstrass's inequality) by induction: R explains A.
+  status: ai-generated

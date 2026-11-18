@@ -1,0 +1,687 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - definition
+  stem:
+    en: 'The value of $\begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 10 \end{vmatrix}$ is'
+  options:
+  - en: '$3$'
+  - en: '$-3$'
+  - en: '$0$'
+  - en: '$-9$'
+  answer: 1
+  explanation:
+    en: |-
+      Expand along the first row:
+      $$1(50 - 48) - 2(40 - 42) + 3(32 - 35) = 2 + 4 - 9 = -3.$$
+
+      The tempting $0$ comes from the familiar array with last entry $9$, whose rows are in arithmetic progression; changing $9$ to $10$ breaks that. The answer $3$ comes from a sign slip on the middle term, $-2(40-42) = +4$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - definition
+  - exam-tips
+  stem:
+    en: 'The number of terms in the full expansion of a determinant of order $4$ is'
+  options:
+  - en: '$16$'
+  - en: '$24$'
+  - en: '$12$'
+  - en: '$4$'
+  answer: 1
+  explanation:
+    en: |-
+      Each term picks one element from each row and each column, that is, one permutation $\sigma \in S_4$. So there are $4! = 24$ terms, $12$ with sign $+$ and $12$ with sign $-$.
+
+      $16 = 4^2$ counts the entries, not the terms, and $12$ counts only the terms of one sign.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - minors-cofactors
+  stem:
+    en: 'In $\begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix}$, the cofactor of the element $6$ (row 2, column 3) is'
+  options:
+  - en: '$-6$'
+  - en: '$3$'
+  - en: '$-3$'
+  - en: '$6$'
+  answer: 3
+  explanation:
+    en: |-
+      Delete row 2 and column 3. The minor is
+      $$M_{23} = \begin{vmatrix} 1 & 2 \\ 7 & 8 \end{vmatrix} = 8 - 14 = -6.$$
+      The cofactor is $C_{23} = (-1)^{2+3}M_{23} = -(-6) = 6$.
+
+      $-6$ is the minor, not the cofactor: the sign $(-1)^{i+j}$ is $-$ here because $i + j = 5$ is odd.
+  status: ai-generated
+- id: q0004
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'Let $A$ and $B$ be real square matrices of order $n \ge 2$. Consider the following statements:'
+  statements:
+  - en: '$\det A^{T} = \det A$'
+  - en: '$\det(A + B) = \det A + \det B$'
+  - en: 'If every element of one row of $A$ is multiplied by $k$, the determinant is multiplied by $k$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 2 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      Statements 1 and 3 are basic properties: transposing does not change a determinant, and a determinant is linear in each row.
+
+      Statement 2 is false. With $A = B = I_2$:
+      $$\det(A + B) = \det(2I_2) = 4, \qquad \det A + \det B = 2.$$
+      A determinant is linear in **each row separately**, not in the whole matrix.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - definition
+  stem:
+    en: 'In the expansion of the determinant $\lvert a_{ij}\rvert$ of order $4$, the term $a_{12}a_{21}a_{34}a_{43}$ occurs with'
+  options:
+  - en: 'sign $-$'
+  - en: 'sign $+$ or $-$ depending on the entries'
+  - en: 'sign $+$'
+  - en: 'no sign: it is not a term of the expansion'
+  answer: 2
+  explanation:
+    en: |-
+      The row indices are $1, 2, 3, 4$ and the column indices are $\sigma = (2, 1, 4, 3)$. Each row and each column appears once, so this is a genuine term.
+
+      $\sigma = (1\,2)(3\,4)$ is a product of **two** transpositions, so it is even, and the sign is $\operatorname{sgn}\sigma = +1$.
+
+      A common slip is to see "swaps" and choose $-$; count them: an even number of transpositions gives $+$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-determinants
+  stem:
+    en: 'The value of $\begin{vmatrix} 1 & 1 & 1 \\ 2 & 3 & 5 \\ 4 & 9 & 25 \end{vmatrix}$ is'
+  options:
+  - en: '$-6$'
+  - en: '$6$'
+  - en: '$30$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      This is the Vandermonde determinant with $a, b, c = 2, 3, 5$:
+      $$(a - b)(b - c)(c - a) = (2 - 3)(3 - 5)(5 - 2) = (-1)(-2)(3) = 6.$$
+
+      $-6$ is what you get with the factors in the wrong cyclic order, for example $(b-a)(c-b)(c-a)$ with one sign flipped. Check by direct expansion: $1(75 - 45) - 1(50 - 20) + 1(18 - 12) = 30 - 30 + 6 = 6$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-determinants
+  stem:
+    en: 'The value of the circulant $\begin{vmatrix} a & b & c \\ b & c & a \\ c & a & b \end{vmatrix}$ is'
+  options:
+  - en: '$a^3 + b^3 + c^3 - 3abc$'
+  - en: '$-(a^3 + b^3 + c^3 - 3abc)$'
+  - en: '$(a + b + c)(a^2 + b^2 + c^2)$'
+  - en: '$3abc - (a + b + c)^3$'
+  answer: 1
+  explanation:
+    en: |-
+      $C_1 \to C_1 + C_2 + C_3$ makes the first column $(a+b+c)(1, 1, 1)^T$. Taking this factor out and expanding,
+      $$\Delta = -(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) = -(a^3 + b^3 + c^3 - 3abc).$$
+
+      **Check:** with $a = 1$, $b = c = 0$, the rows are $(1,0,0), (0,0,1), (0,1,0)$, and the value is $-1$. The formula without the minus sign gives $+1$, so it is wrong.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - product-adjoint
+  stem:
+    en: 'If $A$ is a $3 \times 3$ matrix with $\det A = 4$, then $\det(\operatorname{adj} A)$ equals'
+  options:
+  - en: '$4$'
+  - en: '$64$'
+  - en: '$16$'
+  - en: '$12$'
+  answer: 2
+  explanation:
+    en: |-
+      From $A\,\operatorname{adj} A = (\det A) I_n$ we get $\det(\operatorname{adj} A) = (\det A)^{n-1}$. Here $n = 3$:
+      $$\det(\operatorname{adj} A) = 4^{2} = 16.$$
+
+      $64 = 4^3$ uses the exponent $n$ instead of $n - 1$.
+  status: ai-generated
+- id: q0009
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  - standard-determinants
+  assertion:
+    en: '$(a - b)$ is a factor of $\begin{vmatrix} 1 & a & a^2 \\ 1 & b & b^2 \\ 1 & c & c^2 \end{vmatrix}$.'
+  reason:
+    en: 'If a determinant whose entries are polynomials in $a$ vanishes identically when $a$ is replaced by $b$, then $(a - b)$ is a factor of it.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      Putting $a = b$ makes rows 1 and 2 identical, so the determinant becomes $0$. By the factor theorem (R), $(a - b)$ divides it. In fact the value is $(a - b)(b - c)(c - a)$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cramers-rule
+  stem:
+    en: 'For the system $x + y + z = 6$, $x - y + z = 2$, $2x + y - z = 1$, Cramer''s rule gives'
+  options:
+  - en: '$D = -6$ and $y = 2$'
+  - en: '$D = 6$ and $y = 3$'
+  - en: '$D = 6$ and $y = 12$'
+  - en: '$D = 6$ and $y = 2$'
+  answer: 3
+  explanation:
+    en: |-
+      $$D = \begin{vmatrix} 1 & 1 & 1 \\ 1 & -1 & 1 \\ 2 & 1 & -1 \end{vmatrix} = 1(1 - 1) - 1(-1 - 2) + 1(1 + 2) = 6.$$
+      Replace the $y$-column by $(6, 2, 1)$:
+      $$D_y = \begin{vmatrix} 1 & 6 & 1 \\ 1 & 2 & 1 \\ 2 & 1 & -1 \end{vmatrix} = 12, \qquad y = \frac{D_y}{D} = 2.$$
+
+      $y = 12$ forgets to divide by $D$. **Check:** $(x, y, z) = (1, 2, 3)$ satisfies all three equations.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cramers-rule
+  stem:
+    en: 'The system $kx + y + z = 0$, $x + ky + z = 0$, $x + y + kz = 0$ has a non-trivial solution if and only if'
+  options:
+  - en: '$k = 1$ or $k = -2$'
+  - en: '$k = -1$ or $k = 2$'
+  - en: '$k = 1$ only'
+  - en: '$k \ne 1$ and $k \ne -2$'
+  answer: 0
+  explanation:
+    en: |-
+      A homogeneous system has a non-trivial solution iff $D = 0$. Adding all columns to $C_1$ gives a factor $(k + 2)$:
+      $$D = \begin{vmatrix} k & 1 & 1 \\ 1 & k & 1 \\ 1 & 1 & k \end{vmatrix} = (k + 2)(k - 1)^2.$$
+      So $D = 0 \iff k = 1$ or $k = -2$.
+
+      "$k = 1$ only" misses the factor $(k + 2)$. The last option describes when the **only** solution is the trivial one.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-determinants
+  - properties
+  stem:
+    en: '$\begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^3 & b^3 & c^3 \end{vmatrix}$ equals'
+  options:
+  - en: '$(a - b)(b - c)(c - a)(ab + bc + ca)$'
+  - en: '$(a - b)(b - c)(c - a)(a + b + c)$'
+  - en: '$(a - b)(b - c)(c - a)(a^2 + b^2 + c^2)$'
+  - en: '$-(a - b)(b - c)(c - a)(a + b + c)$'
+  answer: 1
+  explanation:
+    en: |-
+      The determinant vanishes when $a = b$, $b = c$ or $c = a$, so $(a - b)(b - c)(c - a)$ is a factor. The determinant has degree $1 + 3 = 4$, so the other factor is linear and symmetric: $k(a + b + c)$.
+
+      Compare the diagonal term $bc^3$: the product $(a-b)(b-c)(c-a)(a+b+c)$ contains $bc^3$ with coefficient $+1$, so $k = 1$.
+
+      **Check:** $a, b, c = 0, 1, 2$ gives $\begin{vmatrix} 1&1&1\\0&1&2\\0&1&8\end{vmatrix} = 6$, and the formula gives $(-1)(-1)(2)(3) = 6$. The option with $ab + bc + ca$ has the wrong degree (5).
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-determinants
+  stem:
+    en: '$\begin{vmatrix} 1+a & 1 & 1 \\ 1 & 1+b & 1 \\ 1 & 1 & 1+c \end{vmatrix}$ equals'
+  options:
+  - en: '$abc + a + b + c$'
+  - en: '$abc$'
+  - en: '$1 + a + b + c$'
+  - en: '$abc + ab + bc + ca$'
+  answer: 3
+  explanation:
+    en: |-
+      Apply $R_2 \to R_2 - R_1$ and $R_3 \to R_3 - R_1$:
+      $$\begin{vmatrix} 1 + a & 1 & 1 \\ -a & b & 0 \\ -a & 0 & c \end{vmatrix} = (1 + a)bc - 1(-ac) + 1(ab) = abc + bc + ca + ab.$$
+
+      **Check:** $a, b, c = 1, 2, 3$ gives $\begin{vmatrix} 2&1&1\\1&3&1\\1&1&4\end{vmatrix} = 22 - 3 - 2 = 17$, and $abc + ab + bc + ca = 6 + 2 + 6 + 3 = 17$. The option $abc + a + b + c$ gives $12$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - product-adjoint
+  - properties
+  stem:
+    en: '$A$ and $B$ are $3 \times 3$ matrices with $\det A = 2$ and $\det B = -3$. Then $\det(2AB^{T})$ equals'
+  options:
+  - en: '$-48$'
+  - en: '$-12$'
+  - en: '$48$'
+  - en: '$-6$'
+  answer: 0
+  explanation:
+    en: |-
+      Use $\det(kM) = k^{n}\det M$, $\det(AB^T) = \det A\det B^T$ and $\det B^T = \det B$:
+      $$\det(2AB^T) = 2^{3}\cdot 2\cdot(-3) = -48.$$
+
+      $-12$ uses $\det(2M) = 2\det M$, which is the classic slip. The transpose changes nothing, so the sign stays negative.
+  status: ai-generated
+- id: q0015
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - symmetric-skew
+  assertion:
+    en: 'Every skew-symmetric determinant of order $3$ with real entries has the value $0$.'
+  reason:
+    en: 'Every diagonal element of a real skew-symmetric matrix is $0$.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true, but R does not explain A.
+
+      A: if $A^T = -A$ and $n = 3$, then $\det A = \det A^T = \det(-A) = (-1)^3\det A$, so $\det A = 0$.
+
+      R: $a_{ii} = -a_{ii}$ gives $a_{ii} = 0$.
+
+      The proof of A uses only $\det A^T = \det A$ and the odd order. A zero diagonal by itself does not force a zero determinant: $\begin{vmatrix} 0&1\\1&0\end{vmatrix} = -1$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-determinants
+  - properties
+  stem:
+    en: '$\begin{vmatrix} b+c & a & a \\ b & c+a & b \\ c & c & a+b \end{vmatrix}$ equals'
+  options:
+  - en: '$2abc$'
+  - en: '$abc$'
+  - en: '$4abc$'
+  - en: '$(a + b + c)^3$'
+  answer: 2
+  explanation:
+    en: |-
+      Put $a = 0$: the first row becomes $(b + c, 0, 0)$, and
+      $$\Delta = (b + c)\begin{vmatrix} c & b \\ c & b \end{vmatrix} = 0.$$
+      So $a$ is a factor, and by symmetry so are $b$ and $c$. The degree is 3, so $\Delta = k\,abc$.
+
+      $a = b = c = 1$ gives $\begin{vmatrix} 2&1&1\\1&2&1\\1&1&2\end{vmatrix} = 4$, so $k = 4$ and $\Delta = 4abc$.
+
+      $(a + b + c)^3$ fails this check: it gives $27$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-determinants
+  stem:
+    en: '$\begin{vmatrix} 1 & a & bc \\ 1 & b & ca \\ 1 & c & ab \end{vmatrix}$ equals'
+  options:
+  - en: '$-(a - b)(b - c)(c - a)$'
+  - en: '$0$'
+  - en: '$(a - b)(b - c)(c - a)$'
+  - en: '$(a - b)(b - c)(c - a)(a + b + c)$'
+  answer: 2
+  explanation:
+    en: |-
+      $R_2 \to R_2 - R_1$, $R_3 \to R_3 - R_1$:
+      $$\begin{vmatrix} 1 & a & bc \\ 0 & b - a & c(a - b) \\ 0 & c - a & b(a - c) \end{vmatrix} = (a - b)(c - a)\begin{vmatrix} -1 & c \\ 1 & -b \end{vmatrix} = (a - b)(c - a)(b - c).$$
+
+      **Check:** $a, b, c = 0, 1, 2$: $\begin{vmatrix} 1&0&2\\1&1&0\\1&2&0\end{vmatrix} = 2(2 - 1) = 2$, and $(a-b)(b-c)(c-a) = (-1)(-1)(2) = 2$. The option with an extra $(a + b + c)$ has degree 4, but every term of the determinant has degree 3.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-determinants
+  - properties
+  stem:
+    en: '$\begin{vmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{vmatrix}$ equals'
+  options:
+  - en: '$2abc(a + b + c)^3$'
+  - en: '$abc(a + b + c)^3$'
+  - en: '$2abc(a + b + c)^2$'
+  - en: '$2(a + b + c)^6$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $a + b + c = 0$. Then $(b + c)^2 = a^2$, $(c + a)^2 = b^2$, $(a + b)^2 = c^2$, so $C_1 = C_2 = C_3 = (a^2, b^2, c^2)^T$ and $\Delta = 0$. More precisely, $C_1 \to C_1 - C_3$ and $C_2 \to C_2 - C_3$ each take out a factor $(a + b + c)$, and the remaining determinant still vanishes at $a + b + c = 0$. So $(a + b + c)^3$ divides $\Delta$.
+
+      Put $a = 0$: row 1 becomes $((b + c)^2, 0, 0)$ and its minor $\begin{vmatrix} c^2 & b^2 \\ c^2 & b^2 \end{vmatrix} = 0$. So $a$, and by symmetry $b$ and $c$, are factors. The degree is 6, so $\Delta = k\,abc(a + b + c)^3$.
+
+      $a = b = c = 1$: $\begin{vmatrix} 4&1&1\\1&4&1\\1&1&4\end{vmatrix} = 54$, and $abc(a+b+c)^3 = 27$, so $k = 2$.
+
+      The option without the $2$ is the usual slip from not fixing the constant.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cramers-rule
+  stem:
+    en: 'The system $x + 2y = 3$, $2x + 4y = k$ has infinitely many solutions when'
+  options:
+  - en: '$k = 3$'
+  - en: '$k \ne 6$'
+  - en: 'no value of $k$'
+  - en: '$k = 6$'
+  answer: 3
+  explanation:
+    en: |-
+      $D = \begin{vmatrix} 1 & 2 \\ 2 & 4 \end{vmatrix} = 0$, so there is no unique solution.
+      $$D_x = \begin{vmatrix} 3 & 2 \\ k & 4 \end{vmatrix} = 12 - 2k.$$
+      If $k \ne 6$, then $D_x \ne 0$ and the system is inconsistent. If $k = 6$, the second equation is twice the first, so every point of the line $x + 2y = 3$ is a solution.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cramers-rule
+  stem:
+    en: 'The system $x + y + z = 6$, $x + 2y + 3z = 10$, $x + 2y + \lambda z = \mu$ has **no** solution when'
+  options:
+  - en: '$\lambda = 3,\ \mu = 10$'
+  - en: '$\lambda \ne 3,\ \mu = 10$'
+  - en: '$\lambda = 3,\ \mu \ne 10$'
+  - en: '$\lambda \ne 3,\ \mu \ne 10$'
+  answer: 2
+  explanation:
+    en: |-
+      $$D = \begin{vmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 2 & \lambda \end{vmatrix} = \lambda - 3.$$
+      If $\lambda \ne 3$, then $D \ne 0$ and the solution is unique, whatever $\mu$ is.
+
+      If $\lambda = 3$, subtract the second equation from the third: $0 = \mu - 10$. So there is no solution when $\mu \ne 10$, and infinitely many when $\mu = 10$.
+
+      The option $\lambda = 3, \mu = 10$ is the infinitely-many case.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - symmetric-skew
+  stem:
+    en: 'The value of $\begin{vmatrix} 0 & 1 & 2 & 3 \\ -1 & 0 & 4 & 5 \\ -2 & -4 & 0 & 6 \\ -3 & -5 & -6 & 0 \end{vmatrix}$ is'
+  options:
+  - en: '$0$'
+  - en: '$64$'
+  - en: '$-64$'
+  - en: '$784$'
+  answer: 1
+  explanation:
+    en: |-
+      This is skew-symmetric of **even** order, so it is a perfect square. With the entries $a, b, c, d, e, f = 1, 2, 3, 4, 5, 6$ above the diagonal,
+      $$\Delta = (af - be + cd)^2 = (6 - 10 + 12)^2 = 8^2 = 64.$$
+
+      $0$ is the trap: only **odd**-order skew-symmetric determinants vanish. $784 = 28^2$ uses $af + be + cd$, with the wrong sign on $be$. $-64$ is impossible, because the value is a square.
+  status: ai-generated
+- id: q0022
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - product-adjoint
+  - standard-determinants
+  stem:
+    en: '$\begin{vmatrix} 2bc-a^2 & c^2 & b^2 \\ c^2 & 2ca-b^2 & a^2 \\ b^2 & a^2 & 2ab-c^2 \end{vmatrix}$ equals'
+  options:
+  - en: '$(a^3 + b^3 + c^3 - 3abc)^2$'
+  - en: '$-(a^3 + b^3 + c^3 - 3abc)^2$'
+  - en: '$(a^2 + b^2 + c^2 - ab - bc - ca)^2$'
+  - en: '$a^3 + b^3 + c^3 - 3abc$'
+  answer: 0
+  explanation:
+    en: |-
+      Let $\Delta$ be the circulant with rows $(a, b, c), (b, c, a), (c, a, b)$, so $\Delta = -(a^3 + b^3 + c^3 - 3abc)$. Swapping $C_2, C_3$ and then changing the sign of $C_1$ gives rows $(-a, c, b), (-b, a, c), (-c, b, a)$, also with value $\Delta$.
+
+      Multiply the two row by row. Entry $(1,1)$ is $-a^2 + bc + cb = 2bc - a^2$, entry $(1,2)$ is $-ab + ab + c^2 = c^2$, and so on. This gives exactly the given array, so its value is
+      $$\Delta \cdot \Delta = (a^3 + b^3 + c^3 - 3abc)^2.$$
+
+      **Check:** put $a = b = 1$, $c = 0$. The array is $\begin{vmatrix} -1&0&1\\0&-1&1\\1&1&2\end{vmatrix} = 4$. The key gives $2^2 = 4$; the other options give $-4$, $1$ and $2$.
+  status: ai-generated
+- id: q0023
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - minors-cofactors
+  stem:
+    en: 'For $\Delta = \begin{vmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 5 & 6 & 0 \end{vmatrix}$ with cofactors $C_{ij}$, the value of $a_{11}C_{21} + a_{12}C_{22} + a_{13}C_{23}$ is'
+  options:
+  - en: '$1$'
+  - en: '$-1$'
+  - en: '$5$'
+  - en: '$0$'
+  answer: 3
+  explanation:
+    en: |-
+      This multiplies the elements of row 1 by the cofactors of row 2: **alien cofactors**. The sum is the expansion of a determinant whose second row has been replaced by a copy of the first row. That determinant has two equal rows, so the sum is $0$.
+
+      $1$ is $\Delta$ itself, which you get only with the cofactors of the **same** row: $a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} = -24 + 40 - 15 = 1$.
+  status: ai-generated
+- id: q0024
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - symmetric-skew
+  stem:
+    en: 'Consider the following statements about real determinants:'
+  statements:
+  - en: 'Every skew-symmetric determinant of odd order is $0$.'
+  - en: Every skew-symmetric determinant of even order is the square of a polynomial in its entries.
+  - en: 'Every symmetric determinant of order $3$ whose diagonal entries are all $0$ is $0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 1 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      1 is true: $\det A = \det A^T = (-1)^n\det A$ forces $\det A = 0$ for odd $n$.
+
+      2 is true: the value is the square of the Pfaffian. For order 2 it is $a^2$; for order 4 it is $(af - be + cd)^2$.
+
+      3 is false:
+      $$\begin{vmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{vmatrix} = 2 \ne 0.$$
+      The vanishing result needs **skew**-symmetry, not just a zero diagonal.
+  status: ai-generated
+- id: q0025
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cramers-rule
+  stem:
+    en: 'For a system of three linear equations in $x, y, z$ with coefficient determinant $D$ and Cramer determinants $D_x, D_y, D_z$, consider the following statements:'
+  statements:
+  - en: 'If $D \ne 0$, the system has a unique solution.'
+  - en: 'If $D = 0$ and at least one of $D_x, D_y, D_z$ is non-zero, the system has no solution.'
+  - en: 'If $D = 0$ and $D_x = D_y = D_z = 0$, the system has infinitely many solutions.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      1 is true: $x = D_x/D$ and so on is the unique solution.
+
+      2 is true: from $A\,\operatorname{adj}A = DI$, any solution would satisfy $D\,x = D_x$, that is, $0 = D_x \ne 0$.
+
+      3 is false. The system $x + y + z = 1$, $x + y + z = 2$, $x + y + z = 3$ has $D = D_x = D_y = D_z = 0$ (each determinant has two equal columns), but it is inconsistent. When everything vanishes, Cramer's rule decides nothing.
+  status: ai-generated
+- id: q0026
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-determinants
+  - symmetric-skew
+  stem:
+    en: Match each determinant in List I (rows listed) with its value in List II.
+  left:
+  - en: '$(a, b, c),\ (b, c, a),\ (c, a, b)$'
+  - en: '$(1, 1, 1),\ (a, b, c),\ (a^2, b^2, c^2)$'
+  - en: '$(1+a, 1, 1),\ (1, 1+b, 1),\ (1, 1, 1+c)$'
+  - en: '$(0, a, b),\ (-a, 0, c),\ (-b, -c, 0)$'
+  right:
+  - en: '$abc + ab + bc + ca$'
+  - en: '$0$'
+  - en: '$-(a^3 + b^3 + c^3 - 3abc)$'
+  - en: '$(a - b)(b - c)(c - a)$'
+  options:
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-2, B-4, C-1, D-3'
+  answer: 2
+  explanation:
+    en: |-
+      - A: the circulant, $-(a^3 + b^3 + c^3 - 3abc)$ (3).
+      - B: Vandermonde, $(a - b)(b - c)(c - a)$ (4).
+      - C: $abc + ab + bc + ca$ (1).
+      - D: skew-symmetric of odd order, so $0$ (2).
+
+      So A-3, B-4, C-1, D-2.
+  status: ai-generated
+- id: q0027
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - product-adjoint
+  - properties
+  stem:
+    en: '$A$ is a $3 \times 3$ matrix with $\det A = 2$. Match each expression in List I with its value in List II.'
+  left:
+  - en: '$\det(3A)$'
+  - en: '$\det(\operatorname{adj} A)$'
+  - en: '$\det(-A)$'
+  - en: '$\det(\operatorname{adj}(\operatorname{adj} A))$'
+  right:
+  - en: '$-2$'
+  - en: '$16$'
+  - en: '$54$'
+  - en: '$4$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-3, B-4, C-2, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      With $n = 3$:
+      - A: $\det(3A) = 3^3 \cdot 2 = 54$ (3).
+      - B: $\det(\operatorname{adj} A) = 2^{2} = 4$ (4).
+      - C: $\det(-A) = (-1)^3 \cdot 2 = -2$ (1).
+      - D: $\operatorname{adj}(\operatorname{adj} A) = (\det A)^{n-2}A = 2A$, so $\det = 2^3 \cdot 2 = 16 = 2^{(n-1)^2}$ (2).
+
+      So A-3, B-4, C-1, D-2. Swapping B and D confuses $(\det A)^{n-1}$ with $(\det A)^{(n-1)^2}$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - product-adjoint
+  assertion:
+    en: 'If $A$ is a $3 \times 3$ matrix with $\det A = 0$, then $\det(\operatorname{adj} A) = 0$.'
+  reason:
+    en: 'If $\det A = 0$, then $\operatorname{adj} A$ is the zero matrix.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $\det(\operatorname{adj} A) = (\det A)^{2} = 0$.
+
+      R is false. For $A = \operatorname{diag}(1, 1, 0)$, $\det A = 0$ but
+      $$\operatorname{adj} A = \operatorname{diag}(0, 0, 1) \ne O.$$
+      $\operatorname{adj} A = O$ needs every $2 \times 2$ minor to vanish, which is much stronger than $\det A = 0$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - symmetric-skew
+  assertion:
+    en: 'Every real symmetric determinant of order $2$ is a perfect square.'
+  reason:
+    en: Every real skew-symmetric determinant of even order is a perfect square.
+  answer: 3
+  explanation:
+    en: |-
+      A is false: $\begin{vmatrix} a & h \\ h & b \end{vmatrix} = ab - h^2$, which is $-1$ for $a = b = 0$, $h = 1$. A negative real number is not a square.
+
+      R is true: $\begin{vmatrix} 0 & a \\ -a & 0 \end{vmatrix} = a^2$, and in general an even-order skew-symmetric determinant is the square of its Pfaffian.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - product-adjoint
+  assertion:
+    en: 'For any two square matrices $A$ and $B$ of the same order, $\det(AB) = \det(BA)$.'
+  reason:
+    en: '$\det(AB) = \det A \cdot \det B$, and multiplication of real numbers is commutative.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A:
+      $$\det(AB) = \det A\det B = \det B\det A = \det(BA).$$
+      This holds even when $AB \ne BA$. For example, $A = \begin{pmatrix} 1&1\\0&1\end{pmatrix}$, $B = \begin{pmatrix} 1&0\\1&1\end{pmatrix}$ do not commute, but both products have determinant $1$.
+  status: ai-generated

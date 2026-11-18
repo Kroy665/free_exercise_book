@@ -1,0 +1,10 @@
+id: math.linalg
+subject: math
+title: { en: Matrices and Linear Algebra }
+order: 2
+# Planned topics: docs/SYLLABUS.md (Block 2). Only written topics are listed.
+topics:
+  - math.linalg.determinants
+  - math.linalg.matrices-rank
+  - math.linalg.linear-systems
+  - math.linalg.eigen-cayley-hamilton

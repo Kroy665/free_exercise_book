@@ -1,0 +1,18 @@
+id: math.linalg.determinants
+title:
+  en: Determinants
+summary:
+  en: Definition and Laplace expansion, properties, minors and cofactors, product of determinants, the adjoint determinant, symmetric and skew-symmetric determinants, standard determinants, and Cramer's rule.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on determinants
+  - S. Barnard and J. M. Child, Higher Algebra, ch. on determinants
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 5"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.3 and (PG) C.2
+retired: []

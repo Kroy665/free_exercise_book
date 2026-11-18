@@ -1,0 +1,18 @@
+id: math.algebra.complex-functions
+title:
+  en: Functions of a Complex Variable
+summary:
+  en: The exponential, circular, hyperbolic and logarithmic functions of a complex variable, general powers a^z, inverse circular and hyperbolic functions in logarithmic form, and separation into real and imaginary parts.
+order: 2
+exams: [slst-0910, slst-1112]
+prerequisites: [math.algebra.complex-numbers]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on functions of a complex variable
+  - S. L. Loney, Plane Trigonometry Part II, chs. on exponential, logarithmic and hyperbolic functions
+  - "R. V. Churchill and J. W. Brown, Complex Variables and Applications, ch. 3"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.1 and (PG) A.2
+retired: []

@@ -1,0 +1,18 @@
+id: math.algebra.polynomials
+title:
+  en: Polynomials and Nature of Roots
+summary:
+  en: Synthetic division, the remainder and factor theorems, the fundamental theorem of algebra, conjugate and surd roots, Descartes' rule of signs, multiple roots, and Rolle's theorem with the location of real roots.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.algebra.complex-numbers]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on polynomials and theory of equations
+  - S. Barnard and J. M. Child, Higher Algebra, ch. on the theory of equations
+  - "W. S. Burnside and A. W. Panton, The Theory of Equations, vol. 1"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.2 and (PG) A.3
+retired: []

@@ -1,0 +1,18 @@
+id: math.linalg.eigen-cayley-hamilton
+title:
+  en: Eigenvalues and Cayley–Hamilton
+summary:
+  en: The characteristic polynomial, eigenvalues and eigenvectors, algebraic and geometric multiplicity, eigenvalues of related and special matrices, the Cayley–Hamilton theorem with inverses and high powers, diagonalisation and the minimal polynomial.
+order: 4
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.matrices-rank]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on eigenvalues and the Cayley–Hamilton theorem
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 6"
+  - Gilbert Strang, Linear Algebra and Its Applications, ch. on eigenvalues and eigenvectors
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) B.6 and (PG) C.3, C.9
+retired: []
