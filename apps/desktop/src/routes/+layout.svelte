@@ -8,7 +8,7 @@
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
   import CommandPalette from "$lib/components/CommandPalette.svelte";
   import Search from "@lucide/svelte/icons/search";
-  import { packBadge, refreshDueBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
+  import { autoUpdate, packBadge, packNotice, refreshCaNav, refreshDueBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
   import House from "@lucide/svelte/icons/house";
   import BookOpen from "@lucide/svelte/icons/book-open";
@@ -26,8 +26,9 @@
   loadSettings();
   refreshPackBadge();
   refreshDueBadge();
+  refreshCaNav();
 
-  const main = [
+  const allMain = [
     { href: "/", key: "nav.home", icon: House },
     { href: "/library", key: "nav.library", icon: BookOpen },
     { href: "/tests", key: "nav.tests", icon: Timer },
@@ -35,6 +36,8 @@
     { href: "/current-affairs", key: "nav.current_affairs", icon: Newspaper },
     { href: "/progress", key: "nav.progress", icon: ChartColumn },
   ];
+  // Current Affairs only appears when a current-affairs month is installed.
+  const main = $derived(allMain.filter((i) => i.href !== "/current-affairs" || packNotice.hasCa));
   const bottom = [
     { href: "/downloads", key: "nav.downloads", icon: Download },
     { href: "/settings", key: "nav.settings", icon: Settings },
@@ -46,6 +49,19 @@
   // First start: run the setup before anything else.
   $effect(() => {
     if (settings.loaded && settings.onboarded === "0" && !setupMode) goto("/onboarding", { replaceState: true });
+  });
+
+  // New topics are published regularly: fetch them in the background once per start.
+  $effect(() => {
+    if (settings.loaded && settings.onboarded === "1" && settings.auto_update === "1") autoUpdate(settings.lang);
+  });
+  const noticeText = $derived.by(() => {
+    const { added, updated } = packNotice;
+    if (added.length === 1 && !updated.length) return `New topic downloaded: ${added[0]}`;
+    const parts = [];
+    if (added.length) parts.push(`${added.length} new topic${added.length > 1 ? "s" : ""}`);
+    if (updated.length) parts.push(`${updated.length} updated`);
+    return parts.length ? `Downloaded ${parts.join(", ")}.` : "";
   });
 
   function active(href: string) {
@@ -147,12 +163,36 @@
       <main class="content" bind:this={scroller}>
         {@render children()}
       </main>
+      {#if noticeText}
+        <div class="notice" role="status">
+          <span>{noticeText}</span>
+          <a class="btn btn-ghost" href="/library" onclick={() => { packNotice.added = []; packNotice.updated = []; }}>Open Library</a>
+          <button class="btn btn-ghost" aria-label="Dismiss" onclick={() => { packNotice.added = []; packNotice.updated = []; }}>✕</button>
+        </div>
+      {/if}
     </div>
   </div>
   <CommandPalette bind:open={paletteOpen} />
 {/if}
 
 <style>
+  .notice {
+    position: fixed;
+    right: var(--space-5);
+    bottom: var(--space-5);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--correct);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 24px rgb(0 0 0 / 0.12);
+    font-size: 0.9375rem;
+    z-index: 20;
+    max-width: min(560px, calc(100vw - 2 * var(--space-5)));
+  }
   .shell {
     display: grid;
     grid-template-columns: 220px 1fr;

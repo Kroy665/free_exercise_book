@@ -23,6 +23,7 @@ const DEFAULTS: &[(&str, &str)] = &[
     ("daily_goal", "20"), // questions per day
     ("onboarded", "0"),   // first-run setup finished
     ("exams", ""),        // comma-separated exam tags the user prepares for
+    ("auto_update", "1"), // download new and updated topics when the app starts
 ];
 
 pub fn get_all(user: &Connection) -> Result<BTreeMap<String, String>> {
@@ -46,7 +47,7 @@ fn validate(key: &str, value: &str) -> Result<()> {
         "theme" => matches!(value, "system" | "light" | "dark"),
         "font_size" => value.parse::<u8>().is_ok_and(|n| (14..=22).contains(&n)),
         "daily_goal" => value.parse::<u16>().is_ok_and(|n| (1..=500).contains(&n)),
-        "onboarded" => matches!(value, "0" | "1"),
+        "onboarded" | "auto_update" => matches!(value, "0" | "1"),
         "exams" => value.is_empty() || value.split(',').all(|e| EXAM_TAGS.contains(&e)),
         _ => return Err(CoreError::Invalid(format!("unknown setting '{key}'"))),
     };

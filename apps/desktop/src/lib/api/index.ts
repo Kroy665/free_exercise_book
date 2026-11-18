@@ -106,7 +106,7 @@ export interface Stats {
 }
 
 // `lang` is the content language; the UI is always English.
-export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal" | "onboarded" | "exams", string>;
+export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal" | "onboarded" | "exams" | "auto_update", string>;
 
 export interface ApiError {
   code: string;
@@ -412,11 +412,4 @@ export const dataApi = {
 export const EXAMS: { id: string; label: string; hint: string }[] = [
   { id: "slst-0910", label: "WBSSC SLST (Class IX–X)", hint: "Assistant Teacher, graduation-level syllabus" },
   { id: "slst-1112", label: "WBSSC SLST (Class XI–XII)", hint: "Assistant Teacher, post-graduation-level syllabus" },
-  { id: "upsc-cse", label: "UPSC Civil Services", hint: "IAS, IPS, IFS… (Prelims GS)" },
-  { id: "wbcs", label: "WBCS", hint: "West Bengal Civil Service" },
-  { id: "state-psc", label: "Other State PSC exams", hint: "State civil service exams" },
-  { id: "ssc-cgl", label: "SSC CGL", hint: "Combined Graduate Level" },
-  { id: "ssc-chsl", label: "SSC CHSL", hint: "Combined Higher Secondary Level" },
-  { id: "ibps-po", label: "Banking (IBPS / SBI PO)", hint: "Bank PO and clerk exams" },
-  { id: "rrb-ntpc", label: "Railways (RRB NTPC)", hint: "Railway recruitment" },
 ];

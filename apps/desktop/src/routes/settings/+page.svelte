@@ -98,6 +98,14 @@
   </section>
 
   <section class="card group">
+    <label class="row-check">
+      <input type="checkbox" checked={settings.auto_update === "1"} onchange={(e) => setSetting("auto_update", e.currentTarget.checked ? "1" : "0")} />
+      <strong>Download new topics automatically</strong>
+    </label>
+    <p class="muted">New and updated topics are published regularly. When this is on, the app checks once each time it starts and downloads them in the background.</p>
+  </section>
+
+  <section class="card group">
     <label for="fs"><strong>{t("settings.font_size")}</strong> · {settings.font_size}px</label>
     <input id="fs" type="range" min="14" max="22" step="1" value={settings.font_size} onchange={(e) => setSetting("font_size", e.currentTarget.value)} />
   </section>
@@ -127,7 +135,7 @@
     <section class="card group">
     <strong>{t("settings.about")}</strong>
     <p class="muted">{t("settings.about_text")}</p>
-    <p class="muted small">v0.2.0</p>
+    <p class="muted small">v0.3.0</p>
   </section>
 </div>
 
@@ -205,4 +213,5 @@
   .errmsg {
     color: var(--wrong);
   }
+  .row-check { display: flex; align-items: center; gap: var(--space-2); }
 </style>

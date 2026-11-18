@@ -14,6 +14,7 @@ export const settings = $state<Settings & { loaded: boolean }>({
   // "1" until the backend says otherwise, so a plain browser preview never redirects.
   onboarded: "1",
   exams: "",
+  auto_update: "1",
   loaded: false,
 });
 
