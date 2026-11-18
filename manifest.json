@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": 1794981786,
+  "generated_at": 1794995993,
   "min_app_version": "0.1.0",
   "packs": [
     {
@@ -409,6 +409,672 @@
       "file": "math.linalg.eigen-cayley-hamilton@0.1.0.pack",
       "size": 13730,
       "sha256": "9b97cb6e8db1cc8990f67d526ed384e556b21ba191c41b6531258c40753981c2"
+    },
+    {
+      "id": "math.linalg.quadratic-forms",
+      "version": "0.1.0",
+      "title": {
+        "en": "Real Quadratic Forms"
+      },
+      "summary": {
+        "en": "The symmetric matrix of a quadratic form, linear change of variables and congruence, reduction to a sum of squares by Lagrange's method and by orthogonal diagonalisation, normal form, rank, index and signature, Sylvester's law of inertia, and definiteness by eigenvalues and principal minors."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 5,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.quadratic-forms@0.1.0.pack",
+      "size": 13905,
+      "sha256": "d8eebe89e7241fc1ef5d292834bdc93f312765bfc134a055b0c329a875d4b59a"
+    },
+    {
+      "id": "math.linalg.vector-spaces",
+      "version": "0.1.0",
+      "title": {
+        "en": "Vector Spaces"
+      },
+      "summary": {
+        "en": "Vector spaces over a field and standard examples, subspaces and the one-step test, intersection, union and sum of subspaces, span, linear independence, basis and dimension, the dimension formula for a sum, row and column space, and coordinates, with emphasis on Rⁿ."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 6,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.vector-spaces@0.1.0.pack",
+      "size": 13765,
+      "sha256": "e71789aa1eafa5af73248450018c5078a15479abda10572ac639bd1d7ffc14cd"
+    },
+    {
+      "id": "math.linalg.linear-transformations",
+      "version": "0.1.0",
+      "title": {
+        "en": "Linear Transformations"
+      },
+      "summary": {
+        "en": "Linear maps and non-examples, kernel and range, rank and nullity, the rank–nullity theorem, one-one and onto maps, inverses and isomorphism, the matrix of a map relative to ordered bases, change of basis and similar matrices, and Sylvester's law of nullity."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 7,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.linear-transformations@0.1.0.pack",
+      "size": 14136,
+      "sha256": "911461641c145fa6676515d2a2ae25e16a2c49cfddf5eafb548d6a5caed1ff89"
+    },
+    {
+      "id": "math.linalg.inner-product-spaces",
+      "version": "0.1.0",
+      "title": {
+        "en": "Inner Product Spaces"
+      },
+      "summary": {
+        "en": "Real and complex inner products, the induced norm, the Cauchy–Schwarz and triangle inequalities, orthogonality and orthonormal bases, Fourier coefficients, Gram–Schmidt orthonormalisation, orthogonal complements and projections, and orthogonal matrices."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.linalg",
+      "unit_title": {
+        "en": "Matrices and Linear Algebra"
+      },
+      "unit_order": 2,
+      "order": 8,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.linalg.inner-product-spaces@0.1.0.pack",
+      "size": 13869,
+      "sha256": "f5e153a0cc70202d181eec3bfe7fe0b07013f6494ce201b7fc8ac7728c46f76b"
+    },
+    {
+      "id": "math.analysis.real-numbers",
+      "version": "0.1.0",
+      "title": {
+        "en": "The Real Number System"
+      },
+      "summary": {
+        "en": "Rationals and irrationals, ℝ as a complete ordered field, bounded sets, supremum and infimum, the completeness axiom, the Archimedean property and density, the Cantor–Dedekind axiom, decimal representation, absolute value, nested intervals and countability."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.real-numbers@0.1.0.pack",
+      "size": 14524,
+      "sha256": "8cb7fc065b277a205043939778a6db76716cd11aeb9bb82cbdb4c1a471bbaeb2"
+    },
+    {
+      "id": "math.analysis.sequences",
+      "version": "0.1.0",
+      "title": {
+        "en": "Sequences"
+      },
+      "summary": {
+        "en": "Bounds and the ε–N limit, algebra of limits and the sandwich rule, monotone sequences and e, nested intervals, Cauchy's general principle, subsequences and limit superior/inferior, Cauchy's first and second limit theorems, standard limits, recursive sequences, divergence and oscillation."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.sequences@0.1.0.pack",
+      "size": 13536,
+      "sha256": "e6f8391fe09a2b5095cc92106bb6d4ff7fe58c8c60d6cbf50da96f35030e333b"
+    },
+    {
+      "id": "math.analysis.series-positive",
+      "version": "0.1.0",
+      "title": {
+        "en": "Series of Positive Terms"
+      },
+      "summary": {
+        "en": "Convergence through partial sums, the necessary condition and Cauchy's criterion, geometric and p-series, condensation, comparison, ratio, root, Raabe, Gauss, Abel–Pringsheim, integral and logarithmic tests, with the standard examples."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.series-positive@0.1.0.pack",
+      "size": 13745,
+      "sha256": "41f5f22a2aaa752f29899ef93922f054331a22bac82948efb514fd56c5585439"
+    },
+    {
+      "id": "math.analysis.series-arbitrary",
+      "version": "0.1.0",
+      "title": {
+        "en": "Alternating and Arbitrary Series"
+      },
+      "summary": {
+        "en": "Absolute and conditional convergence, the Leibniz test with its error bound, standard alternating series, ratio and root tests for absolute convergence, Abel's and Dirichlet's tests, rearrangements and the Cauchy product, and the interval of convergence with endpoints."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 4,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.series-arbitrary@0.1.0.pack",
+      "size": 14074,
+      "sha256": "8432db2074aa7ecef18cada4ad0fda352245265133e911788e33c021d131803d"
+    },
+    {
+      "id": "math.analysis.limits-continuity",
+      "version": "0.1.0",
+      "title": {
+        "en": "Limits and Continuity"
+      },
+      "summary": {
+        "en": "Cauchy and Heine definitions of limit, one-sided limits, algebra of limits and the sandwich rule, standard limits, continuity and types of discontinuity, properties of continuous functions on a closed bounded interval, and the inverse of a strictly monotone continuous function."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 5,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.limits-continuity@0.1.0.pack",
+      "size": 13451,
+      "sha256": "4b301313c802d5aeef113c10a0e79a77a49bd38c4e9dffbb0a92e0a8547cd79c"
+    },
+    {
+      "id": "math.analysis.mean-value-theorems",
+      "version": "0.1.0",
+      "title": {
+        "en": "Derivatives and Mean Value Theorems"
+      },
+      "summary": {
+        "en": "The derivative and its meaning, differentiability and continuity, successive derivatives and Leibniz's theorem, Rolle's, Lagrange's and Cauchy's mean value theorems, Darboux's theorem, monotonicity and differentials."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 6,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.mean-value-theorems@0.1.0.pack",
+      "size": 14021,
+      "sha256": "41d70e1f48789ce0bdb6b7c63f1639d070a06175f07572e3f0261c85bb00ae27"
+    },
+    {
+      "id": "math.analysis.taylor-series",
+      "version": "0.1.0",
+      "title": {
+        "en": "Taylor's Theorem and Expansions"
+      },
+      "summary": {
+        "en": "Taylor's and Maclaurin's theorems with the Lagrange and Cauchy remainders, the standard Maclaurin series with their ranges of validity, expansion by known series, e^(-1/x^2), limits by expansion and error estimates."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 7,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.taylor-series@0.1.0.pack",
+      "size": 13978,
+      "sha256": "a676d4df4569624eabb8c59f36679d4fd47a16c04c5865c430ad1b1786d95d3e"
+    },
+    {
+      "id": "math.analysis.indeterminate-extrema",
+      "version": "0.1.0",
+      "title": {
+        "en": "Indeterminate Forms, Maxima and Minima"
+      },
+      "summary": {
+        "en": "L'Hospital's rule with its exact hypotheses, reduction of 0·∞, ∞ − ∞, 0⁰, 1^∞ and ∞⁰, standard limits, local extrema by the first- and higher-derivative tests, points of inflexion, global extrema on [a, b] and applied optimisation."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 8,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.indeterminate-extrema@0.1.0.pack",
+      "size": 13791,
+      "sha256": "43569c0bacf0ea769c2ec1a71d52d8629c5c2c78de240bf7c30bf67df9829d9f"
+    },
+    {
+      "id": "math.analysis.two-variables",
+      "version": "0.1.0",
+      "title": {
+        "en": "Functions of Two Variables"
+      },
+      "summary": {
+        "en": "Limits and continuity in the plane, repeated limits, partial derivatives and differentiability, the chain rule and implicit functions, Schwarz's and Young's theorems, Euler's theorem on homogeneous functions, and maxima, minima and saddle points with Lagrange multipliers."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 9,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.two-variables@0.1.0.pack",
+      "size": 14368,
+      "sha256": "4b765b82733659ee545db1fb8e60f1947c10a5ba14b975652569257bb3b6c75f"
+    },
+    {
+      "id": "math.analysis.curves",
+      "version": "0.1.0",
+      "title": {
+        "en": "Tangents, Normals, Asymptotes and Curvature"
+      },
+      "summary": {
+        "en": "Tangents and normals in Cartesian, parametric and polar forms, the polar angle φ and pedal equations, rectilinear asymptotes, curvature and the centre and chord of curvature, envelopes, and curve tracing."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.analysis",
+      "unit_title": {
+        "en": "Real Analysis and Differential Calculus"
+      },
+      "unit_order": 3,
+      "order": 10,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 75,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.analysis.curves@0.1.0.pack",
+      "size": 15056,
+      "sha256": "f8b55154d712c983aae80ff76f36b6ac89dbc4ba9ea0e9a78ad22f5695ece03d"
+    },
+    {
+      "id": "math.integral.integration-methods",
+      "version": "0.1.0",
+      "title": {
+        "en": "Methods of Integration"
+      },
+      "summary": {
+        "en": "Standard integrals, substitution, integration by parts, partial fractions, the half-angle substitution for 1/(a + b cos x), linear trigonometric quotients, and quadratic surds."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.integral",
+      "unit_title": {
+        "en": "Integral Calculus"
+      },
+      "unit_order": 4,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.integral.integration-methods@0.1.0.pack",
+      "size": 12990,
+      "sha256": "f14b4f3aad6992783db95e44cd6d36a3e0033c7c52f9e3db5980bda44a9207b8"
+    },
+    {
+      "id": "math.integral.reduction-formulae",
+      "version": "0.1.0",
+      "title": {
+        "en": "Reduction Formulae"
+      },
+      "summary": {
+        "en": "Reduction formulae by integration by parts for powers of sine, cosine, tangent, secant and cotangent, for sinᵐx cosⁿx, xⁿeᵃˣ and 1/(x² + a²)ⁿ; Wallis's formulae and their gamma form; and the tanⁿx relation on [0, π/4]."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.integral",
+      "unit_title": {
+        "en": "Integral Calculus"
+      },
+      "unit_order": 4,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.integral.reduction-formulae@0.1.0.pack",
+      "size": 12276,
+      "sha256": "4ea3fbad51e25e783f4527297aaed5d9d1bee4ff646698bcc6e810b1d6b426ca"
+    },
+    {
+      "id": "math.integral.definite-integrals",
+      "version": "0.1.0",
+      "title": {
+        "en": "Definite Integrals"
+      },
+      "summary": {
+        "en": "The definite integral as the limit of a sum, limits of sums as integrals, the fundamental theorem and the Leibniz rule for variable limits, properties (a + b − x, even, odd, periodic), standard results such as the log sin integral, and the first mean value theorem with bounds."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.integral",
+      "unit_title": {
+        "en": "Integral Calculus"
+      },
+      "unit_order": 4,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.integral.definite-integrals@0.1.0.pack",
+      "size": 13216,
+      "sha256": "8fd04013deaf0fc7c6f218156cb589ba47450bff30e5486480237ec1df7933ed"
+    },
+    {
+      "id": "math.integral.area-length-volume",
+      "version": "0.1.0",
+      "title": {
+        "en": "Areas, Lengths and Volumes"
+      },
+      "summary": {
+        "en": "Quadrature in Cartesian, parametric and polar forms, rectification, volumes and surface areas of solids of revolution, Pappus's theorems, and a working knowledge of double integrals."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.integral",
+      "unit_title": {
+        "en": "Integral Calculus"
+      },
+      "unit_order": 4,
+      "order": 4,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.integral.area-length-volume@0.1.0.pack",
+      "size": 13254,
+      "sha256": "aa80c9306b14041278a975acd5ba00030008b2dc7080e7fb258a2193515f3812"
     }
   ],
   "exams": [
