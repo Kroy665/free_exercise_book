@@ -1,0 +1,18 @@
+id: math.integral.area-length-volume
+title:
+  en: Areas, Lengths and Volumes
+summary:
+  en: Quadrature in Cartesian, parametric and polar forms, rectification, volumes and surface areas of solids of revolution, Pappus's theorems, and a working knowledge of double integrals.
+order: 4
+exams: [slst-0910, slst-1112]
+prerequisites: [math.integral.definite-integrals]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - B. C. Das and B. N. Mukherjee, Integral Calculus, chs. on quadrature, rectification and volumes and surfaces of solids of revolution
+  - S. Lahiri, Integral Calculus, chs. on areas, lengths and volumes
+  - "G. B. Thomas and R. L. Finney, Calculus and Analytic Geometry, chs. on applications of definite integrals and multiple integrals"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) IV.4–IV.5 and (PG) II.12
+retired: []

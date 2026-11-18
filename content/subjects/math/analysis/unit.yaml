@@ -1,0 +1,16 @@
+id: math.analysis
+subject: math
+title: { en: Real Analysis and Differential Calculus }
+order: 3
+# Planned topics: docs/SYLLABUS.md (Blocks 3 and 7). Only written topics are listed.
+topics:
+  - math.analysis.real-numbers
+  - math.analysis.sequences
+  - math.analysis.series-positive
+  - math.analysis.series-arbitrary
+  - math.analysis.limits-continuity
+  - math.analysis.mean-value-theorems
+  - math.analysis.taylor-series
+  - math.analysis.indeterminate-extrema
+  - math.analysis.two-variables
+  - math.analysis.curves

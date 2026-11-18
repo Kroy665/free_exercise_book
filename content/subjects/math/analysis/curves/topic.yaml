@@ -1,0 +1,18 @@
+id: math.analysis.curves
+title:
+  en: Tangents, Normals, Asymptotes and Curvature
+summary:
+  en: Tangents and normals in Cartesian, parametric and polar forms, the polar angle φ and pedal equations, rectilinear asymptotes, curvature and the centre and chord of curvature, envelopes, and curve tracing.
+order: 10
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.mean-value-theorems]
+estimated_minutes: 75
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - B. C. Das and B. N. Mukherjee, Differential Calculus, chs. on tangents and normals, asymptotes, curvature and envelopes
+  - S. Narayan and P. K. Mittal, Differential Calculus, chs. on pedal equations, asymptotes, curvature and curve tracing
+  - J. Edwards, A Treatise on the Differential Calculus, chs. on asymptotes, curvature and envelopes
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.8 and (PG) Analysis 10
+retired: []

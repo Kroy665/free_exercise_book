@@ -1,0 +1,18 @@
+id: math.analysis.indeterminate-extrema
+title:
+  en: Indeterminate Forms, Maxima and Minima
+summary:
+  en: L'Hospital's rule with its exact hypotheses, reduction of 0·∞, ∞ − ∞, 0⁰, 1^∞ and ∞⁰, standard limits, local extrema by the first- and higher-derivative tests, points of inflexion, global extrema on [a, b] and applied optimisation.
+order: 8
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.mean-value-theorems]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on L'Hospital's rule and maxima and minima
+  - B. C. Das and B. N. Mukherjee, Differential Calculus, ch. on indeterminate forms and maxima and minima
+  - "R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, sec. 6.3 and 6.4"
+  - "WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.6 and (PG) Real Analysis 8–9"
+retired: []

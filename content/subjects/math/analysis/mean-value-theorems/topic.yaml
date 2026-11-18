@@ -1,0 +1,18 @@
+id: math.analysis.mean-value-theorems
+title:
+  en: Derivatives and Mean Value Theorems
+summary:
+  en: The derivative and its meaning, differentiability and continuity, successive derivatives and Leibniz's theorem, Rolle's, Lagrange's and Cauchy's mean value theorems, Darboux's theorem, monotonicity and differentials.
+order: 6
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.limits-continuity]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on differentiation and mean value theorems
+  - "R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 6"
+  - B. C. Das and B. N. Mukherjee, Differential Calculus, ch. on successive differentiation and mean value theorems
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.5–6 and (PG) II.7
+retired: []

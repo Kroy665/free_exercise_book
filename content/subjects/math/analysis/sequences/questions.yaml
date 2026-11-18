@@ -1,0 +1,673 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - limit-algebra
+  - exam-tips
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \frac{3n^2 + 2n}{5n^2 - 1}$ equals'
+  options:
+  - en: '$0$'
+  - en: '$1$'
+  - en: '$\dfrac35$'
+  - en: '$+\infty$'
+  answer: 2
+  explanation:
+    en: |-
+      Divide the numerator and the denominator by $n^2$:
+      $$\frac{3 + \frac2n}{5 - \frac{1}{n^2}} \to \frac{3}{5}.$$
+      Equal degrees give the ratio of the leading coefficients.
+
+      $0$ would need a lower-degree numerator, and $+\infty$ a higher-degree one.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - monotone-e
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(1 + \frac1n\right)^{2n}$ equals'
+  options:
+  - en: '$e$'
+  - en: '$2e$'
+  - en: '$e^2$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      Write it as a square of the sequence that defines $e$:
+      $$\left(1 + \frac1n\right)^{2n} = \left[\left(1 + \frac1n\right)^n\right]^2 \to e^2.$$
+      The square of a convergent sequence converges to the square of the limit.
+
+      $1$ is the "$1^\infty$" trap: the base tends to $1$, but the exponent grows.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} n^{1/n}$ equals'
+  options:
+  - en: '$0$'
+  - en: '$e$'
+  - en: '$+\infty$'
+  - en: '$1$'
+  answer: 3
+  explanation:
+    en: |-
+      Take $a_n = n$. Then $\frac{a_{n+1}}{a_n} = \frac{n+1}{n} \to 1$, so by Cauchy's second limit theorem
+      $$n^{1/n} = a_n^{1/n} \to 1.$$
+      Check: $10^{1/10} \approx 1.26$ and $1000^{1/1000} \approx 1.007$.
+
+      $+\infty$ ignores the shrinking exponent; $0$ ignores the growing base.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: 'Let $x_1 = \sqrt2$ and $x_{n+1} = \sqrt{2 + x_n}$ for $n \ge 1$. Then $\displaystyle\lim_{n\to\infty} x_n$ equals'
+  options:
+  - en: '$-1$'
+  - en: '$\sqrt2$'
+  - en: '$\dfrac{1 + \sqrt5}{2}$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      By induction $0 < x_n < 2$ and
+      $$x_{n+1}^2 - x_n^2 = (2 - x_n)(1 + x_n) > 0,$$
+      so $(x_n)$ is increasing and bounded above. It converges to some $l$, and $l^2 = 2 + l$ gives $l = 2$ or $l = -1$. All terms are positive, so $l = 2$.
+
+      $-1$ is the rejected root. $\frac{1 + \sqrt5}{2}$ is the limit of $x_{n+1} = \sqrt{1 + x_n}$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \frac{(n!)^{1/n}}{n}$ equals'
+  options:
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$\dfrac1e$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      Write $\frac{(n!)^{1/n}}{n} = \left(\frac{n!}{n^n}\right)^{1/n}$ and let $a_n = \frac{n!}{n^n}$. Then
+      $$\frac{a_{n+1}}{a_n} = \frac{(n+1)!}{(n+1)^{n+1}}\cdot\frac{n^n}{n!} = \left(\frac{n}{n+1}\right)^n = \frac{1}{\left(1 + \frac1n\right)^n} \to \frac1e.$$
+      By Cauchy's second limit theorem, $a_n^{1/n} \to \frac1e$.
+
+      $e$ is the limit of the reciprocal $\frac{n}{(n!)^{1/n}}$. $0$ comes from $\frac{n!}{n^n} \to 0$, forgetting the $n$-th root.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-algebra
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(\frac{1}{\sqrt{n^2 + 1}} + \frac{1}{\sqrt{n^2 + 2}} + \cdots + \frac{1}{\sqrt{n^2 + n}}\right)$ equals'
+  options:
+  - en: '$0$'
+  - en: '$\dfrac12$'
+  - en: '$+\infty$'
+  - en: '$1$'
+  answer: 3
+  explanation:
+    en: |-
+      There are $n$ terms, each between $\frac{1}{\sqrt{n^2 + n}}$ and $\frac{1}{\sqrt{n^2 + 1}}$. So
+      $$\frac{n}{\sqrt{n^2 + n}} \le c_n \le \frac{n}{\sqrt{n^2 + 1}}.$$
+      Both bounds tend to $1$, so $c_n \to 1$ by the sandwich rule.
+
+      $0$ comes from "each term tends to $0$": that argument fails because the number of terms grows with $n$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - limit-definition
+  - exam-tips
+  stem:
+    en: Which of the following sequences is bounded but not convergent?
+  options:
+  - en: '$\left((-1)^n\right)$'
+  - en: '$\left(\dfrac1n\right)$'
+  - en: '$\left(\dfrac{(-1)^n}{n}\right)$'
+  - en: '$(n)$'
+  answer: 0
+  explanation:
+    en: |-
+      $(-1)^n$ takes only the values $\pm1$, so it is bounded. Its even terms tend to $1$ and its odd terms to $-1$, so it does not converge.
+
+      $\frac1n$ and $\frac{(-1)^n}{n}$ both converge to $0$; $(n)$ is unbounded.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - subsequences
+  stem:
+    en: 'For $a_n = (-1)^n\left(1 + \dfrac1n\right)$, the values of $\displaystyle\limsup_{n\to\infty} a_n$ and $\displaystyle\liminf_{n\to\infty} a_n$ are respectively'
+  options:
+  - en: '$1$ and $-1$'
+  - en: '$\dfrac32$ and $-2$'
+  - en: '$1$ and $1$'
+  - en: '$0$ and $0$'
+  answer: 0
+  explanation:
+    en: |-
+      The even terms $1 + \frac{1}{2k} \to 1$ and the odd terms $-\left(1 + \frac{1}{2k-1}\right) \to -1$. These are the only subsequential limits, so
+      $$\limsup a_n = 1, \qquad \liminf a_n = -1.$$
+
+      $\frac32$ and $-2$ are the $\sup$ and $\inf$ of the terms ($a_2 = \frac32$, $a_1 = -2$). Each is attained once, and finitely many terms do not affect $\limsup$ or $\liminf$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - limit-definition
+  stem:
+    en: 'For the sequence $a_n = \dfrac{n}{n+1}$, $n \ge 1$, which statement is correct?'
+  options:
+  - en: '$\inf a_n = 0$ and $\sup a_n = 1$'
+  - en: '$\inf a_n = \dfrac12$ and $\sup a_n = 1$; the supremum is attained'
+  - en: '$\inf a_n = \dfrac12$ and the sequence is not bounded above'
+  - en: '$\inf a_n = \dfrac12$ and $\sup a_n = 1$; the supremum is not attained'
+  answer: 3
+  explanation:
+    en: |-
+      $a_n = 1 - \frac{1}{n+1}$ increases. The least term is $a_1 = \frac12$, so $\inf = \frac12$ (attained). The terms approach $1$ but $a_n < 1$ always, so $\sup = 1$ is not attained.
+
+      $\inf = 0$ would be the value at $n = 0$, which is not a term.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-definition
+  stem:
+    en: 'For $a_n = \dfrac{n+1}{n}$, the least positive integer $N$ such that $|a_n - 1| < \dfrac{1}{100}$ for all $n \ge N$ is'
+  options:
+  - en: '$100$'
+  - en: '$101$'
+  - en: '$99$'
+  - en: '$10$'
+  answer: 1
+  explanation:
+    en: |-
+      $$|a_n - 1| = \frac1n < \frac{1}{100} \iff n > 100.$$
+      So the inequality holds for all $n \ge 101$, and fails at $n = 100$ (where $\frac1n = \frac{1}{100}$, not less).
+
+      $100$ is the off-by-one slip from the strict inequality.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(\frac{n^n}{n!}\right)^{1/n}$ equals'
+  options:
+  - en: '$\dfrac1e$'
+  - en: '$1$'
+  - en: '$e$'
+  - en: '$+\infty$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $a_n = \frac{n^n}{n!}$. Then
+      $$\frac{a_{n+1}}{a_n} = \frac{(n+1)^{n+1}}{(n+1)!}\cdot\frac{n!}{n^n} = \left(1 + \frac1n\right)^n \to e.$$
+      By Cauchy's second limit theorem, $a_n^{1/n} \to e$.
+
+      $\frac1e$ is the limit of the reciprocal $\left(\frac{n!}{n^n}\right)^{1/n}$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-algebra
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(\sqrt{n^2 + n} - n\right)$ equals'
+  options:
+  - en: '$\dfrac12$'
+  - en: '$0$'
+  - en: '$1$'
+  - en: '$+\infty$'
+  answer: 0
+  explanation:
+    en: |-
+      Rationalise:
+      $$\sqrt{n^2 + n} - n = \frac{n}{\sqrt{n^2 + n} + n} = \frac{1}{\sqrt{1 + \frac1n} + 1} \to \frac12.$$
+
+      $0$ comes from "$\sqrt{n^2 + n} \approx n$", which loses the first-order term: $\sqrt{n^2 + n} \approx n + \frac12$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-limits
+  - nested-cauchy
+  stem:
+    en: 'Let $x_1 = 1$ and $x_{n+1} = \dfrac{1}{1 + x_n}$ for $n \ge 1$. Then $\displaystyle\lim_{n\to\infty} x_n$ equals'
+  options:
+  - en: '$\dfrac{\sqrt5 - 1}{2}$'
+  - en: '$\dfrac{-1 - \sqrt5}{2}$'
+  - en: '$\dfrac12$'
+  - en: '$\dfrac{1 + \sqrt5}{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      The terms $1, \frac12, \frac23, \frac35, \dots$ are not monotone, but all lie in $\left[\frac12, 1\right]$, so
+      $$|x_{n+2} - x_{n+1}| = \frac{|x_{n+1} - x_n|}{(1 + x_n)(1 + x_{n+1})} \le \frac49|x_{n+1} - x_n|.$$
+      The sequence is contractive, hence Cauchy, hence convergent. Its limit satisfies $l = \frac{1}{1 + l}$, i.e. $l^2 + l - 1 = 0$, and $l > 0$:
+      $$l = \frac{\sqrt5 - 1}{2} \approx 0.618.$$
+
+      $\frac{-1 - \sqrt5}{2}$ is the negative root. $\frac{1 + \sqrt5}{2}$ is the reciprocal, the limit of the Fibonacci ratios $\frac{F_{n+1}}{F_n}$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-definition
+  stem:
+    en: 'Which of the following sequences is unbounded but tends neither to $+\infty$ nor to $-\infty$?'
+  options:
+  - en: '$\left(n^2\right)$'
+  - en: '$\left((-1)^n n\right)$'
+  - en: '$\left(-\sqrt n\right)$'
+  - en: '$\left((-1)^n\right)$'
+  answer: 1
+  explanation:
+    en: |-
+      $(-1)^n n$: the even terms tend to $+\infty$ and the odd terms to $-\infty$. It is unbounded, but neither limit holds; it oscillates infinitely.
+
+      $n^2 \to +\infty$ and $-\sqrt n \to -\infty$. $(-1)^n$ oscillates, but it is bounded.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  stem:
+    en: 'If $a_n \to l$ (finite), then $\displaystyle\lim_{n\to\infty} \frac{a_1 + 2a_2 + 3a_3 + \cdots + n a_n}{n^2}$ equals'
+  options:
+  - en: '$l$'
+  - en: '$\dfrac{l}{2}$'
+  - en: '$0$'
+  - en: '$2l$'
+  answer: 1
+  explanation:
+    en: |-
+      By Stolz–Cesàro with $x_n = a_1 + 2a_2 + \cdots + n a_n$ and $y_n = n^2$ (increasing to $\infty$):
+      $$\frac{x_n - x_{n-1}}{y_n - y_{n-1}} = \frac{n a_n}{2n - 1} \to \frac{l}{2}.$$
+      Check with $a_n = l$ for all $n$: $\frac{l(1 + 2 + \cdots + n)}{n^2} = \frac{l\,n(n+1)}{2n^2} \to \frac l2$.
+
+      $l$ comes from applying Cauchy's first theorem without the weights.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nested-cauchy
+  stem:
+    en: Which of the following intersections is empty?
+  options:
+  - en: '$\displaystyle\bigcap_{n=1}^{\infty} \left[0, \frac1n\right]$'
+  - en: '$\displaystyle\bigcap_{n=1}^{\infty} \left(0, \frac1n\right)$'
+  - en: '$\displaystyle\bigcap_{n=1}^{\infty} \left[-\frac1n, \frac1n\right]$'
+  - en: '$\displaystyle\bigcap_{n=1}^{\infty} \left[1 - \frac1n, 1 + \frac1n\right]$'
+  answer: 1
+  explanation:
+    en: |-
+      For $x > 0$, the Archimedean property gives $n$ with $\frac1n < x$, so $x \notin \left(0, \frac1n\right)$; and $0$ is in none of them. The intersection is empty.
+
+      The other three are nested **closed bounded** intervals with lengths $\to 0$, so by the nested interval theorem each meets in one point: $\{0\}$, $\{0\}$ and $\{1\}$. The theorem needs closed intervals.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nested-cauchy
+  - exam-tips
+  stem:
+    en: 'Which of the following sequences is **not** a Cauchy sequence?'
+  options:
+  - en: '$t_n = 1 + \dfrac{1}{2^2} + \dfrac{1}{3^2} + \cdots + \dfrac{1}{n^2}$'
+  - en: '$u_n = \dfrac{(-1)^n}{n}$'
+  - en: '$v_n = \dfrac{\sin n}{n}$'
+  - en: '$s_n = 1 + \dfrac12 + \dfrac13 + \cdots + \dfrac1n$'
+  answer: 3
+  explanation:
+    en: |-
+      $$s_{2n} - s_n = \frac{1}{n+1} + \cdots + \frac{1}{2n} \ge \frac12$$
+      for every $n$, so $(s_n)$ is not Cauchy (it diverges to $+\infty$).
+
+      $t_n$ converges (to $\frac{\pi^2}{6}$); $u_n \to 0$ and $v_n \to 0$ (null times bounded). In $\R$ every convergent sequence is Cauchy.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(\frac{(2n)!}{(n!)^2}\right)^{1/n}$ equals'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$4$'
+  - en: '$e^2$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $a_n = \frac{(2n)!}{(n!)^2}$. Then
+      $$\frac{a_{n+1}}{a_n} = \frac{(2n+2)(2n+1)}{(n+1)^2} = \frac{2(2n+1)}{n+1} \to 4.$$
+      By Cauchy's second limit theorem, $a_n^{1/n} \to 4$. (Check: $a_n = \binom{2n}{n} \le 4^n$.)
+
+      $2$ keeps only one factor of $2n + 1$ over $n + 1$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-algebra
+  - exam-tips
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty} \left(2^n + 3^n\right)^{1/n}$ equals'
+  options:
+  - en: '$3$'
+  - en: '$5$'
+  - en: '$2$'
+  - en: '$6$'
+  answer: 0
+  explanation:
+    en: |-
+      $3^n \le 2^n + 3^n \le 2\cdot 3^n$, so
+      $$3 \le \left(2^n + 3^n\right)^{1/n} \le 3\cdot 2^{1/n} \to 3.$$
+      By the sandwich rule the limit is $3$, the larger base.
+
+      $5 = 2 + 3$ wrongly treats the $n$-th root as additive.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - monotone-e
+  stem:
+    en: 'The sequence $a_n = \left(1 + \dfrac1n\right)^n$, $n \ge 1$, is'
+  options:
+  - en: 'strictly decreasing and bounded below by $2$'
+  - en: strictly increasing and unbounded
+  - en: not monotone but bounded
+  - en: 'strictly increasing and bounded above by $3$'
+  answer: 3
+  explanation:
+    en: |-
+      In the binomial expansion
+      $$a_n = 1 + 1 + \frac{1}{2!}\Big(1 - \frac1n\Big) + \frac{1}{3!}\Big(1 - \frac1n\Big)\Big(1 - \frac2n\Big) + \cdots,$$
+      each bracket grows with $n$ and a new positive term appears, so $a_n$ strictly increases. Since $\frac{1}{k!} \le \frac{1}{2^{k-1}}$, $a_n < 1 + 2 = 3$. So $a_n \uparrow e$.
+
+      The decreasing one is $\left(1 + \frac1n\right)^{n+1}$, which decreases to $e$.
+  status: ai-generated
+- id: q0021
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - limit-definition
+  - subsequences
+  stem:
+    en: 'Consider the following statements about sequences of real numbers:'
+  statements:
+  - en: Every convergent sequence is bounded.
+  - en: Every bounded sequence is convergent.
+  - en: Every bounded sequence has a convergent subsequence.
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  answer: 1
+  explanation:
+    en: |-
+      1. True: with $\varepsilon = 1$, all terms from some $N$ on lie in $(l - 1, l + 1)$, and finitely many terms are bounded.
+      2. False: $(-1)^n$ is bounded but not convergent.
+      3. True: the Bolzano–Weierstrass theorem. For $(-1)^n$, the even terms form a convergent subsequence.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - limit-algebra
+  - exam-tips
+  stem:
+    en: 'Let $(a_n)$ and $(b_n)$ be sequences of real numbers. Consider the following statements:'
+  statements:
+  - en: 'If $a_n \to 0$ and $(b_n)$ is bounded, then $a_n b_n \to 0$.'
+  - en: 'If $(a_n)$ and $(a_n + b_n)$ both converge, then $(b_n)$ converges.'
+  - en: 'If $(a_n)$ and $(a_n b_n)$ both converge, then $(b_n)$ converges.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      1. True: if $|b_n| \le M$, then $|a_n b_n| \le M|a_n| \to 0$.
+      2. True: $b_n = (a_n + b_n) - a_n$ is a difference of convergent sequences.
+      3. False: $a_n = \frac1n \to 0$ and $b_n = n$ give $a_n b_n = 1$, convergent, while $(b_n)$ diverges. Division needs $\lim a_n \ne 0$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - monotone-e
+  - limit-algebra
+  - exam-tips
+  stem:
+    en: 'Consider the following statements about a sequence $(a_n)$ of real numbers:'
+  statements:
+  - en: A monotone sequence converges if and only if it is bounded.
+  - en: 'If $|a_n| \to |l|$, then $a_n \to l$.'
+  - en: 'If $a_n \to l$, then $|a_n| \to |l|$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      1. True: convergent sequences are bounded, and bounded monotone sequences converge (to the sup or inf).
+      2. False: $a_n = (-1)^n$ has $|a_n| = 1 \to 1$, but $(a_n)$ diverges. (It is true when $l = 0$.)
+      3. True: $\big||a_n| - |l|\big| \le |a_n - l| \to 0$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - monotone-e
+  - cauchy-limit-theorems
+  - standard-limits
+  stem:
+    en: Match each sequence in List I with its limit in List II.
+  left:
+  - en: '$\left(1 + \dfrac1n\right)^n$'
+  - en: '$n^{1/n}$'
+  - en: '$\dfrac{(n!)^{1/n}}{n}$'
+  - en: '$\left(1 + \dfrac{1}{2n}\right)^n$'
+  right:
+  - en: '$1$'
+  - en: '$\sqrt e$'
+  - en: '$e$'
+  - en: '$\dfrac1e$'
+  options:
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-4, B-1, C-3, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      - A: the definition of $e$.
+      - B: Cauchy's second theorem with $a_n = n$: $\frac{n+1}{n} \to 1$.
+      - C: $\left(\frac{n!}{n^n}\right)^{1/n}$; the ratio is $\left(1 + \frac1n\right)^{-n} \to \frac1e$.
+      - D: $\left[\left(1 + \frac{1}{2n}\right)^{2n}\right]^{1/2} \to e^{1/2}$.
+
+      So A-3, B-1, C-4, D-2. Swapping C and A confuses $\frac{(n!)^{1/n}}{n}$ with its reciprocal.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - subsequences
+  stem:
+    en: Match each sequence in List I with its limit inferior and limit superior in List II.
+  left:
+  - en: '$(-1)^n\left(1 + \dfrac1n\right)$'
+  - en: '$1 + (-1)^n$'
+  - en: '$(-1)^n n$'
+  - en: '$n\left(1 + (-1)^n\right)$'
+  right:
+  - en: '$\liminf = 0$, $\limsup = +\infty$'
+  - en: '$\liminf = -1$, $\limsup = 1$'
+  - en: '$\liminf = -\infty$, $\limsup = +\infty$'
+  - en: '$\liminf = 0$, $\limsup = 2$'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-1, C-3, D-4'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-4, C-1, D-3'
+  answer: 0
+  explanation:
+    en: |-
+      Split into even and odd terms:
+      - A: even terms $\to 1$, odd terms $\to -1$: $(-1, 1)$, item 2.
+      - B: even terms $= 2$, odd terms $= 0$: $(0, 2)$, item 4.
+      - C: even terms $\to +\infty$, odd terms $\to -\infty$: item 3.
+      - D: even terms $2n \to +\infty$, odd terms $= 0$: $(0, +\infty)$, item 1.
+
+      So A-2, B-4, C-3, D-1. For A, $\sup = \frac32$ and $\inf = -2$ are not the limit superior and inferior.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - monotone-e
+  assertion:
+    en: 'The sequence $\left(1 + \dfrac1n\right)^n$ converges.'
+  reason:
+    en: Every monotone sequence of real numbers that is bounded converges.
+  answer: 0
+  explanation:
+    en: 'Both are true. The sequence is increasing and bounded above by $3$ (binomial expansion), so R gives A directly. Its limit is $e$.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-definition
+  - subsequences
+  assertion:
+    en: 'The sequence $\left((-1)^n\right)$ does not converge.'
+  reason:
+    en: Every bounded sequence of real numbers converges.
+  answer: 2
+  explanation:
+    en: |-
+      A is true: the subsequences of even and odd terms tend to $1$ and $-1$, two different limits.
+
+      R is false, and A itself is the counterexample: $(-1)^n$ is bounded. Only bounded **monotone** sequences must converge; a bounded sequence only has a convergent **subsequence**.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  - exam-tips
+  assertion:
+    en: 'If $a_n > 0$ for all $n$ and $a_n^{1/n} \to 1$, then $\dfrac{a_{n+1}}{a_n} \to 1$.'
+  reason:
+    en: 'If $a_n > 0$ for all $n$ and $\dfrac{a_{n+1}}{a_n} \to l$, then $a_n^{1/n} \to l$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false. Take $a_n = 2$ for odd $n$ and $a_n = 1$ for even $n$. Then $a_n^{1/n}$ is $2^{1/n}$ or $1$, which tends to $1$; but $\frac{a_{n+1}}{a_n}$ alternates between $\frac12$ and $2$.
+
+      R is true: it is Cauchy's second limit theorem. Its converse, A, fails.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-limit-theorems
+  - limit-definition
+  assertion:
+    en: '$\displaystyle\lim_{n\to\infty} \frac{1}{n}\left(1 + \frac12 + \cdots + \frac1n\right) = 0$.'
+  reason:
+    en: Every convergent sequence of real numbers is bounded.
+  answer: 1
+  explanation:
+    en: |-
+      A is true by Cauchy's first limit theorem: $\frac1n \to 0$, so the means of $1, \frac12, \dots, \frac1n$ tend to $0$. (Also $1 + \cdots + \frac1n \le 1 + \log n$, and $\frac{1 + \log n}{n} \to 0$.)
+
+      R is true, but it does not give A. Boundedness of $(1/n)$ alone gives only that the means are bounded, not that they tend to $0$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - nested-cauchy
+  assertion:
+    en: 'The sequence $s_n = 1 + \dfrac12 + \dfrac13 + \cdots + \dfrac1n$ does not converge.'
+  reason:
+    en: A sequence of real numbers converges if and only if it is a Cauchy sequence.
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A. For every $n$,
+      $$s_{2n} - s_n = \frac{1}{n+1} + \cdots + \frac{1}{2n} \ge n\cdot\frac{1}{2n} = \frac12,$$
+      so with $\varepsilon = \frac12$ no $N$ works: $(s_n)$ is not Cauchy. By Cauchy's general principle (R), it does not converge.
+  status: ai-generated

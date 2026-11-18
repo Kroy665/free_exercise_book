@@ -1,0 +1,18 @@
+id: math.linalg.vector-spaces
+title:
+  en: Vector Spaces
+summary:
+  en: Vector spaces over a field and standard examples, subspaces and the one-step test, intersection, union and sum of subspaces, span, linear independence, basis and dimension, the dimension formula for a sum, row and column space, and coordinates, with emphasis on Rⁿ.
+order: 6
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.matrices-rank]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on vector spaces
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 2"
+  - S. Lang, Introduction to Linear Algebra, ch. on vector spaces and dimension
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) B.4 and (PG) C.4, C.5
+retired: []

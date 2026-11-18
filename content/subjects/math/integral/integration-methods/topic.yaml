@@ -1,0 +1,18 @@
+id: math.integral.integration-methods
+title:
+  en: Methods of Integration
+summary:
+  en: Standard integrals, substitution, integration by parts, partial fractions, the half-angle substitution for 1/(a + b cos x), linear trigonometric quotients, and quadratic surds.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Das and Mukherjee, Integral Calculus, ch. on methods of integration
+  - Joseph Edwards, A Treatise on the Integral Calculus, vol. I, chs. on standard forms and rational fractions
+  - S. Narayan and P. K. Mittal, Integral Calculus, chs. 1–4
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) IV.1 and (PG) II.11
+retired: []

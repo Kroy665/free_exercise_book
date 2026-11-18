@@ -1,0 +1,18 @@
+id: math.analysis.limits-continuity
+title:
+  en: Limits and Continuity
+summary:
+  en: Cauchy and Heine definitions of limit, one-sided limits, algebra of limits and the sandwich rule, standard limits, continuity and types of discontinuity, properties of continuous functions on a closed bounded interval, and the inverse of a strictly monotone continuous function.
+order: 5
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.sequences]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, chs. on limits and continuity
+  - R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, chs. 4 and 5
+  - W. Rudin, Principles of Mathematical Analysis, ch. 4
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.4 and (PG) II.3 and II.6
+retired: []

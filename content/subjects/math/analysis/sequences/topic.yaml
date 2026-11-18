@@ -1,0 +1,18 @@
+id: math.analysis.sequences
+title:
+  en: Sequences
+summary:
+  en: Bounds and the ε–N limit, algebra of limits and the sandwich rule, monotone sequences and e, nested intervals, Cauchy's general principle, subsequences and limit superior/inferior, Cauchy's first and second limit theorems, standard limits, recursive sequences, divergence and oscillation.
+order: 2
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.real-numbers]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, chs. on sequences
+  - R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 3
+  - S. C. Malik and S. Arora, Mathematical Analysis, ch. on sequences
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.2 and (PG) II.4
+retired: []

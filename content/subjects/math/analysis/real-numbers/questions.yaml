@@ -1,0 +1,665 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - sup-inf
+  - archimedean
+  stem:
+    en: 'For $S = \left\{\dfrac1n : n \in \N\right\}$, the infimum of $S$ is'
+  options:
+  - en: '$0$, and it is not attained in $S$'
+  - en: '$0$, and it is the minimum of $S$'
+  - en: '$1$'
+  - en: It does not exist
+  answer: 0
+  explanation:
+    en: |-
+      Every $\frac1n > 0$, so $0$ is a lower bound. No $\varepsilon > 0$ is a lower bound: by the Archimedean property there is an $n$ with $\frac1n < \varepsilon$. Hence
+      $$\inf S = 0,$$
+      but $\frac1n \ne 0$ for every $n$, so $0 \notin S$ and $S$ has no minimum.
+
+      $1$ is the supremum (and maximum), not the infimum. The set is bounded below, so the infimum exists by completeness.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rationals-irrationals
+  stem:
+    en: Which of the following numbers is irrational?
+  options:
+  - en: '$\log_2 8$'
+  - en: '$\sqrt{2.25}$'
+  - en: '$0.\overline{12}$'
+  - en: '$\log_2 3$'
+  answer: 3
+  explanation:
+    en: |-
+      If $\log_2 3 = \frac pq$ with $p, q \in \N$, then $2^p = 3^q$: an even number equals an odd number, which is impossible. So $\log_2 3$ is irrational.
+
+      The others are rational: $\log_2 8 = 3$; $\sqrt{2.25} = \sqrt{\frac94} = \frac32$; and $0.\overline{12} = \frac{12}{99} = \frac{4}{33}$, since a recurring decimal is rational.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sup-inf
+  stem:
+    en: 'For $S = \left\{(-1)^n + \dfrac1n : n \in \N\right\}$,'
+  options:
+  - en: '$\sup S = 2$ and $\inf S = -1$'
+  - en: '$\sup S = \dfrac32$ and $\inf S = 0$'
+  - en: '$\sup S = \dfrac32$ and $\inf S = -1$'
+  - en: '$\sup S = 1$ and $\inf S = -1$'
+  answer: 2
+  explanation:
+    en: |-
+      Split by parity.
+
+      - Even $n = 2k$: $1 + \frac{1}{2k}$ gives $\frac32, \frac54, \frac76, \dots$, which decrease towards $1$. The largest is $\frac32$, at $n = 2$.
+      - Odd $n = 2k - 1$: $-1 + \frac{1}{2k-1}$ gives $0, -\frac23, -\frac45, \dots$, which decrease towards $-1$ and never reach it.
+
+      So $$\sup S = \max S = \frac32, \qquad \inf S = -1\ (\text{not attained}).$$
+
+      $2$ would be the value at $n = 1$ if $(-1)^1$ were $+1$; in fact the $n = 1$ term is $-1 + 1 = 0$. $\sup = 1$ confuses the supremum with the limit of the even terms.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - decimals
+  stem:
+    en: 'The recurring decimal $0.\overline{36}$ equals'
+  options:
+  - en: '$\dfrac{9}{25}$'
+  - en: '$\dfrac{4}{11}$'
+  - en: '$\dfrac{4}{9}$'
+  - en: '$\dfrac{36}{100}$'
+  answer: 1
+  explanation:
+    en: |-
+      Let $x = 0.\overline{36}$. Then $100x = 36.\overline{36}$, so $99x = 36$ and
+      $$x = \frac{36}{99} = \frac{4}{11}.$$
+
+      $\frac{9}{25} = \frac{36}{100} = 0.36$ is the terminating decimal, which ignores the recurrence. Check: $\frac{4}{11} = 0.3636\ldots$
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - decimals
+  stem:
+    en: 'The decimal $0.1\overline{6}$ (only the $6$ recurs) equals'
+  options:
+  - en: '$\dfrac{16}{99}$'
+  - en: '$\dfrac{8}{45}$'
+  - en: '$\dfrac16$'
+  - en: '$\dfrac{1}{9}$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $x = 0.1\overline6$. Then $100x = 16.\overline6$ and $10x = 1.\overline6$, so $90x = 15$ and
+      $$x = \frac{15}{90} = \frac16.$$
+      Rule: (all digits $16$) minus (non-recurring digits $1$), over one $9$ and one $0$.
+
+      $\frac{16}{99} = 0.\overline{16}$ makes both digits recur. $\frac{8}{45} = \frac{16}{90}$ forgets to subtract the non-recurring part.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - decimals
+  stem:
+    en: 'The real number $0.24\overline{9}$ (only the $9$ recurs) equals'
+  options:
+  - en: '$\dfrac{249}{1000}$'
+  - en: '$\dfrac{249}{999}$'
+  - en: '$\dfrac{247}{990}$'
+  - en: '$\dfrac14$'
+  answer: 3
+  explanation:
+    en: |-
+      The tail is a geometric series:
+      $$0.24\overline9 = 0.24 + \sum_{k=3}^{\infty}\frac{9}{10^k} = 0.24 + \frac{9/1000}{1 - 1/10} = 0.24 + 0.01 = 0.25 = \frac14.$$
+      By the rule: $\frac{249 - 24}{900} = \frac{225}{900} = \frac14$.
+
+      $\frac{249}{1000} = 0.249$ stops the $9$s. A number with a terminating expansion ($0.25$) also has one ending in recurring $9$s.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - decimals
+  stem:
+    en: A real number is rational if and only if its decimal expansion is
+  options:
+  - en: terminating
+  - en: non-terminating
+  - en: non-terminating and non-recurring
+  - en: terminating or recurring
+  answer: 3
+  explanation:
+    en: |-
+      $\frac pq$ in lowest terms terminates if $q$ has no prime factors other than $2$ and $5$, and otherwise recurs. Conversely, a terminating or recurring decimal is a rational (a geometric series sums to a rational).
+
+      "Terminating" alone misses $\frac13 = 0.\overline3$. "Non-terminating and non-recurring" describes the **irrationals**.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sup-inf
+  - ordered-field
+  stem:
+    en: 'Let $A = \{x \in \Q : x > 0,\ x^2 < 2\}$. Which statement is correct?'
+  options:
+  - en: '$A$ is not bounded above in $\Q$'
+  - en: '$A$ is bounded above in $\Q$ but has no supremum in $\Q$; in $\R$, $\sup A = \sqrt2$'
+  - en: '$\sup A = 2$ in $\Q$'
+  - en: '$A$ has a maximum element in $\Q$'
+  answer: 1
+  explanation:
+    en: |-
+      $2$ (or $1.5$) is a rational upper bound, so $A$ is bounded above in $\Q$. In $\R$, completeness gives $\sup A$, and it equals $\sqrt2$: every rational $x$ with $x^2 < 2$ is below $\sqrt2$, and by density there are rationals in $A$ arbitrarily close to $\sqrt2$.
+
+      Since $\sqrt2 \notin \Q$, there is no least rational upper bound: any rational $r > \sqrt2$ has a smaller rational between $\sqrt2$ and $r$. This is why $\Q$ is not complete.
+
+      $2$ is an upper bound but not the least. There is no maximum: for $x \in A$ there is a rational between $x$ and $\sqrt2$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - archimedean
+  stem:
+    en: 'The Archimedean property of $\R$ states that'
+  options:
+  - en: 'for every $x, y \in \R$, there is $n \in \N$ with $nx > y$'
+  - en: 'for every $x > 0$ and every $y \in \R$, there is $n \in \N$ with $nx < y$'
+  - en: 'there is $x > 0$ such that $nx > y$ for every $n \in \N$ and every $y \in \R$'
+  - en: 'for every $x > 0$ and every $y \in \R$, there is $n \in \N$ with $nx > y$'
+  answer: 3
+  explanation:
+    en: |-
+      Archimedean property: given any positive $x$ (however small) and any $y$ (however large), some multiple $nx$ exceeds $y$. Equivalently, $\N$ is not bounded above.
+
+      The condition $x > 0$ is essential: with $x = -1$, $y = 0$, no $n$ gives $-n > 0$. The version with $nx < y$ fails for $y = -1$. The last option would make a single $x$ exceed every real $y$, which is absurd (take $n = 1$, $y = x$).
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - archimedean
+  stem:
+    en: Between any two distinct real numbers there are
+  options:
+  - en: infinitely many rationals and infinitely many irrationals
+  - en: infinitely many rationals but possibly no irrational
+  - en: at least one irrational but possibly no rational
+  - en: only finitely many rationals
+  answer: 0
+  explanation:
+    en: |-
+      Density of $\Q$: if $a < b$, there is a rational $r \in (a, b)$; repeating in $(a, r)$, $(r, b)$, ... gives infinitely many.
+
+      Density of the irrationals: pick a rational $r$ with $a - \sqrt2 < r < b - \sqrt2$; then $r + \sqrt2 \in (a, b)$ is irrational. Again there are infinitely many.
+
+      So both kinds occur infinitely often in every interval.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rationals-irrationals
+  stem:
+    en: 'Let $a$ be a nonzero rational and $b$ an irrational number. Which of $a + b$ and $ab$ are necessarily irrational?'
+  options:
+  - en: '$a + b$ only'
+  - en: '$ab$ only'
+  - en: Neither
+  - en: 'Both $a + b$ and $ab$'
+  answer: 3
+  explanation:
+    en: |-
+      - If $a + b = s \in \Q$, then $b = s - a \in \Q$, a contradiction. So $a + b$ is irrational.
+      - If $ab = s \in \Q$, then $b = \frac sa \in \Q$ (dividing is allowed because $a \ne 0$), a contradiction. So $ab$ is irrational.
+
+      Example: $a = 2$, $b = \sqrt2$ gives $2 + \sqrt2$ and $2\sqrt2$, both irrational. The condition $a \ne 0$ is what saves the product; with $a = 0$, $ab = 0$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - absolute-value
+  stem:
+    en: 'The set of real $x$ satisfying $|2x - 1| \le 5$ is'
+  options:
+  - en: '$[-3, 2]$'
+  - en: '$[-2, 3]$'
+  - en: '$(-2, 3)$'
+  - en: '$[-2, \infty)$'
+  answer: 1
+  explanation:
+    en: |-
+      $$|2x - 1| \le 5 \iff -5 \le 2x - 1 \le 5 \iff -4 \le 2x \le 6 \iff -2 \le x \le 3.$$
+
+      The inequality is non-strict, so the endpoints belong: $[-2, 3]$, not $(-2, 3)$. $[-3, 2]$ comes from solving $|2x + 1| \le 5$. Check: at $x = 3$, $|5| = 5$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - absolute-value
+  stem:
+    en: 'The set of all real $x$ with $|x - 1| + |x - 3| = 2$ is'
+  options:
+  - en: '$[1, 3]$'
+  - en: '$\{1, 3\}$'
+  - en: '$\{2\}$'
+  - en: '$\varnothing$'
+  answer: 0
+  explanation:
+    en: |-
+      $|x - 1| + |x - 3|$ is the sum of the distances from $x$ to $1$ and to $3$.
+
+      - For $1 \le x \le 3$: $(x - 1) + (3 - x) = 2$.
+      - For $x > 3$: $2x - 4 > 2$. For $x < 1$: $4 - 2x > 2$.
+
+      So the equation holds exactly on $[1, 3]$. Testing only $x = 1$ and $x = 3$ (or the midpoint $2$) misses the whole interval.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - absolute-value
+  stem:
+    en: 'For real numbers $x$ and $y$, $|x + y| = |x| + |y|$ holds if and only if'
+  options:
+  - en: '$xy > 0$'
+  - en: '$xy \ge 0$'
+  - en: '$x = y$'
+  - en: '$x + y \ge 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Square both sides (both are non-negative):
+      $$x^2 + 2xy + y^2 = x^2 + 2|x||y| + y^2 \iff xy = |xy| \iff xy \ge 0.$$
+
+      $xy > 0$ wrongly excludes $x = 0$ or $y = 0$, where equality clearly holds. $x + y \ge 0$ fails for $x = 3$, $y = -1$: $|2| = 2 \ne 4$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sup-inf
+  stem:
+    en: 'Let $S = \{x \in \R : x^2 - 5x + 6 < 0\}$. Then'
+  options:
+  - en: '$\max S = 3$'
+  - en: '$\sup S = 2$'
+  - en: '$S$ is not bounded above'
+  - en: '$\sup S = 3$ and $S$ has no maximum'
+  answer: 3
+  explanation:
+    en: |-
+      $x^2 - 5x + 6 = (x - 2)(x - 3) < 0 \iff 2 < x < 3$, so $S = (2, 3)$.
+
+      Every element is below $3$, and points $3 - \varepsilon$ belong to $S$ for small $\varepsilon > 0$. So $\sup S = 3$, but $3 \notin S$, so there is no maximum.
+
+      $2$ is the infimum, not the supremum.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sup-inf
+  stem:
+    en: 'Let $S \subseteq \R$ be nonempty and let $u$ be an upper bound of $S$. Then $u = \sup S$ if and only if'
+  options:
+  - en: 'for some $\varepsilon > 0$ there is $x \in S$ with $x > u - \varepsilon$'
+  - en: 'for every $\varepsilon > 0$ there is $x \in S$ with $x > u + \varepsilon$'
+  - en: 'for every $\varepsilon > 0$ there is $x \in S$ with $x > u - \varepsilon$'
+  - en: '$u \in S$'
+  answer: 2
+  explanation:
+    en: |-
+      $u$ is the **least** upper bound exactly when no smaller number $u - \varepsilon$ is an upper bound, i.e. for every $\varepsilon > 0$ some $x \in S$ exceeds $u - \varepsilon$.
+
+      - "For some $\varepsilon$" is too weak: for $S = [0, 1]$, $u = 2$ and $\varepsilon = 5$ satisfy it, but $\sup S = 1$.
+      - $x > u + \varepsilon$ contradicts $u$ being an upper bound.
+      - $u \in S$ is sufficient but not necessary: $\sup(0, 1) = 1 \notin (0, 1)$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sup-inf
+  - exam-tips
+  stem:
+    en: 'Let $A = \left\{1 - \dfrac1n : n \in \N\right\}$, $B = \left\{2 + \dfrac1n : n \in \N\right\}$ and $A + B = \{a + b : a \in A,\ b \in B\}$. Then $\sup(A + B)$ is'
+  options:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$\dfrac72$'
+  - en: '$2$'
+  answer: 1
+  explanation:
+    en: |-
+      $\sup A = 1$ (not attained) and $\sup B = 3$ (at $n = 1$). Since $a$ and $b$ are chosen independently,
+      $$\sup(A + B) = \sup A + \sup B = 1 + 3 = 4.$$
+      Directly: $\left(1 - \frac1m\right) + 3 \to 4$ as $m \to \infty$, and every sum is below $4$.
+
+      $3$ comes from using the **same** $n$ in both: $(1 - \frac1n) + (2 + \frac1n) = 3$. $\frac72$ is $A$ at $n = 2$ plus $B$ at $n = 1$; it is a value, not the supremum.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sup-inf
+  stem:
+    en: 'If $\inf A = -3$ and $B = \{-2a : a \in A\}$, then $\sup B$ is'
+  options:
+  - en: '$-6$'
+  - en: '$3$'
+  - en: '$6$'
+  - en: '$-\dfrac32$'
+  answer: 2
+  explanation:
+    en: |-
+      Multiplying by a negative number reverses the order, so it turns an infimum into a supremum:
+      $$\sup(-2A) = -2\inf A = -2(-3) = 6.$$
+
+      $-6$ uses $\sup(cA) = c\sup A$, which holds only for $c > 0$. Example: $A = [-3, 0]$ gives $B = [0, 6]$, with $\sup B = 6$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - nested-countable
+  stem:
+    en: Which of the following sets is uncountable?
+  options:
+  - en: '$\R \setminus \Q$'
+  - en: '$\Q$'
+  - en: '$\Q \times \Q$'
+  - en: the set of algebraic numbers
+  answer: 0
+  explanation:
+    en: |-
+      $\Q$, $\Q \times \Q$ and the algebraic numbers are countable (each is a countable union of countable sets).
+
+      If $\R\setminus\Q$ were countable, then $\R = \Q \cup (\R\setminus\Q)$ would be a union of two countable sets, hence countable. But $\R$ is uncountable (Cantor). So the irrationals are uncountable.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - ordered-field
+  stem:
+    en: The Cantor–Dedekind axiom states that
+  options:
+  - en: there is a one-one correspondence between the points of a straight line and the rational numbers
+  - en: every nonempty set of reals that is bounded above has a supremum
+  - en: 'there is a one-one, order-preserving correspondence between the points of a straight line and the real numbers'
+  - en: '$\N$ is not bounded above in $\R$'
+  answer: 2
+  explanation:
+    en: |-
+      Cantor–Dedekind: the real numbers and the points of a line correspond one-to-one, preserving order. This is what lets us call $\R$ "the real line", a linear continuum.
+
+      The rationals do not fill the line (the point $\sqrt2$ is missed). The third option is the least upper bound (completeness) axiom; the fourth is the Archimedean property.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rationals-irrationals
+  stem:
+    en: Which of the following is rational?
+  options:
+  - en: '$\log_4 8$'
+  - en: '$\log_2 6$'
+  - en: '$\dfrac{\sqrt{12}}{\sqrt2}$'
+  - en: '$\sqrt2 + \sqrt3$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\log_4 8 = \frac{\log_2 8}{\log_2 4} = \frac32.$$
+
+      The others are irrational:
+      - $\log_2 6 = 1 + \log_2 3$, a rational plus an irrational.
+      - $\frac{\sqrt{12}}{\sqrt2} = \sqrt6$, and $6$ is not a perfect square.
+      - $\sqrt2 + \sqrt3$ is a root of $x^4 - 10x^2 + 1$, which has no rational roots ($\pm1$ fail).
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rationals-irrationals
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: The sum of two irrational numbers is always irrational.
+  - en: The product of a nonzero rational number and an irrational number is irrational.
+  - en: '$\sqrt2 + \sqrt3$ is irrational.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. False: $\sqrt2$ and $-\sqrt2$ are irrational, but their sum is $0$.
+      2. True: if $r\alpha = s \in \Q$ with $r \ne 0$, then $\alpha = \frac sr \in \Q$.
+      3. True: $x = \sqrt2 + \sqrt3$ satisfies $x^4 - 10x^2 + 1 = 0$, whose only possible rational roots $\pm1$ are not roots.
+
+      So 2 and 3 only.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ordered-field
+  - sup-inf
+  - archimedean
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'Every nonempty subset of $\R$ that is bounded below has an infimum in $\R$.'
+  - en: 'Every nonempty subset of $\Q$ that is bounded above in $\Q$ has a supremum in $\Q$.'
+  - en: '$\Q$ is an ordered field with the Archimedean property.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 1 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      1. True: $\inf S = -\sup(-S)$, and $-S$ is nonempty and bounded above, so completeness applies.
+      2. False: $\{x \in \Q : x^2 < 2\}$ is bounded above in $\Q$ but has no least rational upper bound, because $\sqrt2 \notin \Q$.
+      3. True: $\Q$ satisfies all the ordered-field axioms, and for rationals $x > 0$, $y$, some $n$ has $nx > y$.
+
+      So 1 and 3 only. Completeness, not the Archimedean property, separates $\R$ from $\Q$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - nested-countable
+  - archimedean
+  stem:
+    en: 'Match each set in List I with the set it equals in List II ($n$ runs over $\N$).'
+  left:
+  - en: '$\displaystyle\bigcap_{n} \left[0, \tfrac1n\right]$'
+  - en: '$\displaystyle\bigcap_{n} \left(0, \tfrac1n\right)$'
+  - en: '$\displaystyle\bigcap_{n} \left[-\tfrac1n, 1 + \tfrac1n\right]$'
+  - en: '$\displaystyle\bigcup_{n} \left[\tfrac1n, 1\right]$'
+  right:
+  - en: '$\varnothing$'
+  - en: '$(0, 1]$'
+  - en: '$\{0\}$'
+  - en: '$[0, 1]$'
+  options:
+  - en: 'A-3, B-3, C-4, D-2'
+  - en: 'A-1, B-3, C-4, D-2'
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-3, B-1, C-2, D-4'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $0$ lies in every $[0, \frac1n]$; any $x > 0$ is excluded once $\frac1n < x$ (Archimedes). So $\{0\}$.
+      - B: $0$ is never in $(0, \frac1n)$, and any $x > 0$ is excluded as in A. So $\varnothing$; the nested interval theorem needs **closed** intervals.
+      - C: $x$ is in all of them iff $-\frac1n \le x \le 1 + \frac1n$ for all $n$, iff $0 \le x \le 1$. So $[0, 1]$.
+      - D: every $x \in (0, 1]$ has $\frac1n \le x$ for some $n$, but $0$ is in none. So $(0, 1]$.
+
+      So A-3, B-1, C-4, D-2.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sup-inf
+  stem:
+    en: 'Match each set in List I with its supremum in List II ($m, n \in \N$).'
+  left:
+  - en: '$\left\{1 - \tfrac1n\right\}$'
+  - en: '$\{x \in \R : x^2 < 2\}$'
+  - en: '$\left\{\tfrac1m + \tfrac1n\right\}$'
+  - en: '$\left\{\tfrac{(-1)^n}{n}\right\}$'
+  right:
+  - en: '$\dfrac12$'
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$\sqrt2$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-4, C-2, D-3'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $1 - \frac1n < 1$, and it gets within any $\varepsilon$ of $1$: $\sup = 1$ (not attained).
+      - B: the set is $(-\sqrt2, \sqrt2)$: $\sup = \sqrt2$.
+      - C: the largest value is at $m = n = 1$: $\sup = \max = 2$.
+      - D: the terms are $-1, \frac12, -\frac13, \frac14, \dots$; the positive terms $\frac{1}{2k}$ are largest at $n = 2$: $\sup = \frac12$.
+
+      So A-3, B-4, C-2, D-1. Taking $\sup = 1$ for D uses $\left|\frac{(-1)^n}{n}\right|$ at $n = 1$, but that term is $-1$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - rationals-irrationals
+  assertion:
+    en: '$\sqrt2$ is irrational.'
+  reason:
+    en: 'If a prime $p$ divides $a^2$ for an integer $a$, then $p$ divides $a$.'
+  answer: 0
+  explanation:
+    en: 'Both are true, and R is the key step. From $\sqrt2 = \frac pq$ in lowest terms, $p^2 = 2q^2$, so $2 \mid p^2$; by R, $2 \mid p$. Then $2 \mid q$ too, contradicting lowest terms. So R explains A.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - archimedean
+  - nested-countable
+  assertion:
+    en: '$\Q$ is dense in $\R$.'
+  reason:
+    en: '$\Q$ is countable.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true. A follows from the Archimedean property: for $a < b$, choose $n(b - a) > 1$; then $\frac{\lfloor na\rfloor + 1}{n} \in (a, b)$.
+
+      R is about the size of $\Q$, not about its position on the line; it does not explain A. (The irrationals are dense too, yet uncountable.)
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sup-inf
+  - ordered-field
+  assertion:
+    en: 'The set $\{x \in \Q : x^2 < 2\}$ has a least upper bound in $\Q$.'
+  reason:
+    en: 'Every nonempty subset of $\R$ that is bounded above has a supremum in $\R$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false: the least upper bound in $\R$ is $\sqrt2$, which is irrational, and any rational upper bound $r > \sqrt2$ can be lowered to a rational between $\sqrt2$ and $r$. So no least rational upper bound exists.
+
+      R is true: it is the completeness axiom of $\R$. It holds in $\R$ but not in $\Q$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - decimals
+  assertion:
+    en: '$0.999\ldots = 1$.'
+  reason:
+    en: Every real number has exactly one decimal expansion.
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $$\sum_{k=1}^{\infty}\frac{9}{10^k} = \frac{9/10}{1 - 1/10} = 1.$$
+
+      R is false, and A itself is a counterexample: $1 = 1.000\ldots = 0.999\ldots$. Every number with a terminating expansion has exactly two expansions (for example $0.5 = 0.4\overline9$).
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - archimedean
+  assertion:
+    en: '$\N$ is not bounded above in $\R$.'
+  reason:
+    en: 'For every $x > 0$ and every $y \in \R$, there is $n \in \N$ with $nx > y$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true. R (the Archimedean property) with $x = 1$ says: for every real $y$ there is $n \in \N$ with $n > y$. So no real $y$ is an upper bound of $\N$, which is A. R explains A.
+
+      (The two are equivalent; R in turn follows from completeness: if $\N$ had a supremum $u$, some $n > u - 1$, and then $n + 1 > u$.)
+  status: ai-generated

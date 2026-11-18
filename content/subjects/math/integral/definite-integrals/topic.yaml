@@ -1,0 +1,18 @@
+id: math.integral.definite-integrals
+title:
+  en: Definite Integrals
+summary:
+  en: The definite integral as the limit of a sum, limits of sums as integrals, the fundamental theorem and the Leibniz rule for variable limits, properties (a + b − x, even, odd, periodic), standard results such as the log sin integral, and the first mean value theorem with bounds.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.integral.integration-methods]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - "B. C. Das and B. N. Mukherjee, Integral Calculus, ch. on definite integrals and integration as the limit of a sum"
+  - "S. Narayan and P. K. Mittal, Integral Calculus, ch. on definite integrals"
+  - "T. M. Apostol, Calculus, Vol. 1, ch. 1 and 5"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) IV.2 and (PG) Riemann integration and first mean value theorem
+retired: []

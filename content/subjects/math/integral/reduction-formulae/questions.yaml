@@ -1,0 +1,655 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - wallis
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^5 x\,dx$ equals'
+  options:
+  - en: '$\frac{4\pi}{15}$'
+  - en: '$\frac{5\pi}{32}$'
+  - en: '$\frac{15}{8}$'
+  - en: '$\frac{8}{15}$'
+  answer: 3
+  explanation:
+    en: |-
+      $n = 5$ is odd, so there is no factor $\frac{\pi}{2}$:
+      $$\int_0^{\pi/2}\sin^5x\,dx = \frac{4\cdot2}{5\cdot3\cdot1} = \frac{8}{15}.$$
+      $\frac{4\pi}{15}$ wrongly multiplies by $\frac{\pi}{2}$ (that factor needs an even index). $\frac{5\pi}{32}$ is the value for $\sin^6 x$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - wallis
+  - sin-cos-powers
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\cos^4 x\,dx$ equals'
+  options:
+  - en: '$\frac{3}{8}$'
+  - en: '$\frac{3\pi}{16}$'
+  - en: '$\frac{3\pi}{8}$'
+  - en: '$\frac{8}{15}$'
+  answer: 1
+  explanation:
+    en: |-
+      $\int_0^{\pi/2}\cos^n x\,dx = \int_0^{\pi/2}\sin^n x\,dx$, and $n = 4$ is even:
+      $$\frac{3\cdot1}{4\cdot2}\cdot\frac{\pi}{2} = \frac{3\pi}{16}.$$
+      $\frac38$ forgets the factor $\frac{\pi}{2}$; $\frac{3\pi}{8}$ is the value over $[0, \pi]$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  - exam-tips
+  stem:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/4}\tan^n x\,dx$, then $I_4 + I_2$ equals'
+  options:
+  - en: '$\frac14$'
+  - en: '$\frac12$'
+  - en: '$\frac13$'
+  - en: '$\frac{\pi}{4}$'
+  answer: 2
+  explanation:
+    en: |-
+      $$I_n + I_{n-2} = \int_0^{\pi/4}\tan^{n-2}x\sec^2x\,dx = \left[\frac{\tan^{n-1}x}{n-1}\right]_0^{\pi/4} = \frac{1}{n-1}.$$
+      With $n = 4$: $I_4 + I_2 = \frac13$. The tempting $\frac14$ uses $\frac1n$ instead of $\frac{1}{n-1}$.
+      Check: $I_2 = 1 - \frac{\pi}{4}$ and $I_4 = \frac{\pi}{4} - \frac23$ add to $\frac13$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - method
+  - sin-cos-powers
+  stem:
+    en: 'For $n \ge 2$, $I_n = \displaystyle\int\sin^n x\,dx$ satisfies'
+  options:
+  - en: '$I_n = \frac{\sin^{n-1}x\cos x}{n} + \frac{n-1}{n}I_{n-2}$'
+  - en: '$I_n = -\frac{\sin^{n-1}x\cos x}{n} - \frac{n-1}{n}I_{n-2}$'
+  - en: '$I_n = -\frac{\sin^{n-1}x\cos x}{n-1} + \frac{n-2}{n-1}I_{n-2}$'
+  - en: '$I_n = -\frac{\sin^{n-1}x\cos x}{n} + \frac{n-1}{n}I_{n-2}$'
+  answer: 3
+  explanation:
+    en: |-
+      Parts with $u = \sin^{n-1}x$, $dv = \sin x\,dx$, then $\cos^2 = 1 - \sin^2$:
+      $$I_n = -\sin^{n-1}x\cos x + (n-1)(I_{n-2} - I_n) \;\Rightarrow\; nI_n = -\sin^{n-1}x\cos x + (n-1)I_{n-2}.$$
+      Check at $n = 2$: $\int\sin^2 x\,dx = -\frac12\sin x\cos x + \frac{x}{2}$, which is correct. The $+$ boundary sign belongs to the $\cos^n x$ formula.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - other-reductions
+  - exam-tips
+  stem:
+    en: '$\displaystyle\int_0^{\infty}x^5e^{-x}\,dx$ equals'
+  options:
+  - en: '$24$'
+  - en: '$720$'
+  - en: '$120$'
+  - en: '$5$'
+  answer: 2
+  explanation:
+    en: |-
+      With $I_n = \int_0^\infty x^ne^{-x}\,dx$, parts gives $I_n = nI_{n-1}$ (the boundary term $-x^ne^{-x}$ vanishes at both ends), and $I_0 = 1$. So
+      $$I_5 = 5! = 120.$$
+      $24 = 4!$ comes from the wrong recurrence $I_n = (n-1)I_{n-1}$; $720 = 6!$ is $\Gamma(7)$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - wallis
+  - sin-m-cos-n
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^2 x\cos^2 x\,dx$ equals'
+  options:
+  - en: '$\frac{\pi}{16}$'
+  - en: '$\frac{\pi}{8}$'
+  - en: '$\frac{\pi}{32}$'
+  - en: '$\frac{1}{8}$'
+  answer: 0
+  explanation:
+    en: |-
+      Both indices are even, so $K = \frac{\pi}{2}$:
+      $$\frac{1\cdot1}{4\cdot2}\cdot\frac{\pi}{2} = \frac{\pi}{16}.$$
+      Check: $\sin^2x\cos^2x = \frac{1}{8}(1 - \cos4x)$, whose integral over $[0, \pi/2]$ is $\frac{\pi}{16}$. $\frac18$ drops the $\frac{\pi}{2}$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wallis
+  stem:
+    en: 'For $m, n > -1$, $\displaystyle\int_0^{\pi/2}\sin^m x\cos^n x\,dx$ equals'
+  options:
+  - en: '$B\!\left(\frac{m+1}{2}, \frac{n+1}{2}\right)$'
+  - en: '$\frac12 B(m+1, n+1)$'
+  - en: '$\frac12 B\!\left(\frac{m}{2}, \frac{n}{2}\right)$'
+  - en: '$\frac12 B\!\left(\frac{m+1}{2}, \frac{n+1}{2}\right)$'
+  answer: 3
+  explanation:
+    en: |-
+      Put $t = \sin^2x$, so $dt = 2\sin x\cos x\,dx$:
+      $$\int_0^{\pi/2}\sin^mx\cos^nx\,dx = \frac12\int_0^1 t^{\frac{m-1}{2}}(1 - t)^{\frac{n-1}{2}}\,dt = \frac12B\!\left(\frac{m+1}{2}, \frac{n+1}{2}\right).$$
+      Check at $m = n = 0$: $\frac12B(\frac12, \frac12) = \frac{\pi}{2}$, as required. Without the $\frac12$ you get $\pi$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wallis
+  - exam-tips
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^6 x\cos^4 x\,dx$ equals'
+  options:
+  - en: '$\frac{3\pi}{512}$'
+  - en: '$\frac{3}{256}$'
+  - en: '$\frac{3\pi}{256}$'
+  - en: '$\frac{3\pi}{1024}$'
+  answer: 0
+  explanation:
+    en: |-
+      Both indices are even, so $K = \frac{\pi}{2}$:
+      $$\frac{(5\cdot3\cdot1)(3\cdot1)}{10\cdot8\cdot6\cdot4\cdot2}\cdot\frac{\pi}{2} = \frac{45}{3840}\cdot\frac{\pi}{2} = \frac{3}{256}\cdot\frac{\pi}{2} = \frac{3\pi}{512}.$$
+      $\frac{3}{256}$ forgets the factor $\frac{\pi}{2}$; $\frac{3\pi}{256}$ multiplies by $\pi$ instead of $\frac{\pi}{2}$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wallis
+  - sin-m-cos-n
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^5 x\cos^4 x\,dx$ equals'
+  options:
+  - en: '$\frac{4\pi}{315}$'
+  - en: '$\frac{8}{315}$'
+  - en: '$\frac{16}{315}$'
+  - en: '$\frac{8}{105}$'
+  answer: 1
+  explanation:
+    en: |-
+      $m = 5$ is odd, so $K = 1$:
+      $$\frac{(4\cdot2)(3\cdot1)}{9\cdot7\cdot5\cdot3\cdot1} = \frac{24}{945} = \frac{8}{315}.$$
+      $\frac{4\pi}{315}$ wrongly includes $\frac{\pi}{2}$. Check by $c = \cos x$: $\int_0^1(1 - c^2)^2c^4\,dc = \frac15 - \frac27 + \frac19 = \frac{8}{315}$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  - exam-tips
+  stem:
+    en: 'Let $I_n = \displaystyle\int_0^{\pi/4}\tan^n x\,dx$. Given $I_3 = \frac12 - \frac12\ln 2$, the value of $I_5$ is'
+  options:
+  - en: '$\frac34 - \frac12\ln2$'
+  - en: '$\frac12\ln2 - \frac14$'
+  - en: '$\frac12\ln2 - \frac{3}{10}$'
+  - en: '$\frac12\ln2 + \frac14$'
+  answer: 1
+  explanation:
+    en: |-
+      $I_5 + I_3 = \frac{1}{5-1} = \frac14$, so
+      $$I_5 = \frac14 - \left(\frac12 - \frac12\ln2\right) = \frac12\ln2 - \frac14 \approx 0.097.$$
+      $\frac34 - \frac12\ln2$ adds $I_3$ instead of subtracting it. $\frac12\ln2 - \frac{3}{10}$ uses $\frac15$ instead of $\frac14$, and it is negative, which is impossible for $I_5 > 0$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  stem:
+    en: '$\displaystyle\int\sec^3 x\,dx$ equals'
+  options:
+  - en: '$\frac12\sec x\tan x + \frac12\ln\lvert\sec x + \tan x\rvert + C$'
+  - en: '$\frac12\sec x\tan x - \frac12\ln\lvert\sec x + \tan x\rvert + C$'
+  - en: '$\sec x\tan x + \ln\lvert\sec x + \tan x\rvert + C$'
+  - en: '$\frac12\sec x\tan x + \frac12\ln\lvert\sec x\rvert + C$'
+  answer: 0
+  explanation:
+    en: |-
+      $(n-1)I_n = \sec^{n-2}x\tan x + (n-2)I_{n-2}$ with $n = 3$:
+      $$2I_3 = \sec x\tan x + \int\sec x\,dx = \sec x\tan x + \ln\lvert\sec x + \tan x\rvert.$$
+      Divide by 2. The third option is twice the answer: it forgets to divide by $n - 1 = 2$. The minus sign comes from a sign slip in $\tan^2 = \sec^2 - 1$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - other-reductions
+  stem:
+    en: '$\displaystyle\int_0^{1}\frac{dx}{(1 + x^2)^2}$ equals'
+  options:
+  - en: '$\frac{\pi}{8} + \frac14$'
+  - en: '$\frac{\pi}{8}$'
+  - en: '$\frac{\pi}{8} - \frac14$'
+  - en: '$\frac{\pi}{4} + \frac14$'
+  answer: 0
+  explanation:
+    en: |-
+      The reduction formula with $a = 1$, $n = 2$ gives
+      $$\int\frac{dx}{(1 + x^2)^2} = \frac{x}{2(1 + x^2)} + \frac12\tan^{-1}x.$$
+      From $0$ to $1$: $\frac14 + \frac12\cdot\frac{\pi}{4} = \frac{\pi}{8} + \frac14$.
+      $\frac{\pi}{8}$ drops the boundary term; $\frac{\pi}{4} + \frac14$ forgets the coefficient $\frac12$ on $I_1$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - other-reductions
+  stem:
+    en: 'For $I_n = \displaystyle\int\frac{dx}{(x^2 + a^2)^n}$ ($n \ge 2$), the reduction formula is $I_n = \dfrac{x}{2(n-1)a^2(x^2 + a^2)^{n-1}} + k\,I_{n-1}$, where $k$ equals'
+  options:
+  - en: '$\frac{2n-1}{2na^2}$'
+  - en: '$\frac{2n-3}{2(n-1)}$'
+  - en: '$\frac{2n-3}{2(n-1)a^2}$'
+  - en: '$\frac{n-2}{(n-1)a^2}$'
+  answer: 2
+  explanation:
+    en: |-
+      Parts on $I_{n-1}$ with $x^2 = (x^2 + a^2) - a^2$:
+      $$I_{n-1} = \frac{x}{(x^2 + a^2)^{n-1}} + 2(n-1)(I_{n-1} - a^2I_n).$$
+      So $2(n-1)a^2I_n = \frac{x}{(x^2 + a^2)^{n-1}} + (2n-3)I_{n-1}$, and $k = \frac{2n-3}{2(n-1)a^2}$.
+      Check at $a = 1$, $n = 2$: $k = \frac12$. The option without $a^2$ fails dimensionally.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - other-reductions
+  stem:
+    en: 'Let $J_n = \displaystyle\int_0^1 x^n e^x\,dx$, so that $J_n = e - nJ_{n-1}$ and $J_0 = e - 1$. Then $J_3$ equals'
+  options:
+  - en: '$3e - 6$'
+  - en: '$6 - 2e$'
+  - en: '$e - 2$'
+  - en: '$2e - 5$'
+  answer: 1
+  explanation:
+    en: |-
+      Step by step:
+      $$J_1 = e - (e - 1) = 1, \quad J_2 = e - 2\cdot1 = e - 2, \quad J_3 = e - 3(e - 2) = 6 - 2e \approx 0.563.$$
+      $e - 2$ is $J_2$. Check: $0 < J_3 < J_2$, since $x^3 < x^2$ on $(0, 1)$, and $6 - 2e$ fits.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wallis
+  - sin-m-cos-n
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^4 x\cos^3 x\,dx$ equals'
+  options:
+  - en: '$\frac{2}{35}$'
+  - en: '$\frac{\pi}{35}$'
+  - en: '$\frac{4}{35}$'
+  - en: '$\frac{3\pi}{70}$'
+  answer: 0
+  explanation:
+    en: |-
+      $n = 3$ is odd, so $K = 1$:
+      $$\frac{(3\cdot1)(2)}{7\cdot5\cdot3\cdot1} = \frac{6}{105} = \frac{2}{35}.$$
+      Check with $s = \sin x$: $\int_0^1 s^4(1 - s^2)\,ds = \frac15 - \frac17 = \frac{2}{35}$. $\frac{\pi}{35}$ wrongly multiplies by $\frac{\pi}{2}$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - wallis
+  stem:
+    en: '$\displaystyle\int_0^{2\pi}\sin^4 x\cos^6 x\,dx$ equals'
+  options:
+  - en: '$\frac{3\pi}{512}$'
+  - en: '$\frac{3\pi}{256}$'
+  - en: '$\frac{3\pi}{128}$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      Both powers are even, so the integrand has period $\pi$ and is symmetric about $\frac{\pi}{2}$. The integral is $4$ times the Wallis value:
+      $$4\cdot\frac{(3\cdot1)(5\cdot3\cdot1)}{10\cdot8\cdot6\cdot4\cdot2}\cdot\frac{\pi}{2} = 4\cdot\frac{3\pi}{512} = \frac{3\pi}{128}.$$
+      $\frac{3\pi}{512}$ is only the $[0, \pi/2]$ part. $0$ would need an odd power.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - wallis
+  stem:
+    en: '$\displaystyle\int_0^{1}x^4\sqrt{1 - x^2}\,dx$ equals'
+  options:
+  - en: '$\frac{\pi}{16}$'
+  - en: '$\frac{1}{16}$'
+  - en: '$\frac{3\pi}{32}$'
+  - en: '$\frac{\pi}{32}$'
+  answer: 3
+  explanation:
+    en: |-
+      Put $x = \sin\theta$, so $dx = \cos\theta\,d\theta$:
+      $$\int_0^{\pi/2}\sin^4\theta\cos^2\theta\,d\theta = \frac{(3\cdot1)(1)}{6\cdot4\cdot2}\cdot\frac{\pi}{2} = \frac{\pi}{32}.$$
+      $\frac{\pi}{16}$ multiplies by $\pi$ instead of $\frac{\pi}{2}$; $\frac{1}{16}$ drops the $\frac{\pi}{2}$ although both indices are even. Do not forget the $\cos\theta$ from $dx$: it turns $\sqrt{1 - x^2} = \cos\theta$ into $\cos^2\theta$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - other-reductions
+  - wallis
+  stem:
+    en: '$\displaystyle\int_0^{\infty}\frac{dx}{(1 + x^2)^4}$ equals'
+  options:
+  - en: '$\frac{5\pi}{16}$'
+  - en: '$\frac{5\pi}{32}$'
+  - en: '$\frac{3\pi}{16}$'
+  - en: '$\frac{16}{35}$'
+  answer: 1
+  explanation:
+    en: |-
+      Put $x = \tan\theta$: $dx = \sec^2\theta\,d\theta$ and $(1 + x^2)^4 = \sec^8\theta$, so
+      $$\int_0^{\pi/2}\cos^6\theta\,d\theta = \frac{5\cdot3\cdot1}{6\cdot4\cdot2}\cdot\frac{\pi}{2} = \frac{5\pi}{32}.$$
+      $\frac{3\pi}{16}$ uses $\cos^4\theta$ (forgetting the $\sec^2\theta$ from $dx$ raises the power); $\frac{16}{35}$ is $\int_0^{\pi/2}\cos^7$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  stem:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/4}\tan^n x\,dx$, then $\displaystyle\lim_{n\to\infty} nI_n$ equals'
+  options:
+  - en: '$\frac12$'
+  - en: '$1$'
+  - en: '$0$'
+  - en: '$\frac{\pi}{4}$'
+  answer: 0
+  explanation:
+    en: |-
+      $I_n$ is decreasing, since $0 \le \tan x \le 1$. With $I_n + I_{n-2} = \frac{1}{n-1}$:
+      $$2I_n < I_n + I_{n-2} = \frac{1}{n-1}, \qquad 2I_n > I_n + I_{n+2} = \frac{1}{n+1}.$$
+      So $\frac{n}{2(n+1)} < nI_n < \frac{n}{2(n-1)}$, and both bounds tend to $\frac12$.
+      $1$ is the limit of $n(I_n + I_{n+2})$, not of $nI_n$. $0$ is the limit of $I_n$ alone.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sin-cos-powers
+  - wallis
+  stem:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/2}\sin^n x\,dx$, then $\displaystyle\lim_{n\to\infty}\frac{I_{n+1}}{I_n}$ equals'
+  options:
+  - en: '$0$'
+  - en: '$\frac12$'
+  - en: '$1$'
+  - en: '$\frac{\pi}{2}$'
+  answer: 2
+  explanation:
+    en: |-
+      $0 < \sin x < 1$ on $(0, \pi/2)$, so $I_{n+1} < I_n < I_{n-1}$. Hence
+      $$\frac{n}{n+1} = \frac{I_{n+1}}{I_{n-1}} < \frac{I_{n+1}}{I_n} < 1,$$
+      using $I_{n+1} = \frac{n}{n+1}I_{n-1}$. The left side tends to $1$, so the limit is $1$. (Each $I_n \to 0$, but the ratio does not.) This squeeze is the key step in Wallis's product.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sin-m-cos-n
+  stem:
+    en: '$\displaystyle\int_0^{\pi}\frac{\sin 6x}{\sin x}\,dx$ equals'
+  options:
+  - en: '$\pi$'
+  - en: '$6\pi$'
+  - en: '$0$'
+  - en: '$\frac{\pi}{2}$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $J_n = \int_0^\pi\frac{\sin nx}{\sin x}\,dx$. Since $\sin nx - \sin(n-2)x = 2\cos(n-1)x\sin x$,
+      $$J_n - J_{n-2} = 2\int_0^\pi\cos(n-1)x\,dx = 0 \quad (n \ge 2).$$
+      So $J_6 = J_4 = J_2 = J_0 = 0$. The value $\pi$ belongs to odd $n$, where the chain ends at $J_1 = \pi$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  stem:
+    en: 'Let $I_n = \displaystyle\int_0^{\pi/4}\tan^n x\,dx$ for integers $n \ge 0$. Consider the following statements:'
+  statements:
+  - en: '$I_n + I_{n-2} = \frac{1}{n-1}$ for every $n \ge 2$.'
+  - en: '$I_{n+1} < I_n$ for every $n \ge 0$.'
+  - en: '$I_n > \frac{1}{2(n-1)}$ for every $n \ge 2$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      - **1 is true:** $I_n + I_{n-2} = \int_0^{\pi/4}\tan^{n-2}x\sec^2x\,dx = \frac{1}{n-1}$.
+      - **2 is true:** $0 \le \tan x \le 1$ on $[0, \pi/4]$, with $\tan x < 1$ on $[0, \pi/4)$, so $\tan^{n+1}x \le \tan^n x$ with strict inequality on a set of positive length.
+      - **3 is false:** the inequality goes the other way. Since $I_n < I_{n-2}$, $2I_n < I_n + I_{n-2} = \frac{1}{n-1}$, so $I_n < \frac{1}{2(n-1)}$. For example, $I_2 = 1 - \frac{\pi}{4} \approx 0.215 < \frac12$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - wallis
+  - exam-tips
+  stem:
+    en: 'For non-negative integers $m$ and $n$, consider the following statements:'
+  statements:
+  - en: '$\displaystyle\int_0^{\pi/2}\sin^m x\cos^n x\,dx = \int_0^{\pi/2}\sin^n x\cos^m x\,dx$.'
+  - en: '$\displaystyle\int_0^{\pi/2}\sin^n x\,dx = \int_0^{\pi/2}\cos^n x\,dx$.'
+  - en: '$\displaystyle\int_0^{\pi}\sin^m x\cos^n x\,dx = 0$ whenever $n$ is odd.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: 2 only
+  - en: '1, 2 and 3'
+  answer: 3
+  explanation:
+    en: |-
+      - **1 is true:** the substitution $x \mapsto \frac{\pi}{2} - x$ swaps $\sin$ and $\cos$ and keeps the interval.
+      - **2 is true:** it is statement 1 with $m = 0$.
+      - **3 is true:** $x \mapsto \pi - x$ keeps $\sin x$ and changes $\cos x$ to $-\cos x$. With $n$ odd the integrand changes sign, so the integral equals its own negative. For example, $\int_0^\pi\sin^2x\cos x\,dx = \left[\frac{\sin^3x}{3}\right]_0^\pi = 0$.
+
+      The trap is to double the $[0, \pi/2]$ value in statement 3; that works only for even $n$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  - sin-cos-powers
+  stem:
+    en: 'Match each integral $I_n$ in List I ($n \ge 2$) with its reduction formula in List II.'
+  left:
+  - en: '$\int\tan^n x\,dx$'
+  - en: '$\int\cot^n x\,dx$'
+  - en: '$\int\sec^n x\,dx$'
+  - en: '$\int\cos^n x\,dx$'
+  right:
+  - en: '$\frac{\sec^{n-2}x\tan x}{n-1} + \frac{n-2}{n-1}I_{n-2}$'
+  - en: '$-\frac{\cot^{n-1}x}{n-1} - I_{n-2}$'
+  - en: '$\frac{\tan^{n-1}x}{n-1} - I_{n-2}$'
+  - en: '$\frac{\cos^{n-1}x\sin x}{n} + \frac{n-1}{n}I_{n-2}$'
+  options:
+  - en: 'A-2, B-3, C-1, D-4'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-2, C-3, D-4'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 3
+  explanation:
+    en: |-
+      - A: $\tan^n = \tan^{n-2}(\sec^2 - 1)$ gives $\frac{\tan^{n-1}x}{n-1} - I_{n-2}$: **3**.
+      - B: $\cot^n = \cot^{n-2}(\csc^2 - 1)$, and $\int\cot^{n-2}x\csc^2x\,dx = -\frac{\cot^{n-1}x}{n-1}$: **2**.
+      - C: parts with $u = \sec^{n-2}x$, $dv = \sec^2x\,dx$: **1**.
+      - D: parts with $u = \cos^{n-1}x$, $dv = \cos x\,dx$: **4**.
+
+      So A-3, B-2, C-1, D-4. Swapping A and B misses the minus sign that $\frac{d}{dx}\cot x = -\csc^2x$ brings in.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - wallis
+  stem:
+    en: Match each integral in List I with its value in List II.
+  left:
+  - en: '$\int_0^{\pi/2}\sin^3 x\,dx$'
+  - en: '$\int_0^{\pi/2}\cos^6 x\,dx$'
+  - en: '$\int_0^{\pi/2}\sin^2 x\cos^4 x\,dx$'
+  - en: '$\int_0^{\pi/2}\sin^3 x\cos^3 x\,dx$'
+  right:
+  - en: '$\frac{1}{12}$'
+  - en: '$\frac{\pi}{32}$'
+  - en: '$\frac23$'
+  - en: '$\frac{5\pi}{32}$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-4, C-2, D-3'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $\frac{2}{3\cdot1} = \frac23$: **3**.
+      - B: $\frac{5\cdot3\cdot1}{6\cdot4\cdot2}\cdot\frac{\pi}{2} = \frac{5\pi}{32}$: **4**.
+      - C: $\frac{(1)(3\cdot1)}{6\cdot4\cdot2}\cdot\frac{\pi}{2} = \frac{\pi}{32}$: **2**.
+      - D: $\frac{(2)(2)}{6\cdot4\cdot2} = \frac{1}{12}$, with no $\frac{\pi}{2}$ because the indices are odd: **1**.
+
+      So A-3, B-4, C-2, D-1. Only the even-index integrals carry a $\pi$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - wallis
+  - sin-cos-powers
+  assertion:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^8 x\,dx = \frac{35\pi}{256}$.'
+  reason:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/2}\sin^n x\,dx$, then $I_n = \frac{n-1}{n}I_{n-2}$ for $n \ge 2$, and $I_0 = \frac{\pi}{2}$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** the boundary term $-\frac{\sin^{n-1}x\cos x}{n}$ vanishes at $0$ and $\frac{\pi}{2}$.
+
+      **A is true, and R explains it:** applying R four times,
+      $$I_8 = \frac78\cdot\frac56\cdot\frac34\cdot\frac12\cdot\frac{\pi}{2} = \frac{105}{384}\cdot\frac{\pi}{2} = \frac{35\pi}{256}.$$
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tan-sec-cot
+  assertion:
+    en: '$\displaystyle\int_0^{\pi/4}\tan^3 x\,dx = \frac12$.'
+  reason:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/4}\tan^n x\,dx$, then $I_n + I_{n-2} = \frac{1}{n-1}$ for $n \ge 2$.'
+  answer: 3
+  explanation:
+    en: |-
+      **R is true:** $I_n + I_{n-2} = \left[\frac{\tan^{n-1}x}{n-1}\right]_0^{\pi/4} = \frac{1}{n-1}$.
+
+      **A is false:** by R, $I_3 = \frac12 - I_1$, and $I_1 = \int_0^{\pi/4}\tan x\,dx = \frac12\ln 2$. So
+      $$I_3 = \frac12 - \frac12\ln2 \approx 0.153 \ne \frac12.$$
+      The value $\frac12$ is $I_3 + I_1$, not $I_3$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - other-reductions
+  - exam-tips
+  assertion:
+    en: '$\displaystyle\int_0^{\infty}x^4e^{-x}\,dx = 24$.'
+  reason:
+    en: 'If $I_n = \displaystyle\int_0^{\infty}x^ne^{-x}\,dx$, then $I_n = (n-1)I_{n-1}$ for $n \ge 1$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** $\int_0^\infty x^4e^{-x}\,dx = \Gamma(5) = 4! = 24$.
+
+      **R is false:** parts with $u = x^n$ gives
+      $$I_n = \left[-x^ne^{-x}\right]_0^\infty + n\int_0^\infty x^{n-1}e^{-x}\,dx = nI_{n-1}.$$
+      The factor is $n$, not $n - 1$. The shift by one comes from mixing this with $\Gamma(n) = (n-1)\Gamma(n-1)$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sin-cos-powers
+  - exam-tips
+  assertion:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/2}\sin^n x\,dx$, then $nI_nI_{n-1} = \frac{\pi}{2}$ for every $n \ge 1$.'
+  reason:
+    en: 'If $I_n = \displaystyle\int_0^{\pi/2}\sin^n x\,dx$, then $I_n$ is strictly decreasing in $n$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** from $nI_n = (n-1)I_{n-2}$,
+      $$nI_nI_{n-1} = (n-1)I_{n-1}I_{n-2} = \cdots = 1\cdot I_1I_0 = \frac{\pi}{2}.$$
+
+      **R is true:** $0 < \sin x < 1$ on $(0, \pi/2)$, so $\sin^{n+1}x < \sin^n x$ there.
+
+      **But R does not explain A.** A follows from the recurrence by telescoping; monotonicity is never used. (R is what gives $I_{n+1}/I_n \to 1$ and Wallis's product.)
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - other-reductions
+  assertion:
+    en: '$\displaystyle\int\frac{dx}{(x^2 + 1)^2} = \frac{x}{2(x^2 + 1)} + \frac12\tan^{-1}x + C$.'
+  reason:
+    en: 'For $n \ge 2$ and $a > 0$, $I_n = \displaystyle\int\frac{dx}{(x^2 + a^2)^n}$ satisfies $I_n = \dfrac{x}{2(n-1)a^2(x^2 + a^2)^{n-1}} + \dfrac{2n-3}{2(n-1)a^2}I_{n-1}$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** integrate $I_{n-1}$ by parts and write $x^2 = (x^2 + a^2) - a^2$; then solve for $I_n$.
+
+      **A is true, and R explains it:** put $a = 1$, $n = 2$ in R:
+      $$I_2 = \frac{x}{2(x^2 + 1)} + \frac12I_1 = \frac{x}{2(x^2 + 1)} + \frac12\tan^{-1}x + C.$$
+  status: ai-generated

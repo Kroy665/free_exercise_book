@@ -1,0 +1,18 @@
+id: math.linalg.quadratic-forms
+title:
+  en: Real Quadratic Forms
+summary:
+  en: The symmetric matrix of a quadratic form, linear change of variables and congruence, reduction to a sum of squares by Lagrange's method and by orthogonal diagonalisation, normal form, rank, index and signature, Sylvester's law of inertia, and definiteness by eigenvalues and principal minors.
+order: 5
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.eigen-cayley-hamilton]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on real quadratic forms
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 10"
+  - Gilbert Strang, Linear Algebra and Its Applications, ch. on positive definite matrices
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) B.5 and (PG) C.3
+retired: []

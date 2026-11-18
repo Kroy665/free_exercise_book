@@ -1,0 +1,18 @@
+id: math.analysis.series-positive
+title:
+  en: Series of Positive Terms
+summary:
+  en: Convergence through partial sums, the necessary condition and Cauchy's criterion, geometric and p-series, condensation, comparison, ratio, root, Raabe, Gauss, Abel–Pringsheim, integral and logarithmic tests, with the standard examples.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.sequences]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on infinite series
+  - R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 3 and 9
+  - W. Rudin, Principles of Mathematical Analysis, ch. 3
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.3 and (PG) II.5
+retired: []

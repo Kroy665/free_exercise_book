@@ -1,0 +1,643 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{\sin 3x}{x}$ equals'
+  options:
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$\tfrac13$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Write it as a standard form:
+      $$\lim_{x\to 0}\frac{\sin 3x}{x} = 3\lim_{x\to 0}\frac{\sin 3x}{3x} = 3\cdot 1 = 3.$$
+      $1$ forgets the scaling factor; $\frac13$ inverts it.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{e^{2x} - 1}{\sin x}$ equals'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$\tfrac12$'
+  - en: '$e^{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\frac{e^{2x} - 1}{\sin x} = \frac{e^{2x} - 1}{2x}\cdot\frac{x}{\sin x}\cdot 2 \to 1\cdot 1\cdot 2 = 2.$$
+      $1$ ignores the factor $2$ in the exponent; $e^2$ wrongly substitutes into the exponential only.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{2^{x} - 1}{x}$ equals ($\log$ is the natural logarithm)'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$\tfrac{1}{\log 2}$'
+  - en: '$\log 2$'
+  answer: 3
+  explanation:
+    en: |-
+      Since $2^x = e^{x\log 2}$,
+      $$\frac{2^x - 1}{x} = \log 2\cdot\frac{e^{x\log 2} - 1}{x\log 2} \to \log 2 \approx 0.693.$$
+      $1$ would be correct only for base $e$; $\frac{1}{\log 2}$ inverts the answer.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}(1 + 3x)^{1/x}$ equals'
+  options:
+  - en: '$e$'
+  - en: '$e^{1/3}$'
+  - en: '$e^{3}$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      Put $t = 3x$:
+      $$(1 + 3x)^{1/x} = \left[(1 + t)^{1/t}\right]^{3} \to e^{3}.$$
+      $1$ treats the $1^\infty$ form as $1$; $e^{1/3}$ inverts the exponent.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - limit-definition
+  - discontinuities
+  stem:
+    en: 'For the greatest integer function $[x]$, $\displaystyle\lim_{x\to 2-}[x]$ equals'
+  options:
+  - en: '$2$'
+  - en: '$3$'
+  - en: does not exist
+  - en: '$1$'
+  answer: 3
+  explanation:
+    en: |-
+      For $1 \le x < 2$, $[x] = 1$, so the left-hand limit is $1$.
+      The right-hand limit is $2$ (and $[2] = 2$), so the two-sided limit does not exist, but the **one-sided** limit asked for does. $2$ is the right-hand limit.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - discontinuities
+  stem:
+    en: 'Which function has a **removable** discontinuity at $x = 0$?'
+  options:
+  - en: '$f(x) = [x]$'
+  - en: '$f(x) = \sin\frac1x$ for $x \ne 0$, $f(0) = 0$'
+  - en: '$f(x) = \frac{\sin x}{x}$ for $x \ne 0$, $f(0) = 0$'
+  - en: '$f(x) = \frac1x$ for $x \ne 0$, $f(0) = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      $\lim_{x\to 0}\frac{\sin x}{x} = 1$ exists but differs from $f(0) = 0$: removable (redefine $f(0) = 1$).
+
+      $[x]$ has a jump at $0$ ($-1$ on the left, $0$ on the right). $\sin\frac1x$ oscillates and $\frac1x$ is unbounded: both are of the second kind.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - algebra-sandwich
+  stem:
+    en: '$\displaystyle\lim_{x\to 0} x\sin\frac{1}{x}$ equals'
+  options:
+  - en: '$1$'
+  - en: does not exist
+  - en: '$0$'
+  - en: '$\infty$'
+  answer: 2
+  explanation:
+    en: |-
+      $$-|x| \le x\sin\frac1x \le |x|,$$
+      and $\pm|x| \to 0$, so by the sandwich rule the limit is $0$.
+
+      $1$ confuses it with $\frac{\sin x}{x}$ (or with $x\sin\frac1x$ as $x \to \infty$). "Does not exist" applies to $\sin\frac1x$, not to its product with $x$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - continuity
+  - standard-limits
+  stem:
+    en: '$f(x) = \dfrac{1 - \cos 2x}{x^2}$ for $x \ne 0$ and $f(0) = k$. $f$ is continuous at $0$ if $k$ equals'
+  options:
+  - en: '$1$'
+  - en: '$\tfrac12$'
+  - en: '$2$'
+  - en: '$4$'
+  answer: 2
+  explanation:
+    en: |-
+      $1 - \cos 2x = 2\sin^2 x$, so
+      $$\lim_{x\to 0}\frac{1 - \cos 2x}{x^2} = 2\left(\lim\frac{\sin x}{x}\right)^2 = 2.$$
+      Continuity needs $k = 2$. $\frac12$ is $\lim\frac{1 - \cos x}{x^2}$; $4$ wrongly uses $1 - \cos 2x \approx \frac{(2x)^2}{2}\cdot 2$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - continuity
+  stem:
+    en: '$f(x) = \dfrac{\sqrt{1 + x} - 1}{x}$ for $x \ne 0$, $x \ge -1$, and $f(0) = k$. $f$ is continuous at $0$ if $k$ equals'
+  options:
+  - en: '$1$'
+  - en: '$\tfrac12$'
+  - en: '$2$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Rationalise:
+      $$\frac{\sqrt{1 + x} - 1}{x} = \frac{(1 + x) - 1}{x(\sqrt{1 + x} + 1)} = \frac{1}{\sqrt{1 + x} + 1} \to \frac12.$$
+      So $k = \frac12$. $0$ comes from substituting $x = 0$ in the numerator only; $2$ inverts the result.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{\log(1 + 2x)}{\sin 5x}$ equals ($\log$ is the natural logarithm)'
+  options:
+  - en: '$\tfrac52$'
+  - en: '$1$'
+  - en: '$\tfrac{2}{5}\log 2$'
+  - en: '$\tfrac25$'
+  answer: 3
+  explanation:
+    en: |-
+      $$\frac{\log(1 + 2x)}{\sin 5x} = \frac{\log(1 + 2x)}{2x}\cdot\frac{5x}{\sin 5x}\cdot\frac{2}{5} \to \frac25.$$
+      $\frac52$ swaps the scalings; $1$ ignores them.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{3^{x} - 2^{x}}{x}$ equals ($\log$ is the natural logarithm)'
+  options:
+  - en: '$\log 6$'
+  - en: '$1$'
+  - en: '$\log\tfrac23$'
+  - en: '$\log\tfrac32$'
+  answer: 3
+  explanation:
+    en: |-
+      Split into two standard limits:
+      $$\frac{3^x - 2^x}{x} = \frac{3^x - 1}{x} - \frac{2^x - 1}{x} \to \log 3 - \log 2 = \log\frac32.$$
+      $\log 6$ adds instead of subtracting; $\log\frac23$ has the sign reversed. Check: for small $x > 0$, $3^x > 2^x$, so the limit is positive.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to\infty}\left(1 + \frac{2}{x}\right)^{3x}$ equals'
+  options:
+  - en: '$e^{6}$'
+  - en: '$e^{2/3}$'
+  - en: '$e^{3/2}$'
+  - en: '$e^{5}$'
+  answer: 0
+  explanation:
+    en: |-
+      This is a $1^\infty$ form:
+      $$\lim\left(1 + \frac2x\right)^{3x} = e^{\lim 3x\cdot\frac{2}{x}} = e^{6}.$$
+      Equivalently $\left[\left(1 + \frac2x\right)^{x}\right]^3 \to (e^2)^3$. $e^5$ adds the exponents instead of multiplying.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - closed-interval
+  stem:
+    en: 'By the intermediate value theorem, the equation $x^3 - x - 1 = 0$ has a root in'
+  options:
+  - en: '$(0, 1)$'
+  - en: '$(-1, 0)$'
+  - en: '$(1, 2)$'
+  - en: '$(2, 3)$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $p(x) = x^3 - x - 1$, continuous on $\R$.
+      $$p(1) = -1 < 0, \qquad p(2) = 5 > 0,$$
+      so Bolzano's theorem gives a root in $(1, 2)$ (it is $\approx 1.3247$).
+      On $(0, 1)$: $p(0) = -1$, $p(1) = -1$, no sign change; on $(-1, 0)$: $p(-1) = -1$, $p(0) = -1$; on $(2, 3)$: both values are positive. Since $p$ has only one real root, the other intervals contain none.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - discontinuities
+  stem:
+    en: 'Let $f(x) = [x] + [-x]$, where $[\,\cdot\,]$ is the greatest integer function. At each integer $n$, $f$ has'
+  options:
+  - en: a jump discontinuity
+  - en: a removable discontinuity
+  - en: a discontinuity of the second kind
+  - en: no discontinuity
+  answer: 1
+  explanation:
+    en: |-
+      If $x = n$ is an integer, $f(n) = n - n = 0$. If $x$ is not an integer, $[-x] = -[x] - 1$, so $f(x) = -1$.
+
+      So $f(n-) = f(n+) = -1 \ne f(n) = 0$: the limit exists but differs from the value, a **removable** discontinuity.
+      "Jump" is the trap: each of $[x]$ and $[-x]$ jumps at $n$, but the jumps cancel.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - continuity
+  stem:
+    en: '$f(x) = x^2 + a$ for $x < 1$, $f(1) = 3$, and $f(x) = bx + 1$ for $x > 1$. $f$ is continuous at $x = 1$ if'
+  options:
+  - en: '$a = 3,\ b = 2$'
+  - en: '$a = 2,\ b = 3$'
+  - en: '$a = 1,\ b = 2$'
+  - en: '$a = 2,\ b = 2$'
+  answer: 3
+  explanation:
+    en: |-
+      Continuity at $1$ needs $f(1-) = f(1) = f(1+)$:
+      $$f(1-) = 1 + a = 3, \qquad f(1+) = b + 1 = 3.$$
+      So $a = 2$ and $b = 2$. $a = 3,\ b = 2$ forgets the $1^2$ term; $b = 3$ forgets the $+1$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}(1 + \sin x)^{\cot x}$ equals'
+  options:
+  - en: '$1$'
+  - en: '$e$'
+  - en: '$e^{-1}$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      A $1^\infty$ form:
+      $$\lim(1 + \sin x)^{\cot x} = e^{\lim \cot x\cdot\sin x} = e^{\lim\cos x} = e^{1} = e.$$
+      $1$ treats $1^\infty$ as $1$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - discontinuities
+  - exam-tips
+  stem:
+    en: 'The Thomae function $T$ ($T(p/q) = 1/q$ for $p/q$ in lowest terms with $q > 0$, $T(x) = 0$ for irrational $x$) is continuous'
+  options:
+  - en: at every irrational point and at no rational point
+  - en: at every rational point and at no irrational point
+  - en: at no point
+  - en: 'only at $x = 0$'
+  answer: 0
+  explanation:
+    en: |-
+      For every $c$, $\lim_{x\to c} T(x) = 0$: in a bounded interval only finitely many rationals have denominator $q \le 1/\varepsilon$, so $T < \varepsilon$ near $c$ except possibly at $c$.
+
+      - At irrational $c$: $T(c) = 0$, which equals the limit, so $T$ is continuous.
+      - At rational $c = p/q$: $T(c) = 1/q \ne 0$, a removable discontinuity. This includes $c = 0 = 0/1$, where $T(0) = 1$.
+
+      "At no point" describes the Dirichlet function.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - limit-definition
+  stem:
+    en: 'Let $x_n = \dfrac{2}{(4n + 1)\pi}$. What is $\displaystyle\lim_{n\to\infty}\sin\frac{1}{x_n}$, and what does Heine''s definition then give for $\displaystyle\lim_{x\to 0}\sin\frac1x$?'
+  options:
+  - en: '$0$; equals $0$'
+  - en: '$1$; does not exist, since $y_n = \frac{1}{n\pi}$ gives the limit $0$'
+  - en: '$1$; equals $1$'
+  - en: '$-1$; does not exist, since $y_n = \frac{1}{n\pi}$ gives the limit $0$'
+  answer: 1
+  explanation:
+    en: |-
+      $\frac{1}{x_n} = 2n\pi + \frac{\pi}{2}$, so $\sin\frac{1}{x_n} = 1$ for every $n$, and the limit is $1$.
+
+      With $y_n = \frac{1}{n\pi} \to 0$, $\sin\frac{1}{y_n} = \sin n\pi = 0$. Two sequences tending to $0$ give different limits of $f$, so by Heine's definition $\lim_{x\to 0}\sin\frac1x$ does not exist.
+      "Equals $1$" is wrong: a single sequence cannot prove a limit exists; Heine needs **every** sequence.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-limits
+  - exam-tips
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}(\cos x)^{1/x^{2}}$ equals'
+  options:
+  - en: '$e^{1/2}$'
+  - en: '$1$'
+  - en: '$e^{-1/2}$'
+  - en: '$e^{-1}$'
+  answer: 2
+  explanation:
+    en: |-
+      A $1^\infty$ form:
+      $$\lim(\cos x)^{1/x^2} = e^{\lim\frac{\cos x - 1}{x^2}} = e^{-1/2},$$
+      using $\frac{1 - \cos x}{x^2} \to \frac12$. $e^{1/2}$ drops the sign of $\cos x - 1 < 0$; $e^{-1}$ forgets the $\frac12$.
+      Check: $(\cos 0.1)^{100} \approx 0.6065 \approx e^{-0.5}$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - limit-definition
+  stem:
+    en: 'For the $\varepsilon$–$\delta$ proof of $\displaystyle\lim_{x\to 3}x^2 = 9$, which choice of $\delta$ works for **every** $\varepsilon > 0$?'
+  options:
+  - en: '$\delta = \varepsilon/7$'
+  - en: '$\delta = \min\{1, \varepsilon/7\}$'
+  - en: '$\delta = \min\{1, \varepsilon/6\}$'
+  - en: '$\delta = \varepsilon/6$'
+  answer: 1
+  explanation:
+    en: |-
+      If $|x - 3| < \delta$, then $|x^2 - 9| = |x - 3|\,|x + 3| < \delta(6 + \delta)$, and this bound is approached.
+
+      - $\delta = \min\{1, \varepsilon/7\}$: $\delta(6 + \delta) \le 7\delta \le \varepsilon$. Works.
+      - $\delta = \varepsilon/7$: for $\varepsilon = 70$, $\delta = 10$ and $\delta(6 + \delta) = 160 > 70$. Fails.
+      - $\delta = \min\{1, \varepsilon/6\}$: for $\varepsilon = 1$, $\delta(6 + \delta) = 1 + \frac1{36} > 1$. Fails.
+      - $\delta = \varepsilon/6$ fails for the same reason.
+
+      The restriction $\delta \le 1$ bounds $|x + 3|$ by $7$, not $6$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - discontinuities
+  - exam-tips
+  stem:
+    en: '$f(x) = x$ for rational $x$ and $f(x) = 1 - x$ for irrational $x$. The set of points where $f$ is continuous is'
+  options:
+  - en: '$\{\tfrac12\}$'
+  - en: '$\{0\}$'
+  - en: '$\{0, 1\}$'
+  - en: empty
+  answer: 0
+  explanation:
+    en: |-
+      Near any $c$ there are rationals (values near $c$) and irrationals (values near $1 - c$). So $\lim_{x\to c} f$ exists only if $c = 1 - c$, i.e. $c = \frac12$.
+
+      At $c = \frac12$: $|f(x) - \tfrac12| = |x - \tfrac12|$ in both cases, so $f$ is continuous there (take $\delta = \varepsilon$).
+      $\{0\}$ is the answer for $f(x) = x$ on $\Q$, $0$ off $\Q$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - closed-interval
+  stem:
+    en: Consider the following statements about real functions.
+  statements:
+  - en: 'Every function continuous on $(0, 1)$ is bounded on $(0, 1)$.'
+  - en: 'Every function continuous on $[a, b]$ attains its supremum on $[a, b]$.'
+  - en: 'Every continuous $f\colon [0, 1] \to [0, 1]$ satisfies $f(c) = c$ for some $c \in [0, 1]$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: 2 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. **False.** $f(x) = \frac1x$ is continuous on $(0, 1)$ and unbounded; the interval must be closed.
+      2. **True.** This is the extreme value theorem for a continuous function on a closed bounded interval.
+      3. **True.** Let $g(x) = f(x) - x$. Then $g(0) = f(0) \ge 0$ and $g(1) = f(1) - 1 \le 0$, so by the intermediate value property $g(c) = 0$ for some $c$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - algebra-sandwich
+  - continuity
+  stem:
+    en: 'Consider the following statements, where $c, L, M \in \R$.'
+  statements:
+  - en: '$\lim_{x\to c}\,(f + g)(x)$ can exist even when neither $\lim_{x\to c} f(x)$ nor $\lim_{x\to c} g(x)$ exists.'
+  - en: 'If $f$ is continuous at $c$ and $g$ is continuous at $f(c)$, then $g \circ f$ is continuous at $c$.'
+  - en: 'If $\lim_{x\to c} f(x) = L$ and $\lim_{y\to L} g(y) = M$, then $\lim_{x\to c} g(f(x)) = M$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. **True.** $f = \sin\frac1x$, $g = -\sin\frac1x$: neither has a limit at $0$, but $f + g = 0$.
+      2. **True.** This is the composite-function theorem.
+      3. **False.** Take $f \equiv 0$ and $g(y) = 0$ for $y \ne 0$, $g(0) = 1$. Then $L = 0$, $M = \lim_{y\to 0}g(y) = 0$, but $g(f(x)) = 1$ for all $x$. The statement needs $g$ continuous at $L$ (or $f(x) \ne L$ near $c$).
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - discontinuities
+  - algebra-sandwich
+  stem:
+    en: 'Match each function (defined as shown, with the stated value at $0$) with its behaviour at $x = 0$.'
+  left:
+  - en: 'A. $\frac{\sin x}{x}$, $f(0) = 0$'
+  - en: 'B. $[x]$'
+  - en: 'C. $\sin\frac1x$, $f(0) = 0$'
+  - en: 'D. $x\sin\frac1x$, $f(0) = 0$'
+  right:
+  - en: 1. continuous
+  - en: 2. removable discontinuity
+  - en: 3. jump discontinuity
+  - en: 4. discontinuity of the second kind
+  options:
+  - en: 'A-1, B-3, C-4, D-2'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-2, B-3, C-4, D-1'
+  answer: 3
+  explanation:
+    en: |-
+      - **A.** The limit $1$ exists but $\ne f(0) = 0$: removable (2).
+      - **B.** $[0-] = -1$, $[0+] = 0$: jump (3).
+      - **C.** Neither one-sided limit exists (oscillation): second kind (4).
+      - **D.** $x\sin\frac1x \to 0 = f(0)$ by the sandwich rule: continuous (1).
+
+      A-2, B-3, C-4, D-1.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-limits
+  stem:
+    en: 'Match each limit (as $x \to 0$; $a > 0$, $\log$ natural) with its value.'
+  left:
+  - en: 'A. $\frac{a^x - 1}{x}$'
+  - en: 'B. $\frac{\log(1 + x)}{x}$'
+  - en: 'C. $(1 + x)^{1/x}$'
+  - en: 'D. $\frac{1 - \cos x}{x^2}$'
+  right:
+  - en: '1. $e$'
+  - en: '2. $\frac12$'
+  - en: '3. $\log a$'
+  - en: '4. $1$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      - **A.** $a^x = e^{x\log a}$, so the limit is $\log a$ (3).
+      - **B.** Standard: $1$ (4).
+      - **C.** Definition of $e$: $e$ (1).
+      - **D.** $1 - \cos x = 2\sin^2\frac{x}{2}$, giving $\frac12$ (2).
+
+      A-3, B-4, C-1, D-2.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - closed-interval
+  assertion:
+    en: 'The equation $x^3 - 3x + 1 = 0$ has a root in $(0, 1)$.'
+  reason:
+    en: 'If $f$ is continuous on $[a, b]$ and $f(a)f(b) < 0$, then $f(c) = 0$ for some $c \in (a, b)$.'
+  answer: 0
+  explanation:
+    en: 'Both are true. $p(x) = x^3 - 3x + 1$ is continuous with $p(0) = 1 > 0$ and $p(1) = -1 < 0$, so R (Bolzano''s theorem) gives a root in $(0, 1)$ (it is $\approx 0.347$). R is exactly the reason for A.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - closed-interval
+  assertion:
+    en: '$f(x) = \frac{1}{x - 1}$ for $x \ne 1$, $f(1) = 0$, attains a maximum value on $[0, 2]$.'
+  reason:
+    en: A function continuous on a closed bounded interval is bounded and attains its bounds.
+  answer: 3
+  explanation:
+    en: |-
+      R is the extreme value theorem: true.
+
+      A is false: $f(x) \to +\infty$ as $x \to 1+$, so $f$ is unbounded above on $[0, 2]$ and has no maximum. R does not apply because $f$ is not continuous at $1$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - algebra-sandwich
+  assertion:
+    en: '$\displaystyle\lim_{x\to 0} x\sin\frac{1}{x} = 0$.'
+  reason:
+    en: '$\displaystyle\lim_{x\to 0}\sin\frac{1}{x} = 0$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true by the sandwich rule: $|x\sin\frac1x| \le |x| \to 0$.
+
+      R is false: along $x_n = \frac{1}{n\pi}$ the values are $0$, but along $\frac{2}{(4n + 1)\pi}$ they are $1$, so the limit does not exist. A holds because $\sin\frac1x$ is **bounded**, not because it has a limit.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - discontinuities
+  - continuity
+  assertion:
+    en: 'The Dirichlet function ($1$ on $\Q$, $0$ on $\R\setminus\Q$) is discontinuous at every real number.'
+  reason:
+    en: 'A function continuous at a point $c$ is bounded on some neighbourhood of $c$.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: every interval around $c$ contains rationals (value $1$) and irrationals (value $0$), so $\lim_{x\to c} D(x)$ does not exist for any $c$.
+
+      R is true: take $\varepsilon = 1$ in the definition of continuity, so $|f(x)| < |f(c)| + 1$ near $c$.
+
+      But R does not explain A: the Dirichlet function is bounded everywhere, so boundedness says nothing about its discontinuity. The reason is the density of $\Q$ and $\R\setminus\Q$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - inverse-functions
+  assertion:
+    en: '$f(x) = x^5 + x$ has an inverse $f^{-1}\colon \R \to \R$ which is continuous.'
+  reason:
+    en: 'If $f$ is strictly increasing and continuous on an interval $I$, then $f^{-1}$ exists on the interval $f(I)$ and is strictly increasing and continuous.'
+  answer: 0
+  explanation:
+    en: |-
+      R is the inverse function theorem for monotone functions: true.
+
+      A: $f'(x) = 5x^4 + 1 > 0$, so $f$ is strictly increasing and continuous on $\R$, and $f(x) \to \pm\infty$ as $x \to \pm\infty$, so $f(\R) = \R$ by the IVT. By R, $f^{-1}\colon \R \to \R$ is continuous. A is true and R explains it.
+  status: ai-generated

@@ -155,17 +155,32 @@ function axes(f: Frame, opts: { xpi?: boolean; xlabel?: string; ylabel?: string;
   return parts.join("");
 }
 
-/** Path through sampled points, broken at gaps and jumps (asymptotes). */
-function pathFrom(pts: ([number, number] | null)[], f: Frame): string {
+/** Path through sampled points, broken at gaps and at jumps (asymptotes, jump discontinuities).
+ *  A jump is a step that is large on screen and much larger than both neighbouring steps;
+ *  a steep but continuous curve has neighbouring steps of similar size, so it is not broken. */
+function pathFrom(input: ([number, number] | null)[], f: Frame): string {
   const span = f.y1 - f.y0, limit = span * 3;
-  let d = "", pen = false, prev: [number, number] | null = null;
-  for (const p of pts) {
-    if (!p || !Number.isFinite(p[0]) || !Number.isFinite(p[1]) || p[1] > f.y1 + limit || p[1] < f.y0 - limit) {
-      pen = false; prev = null; continue;
+  // Drop isolated one-sample spikes (e.g. floating-point tan(pi/2) at a removable jump).
+  const pts = input.map((p, i) => {
+    const a = input[i - 1], b = input[i + 1];
+    if (!p || !a || !b) return p;
+    const da = Math.abs(p[1] - a[1]), db = Math.abs(p[1] - b[1]), ab = Math.abs(b[1] - a[1]);
+    return da > span * 0.08 && db > span * 0.08 && ab < 0.25 * Math.min(da, db) ? null : p;
+  });
+  const ok = (p: [number, number] | null): p is [number, number] =>
+    !!p && Number.isFinite(p[0]) && Number.isFinite(p[1]) && p[1] <= f.y1 + limit && p[1] >= f.y0 - limit;
+  const dy = (i: number) => (i > 0 && i < pts.length && ok(pts[i]) && ok(pts[i - 1]) ? Math.abs(pts[i]![1] - pts[i - 1]![1]) : 0);
+  let d = "", pen = false;
+  for (let i = 0; i < pts.length; i++) {
+    const p = pts[i];
+    if (!ok(p)) { pen = false; continue; }
+    if (pen) {
+      const step = dy(i);
+      const around = Math.max(dy(i - 1), dy(i + 1));
+      if (step > span * 1.5 || (step > span * 0.08 && step > 8 * around)) pen = false;
     }
-    if (prev && Math.abs(p[1] - prev[1]) > span * 1.5) pen = false;
     d += `${pen ? "L" : "M"}${r2(f.sx(p[0]))},${r2(f.sy(p[1]))}`;
-    pen = true; prev = p;
+    pen = true;
   }
   return d;
 }

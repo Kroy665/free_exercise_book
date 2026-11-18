@@ -8,3 +8,7 @@ topics:
   - math.linalg.matrices-rank
   - math.linalg.linear-systems
   - math.linalg.eigen-cayley-hamilton
+  - math.linalg.quadratic-forms
+  - math.linalg.vector-spaces
+  - math.linalg.linear-transformations
+  - math.linalg.inner-product-spaces

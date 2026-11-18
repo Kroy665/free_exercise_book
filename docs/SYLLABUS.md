@@ -2,7 +2,7 @@
 
 The content plan and study plan for **WBSSC SLST (Assistant Teacher) Mathematics**: Class IX–X (GRAD, code 86) and Class XI–XII (PG, code 19). The official syllabus is transcribed in [syllabus/wbssc-slst-mathematics.md](syllabus/wbssc-slst-mathematics.md).
 
-**80 topics, 11 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
+**80 topics, 29 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
 
 ## The plan: 6 months at 1–2 hours a day
 
@@ -64,10 +64,10 @@ Mostly mechanical (determinants, rank, eigenvalues), then the vector-space theor
 | 9 | `math.linalg.matrices-rank` | Matrices, Inverse and Rank | Matrix algebra, adj A, inverse, elementary operations, rank, normal form, congruence | IX–XII | ✅ |
 | 10 | `math.linalg.linear-systems` | Systems of Linear Equations | Consistency, homogeneous systems, solution space, matrix method | IX–XII | ✅ |
 | 11 | `math.linalg.eigen-cayley-hamilton` | Eigenvalues and Cayley–Hamilton | Characteristic equation, eigenvalues/eigenvectors, Cayley–Hamilton, diagonalisation | IX–XII | ✅ |
-| 12 | `math.linalg.quadratic-forms` | Real Quadratic Forms | Matrix of a form, reduction to normal form, rank, signature, definiteness | IX–XII | 🔲 |
-| 13 | `math.linalg.vector-spaces` | Vector Spaces | Subspaces, span, linear independence, basis, dimension, row/column space | IX–XII | 🔲 |
-| 14 | `math.linalg.linear-transformations` | Linear Transformations | Null space, range, rank–nullity, Sylvester's law of nullity, matrix w.r.t. bases | XI–XII | 🔲 |
-| 15 | `math.linalg.inner-product-spaces` | Inner Product Spaces | Norm, Cauchy–Schwarz, orthogonality, orthonormal basis, Gram–Schmidt | XI–XII | 🔲 |
+| 12 | `math.linalg.quadratic-forms` | Real Quadratic Forms | Matrix of a form, reduction to normal form, rank, signature, definiteness | IX–XII | ✅ |
+| 13 | `math.linalg.vector-spaces` | Vector Spaces | Subspaces, span, linear independence, basis, dimension, row/column space | IX–XII | ✅ |
+| 14 | `math.linalg.linear-transformations` | Linear Transformations | Null space, range, rank–nullity, Sylvester's law of nullity, matrix w.r.t. bases | XI–XII | ✅ |
+| 15 | `math.linalg.inner-product-spaces` | Inner Product Spaces | Norm, Cauchy–Schwarz, orthogonality, orthonormal basis, Gram–Schmidt | XI–XII | ✅ |
 
 ### Block 3: Calculus and Real Analysis I (Weeks 5–8)
 
@@ -75,20 +75,20 @@ The largest block and the core of both papers.
 
 | Q | ID | Topic | Covers | Level | Status |
 |---|---|---|---|---|---|
-| 16 | `math.analysis.real-numbers` | The Real Number System | Rationals and irrationals, completeness (LUB) axiom, Archimedean property, bounded sets | IX–XII | 🔲 |
-| 17 | `math.analysis.sequences` | Sequences | Bounds, limits, monotone sequences, e, Cauchy sequences, Cauchy's limit theorems, subsequences | IX–XII | 🔲 |
-| 18 | `math.analysis.series-positive` | Series of Positive Terms | Convergence, Cauchy criterion, comparison, ratio, root, Abel–Pringsheim tests | IX–XII | 🔲 |
-| 19 | `math.analysis.series-arbitrary` | Alternating and Arbitrary Series | Leibniz test, absolute and conditional convergence, Abel's and Dirichlet's tests | IX–XII | 🔲 |
-| 20 | `math.analysis.limits-continuity` | Limits and Continuity | Cauchy definition, algebra of limits, standard limits, continuity, discontinuities, properties on [a,b] | IX–XII | 🔲 |
-| 21 | `math.analysis.mean-value-theorems` | Derivatives and Mean Value Theorems | Differentiability, Leibniz theorem, Rolle, Lagrange, Cauchy MVT, Darboux | IX–XII | 🔲 |
-| 22 | `math.analysis.taylor-series` | Taylor's Theorem and Expansions | Taylor and Maclaurin theorems, expansions of eˣ, log(1+x), (1+x)ᵐ, sin x, cos x | XI–XII | 🔲 |
-| 23 | `math.analysis.indeterminate-extrema` | Indeterminate Forms, Maxima and Minima | L'Hospital's rule, local extrema, applications | IX–XII | 🔲 |
-| 24 | `math.analysis.two-variables` | Functions of Two Variables | Limits, partial derivatives, chain rule, implicit functions, Euler, Schwarz, extrema | IX–XII | 🔲 |
-| 25 | `math.analysis.curves` | Tangents, Normals, Asymptotes and Curvature | Tangent/normal, pedal equations, asymptotes, curvature, envelopes, curve tracing | IX–XII | 🔲 |
-| 26 | `math.integral.integration-methods` | Methods of Integration | Standard forms, ∫dx/(a+b cos x), (l sin x+m cos x)/(n sin x+p cos x), rational functions | IX–XII | 🔲 |
-| 27 | `math.integral.reduction-formulae` | Reduction Formulae | sinᵐx cosⁿx, tanⁿx, secⁿx, 1/(x²+a²)ⁿ and related | IX–XII | 🔲 |
-| 28 | `math.integral.definite-integrals` | Definite Integrals | Properties, limit of a sum, standard results | IX–XII | 🔲 |
-| 29 | `math.integral.area-length-volume` | Areas, Lengths and Volumes | Quadrature, rectification, volume and surface of revolution, double integrals | IX–XII | 🔲 |
+| 16 | `math.analysis.real-numbers` | The Real Number System | Rationals and irrationals, completeness (LUB) axiom, Archimedean property, bounded sets | IX–XII | ✅ |
+| 17 | `math.analysis.sequences` | Sequences | Bounds, limits, monotone sequences, e, Cauchy sequences, Cauchy's limit theorems, subsequences | IX–XII | ✅ |
+| 18 | `math.analysis.series-positive` | Series of Positive Terms | Convergence, Cauchy criterion, comparison, ratio, root, Abel–Pringsheim tests | IX–XII | ✅ |
+| 19 | `math.analysis.series-arbitrary` | Alternating and Arbitrary Series | Leibniz test, absolute and conditional convergence, Abel's and Dirichlet's tests | IX–XII | ✅ |
+| 20 | `math.analysis.limits-continuity` | Limits and Continuity | Cauchy definition, algebra of limits, standard limits, continuity, discontinuities, properties on [a,b] | IX–XII | ✅ |
+| 21 | `math.analysis.mean-value-theorems` | Derivatives and Mean Value Theorems | Differentiability, Leibniz theorem, Rolle, Lagrange, Cauchy MVT, Darboux | IX–XII | ✅ |
+| 22 | `math.analysis.taylor-series` | Taylor's Theorem and Expansions | Taylor and Maclaurin theorems, expansions of eˣ, log(1+x), (1+x)ᵐ, sin x, cos x | XI–XII | ✅ |
+| 23 | `math.analysis.indeterminate-extrema` | Indeterminate Forms, Maxima and Minima | L'Hospital's rule, local extrema, applications | IX–XII | ✅ |
+| 24 | `math.analysis.two-variables` | Functions of Two Variables | Limits, partial derivatives, chain rule, implicit functions, Euler, Schwarz, extrema | IX–XII | ✅ |
+| 25 | `math.analysis.curves` | Tangents, Normals, Asymptotes and Curvature | Tangent/normal, pedal equations, asymptotes, curvature, envelopes, curve tracing | IX–XII | ✅ |
+| 26 | `math.integral.integration-methods` | Methods of Integration | Standard forms, ∫dx/(a+b cos x), (l sin x+m cos x)/(n sin x+p cos x), rational functions | IX–XII | ✅ |
+| 27 | `math.integral.reduction-formulae` | Reduction Formulae | sinᵐx cosⁿx, tanⁿx, secⁿx, 1/(x²+a²)ⁿ and related | IX–XII | ✅ |
+| 28 | `math.integral.definite-integrals` | Definite Integrals | Properties, limit of a sum, standard results | IX–XII | ✅ |
+| 29 | `math.integral.area-length-volume` | Areas, Lengths and Volumes | Quadrature, rectification, volume and surface of revolution, double integrals | IX–XII | ✅ |
 
 ### Block 4: Differential Equations (Week 9)
 

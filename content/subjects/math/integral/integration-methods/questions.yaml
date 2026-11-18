@@ -1,0 +1,678 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - standard-forms
+  stem:
+    en: '$\int\operatorname{cosec} x\,dx$ equals'
+  options:
+  - en: '$\ln\lvert\operatorname{cosec} x + \cot x\rvert + C$'
+  - en: '$\ln\lvert\sin x\rvert + C$'
+  - en: '$-\operatorname{cosec} x\cot x + C$'
+  - en: '$\ln\left\lvert\tan\frac{x}{2}\right\rvert + C$'
+  answer: 3
+  explanation:
+    en: |-
+      Write $\operatorname{cosec} x = \dfrac{1}{2\sin\frac{x}{2}\cos\frac{x}{2}} = \dfrac{\frac12\sec^2\frac{x}{2}}{\tan\frac{x}{2}}$, which is $\frac{f'}{f}$ with $f = \tan\frac{x}{2}$:
+      $$\int\operatorname{cosec} x\,dx = \ln\left\lvert\tan\frac{x}{2}\right\rvert + C = \ln\lvert\operatorname{cosec} x - \cot x\rvert + C.$$
+
+      $\ln\lvert\operatorname{cosec} x + \cot x\rvert$ has the wrong sign: it equals $-\ln\lvert\tan\frac{x}{2}\rvert$, so its derivative is $-\operatorname{cosec} x$. $\ln\lvert\sin x\rvert$ is $\int\cot x\,dx$, and $-\operatorname{cosec} x\cot x$ is the **derivative** of $\operatorname{cosec} x$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-forms
+  stem:
+    en: '$\int\frac{dx}{x^2 - 9}$ equals'
+  options:
+  - en: '$\frac{1}{3}\ln\left\lvert\frac{x - 3}{x + 3}\right\rvert + C$'
+  - en: '$\frac{1}{6}\ln\left\lvert\frac{x - 3}{x + 3}\right\rvert + C$'
+  - en: '$\frac{1}{6}\ln\left\lvert\frac{x + 3}{x - 3}\right\rvert + C$'
+  - en: '$\frac{1}{3}\tan^{-1}\frac{x}{3} + C$'
+  answer: 1
+  explanation:
+    en: |-
+      $$\frac{1}{x^2 - 9} = \frac{1}{6}\left(\frac{1}{x - 3} - \frac{1}{x + 3}\right) \;\Rightarrow\; \int\frac{dx}{x^2 - 9} = \frac{1}{6}\ln\left\lvert\frac{x - 3}{x + 3}\right\rvert + C.$$
+
+      The factor is $\frac{1}{2a} = \frac16$, not $\frac1a$. The reversed fraction is $\int\frac{dx}{9 - x^2}$, which has the opposite sign. $\tan^{-1}$ belongs to $x^2 + 9$, not $x^2 - 9$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - substitution
+  stem:
+    en: '$\int\frac{\cos x}{(1 + \sin x)^2}\,dx$ equals'
+  options:
+  - en: '$\frac{1}{1 + \sin x} + C$'
+  - en: '$-\frac{1}{1 + \sin x} + C$'
+  - en: '$\ln(1 + \sin x) + C$'
+  - en: '$-\frac{1}{3(1 + \sin x)^3} + C$'
+  answer: 1
+  explanation:
+    en: |-
+      Put $u = 1 + \sin x$, $du = \cos x\,dx$:
+      $$\int u^{-2}\,du = -u^{-1} + C = -\frac{1}{1 + \sin x} + C.$$
+
+      Dropping the minus sign is the usual slip; the logarithm would need power $1$ in the denominator, not $2$. The last option raises the power instead of lowering it.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - by-parts
+  stem:
+    en: '$\int\ln x\,dx$ $(x > 0)$ equals'
+  options:
+  - en: '$x\ln x + x + C$'
+  - en: '$\frac{1}{x} + C$'
+  - en: '$\frac{(\ln x)^2}{2} + C$'
+  - en: '$x\ln x - x + C$'
+  answer: 3
+  explanation:
+    en: |-
+      Take $u = \ln x$, $v' = 1$:
+      $$\int\ln x\,dx = x\ln x - \int x\cdot\frac{1}{x}\,dx = x\ln x - x + C.$$
+
+      **Check:** $\frac{d}{dx}(x\ln x - x) = \ln x + 1 - 1 = \ln x$. With $+x$ the derivative is $\ln x + 2$. $\frac{(\ln x)^2}{2}$ is $\int\frac{\ln x}{x}\,dx$, and $\frac1x$ is the derivative of $\ln x$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - by-parts
+  stem:
+    en: '$\int x^2 e^x\,dx$ equals'
+  options:
+  - en: '$e^x(x^2 + 2x + 2) + C$'
+  - en: '$e^x(x^2 - 2x - 2) + C$'
+  - en: '$\frac{x^3 e^x}{3} + C$'
+  - en: '$e^x(x^2 - 2x + 2) + C$'
+  answer: 3
+  explanation:
+    en: |-
+      Parts twice, or the rule $\int p(x)e^x\,dx = e^x(p - p' + p'' - \cdots)$ with $p = x^2$:
+      $$\int x^2 e^x\,dx = e^x(x^2 - 2x + 2) + C.$$
+
+      **Check:** $\frac{d}{dx}\left[e^x(x^2 - 2x + 2)\right] = e^x(x^2 - 2x + 2 + 2x - 2) = x^2 e^x$. The signs must alternate, so $+2x$ is wrong, and $-2$ at the end gives $e^x(x^2 - 4)$ on differentiating.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - by-parts
+  stem:
+    en: '$\int e^x\,\frac{1 + \sin x}{1 + \cos x}\,dx$ equals'
+  options:
+  - en: '$e^x\cot\frac{x}{2} + C$'
+  - en: '$-e^x\cot\frac{x}{2} + C$'
+  - en: '$e^x\tan\frac{x}{2} + C$'
+  - en: '$\frac{1}{2}e^x\sec^2\frac{x}{2} + C$'
+  answer: 2
+  explanation:
+    en: |-
+      Use half-angles: $1 + \cos x = 2\cos^2\frac{x}{2}$ and $\sin x = 2\sin\frac{x}{2}\cos\frac{x}{2}$, so
+      $$\frac{1 + \sin x}{1 + \cos x} = \frac{1}{2}\sec^2\frac{x}{2} + \tan\frac{x}{2} = f + f', \qquad f = \tan\frac{x}{2}.$$
+      By $\int e^x(f + f')\,dx = e^x f$, the answer is $e^x\tan\frac{x}{2} + C$.
+
+      The $\cot$ options come from mixing up $1 + \cos x$ with $1 - \cos x = 2\sin^2\frac{x}{2}$. $\frac12 e^x\sec^2\frac{x}{2}$ uses $f'$ in place of $f$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - by-parts
+  stem:
+    en: '$\int e^{2x}\sin 3x\,dx$ equals'
+  options:
+  - en: '$\frac{e^{2x}}{13}(2\sin 3x + 3\cos 3x) + C$'
+  - en: '$\frac{e^{2x}}{13}(2\sin 3x - 3\cos 3x) + C$'
+  - en: '$\frac{e^{2x}}{13}(3\sin 3x - 2\cos 3x) + C$'
+  - en: '$\frac{e^{2x}}{5}(2\sin 3x - 3\cos 3x) + C$'
+  answer: 1
+  explanation:
+    en: |-
+      With $a = 2$, $b = 3$ in
+      $$\int e^{ax}\sin bx\,dx = \frac{e^{ax}(a\sin bx - b\cos bx)}{a^2 + b^2},$$
+      the answer is $\frac{e^{2x}}{13}(2\sin 3x - 3\cos 3x) + C$.
+
+      **Check** by differentiating: $\frac{d}{dx}\left[e^{2x}(2\sin 3x - 3\cos 3x)\right] = e^{2x}(4\sin 3x - 6\cos 3x + 6\cos 3x + 9\sin 3x) = 13e^{2x}\sin 3x$. The $+3\cos 3x$ option fails this, and $5 = a + b$ is not $a^2 + b^2$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - by-parts
+  stem:
+    en: '$\int\tan^{-1}x\,dx$ equals'
+  options:
+  - en: '$x\tan^{-1}x + \frac{1}{2}\ln(1 + x^2) + C$'
+  - en: '$x\tan^{-1}x - \ln(1 + x^2) + C$'
+  - en: '$x\tan^{-1}x - \frac{1}{2}\ln(1 + x^2) + C$'
+  - en: '$\frac{1}{1 + x^2} + C$'
+  answer: 2
+  explanation:
+    en: |-
+      Take $u = \tan^{-1}x$, $v' = 1$:
+      $$\int\tan^{-1}x\,dx = x\tan^{-1}x - \int\frac{x}{1 + x^2}\,dx = x\tan^{-1}x - \frac{1}{2}\ln(1 + x^2) + C.$$
+
+      $\int\frac{x\,dx}{1 + x^2} = \frac12\ln(1 + x^2)$: forgetting the $\frac12$ gives the third option, and a sign slip in the parts formula gives the second. $\frac{1}{1 + x^2}$ is the derivative of $\tan^{-1}x$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - partial-fractions
+  stem:
+    en: '$\int\frac{dx}{(x - 1)(x + 2)}$ equals'
+  options:
+  - en: '$\frac{1}{3}\ln\left\lvert\frac{x - 1}{x + 2}\right\rvert + C$'
+  - en: '$\frac{1}{3}\ln\left\lvert\frac{x + 2}{x - 1}\right\rvert + C$'
+  - en: '$\ln\lvert(x - 1)(x + 2)\rvert + C$'
+  - en: '$\frac{1}{3}\ln\lvert(x - 1)(x + 2)\rvert + C$'
+  answer: 0
+  explanation:
+    en: |-
+      By cover-up, the coefficient of $\frac{1}{x - 1}$ is $\frac{1}{1 + 2} = \frac13$ and that of $\frac{1}{x + 2}$ is $\frac{1}{-2 - 1} = -\frac13$:
+      $$\int\left(\frac{1/3}{x - 1} - \frac{1/3}{x + 2}\right)dx = \frac13\ln\left\lvert\frac{x - 1}{x + 2}\right\rvert + C.$$
+
+      The two coefficients have **opposite** signs, so the answer is a log of a quotient, not of a product. The reversed quotient is the negative of the answer.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - partial-fractions
+  stem:
+    en: '$\int\frac{dx}{x(x^2 + 1)}$ equals'
+  options:
+  - en: '$\ln\lvert x\rvert + \frac{1}{2}\ln(x^2 + 1) + C$'
+  - en: '$\ln\lvert x\rvert - \ln(x^2 + 1) + C$'
+  - en: '$\ln\lvert x\rvert - \tan^{-1}x + C$'
+  - en: '$\ln\lvert x\rvert - \frac{1}{2}\ln(x^2 + 1) + C$'
+  answer: 3
+  explanation:
+    en: |-
+      $$\frac{1}{x(x^2 + 1)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 1}: \quad A = 1\ (\text{cover-up at } x = 0),\quad 1 = (x^2 + 1) + (Bx + C)x \Rightarrow B = -1,\ C = 0.$$
+      So
+      $$\int\left(\frac1x - \frac{x}{x^2 + 1}\right)dx = \ln\lvert x\rvert - \frac12\ln(x^2 + 1) + C.$$
+
+      The $\tan^{-1}$ option takes a constant numerator over $x^2 + 1$; the numerator here is $-x$, which gives $-\frac12\ln(x^2 + 1)$, not $-\ln(x^2 + 1)$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - partial-fractions
+  stem:
+    en: '$\int\frac{dx}{x(x + 1)^2}$ equals'
+  options:
+  - en: '$\ln\left\lvert\frac{x}{x + 1}\right\rvert - \frac{1}{x + 1} + C$'
+  - en: '$\ln\lvert x(x + 1)\rvert + \frac{1}{x + 1} + C$'
+  - en: '$\ln\left\lvert\frac{x}{x + 1}\right\rvert + \frac{1}{x + 1} + C$'
+  - en: '$\ln\left\lvert\frac{x}{x + 1}\right\rvert + C$'
+  answer: 2
+  explanation:
+    en: |-
+      The repeated factor needs two terms:
+      $$\frac{1}{x(x + 1)^2} = \frac{A}{x} + \frac{B}{x + 1} + \frac{D}{(x + 1)^2}.$$
+      Cover-up gives $A = 1$ (at $x = 0$) and $D = \frac{1}{-1} = -1$ (at $x = -1$). Comparing $x^2$ terms, $A + B = 0$, so $B = -1$. Then
+      $$\int = \ln\lvert x\rvert - \ln\lvert x + 1\rvert + \frac{1}{x + 1} + C,$$
+      since $\int -\frac{dx}{(x + 1)^2} = +\frac{1}{x + 1}$.
+
+      The option with $-\frac{1}{x + 1}$ makes a sign slip in this last step; the option without it ignores the repeated factor.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - partial-fractions
+  stem:
+    en: '$\int\frac{x^2 + 1}{x^4 + 1}\,dx$ $(x > 0)$ equals'
+  options:
+  - en: '$\frac{1}{\sqrt2}\tan^{-1}\frac{x^2 + 1}{\sqrt2\,x} + C$'
+  - en: '$\frac{1}{\sqrt2}\tan^{-1}\frac{x^2 - 1}{\sqrt2\,x} + C$'
+  - en: '$\sqrt2\tan^{-1}\frac{x^2 - 1}{\sqrt2\,x} + C$'
+  - en: '$\frac{1}{2\sqrt2}\ln\left\lvert\frac{x^2 - \sqrt2\,x + 1}{x^2 + \sqrt2\,x + 1}\right\rvert + C$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide the numerator and denominator by $x^2$ and put $u = x - \frac1x$, $du = \left(1 + \frac{1}{x^2}\right)dx$:
+      $$\int\frac{1 + 1/x^2}{x^2 + 1/x^2}\,dx = \int\frac{du}{u^2 + 2} = \frac{1}{\sqrt2}\tan^{-1}\frac{u}{\sqrt2} = \frac{1}{\sqrt2}\tan^{-1}\frac{x^2 - 1}{\sqrt2\,x} + C.$$
+
+      The logarithm is the companion integral $\int\frac{x^2 - 1}{x^4 + 1}\,dx$ (substitute $x + \frac1x$). The $\frac{x^2 + 1}{\sqrt2\,x}$ option uses the wrong substitution, and $\sqrt2$ in front inverts the factor $\frac1a$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - half-angle
+  stem:
+    en: '$\int\frac{dx}{5 + 4\cos x}$ $(-\pi < x < \pi)$ equals'
+  options:
+  - en: '$\frac{1}{3}\tan^{-1}\left(\frac{1}{3}\tan\frac{x}{2}\right) + C$'
+  - en: '$\frac{2}{3}\tan^{-1}\left(3\tan\frac{x}{2}\right) + C$'
+  - en: '$\frac{1}{3}\ln\left\lvert\frac{3 + \tan(x/2)}{3 - \tan(x/2)}\right\rvert + C$'
+  - en: '$\frac{2}{3}\tan^{-1}\left(\frac{1}{3}\tan\frac{x}{2}\right) + C$'
+  answer: 3
+  explanation:
+    en: |-
+      With $t = \tan\frac{x}{2}$:
+      $$\int\frac{2\,dt}{5(1 + t^2) + 4(1 - t^2)} = \int\frac{2\,dt}{9 + t^2} = \frac{2}{3}\tan^{-1}\frac{t}{3} + C.$$
+      This matches $\frac{2}{\sqrt{a^2 - b^2}}\tan^{-1}\left(\sqrt{\frac{a - b}{a + b}}\tan\frac{x}{2}\right)$ with $a = 5$, $b = 4$.
+
+      Forgetting the $2$ from $dx = \frac{2\,dt}{1 + t^2}$ gives $\frac13$. The factor $\sqrt{\frac{a - b}{a + b}} = \frac13$ is easily inverted to $3$. Since $a > b$, there is no logarithm.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - half-angle
+  stem:
+    en: '$\int\frac{dx}{3 + 5\cos x}$ equals (on an interval where it is defined)'
+  options:
+  - en: '$\frac{1}{2}\ln\left\lvert\frac{2 + \tan(x/2)}{2 - \tan(x/2)}\right\rvert + C$'
+  - en: '$\frac{1}{4}\ln\left\lvert\frac{2 - \tan(x/2)}{2 + \tan(x/2)}\right\rvert + C$'
+  - en: '$\frac{1}{4}\ln\left\lvert\frac{2 + \tan(x/2)}{2 - \tan(x/2)}\right\rvert + C$'
+  - en: '$\frac{1}{2}\tan^{-1}\left(\frac{1}{2}\tan\frac{x}{2}\right) + C$'
+  answer: 2
+  explanation:
+    en: |-
+      With $t = \tan\frac{x}{2}$:
+      $$\int\frac{2\,dt}{3(1 + t^2) + 5(1 - t^2)} = \int\frac{2\,dt}{8 - 2t^2} = \int\frac{dt}{4 - t^2} = \frac{1}{4}\ln\left\lvert\frac{2 + t}{2 - t}\right\rvert + C.$$
+
+      Since $a = 3 < b = 5$, the coefficient of $t^2$ is negative and the answer is a **logarithm**, so the $\tan^{-1}$ option is wrong. $\int\frac{dt}{4 - t^2}$ has factor $\frac{1}{2\cdot 2} = \frac14$, and the reversed quotient has the wrong sign.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - trig-quotients
+  stem:
+    en: '$\int\frac{\sin x}{\sin x + \cos x}\,dx$ equals'
+  options:
+  - en: '$\frac{x}{2} - \frac{1}{2}\ln\lvert\sin x + \cos x\rvert + C$'
+  - en: '$\frac{x}{2} + \frac{1}{2}\ln\lvert\sin x + \cos x\rvert + C$'
+  - en: '$\frac{1}{2}\ln\lvert\sin x + \cos x\rvert + C$'
+  - en: '$x - \ln\lvert\sin x + \cos x\rvert + C$'
+  answer: 0
+  explanation:
+    en: |-
+      Write the numerator as $A(\text{den}) + B(\text{den})'$, with $(\text{den})' = \cos x - \sin x$:
+      $$\sin x = \frac12(\sin x + \cos x) - \frac12(\cos x - \sin x).$$
+      So
+      $$\int = \frac{x}{2} - \frac12\ln\lvert\sin x + \cos x\rvert + C.$$
+
+      The $+$ sign option is $\int\frac{\cos x}{\sin x + \cos x}\,dx$; the two integrals add up to $x$. That sum is a fast check.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - trig-quotients
+  stem:
+    en: '$\int\frac{3\sin x + 2\cos x}{2\sin x + 3\cos x}\,dx$ equals'
+  options:
+  - en: '$\frac{12}{13}x + \frac{5}{13}\ln\lvert 2\sin x + 3\cos x\rvert + C$'
+  - en: '$\frac{5}{13}x - \frac{12}{13}\ln\lvert 2\sin x + 3\cos x\rvert + C$'
+  - en: '$\frac{12}{13}x - \frac{5}{13}\ln\lvert 2\sin x + 3\cos x\rvert + C$'
+  - en: '$x - \frac{5}{13}\ln\lvert 2\sin x + 3\cos x\rvert + C$'
+  answer: 2
+  explanation:
+    en: |-
+      Put $3\sin x + 2\cos x = A(2\sin x + 3\cos x) + B(2\cos x - 3\sin x)$. Comparing coefficients:
+      $$\sin x:\ 2A - 3B = 3, \qquad \cos x:\ 3A + 2B = 2.$$
+      Solving, $A = \frac{12}{13}$ and $B = -\frac{5}{13}$. Hence
+      $$\int = \frac{12}{13}x - \frac{5}{13}\ln\lvert 2\sin x + 3\cos x\rvert + C.$$
+
+      **Check:** $\frac{12}{13}(2, 3) - \frac{5}{13}(-3, 2) = \left(\frac{24 + 15}{13}, \frac{36 - 10}{13}\right) = (3, 2)$ as (sin, cos) coefficients. The option with $\frac{5}{13}x$ swaps $A$ and $B$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - trig-quotients
+  stem:
+    en: '$\int\frac{dx}{\sin x + \cos x}$ equals'
+  options:
+  - en: '$\sqrt2\ln\left\lvert\tan\left(\frac{x}{2} + \frac{\pi}{8}\right)\right\rvert + C$'
+  - en: '$\frac{1}{\sqrt2}\ln\left\lvert\tan\left(\frac{x}{2} + \frac{\pi}{8}\right)\right\rvert + C$'
+  - en: '$\frac{1}{\sqrt2}\ln\left\lvert\tan\left(\frac{x}{2} + \frac{\pi}{4}\right)\right\rvert + C$'
+  - en: '$\frac{1}{\sqrt2}\ln\left\lvert\tan\left(\frac{x}{2} - \frac{\pi}{8}\right)\right\rvert + C$'
+  answer: 1
+  explanation:
+    en: |-
+      $\sin x + \cos x = \sqrt2\sin\left(x + \frac{\pi}{4}\right)$, so
+      $$\int\frac{dx}{\sin x + \cos x} = \frac{1}{\sqrt2}\int\operatorname{cosec}\left(x + \frac{\pi}{4}\right)dx = \frac{1}{\sqrt2}\ln\left\lvert\tan\left(\frac{x}{2} + \frac{\pi}{8}\right)\right\rvert + C.$$
+
+      Halving the shift is the trap: $\frac{x + \pi/4}{2} = \frac{x}{2} + \frac{\pi}{8}$, not $\frac{x}{2} + \frac{\pi}{4}$. The $-\frac{\pi}{8}$ option integrates $\frac{1}{\sin x - \cos x}$. The factor is $\frac1r = \frac{1}{\sqrt2}$, not $\sqrt2$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - trig-quotients
+  stem:
+    en: '$\int\frac{dx}{1 + 3\sin^2 x}$ $\left(-\frac{\pi}{2} < x < \frac{\pi}{2}\right)$ equals'
+  options:
+  - en: '$\frac{1}{2}\tan^{-1}\left(\frac{1}{2}\tan x\right) + C$'
+  - en: '$\frac{1}{2}\tan^{-1}(2\tan x) + C$'
+  - en: '$\tan^{-1}(2\tan x) + C$'
+  - en: '$\frac{1}{\sqrt3}\tan^{-1}\left(\sqrt3\tan x\right) + C$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide the numerator and denominator by $\cos^2 x$ and put $t = \tan x$:
+      $$\int\frac{\sec^2 x\,dx}{\sec^2 x + 3\tan^2 x} = \int\frac{dt}{1 + 4t^2} = \frac12\tan^{-1}(2t) + C = \frac12\tan^{-1}(2\tan x) + C.$$
+
+      The trap is writing $1 + 3t^2$ in the denominator, which gives the $\sqrt3$ option: $\sec^2 x = 1 + t^2$, so the denominator is $1 + t^2 + 3t^2 = 1 + 4t^2$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - irrational
+  - standard-forms
+  stem:
+    en: '$\int\frac{dx}{\sqrt{x^2 + 2x + 5}}$ equals'
+  options:
+  - en: '$\ln\left\lvert x + 1 + \sqrt{x^2 + 2x + 5}\right\rvert + C$'
+  - en: '$\ln\left\lvert x + \sqrt{x^2 + 2x + 5}\right\rvert + C$'
+  - en: '$\sin^{-1}\frac{x + 1}{2} + C$'
+  - en: '$\frac{1}{2}\tan^{-1}\frac{x + 1}{2} + C$'
+  answer: 0
+  explanation:
+    en: |-
+      Complete the square: $x^2 + 2x + 5 = (x + 1)^2 + 2^2$. With $u = x + 1$,
+      $$\int\frac{du}{\sqrt{u^2 + 2^2}} = \ln\left\lvert u + \sqrt{u^2 + 4}\right\rvert + C = \ln\left\lvert x + 1 + \sqrt{x^2 + 2x + 5}\right\rvert + C.$$
+
+      $\sin^{-1}$ belongs to $\sqrt{a^2 - u^2}$, and $\tan^{-1}$ to $u^2 + a^2$ without a root. Dropping the $+1$ inside the log is the commonest slip.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - irrational
+  - standard-forms
+  stem:
+    en: '$\int\sqrt{4 - x^2}\,dx$ $(\lvert x\rvert < 2)$ equals'
+  options:
+  - en: '$\frac{x}{2}\sqrt{4 - x^2} + 4\sin^{-1}\frac{x}{2} + C$'
+  - en: '$\frac{x}{2}\sqrt{4 - x^2} - 2\sin^{-1}\frac{x}{2} + C$'
+  - en: '$x\sqrt{4 - x^2} + 2\sin^{-1}\frac{x}{2} + C$'
+  - en: '$\frac{x}{2}\sqrt{4 - x^2} + 2\sin^{-1}\frac{x}{2} + C$'
+  answer: 3
+  explanation:
+    en: |-
+      Use $\int\sqrt{a^2 - x^2}\,dx = \frac{x}{2}\sqrt{a^2 - x^2} + \frac{a^2}{2}\sin^{-1}\frac{x}{a}$ with $a = 2$:
+      $$\frac{x}{2}\sqrt{4 - x^2} + \frac{4}{2}\sin^{-1}\frac{x}{2} + C.$$
+
+      $4\sin^{-1}$ forgets the $\frac12$ on $a^2$. **Check:** over $[-2, 2]$ the key gives $2\left(\frac{\pi}{2} + \frac{\pi}{2}\right) = 2\pi$, the area of a semicircle of radius $2$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - irrational
+  stem:
+    en: 'For $x > 1$, $\int\frac{dx}{(x + 1)\sqrt{x^2 - 1}}$ equals'
+  options:
+  - en: '$\sqrt{\frac{x - 1}{x + 1}} + C$'
+  - en: '$-\sqrt{\frac{x - 1}{x + 1}} + C$'
+  - en: '$\sqrt{\frac{x + 1}{x - 1}} + C$'
+  - en: '$\sec^{-1}x + C$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $x + 1 = \frac{1}{t}$, so $dx = -\frac{dt}{t^2}$ and $x^2 - 1 = \frac{1}{t}\left(\frac1t - 2\right) = \frac{1 - 2t}{t^2}$ (with $0 < t < \frac12$):
+      $$\int\frac{-dt/t^2}{\frac1t\cdot\frac{\sqrt{1 - 2t}}{t}} = -\int\frac{dt}{\sqrt{1 - 2t}} = \sqrt{1 - 2t} + C = \sqrt{\frac{x - 1}{x + 1}} + C.$$
+
+      **Check:** $\frac{d}{dx}\sqrt{\frac{x - 1}{x + 1}} = \frac12\sqrt{\frac{x + 1}{x - 1}}\cdot\frac{2}{(x + 1)^2} = \frac{1}{(x + 1)\sqrt{x^2 - 1}}$. The minus sign comes from losing the minus in $dx$ twice; $\sec^{-1}x$ is $\int\frac{dx}{x\sqrt{x^2 - 1}}$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-forms
+  - substitution
+  stem:
+    en: 'Consider the following statements (each on a suitable interval):'
+  statements:
+  - en: '$\frac12\sin^2 x$ and $-\frac12\cos^2 x$ are both antiderivatives of $\sin x\cos x$.'
+  - en: '$\int\frac{dx}{x} = \ln x + C$ for all $x \ne 0$.'
+  - en: '$\int\tan x\,dx = \ln\lvert\sec x\rvert + C$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 3 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      **1 is true.** Both derivatives equal $\sin x\cos x$; the two functions differ by the constant $\frac12$, since $\frac12\sin^2 x - \left(-\frac12\cos^2 x\right) = \frac12$.
+
+      **2 is false.** $\ln x$ is not defined for $x < 0$. The correct form is $\ln\lvert x\rvert + C$.
+
+      **3 is true.** $\int\tan x\,dx = -\ln\lvert\cos x\rvert = \ln\lvert\sec x\rvert$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - half-angle
+  - partial-fractions
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'For $a > 0$, $\int\frac{dx}{a + a\cos x} = \frac{1}{a}\tan\frac{x}{2} + C$ on $(-\pi, \pi)$.'
+  - en: 'If $P/Q$ is a proper rational function and $(x - a)$ is a simple (non-repeated) factor of $Q$, then the coefficient of $\frac{1}{x - a}$ in its partial fractions is $\frac{P(a)}{Q''(a)}$.'
+  - en: 'The partial-fraction form of $\frac{1}{(x - 1)^2(x^2 + 1)}$ is $\frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{Cx + D}{x^2 + 1}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      **1 is true.** $a(1 + \cos x) = 2a\cos^2\frac{x}{2}$, so the integral is $\frac{1}{2a}\int\sec^2\frac{x}{2}\,dx = \frac1a\tan\frac{x}{2} + C$.
+
+      **2 is true.** Write $Q = (x - a)R$ with $R(a) \ne 0$. The coefficient is $\frac{P(a)}{R(a)}$ (cover-up), and $Q'(a) = R(a)$.
+
+      **3 is true.** The repeated linear factor gives two terms and the irreducible quadratic gives a linear numerator. Four unknowns match the degree $4$ of the denominator.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-forms
+  stem:
+    en: 'Match each integral ($a > 0$) with its value (constants of integration omitted).'
+  left:
+  - en: '$\int\frac{dx}{\sqrt{a^2 - x^2}}$'
+  - en: '$\int\frac{dx}{a^2 + x^2}$'
+  - en: '$\int\frac{dx}{\sqrt{x^2 - a^2}}$'
+  - en: '$\int\frac{dx}{a^2 - x^2}$'
+  right:
+  - en: '$\ln\left\lvert x + \sqrt{x^2 - a^2}\right\rvert$'
+  - en: '$\frac{1}{2a}\ln\left\lvert\frac{a + x}{a - x}\right\rvert$'
+  - en: '$\sin^{-1}\frac{x}{a}$'
+  - en: '$\frac{1}{a}\tan^{-1}\frac{x}{a}$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-1, B-4, C-3, D-2'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $\frac{d}{dx}\sin^{-1}\frac{x}{a} = \frac{1}{\sqrt{a^2 - x^2}}$, so A-3.
+      - B: $\frac{d}{dx}\frac1a\tan^{-1}\frac{x}{a} = \frac{1}{a^2 + x^2}$, so B-4.
+      - C: $\frac{d}{dx}\ln\left(x + \sqrt{x^2 - a^2}\right) = \frac{1}{\sqrt{x^2 - a^2}}$, so C-1.
+      - D: $\frac{1}{a^2 - x^2} = \frac{1}{2a}\left(\frac{1}{a - x} + \frac{1}{a + x}\right)$, so D-2.
+
+      The roots go with $\sin^{-1}$ and the logarithm of $x + \sqrt{\cdot}$; the rational forms go with $\tan^{-1}$ and the log of a quotient.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - half-angle
+  stem:
+    en: 'Match each integral with its value, where $t = \tan\frac{x}{2}$ (on an interval where both sides are defined; constants omitted).'
+  left:
+  - en: '$\int\frac{dx}{2 + \cos x}$'
+  - en: '$\int\frac{dx}{1 + 2\cos x}$'
+  - en: '$\int\frac{dx}{2 + 2\cos x}$'
+  - en: '$\int\frac{dx}{2 - 2\cos x}$'
+  right:
+  - en: '$\frac{1}{2}\tan\frac{x}{2}$'
+  - en: '$\frac{1}{\sqrt3}\ln\left\lvert\frac{\sqrt3 + t}{\sqrt3 - t}\right\rvert$'
+  - en: '$-\frac{1}{2}\cot\frac{x}{2}$'
+  - en: '$\frac{2}{\sqrt3}\tan^{-1}\frac{t}{\sqrt3}$'
+  options:
+  - en: 'A-4, B-2, C-1, D-3'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-4, B-1, C-2, D-3'
+  answer: 0
+  explanation:
+    en: |-
+      With $t = \tan\frac{x}{2}$, $\int\frac{dx}{a + b\cos x} = \int\frac{2\,dt}{(a + b) + (a - b)t^2}$.
+
+      - A ($a = 2 > b = 1$): $\int\frac{2\,dt}{3 + t^2} = \frac{2}{\sqrt3}\tan^{-1}\frac{t}{\sqrt3}$, so A-4.
+      - B ($a = 1 < b = 2$): $\int\frac{2\,dt}{3 - t^2} = \frac{1}{\sqrt3}\ln\left\lvert\frac{\sqrt3 + t}{\sqrt3 - t}\right\rvert$, so B-2.
+      - C ($a = b$): $2 + 2\cos x = 4\cos^2\frac{x}{2}$, giving $\frac12\tan\frac{x}{2}$, so C-1.
+      - D: $2 - 2\cos x = 4\sin^2\frac{x}{2}$, giving $\frac14\int\operatorname{cosec}^2\frac{x}{2}\,dx = -\frac12\cot\frac{x}{2}$, so D-3.
+
+      The first case to settle is which of $a, b$ is larger: $a > b$ gives $\tan^{-1}$, $a < b$ gives a logarithm.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - half-angle
+  assertion:
+    en: 'On $(-\pi, \pi)$, $\int\frac{dx}{2 + \cos x} = \frac{2}{\sqrt3}\tan^{-1}\left(\frac{1}{\sqrt3}\tan\frac{x}{2}\right) + C$.'
+  reason:
+    en: 'With $t = \tan\frac{x}{2}$, $\cos x = \frac{1 - t^2}{1 + t^2}$ and $dx = \frac{2\,dt}{1 + t^2}$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      By R,
+      $$\int\frac{dx}{2 + \cos x} = \int\frac{2\,dt}{2(1 + t^2) + (1 - t^2)} = \int\frac{2\,dt}{3 + t^2} = \frac{2}{\sqrt3}\tan^{-1}\frac{t}{\sqrt3} + C.$$
+      The interval $(-\pi, \pi)$ matters: $\tan\frac{x}{2}$ is undefined at $x = \pm\pi$, where this formula jumps.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - by-parts
+  assertion:
+    en: '$\int e^x(\sin x + \cos x)\,dx = e^x\sin x + C$.'
+  reason:
+    en: '$\int e^x\sin x\,dx = \frac{1}{2}e^x(\sin x - \cos x) + C$.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true, but R does not explain A.
+
+      A follows from $\int e^x(f + f')\,dx = e^x f$ with $f = \sin x$, $f' = \cos x$.
+
+      R is the recurring-integral formula $\int e^{ax}\sin bx\,dx = \frac{e^{ax}(a\sin bx - b\cos bx)}{a^2 + b^2}$ with $a = b = 1$. It is correct, but it is not the reason for A: A needs no recurring integral at all.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - partial-fractions
+  - standard-forms
+  assertion:
+    en: '$\int\frac{dx}{x^2 + 2x + 2} = \tan^{-1}(x + 1) + C$.'
+  reason:
+    en: '$x^2 + 2x + 2$ has two distinct real roots, so its reciprocal splits into partial fractions over $\R$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true and R is false.
+
+      A: $x^2 + 2x + 2 = (x + 1)^2 + 1$, so the integral is $\tan^{-1}(x + 1) + C$.
+
+      R: the discriminant is $4 - 8 = -4 < 0$, so the quadratic is **irreducible** over $\R$. That is exactly why the answer is a $\tan^{-1}$ and not a logarithm.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - half-angle
+  assertion:
+    en: '$\int\frac{dx}{1 + \cos x} = \frac{1}{2}\tan\frac{x}{2} + C$.'
+  reason:
+    en: '$1 + \cos x = 2\cos^2\frac{x}{2}$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false and R is true.
+
+      By R,
+      $$\int\frac{dx}{1 + \cos x} = \frac12\int\sec^2\frac{x}{2}\,dx = \frac12\cdot 2\tan\frac{x}{2} + C = \tan\frac{x}{2} + C.$$
+      A forgets the factor $2$ from integrating $\sec^2\frac{x}{2}$ (the chain rule in reverse). This is the case $a = b = 1$ of $\frac1a\tan\frac{x}{2}$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - by-parts
+  - partial-fractions
+  assertion:
+    en: '$\int\frac{x e^x}{(x + 1)^2}\,dx = \frac{e^x}{x + 1} + C$.'
+  reason:
+    en: '$\int e^x\left(f(x) + f''(x)\right)dx = e^x f(x) + C$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      Split the rational factor:
+      $$\frac{x}{(x + 1)^2} = \frac{(x + 1) - 1}{(x + 1)^2} = \frac{1}{x + 1} - \frac{1}{(x + 1)^2} = f + f', \qquad f = \frac{1}{x + 1}.$$
+      By R the integral is $\frac{e^x}{x + 1} + C$. R itself holds because $\frac{d}{dx}(e^x f) = e^x(f + f')$.
+  status: ai-generated

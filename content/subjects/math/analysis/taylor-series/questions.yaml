@@ -1,0 +1,641 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - taylor-theorem
+  stem:
+    en: 'Let $f^{(n)}$ be continuous on $[a, a + h]$ and $f^{(n+1)}$ exist on $(a, a + h)$. In $f(a + h) = \sum_{k=0}^{n}\frac{h^k}{k!}f^{(k)}(a) + R_{n+1}$, the Lagrange form of $R_{n+1}$ is ($0 < \theta < 1$)'
+  options:
+  - en: '$\dfrac{h^{n+1}}{n!}f^{(n+1)}(a + \theta h)$'
+  - en: '$\dfrac{h^{n+1}}{(n+1)!}f^{(n+1)}(a + \theta h)$'
+  - en: '$\dfrac{h^{n+1}(1 - \theta)^n}{(n+1)!}f^{(n+1)}(a + \theta h)$'
+  - en: '$\dfrac{h^{n+1}}{(n+1)!}f^{(n+1)}(\theta h)$'
+  answer: 1
+  explanation:
+    en: |-
+      The Lagrange remainder looks like the next term of the series, evaluated at an intermediate point:
+      $$R_{n+1} = \frac{h^{n+1}}{(n+1)!}f^{(n+1)}(a + \theta h).$$
+      The factor $(1 - \theta)^n$ belongs to the Cauchy form, which has $n!$ (not $(n+1)!$) in the denominator. Writing $f^{(n+1)}(\theta h)$ forgets that the intermediate point lies between $a$ and $a + h$.
+      Check with $n = 0$: you must get Lagrange's MVT, $f(a + h) = f(a) + hf'(a + \theta h)$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'For $a > 0$, the coefficient of $x^n$ in the Maclaurin series of $a^x$ is'
+  options:
+  - en: '$\dfrac{(\ln a)^n}{n!}$'
+  - en: '$\dfrac{a^n}{n!}$'
+  - en: '$(\ln a)^n$'
+  - en: '$\dfrac{(\ln a)^{n-1}}{n!}$'
+  answer: 0
+  explanation:
+    en: |-
+      $a^x = e^{x\ln a}$, so
+      $$a^x = \sum_{n=0}^{\infty}\frac{(x\ln a)^n}{n!}, \qquad c_n = \frac{(\ln a)^n}{n!}.$$
+      $\frac{a^n}{n!}$ treats $a^x$ like $e^{ax}$. Check with $a = e$: the coefficient must reduce to $\frac{1}{n!}$, which only the first option does.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'The largest set of real $x$ on which the Maclaurin series of $\log(1 + x)$ converges to $\log(1 + x)$ is'
+  options:
+  - en: '$-1 \le x \le 1$'
+  - en: '$-1 < x < 1$'
+  - en: '$-1 \le x < 1$'
+  - en: '$-1 < x \le 1$'
+  answer: 3
+  explanation:
+    en: |-
+      For $\lvert x\rvert < 1$ the remainder tends to $0$ (Lagrange form on $[0, 1)$, Cauchy form on $(-1, 0)$). At $x = 1$ the Lagrange remainder satisfies $\lvert R_{n+1}\rvert \le \frac{1}{n + 1} \to 0$, giving
+      $$\log 2 = 1 - \tfrac12 + \tfrac13 - \cdots.$$
+      At $x = -1$ the series is $-(1 + \frac12 + \frac13 + \cdots)$, which diverges, and $\log 0$ is undefined. So the set is $(-1, 1]$.
+      $[-1, 1)$ is the range for $-\log(1 - x)$, the mirror series.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'Up to the term in $x^3$, the Maclaurin expansion of $e^x\sin x$ is'
+  options:
+  - en: '$x + x^2 + \dfrac{x^3}{6}$'
+  - en: '$x + x^2 - \dfrac{x^3}{3}$'
+  - en: '$x - x^2 + \dfrac{x^3}{3}$'
+  - en: '$x + x^2 + \dfrac{x^3}{3}$'
+  answer: 3
+  explanation:
+    en: |-
+      Multiply the series and keep powers up to $x^3$:
+      $$\left(1 + x + \tfrac{x^2}{2} + \tfrac{x^3}{6}\right)\left(x - \tfrac{x^3}{6}\right) = x + x^2 + \left(\tfrac12 - \tfrac16\right)x^3 + \cdots = x + x^2 + \tfrac{x^3}{3} + \cdots$$
+      $\frac{x^3}{6}$ forgets the $-\frac{x^3}{6}$ from $\sin x$, or the $\frac{x^2}{2}\cdot x$ product. Check: $f'(0) = 1$ and $f''(0) = 2$, so $c_2 = 1$, ruling out $-x^2$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - non-analytic
+  stem:
+    en: 'Let $f(x) = e^{-1/x^2}$ for $x \ne 0$ and $f(0) = 0$. The Maclaurin series of $f$ is'
+  options:
+  - en: '$1 - x^2 + \dfrac{x^4}{2!} - \cdots$'
+  - en: 'identically $0$, since $f^{(n)}(0) = 0$ for every $n$'
+  - en: 'not defined, since $f''(0)$ does not exist'
+  - en: '$\displaystyle\sum_{n=0}^{\infty}\frac{(-1)^n}{n!\,x^{2n}}$'
+  answer: 1
+  explanation:
+    en: |-
+      Each derivative for $x \ne 0$ is $P_n(1/x)e^{-1/x^2}$, and $t^k e^{-t^2} \to 0$ as $\lvert t\rvert \to \infty$. So every difference quotient at $0$ tends to $0$, and $f^{(n)}(0) = 0$ for all $n$. The Maclaurin series is $0 + 0x + 0x^2 + \cdots$.
+      $1 - x^2 + \frac{x^4}{2!} - \cdots$ is the series of $e^{-x^2}$, a different function. The last option is the series of $e^{-1/x^2}$ in powers of $1/x$, not a Maclaurin series.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'In the Maclaurin series of $\cos x$, the coefficient of $x^6$ is'
+  options:
+  - en: '$\dfrac{1}{720}$'
+  - en: '$-\dfrac{1}{120}$'
+  - en: '$\dfrac{1}{24}$'
+  - en: '$-\dfrac{1}{720}$'
+  answer: 3
+  explanation:
+    en: |-
+      $\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots$, and the signs alternate starting with $+1$. So the coefficient of $x^6$ is
+      $$-\frac{1}{6!} = -\frac{1}{720}.$$
+      $+\frac{1}{720}$ is the sign slip; $\frac{1}{24}$ is the $x^4$ coefficient.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'Which of these functions is represented by its Maclaurin series for every real $x$?'
+  options:
+  - en: '$\cos x$'
+  - en: '$\log(1 + x)$'
+  - en: '$\tan^{-1}x$'
+  - en: '$(1 + x)^{1/2}$'
+  answer: 0
+  explanation:
+    en: |-
+      All derivatives of $\cos x$ are bounded by $1$, so the Lagrange remainder satisfies
+      $$\lvert R_{n+1}\rvert \le \frac{\lvert x\rvert^{n+1}}{(n+1)!} \to 0 \quad\text{for every } x.$$
+      The others are valid only on bounded sets: $\log(1 + x)$ on $(-1, 1]$, $\tan^{-1}x$ on $[-1, 1]$ and $(1 + x)^{1/2}$ on $[-1, 1]$. ($\tan^{-1}x$ is defined for all $x$, but its series diverges for $\lvert x\rvert > 1$.)
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'In the Maclaurin series of $\sqrt{1 + x}$, the coefficient of $x^3$ is'
+  options:
+  - en: '$\dfrac{1}{16}$'
+  - en: '$-\dfrac{1}{16}$'
+  - en: '$\dfrac18$'
+  - en: '$\dfrac{3}{16}$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\binom{1/2}{3} = \frac{\frac12\left(-\frac12\right)\left(-\frac32\right)}{3!} = \frac{3/8}{6} = \frac{1}{16}.$$
+      Two negative factors make it positive, so $-\frac{1}{16}$ is a sign slip. $\frac18$ is the size of the $x^2$ coefficient ($-\frac18$). $\frac{3}{16}$ forgets to divide by $3!$ correctly.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'Up to the term in $x^3$, the Maclaurin expansion of $\log(1 + \sin x)$ is'
+  options:
+  - en: '$x - \dfrac{x^2}{2} + \dfrac{x^3}{6}$'
+  - en: '$x - \dfrac{x^2}{2} + \dfrac{x^3}{3}$'
+  - en: '$x - \dfrac{x^2}{2} - \dfrac{x^3}{6}$'
+  - en: '$x + \dfrac{x^2}{2} + \dfrac{x^3}{6}$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $s = \sin x = x - \frac{x^3}{6} + \cdots$ into $\log(1 + s) = s - \frac{s^2}{2} + \frac{s^3}{3} - \cdots$:
+      $$\left(x - \tfrac{x^3}{6}\right) - \frac{x^2}{2} + \frac{x^3}{3} + \cdots = x - \frac{x^2}{2} + \frac{x^3}{6} + \cdots$$
+      $\frac{x^3}{3}$ copies $\log(1 + x)$ and forgets the $-\frac{x^3}{6}$ from $\sin x$; $-\frac{x^3}{6}$ forgets the $\frac{s^3}{3}$ term.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - taylor-theorem
+  stem:
+    en: 'For $f(x) = (1 - x)^{5/2}$, Taylor''s theorem with Lagrange remainder gives $f(1) = f(0) + f''(0) + \frac{1}{2!}f''''(\theta)$ with $0 < \theta < 1$. Then $\theta$ equals'
+  options:
+  - en: '$\dfrac{16}{25}$'
+  - en: '$\dfrac{1}{3}$'
+  - en: '$\dfrac{9}{25}$'
+  - en: '$\dfrac{4}{5}$'
+  answer: 2
+  explanation:
+    en: |-
+      $f(0) = 1$, $f(1) = 0$, $f'(x) = -\frac52(1 - x)^{3/2}$ and $f''(x) = \frac{15}{4}(1 - x)^{1/2}$. So
+      $$0 = 1 - \frac52 + \frac12\cdot\frac{15}{4}\sqrt{1 - \theta} \;\Rightarrow\; \sqrt{1 - \theta} = \frac45 \;\Rightarrow\; \theta = 1 - \frac{16}{25} = \frac{9}{25}.$$
+      $\frac{16}{25}$ is $1 - \theta$, and $\frac45$ is $\sqrt{1 - \theta}$. $\frac13$ is only the limiting value of $\theta$ as $h \to 0$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'If $f(x) = x^2e^x$, then $f^{(10)}(0)$ equals'
+  options:
+  - en: '$90$'
+  - en: '$45$'
+  - en: '$720$'
+  - en: '$\dfrac{1}{8!}$'
+  answer: 0
+  explanation:
+    en: |-
+      $f(x) = \sum_{k \ge 0}\frac{x^{k+2}}{k!}$, so the coefficient of $x^{10}$ is $c_{10} = \frac{1}{8!}$. Then
+      $$f^{(10)}(0) = 10!\,c_{10} = \frac{10!}{8!} = 90.$$
+      $\frac{1}{8!}$ is the coefficient, not the derivative. $45 = \binom{10}{2}$ forgets the factor $2$ from $(x^2)''$ in Leibniz's rule: $\binom{10}{2}\cdot 2 = 90$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'If $f(x) = \tan^{-1}x$, then $f^{(5)}(0)$ equals'
+  options:
+  - en: '$-24$'
+  - en: '$\dfrac15$'
+  - en: '$24$'
+  - en: '$120$'
+  answer: 2
+  explanation:
+    en: |-
+      $\tan^{-1}x = x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots$, so $c_5 = +\frac15$ and
+      $$f^{(5)}(0) = 5!\cdot\frac15 = 24.$$
+      $\frac15$ is the coefficient itself. $-24$ takes the sign of the $x^3$ term; the $x^5$ term is positive.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - error-estimates
+  stem:
+    en: 'Using the Lagrange remainder with $e^{\theta} < 3$, the smallest $n$ for which $\sum_{k=0}^{n}\frac{1}{k!}$ is guaranteed to approximate $e$ with error less than $10^{-3}$ is'
+  options:
+  - en: '$n = 5$'
+  - en: '$n = 6$'
+  - en: '$n = 7$'
+  - en: '$n = 4$'
+  answer: 1
+  explanation:
+    en: |-
+      $e - \sum_{k=0}^{n}\frac{1}{k!} = \frac{e^\theta}{(n+1)!} < \frac{3}{(n+1)!}$. We need
+      $$\frac{3}{(n+1)!} < 10^{-3} \iff (n+1)! > 3000.$$
+      $6! = 720$ fails and $7! = 5040$ works, so $n + 1 = 7$ and $n = 6$ (seven terms, sum $2.71806$, true error $0.00023$).
+      $n = 5$ gives a true error of $0.0016$, too large. $n = 7$ wrongly solves $n! > 3000$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'Up to the term in $x^5$, the Maclaurin expansion of $\tan x$ is'
+  options:
+  - en: '$x + \dfrac{x^3}{3} + \dfrac{x^5}{5}$'
+  - en: '$x + \dfrac{x^3}{3} + \dfrac{2x^5}{15}$'
+  - en: '$x - \dfrac{x^3}{3} + \dfrac{2x^5}{15}$'
+  - en: '$x + \dfrac{x^3}{6} + \dfrac{x^5}{120}$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide $\sin x$ by $\cos x$: write $\tan x = x + a x^3 + b x^5$ and match $\sin x = \tan x\cos x$:
+      $$x^3:\ a - \tfrac12 = -\tfrac16 \Rightarrow a = \tfrac13, \qquad x^5:\ b - \tfrac{a}{2} + \tfrac{1}{24} = \tfrac{1}{120} \Rightarrow b = \tfrac{2}{15}.$$
+      $x - \frac{x^3}{3} + \cdots$ is the start of $\tan^{-1}x$; $\frac{x^5}{5}$ guesses the arctan pattern with a plus sign. The last option is the series of $\sinh x$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - error-estimates
+  stem:
+    en: '$\sin x$ is approximated by $x - \frac{x^3}{6}$. Using the Lagrange remainder after the $x^4$ term (whose coefficient is $0$), the error bound at $x = 0.1$ is about'
+  options:
+  - en: '$4.2 \times 10^{-6}$'
+  - en: '$8.3 \times 10^{-8}$'
+  - en: '$1.7 \times 10^{-4}$'
+  - en: '$2.0 \times 10^{-11}$'
+  answer: 1
+  explanation:
+    en: |-
+      The degree-4 Taylor polynomial of $\sin x$ is $x - \frac{x^3}{6}$, and
+      $$R_5 = \frac{x^5}{5!}\cos\theta x, \qquad \lvert R_5\rvert \le \frac{(0.1)^5}{120} \approx 8.3 \times 10^{-8}.$$
+      $4.2 \times 10^{-6} = \frac{(0.1)^4}{24}$ is the weaker bound from stopping after the $x^3$ term. $1.7 \times 10^{-4} = \frac{(0.1)^3}{6}$ is the last kept term, and $2.0 \times 10^{-11} = \frac{(0.1)^7}{5040}$ skips a term.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'The coefficient of $x^n$ in the Maclaurin series of $\dfrac{e^x}{1 - x}$ ($\lvert x\rvert < 1$) is'
+  options:
+  - en: '$\dfrac{1}{n!}$'
+  - en: '$\displaystyle\sum_{k=0}^{n-1}\frac{1}{k!}$'
+  - en: '$\displaystyle\sum_{k=0}^{n}\frac{1}{k!}$'
+  - en: '$\dfrac{n + 1}{n!}$'
+  answer: 2
+  explanation:
+    en: |-
+      Multiply $e^x = \sum \frac{x^k}{k!}$ by $\frac{1}{1 - x} = \sum x^j$. The term $x^n$ arises from $x^k\cdot x^{n-k}$ for $k = 0, \dots, n$, so
+      $$c_n = \sum_{k=0}^{n}\frac{1}{k!}.$$
+      Check $n = 1$: $\frac{e^x}{1 - x} = (1 + x + \cdots)(1 + x + \cdots) = 1 + 2x + \cdots$, and $\frac{1}{0!} + \frac{1}{1!} = 2$. The sum to $n - 1$ gives $1$; $\frac{n + 1}{n!}$ gives $2$ here but $\frac32 \ne \frac52$ at $n = 2$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - limits-by-series
+  stem:
+    en: '$\displaystyle\lim_{x \to 0}\left(\frac{1}{x^2} - \frac{1}{\sin^2 x}\right)$ equals'
+  options:
+  - en: '$\dfrac13$'
+  - en: '$-\dfrac13$'
+  - en: '$0$'
+  - en: '$-\dfrac16$'
+  answer: 1
+  explanation:
+    en: |-
+      $\sin^2 x = x^2 - \frac{x^4}{3} + \cdots$, so
+      $$\frac{1}{\sin^2x} = \frac{1}{x^2}\left(1 - \frac{x^2}{3} + \cdots\right)^{-1} = \frac{1}{x^2} + \frac13 + \cdots$$
+      Hence the limit is $-\frac13$. $+\frac13$ is the sign slip (it is $\lim\left(\frac{1}{\sin^2x} - \frac{1}{x^2}\right)$). $-\frac16$ uses $\sin x$ instead of $\sin^2x$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - limits-by-series
+  stem:
+    en: '$\displaystyle\lim_{x \to 0}\frac{e - (1 + x)^{1/x}}{x}$ equals'
+  options:
+  - en: '$\dfrac{e}{2}$'
+  - en: '$-\dfrac{e}{2}$'
+  - en: '$e$'
+  - en: '$\dfrac12$'
+  answer: 0
+  explanation:
+    en: |-
+      $\frac{\log(1 + x)}{x} = 1 - \frac{x}{2} + \frac{x^2}{3} - \cdots$, so
+      $$(1 + x)^{1/x} = e\cdot e^{-x/2 + \cdots} = e\left(1 - \frac{x}{2} + \cdots\right), \qquad e - (1 + x)^{1/x} = \frac{e}{2}x + \cdots$$
+      The limit is $\frac{e}{2}$. $-\frac{e}{2}$ is $\lim\frac{(1 + x)^{1/x} - e}{x}$; $\frac12$ forgets the factor $e$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - expansion-by-series
+  stem:
+    en: 'In the Maclaurin series of $e^{\sin x}$, the coefficient of $x^4$ is'
+  options:
+  - en: '$-\dfrac18$'
+  - en: '$\dfrac{1}{24}$'
+  - en: '$0$'
+  - en: '$\dfrac18$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $s = \sin x = x - \frac{x^3}{6} + \cdots$ into $e^s = 1 + s + \frac{s^2}{2} + \frac{s^3}{6} + \frac{s^4}{24} + \cdots$ and collect $x^4$:
+      $$\frac{s^2}{2}:\ \frac12\cdot 2\cdot x\cdot\left(-\frac{x^3}{6}\right) = -\frac{x^4}{6}, \qquad \frac{s^4}{24}:\ \frac{x^4}{24}.$$
+      Total: $-\frac16 + \frac1{24} = -\frac{3}{24} = -\frac18$. ($s$ and $\frac{s^3}{6}$ have no $x^4$ term.)
+      $\frac{1}{24}$ keeps only $\frac{s^4}{24}$, as if $\sin x = x$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - taylor-theorem
+  stem:
+    en: 'Let $f''''''$ be continuous near $a$ with $f''''''(a) \ne 0$, and $f(a + h) = f(a) + hf''(a) + \frac{h^2}{2}f''''(a + \theta h)$, $0 < \theta < 1$. As $h \to 0$, $\theta$ tends to'
+  options:
+  - en: '$\dfrac12$'
+  - en: '$\dfrac16$'
+  - en: '$\dfrac23$'
+  - en: '$\dfrac13$'
+  answer: 3
+  explanation:
+    en: |-
+      Expand both sides one step further. The left side is $f(a) + hf'(a) + \frac{h^2}{2}f''(a) + \frac{h^3}{6}f'''(a + \theta_1 h)$; the right side, by the MVT on $f''$, is $f(a) + hf'(a) + \frac{h^2}{2}\left(f''(a) + \theta h f'''(a + \theta_2\theta h)\right)$. Comparing,
+      $$\frac{h^3}{6}f'''(a + \theta_1 h) = \frac{\theta h^3}{2}f'''(a + \theta_2\theta h) \;\Rightarrow\; \theta \to \frac{1}{3}.$$
+      Check with $f = x^3$, $a = 0$: $h^3 = \frac{h^2}{2}\cdot 6\theta h$ gives $\theta = \frac13$ exactly. $\frac12$ is the limit for Lagrange's MVT (one term fewer).
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'The largest set of real $x$ on which the binomial series of $(1 + x)^{-1/2}$ converges to $(1 + x)^{-1/2}$ is'
+  options:
+  - en: '$-1 \le x \le 1$'
+  - en: '$-1 < x < 1$'
+  - en: '$-1 \le x < 1$'
+  - en: '$-1 < x \le 1$'
+  answer: 3
+  explanation:
+    en: |-
+      For $\lvert x\rvert < 1$ it converges to the function (Cauchy remainder). At the endpoints, with $m = -\frac12 \in (-1, 0)$:
+      - $x = 1$: the series $1 - \frac12 + \frac38 - \frac{5}{16} + \cdots$ alternates with terms decreasing to $0$, so it converges (conditionally), and by Abel's theorem the sum is $2^{-1/2}$.
+      - $x = -1$: all terms are positive, $\binom{-1/2}{n}(-1)^n = \frac{(2n)!}{4^n(n!)^2} \sim \frac{1}{\sqrt{\pi n}}$, so it diverges (and $(1 + x)^{-1/2}$ is undefined).
+
+      So the set is $(-1, 1]$. $(-1, 1)$ forgets the conditional convergence at $x = 1$, which happens exactly when $-1 < m < 0$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: 'Consider the following statements about Maclaurin series ($\log$ is the natural logarithm):'
+  statements:
+  - en: 'The series of $\log(1 + x)$ converges to $\log(1 + x)$ for every $x$ with $-1 < x \le 1$.'
+  - en: 'The series of $\tan^{-1}x$ converges to $\tan^{-1}x$ only for $-1 < x < 1$.'
+  - en: 'The series $1 - x + x^2 - x^3 + \cdots$ of $(1 + x)^{-1}$ converges at $x = 1$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 1 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      - **1 is true:** Lagrange remainder on $[0, 1]$, Cauchy remainder on $(-1, 0)$.
+      - **2 is false:** at $x = \pm 1$ the arctan series is alternating with terms decreasing to $0$, so it converges, and the sum is $\pm\frac{\pi}{4}$. The range is $[-1, 1]$.
+      - **3 is false:** at $x = 1$ the series is $1 - 1 + 1 - \cdots$, whose partial sums oscillate between $1$ and $0$.
+
+      So only statement 1 is correct.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - taylor-theorem
+  stem:
+    en: 'Let $f^{(n)}$ be continuous on $[a, a + h]$ and $f^{(n+1)}$ exist on $(a, a + h)$, and let $R_{n+1}$ be the remainder after the term in $h^n$ in Taylor''s theorem. Consider the following statements:'
+  statements:
+  - en: 'The number $\theta$ in the remainder can be taken in the open interval $(0, 1)$.'
+  - en: 'The Cauchy form is $R_{n+1} = \dfrac{h^{n+1}(1 - \theta)^n}{n!}f^{(n+1)}(a + \theta h)$.'
+  - en: 'For given $f$, $a$, $h$ and $n$, the $\theta$ of the Lagrange form and the $\theta$ of the Cauchy form are always equal.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      - **1 is true:** Rolle's theorem gives a point strictly inside $(a, a + h)$, i.e. $\theta \in (0, 1)$.
+      - **2 is true:** this is the Schlömilch–Roche form with $p = 1$.
+      - **3 is false:** take $f(x) = x^3$, $a = 0$, $n = 1$. Lagrange: $h^3 = \frac{h^2}{2}\cdot 6\theta h$ gives $\theta = \frac13$. Cauchy: $h^3 = h^2(1 - \theta)\cdot 6\theta h$ gives $\theta(1 - \theta) = \frac16$, so $\theta = \frac{3 \pm \sqrt3}{6}$, neither of which is $\frac13$.
+
+      So 1 and 2 only.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-expansions
+  stem:
+    en: Match each function in List I with the largest set on which its Maclaurin series converges to it (List II).
+  left:
+  - en: '$e^x$'
+  - en: '$\log(1 + x)$'
+  - en: '$\tan^{-1}x$'
+  - en: '$(1 + x)^{-1}$'
+  right:
+  - en: '$-1 < x \le 1$'
+  - en: '$-1 < x < 1$'
+  - en: 'all real $x$'
+  - en: '$-1 \le x \le 1$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-3, B-1, C-4, D-2'
+  - en: 'A-4, B-1, C-3, D-2'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $e^x$, Lagrange remainder $\frac{x^{n+1}e^{\theta x}}{(n+1)!} \to 0$ for every $x$: **3**.
+      - B: $\log(1 + x)$ converges at $x = 1$ (to $\log 2$) but not at $x = -1$: **1**.
+      - C: $\tan^{-1}x$ converges at both $x = \pm1$ (Leibniz test): **4**.
+      - D: $(1 + x)^{-1} = 1 - x + x^2 - \cdots$, a geometric series, needs $\lvert x\rvert < 1$: **2**.
+
+      So A-3, B-1, C-4, D-2. Swapping B and C is the usual slip.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limits-by-series
+  stem:
+    en: 'Match each limit in List I (as $x \to 0$) with its value in List II.'
+  left:
+  - en: '$\dfrac{x - \sin x}{x^3}$'
+  - en: '$\dfrac{e^x - 1 - x}{x^2}$'
+  - en: '$\dfrac{\tan x - x}{x^3}$'
+  - en: '$\dfrac{\cos x - 1 + \frac{x^2}{2}}{x^4}$'
+  right:
+  - en: '$\dfrac12$'
+  - en: '$\dfrac{1}{24}$'
+  - en: '$\dfrac16$'
+  - en: '$\dfrac13$'
+  options:
+  - en: 'A-4, B-1, C-3, D-2'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-3, C-4, D-2'
+  - en: 'A-3, B-1, C-4, D-2'
+  answer: 3
+  explanation:
+    en: |-
+      Expand each numerator to its first surviving term:
+      - A: $x - \sin x = \frac{x^3}{6} - \cdots$: **3** ($\frac16$).
+      - B: $e^x - 1 - x = \frac{x^2}{2} + \cdots$: **1** ($\frac12$).
+      - C: $\tan x - x = \frac{x^3}{3} + \cdots$: **4** ($\frac13$).
+      - D: $\cos x - 1 + \frac{x^2}{2} = \frac{x^4}{24} - \cdots$: **2** ($\frac{1}{24}$).
+
+      So A-3, B-1, C-4, D-2. Swapping A and C confuses $\sin x$ ($-\frac{x^3}{6}$) with $\tan x$ ($+\frac{x^3}{3}$).
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - maclaurin-theorem
+  - standard-expansions
+  assertion:
+    en: '$1 - \frac12 + \frac13 - \frac14 + \cdots = \log 2$.'
+  reason:
+    en: 'For $0 \le x \le 1$, the Lagrange remainder of $\log(1 + x)$ after the term in $x^n$ satisfies $\lvert R_{n+1}\rvert \le \frac{1}{n + 1}$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** $R_{n+1} = \frac{(-1)^n}{n + 1}\left(\frac{x}{1 + \theta x}\right)^{n+1}$, and for $0 \le x \le 1$ the bracket lies in $[0, 1]$.
+
+      **A is true, and R explains it:** at $x = 1$, R gives $R_{n+1} \to 0$, so the partial sums of $1 - \frac12 + \frac13 - \cdots$ converge to $\log(1 + 1) = \log 2$. (The Leibniz test alone shows convergence, but not that the sum is $\log 2$; R gives both.)
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - non-analytic
+  assertion:
+    en: 'Let $f(x) = e^{-1/x^2}$ for $x \ne 0$ and $f(0) = 0$. The Maclaurin series of $f$ converges for every real $x$, but its sum equals $f(x)$ only at $x = 0$.'
+  reason:
+    en: '$f$ is not infinitely differentiable at $x = 0$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** $f^{(n)}(0) = 0$ for every $n$, so the Maclaurin series is identically $0$. It converges everywhere to $0$, while $f(x) > 0$ for $x \ne 0$.
+
+      **R is false:** $f$ is infinitely differentiable on $\R$, including at $0$, where every derivative equals $0$. That is exactly why the series exists and is $0$. The function is $C^\infty$ but not analytic.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - maclaurin-theorem
+  - non-analytic
+  assertion:
+    en: 'Every function that is infinitely differentiable on $\R$ equals the sum of its Maclaurin series on some neighbourhood of $0$.'
+  reason:
+    en: 'The Maclaurin series of $f$ converges to $f(x)$ if and only if the remainder $R_n(x)$ in Maclaurin''s theorem tends to $0$ as $n \to \infty$.'
+  answer: 3
+  explanation:
+    en: |-
+      **A is false:** $f(x) = e^{-1/x^2}$ ($f(0) = 0$) is $C^\infty$ with Maclaurin series $\equiv 0$, yet $f(x) > 0$ for every $x \ne 0$, so they differ on every neighbourhood of $0$.
+
+      **R is true:** $f(x) - S_n(x) = R_{n+1}(x)$ by Maclaurin's theorem, so $S_n(x) \to f(x)$ exactly when $R_n(x) \to 0$. For $e^{-1/x^2}$, $R_n(x) = f(x)$ for all $n$, which does not tend to $0$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-expansions
+  assertion:
+    en: 'The Maclaurin series of $\tan^{-1}x$ converges at $x = 1$.'
+  reason:
+    en: 'The series $1 - x^2 + x^4 - x^6 + \cdots$ converges at $x = 1$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** at $x = 1$ the series is $1 - \frac13 + \frac15 - \cdots$, alternating with terms decreasing to $0$, so it converges by the Leibniz test (to $\frac{\pi}{4}$).
+
+      **R is false:** at $x = 1$ it becomes $1 - 1 + 1 - \cdots$, whose partial sums oscillate between $1$ and $0$.
+
+      The trap: integrating a power series term by term can gain convergence at an endpoint, so the arctan series converges at $x = 1$ even though the series of $\frac{1}{1 + x^2}$ does not.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-expansions
+  - maclaurin-theorem
+  assertion:
+    en: 'The binomial series of $(1 + x)^{1/2}$ converges at $x = -1$.'
+  reason:
+    en: 'For $\lvert x\rvert < 1$, the Cauchy form of the remainder of $(1 + x)^{m}$ tends to $0$ as $n \to \infty$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** at $x = -1$ the series is $1 - \frac12 - \frac18 - \frac{1}{16} - \cdots$. After the first term all terms are negative, and $\lvert\binom{1/2}{n}\rvert \sim \frac{1}{2\sqrt{\pi}\,n^{3/2}}$, so it converges absolutely (to $0 = \sqrt{1 - 1}$). In general the series converges at $x = -1$ exactly when $m \ge 0$.
+
+      **R is true:** this is how the binomial expansion is proved on $(-1, 1)$.
+
+      **But R does not explain A:** R is a statement about $\lvert x\rvert < 1$ and says nothing at the endpoint $x = -1$, which needs a separate comparison with $\sum n^{-3/2}$.
+  status: ai-generated

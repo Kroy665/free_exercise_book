@@ -1,0 +1,709 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - convergence
+  stem:
+    en: 'If $\sum a_n$ is a convergent series of positive terms, then necessarily'
+  options:
+  - en: '$n a_n \to 0$'
+  - en: '$a_n \to 0$'
+  - en: '$\lim \dfrac{a_{n+1}}{a_n} < 1$'
+  - en: '$(a_n)$ is decreasing'
+  answer: 1
+  explanation:
+    en: |-
+      Since $a_n = s_n - s_{n-1}$ and both partial sums tend to the same limit $s$:
+      $$a_n = s_n - s_{n-1} \to s - s = 0.$$
+
+      The others are not forced:
+      - $n a_n \to 0$ needs $(a_n)$ **decreasing** (Abel–Pringsheim). Without it, take $a_n = \frac1n$ at perfect squares and $\frac{1}{n^2}$ elsewhere.
+      - For $\sum\frac{1}{n^2}$ the ratio tends to $1$, not to a number below $1$.
+      - A convergent series can have non-monotone terms, e.g. $\frac{1}{n^2}$ and $\frac{1}{2n^2}$ alternately.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - p-series
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if and only if'
+  options:
+  - en: '$p > 1$'
+  - en: '$p \ge 1$'
+  - en: '$p > 0$'
+  - en: '$p < 1$'
+  answer: 0
+  explanation:
+    en: |-
+      Condensation: $\sum 2^k\cdot\frac{1}{2^{kp}} = \sum\left(2^{1-p}\right)^k$ is geometric with ratio $2^{1-p}$. It converges iff $2^{1-p} < 1$, i.e. $p > 1$.
+
+      The boundary $p = 1$ is the harmonic series, which **diverges**, so "$p \ge 1$" is wrong. For $0 < p \le 1$ the terms tend to $0$ but the series still diverges.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - p-series
+  - exam-tips
+  stem:
+    en: 'The sum $\displaystyle\sum_{n=1}^{\infty}\left(\frac23\right)^n$ equals'
+  options:
+  - en: '$3$'
+  - en: '$\dfrac23$'
+  - en: '$2$'
+  - en: '$\dfrac13$'
+  answer: 2
+  explanation:
+    en: |-
+      A geometric series starting at $n = 1$:
+      $$\sum_{n=1}^{\infty} r^n = \frac{r}{1 - r} = \frac{2/3}{1/3} = 2.$$
+
+      $3 = \frac{1}{1 - r}$ is the sum from $n = 0$; it counts the extra term $1$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - convergence
+  stem:
+    en: 'The sum $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n(n + 1)}$ equals'
+  options:
+  - en: '$\dfrac12$'
+  - en: '$2$'
+  - en: the series diverges
+  - en: '$1$'
+  answer: 3
+  explanation:
+    en: |-
+      Partial fractions: $\frac{1}{n(n + 1)} = \frac1n - \frac{1}{n + 1}$. The series telescopes:
+      $$s_n = 1 - \frac{1}{n + 1} \to 1.$$
+
+      $\frac12$ is just the first term. The series cannot diverge: its terms behave like $\frac{1}{n^2}$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  stem:
+    en: 'For $a_n = \dfrac{n!}{n^n}$, the value of $\displaystyle\lim_{n\to\infty}\frac{a_{n+1}}{a_n}$ is'
+  options:
+  - en: '$e$'
+  - en: '$\dfrac1e$'
+  - en: '$1$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      $$\frac{a_{n+1}}{a_n} = \frac{(n + 1)!}{(n + 1)^{n+1}}\cdot\frac{n^n}{n!} = \frac{n^n}{(n + 1)^n} = \frac{1}{\left(1 + \frac1n\right)^n} \to \frac1e.$$
+
+      Since $\frac1e < 1$, $\sum\frac{n!}{n^n}$ converges by D'Alembert's test.
+
+      $e$ is the reciprocal ratio $\frac{a_n}{a_{n+1}}$; $1$ comes from cancelling $\frac{(n + 1)!}{n!}$ against only one factor $n + 1$ and forgetting the $n$th power.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  stem:
+    en: 'For $a_n = \left(1 + \dfrac1n\right)^{-n^2}$, the value of $\displaystyle\lim_{n\to\infty} a_n^{1/n}$ is'
+  options:
+  - en: '$\dfrac1e$'
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$0$'
+  answer: 0
+  explanation:
+    en: |-
+      $$a_n^{1/n} = \left(1 + \frac1n\right)^{-n} \to \frac1e.$$
+
+      Since $\frac1e < 1$, $\sum\left(1 + \frac1n\right)^{-n^2}$ converges by Cauchy's root test.
+
+      $1$ is the limit of $1 + \frac1n$ alone (forgetting the exponent $n$ that remains); $e$ drops the minus sign.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  stem:
+    en: 'For $x > 0$, the series $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n}$ converges if and only if'
+  options:
+  - en: '$0 < x < 1$'
+  - en: '$0 < x \le 1$'
+  - en: '$x > 1$'
+  - en: '$x > 0$'
+  answer: 0
+  explanation:
+    en: |-
+      Ratio test:
+      $$\frac{a_{n+1}}{a_n} = \frac{n}{n + 1}\,x \to x.$$
+      So it converges for $x < 1$ and diverges for $x > 1$.
+
+      At $x = 1$ the test is silent, and the series is $\sum\frac1n$, which **diverges**. So the answer is $0 < x < 1$. "$0 < x \le 1$" is the trap: it wrongly includes the harmonic series at $x = 1$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - p-series
+  - abel-pringsheim
+  stem:
+    en: 'The series $\displaystyle\sum_{n=2}^{\infty}\frac{1}{n\ln n}$'
+  options:
+  - en: 'converges, by comparison with $\sum\frac{1}{n^2}$'
+  - en: 'diverges, by Cauchy''s condensation test'
+  - en: 'converges, since $n a_n \to 0$'
+  - en: 'converges, by the ratio test'
+  answer: 1
+  explanation:
+    en: |-
+      The terms are positive and decreasing. Condense:
+      $$2^k a_{2^k} = \frac{2^k}{2^k\,k\ln 2} = \frac{1}{\ln 2}\cdot\frac1k,$$
+      a multiple of the harmonic series. So the series **diverges**.
+
+      - $n a_n = \frac{1}{\ln n} \to 0$ is true but is only a **necessary** condition (Abel–Pringsheim); it does not give convergence.
+      - $\frac{1}{n\ln n} \le \frac{1}{n^2}$ is false for large $n$.
+      - The ratio tends to $1$, so the ratio test decides nothing.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - comparison
+  stem:
+    en: Which of the following series converges?
+  options:
+  - en: '$\displaystyle\sum\left(\sqrt{n + 1} - \sqrt n\right)$'
+  - en: '$\displaystyle\sum\frac{1}{\sqrt{n(n + 1)}}$'
+  - en: '$\displaystyle\sum\sin\frac1n$'
+  - en: '$\displaystyle\sum\frac{\sqrt{n + 1} - \sqrt n}{n}$'
+  answer: 3
+  explanation:
+    en: |-
+      Rationalise: $\sqrt{n + 1} - \sqrt n = \dfrac{1}{\sqrt{n + 1} + \sqrt n}$. So
+      $$\frac{\sqrt{n + 1} - \sqrt n}{n} = \frac{1}{n(\sqrt{n + 1} + \sqrt n)}, \qquad n^{3/2}a_n \to \frac12.$$
+      By limit comparison with $\sum n^{-3/2}$ ($p = \frac32 > 1$) it converges.
+
+      - $\sum\left(\sqrt{n + 1} - \sqrt n\right)$ telescopes to $\sqrt{n + 1} - 1 \to \infty$.
+      - $\frac{1}{\sqrt{n(n + 1)}} \sim \frac1n$: diverges.
+      - $\sin\frac1n \sim \frac1n$: diverges.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - convergence
+  - exam-tips
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\left(1 + \frac1n\right)^{-n}$'
+  options:
+  - en: 'diverges, since its terms tend to $\dfrac1e \ne 0$'
+  - en: 'converges, by the root test'
+  - en: 'converges, since its terms are decreasing'
+  - en: 'converges, by the ratio test'
+  answer: 0
+  explanation:
+    en: |-
+      $$a_n = \frac{1}{\left(1 + \frac1n\right)^n} \to \frac1e \ne 0.$$
+      A convergent series must have $a_n \to 0$, so this one **diverges**.
+
+      The root and ratio limits both equal $1$, so those tests decide nothing. Decreasing terms are not enough either: they decrease to $\frac1e$, not to $0$. (Compare $\sum(1 + \frac1n)^{-n^2}$, which does converge.)
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  stem:
+    en: 'For $a > 0$, the series $\displaystyle\sum_{n=1}^{\infty}\frac{a^n\,n!}{n^n}$ converges if and only if'
+  options:
+  - en: '$0 < a \le e$'
+  - en: '$0 < a < 1$'
+  - en: '$0 < a < \dfrac1e$'
+  - en: '$0 < a < e$'
+  answer: 3
+  explanation:
+    en: |-
+      Ratio test:
+      $$\frac{a_{n+1}}{a_n} = \frac{a}{\left(1 + \frac1n\right)^n} \to \frac ae.$$
+      It converges for $a < e$ and diverges for $a > e$.
+
+      End point $a = e$: $\frac{a_{n+1}}{a_n} = \frac{e}{(1 + 1/n)^n} > 1$, because $(1 + \frac1n)^n < e$ for every $n$. So the terms **increase** and cannot tend to $0$: it diverges. (Stirling: $a_n \sim \sqrt{2\pi n}$.)
+
+      So the answer is $0 < a < e$. "$0 < a < \frac1e$" inverts the ratio.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - raabe-gauss
+  stem:
+    en: 'For $a_n = \dfrac{1\cdot 3\cdot 5\cdots(2n - 1)}{2\cdot 4\cdot 6\cdots(2n)}$, the value of $\displaystyle\lim_{n\to\infty} n\left(\frac{a_n}{a_{n+1}} - 1\right)$ is'
+  options:
+  - en: '$1$'
+  - en: '$2$'
+  - en: '$\dfrac12$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      $a_{n+1} = a_n\cdot\dfrac{2n + 1}{2n + 2}$, so
+      $$\frac{a_n}{a_{n+1}} - 1 = \frac{2n + 2}{2n + 1} - 1 = \frac{1}{2n + 1}, \qquad n\left(\frac{a_n}{a_{n+1}} - 1\right) = \frac{n}{2n + 1} \to \frac12.$$
+
+      Since $\frac12 < 1$, Raabe's test gives **divergence** of $\sum a_n$ (indeed $a_n \sim \frac{1}{\sqrt{\pi n}}$).
+
+      $0$ is $\lim\left(\frac{a_n}{a_{n+1}} - 1\right)$ without the factor $n$, which is why the ratio test fails here.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-examples
+  - raabe-gauss
+  stem:
+    en: 'For $x > 0$, the series $\displaystyle\sum_{n=1}^{\infty}\frac{(n!)^2}{(2n)!}\,x^n$ converges if and only if'
+  options:
+  - en: '$0 < x < 4$'
+  - en: '$0 < x \le 4$'
+  - en: '$0 < x < 2$'
+  - en: '$0 < x < \dfrac14$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\frac{a_{n+1}}{a_n} = \frac{(n + 1)^2}{(2n + 1)(2n + 2)}\,x \to \frac x4.$$
+      So it converges for $x < 4$ and diverges for $x > 4$.
+
+      At $x = 4$:
+      $$\frac{a_{n+1}}{a_n} = \frac{4(n + 1)^2}{(2n + 1)(2n + 2)} = \frac{2n + 2}{2n + 1} > 1,$$
+      so the terms increase (they behave like $\sqrt{\pi n}$) and the series diverges. Hence $0 < x < 4$.
+
+      $\frac14$ comes from inverting the ratio; $2$ from taking $\frac{(n + 1)^2}{2n + 2}$ and missing the factor $2n + 1$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - raabe-gauss
+  - standard-examples
+  stem:
+    en: 'For $x > 0$, the series $\displaystyle\sum_{n=1}^{\infty}\frac{n^n x^n}{n!}$ converges if and only if'
+  options:
+  - en: '$0 < x \le \dfrac1e$'
+  - en: '$0 < x < \dfrac1e$'
+  - en: '$0 < x < e$'
+  - en: '$0 < x < 1$'
+  answer: 1
+  explanation:
+    en: |-
+      $$\frac{a_n}{a_{n+1}} = \frac{1}{x\left(1 + \frac1n\right)^n} \to \frac{1}{ex}.$$
+      It converges for $x < \frac1e$, diverges for $x > \frac1e$.
+
+      At $x = \frac1e$ use the logarithmic test:
+      $$n\ln\frac{a_n}{a_{n+1}} = n\left[1 - n\ln\left(1 + \tfrac1n\right)\right] = n\left[\frac{1}{2n} - \frac{1}{3n^2} + \cdots\right] \to \frac12 < 1,$$
+      so it **diverges**. (Stirling: $a_n \sim \frac{1}{\sqrt{2\pi n}}$, like $n^{-1/2}$.) Hence $0 < x < \frac1e$; the closed end point is the trap.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - raabe-gauss
+  stem:
+    en: 'Let $a_n = \dfrac{1\cdot 3\cdots(2n - 1)}{2\cdot 4\cdots(2n)}$ and $p > 0$. The series $\displaystyle\sum_{n=1}^{\infty} a_n^{\,p}$ converges if and only if'
+  options:
+  - en: '$p \ge 2$'
+  - en: '$p > 1$'
+  - en: '$p > 2$'
+  - en: '$p > \dfrac12$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\frac{a_n^p}{a_{n+1}^p} = \left(\frac{2n + 2}{2n + 1}\right)^p = \left(1 + \frac{1}{2n + 1}\right)^p = 1 + \frac{p/2}{n} + O\!\left(\frac{1}{n^2}\right).$$
+      In Gauss's test $\lambda = 1$ and $\mu = \frac p2$. It converges iff $\mu > 1$, i.e. $p > 2$; for $\mu \le 1$ it diverges.
+
+      At $p = 2$ Raabe's limit is exactly $1$ (no decision), but Gauss gives **divergence** ($a_n^2 \sim \frac{1}{\pi n}$). So "$p \ge 2$" is wrong; "$p > 1$" treats $a_n$ as if it were $\frac1n$ rather than $\frac{1}{\sqrt{\pi n}}$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - convergence
+  stem:
+    en: 'Cauchy''s criterion states that a series $\sum a_n$ converges if and only if, for every $\varepsilon > 0$, there is an $N$ such that'
+  options:
+  - en: '$\lvert a_n\rvert < \varepsilon$ for all $n \ge N$'
+  - en: '$\lvert a_{n+1} + \cdots + a_{2n}\rvert < \varepsilon$ for all $n \ge N$'
+  - en: '$\lvert a_{n+1} - a_n\rvert < \varepsilon$ for all $n \ge N$'
+  - en: '$\lvert a_{n+1} + a_{n+2} + \cdots + a_m\rvert < \varepsilon$ for all $m > n \ge N$'
+  answer: 3
+  explanation:
+    en: |-
+      The criterion is Cauchy's principle for the partial sums: $\lvert s_m - s_n\rvert = \lvert a_{n+1} + \cdots + a_m\rvert < \varepsilon$ for **all** $m > n \ge N$.
+
+      The others are necessary but not sufficient:
+      - $a_n \to 0$ holds for $\sum\frac1n$, which diverges.
+      - $s_{2n} - s_n \to 0$ holds for $\sum\frac{1}{n\ln n}$, which diverges.
+      - $a_{n+1} - a_n \to 0$ holds even for $a_n = 1$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - abel-pringsheim
+  stem:
+    en: 'Let $(a_n)$ be a decreasing sequence of positive terms such that $\sum a_n$ converges. Which of the following must hold?'
+  options:
+  - en: '$n a_n \to 0$'
+  - en: '$n^2 a_n \to 0$'
+  - en: '$\displaystyle\lim\frac{a_{n+1}}{a_n} < 1$'
+  - en: '$\sum n a_n$ converges'
+  answer: 0
+  explanation:
+    en: |-
+      This is the **Abel–Pringsheim test**: positive, decreasing and convergent force $n a_n \to 0$.
+
+      Counterexamples for the others, all with $a_n = n^{-p}$:
+      - $p = \frac32$: $n^2 a_n = \sqrt n \to \infty$.
+      - $p = 2$: the ratio tends to $1$.
+      - $p = 2$: $\sum n a_n = \sum\frac1n$ diverges.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - abel-pringsheim
+  stem:
+    en: 'The integral test for $\displaystyle\sum_{n=2}^{\infty}\frac{1}{n(\ln n)^2}$ uses $\displaystyle\int_2^{\infty}\frac{dx}{x(\ln x)^2}$ (here $\ln$ is the natural logarithm). Its value is'
+  options:
+  - en: '$\ln 2$'
+  - en: '$\infty$'
+  - en: '$\dfrac{1}{(\ln 2)^2}$'
+  - en: '$\dfrac{1}{\ln 2}$'
+  answer: 3
+  explanation:
+    en: |-
+      Put $u = \ln x$, $du = \frac{dx}{x}$:
+      $$\int_2^{\infty}\frac{dx}{x(\ln x)^2} = \int_{\ln 2}^{\infty}\frac{du}{u^2} = \left[-\frac1u\right]_{\ln 2}^{\infty} = \frac{1}{\ln 2}.$$
+      The integral is finite, so the series converges ($f$ is positive, continuous and decreasing on $[2, \infty)$).
+
+      $\infty$ is the answer for $\frac{1}{x\ln x}$ (power $1$ on the logarithm).
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ratio-root
+  stem:
+    en: 'Consider $\displaystyle\sum_{n=1}^{\infty} 2^{(-1)^n - n}$. Which statement is correct?'
+  options:
+  - en: The ratio test gives convergence
+  - en: 'The ratio test is inconclusive, but the root test gives convergence'
+  - en: Both the ratio and root tests are inconclusive
+  - en: The root test gives divergence
+  answer: 1
+  explanation:
+    en: |-
+      Ratio: for even $n$, $\frac{a_{n+1}}{a_n} = 2^{-1-(n+1)-1+n} = 2^{-3} = \frac18$; for odd $n$, $\frac{a_{n+1}}{a_n} = 2^{1-(n+1)+1+n} = 2$. The ratio oscillates between $\frac18$ and $2$, with $\liminf < 1 < \limsup$: no decision.
+
+      Root:
+      $$a_n^{1/n} = 2^{(-1)^n/n - 1} \to \frac12 < 1,$$
+      so the series converges. (Directly: $a_n \le 2\cdot 2^{-n}$.)
+
+      This is the standard example showing the root test is strictly stronger.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - comparison
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\left(n^{1/n} - 1\right)$'
+  options:
+  - en: 'converges, since $n^{1/n} - 1 \to 0$'
+  - en: 'converges, by the root test'
+  - en: 'diverges, by comparison with $\sum\frac{\ln n}{n}$'
+  - en: 'converges, by comparison with $\sum\frac{1}{n^2}$'
+  answer: 2
+  explanation:
+    en: |-
+      Write $n^{1/n} - 1 = e^{(\ln n)/n} - 1$. Since $e^t - 1 \ge t$:
+      $$n^{1/n} - 1 \ge \frac{\ln n}{n} \ge \frac1n \quad (n \ge 3).$$
+      So the series **diverges** by comparison with the harmonic series.
+
+      - $a_n \to 0$ is only necessary.
+      - $a_n^{1/n} \to 1$, so the root test decides nothing.
+      - $n^2 a_n \sim n\ln n \to \infty$, so $a_n$ is not $O(1/n^2)$.
+  status: ai-generated
+- id: q0021
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - convergence
+  - exam-tips
+  stem:
+    en: 'Consider the following statements about series of positive terms:'
+  statements:
+  - en: 'If $a_n \to 0$, then $\sum a_n$ converges.'
+  - en: '$\sum\frac1n$ diverges.'
+  - en: 'If $\sum a_n$ converges, then $\sum a_n^2$ converges.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      1. False: $\frac1n \to 0$ but $\sum\frac1n$ diverges.
+      2. True: $s_{2n} - s_n \ge \frac12$ for all $n$, so Cauchy's criterion fails.
+      3. True: $a_n \to 0$, so $0 < a_n < 1$ eventually and then $a_n^2 \le a_n$. Compare.
+
+      So 2 and 3 only.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ratio-root
+  stem:
+    en: 'Consider the following statements for sequences of positive terms $(a_n)$:'
+  statements:
+  - en: 'If $\lim\frac{a_{n+1}}{a_n} = 1$, then $\sum a_n$ may converge or may diverge.'
+  - en: 'If $\lim\frac{a_{n+1}}{a_n} = l$ exists, then $\lim a_n^{1/n} = l$.'
+  - en: 'If $\lim a_n^{1/n}$ exists, then $\lim\frac{a_{n+1}}{a_n}$ exists.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      1. True: $\frac1n$ diverges and $\frac{1}{n^2}$ converges; both have ratio limit $1$.
+      2. True: Cauchy's second limit theorem, from $\liminf\frac{a_{n+1}}{a_n} \le \liminf a_n^{1/n} \le \limsup a_n^{1/n} \le \limsup\frac{a_{n+1}}{a_n}$.
+      3. False: for $a_n = 2^{(-1)^n - n}$, $a_n^{1/n} \to \frac12$, but the ratio alternates between $\frac18$ and $2$.
+
+      So 1 and 2 only. This is why the root test is the stronger one.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - p-series
+  - abel-pringsheim
+  stem:
+    en: 'Consider the following statements (all sums from $n = 2$; $\ln$ is the natural logarithm):'
+  statements:
+  - en: '$\sum\frac{1}{(\ln n)^2}$ diverges.'
+  - en: '$\sum\frac{1}{n^{3/2}}$ converges.'
+  - en: '$\sum\frac{1}{n(\ln n)^2}$ converges.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  - en: 2 only
+  answer: 1
+  explanation:
+    en: |-
+      1. True: $(\ln n)^2 < n$ for large $n$, so $\frac{1}{(\ln n)^2} > \frac1n$ eventually. Compare with the harmonic series.
+      2. True: a p-series with $p = \frac32 > 1$.
+      3. True: condensation gives $\frac{1}{(\ln 2)^2}\sum\frac{1}{k^2}$, which converges (or the integral $\int_2^\infty\frac{dx}{x(\ln x)^2} = \frac{1}{\ln 2}$).
+
+      All three are correct. Statement 1 is the usual slip: any power of $\ln n$ grows slower than $n$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  stem:
+    en: 'Match each series in List I with $\displaystyle\lim_{n\to\infty} a_n^{1/n}$ in List II.'
+  left:
+  - en: '$\displaystyle\sum\frac{n^2}{2^n}$'
+  - en: '$\displaystyle\sum\left(\frac{n}{n + 1}\right)^{n^2}$'
+  - en: '$\displaystyle\sum\frac{3^n}{n^3}$'
+  - en: '$\displaystyle\sum\frac{1}{n^5}$'
+  right:
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$\dfrac12$'
+  - en: '$\dfrac1e$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      Use $n^{k/n} \to 1$ for fixed $k$.
+      - A: $\frac{(n^{1/n})^2}{2} \to \frac12$ (converges).
+      - B: $\left(\frac{n}{n + 1}\right)^n = \left(1 + \frac1n\right)^{-n} \to \frac1e$ (converges).
+      - C: $\frac{3}{(n^{1/n})^3} \to 3$ (diverges).
+      - D: $(n^{1/n})^{-5} \to 1$ (root test silent; the p-test gives convergence).
+
+      So A-3, B-4, C-2, D-1.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - p-series
+  - convergence
+  - standard-examples
+  stem:
+    en: Match each series in List I with its sum in List II.
+  left:
+  - en: '$\displaystyle\sum_{n=0}^{\infty}\frac{1}{2^n}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n(n + 1)}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2}$'
+  - en: '$\displaystyle\sum_{n=0}^{\infty}\frac{1}{n!}$'
+  right:
+  - en: '$e$'
+  - en: '$2$'
+  - en: '$\dfrac{\pi^2}{6}$'
+  - en: '$1$'
+  options:
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-1, B-4, C-3, D-2'
+  - en: 'A-2, B-4, C-3, D-1'
+  answer: 3
+  explanation:
+    en: |-
+      - A: geometric from $n = 0$: $\frac{1}{1 - 1/2} = 2$.
+      - B: telescoping, $1 - \frac{1}{n + 1} \to 1$.
+      - C: Euler's sum $\frac{\pi^2}{6}$.
+      - D: $e = \sum_{n\ge0}\frac{1}{n!}$.
+
+      So A-2, B-4, C-3, D-1. Starting A at $n = 1$ would give $1$, the usual slip.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - convergence
+  assertion:
+    en: 'The harmonic series $\sum\frac1n$ diverges.'
+  reason:
+    en: 'For every $n$, $\dfrac{1}{n + 1} + \dfrac{1}{n + 2} + \cdots + \dfrac{1}{2n} \ge \dfrac12$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true. R: each of the $n$ terms is at least $\frac{1}{2n}$, so the block is at least $\frac12$.
+
+      So $s_{2n} - s_n \ge \frac12$ for every $n$, and Cauchy's criterion fails with $\varepsilon = \frac12$. R explains A.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - exam-tips
+  assertion:
+    en: '$\displaystyle\sum\frac{n!}{n^n}$ converges.'
+  reason:
+    en: 'If $a_n > 0$ and $\dfrac{a_{n+1}}{a_n} < 1$ for every $n$, then $\sum a_n$ converges.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $\frac{a_{n+1}}{a_n} = \left(1 + \frac1n\right)^{-n} \to \frac1e < 1$, so the ratio test gives convergence.
+
+      R is false: for $a_n = \frac1n$, $\frac{a_{n+1}}{a_n} = \frac{n}{n + 1} < 1$ for every $n$, yet $\sum\frac1n$ diverges. The ratio test needs the limit (or limsup) to be **less than 1**, not each ratio.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - abel-pringsheim
+  - p-series
+  assertion:
+    en: '$\displaystyle\sum_{n=2}^{\infty}\frac{1}{n\ln n}$ converges.'
+  reason:
+    en: 'For $a_n = \dfrac{1}{n\ln n}$, $\displaystyle\lim_{n\to\infty} n a_n = 0$.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false: condensation gives $\frac{1}{\ln 2}\sum\frac1k$, which diverges. (Also $\int_2^\infty\frac{dx}{x\ln x} = \infty$.)
+
+      R is true: $n a_n = \frac{1}{\ln n} \to 0$. But $n a_n \to 0$ is only the **necessary** condition of Abel–Pringsheim; this series shows the converse fails.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  - standard-examples
+  assertion:
+    en: '$\displaystyle\sum\left(1 + \frac1n\right)^{-n^2}$ converges.'
+  reason:
+    en: 'For $a_n = \left(1 + \dfrac1n\right)^{-n^2}$, $\displaystyle\lim a_n^{1/n} = \frac1e < 1$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true. R: $a_n^{1/n} = \left(1 + \frac1n\right)^{-n} \to \frac1e$.
+
+      Since this limit is less than $1$, Cauchy's root test gives A. R explains A.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - comparison
+  - exam-tips
+  assertion:
+    en: '$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{1 + 1/n}}$ diverges.'
+  reason:
+    en: 'For every $n \ge 1$, the exponent $1 + \dfrac1n$ is greater than $1$.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $\dfrac{a_n}{1/n} = n^{-1/n} \to 1$, so by limit comparison it behaves like $\sum\frac1n$ and diverges.
+
+      R is true but does not explain A; if anything it suggests convergence. The p-test needs a **fixed** exponent $p > 1$, and here the exponent tends to $1$.
+  status: ai-generated

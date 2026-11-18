@@ -74,6 +74,12 @@ python3 -I tools/content-check/validate.py content
 - Fix **every ERR line that mentions your topic folder**. Ignore errors in other topic folders: those belong to agents still working.
 - Your topic's line must show 30 questions and an answer spread close to even.
 
+## Calculus and analysis topics
+- **Graphs.** Use ```plot where a picture teaches something: a function and its tangent, a discontinuity, an asymptote, the area under a curve (`shade:`), the terms of a sequence (`point:`), a curve and its envelope.
+- **Checks.** Verify limits with `sp.limit`, sums with `sp.summation`, integrals with `sp.integrate`, plus a numeric `sp.N` cross-check. Verify convergence claims by the test the explanation uses, or by a known closed form.
+- **Convention-sensitive keys.** Avoid keys that depend on convention: for example, whether $0 \in \mathbb{N}$, whether "increasing" means strict, or $\log$ vs $\ln$. Where unavoidable, state the convention in the stem.
+- **Hypotheses.** Be exact about them: closed vs open intervals, differentiable vs continuous, absolutely vs conditionally convergent, $f$ bounded, and so on.
+
 ## Accuracy rules
 - **Only standard, textbook-verifiable mathematics.** Theorem statements must have the right hypotheses (continuity on a closed interval, monic polynomials, field vs ring, and so on).
 - Where books differ in convention, state the convention and keep questions convention-safe. Examples: whether a principal argument range is $(-\pi,\pi]$; whether log means ln; whether "rank" is defined via minors.

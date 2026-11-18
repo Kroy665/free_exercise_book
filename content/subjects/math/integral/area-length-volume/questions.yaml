@@ -1,0 +1,631 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - cartesian-area
+  stem:
+    en: 'The area of the region bounded by $y = x$ and $y = x^2$ is'
+  options:
+  - en: '$\tfrac13$'
+  - en: '$\tfrac12$'
+  - en: '$\tfrac16$'
+  - en: '$\tfrac56$'
+  answer: 2
+  explanation:
+    en: |-
+      The curves meet where $x = x^2$, i.e. at $x = 0$ and $x = 1$, and $x \ge x^2$ on $[0, 1]$. So
+      $$A = \int_0^1 (x - x^2)\,dx = \frac12 - \frac13 = \frac16.$$
+      $\frac13$ is only the area under $y = x^2$; $\frac56$ adds the two areas instead of subtracting.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'The area enclosed by the ellipse $\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1$ is'
+  options:
+  - en: '$12\pi$'
+  - en: '$3\pi$'
+  - en: '$6\pi$'
+  - en: '$36\pi$'
+  answer: 2
+  explanation:
+    en: |-
+      With $x = 3\cos t$, $y = 2\sin t$,
+      $$A = \int_0^{2\pi} x\,\dot y\,dt = \int_0^{2\pi} 6\cos^2 t\,dt = 6\pi = \pi ab, \quad a = 3,\ b = 2.$$
+      $36\pi$ uses $a^2 b^2$ in place of $ab$ (with $a = 3$, $b = 2$, $\pi a^2b^2 = 36\pi$); $12\pi$ doubles the true value.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'The area enclosed by the cardioid $r = a(1 + \cos\theta)$ is'
+  options:
+  - en: '$\dfrac{3\pi a^2}{2}$'
+  - en: '$\dfrac{3\pi a^2}{4}$'
+  - en: '$\pi a^2$'
+  - en: '$3\pi a^2$'
+  answer: 0
+  explanation:
+    en: |-
+      By symmetry about the initial line,
+      $$A = 2\cdot\frac12\int_0^\pi a^2(1 + \cos\theta)^2\,d\theta = a^2\left(\pi + 0 + \frac{\pi}{2}\right) = \frac{3\pi a^2}{2}.$$
+      $3\pi a^2$ forgets the factor $\frac12$ in $\frac12\int r^2\,d\theta$; $\frac{3\pi a^2}{4}$ integrates only over $[0, \pi]$ without doubling.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - volume-revolution
+  stem:
+    en: 'The region under $y = \sqrt{x}$, $0 \le x \le 4$, is revolved about the $x$-axis. The volume generated is'
+  options:
+  - en: '$16\pi$'
+  - en: '$4\pi$'
+  - en: '$8\pi$'
+  - en: '$\dfrac{16\pi}{3}$'
+  answer: 2
+  explanation:
+    en: |-
+      Disc method:
+      $$V = \pi\int_0^4 y^2\,dx = \pi\int_0^4 x\,dx = \pi\cdot\frac{16}{2} = 8\pi.$$
+      $16\pi$ forgets the $\frac12$ from $\int x\,dx$; $\frac{16\pi}{3}$ is $\pi\int_0^4\sqrt x\,dx$, i.e. it uses $y$ instead of $y^2$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'The length of the arc of $y = \tfrac23 x^{3/2}$ from $x = 0$ to $x = 3$ is'
+  options:
+  - en: '$\dfrac{16}{3}$'
+  - en: '$\dfrac{14}{3}$'
+  - en: '$2\sqrt3$'
+  - en: '$\dfrac73$'
+  answer: 1
+  explanation:
+    en: |-
+      $y' = x^{1/2}$, so $1 + y'^2 = 1 + x$ and
+      $$s = \int_0^3 \sqrt{1 + x}\,dx = \frac23\left[(1 + x)^{3/2}\right]_0^3 = \frac23(8 - 1) = \frac{14}{3}.$$
+      $\frac{16}{3}$ forgets to subtract the lower limit value $1$; $\frac73$ uses $\frac13$ in place of $\frac23$ when integrating $(1 + x)^{1/2}$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'The whole perimeter of the astroid $x^{2/3} + y^{2/3} = a^{2/3}$ is'
+  options:
+  - en: '$8a$'
+  - en: '$4a$'
+  - en: '$\dfrac{3\pi a}{2}$'
+  - en: '$6a$'
+  answer: 3
+  explanation:
+    en: |-
+      With $x = a\cos^3 t$, $y = a\sin^3 t$: $\dot x^2 + \dot y^2 = 9a^2\sin^2 t\cos^2 t$, so in the first quadrant
+      $$s_1 = \int_0^{\pi/2} 3a\sin t\cos t\,dt = \frac{3a}{2},$$
+      and the perimeter is $4\cdot\frac{3a}{2} = 6a$.
+      $8a$ is the cardioid / cycloid-arch value. Integrating $3a\sin t\cos t$ over $[0, 2\pi]$ without absolute values gives $0$: the pieces cancel.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - double-integrals
+  stem:
+    en: '$\displaystyle\int_0^1\!\int_0^2 xy\,dy\,dx$ equals'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$\tfrac12$'
+  - en: '$4$'
+  answer: 1
+  explanation:
+    en: |-
+      The integrand is a product and the region a rectangle, so it splits:
+      $$\int_0^1 x\,dx\cdot\int_0^2 y\,dy = \frac12\cdot 2 = 1.$$
+      $2$ forgets the $\frac12$ in $\int_0^1 x\,dx$; $4$ forgets both halves.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cartesian-area
+  stem:
+    en: 'The area enclosed between the parabolas $y^2 = 4ax$ and $x^2 = 4ay$ ($a > 0$) is'
+  options:
+  - en: '$\dfrac{8a^2}{3}$'
+  - en: '$\dfrac{32a^2}{3}$'
+  - en: '$\dfrac{4a^2}{3}$'
+  - en: '$\dfrac{16a^2}{3}$'
+  answer: 3
+  explanation:
+    en: |-
+      They meet at $(0, 0)$ and $(4a, 4a)$; the upper curve is $y = 2\sqrt{ax}$:
+      $$A = \int_0^{4a}\left(2\sqrt a\,x^{1/2} - \frac{x^2}{4a}\right)dx = \frac{32a^2}{3} - \frac{16a^2}{3} = \frac{16a^2}{3}.$$
+      $\frac{32a^2}{3}$ is only the area under the upper parabola. Check: for $a = \frac14$ this is the standard $\frac13$ between $y^2 = x$ and $x^2 = y$, and $\frac{16}{3}\cdot\frac{1}{16} = \frac13$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'The area of one loop of $r = a\cos 2\theta$ is'
+  options:
+  - en: '$\dfrac{\pi a^2}{4}$'
+  - en: '$\dfrac{\pi a^2}{2}$'
+  - en: '$\dfrac{\pi a^2}{16}$'
+  - en: '$\dfrac{\pi a^2}{8}$'
+  answer: 3
+  explanation:
+    en: |-
+      The loop on the initial line runs between the zeros $\theta = \pm\frac{\pi}{4}$:
+      $$A = \frac12\int_{-\pi/4}^{\pi/4} a^2\cos^2 2\theta\,d\theta = \frac{a^2}{2}\cdot\frac{\pi}{4} = \frac{\pi a^2}{8}.$$
+      $\frac{\pi a^2}{2}$ is the total of all **four** loops; $\frac{\pi a^2}{4}$ forgets the factor $\frac12$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'The area enclosed by the astroid $x = a\cos^3 t$, $y = a\sin^3 t$ is'
+  options:
+  - en: '$\dfrac{3\pi a^2}{4}$'
+  - en: '$\dfrac{3\pi a^2}{8}$'
+  - en: '$\dfrac{3\pi a^2}{16}$'
+  - en: '$\dfrac{\pi a^2}{8}$'
+  answer: 1
+  explanation:
+    en: |-
+      Four times the first-quadrant area:
+      $$A = 4\int_0^a y\,dx = 4\int_{\pi/2}^{0} a\sin^3 t\cdot(-3a\cos^2 t\sin t)\,dt = 12a^2\int_0^{\pi/2}\sin^4 t\cos^2 t\,dt = 12a^2\cdot\frac{\pi}{32} = \frac{3\pi a^2}{8}.$$
+      $\frac{3\pi a^2}{16}$ uses a wrong Wallis value ($\frac{\pi}{64}$); $\frac{3\pi a^2}{4}$ doubles the answer.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'The area between one arch of the cycloid $x = a(t - \sin t)$, $y = a(1 - \cos t)$ and its base is'
+  options:
+  - en: '$2\pi a^2$'
+  - en: '$3\pi a^2$'
+  - en: '$4\pi a^2$'
+  - en: '$\pi a^2$'
+  answer: 1
+  explanation:
+    en: |-
+      $$A = \int_0^{2\pi} y\,\dot x\,dt = a^2\int_0^{2\pi}(1 - \cos t)^2\,dt = a^2(2\pi + \pi) = 3\pi a^2.$$
+      This is three times the area of the rolling circle. $2\pi a^2$ drops the $\int\cos^2 t\,dt = \pi$ term.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'The length of one arch of the cycloid $x = a(t - \sin t)$, $y = a(1 - \cos t)$, $0 \le t \le 2\pi$, is'
+  options:
+  - en: '$4a$'
+  - en: '$8a$'
+  - en: '$6a$'
+  - en: '$2\pi a$'
+  answer: 1
+  explanation:
+    en: |-
+      $\dot x^2 + \dot y^2 = a^2\left[(1 - \cos t)^2 + \sin^2 t\right] = 2a^2(1 - \cos t) = 4a^2\sin^2\frac t2$. On $[0, 2\pi]$, $\sin\frac t2 \ge 0$, so
+      $$s = \int_0^{2\pi} 2a\sin\frac t2\,dt = \left[-4a\cos\frac t2\right]_0^{2\pi} = 8a.$$
+      $4a$ is half an arch; $2\pi a$ is the base length, not the arc.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'The whole length of the cardioid $r = a(1 + \cos\theta)$ is'
+  options:
+  - en: '$4a$'
+  - en: '$16a$'
+  - en: '$8a$'
+  - en: '$2\pi a$'
+  answer: 2
+  explanation:
+    en: |-
+      $r^2 + r'^2 = a^2(1 + \cos\theta)^2 + a^2\sin^2\theta = 2a^2(1 + \cos\theta) = 4a^2\cos^2\frac\theta2$. Use the upper half and double:
+      $$s = 2\int_0^\pi 2a\cos\frac\theta2\,d\theta = 2\cdot 4a = 8a.$$
+      $4a$ is only the upper half. Integrating $2a\cos\frac\theta2$ over $[0, 2\pi]$ without $\lvert\cdot\rvert$ gives $0$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'For the catenary $y = c\cosh\dfrac{x}{c}$, the length of the arc from the vertex $(0, c)$ to the point with abscissa $x > 0$ is'
+  options:
+  - en: '$c\cosh\dfrac xc$'
+  - en: '$c\left(\cosh\dfrac xc - 1\right)$'
+  - en: '$c\sinh\dfrac xc$'
+  - en: '$\sinh\dfrac xc$'
+  answer: 2
+  explanation:
+    en: |-
+      $y' = \sinh\frac xc$, so $1 + y'^2 = \cosh^2\frac xc$ and
+      $$s = \int_0^x \cosh\frac uc\,du = c\sinh\frac xc.$$
+      Hence $y^2 - s^2 = c^2$. $c\cosh\frac xc$ is the ordinate $y$, and $c(\cosh\frac xc - 1)$ is the rise $y - c$; $\sinh\frac xc$ drops the factor $c$ (wrong dimension).
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - volume-revolution
+  stem:
+    en: 'The ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ is revolved about the $x$-axis. The volume of the ellipsoid generated is'
+  options:
+  - en: '$\tfrac43\pi a^2 b$'
+  - en: '$\tfrac23\pi ab^2$'
+  - en: '$\tfrac43\pi a^3$'
+  - en: '$\tfrac43\pi ab^2$'
+  answer: 3
+  explanation:
+    en: |-
+      $$V = \pi\int_{-a}^{a} y^2\,dx = \pi b^2\int_{-a}^{a}\left(1 - \frac{x^2}{a^2}\right)dx = \pi b^2\cdot\frac{4a}{3} = \frac43\pi ab^2.$$
+      $\frac43\pi a^2 b$ is the volume about the $y$-axis. Check: $a = b$ gives the sphere $\frac43\pi a^3$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - volume-revolution
+  stem:
+    en: 'The region bounded by $y = x$ and $y = x^2$ is revolved about the $x$-axis. The volume generated is'
+  options:
+  - en: '$\dfrac{\pi}{30}$'
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{2\pi}{15}$'
+  answer: 3
+  explanation:
+    en: |-
+      Washers with outer radius $x$ and inner radius $x^2$ on $[0, 1]$:
+      $$V = \pi\int_0^1 (x^2 - x^4)\,dx = \pi\left(\frac13 - \frac15\right) = \frac{2\pi}{15}.$$
+      $\frac{\pi}{30} = \pi\int_0^1 (x - x^2)^2\,dx$ squares the difference instead of taking the difference of squares; $\frac{\pi}{6}$ is $\pi\times$ the plane area.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - surface-revolution
+  stem:
+    en: 'The arc of $x^2 + y^2 = 25$, $y \ge 0$, from $x = 0$ to $x = 3$ is revolved about the $x$-axis. The area of the surface generated is'
+  options:
+  - en: '$30\pi$'
+  - en: '$15\pi$'
+  - en: '$50\pi$'
+  - en: '$60\pi$'
+  answer: 0
+  explanation:
+    en: |-
+      For $y = \sqrt{25 - x^2}$, $y\sqrt{1 + y'^2} = \sqrt{25 - x^2}\cdot\frac{5}{\sqrt{25 - x^2}} = 5$, so
+      $$S = 2\pi\int_0^3 5\,dx = 30\pi = 2\pi a h, \quad a = 5,\ h = 3.$$
+      $50\pi$ is the hemisphere ($h = 5$); $15\pi$ forgets the $2$ in $2\pi\int y\,ds$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - double-integrals
+  stem:
+    en: '$\displaystyle\int_0^1\!\int_x^1 e^{y^2}\,dy\,dx$ equals'
+  options:
+  - en: '$\dfrac{e - 1}{2}$'
+  - en: '$e - 1$'
+  - en: '$\dfrac{e + 1}{2}$'
+  - en: '$\dfrac{e}{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      $\int e^{y^2}dy$ is not elementary, so reverse the order. The region $0 \le x \le 1$, $x \le y \le 1$ is $0 \le y \le 1$, $0 \le x \le y$:
+      $$\int_0^1\!\int_0^y e^{y^2}\,dx\,dy = \int_0^1 y\,e^{y^2}\,dy = \left[\frac{e^{y^2}}{2}\right]_0^1 = \frac{e - 1}{2}.$$
+      $e - 1$ forgets the $\frac12$; $\frac e2$ forgets the lower limit term $\frac12$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - double-integrals
+  stem:
+    en: 'If $D$ is the disc $x^2 + y^2 \le a^2$, then $\displaystyle\iint_D e^{-(x^2 + y^2)}\,dx\,dy$ equals'
+  options:
+  - en: '$\pi\left(1 - e^{-a^2}\right)$'
+  - en: '$2\pi\left(1 - e^{-a^2}\right)$'
+  - en: '$\pi\left(1 - e^{-a}\right)$'
+  - en: '$\pi a^2 e^{-a^2}$'
+  answer: 0
+  explanation:
+    en: |-
+      Polar substitution, $dx\,dy = r\,dr\,d\theta$:
+      $$\int_0^{2\pi}\!\int_0^a e^{-r^2}\,r\,dr\,d\theta = 2\pi\left[-\frac{e^{-r^2}}{2}\right]_0^a = \pi\left(1 - e^{-a^2}\right).$$
+      $2\pi(1 - e^{-a^2})$ forgets the $\frac12$ from $\int r e^{-r^2}dr$. As $a \to \infty$ the value tends to $\pi$, the square of the Gaussian integral.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - surface-revolution
+  stem:
+    en: 'The cardioid $r = a(1 + \cos\theta)$ is revolved about its axis (the initial line). The area of the surface generated is'
+  options:
+  - en: '$\dfrac{16\pi a^2}{5}$'
+  - en: '$\dfrac{32\pi a^2}{5}$'
+  - en: '$\dfrac{64\pi a^2}{5}$'
+  - en: '$\dfrac{32\pi a^2}{3}$'
+  answer: 1
+  explanation:
+    en: |-
+      Use the upper half, $0 \le \theta \le \pi$. With $r = 2a\cos^2\frac\theta2$: $ds = 2a\cos\frac\theta2\,d\theta$ and $y = r\sin\theta = 4a\cos^3\frac\theta2\sin\frac\theta2$. So
+      $$S = 2\pi\int_0^\pi 8a^2\cos^4\frac\theta2\sin\frac\theta2\,d\theta = 2\pi\cdot 16a^2\int_0^1 u^4\,du = \frac{32\pi a^2}{5} \quad \left(u = \cos\tfrac\theta2\right).$$
+      $\frac{64\pi a^2}{5}$ integrates over the whole curve, $[0, 2\pi]$, counting the surface twice; $\frac{16\pi a^2}{5}$ uses $\pi$ in place of $2\pi$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cartesian-area
+  stem:
+    en: 'The area of the loop of the curve $ay^2 = x^2(a - x)$, $a > 0$, is'
+  options:
+  - en: '$\dfrac{4a^2}{15}$'
+  - en: '$\dfrac{16a^2}{15}$'
+  - en: '$\dfrac{8a^2}{5}$'
+  - en: '$\dfrac{8a^2}{15}$'
+  answer: 3
+  explanation:
+    en: |-
+      The loop is $0 \le x \le a$, symmetric about the $x$-axis, with $y = \pm x\sqrt{1 - x/a}$. With $u = a - x$:
+      $$A = 2\int_0^a x\sqrt{1 - \frac xa}\,dx = \frac{2}{\sqrt a}\int_0^a (a - u)\,u^{1/2}\,du = \frac{2}{\sqrt a}\left(\frac{2a^{5/2}}{3} - \frac{2a^{5/2}}{5}\right) = \frac{8a^2}{15}.$$
+      $\frac{4a^2}{15}$ is only the half above the $x$-axis.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'Consider the following statements about areas of polar curves ($a > 0$):'
+  statements:
+  - en: 'The area of one loop of $r = a\cos 2\theta$ is $\dfrac{\pi a^2}{8}$.'
+  - en: 'The total area enclosed by all the loops of $r = a\sin 3\theta$ is $\dfrac{\pi a^2}{2}$.'
+  - en: 'The total area enclosed by both loops of the lemniscate $r^2 = a^2\cos 2\theta$ is $a^2$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 3 only
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      - **1 is true:** $\frac12\int_{-\pi/4}^{\pi/4} a^2\cos^2 2\theta\,d\theta = \frac{\pi a^2}{8}$.
+      - **2 is false:** one loop ($0 \le \theta \le \frac\pi3$) has area $\frac{\pi a^2}{12}$, and there are 3 loops, so the total is $\frac{\pi a^2}{4}$. The value $\frac{\pi a^2}{2} = \frac12\int_0^{2\pi} a^2\sin^2 3\theta\,d\theta$ traces every loop twice (odd $n$).
+      - **3 is true:** one loop is $\frac12\int_{-\pi/4}^{\pi/4} a^2\cos 2\theta\,d\theta = \frac{a^2}{2}$, so both loops give $a^2$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - double-integrals
+  stem:
+    en: 'Consider the following statements about double integrals:'
+  statements:
+  - en: 'For continuous $f$, $\displaystyle\int_0^1\!\int_0^x f(x, y)\,dy\,dx = \int_0^1\!\int_y^1 f(x, y)\,dx\,dy$.'
+  - en: 'Under $x = r\cos\theta$, $y = r\sin\theta$, the area element $dx\,dy$ becomes $r\,dr\,d\theta$.'
+  - en: 'For $f(x, y) = \dfrac{x - y}{(x + y)^3}$, $\displaystyle\int_0^1\!\int_0^1 f\,dy\,dx = \int_0^1\!\int_0^1 f\,dx\,dy$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      - **1 is true:** the region $0 \le y \le x \le 1$ is the triangle described either way, and $f$ is continuous, so Fubini applies.
+      - **2 is true:** $\dfrac{\partial(x, y)}{\partial(r, \theta)} = \begin{vmatrix}\cos\theta & -r\sin\theta\\ \sin\theta & r\cos\theta\end{vmatrix} = r$.
+      - **3 is false:** $\int_0^1 f\,dy = \frac{1}{(1 + x)^2}$, so the first order gives $\frac12$; by antisymmetry the other order gives $-\frac12$. $f$ is unbounded near $(0, 0)$ and $\iint\lvert f\rvert = \infty$, so Fubini does not apply.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - polar-area
+  stem:
+    en: 'Match each region in List I with its area in List II ($a, b > 0$).'
+  left:
+  - en: 'Interior of $x = a\cos t$, $y = b\sin t$'
+  - en: 'Interior of $r = a(1 + \cos\theta)$'
+  - en: 'Interior of $x = a\cos^3 t$, $y = a\sin^3 t$'
+  - en: 'Under one arch of $x = a(t - \sin t)$, $y = a(1 - \cos t)$'
+  right:
+  - en: '$3\pi a^2$'
+  - en: '$\pi ab$'
+  - en: '$\dfrac{3\pi a^2}{8}$'
+  - en: '$\dfrac{3\pi a^2}{2}$'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-1, C-3, D-4'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      - A: ellipse, $\pi ab$: **2**.
+      - B: cardioid, $\frac12\int_0^{2\pi}a^2(1 + \cos\theta)^2\,d\theta = \frac{3\pi a^2}{2}$: **4**.
+      - C: astroid, $\frac{3\pi a^2}{8}$: **3**.
+      - D: cycloid arch, $a^2\int_0^{2\pi}(1 - \cos t)^2\,dt = 3\pi a^2$: **1**.
+
+      So A-2, B-4, C-3, D-1. The cardioid ($\frac32\pi a^2$) and cycloid ($3\pi a^2$) are the pair most often swapped.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - arc-length
+  stem:
+    en: 'Match each arc in List I with its length in List II ($a, c > 0$).'
+  left:
+  - en: 'The whole astroid $x^{2/3} + y^{2/3} = a^{2/3}$'
+  - en: 'The whole cardioid $r = a(1 + \cos\theta)$'
+  - en: 'The whole circle $r = 2a\cos\theta$'
+  - en: 'The catenary $y = c\cosh\frac xc$ from $x = -c$ to $x = c$'
+  right:
+  - en: '$2c\sinh 1$'
+  - en: '$2\pi a$'
+  - en: '$6a$'
+  - en: '$8a$'
+  options:
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      - A: astroid, $4\cdot\frac{3a}{2} = 6a$: **3**.
+      - B: cardioid, $2\int_0^\pi 2a\cos\frac\theta2\,d\theta = 8a$: **4**.
+      - C: $r = 2a\cos\theta$ is a circle of radius $a$; $\sqrt{r^2 + r'^2} = 2a$ over $-\frac\pi2 \le \theta \le \frac\pi2$ gives $2\pi a$: **2**.
+      - D: $s = \int_{-c}^{c}\cosh\frac xc\,dx = 2c\sinh 1$: **1**.
+
+      So A-3, B-4, C-2, D-1. Swapping $6a$ and $8a$ is the usual slip.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - surface-revolution
+  assertion:
+    en: 'The volume of the torus generated by revolving the disc $(x - 2)^2 + y^2 \le 1$ about the $y$-axis is $4\pi^2$.'
+  reason:
+    en: 'The volume of a solid of revolution equals the area of the revolving region times the distance travelled by its centroid, provided the region lies on one side of the axis.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** it is Pappus's theorem for volumes.
+
+      **A is true, and R explains it:** the disc has area $\pi$ and centroid $(2, 0)$, at distance $2$ from the axis, and it lies in $x \ge 1 > 0$. So
+      $$V = \pi\cdot 2\pi\cdot 2 = 4\pi^2 \;(= 2\pi^2 a^2 b,\ a = 1,\ b = 2).$$
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - polar-area
+  assertion:
+    en: 'The area of one loop of $r = a\sin 3\theta$ is $\dfrac{\pi a^2}{12}$.'
+  reason:
+    en: 'The curve $r = a\sin 3\theta$ is symmetric about the line $\theta = \dfrac{\pi}{2}$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** the loop $0 \le \theta \le \frac\pi3$ gives
+      $$\frac12\int_0^{\pi/3} a^2\sin^2 3\theta\,d\theta = \frac{a^2}{2}\cdot\frac{\pi}{6} = \frac{\pi a^2}{12}.$$
+
+      **R is true:** $a\sin 3(\pi - \theta) = a\sin(3\pi - 3\theta) = a\sin 3\theta$, so $(r, \theta) \mapsto (r, \pi - \theta)$ maps the curve to itself.
+
+      **But R does not explain A.** The area comes from integrating $\frac12 r^2$ between consecutive zeros of $r$; the symmetry plays no part.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - arc-length
+  assertion:
+    en: 'The length of the arc of $y = \cosh x$ from $x = 0$ to $x = 1$ is $\sinh 1$.'
+  reason:
+    en: 'For a continuously differentiable $y = f(x)$, the arc length from $x = a$ to $x = b$ is $\displaystyle\int_a^b \big(1 + f''(x)\big)\,dx$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** $\sqrt{1 + \sinh^2 x} = \cosh x$, so $s = \int_0^1\cosh x\,dx = \sinh 1$.
+
+      **R is false:** the correct integrand is $\sqrt{1 + f'(x)^2}$. Here R would give $\int_0^1 (1 + \sinh x)\,dx = \cosh 1 \ne \sinh 1$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - cartesian-area
+  - exam-tips
+  assertion:
+    en: 'The area of the region between $y = \sin x$ and the $x$-axis for $0 \le x \le 2\pi$ is $0$.'
+  reason:
+    en: '$\displaystyle\int_0^{2\pi}\sin x\,dx = 0$.'
+  answer: 3
+  explanation:
+    en: |-
+      **A is false:** area is never negative. Split at the zero $x = \pi$:
+      $$A = \int_0^{\pi}\sin x\,dx + \left\lvert\int_\pi^{2\pi}\sin x\,dx\right\rvert = 2 + 2 = 4.$$
+
+      **R is true:** $[-\cos x]_0^{2\pi} = 0$. It is a signed area; the parts above and below the axis cancel.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - volume-revolution
+  assertion:
+    en: 'The volume of the solid generated by revolving the cardioid $r = a(1 + \cos\theta)$ about the initial line is $\dfrac{8\pi a^3}{3}$.'
+  reason:
+    en: 'The volume generated by revolving the polar region $0 \le r \le f(\theta)$, $\alpha \le \theta \le \beta$ (with $0 \le \alpha < \beta \le \pi$), about the initial line is $\dfrac{2\pi}{3}\displaystyle\int_\alpha^\beta r^3\sin\theta\,d\theta$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** it is the standard polar volume formula (an elementary sector of radius $r$ generates a volume $\frac{2\pi}{3}r^3\sin\theta\,d\theta$).
+
+      **A is true, and R explains it:** the upper half $0 \le \theta \le \pi$ generates the whole solid. With $u = 1 + \cos\theta$:
+      $$V = \frac{2\pi a^3}{3}\int_0^\pi (1 + \cos\theta)^3\sin\theta\,d\theta = \frac{2\pi a^3}{3}\int_0^2 u^3\,du = \frac{2\pi a^3}{3}\cdot 4 = \frac{8\pi a^3}{3}.$$
+  status: ai-generated

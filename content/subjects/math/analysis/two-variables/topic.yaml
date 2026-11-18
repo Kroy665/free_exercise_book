@@ -1,0 +1,18 @@
+id: math.analysis.two-variables
+title:
+  en: Functions of Two Variables
+summary:
+  en: Limits and continuity in the plane, repeated limits, partial derivatives and differentiability, the chain rule and implicit functions, Schwarz's and Young's theorems, Euler's theorem on homogeneous functions, and maxima, minima and saddle points with Lagrange multipliers.
+order: 9
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.mean-value-theorems]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - B. C. Das and B. N. Mukherjee, Differential Calculus, ch. on partial differentiation and maxima and minima of two variables
+  - S. C. Malik and S. Arora, Mathematical Analysis, ch. on functions of several variables
+  - T. M. Apostol, Mathematical Analysis, ch. on multivariable differential calculus
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) Differential Calculus item 7 and (PG) Real Analysis item 18
+retired: []

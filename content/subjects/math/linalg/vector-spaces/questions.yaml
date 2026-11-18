@@ -1,0 +1,651 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - subspaces
+  stem:
+    en: 'Which of the following subsets of $\R^3$ is a subspace?'
+  options:
+  - en: '$\{(x,y,z) : x + 2y - z = 0\}$'
+  - en: '$\{(x,y,z) : x + y + z = 1\}$'
+  - en: '$\{(x,y,z) : xy = 0\}$'
+  - en: '$\{(x,y,z) : x \ge 0\}$'
+  answer: 0
+  explanation:
+    en: |-
+      $x + 2y - z = 0$ is a homogeneous linear condition: if $u, v$ satisfy it, so does $au + bv$. It is a plane through the origin, so it is a subspace.
+
+      - $x + y + z = 1$: $(0,0,0)$ is not in it.
+      - $xy = 0$: $(1,0,0) + (0,1,0) = (1,1,0)$ has $xy = 1$.
+      - $x \ge 0$: $(-1)(1,0,0) = (-1,0,0)$ is not in it.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - axioms
+  - exam-tips
+  stem:
+    en: 'The dimension of $\C^3$ as a vector space over $\R$ is'
+  options:
+  - en: '$6$'
+  - en: '$3$'
+  - en: '$9$'
+  - en: infinite
+  answer: 0
+  explanation:
+    en: |-
+      Each complex coordinate $a + ib$ needs two real parameters. A real basis is
+      $$e_1, ie_1, e_2, ie_2, e_3, ie_3,$$
+      so $\dim_\R \C^3 = 2\cdot 3 = 6$. The answer $3$ is $\dim_\C \C^3$, over the field $\C$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of the vector space of all real $3\times 3$ symmetric matrices is'
+  options:
+  - en: '$3$'
+  - en: '$6$'
+  - en: '$9$'
+  - en: '$5$'
+  answer: 1
+  explanation:
+    en: |-
+      A symmetric matrix is fixed by its entries on and above the diagonal:
+      $$\frac{n(n+1)}{2} = \frac{3\cdot 4}{2} = 6.$$
+      $3$ is the dimension of the skew-symmetric (or diagonal) $3\times 3$ matrices; $9$ is all of $M_3(\R)$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - basis-dimension
+  - exam-tips
+  stem:
+    en: 'The dimension of the real vector space $P_3$ of polynomials of degree at most $3$ (together with the zero polynomial) is'
+  options:
+  - en: '$4$'
+  - en: '$3$'
+  - en: '$5$'
+  - en: infinite
+  answer: 0
+  explanation:
+    en: |-
+      The basis $1, x, x^2, x^3$ has $4$ elements, so $\dim P_3 = 3 + 1 = 4$.
+
+      $3$ is the off-by-one slip of counting only the degree.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - span-independence
+  stem:
+    en: 'The vectors $(1, 2)$ and $(3, k)$ in $\R^2$ are linearly dependent when $k$ equals'
+  options:
+  - en: '$-6$'
+  - en: '$\frac32$'
+  - en: '$6$'
+  - en: '$\frac23$'
+  answer: 2
+  explanation:
+    en: |-
+      Two vectors are dependent iff they are proportional, iff
+      $$\begin{vmatrix}1 & 2\\ 3 & k\end{vmatrix} = k - 6 = 0 \iff k = 6.$$
+      Then $(3, 6) = 3(1, 2)$. $\frac32$ comes from setting $3/1 = k/2$ upside down.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - span-independence
+  stem:
+    en: 'Which of the following sets of vectors in $\R^3$ is linearly dependent?'
+  options:
+  - en: '$\{(1,0,0),\,(0,1,0),\,(0,0,0)\}$'
+  - en: '$\{(1,0,0),\,(0,1,0),\,(0,0,1)\}$'
+  - en: '$\{(1,1,0),\,(0,1,1)\}$'
+  - en: '$\{(1,2,3)\}$'
+  answer: 0
+  explanation:
+    en: |-
+      Any set containing the zero vector is dependent:
+      $$0\cdot(1,0,0) + 0\cdot(0,1,0) + 1\cdot(0,0,0) = 0$$
+      is a non-trivial relation.
+
+      The standard basis is independent; $(1,1,0), (0,1,1)$ are not proportional; a single non-zero vector is independent.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of the space of real $4\times 4$ skew-symmetric matrices is'
+  options:
+  - en: '$10$'
+  - en: '$6$'
+  - en: '$16$'
+  - en: '$4$'
+  answer: 1
+  explanation:
+    en: |-
+      A skew-symmetric matrix has zero diagonal and $a_{ji} = -a_{ij}$, so only the entries strictly above the diagonal are free:
+      $$\frac{n(n-1)}{2} = \frac{4\cdot 3}{2} = 6.$$
+      $10 = \frac{4\cdot 5}{2}$ is the symmetric count; it wrongly lets the diagonal be free.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of the subspace $\{A \in M_3(\R) : \operatorname{tr}A = 0\}$ is'
+  options:
+  - en: '$8$'
+  - en: '$9$'
+  - en: '$6$'
+  - en: '$3$'
+  answer: 0
+  explanation:
+    en: |-
+      $\operatorname{tr}A = a_{11} + a_{22} + a_{33} = 0$ is one non-trivial linear condition on the $9$ entries, so
+      $$\dim = 9 - 1 = 8.$$
+      Basis: the $6$ off-diagonal units $E_{ij}$ and $E_{11} - E_{33}$, $E_{22} - E_{33}$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - span-independence
+  stem:
+    en: 'The vectors $(1,1,0)$, $(0,1,1)$, $(1,0,k)$ are linearly dependent if and only if'
+  options:
+  - en: '$k = 1$'
+  - en: '$k = 0$'
+  - en: '$k = 2$'
+  - en: '$k = -1$'
+  answer: 3
+  explanation:
+    en: |-
+      Three vectors in $\R^3$ are dependent iff the determinant they form is $0$:
+      $$\begin{vmatrix}1 & 1 & 0\\ 0 & 1 & 1\\ 1 & 0 & k\end{vmatrix} = 1\cdot k - 1\cdot(0 - 1) + 0 = k + 1.$$
+      So $k = -1$. Check: $(1,1,0) - (0,1,1) = (1, 0, -1)$. A sign slip in the second cofactor gives $k = 1$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - row-column-space
+  - span-independence
+  stem:
+    en: 'The dimension of the subspace of $\R^3$ spanned by $(1,2,1)$, $(2,1,0)$, $(3,3,1)$, $(1,-1,-1)$ is'
+  options:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      The dimension of the span is the rank of the matrix with these rows. Here
+      $$(3,3,1) = (1,2,1) + (2,1,0), \qquad (1,-1,-1) = (2,1,0) - (1,2,1),$$
+      and $(1,2,1), (2,1,0)$ are not proportional. So the dimension is $2$.
+
+      $4$ is impossible: a subspace of $\R^3$ has dimension at most $3$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sum-intersection
+  stem:
+    en: '$W_1$ and $W_2$ are subspaces of $\R^5$ with $\dim W_1 = 3$ and $\dim W_2 = 4$. The least possible value of $\dim(W_1 \cap W_2)$ is'
+  options:
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$0$'
+  answer: 0
+  explanation:
+    en: |-
+      Since $W_1 + W_2 \subseteq \R^5$,
+      $$\dim(W_1 \cap W_2) = 3 + 4 - \dim(W_1 + W_2) \ge 7 - 5 = 2.$$
+      The value $2$ is attained: $W_1 = L\{e_1, e_2, e_3\}$, $W_2 = L\{e_1, e_2, e_4, e_5\}$. $0$ forgets that the subspaces live in a space of dimension only $5$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coordinates
+  stem:
+    en: 'The coordinate vector of $(3, 1)$ relative to the ordered basis $\big((1,1),\,(1,-1)\big)$ of $\R^2$ is'
+  options:
+  - en: '$(1, 2)$'
+  - en: '$(2, 1)$'
+  - en: '$(3, 1)$'
+  - en: '$(2, -1)$'
+  answer: 1
+  explanation:
+    en: |-
+      Solve $a(1,1) + b(1,-1) = (3,1)$: $a + b = 3$, $a - b = 1$, so $a = 2$, $b = 1$.
+      $$[(3,1)]_B = (2, 1).$$
+      Check: $2(1,1) + (1,-1) = (3,1)$. $(1,2)$ is the answer for the basis in the reverse order; $(3,1)$ copies the standard coordinates.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coordinates
+  stem:
+    en: 'The coordinate vector of $p(x) = 2 + 3x + x^2$ relative to the ordered basis $\big(1,\ 1 + x,\ (1 + x)^2\big)$ of $P_2$ is'
+  options:
+  - en: '$(0, 1, 1)$'
+  - en: '$(2, 3, 1)$'
+  - en: '$(1, 1, 0)$'
+  - en: '$(0, 1, 2)$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $t = 1 + x$, so $x = t - 1$:
+      $$p = 2 + 3(t - 1) + (t - 1)^2 = 2 + 3t - 3 + t^2 - 2t + 1 = 0 + t + t^2.$$
+      So $p = 0\cdot 1 + 1\cdot(1 + x) + 1\cdot(1 + x)^2$ and $[p]_B = (0, 1, 1)$.
+
+      Check: $(1 + x) + (1 + 2x + x^2) = 2 + 3x + x^2$. $(2, 3, 1)$ is the coordinate vector relative to the standard basis $1, x, x^2$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - row-column-space
+  stem:
+    en: 'Which of the following vectors lies in the row space of $\begin{pmatrix}1 & 0 & 2\\ 0 & 1 & -1\end{pmatrix}$?'
+  options:
+  - en: '$(1, 1, 2)$'
+  - en: '$(2, 3, 2)$'
+  - en: '$(2, 3, 1)$'
+  - en: '$(0, 0, 1)$'
+  answer: 2
+  explanation:
+    en: |-
+      The matrix is in reduced echelon form with pivots in columns 1 and 2. A row-space vector with first two coordinates $(a, b)$ must be
+      $$a(1,0,2) + b(0,1,-1) = (a,\ b,\ 2a - b).$$
+      - $(2,3,\cdot)$: third coordinate must be $4 - 3 = 1$. So $(2,3,1)$ is in it and $(2,3,2)$ is not.
+      - $(1,1,\cdot)$: needs $2 - 1 = 1$, not $2$.
+      - $(0,0,\cdot)$: needs $0$, not $1$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sum-intersection
+  stem:
+    en: 'Let $W_1, W_2$ be subspaces of a vector space $V$. Then $W_1 \cup W_2$ is a subspace of $V$ if and only if'
+  options:
+  - en: '$W_1 \cap W_2 = \{0\}$'
+  - en: '$W_1 + W_2 = V$'
+  - en: '$W_1 \cap W_2 \ne \{0\}$'
+  - en: '$W_1 \subseteq W_2$ or $W_2 \subseteq W_1$'
+  answer: 3
+  explanation:
+    en: |-
+      If $u \in W_1 \setminus W_2$ and $v \in W_2 \setminus W_1$, then $u + v$ lies in neither: $u + v \in W_1$ would give $v = (u + v) - u \in W_1$, and similarly for $W_2$. So the union is closed under addition only when one subspace contains the other; conversely, then the union is just the larger subspace.
+
+      The $x$- and $y$-axes in $\R^2$ meet only in $\{0\}$ and their sum is $\R^2$, yet their union is not a subspace; so the other conditions are wrong.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of $W = \{p \in P_3 : p(1) = 0 \text{ and } p(-1) = 0\}$, where $P_3$ is the space of real polynomials of degree at most $3$, is'
+  options:
+  - en: '$3$'
+  - en: '$1$'
+  - en: '$4$'
+  - en: '$2$'
+  answer: 3
+  explanation:
+    en: |-
+      $p(1) = p(-1) = 0$ means $(x - 1)(x + 1) \mid p$, so
+      $$W = \{(x^2 - 1)(a + bx) : a, b \in \R\},$$
+      with basis $x^2 - 1,\ x^3 - x$. Hence $\dim W = 2 = 4 - 2$ (two independent conditions on a 4-dimensional space). $3$ starts from $\dim P_3 = 3$, the off-by-one slip.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of the space of real $3\times 3$ upper triangular matrices with trace $0$ is'
+  options:
+  - en: '$6$'
+  - en: '$8$'
+  - en: '$3$'
+  - en: '$5$'
+  answer: 3
+  explanation:
+    en: |-
+      Upper triangular $3\times 3$ matrices have $\frac{3\cdot 4}{2} = 6$ free entries. The trace condition $a_{11} + a_{22} + a_{33} = 0$ removes one:
+      $$\dim = 6 - 1 = 5.$$
+      $8$ is the dimension of all trace-zero $3\times 3$ matrices.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sum-intersection
+  stem:
+    en: 'In $\R^4$ let $W_1 = \{x : x_1 + x_2 + x_3 + x_4 = 0\}$ and $W_2 = \{x : x_1 = x_2,\ x_3 = x_4\}$. Then $\dim(W_1 + W_2)$ is'
+  options:
+  - en: '$5$'
+  - en: '$4$'
+  - en: '$3$'
+  - en: '$2$'
+  answer: 1
+  explanation:
+    en: |-
+      $\dim W_1 = 3$ (one condition) and $\dim W_2 = 2$ (two conditions). On $W_2$, $x = (a, a, b, b)$, and $W_1$ adds $2a + 2b = 0$:
+      $$W_1 \cap W_2 = L\{(1, 1, -1, -1)\}, \quad \dim = 1.$$
+      $$\dim(W_1 + W_2) = 3 + 2 - 1 = 4.$$
+      $5$ forgets the intersection (and exceeds $\dim\R^4$); $3$ assumes $W_2 \subseteq W_1$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The set of all $2\times 2$ complex Hermitian matrices is a vector space over $\R$. Its dimension is'
+  options:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$8$'
+  - en: '$2$'
+  answer: 1
+  explanation:
+    en: |-
+      A Hermitian matrix is $\begin{pmatrix}a & c + id\\ c - id & b\end{pmatrix}$ with $a, b, c, d \in \R$: the diagonal must be real and $a_{21} = \overline{a_{12}}$. Four real parameters, basis
+      $$\begin{pmatrix}1&0\\0&0\end{pmatrix},\ \begin{pmatrix}0&0\\0&1\end{pmatrix},\ \begin{pmatrix}0&1\\1&0\end{pmatrix},\ \begin{pmatrix}0&i\\-i&0\end{pmatrix}.$$
+      In general the dimension is $n^2$. $3$ is the count for real symmetric $2\times 2$ matrices; $8$ is $\dim_\R M_2(\C)$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'The dimension of the subspace $\{X \in M_2(\R) : XA = AX\}$, where $A = \begin{pmatrix}1 & 1\\ 0 & 1\end{pmatrix}$, is'
+  options:
+  - en: '$1$'
+  - en: '$3$'
+  - en: '$2$'
+  - en: '$4$'
+  answer: 2
+  explanation:
+    en: |-
+      Let $X = \begin{pmatrix}p & q\\ r & s\end{pmatrix}$. Then
+      $$AX = \begin{pmatrix}p + r & q + s\\ r & s\end{pmatrix}, \qquad XA = \begin{pmatrix}p & p + q\\ r & r + s\end{pmatrix}.$$
+      Equating: $r = 0$ and $s = p$. So $X = \begin{pmatrix}p & q\\ 0 & p\end{pmatrix} = pI + q\begin{pmatrix}0&1\\0&0\end{pmatrix}$, dimension $2$.
+
+      $1$ counts only the scalar matrices; $4$ would need $A$ to be scalar.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - span-independence
+  stem:
+    en: 'The vector $(1, k, 5)$ lies in the span of $(1, -3, 2)$ and $(2, -1, 1)$ for'
+  options:
+  - en: '$k = 8$'
+  - en: '$k = -10$'
+  - en: '$k = 2$'
+  - en: '$k = -8$'
+  answer: 3
+  explanation:
+    en: |-
+      Write $(1, k, 5) = a(1, -3, 2) + b(2, -1, 1)$:
+      $$a + 2b = 1, \qquad 2a + b = 5, \qquad -3a - b = k.$$
+      The first two give $a = 3$, $b = -1$; then $k = -9 + 1 = -8$.
+
+      Check by determinant: $\begin{vmatrix}1 & -3 & 2\\ 2 & -1 & 1\\ 1 & -8 & 5\end{vmatrix} = 0$. $k = -10$ comes from taking $b = +1$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - span-independence
+  - basis-dimension
+  stem:
+    en: 'Consider the following statements about vectors in $\R^3$:'
+  statements:
+  - en: 'Any four vectors in $\R^3$ are linearly dependent.'
+  - en: 'Any three vectors that span $\R^3$ form a basis of $\R^3$.'
+  - en: Every subset of a linearly dependent set is linearly dependent.
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: 1 only
+  answer: 2
+  explanation:
+    en: |-
+      1. True: $\dim\R^3 = 3$, so more than $3$ vectors are dependent (replacement theorem).
+      2. True: a spanning set contains a basis, which must have exactly $3$ vectors, so the set is itself the basis.
+      3. False: $\{(1,0,0), (2,0,0)\}$ is dependent but its subset $\{(1,0,0)\}$ is independent. It is the **superset** of a dependent set that is always dependent.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sum-intersection
+  stem:
+    en: 'Let $W_1$ and $W_2$ be subspaces of a finite-dimensional vector space $V$. Consider:'
+  statements:
+  - en: '$W_1 \cap W_2$ is a subspace of $V$.'
+  - en: '$W_1 + W_2$ is the smallest subspace of $V$ containing $W_1 \cup W_2$.'
+  - en: 'If $V = \R^3$ and $\dim W_1 = \dim W_2 = 2$, then $W_1 \cap W_2 \ne \{0\}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 only
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  answer: 2
+  explanation:
+    en: |-
+      1. True: if $u, v \in W_1 \cap W_2$, then $au + bv$ lies in both.
+      2. True: $W_1 + W_2$ contains $W_1$ and $W_2$, and any subspace containing both contains all sums $w_1 + w_2$. So $W_1 + W_2 = L(W_1 \cup W_2)$.
+      3. True: by the dimension formula,
+      $$\dim(W_1 \cap W_2) = 2 + 2 - \dim(W_1 + W_2) \ge 4 - 3 = 1.$$
+      Two planes through the origin in $\R^3$ always share at least a line.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - basis-dimension
+  stem:
+    en: 'Match each subspace of $M_4(\R)$ (real $4\times 4$ matrices) in List I with its dimension in List II.'
+  left:
+  - en: symmetric matrices
+  - en: skew-symmetric matrices
+  - en: matrices of trace zero
+  - en: diagonal matrices
+  right:
+  - en: '$4$'
+  - en: '$6$'
+  - en: '$10$'
+  - en: '$15$'
+  options:
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  answer: 3
+  explanation:
+    en: |-
+      With $n = 4$:
+      - symmetric: $\frac{n(n+1)}{2} = 10$;
+      - skew-symmetric: $\frac{n(n-1)}{2} = 6$;
+      - trace zero: $n^2 - 1 = 15$;
+      - diagonal: $n = 4$.
+
+      So A-3, B-2, C-4, D-1. Swapping the symmetric and skew counts (A-2, B-3) is the usual slip: the skew diagonal is forced to be $0$.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - axioms
+  - basis-dimension
+  - row-column-space
+  - subspaces
+  stem:
+    en: Match each real vector space in List I with its dimension in List II.
+  left:
+  - en: '$\C^3$ over $\R$'
+  - en: 'real polynomials of degree at most $4$'
+  - en: '$\{x \in \R^4 : x_1 + x_2 + x_3 + x_4 = 0\}$'
+  - en: 'the row space of $\begin{pmatrix}1 & 2 & 3\\ 2 & 4 & 6\\ 1 & 0 & 1\end{pmatrix}$'
+  right:
+  - en: '$2$'
+  - en: '$3$'
+  - en: '$5$'
+  - en: '$6$'
+  options:
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-4, B-3, C-1, D-2'
+  answer: 1
+  explanation:
+    en: |-
+      - A: $\dim_\R\C^3 = 2\cdot 3 = 6$.
+      - B: basis $1, x, x^2, x^3, x^4$, so $5$.
+      - C: one non-trivial homogeneous condition in $\R^4$: $4 - 1 = 3$.
+      - D: row 2 $= 2\times$ row 1, and row 3 is not a multiple of row 1, so the rank is $2$.
+
+      So A-4, B-3, C-2, D-1. Taking $\dim P_4 = 4$ or $\dim_\R\C^3 = 3$ are the off-by-one and wrong-field traps.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - span-independence
+  assertion:
+    en: 'The vectors $(1, 2)$ and $(2, 4)$ in $\R^2$ are linearly dependent.'
+  reason:
+    en: Every set of vectors containing the zero vector is linearly dependent.
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $(2, 4) = 2(1, 2)$, so $2(1,2) - (2,4) = 0$.
+
+      R is true: $1\cdot 0 = 0$ is a non-trivial relation. But the set in A does not contain the zero vector, so R does not explain A. The correct reason is that two vectors are dependent iff they are proportional.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - subspaces
+  - sum-intersection
+  assertion:
+    en: '$\{(x, y) \in \R^2 : xy = 0\}$ is not a subspace of $\R^2$.'
+  reason:
+    en: The union of two subspaces is a subspace only if one of them contains the other.
+  answer: 0
+  explanation:
+    en: |-
+      The set $xy = 0$ is the union of the $x$-axis and the $y$-axis, two subspaces neither of which contains the other. By R it is not a subspace; explicitly, $(1, 0) + (0, 1) = (1, 1)$ has $xy = 1$.
+
+      Both are true and R explains A.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - subspaces
+  assertion:
+    en: '$\{(x, y, z) \in \R^3 : x + y + z = 1\}$ is a subspace of $\R^3$.'
+  reason:
+    en: Every subspace of a vector space contains the zero vector.
+  answer: 3
+  explanation:
+    en: |-
+      R is true: if $W$ is a subspace and $w \in W$, then $0 = 0\cdot w \in W$.
+
+      A is false: $0 + 0 + 0 = 0 \ne 1$, so $(0,0,0)$ is not in the set. (R is exactly the tool that disproves A.) The set is a plane **not** through the origin.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - row-column-space
+  assertion:
+    en: A matrix and its row echelon form have the same row space.
+  reason:
+    en: Elementary row operations do not change the column space of a matrix.
+  answer: 2
+  explanation:
+    en: |-
+      A is true: each new row is a linear combination of the old rows, and each row operation can be reversed, so the row spans are equal.
+
+      R is false. For $\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix} \to \begin{pmatrix}1 & 2\\ 0 & 0\end{pmatrix}$, the column space changes from $L\{(1, 2)\}$ to $L\{(1, 0)\}$. Row operations preserve only the **dimension** of the column space and the linear relations among the columns.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - subspaces
+  assertion:
+    en: 'The set of singular real $2\times 2$ matrices is not a subspace of $M_2(\R)$.'
+  reason:
+    en: 'If $A$ is a singular matrix and $c$ is a real number, then $cA$ is singular.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $\begin{pmatrix}1 & 0\\ 0 & 0\end{pmatrix}$ and $\begin{pmatrix}0 & 0\\ 0 & 1\end{pmatrix}$ are singular, but their sum $I$ is not. Closure under addition fails.
+
+      R is true: $\det(cA) = c^2\det A = 0$. But R is about scalar multiplication, which does hold; it cannot explain why the set fails to be a subspace. So both are true and R does not explain A.
+  status: ai-generated

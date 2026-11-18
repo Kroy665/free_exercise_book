@@ -1,0 +1,18 @@
+id: math.analysis.real-numbers
+title:
+  en: The Real Number System
+summary:
+  en: Rationals and irrationals, ℝ as a complete ordered field, bounded sets, supremum and infimum, the completeness axiom, the Archimedean property and density, the Cantor–Dedekind axiom, decimal representation, absolute value, nested intervals and countability.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on the real number system
+  - R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 2
+  - W. Rudin, Principles of Mathematical Analysis, ch. 1
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.1 and (PG) II.1–2
+retired: []

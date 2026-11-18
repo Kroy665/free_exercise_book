@@ -1,0 +1,18 @@
+id: math.analysis.series-arbitrary
+title:
+  en: Alternating and Arbitrary Series
+summary:
+  en: Absolute and conditional convergence, the Leibniz test with its error bound, standard alternating series, ratio and root tests for absolute convergence, Abel's and Dirichlet's tests, rearrangements and the Cauchy product, and the interval of convergence with endpoints.
+order: 4
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.series-positive]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on infinite series
+  - "R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 3 and 9"
+  - "W. Rudin, Principles of Mathematical Analysis, ch. 3"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) III.3 and (PG) II.5
+retired: []

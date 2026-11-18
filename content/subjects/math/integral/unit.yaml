@@ -1,0 +1,10 @@
+id: math.integral
+subject: math
+title: { en: Integral Calculus }
+order: 4
+# Planned topics: docs/SYLLABUS.md (Block 3). Only written topics are listed.
+topics:
+  - math.integral.integration-methods
+  - math.integral.reduction-formulae
+  - math.integral.definite-integrals
+  - math.integral.area-length-volume

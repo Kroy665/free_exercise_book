@@ -1,0 +1,18 @@
+id: math.linalg.linear-transformations
+title:
+  en: Linear Transformations
+summary:
+  en: Linear maps and non-examples, kernel and range, rank and nullity, the rank–nullity theorem, one-one and onto maps, inverses and isomorphism, the matrix of a map relative to ordered bases, change of basis and similar matrices, and Sylvester's law of nullity.
+order: 7
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.vector-spaces]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Abstract and Linear), ch. on linear mappings
+  - "K. Hoffman and R. Kunze, Linear Algebra, ch. 3"
+  - "S. Kumaresan, Linear Algebra: A Geometric Approach, ch. 4–5"
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) I.C.7, with I.C.4–5
+retired: []

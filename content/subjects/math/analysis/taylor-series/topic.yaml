@@ -1,0 +1,19 @@
+id: math.analysis.taylor-series
+title:
+  en: Taylor's Theorem and Expansions
+summary:
+  en: Taylor's and Maclaurin's theorems with the Lagrange and Cauchy remainders, the standard Maclaurin series with their ranges of validity, expansion by known series, e^(-1/x^2), limits by expansion and error estimates.
+order: 7
+exams: [slst-0910, slst-1112]
+prerequisites: [math.analysis.mean-value-theorems]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Introduction to Real Analysis, ch. on Taylor's theorem and expansions of functions
+  - "R. G. Bartle and D. R. Sherbert, Introduction to Real Analysis, ch. 6 and 9"
+  - B. C. Das and B. N. Mukherjee, Differential Calculus, ch. on expansions of functions
+  - T. M. Apostol, Calculus Vol. 1, ch. on polynomial approximations to functions
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) II.7
+retired: []

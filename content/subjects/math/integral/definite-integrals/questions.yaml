@@ -1,0 +1,640 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - sum-to-integral
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{n}\frac{r^2}{n^3}$ equals'
+  options:
+  - en: '$\tfrac12$'
+  - en: '$\tfrac16$'
+  - en: '$1$'
+  - en: '$\tfrac13$'
+  answer: 3
+  explanation:
+    en: |-
+      Pull out $\frac1n$: $\displaystyle\sum_{r=1}^{n}\frac{r^2}{n^3} = \frac1n\sum_{r=1}^{n}\left(\frac rn\right)^2$, so
+      $$\lim_{n\to\infty}\frac1n\sum_{r=1}^{n}\left(\frac rn\right)^2 = \int_0^1 x^2\,dx = \frac13.$$
+      Check: the exact sum is $\frac{(n+1)(2n+1)}{6n^2} \to \frac{2}{6}$. $\frac16$ forgets the factor $2$ from $2n + 1$; $\frac12$ is $\int_0^1 x\,dx$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  stem:
+    en: '$\dfrac{d}{dx}\displaystyle\int_0^{x^2}\cos t\,dt$ equals'
+  options:
+  - en: '$\cos(x^2)$'
+  - en: '$2x\cos x$'
+  - en: '$2x\cos(x^2)$'
+  - en: '$\sin(x^2)$'
+  answer: 2
+  explanation:
+    en: |-
+      By the Leibniz rule with upper limit $v(x) = x^2$:
+      $$\frac{d}{dx}\int_0^{x^2}\cos t\,dt = \cos(x^2)\cdot 2x.$$
+      Check: the integral is $\sin(x^2)$, whose derivative is $2x\cos(x^2)$. $\cos(x^2)$ forgets the chain-rule factor $v'(x) = 2x$; $\sin(x^2)$ is the integral itself, not its derivative.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - symmetry
+  stem:
+    en: '$\displaystyle\int_{-\pi/2}^{\pi/2}\left(x^3 + x\cos x + \sin^5 x + 1\right)dx$ equals'
+  options:
+  - en: '$\pi$'
+  - en: '$0$'
+  - en: '$2\pi$'
+  - en: '$\tfrac{\pi}{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      $x^3$, $x\cos x$ and $\sin^5 x$ are continuous odd functions, so each integrates to $0$ over the symmetric interval. Only the constant remains:
+      $$\int_{-\pi/2}^{\pi/2}1\,dx = \pi.$$
+      $0$ forgets that the constant $1$ is even, not odd; $\frac{\pi}{2}$ integrates $1$ over $[0, \frac{\pi}{2}]$ only.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - properties
+  - standard-results
+  stem:
+    en: '$\displaystyle\int_0^{\pi/2}\frac{\sin^{10}x}{\sin^{10}x + \cos^{10}x}\,dx$ equals'
+  options:
+  - en: '$\tfrac{\pi}{2}$'
+  - en: '$\tfrac{\pi}{4}$'
+  - en: '$\tfrac{\pi}{8}$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Call it $I$. The substitution $x \to \frac{\pi}{2} - x$ swaps $\sin$ and $\cos$:
+      $$I = \int_0^{\pi/2}\frac{\cos^{10}x}{\cos^{10}x + \sin^{10}x}\,dx, \qquad 2I = \int_0^{\pi/2}1\,dx = \frac{\pi}{2}.$$
+      So $I = \frac{\pi}{4}$, whatever the exponent. $\frac{\pi}{2}$ is $2I$, the sum of the two forms.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - symmetry
+  stem:
+    en: '$\displaystyle\int_0^{10\pi}\lvert\sin x\rvert\,dx$ equals'
+  options:
+  - en: '$10$'
+  - en: '$0$'
+  - en: '$40$'
+  - en: '$20$'
+  answer: 3
+  explanation:
+    en: |-
+      $\lvert\sin x\rvert$ has period $\pi$, and $\int_0^{\pi}\sin x\,dx = 2$. Over $10$ periods:
+      $$\int_0^{10\pi}\lvert\sin x\rvert\,dx = 10 \times 2 = 20.$$
+      $0$ is $\int_0^{10\pi}\sin x\,dx$, without the modulus; $10$ uses $1$ per period instead of $2$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - mean-value-bounds
+  stem:
+    en: 'The mean value of $f(x) = x^2$ on $[0, 3]$ is'
+  options:
+  - en: '$9$'
+  - en: '$\tfrac92$'
+  - en: '$3$'
+  - en: '$\tfrac94$'
+  answer: 2
+  explanation:
+    en: |-
+      The mean value is $\frac{1}{b - a}\int_a^b f$:
+      $$\frac13\int_0^3 x^2\,dx = \frac13\cdot 9 = 3.$$
+      It is attained at $\xi = \sqrt3$, as the first mean value theorem promises. $9$ is the integral itself (not divided by $3$); $\frac94 = f(\frac32)$ wrongly assumes $\xi$ is the midpoint; $\frac92$ is the average of $f(0)$ and $f(3)$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - sum-to-integral
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty}\frac1n\sum_{r=1}^{n}e^{r/n}$ equals'
+  options:
+  - en: '$e - 1$'
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$e + 1$'
+  answer: 0
+  explanation:
+    en: |-
+      With $\frac rn \to x$ and $\frac1n \to dx$:
+      $$\lim_{n\to\infty}\frac1n\sum_{r=1}^{n}e^{r/n} = \int_0^1 e^x\,dx = e - 1 \approx 1.718.$$
+      $e$ forgets the lower limit term $e^0 = 1$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sum-to-integral
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{n}\frac{n}{n^2 + r^2}$ equals'
+  options:
+  - en: '$\tfrac{\pi}{2}$'
+  - en: '$\tfrac{\pi}{4}$'
+  - en: '$\ln 2$'
+  - en: '$\tfrac12\ln 2$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide numerator and denominator by $n^2$:
+      $$\sum_{r=1}^{n}\frac{n}{n^2 + r^2} = \frac1n\sum_{r=1}^{n}\frac{1}{1 + (r/n)^2} \;\to\; \int_0^1\frac{dx}{1 + x^2} = \tan^{-1}1 = \frac{\pi}{4}.$$
+      $\frac12\ln 2$ is the limit of $\sum\frac{r}{n^2 + r^2}$ (numerator $r$, not $n$); $\frac{\pi}{2}$ uses the limits $0$ to $\infty$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - limit-of-sum
+  stem:
+    en: 'Divide $[0, 1]$ into $n$ equal parts. The right-endpoint sum $\displaystyle\frac1n\sum_{r=1}^{n}f\!\left(\frac rn\right)$ for $f(x) = x^2$ equals'
+  options:
+  - en: '$\dfrac{(n-1)(2n-1)}{6n^2}$'
+  - en: '$\dfrac{(n+1)(2n+1)}{6n^3}$'
+  - en: '$\dfrac{(n+1)(2n+1)}{6n^2}$'
+  - en: '$\dfrac{n+1}{2n}$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\frac1n\sum_{r=1}^{n}\frac{r^2}{n^2} = \frac{1}{n^3}\cdot\frac{n(n+1)(2n+1)}{6} = \frac{(n+1)(2n+1)}{6n^2},$$
+      which tends to $\frac13 = \int_0^1 x^2\,dx$. $\frac{(n-1)(2n-1)}{6n^2}$ is the **left**-endpoint sum ($r = 0$ to $n - 1$); $\frac{(n+1)(2n+1)}{6n^3}$ cancels $n$ wrongly and tends to $0$; $\frac{n+1}{2n}$ is the sum for $f(x) = x$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  stem:
+    en: 'For $x > 1$, $\dfrac{d}{dx}\displaystyle\int_x^{x^2}\frac{dt}{\ln t}$ equals'
+  options:
+  - en: '$\dfrac{x + 1}{\ln x}$'
+  - en: '$\dfrac{2x - 1}{\ln x}$'
+  - en: '$\dfrac{x}{\ln x}$'
+  - en: '$\dfrac{x - 1}{\ln x}$'
+  answer: 3
+  explanation:
+    en: |-
+      Leibniz rule: upper limit $x^2$, lower limit $x$:
+      $$\frac{1}{\ln x^2}\cdot 2x - \frac{1}{\ln x}\cdot 1 = \frac{2x}{2\ln x} - \frac{1}{\ln x} = \frac{x - 1}{\ln x}.$$
+      $\frac{x + 1}{\ln x}$ adds the lower-limit term instead of subtracting it; $\frac{2x - 1}{\ln x}$ forgets that $\ln x^2 = 2\ln x$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  stem:
+    en: '$\displaystyle\lim_{x\to 0}\frac{1}{x^3}\int_0^{x}\sin(t^2)\,dt$ equals'
+  options:
+  - en: '$1$'
+  - en: '$0$'
+  - en: '$\tfrac13$'
+  - en: '$\tfrac16$'
+  answer: 2
+  explanation:
+    en: |-
+      It is of the form $\frac00$. By L'Hospital's rule and the fundamental theorem,
+      $$\lim_{x\to0}\frac{\sin(x^2)}{3x^2} = \frac13.$$
+      Check: $\sin(t^2) \approx t^2$, so the integral is about $\frac{x^3}{3}$. $1$ forgets the $3$ from differentiating $x^3$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: '$\displaystyle\int_2^3\frac{\sqrt{x}}{\sqrt{x} + \sqrt{5 - x}}\,dx$ equals'
+  options:
+  - en: '$1$'
+  - en: '$\tfrac52$'
+  - en: '$0$'
+  - en: '$\tfrac12$'
+  answer: 3
+  explanation:
+    en: |-
+      Call it $I$. Here $a + b = 5$, so $x \to 5 - x$ gives
+      $$I = \int_2^3\frac{\sqrt{5 - x}}{\sqrt{5 - x} + \sqrt{x}}\,dx, \qquad 2I = \int_2^3 1\,dx = 1, \qquad I = \frac12.$$
+      $1$ is $2I$; $\frac52 = \frac{a + b}{2}$ uses the sum of the limits instead of their difference: the general result is $\frac{b - a}{2}$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: '$\displaystyle\int_0^{\pi/4}\ln(1 + \tan x)\,dx$ equals'
+  options:
+  - en: '$\tfrac{\pi}{8}\ln 2$'
+  - en: '$\tfrac{\pi}{4}\ln 2$'
+  - en: '$\tfrac{\pi}{2}\ln 2$'
+  - en: '$-\tfrac{\pi}{8}\ln 2$'
+  answer: 0
+  explanation:
+    en: |-
+      With $x \to \frac{\pi}{4} - x$: $1 + \tan\left(\frac{\pi}{4} - x\right) = \frac{2}{1 + \tan x}$. So
+      $$I = \int_0^{\pi/4}\big[\ln 2 - \ln(1 + \tan x)\big]dx = \frac{\pi}{4}\ln 2 - I, \qquad I = \frac{\pi}{8}\ln 2.$$
+      $\frac{\pi}{4}\ln 2$ is $2I$, forgetting to halve. The integrand is positive, so a negative answer is impossible.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  stem:
+    en: 'With $[\cdot]$ the greatest integer function, $\displaystyle\int_0^{2}[x^2]\,dx$ equals'
+  options:
+  - en: '$3 - \sqrt2$'
+  - en: '$5 - \sqrt2 - \sqrt3$'
+  - en: '$5 - \sqrt3$'
+  - en: '$\tfrac83$'
+  answer: 1
+  explanation:
+    en: |-
+      $[x^2]$ jumps at $x = 1, \sqrt2, \sqrt3$. Split there:
+      $$0\cdot 1 + 1(\sqrt2 - 1) + 2(\sqrt3 - \sqrt2) + 3(2 - \sqrt3) = 5 - \sqrt2 - \sqrt3 \approx 1.854.$$
+      $\frac83 = \int_0^2 x^2\,dx$ ignores the integer part. Missing the jump at $\sqrt3$ gives other wrong values; the answer must be below $\frac83$, since $[x^2] \le x^2$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - mean-value-bounds
+  stem:
+    en: 'Let $I = \displaystyle\int_0^1 e^{x^2}\,dx$. Which of the following is true?'
+  options:
+  - en: '$0 < I < 1$'
+  - en: '$1 < I < e$'
+  - en: '$I = e - 1$'
+  - en: '$e < I < e^2$'
+  answer: 1
+  explanation:
+    en: |-
+      On $[0, 1]$, $0 \le x^2 \le 1$, so $1 \le e^{x^2} \le e$, with equality only at the end points. Since the integrand is continuous and not constant,
+      $$1 \cdot (1 - 0) < I < e\cdot(1 - 0).$$
+      Numerically $I \approx 1.4627$. $e - 1 \approx 1.718$ is $\int_0^1 e^x\,dx$; $e^{x^2} \le e^x$ on $[0, 1]$, so $I < e - 1$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - sum-to-integral
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{n}\frac{r}{n^2 + r^2}$ equals'
+  options:
+  - en: '$\ln 2$'
+  - en: '$\tfrac12\ln 2$'
+  - en: '$\tfrac{\pi}{4}$'
+  - en: '$\ln\sqrt3$'
+  answer: 1
+  explanation:
+    en: |-
+      $$\sum_{r=1}^{n}\frac{r}{n^2 + r^2} = \frac1n\sum_{r=1}^{n}\frac{r/n}{1 + (r/n)^2} \;\to\; \int_0^1\frac{x\,dx}{1 + x^2} = \frac12\Big[\ln(1 + x^2)\Big]_0^1 = \frac12\ln 2.$$
+      $\ln 2$ forgets the $\frac12$ in $\int\frac{x}{1 + x^2}\,dx$; $\frac{\pi}{4}$ is the limit when the numerator is $n$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sum-to-integral
+  stem:
+    en: '$\displaystyle\lim_{n\to\infty}\left(\frac{n!}{n^n}\right)^{1/n}$ equals'
+  options:
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$\tfrac1e$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      Take logarithms:
+      $$\ln\left(\frac{n!}{n^n}\right)^{1/n} = \frac1n\sum_{r=1}^{n}\ln\frac rn \;\to\; \int_0^1\ln x\,dx = \Big[x\ln x - x\Big]_0^1 = -1.$$
+      So the limit is $e^{-1}$. $1$ comes from thinking $(n!)^{1/n}$ and $n$ grow alike; $0$ from $\frac{n!}{n^n} \to 0$, which ignores the $n$th root. (Stirling's formula gives the same answer.)
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-results
+  stem:
+    en: '$\displaystyle\int_0^{\pi}\frac{x\sin x}{1 + \cos^2 x}\,dx$ equals'
+  options:
+  - en: '$\dfrac{\pi^2}{2}$'
+  - en: '$\dfrac{\pi}{2}$'
+  - en: '$\dfrac{\pi^2}{4}$'
+  - en: '$\dfrac{\pi^2}{8}$'
+  answer: 2
+  explanation:
+    en: |-
+      The integrand is $x f(\sin x)$ (since $\cos^2 x = 1 - \sin^2 x$), so
+      $$I = \frac{\pi}{2}\int_0^{\pi}\frac{\sin x}{1 + \cos^2 x}\,dx = \frac{\pi}{2}\Big[-\tan^{-1}(\cos x)\Big]_0^{\pi} = \frac{\pi}{2}\left(\frac{\pi}{4} + \frac{\pi}{4}\right) = \frac{\pi^2}{4}.$$
+      $\frac{\pi^2}{2}$ forgets the factor $\frac12$ in $\frac{\pi}{2}$, using $\pi\int f(\sin x)$; $\frac{\pi}{2}$ is the remaining integral alone.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-results
+  stem:
+    en: '$\displaystyle\int_0^{\pi}\frac{x}{1 + \sin x}\,dx$ equals'
+  options:
+  - en: '$\pi$'
+  - en: '$2\pi$'
+  - en: '$\tfrac{\pi}{2}$'
+  - en: '$\pi^2$'
+  answer: 0
+  explanation:
+    en: |-
+      By the $x f(\sin x)$ result,
+      $$I = \frac{\pi}{2}\int_0^{\pi}\frac{dx}{1 + \sin x}.$$
+      By the $2a$ rule and then $x \to \frac{\pi}{2} - x$,
+      $$\int_0^{\pi}\frac{dx}{1 + \sin x} = 2\int_0^{\pi/2}\frac{dx}{1 + \cos x} = 2\int_0^{\pi/2}\frac12\sec^2\frac x2\,dx = 2\Big[\tan\frac x2\Big]_0^{\pi/2} = 2.$$
+      So
+      $$I = \frac{\pi}{2}\cdot 2 = \pi.$$
+      $2\pi$ uses $\pi$ instead of $\frac{\pi}{2}$ in front.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  stem:
+    en: 'If $\phi(x) = \displaystyle\int_0^{x}(x - t)\sin t\,dt$, then $\phi''''(x)$ equals'
+  options:
+  - en: '$\sin x$'
+  - en: '$x\sin x$'
+  - en: '$1 - \cos x$'
+  - en: '$x\cos x$'
+  answer: 0
+  explanation:
+    en: |-
+      Take $x$ outside: $\phi(x) = x\int_0^x\sin t\,dt - \int_0^x t\sin t\,dt$. Then
+      $$\phi'(x) = \int_0^x\sin t\,dt + x\sin x - x\sin x = 1 - \cos x, \qquad \phi''(x) = \sin x.$$
+      Check: $\phi(x) = x - \sin x$, so $\phi'' = \sin x$. $1 - \cos x$ is $\phi'$, not $\phi''$; $x\sin x$ comes from differentiating under the integral sign without taking $x$ outside.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - symmetry
+  stem:
+    en: 'For a positive integer $n$ and $0 \le v < \pi$, $\displaystyle\int_0^{n\pi + v}\lvert\sin x\rvert\,dx$ equals'
+  options:
+  - en: '$2n + \cos v$'
+  - en: '$2n - 1 + \cos v$'
+  - en: '$n + 1 - \cos v$'
+  - en: '$2n + 1 - \cos v$'
+  answer: 3
+  explanation:
+    en: |-
+      $\lvert\sin x\rvert$ has period $\pi$ with $\int_0^{\pi}\lvert\sin x\rvert\,dx = 2$. Split at $n\pi$ and shift the last piece by the period:
+      $$\int_0^{n\pi}\lvert\sin x\rvert\,dx + \int_{n\pi}^{n\pi + v}\lvert\sin x\rvert\,dx = 2n + \int_0^{v}\sin x\,dx = 2n + 1 - \cos v.$$
+      Check at $v = 0$: the value must be $2n$, and only $2n + 1 - \cos v$ gives that. $n + 1 - \cos v$ uses $1$ per period.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  - symmetry
+  stem:
+    en: 'Consider the following statements, where $f$ is continuous on $\R$:'
+  statements:
+  - en: '$\displaystyle\int_a^b f(x)\,dx = \int_a^b f(a + b - x)\,dx$ for all $a, b$.'
+  - en: 'If $f$ is odd, then $\displaystyle\int_{-a}^{a} f(x)\,dx = 2\int_0^{a} f(x)\,dx$.'
+  - en: 'If $f$ has period $T$, then $\displaystyle\int_a^{a + T} f(x)\,dx$ does not depend on $a$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      - **1 is true:** substitute $x = a + b - t$; the limits swap and $dx = -dt$ swaps them back.
+      - **2 is false:** for odd $f$ the integral is $0$; $2\int_0^a f$ is the rule for **even** $f$. Counterexample: $f(x) = x$, $a = 1$ gives $0 \ne 1$.
+      - **3 is true:** $\frac{d}{da}\int_a^{a + T} f = f(a + T) - f(a) = 0$.
+
+      So 1 and 3 only.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - mean-value-bounds
+  stem:
+    en: 'Consider the following statements about functions on $[a, b]$, $a < b$:'
+  statements:
+  - en: 'If $f$ is continuous on $[a, b]$, then $\displaystyle\int_a^b f(x)\,dx = f(\xi)(b - a)$ for some $\xi \in [a, b]$.'
+  - en: 'If $f, g$ are continuous on $[a, b]$ and $g(x) \ge 0$ there, then $\displaystyle\int_a^b f g\,dx = f(\xi)\int_a^b g\,dx$ for some $\xi \in [a, b]$.'
+  - en: 'If $f$ is merely integrable on $[a, b]$, then $\displaystyle\int_a^b f(x)\,dx = f(\xi)(b - a)$ for some $\xi \in [a, b]$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      - **1 is true:** the first mean value theorem. The average lies between $\min f$ and $\max f$, and the intermediate value theorem gives $\xi$.
+      - **2 is true:** the generalised first mean value theorem; $g$ must not change sign, and $g \ge 0$ ensures that.
+      - **3 is false:** take $f = 0$ on $[0, 1)$, $f = 1$ on $[1, 2]$. Then $\int_0^2 f = 1$, but $f(\xi)\cdot 2 = 1$ needs $f(\xi) = \frac12$, which never happens. Continuity is essential.
+
+      So 1 and 2 only.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-results
+  stem:
+    en: 'Here $\log$ is the natural logarithm. Match each integral in List I with its value in List II.'
+  left:
+  - en: '$\displaystyle\int_0^{\pi/2}\log\sin x\,dx$'
+  - en: '$\displaystyle\int_0^{\pi}\log\sin x\,dx$'
+  - en: '$\displaystyle\int_0^{\pi/2}\log\tan x\,dx$'
+  - en: '$\displaystyle\int_0^{\pi/2}\frac{\sin x}{\sin x + \cos x}\,dx$'
+  right:
+  - en: '$0$'
+  - en: '$-\pi\log 2$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$-\dfrac{\pi}{2}\log 2$'
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-4, B-1, C-2, D-3'
+  - en: 'A-4, B-2, C-1, D-3'
+  answer: 3
+  explanation:
+    en: |-
+      - A: the standard result $-\frac{\pi}{2}\log 2$: **4**.
+      - B: $\sin(\pi - x) = \sin x$, so by the $2a$ rule it is twice A, $-\pi\log 2$: **2**.
+      - C: $\int\log\tan x = \int\log\sin x - \int\log\cos x = 0$, since the last two are equal by $x \to \frac{\pi}{2} - x$: **1**.
+      - D: the $\frac{\pi}{4}$ family with $n = 1$: **3**.
+
+      So A-4, B-2, C-1, D-3. Swapping A and B is the usual slip: the longer interval doubles the value.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - sum-to-integral
+  stem:
+    en: Match each limit in List I with its value in List II.
+  left:
+  - en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{n}\frac{1}{n + r}$'
+  - en: '$\displaystyle\lim_{n\to\infty}\sum_{r=0}^{n-1}\frac{1}{\sqrt{n^2 - r^2}}$'
+  - en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{n}\frac{r^3}{n^4}$'
+  - en: '$\displaystyle\lim_{n\to\infty}\sum_{r=1}^{2n}\frac{1}{n + r}$'
+  right:
+  - en: '$\ln 3$'
+  - en: '$\dfrac{\pi}{2}$'
+  - en: '$\ln 2$'
+  - en: '$\dfrac14$'
+  options:
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-1, B-2, C-4, D-3'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 0
+  explanation:
+    en: |-
+      In each, pull out $\frac1n$ and put $\frac rn = x$.
+      - A: $\int_0^1\frac{dx}{1 + x} = \ln 2$: **3**.
+      - B: $\frac1n\sum\frac{1}{\sqrt{1 - (r/n)^2}} \to \int_0^1\frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}1 = \frac{\pi}{2}$: **2**.
+      - C: $\frac1n\sum\left(\frac rn\right)^3 \to \int_0^1 x^3\,dx = \frac14$: **4**.
+      - D: $\frac rn$ now runs up to $2$, so $\int_0^2\frac{dx}{1 + x} = \ln 3$: **1**.
+
+      So A-3, B-2, C-4, D-1. Swapping A and D comes from ignoring the upper limit $2n$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-results
+  assertion:
+    en: '$\displaystyle\int_0^{\pi} x\sin x\,dx = \pi$.'
+  reason:
+    en: 'For $f$ continuous on $[0, 1]$, $\displaystyle\int_0^{\pi} x f(\sin x)\,dx = \frac{\pi}{2}\int_0^{\pi} f(\sin x)\,dx$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** with $x \to \pi - x$, $I = \int_0^{\pi}(\pi - x)f(\sin x)\,dx$; adding gives $2I = \pi\int_0^{\pi} f(\sin x)\,dx$.
+
+      **A is true, and R explains it:** with $f(u) = u$,
+      $$\int_0^{\pi}x\sin x\,dx = \frac{\pi}{2}\int_0^{\pi}\sin x\,dx = \frac{\pi}{2}\cdot 2 = \pi.$$
+      (Integration by parts confirms: $\big[-x\cos x + \sin x\big]_0^{\pi} = \pi$.)
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - fundamental-theorem
+  - exam-tips
+  assertion:
+    en: '$\displaystyle\int_{-1}^{1}\frac{dx}{x^2} = -2$.'
+  reason:
+    en: 'If $f$ is integrable on $[a, b]$ and $\phi'' = f$ on $[a, b]$, then $\displaystyle\int_a^b f(x)\,dx = \phi(b) - \phi(a)$.'
+  answer: 3
+  explanation:
+    en: |-
+      **R is true:** it is the fundamental theorem of integral calculus.
+
+      **A is false:** $\frac{1}{x^2} > 0$, so no integral of it over $[-1, 1]$ can be negative. The computation $\left[-\frac1x\right]_{-1}^{1} = -2$ misuses R: $\frac{1}{x^2}$ is unbounded near $0$ (so not integrable on $[-1, 1]$), and $-\frac1x$ is not differentiable at $0$. In fact the improper integral diverges to $+\infty$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - properties
+  - symmetry
+  assertion:
+    en: '$\displaystyle\int_0^{\pi/2}\sin^2 x\,dx = \frac{\pi}{4}$.'
+  reason:
+    en: '$\sin^2 x$ is an even function of $x$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** with $x \to \frac{\pi}{2} - x$, $\int_0^{\pi/2}\sin^2 x\,dx = \int_0^{\pi/2}\cos^2 x\,dx$. Adding, $2I = \int_0^{\pi/2}1\,dx = \frac{\pi}{2}$, so $I = \frac{\pi}{4}$.
+
+      **R is true:** $\sin^2(-x) = \sin^2 x$.
+
+      **But R does not explain A:** evenness is about symmetry about $0$, and the interval $[0, \frac{\pi}{2}]$ is not symmetric. The reason is the $\sin \leftrightarrow \cos$ swap from $\int_0^a f(x)\,dx = \int_0^a f(a - x)\,dx$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - mean-value-bounds
+  assertion:
+    en: 'If $f$ is continuous on $[a, b]$, then $\displaystyle\int_a^b f(x)\,dx = f(\xi)(b - a)$ for some $\xi \in [a, b]$.'
+  reason:
+    en: 'If $f$ is continuous on $[a, b]$, then $\displaystyle\int_a^b f(x)\,dx = f\!\left(\frac{a + b}{2}\right)(b - a)$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** it is the first mean value theorem of integral calculus.
+
+      **R is false:** $\xi$ exists but need not be the midpoint. For $f(x) = x^2$ on $[0, 3]$: $\int_0^3 x^2\,dx = 9$, but $f(\frac32)\cdot 3 = \frac{27}{4}$. Here $\xi = \sqrt3$. (R holds for linear $f$ only.)
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - symmetry
+  assertion:
+    en: '$\displaystyle\int_0^{\pi}\cos^3 x\,dx = 0$.'
+  reason:
+    en: '$\cos^3(\pi - x) = -\cos^3 x$ for all $x$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** $\cos(\pi - x) = -\cos x$, so $\cos^3(\pi - x) = -\cos^3 x$.
+
+      **A is true, and R explains it:** by the $2a$ rule with $2a = \pi$, $\int_0^{2a} f = 0$ when $f(2a - x) = -f(x)$. Direct check: $\int_0^{\pi}\cos^3 x\,dx = \Big[\sin x - \frac{\sin^3 x}{3}\Big]_0^{\pi} = 0$.
+  status: ai-generated

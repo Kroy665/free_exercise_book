@@ -1,0 +1,683 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - standard-examples
+  stem:
+    en: 'The sum of the series $1 - \dfrac12 + \dfrac13 - \dfrac14 + \cdots$ is'
+  options:
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$1$'
+  - en: '$\dfrac{\pi^2}{12}$'
+  - en: '$\ln 2$'
+  answer: 3
+  explanation:
+    en: |-
+      The $2n$th partial sum is
+      $$S_{2n} = H_{2n} - H_n = \sum_{k=n+1}^{2n}\frac1k \to \int_1^2\frac{dx}{x} = \ln 2,$$
+      and $S_{2n+1} - S_{2n} = \frac{1}{2n+1} \to 0$. Equivalently, it is $\ln(1 + x)$ at $x = 1$.
+
+      $\frac{\pi}{4}$ is the sum of $1 - \frac13 + \frac15 - \cdots$ (odd denominators); $\frac{\pi^2}{12}$ is $\sum\frac{(-1)^{n+1}}{n^2}$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-examples
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^n}{n^p}$ is conditionally convergent if and only if'
+  options:
+  - en: '$0 < p \le 1$'
+  - en: '$p > 1$'
+  - en: '$0 < p < 1$'
+  - en: '$p \ge 1$'
+  answer: 0
+  explanation:
+    en: |-
+      - $p > 1$: $\sum\frac{1}{n^p}$ converges, so the series is **absolutely** convergent.
+      - $0 < p \le 1$: $\sum\frac1{n^p}$ diverges, but $\frac1{n^p}$ decreases to $0$, so Leibniz gives convergence: **conditional**.
+      - $p \le 0$: the terms do not tend to $0$: divergent.
+
+      The trap is $p = 1$: the alternating harmonic series is conditionally convergent, so $0 < p < 1$ misses it.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - absolute-convergence
+  stem:
+    en: 'For a series $\sum a_n$ of real terms, which of the following is always true?'
+  options:
+  - en: 'If $\sum \lvert a_n\rvert$ converges, then $\sum a_n$ converges.'
+  - en: 'If $\sum a_n$ converges, then $\sum \lvert a_n\rvert$ converges.'
+  - en: 'If $a_n \to 0$, then $\sum a_n$ converges.'
+  - en: 'If $\sum a_n$ converges, then $\sum a_n^2$ converges.'
+  answer: 0
+  explanation:
+    en: |-
+      Absolute convergence implies convergence, by Cauchy's criterion:
+      $$|a_{n+1} + \cdots + a_m| \le |a_{n+1}| + \cdots + |a_m|.$$
+
+      The others fail:
+      - $\sum\frac{(-1)^n}{n}$ converges, but $\sum\frac1n$ does not.
+      - $a_n = \frac1n \to 0$, but $\sum\frac1n$ diverges.
+      - $a_n = \frac{(-1)^n}{\sqrt n}$: $\sum a_n$ converges (Leibniz) but $\sum a_n^2 = \sum\frac1n$ diverges.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - leibniz-test
+  - exam-tips
+  stem:
+    en: 'Using the Leibniz error bound $\lvert S - S_n\rvert \le u_{n+1}$, the least $n$ for which the partial sum $S_n$ of $\displaystyle\sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}$ is guaranteed to differ from $\ln 2$ by less than $\dfrac{1}{100}$ is'
+  options:
+  - en: '$100$'
+  - en: '$99$'
+  - en: '$101$'
+  - en: '$10$'
+  answer: 0
+  explanation:
+    en: |-
+      The first omitted term is $u_{n+1} = \frac{1}{n+1}$. We need
+      $$\frac{1}{n+1} < \frac{1}{100} \iff n + 1 > 100 \iff n \ge 100.$$
+
+      $99$ gives $u_{100} = \frac1{100}$, which is not **less than** $\frac1{100}$. $10$ comes from confusing this with $\frac{1}{n^2}$-type terms.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-examples
+  - exam-tips
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}(-1)^n\frac{n}{n+1}$ is'
+  options:
+  - en: Divergent
+  - en: Conditionally convergent
+  - en: Absolutely convergent
+  - en: 'Convergent with sum $0$'
+  answer: 0
+  explanation:
+    en: |-
+      The terms $(-1)^n\frac{n}{n+1}$ have modulus $\frac{n}{n+1} \to 1$, so $a_n \not\to 0$ and the series **diverges**.
+
+      Leibniz does not apply: $\frac{n}{n+1}$ increases and does not tend to $0$. Alternating signs alone never give convergence.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-examples
+  stem:
+    en: 'The series $\displaystyle\sum_{n=2}^{\infty}\frac{(-1)^n}{\ln n}$ is'
+  options:
+  - en: Conditionally convergent
+  - en: Absolutely convergent
+  - en: Divergent
+  - en: Convergent only if grouped in pairs
+  answer: 0
+  explanation:
+    en: |-
+      - **Not absolutely:** $\ln n < n$, so $\frac{1}{\ln n} > \frac1n$, and $\sum\frac1n$ diverges.
+      - **Convergent:** $\frac1{\ln n}$ decreases to $0$, so Leibniz applies.
+
+      Hence conditionally convergent. Absolute convergence would need $|a_n|$ to be small like $\frac{1}{n^p}$, $p > 1$; $\frac{1}{\ln n}$ decays far more slowly.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - ratio-root
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{(-2)^n}{n^2}$ is'
+  options:
+  - en: Absolutely convergent
+  - en: Conditionally convergent
+  - en: Convergent by the Leibniz test
+  - en: Divergent
+  answer: 3
+  explanation:
+    en: |-
+      Ratio test on $|a_n| = \frac{2^n}{n^2}$:
+      $$\left|\frac{a_{n+1}}{a_n}\right| = 2\left(\frac{n}{n+1}\right)^2 \to 2 > 1.$$
+      A ratio limit above $1$ means $|a_n| \not\to 0$, so $\sum a_n$ itself diverges.
+
+      The Leibniz test needs $u_n = \frac{2^n}{n^2}$ decreasing to $0$; it increases without bound.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-examples
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}(-1)^n\left(\sqrt{n+1} - \sqrt n\right)$ is'
+  options:
+  - en: Absolutely convergent
+  - en: Conditionally convergent
+  - en: Divergent
+  - en: Convergent with all partial sums positive
+  answer: 1
+  explanation:
+    en: |-
+      Rationalise:
+      $$u_n = \sqrt{n+1} - \sqrt n = \frac{1}{\sqrt{n+1} + \sqrt n} \sim \frac{1}{2\sqrt n}.$$
+      - $\sum u_n$ diverges (limit comparison with $\frac1{\sqrt n}$, $p = \frac12$): not absolutely convergent.
+      - $u_n$ decreases (the denominator increases) and $u_n \to 0$: Leibniz gives convergence.
+
+      So conditionally convergent. The first partial sum is $-(\sqrt2 - 1) < 0$, so the last option fails.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - ratio-root
+  stem:
+    en: 'For $\displaystyle\sum_{n=1}^{\infty}(-1)^n\frac{n!}{n^n}$, the limit $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$ equals'
+  options:
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$0$'
+  - en: '$\dfrac1e$'
+  answer: 3
+  explanation:
+    en: |-
+      $$\left|\frac{a_{n+1}}{a_n}\right| = \frac{(n+1)!}{(n+1)^{n+1}}\cdot\frac{n^n}{n!} = \left(\frac{n}{n+1}\right)^n = \frac{1}{\left(1 + \frac1n\right)^n} \to \frac1e.$$
+      Since $\frac1e < 1$, the series converges absolutely.
+
+      $e$ is the reciprocal slip: $\left(\frac{n+1}{n}\right)^n \to e$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - interval-of-convergence
+  stem:
+    en: 'The set of real $x$ for which $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n\,2^n}$ converges is'
+  options:
+  - en: '$[-2, 2)$'
+  - en: '$(-2, 2)$'
+  - en: '$(-2, 2]$'
+  - en: '$[-2, 2]$'
+  answer: 0
+  explanation:
+    en: |-
+      Ratio test: $\left|\frac{a_{n+1}}{a_n}\right| = \frac{n}{n+1}\cdot\frac{|x|}{2} \to \frac{|x|}{2}$. So: absolute convergence for $|x| < 2$, divergence for $|x| > 2$.
+
+      Endpoints:
+      - $x = 2$: $\sum\frac1n$ diverges.
+      - $x = -2$: $\sum\frac{(-1)^n}{n}$ converges (conditionally).
+
+      So the set is $[-2, 2)$. Forgetting to test the endpoints gives $(-2, 2)$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - interval-of-convergence
+  stem:
+    en: 'The set of real $x$ for which $\displaystyle\sum_{n=1}^{\infty}\frac{(x-2)^n}{n\,3^n}$ converges is'
+  options:
+  - en: '$(-1, 5]$'
+  - en: '$[-1, 5)$'
+  - en: '$(-1, 5)$'
+  - en: '$[-3, 3)$'
+  answer: 1
+  explanation:
+    en: |-
+      Ratio limit: $\frac{|x - 2|}{3}$. So the series converges absolutely for $|x - 2| < 3$, i.e. $-1 < x < 5$.
+
+      - $x = 5$: $\sum\frac{3^n}{n3^n} = \sum\frac1n$ diverges.
+      - $x = -1$: $\sum\frac{(-3)^n}{n3^n} = \sum\frac{(-1)^n}{n}$ converges.
+
+      So $[-1, 5)$. $[-3, 3)$ forgets the centre $2$; $(-1, 5]$ swaps the endpoints.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - interval-of-convergence
+  stem:
+    en: 'The set of real $x$ for which $\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^n x^n}{\sqrt n}$ converges is'
+  options:
+  - en: '$[-1, 1)$'
+  - en: '$[-1, 1]$'
+  - en: '$(-1, 1)$'
+  - en: '$(-1, 1]$'
+  answer: 3
+  explanation:
+    en: |-
+      Ratio limit: $|x|$, so absolute convergence for $|x| < 1$ and divergence for $|x| > 1$.
+
+      - $x = 1$: $\sum\frac{(-1)^n}{\sqrt n}$ converges by Leibniz (conditionally).
+      - $x = -1$: $(-1)^n(-1)^n = 1$, so the series is $\sum\frac1{\sqrt n}$, which diverges ($p = \frac12$).
+
+      So $(-1, 1]$. The factor $(-1)^n$ moves the convergent endpoint from $-1$ to $+1$; $[-1, 1)$ is the answer for $\sum\frac{x^n}{\sqrt n}$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - interval-of-convergence
+  stem:
+    en: 'The set of real $x$ for which $\displaystyle\sum_{n=1}^{\infty}\frac{x^{2n}}{n\,4^n}$ converges is'
+  options:
+  - en: '$[-2, 2)$'
+  - en: '$(-4, 4)$'
+  - en: '$(-2, 2)$'
+  - en: '$[-2, 2]$'
+  answer: 2
+  explanation:
+    en: |-
+      Only even powers occur, so use the ratio of consecutive **terms**:
+      $$\left|\frac{a_{n+1}}{a_n}\right| = \frac{n}{n+1}\cdot\frac{x^2}{4} \to \frac{x^2}{4}.$$
+      Convergence for $x^2 < 4$, i.e. $|x| < 2$; divergence for $|x| > 2$.
+
+      At $x = \pm 2$: $x^{2n} = 4^n$, so the series is $\sum\frac1n$, which diverges at **both** endpoints.
+
+      So $(-2, 2)$. $[-2, 2)$ copies the pattern of $\sum\frac{x^n}{n}$ without noticing that $x^{2n} > 0$ at $x = -2$; $(-4, 4)$ forgets the square.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - leibniz-test
+  stem:
+    en: 'Let $u_n > 0$ and $u_n \to 0$, but suppose $(u_n)$ is **not** monotone. Then the series $\displaystyle\sum_{n=1}^{\infty}(-1)^{n+1}u_n$'
+  options:
+  - en: 'always converges, by the Leibniz test'
+  - en: always diverges
+  - en: may converge or may diverge
+  - en: 'always converges, but never absolutely'
+  answer: 2
+  explanation:
+    en: |-
+      Without monotonicity the Leibniz test does not apply, and either outcome is possible.
+
+      - **Diverges:** $u_{2k-1} = \frac1k$, $u_{2k} = \frac1{k^2}$. Pairing terms, $\sum\left(\frac1k - \frac1{k^2}\right) = \infty$.
+      - **Converges:** $u_n = \frac{2 + (-1)^n}{n^2}$ is not monotone ($u_3 = \frac19 < u_4 = \frac3{16}$), yet $u_n \le \frac3{n^2}$, so the series converges absolutely.
+
+      The second example also kills the last option.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - leibniz-test
+  stem:
+    en: '$\dfrac1e = \displaystyle\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}$ is approximated by $1 - 1 + \dfrac12 - \dfrac16$. The Leibniz test guarantees that the error is at most'
+  options:
+  - en: '$\dfrac16$'
+  - en: '$\dfrac1{24}$'
+  - en: '$\dfrac1{120}$'
+  - en: '$\dfrac1{12}$'
+  answer: 1
+  explanation:
+    en: |-
+      For $n \ge 1$, $u_n = \frac1{n!}$ decreases to $0$, so the error is at most the first omitted term:
+      $$\left|\frac1e - \left(1 - 1 + \frac12 - \frac16\right)\right| \le \frac1{4!} = \frac1{24}.$$
+      (Indeed $\frac13 - \frac1e \approx -0.0345$, and $0.0345 < \frac1{24} \approx 0.0417$.)
+
+      $\frac16$ is the last term **used**, not the first one omitted; $\frac1{120} = \frac1{5!}$ skips a term.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - abel-dirichlet
+  stem:
+    en: 'For a fixed $x$ with $0 < x < \pi$, the series $\displaystyle\sum_{n=1}^{\infty}\frac{\sin nx}{n}$ is'
+  options:
+  - en: Absolutely convergent
+  - en: Divergent
+  - en: 'Convergent only for $x = \dfrac{\pi}{2}$'
+  - en: Conditionally convergent
+  answer: 3
+  explanation:
+    en: |-
+      **Converges:** for $x \notin 2\pi\Z$, $\left|\sum_{k=1}^n \sin kx\right| \le \frac{1}{\sin(x/2)}$ (bounded), and $\frac1n$ decreases to $0$. Dirichlet's test applies. (The sum is $\frac{\pi - x}{2}$.)
+
+      **Not absolutely:** $|\sin nx| \ge \sin^2 nx = \frac{1 - \cos 2nx}{2}$. Here $\sum\frac{1}{2n}$ diverges while $\sum\frac{\cos 2nx}{2n}$ converges (Dirichlet, as $2x \notin 2\pi\Z$), so $\sum\frac{|\sin nx|}{n}$ diverges.
+
+      Hence conditionally convergent, for every $x$ in $(0, \pi)$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - abel-dirichlet
+  - exam-tips
+  stem:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{\cos nx}{n}$ converges if and only if'
+  options:
+  - en: '$x$ is not an integer multiple of $\pi$'
+  - en: '$x$ is not an integer multiple of $2\pi$'
+  - en: '$x$ is any real number'
+  - en: '$0 < x < \pi$'
+  answer: 1
+  explanation:
+    en: |-
+      - $x \notin 2\pi\Z$: the partial sums of $\sum\cos nx$ are bounded by $\frac{1}{|\sin(x/2)|}$ and $\frac1n \downarrow 0$, so Dirichlet's test gives convergence.
+      - $x = 2k\pi$: $\cos nx = 1$ and the series is $\sum\frac1n$, which diverges.
+
+      At $x = \pi$ the series is $\sum\frac{(-1)^n}{n}$, which converges, so "not a multiple of $\pi$" is wrong. Compare $\sum\frac{\sin nx}{n}$, which converges for **every** $x$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rearrangements
+  stem:
+    en: 'The rearrangement $1 + \dfrac13 - \dfrac12 + \dfrac15 + \dfrac17 - \dfrac14 + \cdots$ of $1 - \dfrac12 + \dfrac13 - \cdots$ (two positive terms, then one negative term, in turn) has sum'
+  options:
+  - en: '$\ln 2$'
+  - en: '$\dfrac12\ln 2$'
+  - en: '$\dfrac32\ln 2$'
+  - en: '$2\ln 2$'
+  answer: 2
+  explanation:
+    en: |-
+      Taking $p$ positive terms then $q$ negative terms in turn gives the sum $\ln 2 + \frac12\ln\frac pq$. With $p = 2$, $q = 1$:
+      $$\ln 2 + \frac12\ln 2 = \frac32\ln 2.$$
+
+      Derivation: after $n$ blocks the partial sum is
+      $$\Big(H_{4n} - \tfrac12 H_{2n}\Big) - \tfrac12 H_n \approx \ln 4n - \tfrac12\ln 2n - \tfrac12\ln n = \tfrac32\ln 2.$$
+
+      $\ln 2$ assumes rearranging cannot change the sum, which is true only for absolutely convergent series. $\frac12\ln 2$ is the one-positive, two-negative rearrangement.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rearrangements
+  stem:
+    en: 'The $n$th term $c_n$ ($n \ge 0$) of the Cauchy product of $\displaystyle\sum_{n=0}^{\infty}\frac1{2^n}$ with itself is'
+  options:
+  - en: '$\dfrac{1}{4^n}$'
+  - en: '$\dfrac{n}{2^n}$'
+  - en: '$\dfrac{n+1}{2^n}$'
+  - en: '$\dfrac{n+1}{4^n}$'
+  answer: 2
+  explanation:
+    en: |-
+      $$c_n = \sum_{k=0}^{n}\frac1{2^k}\cdot\frac1{2^{n-k}} = \sum_{k=0}^{n}\frac1{2^n} = \frac{n+1}{2^n}.$$
+      Check: both series converge absolutely to $2$, so by Mertens $\sum c_n = 4$, and indeed $\sum_{n\ge0}\frac{n+1}{2^n} = 4$.
+
+      $\frac1{4^n}$ multiplies term by term ($a_n b_n$), which is not the Cauchy product; $\frac{n}{2^n}$ is the off-by-one slip (there are $n + 1$ terms from $k = 0$ to $n$).
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ratio-root
+  stem:
+    en: 'For $\displaystyle\sum_{n=1}^{\infty}(-1)^n\left(\frac{n}{n+1}\right)^{n^2}$, the value of $\displaystyle\lim_{n\to\infty}\lvert a_n\rvert^{1/n}$ is'
+  options:
+  - en: '$e$'
+  - en: '$1$'
+  - en: '$\dfrac1e$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      $$|a_n|^{1/n} = \left(\frac{n}{n+1}\right)^{n} = \frac{1}{\left(1 + \frac1n\right)^n} \to \frac1e < 1,$$
+      so the series converges absolutely by the root test.
+
+      $1$ is the limit of $\frac{n}{n+1}$ itself, forgetting the exponent $n^2$; $e$ inverts the fraction.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - standard-examples
+  stem:
+    en: 'The series $\displaystyle\sum_{n=2}^{\infty}\frac{(-1)^n}{n\ln n}$ is'
+  options:
+  - en: Conditionally convergent
+  - en: Absolutely convergent
+  - en: Divergent
+  - en: Convergent by the ratio test
+  answer: 0
+  explanation:
+    en: |-
+      - **Not absolutely:** by Cauchy condensation, $\sum\frac{1}{n\ln n}$ behaves like $\sum\frac{2^k}{2^k\, k\ln 2} = \frac{1}{\ln 2}\sum\frac1k$, which diverges.
+      - **Convergent:** $n\ln n$ increases to $\infty$, so $\frac{1}{n\ln n}$ decreases to $0$; Leibniz applies.
+
+      So conditionally convergent. The ratio limit is $1$, so the ratio test decides nothing. (With $(\ln n)^2$ in place of $\ln n$, the series would be absolutely convergent.)
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - rearrangements
+  - absolute-convergence
+  stem:
+    en: 'Consider the following statements about a series $\sum a_n$ of real terms:'
+  statements:
+  - en: 'If $\sum a_n$ converges absolutely, every rearrangement of it converges to the same sum.'
+  - en: 'If $\sum a_n$ converges conditionally, then for every real $s$ some rearrangement of it converges to $s$.'
+  - en: 'If $\sum a_n$ converges, then $\sum a_n^2$ converges.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True: Dirichlet's theorem on rearrangements of absolutely convergent series.
+      2. True: Riemann's rearrangement theorem.
+      3. False: $a_n = \frac{(-1)^n}{\sqrt n}$ gives a convergent series (Leibniz), but $\sum a_n^2 = \sum\frac1n$ diverges. (Statement 3 is true for **absolutely** convergent series, since then $|a_n| < 1$ eventually and $a_n^2 \le |a_n|$.)
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - abel-dirichlet
+  - absolute-convergence
+  stem:
+    en: 'Consider the following statements about real sequences $(a_n)$ and $(b_n)$:'
+  statements:
+  - en: 'If $\sum a_n$ and $\sum b_n$ both converge, then $\sum a_n b_n$ converges.'
+  - en: 'If $\sum a_n$ converges absolutely and $(b_n)$ is bounded, then $\sum a_n b_n$ converges absolutely.'
+  - en: 'If the partial sums of $\sum a_n$ are bounded and $b_n \to 0$, then $\sum a_n b_n$ converges.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      1. False: $a_n = b_n = \frac{(-1)^n}{\sqrt n}$; both converge, but $a_n b_n = \frac1n$.
+      2. True: $|a_n b_n| \le M|a_n|$ with $M = \sup|b_n|$; use comparison.
+      3. False: Dirichlet's test also needs $(b_n)$ **monotone**. With $a_n = (-1)^n$ and $b_n = \frac{(-1)^n}{n} \to 0$: $a_n b_n = \frac1n$, and the series diverges.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-examples
+  - leibniz-test
+  stem:
+    en: Match each series in List I with its sum in List II.
+  left:
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{2n-1}$'
+  - en: '$\displaystyle\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2}$'
+  right:
+  - en: '$\dfrac1e$'
+  - en: '$\dfrac{\pi^2}{12}$'
+  - en: '$\ln 2$'
+  - en: '$\dfrac{\pi}{4}$'
+  options:
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $\ln(1 + x)$ at $x = 1$: $\ln 2$.
+      - B: $\tan^{-1}x$ at $x = 1$ (Gregory–Leibniz): $\frac{\pi}{4}$.
+      - C: $e^{x}$ at $x = -1$: $\frac1e$.
+      - D: $\sum\frac{(-1)^{n+1}}{n^2} = \left(1 - \frac{2}{2^2}\right)\sum\frac1{n^2} = \frac12\cdot\frac{\pi^2}{6} = \frac{\pi^2}{12}$.
+
+      So A-3, B-4, C-1, D-2. A and B are conditionally convergent; C and D absolutely.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - interval-of-convergence
+  stem:
+    en: 'Match each series in List I with the set of real $x$ for which it converges, in List II.'
+  left:
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^{n+1}x^n}{n}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n^2}$'
+  - en: '$\displaystyle\sum_{n=1}^{\infty}x^n$'
+  right:
+  - en: '$(-1, 1)$'
+  - en: '$[-1, 1]$'
+  - en: '$(-1, 1]$'
+  - en: '$[-1, 1)$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-4, B-2, C-3, D-1'
+  answer: 1
+  explanation:
+    en: |-
+      All four have ratio limit $|x|$, so each converges on $(-1, 1)$ and diverges for $|x| > 1$. Only the endpoints differ:
+      - A: $x = 1$ gives $\sum\frac1n$ (diverges); $x = -1$ gives $\sum\frac{(-1)^n}{n}$ (converges): $[-1, 1)$.
+      - B: $x = 1$ gives $\sum\frac{(-1)^{n+1}}{n}$ (converges); $x = -1$ gives $-\sum\frac1n$ (diverges): $(-1, 1]$.
+      - C: $\sum\frac{1}{n^2}$ converges, so both endpoints converge absolutely: $[-1, 1]$.
+      - D: at $x = \pm1$ the terms do not tend to $0$: $(-1, 1)$.
+
+      So A-4, B-3, C-2, D-1.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - leibniz-test
+  assertion:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges.'
+  reason:
+    en: 'The sequence $\left(\dfrac1n\right)$ is monotone decreasing and tends to $0$.'
+  answer: 0
+  explanation:
+    en: 'Both are true, and R is exactly the hypothesis of the Leibniz test, which gives A. So R explains A.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - absolute-convergence
+  - standard-examples
+  assertion:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^n}{n}$ is not absolutely convergent.'
+  reason:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}\frac{(-1)^n}{n}$ is convergent.'
+  answer: 1
+  explanation:
+    en: |-
+      A is true: $\sum\left|\frac{(-1)^n}{n}\right| = \sum\frac1n$ diverges.
+
+      R is true by Leibniz.
+
+      But convergence does not explain the failure of absolute convergence; that comes from the divergence of the harmonic series. Together, A and R say that the series is conditionally convergent.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - leibniz-test
+  - exam-tips
+  assertion:
+    en: 'The series $\displaystyle\sum_{n=1}^{\infty}(-1)^n\frac{n+1}{n}$ converges by the Leibniz test.'
+  reason:
+    en: 'The sequence $\left(\dfrac{n+1}{n}\right)$ is monotone decreasing.'
+  answer: 3
+  explanation:
+    en: |-
+      R is true: $\frac{n+1}{n} = 1 + \frac1n$ decreases.
+
+      A is false: $1 + \frac1n \to 1$, not $0$, so the terms do not tend to $0$ and the series diverges. Monotonicity alone is not enough for the Leibniz test; the terms must also tend to $0$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - rearrangements
+  assertion:
+    en: 'The Cauchy product of $\displaystyle\sum_{n=0}^{\infty}\frac{(-1)^n}{(n+1)^2}$ with itself converges.'
+  reason:
+    en: The Cauchy product of any two convergent series converges.
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $\sum\frac{(-1)^n}{(n+1)^2}$ converges absolutely ($p = 2$), and by Mertens' theorem the Cauchy product of an absolutely convergent series with a convergent one converges (to the product of the sums).
+
+      R is false: for $a_n = b_n = \frac{(-1)^n}{\sqrt{n+1}}$, both convergent by Leibniz,
+      $$|c_n| = \sum_{k=0}^{n}\frac{1}{\sqrt{(k+1)(n-k+1)}} \ge \frac{2(n+1)}{n+2} \to 2,$$
+      using $(k+1)(n-k+1) \le \left(\frac{n+2}{2}\right)^2$. So $c_n \not\to 0$ and the product diverges.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - ratio-root
+  - exam-tips
+  assertion:
+    en: 'If $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right| = 2$, then $\sum a_n$ diverges.'
+  reason:
+    en: 'If $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right| > 1$, then $a_n$ does not tend to $0$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is true: if the limit $L$ exceeds $1$, then $|a_{n+1}| > |a_n|$ for all large $n$, so $|a_n|$ eventually increases and cannot tend to $0$.
+
+      A follows from R: terms not tending to $0$ force divergence of $\sum a_n$ itself (not merely of $\sum|a_n|$). So R explains A.
+
+      Contrast: showing $\sum|a_n| = \infty$ by comparison would not prove that $\sum a_n$ diverges.
+  status: ai-generated
