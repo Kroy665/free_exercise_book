@@ -2,6 +2,8 @@ use crate::{CoreError, Result, SUPPORTED_LANGS};
 
 /// Exam families the user can choose in first-run setup (docs/CONTENT_STRUCTURE.md §7).
 pub const EXAM_TAGS: &[&str] = &[
+    "slst-0910",
+    "slst-1112",
     "upsc-cse",
     "wbcs",
     "state-psc",

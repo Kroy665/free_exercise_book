@@ -6,7 +6,7 @@ use std::path::PathBuf;
 const MONTH: &str = "ca.2026.10";
 
 fn content_dir() -> PathBuf {
-    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content")
+    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content")
 }
 
 #[test]

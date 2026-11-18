@@ -7,7 +7,7 @@ fn setup() -> rusqlite::Connection {
     let (mut c, _) = db::open_in_memory().unwrap();
     import::import_dir(
         &mut c,
-        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content"),
+        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content"),
     )
     .unwrap();
     c
@@ -110,7 +110,7 @@ fn index_follows_pack_install_and_remove() {
     let dir = std::env::temp_dir().join(format!("feb-search-{}", std::process::id()));
     std::fs::create_dir_all(&dir).unwrap();
     let subjects =
-        import::load_dir(&PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content")).unwrap();
+        import::load_dir(&PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content")).unwrap();
     let s = subjects.iter().find(|s| s.subject.id == "hist").unwrap();
     let u = s
         .units

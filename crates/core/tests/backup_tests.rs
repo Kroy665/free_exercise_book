@@ -18,7 +18,7 @@ fn export_reset_import_round_trip() {
     let (mut c, _) = db::open_in_memory().unwrap();
     import::import_dir(
         &mut c,
-        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content"),
+        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content"),
     )
     .unwrap();
     let mut u = db::open_user(&dir.join("user.db")).unwrap();

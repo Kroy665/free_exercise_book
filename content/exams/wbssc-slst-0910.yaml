@@ -1,0 +1,9 @@
+id: wbssc-slst-0910
+name: { en: "WBSSC SLST Mathematics (Class IX–X)", bn: "ডব্লিউবিএসএসসি এসএলএসটি গণিত (শ্রেণি নবম–দশম)" }
+duration_minutes: 90
+negative_marking: 0
+sections:
+  - { id: math, name: { en: Mathematics, bn: গণিত }, questions: 60, marks_each: 1, subjects: [math] }
+status: ai-generated          # written test only (60 marks); verify against the next WBSSC notification
+source: 2nd SLST (AT) 2025 written test as reported (60 MCQ, 12:00-13:30, no negative marking); syllabus at westbengalssc.com
+as_of: "2026-11-18"

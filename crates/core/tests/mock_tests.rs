@@ -11,7 +11,7 @@ fn setup() -> (rusqlite::Connection, rusqlite::Connection) {
     let (mut c, u) = db::open_in_memory().unwrap();
     import::import_dir(
         &mut c,
-        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content"),
+        &PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content"),
     )
     .unwrap();
     (c, u)

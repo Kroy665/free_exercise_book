@@ -410,6 +410,8 @@ export const dataApi = {
 
 /** Exam families offered in first-run setup and Settings (crates/core settings::EXAM_TAGS). */
 export const EXAMS: { id: string; label: string; hint: string }[] = [
+  { id: "slst-0910", label: "WBSSC SLST (Class IX–X)", hint: "Assistant Teacher, graduation-level syllabus" },
+  { id: "slst-1112", label: "WBSSC SLST (Class XI–XII)", hint: "Assistant Teacher, post-graduation-level syllabus" },
   { id: "upsc-cse", label: "UPSC Civil Services", hint: "IAS, IPS, IFS… (Prelims GS)" },
   { id: "wbcs", label: "WBCS", hint: "West Bengal Civil Service" },
   { id: "state-psc", label: "Other State PSC exams", hint: "State civil service exams" },

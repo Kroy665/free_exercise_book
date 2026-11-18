@@ -11,7 +11,7 @@ fn build_verify_install() {
     let status = Command::new(env!("CARGO_BIN_EXE_feb-packer"))
         .args([
             "build",
-            root.join("content").to_str().unwrap(),
+            root.join("crates/core/tests/fixtures/content").to_str().unwrap(),
             "--out",
             out.to_str().unwrap(),
         ])
@@ -56,7 +56,7 @@ fn build_verify_install() {
         Command::new(env!("CARGO_BIN_EXE_feb-packer"))
             .args([
                 "build",
-                root.join("content").to_str().unwrap(),
+                root.join("crates/core/tests/fixtures/content").to_str().unwrap(),
                 "--out",
                 out.to_str().unwrap()
             ])

@@ -4,7 +4,7 @@ use feb_core::{db, import, library, practice, settings};
 use std::path::PathBuf;
 
 fn content_dir() -> PathBuf {
-    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../content")
+    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/content")
 }
 
 fn setup() -> (rusqlite::Connection, rusqlite::Connection) {

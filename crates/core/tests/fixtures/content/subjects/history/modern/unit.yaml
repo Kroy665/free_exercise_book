@@ -1,0 +1,7 @@
+id: hist.modern
+subject: hist
+title: { en: Modern India, bn: আধুনিক ভারত, hi: आधुनिक भारत }
+order: 3
+# Test fixture: a trimmed copy of the old sample content.
+topics:
+  - hist.modern.revolt-1857
