@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "generated_at": 1794980296,
+  "min_app_version": "0.1.0",
+  "packs": [
+    {
+      "id": "math.algebra.complex-numbers",
+      "version": "0.1.0",
+      "title": {
+        "en": "Complex Numbers and De Moivre's Theorem"
+      },
+      "summary": {
+        "en": "Ordered-pair definition, modulus and amplitude, the Argand plane and loci, De Moivre's theorem, nth roots and roots of unity, and expansions of cos nθ and sin nθ."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.algebra",
+      "unit_title": {
+        "en": "Classical Algebra"
+      },
+      "unit_order": 1,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.algebra.complex-numbers@0.1.0.pack",
+      "size": 10994,
+      "sha256": "5f6279c10fb856b5db21fd5ab5c9edd3b09f4449631607bab5a0b3509da5ab56"
+    }
+  ],
+  "exams": [
+    {
+      "as_of": "2026-11-18",
+      "duration_minutes": 90,
+      "id": "wbssc-slst-0910",
+      "name": {
+        "bn": "ডব্লিউবিএসএসসি এসএলএসটি গণিত (শ্রেণি নবম–দশম)",
+        "en": "WBSSC SLST Mathematics (Class IX–X)"
+      },
+      "negative_marking": 0.0,
+      "sections": [
+        {
+          "id": "math",
+          "marks_each": 1.0,
+          "name": {
+            "bn": "গণিত",
+            "en": "Mathematics"
+          },
+          "questions": 60,
+          "subjects": [
+            "math"
+          ]
+        }
+      ],
+      "source": "2nd SLST (AT) 2025 written test as reported (60 MCQ, 12:00-13:30, no negative marking); syllabus at westbengalssc.com",
+      "status": "ai-generated"
+    },
+    {
+      "as_of": "2026-11-18",
+      "duration_minutes": 90,
+      "id": "wbssc-slst-1112",
+      "name": {
+        "bn": "ডব্লিউবিএসএসসি এসএলএসটি গণিত (শ্রেণি একাদশ–দ্বাদশ)",
+        "en": "WBSSC SLST Mathematics (Class XI–XII)"
+      },
+      "negative_marking": 0.0,
+      "sections": [
+        {
+          "id": "math",
+          "marks_each": 1.0,
+          "name": {
+            "bn": "গণিত",
+            "en": "Mathematics"
+          },
+          "questions": 60,
+          "subjects": [
+            "math"
+          ]
+        }
+      ],
+      "source": "2nd SLST (AT) 2025 written test as reported (60 MCQ, 12:00-13:30, no negative marking); syllabus at westbengalssc.com",
+      "status": "ai-generated"
+    }
+  ]
+}
