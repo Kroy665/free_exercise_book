@@ -1,0 +1,18 @@
+id: math.algebra.complex-numbers
+title:
+  en: Complex Numbers and De Moivre's Theorem
+summary:
+  en: Ordered-pair definition, modulus and amplitude, the Argand plane and loci, De Moivre's theorem, nth roots and roots of unity, and expansions of cos nθ and sin nθ.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: []
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. K. Mapa, Higher Algebra (Classical), ch. on complex numbers and De Moivre's theorem
+  - S. Barnard and J. M. Child, Higher Algebra, ch. on complex numbers
+  - "R. V. Churchill and J. W. Brown, Complex Variables and Applications, ch. 1"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) A.1 and (PG) A.2
+retired: []

@@ -1,0 +1,7 @@
+id: math.algebra
+subject: math
+title: { en: Classical Algebra }
+order: 1
+# Planned topics: docs/SYLLABUS.md (Block 1). Only written topics are listed.
+topics:
+  - math.algebra.complex-numbers

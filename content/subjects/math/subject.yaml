@@ -1,0 +1,5 @@
+id: math
+title: { en: Mathematics }
+order: 1
+# Units in study order (docs/SYLLABUS.md). A unit appears in the app once it has a topic.
+units: [math.algebra, math.linalg, math.analysis, math.integral, math.ode, math.geometry, math.vectors, math.modalg, math.lpp, math.numerical, math.probability, math.mechanics]
