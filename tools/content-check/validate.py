@@ -5,7 +5,7 @@ import sys, json, re, pathlib, collections, yaml
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 import unicodedata
-REQUIRED_LANGS = ["en", "bn"]
+REQUIRED_LANGS = ["en"]  # other languages (bn, hi) are optional; if present they must match en
 def walk(o, path=""):
     if isinstance(o, dict):
         for k, v in o.items(): yield from walk(v, f"{path}.{k}")
@@ -61,7 +61,8 @@ for t in root.glob("subjects/*/*/*/topic.yaml"):
     qs, good = check("question.schema.json", t.parent/"questions.yaml"); ok &= good
     if qs is None: continue
     anchors = None
-    for lang in REQUIRED_LANGS:
+    extra = sorted(p.name.split(".")[1] for p in t.parent.glob("notes.*.md") if p.name != "notes.en.md")
+    for lang in REQUIRED_LANGS + extra:
         note = t.parent/f"notes.{lang}.md"
         if not note.exists(): print(f"ERR missing {note}"); ok = False; continue
         text = note.read_text()

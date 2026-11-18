@@ -18,7 +18,7 @@ Readers who studied mathematics to B.Sc./M.Sc. level and are **revising**, not l
 | 3 | Full-length mock tests (60 Q) and topic-mixed revision sets | ongoing | n/a |
 
 ## How content is produced (one topic per day)
-1. **Write** `topic.yaml`, `notes.en.md`, `notes.bn.md` (same anchors; formulas in LaTeX `$…$` / `$$…$$`) and `questions.yaml` (30 MCQs, mostly `single`, with some `statements`, `match` and `assertion-reason`; numerical answers worked out step by step in `explanation`).
+1. **Write** `topic.yaml`, `notes.en.md` (English only for now; formulas in LaTeX `$…$` / `$$…$$`) and `questions.yaml` (30 MCQs, mostly `single`, with some `statements`, `match` and `assertion-reason`; numerical answers worked out step by step in `explanation`).
 2. **Verify** in a separate pass: every numerical answer recomputed independently (by hand and with a quick script where possible), exactly one correct option, theorem statements checked against standard texts.
 3. **Validate** with `python3 -I tools/content-check/validate.py content`, add the topic to its `unit.yaml`, mark it ✅ here, open a pull request.
 

@@ -3,7 +3,7 @@
   "$id": "localized.schema.json",
   "title": "Localized text",
   "type": "object",
-  "required": ["en", "bn"],
+  "required": ["en"],
   "properties": {
     "en": { "type": "string", "minLength": 1 },
     "bn": { "type": "string", "minLength": 1 }

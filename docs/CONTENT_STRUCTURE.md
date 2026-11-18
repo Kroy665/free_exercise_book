@@ -8,7 +8,7 @@ How study content is organised, identified and formatted in `content/`. Editoria
 - **Validated by schema.** YAML files are validated in CI against JSON Schemas in `content/schema/`.
 - **Stable IDs.** Every subject, unit, topic, note section and question has a permanent ID. IDs are never reused or renamed. Deprecate instead.
 - **One topic = one folder.** It holds notes and questions together, so reviewers see both.
-- **Bilingual by design.** Launch languages are **English (`en`) and Bengali (`bn`)**. Notes have one file per language (`notes.en.md`, `notes.bn.md`) with **identical section anchors**. Questions keep all languages in one file, so translations cannot drift apart. CI fails if a topic is not complete in both `en` and `bn`. Other languages (`hi`, …) are optional extras.
+- **English required, other languages optional.** Every topic must be complete in **English (`en`)**. Bengali (`bn`), Hindi (`hi`) and others are optional: one notes file per language (`notes.en.md`, `notes.bn.md`) with **identical section anchors**, and questions keep all languages in one file so translations cannot drift apart. If a translation exists, the validator checks it matches English. The app falls back to English when the chosen language is missing.
 
 ## 2. Hierarchy
 
@@ -144,7 +144,7 @@ Tables use GitHub-flavoured Markdown. Images: `![Alt text required](assets/map-1
 
 ## 7. Questions (`questions.yaml`)
 
-All languages live in one file. **`en` and `bn` are required** on every localized field. Other languages are optional, and a language is used only when its item is complete.
+All languages live in one file. **`en` is required** on every localized field; `bn` and others are optional. Other languages are optional, and a language is used only when its item is complete.
 
 ### Common fields
 | Field | Required | Notes |

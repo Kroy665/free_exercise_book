@@ -26,6 +26,6 @@ pub mod srs;
 pub use error::{CoreError, Result};
 
 /// Languages every topic must be complete in (docs/CONTENT_STRUCTURE.md §1).
-pub const REQUIRED_LANGS: &[&str] = &["en", "bn"];
+pub const REQUIRED_LANGS: &[&str] = &["en"];
 /// Languages the app can show content in.
 pub const SUPPORTED_LANGS: &[&str] = &["en", "bn", "hi"];
