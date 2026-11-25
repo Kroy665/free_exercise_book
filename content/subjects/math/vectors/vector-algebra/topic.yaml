@@ -1,0 +1,18 @@
+id: math.vectors.vector-algebra
+title:
+  en: Vector Algebra
+summary:
+  en: Free and position vectors, linear combinations, collinearity and coplanarity, the section formula, scalar and vector products with projection and area, scalar and vector triple products, Lagrange's identity and products of four vectors.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.determinants]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Shanti Narayan and P. K. Mittal, A Textbook of Vector Analysis, ch. 1–2
+  - M. R. Spiegel, Vector Analysis (Schaum's Outline), ch. 1–2
+  - B. Spain, Vector Analysis, ch. 1
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) VI and (PG) V.1
+retired: []

@@ -1,0 +1,728 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-1112
+  refs:
+  - standard-surfaces
+  stem:
+    en: 'The surface $\dfrac{x^2}{4} + \dfrac{y^2}{9} - \dfrac{z^2}{16} = 1$ is'
+  options:
+  - en: a hyperboloid of two sheets
+  - en: an elliptic cone
+  - en: an elliptic paraboloid
+  - en: a hyperboloid of one sheet
+  answer: 3
+  explanation:
+    en: |-
+      Count the positive squares on the left of $\ldots = 1$: there are **two** ($x^2$ and $y^2$), so it is a **hyperboloid of one sheet**.
+
+      - One positive square would give two sheets.
+      - A cone needs $0$ on the right.
+      - A paraboloid has a **linear** term in one variable.
+
+      Check: every section $z = k$ is the real ellipse $\frac{x^2}{4} + \frac{y^2}{9} = 1 + \frac{k^2}{16}$, so the surface is connected.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-surfaces
+  - non-central
+  stem:
+    en: 'The surface $z = x^2 - y^2$ is'
+  options:
+  - en: an elliptic paraboloid
+  - en: a hyperbolic paraboloid
+  - en: a hyperbolic cylinder
+  - en: a hyperboloid of one sheet
+  answer: 1
+  explanation:
+    en: |-
+      It has the form $\frac{x^2}{a^2} - \frac{y^2}{b^2} = \frac{2z}{c}$: two squares of **opposite** sign, equal to a linear term in the third variable. That is a **hyperbolic paraboloid** (saddle).
+
+      - An elliptic paraboloid needs both squares of the same sign.
+      - A cylinder would have a variable missing.
+      - A hyperboloid has all three squares and a constant.
+
+      The sections $z = k$ are hyperbolas, and the sections $x = k$ are parabolas.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - general-equation
+  stem:
+    en: 'The symmetric matrix $A$ of the quadratic part of $x^2 - 2y^2 + 3z^2 - 4yz + 6zx - 2xy + 4x - 6 = 0$ is'
+  options:
+  - en: '$\begin{pmatrix} 1 & -1 & 3\\ -1 & -2 & -2\\ 3 & -2 & 3\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 1 & -2 & 6\\ -2 & -2 & -4\\ 6 & -4 & 3\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 1 & -1 & -2\\ -1 & -2 & 3\\ -2 & 3 & 3\end{pmatrix}$'
+  - en: '$\begin{pmatrix} 1 & 1 & 3\\ 1 & -2 & -2\\ 3 & -2 & 3\end{pmatrix}$'
+  answer: 0
+  explanation:
+    en: |-
+      Diagonal: $a = 1$, $b = -2$, $c = 3$. Halve each cross coefficient: $h = -1$ (from $-2xy$), $f = -2$ (from $-4yz$), $g = 3$ (from $6zx$). With $A = \begin{pmatrix} a & h & g\\ h & b & f\\ g & f & c\end{pmatrix}$:
+      $$A = \begin{pmatrix} 1 & -1 & 3\\ -1 & -2 & -2\\ 3 & -2 & 3\end{pmatrix}.$$
+
+      - The second matrix forgets to halve.
+      - The third puts $f$ and $g$ in each other's places: $g$ belongs at positions $(1,3)$ and $(3,1)$.
+      - The last has the sign of $h$ wrong: the term is $-2xy$, so $h = -1$.
+
+      The linear terms and the constant go only into the $4\times4$ matrix $E$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - invariants
+  stem:
+    en: 'The axes are rotated about the origin, and $ax^2 + by^2 + cz^2 + 2fyz + 2gzx + 2hxy + 2ux + 2vy + 2wz + d = 0$ becomes $a''X^2 + b''Y^2 + c''Z^2 + \cdots = 0$. Which of the following is always equal to its new value?'
+  options:
+  - en: '$a + b$'
+  - en: '$abc$'
+  - en: '$a + b + c$'
+  - en: '$f + g + h$'
+  answer: 2
+  explanation:
+    en: |-
+      Under a rotation $A' = P^TAP$ with $P$ orthogonal, so $A'$ has the same eigenvalues as $A$. Hence the **trace**
+      $$a + b + c = \lambda_1 + \lambda_2 + \lambda_3$$
+      is invariant. (So are $J = bc + ca + ab - f^2 - g^2 - h^2$ and $D = \det A$.)
+
+      $a + b$ is invariant only for rotations about the $z$-axis. $abc$ is not $\det A$ unless $f = g = h = 0$. Example: $2xy$ (with $abc = 0$) becomes $X^2 - Y^2$ after a $45^\circ$ rotation about the $z$-axis, but $a + b + c = 0$ stays $0$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - standard-surfaces
+  stem:
+    en: 'In three-dimensional space, the equation $4x^2 + 9y^2 = 36$ represents'
+  options:
+  - en: 'an elliptic cylinder with generators parallel to the $z$-axis'
+  - en: 'an ellipse in the plane $z = 0$'
+  - en: an ellipsoid
+  - en: an elliptic cone with vertex at the origin
+  answer: 0
+  explanation:
+    en: |-
+      $z$ is absent, so if $(x, y, 0)$ satisfies the equation, so does $(x, y, z)$ for every $z$. The surface is the ellipse $\frac{x^2}{9} + \frac{y^2}{4} = 1$ moved along the $z$-axis: an **elliptic cylinder**.
+
+      An ellipse in space needs **two** equations, for example $4x^2 + 9y^2 = 36,\ z = 0$. An ellipsoid needs a $z^2$ term. A cone needs a homogeneous equation (constant $0$).
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - invariants
+  - standard-surfaces
+  stem:
+    en: 'For the ellipsoid $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$, the value of the discriminant $\Delta$ (the determinant of the $4\times4$ matrix of the equation written as $\ldots - 1 = 0$) is'
+  options:
+  - en: '$\dfrac{1}{a^2b^2c^2}$'
+  - en: '$0$'
+  - en: '$-\dfrac{1}{a^2b^2c^2}$'
+  - en: '$-a^2b^2c^2$'
+  answer: 2
+  explanation:
+    en: |-
+      Write it as $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$. There are no cross or linear terms, so
+      $$E = \operatorname{diag}\left(\tfrac{1}{a^2}, \tfrac{1}{b^2}, \tfrac{1}{c^2}, -1\right), \qquad \Delta = -\frac{1}{a^2b^2c^2}.$$
+
+      $0$ would mean a degenerate quadric (cone, cylinder, planes). The positive value forgets $d = -1$. $-a^2b^2c^2$ uses the semi-axes instead of the coefficients.
+
+      The sign agrees with the rule that a real ellipsoid has $\Delta < 0$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - invariants
+  stem:
+    en: 'For the quadric $3x^2 + 3y^2 + 2z^2 + 2xy = 4$, the invariant $J = bc + ca + ab - f^2 - g^2 - h^2$ equals'
+  options:
+  - en: '$21$'
+  - en: '$17$'
+  - en: '$16$'
+  - en: '$20$'
+  answer: 3
+  explanation:
+    en: |-
+      $a = 3$, $b = 3$, $c = 2$, $f = g = 0$, and $h = 1$ (half of $2$):
+      $$J = 3\cdot2 + 2\cdot3 + 3\cdot3 - 1 = 20.$$
+
+      - $21$ forgets $h^2$.
+      - $17$ uses $h = 2$, without halving.
+      - $16$ is $D = \det A$.
+
+      Check: the eigenvalues are $4, 2, 2$, and $4\cdot2 + 2\cdot2 + 2\cdot4 = 20$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - central-reduction
+  - invariants
+  stem:
+    en: 'By a rotation of axes, $3x^2 + 3y^2 + 2z^2 + 2xy = 4$ reduces to'
+  options:
+  - en: '$5X^2 + Y^2 + 2Z^2 = 4$'
+  - en: '$4X^2 - 2Y^2 + 2Z^2 = 4$'
+  - en: '$4X^2 + 2Y^2 + 2Z^2 = 4$'
+  - en: '$3X^2 + 3Y^2 + 2Z^2 = 4$'
+  answer: 2
+  explanation:
+    en: |-
+      $A = \begin{pmatrix} 3 & 1 & 0\\ 1 & 3 & 0\\ 0 & 0 & 2\end{pmatrix}$. The $xy$-block has eigenvalues $3 \pm 1 = 4, 2$, and $z$ gives $2$. So
+      $$4X^2 + 2Y^2 + 2Z^2 = 4 \iff X^2 + \frac{Y^2}{2} + \frac{Z^2}{2} = 1,$$
+      a spheroid (an ellipsoid of revolution).
+
+      - $5, 1, 2$ come from the unhalved block $\begin{pmatrix} 3 & 2\\ 2 & 3\end{pmatrix}$. It has the right trace $8$, but its product is $10 \ne D = 16$.
+      - The form with $-2Y^2$ fails the trace test ($4 \ne 8$).
+      - The last option ignores the $xy$-term.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - central-reduction
+  stem:
+    en: 'The centre of the quadric $2x^2 + 2y^2 + z^2 + 2xy - 2x + 2y - 4z + 3 = 0$ is'
+  options:
+  - en: '$(1, -1, 2)$'
+  - en: '$(-1, 1, -2)$'
+  - en: '$(2, -2, 4)$'
+  - en: '$\left(\tfrac12, -\tfrac12, 1\right)$'
+  answer: 0
+  explanation:
+    en: |-
+      The centre solves $\tfrac12F_x = \tfrac12F_y = \tfrac12F_z = 0$:
+      $$2x + y - 1 = 0, \qquad x + 2y + 1 = 0, \qquad z - 2 = 0.$$
+      The first two give $x = 1$, $y = -1$, and the third gives $z = 2$. The centre is $(1, -1, 2)$.
+
+      - $(-1, 1, -2)$ has every sign reversed: it solves $AX_0 = L$ instead of $AX_0 = -L$.
+      - $(2, -2, 4)$ forgets to halve the linear coefficients: it takes $(u, v, w) = (-2, 2, -4)$, i.e. solves $AX_0 = -2L$.
+      - The last option halves the answer.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - central-reduction
+  stem:
+    en: 'The quadric $2x^2 + 2y^2 + z^2 + 2xy - 2x + 2y - 4z + 3 = 0$ (centre $(1, -1, 2)$), referred to its principal axes through the centre, becomes'
+  options:
+  - en: '$3X^2 + Y^2 + Z^2 = 9$'
+  - en: '$3X^2 + Y^2 + Z^2 + 3 = 0$'
+  - en: '$2X^2 + 2Y^2 + Z^2 = 3$'
+  - en: '$3X^2 + Y^2 + Z^2 = 3$'
+  answer: 3
+  explanation:
+    en: |-
+      **Constant.** Here $L = (u, v, w) = (-1, 1, -2)$ and $d = 3$, so
+      $$d' = ux_0 + vy_0 + wz_0 + d = -1 - 1 - 4 + 3 = -3.$$
+      Check: $D = 3$, $\Delta = -9$, and $\Delta/D = -3$.
+
+      **Eigenvalues.** The $xy$-block $\begin{pmatrix} 2 & 1\\ 1 & 2\end{pmatrix}$ gives $3, 1$, and $z$ gives $1$.
+
+      So $3X^2 + Y^2 + Z^2 - 3 = 0$, i.e. $X^2 + \frac{Y^2}{3} + \frac{Z^2}{3} = 1$: a spheroid.
+
+      - $= 9$ uses $\Delta$ instead of $\Delta/D$.
+      - $+3 = 0$ has the sign of $d'$ reversed (it has no real points).
+      - The last option ignores the $xy$-term.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - classification
+  - central-reduction
+  stem:
+    en: 'The surface $x^2 + 4yz = 4$ is'
+  options:
+  - en: a hyperboloid of two sheets
+  - en: a hyperbolic paraboloid
+  - en: a hyperbolic cylinder
+  - en: a hyperboloid of one sheet
+  answer: 3
+  explanation:
+    en: |-
+      $A = \begin{pmatrix} 1 & 0 & 0\\ 0 & 0 & 2\\ 0 & 2 & 0\end{pmatrix}$, with eigenvalues $1$ and $\pm 2$ (the $yz$-block has eigenvalues $\pm f = \pm 2$). There are no linear terms, so the centre is $O$, and
+      $$X^2 + 2Y^2 - 2Z^2 = 4.$$
+      Two positive squares, so it is a **hyperboloid of one sheet**.
+
+      - Two sheets would need two negative eigenvalues.
+      - There is no linear term and $D = -4 \ne 0$, so it is not a paraboloid or a cylinder.
+
+      Check: $\Delta = D\cdot(-4) = 16 > 0$, as expected for a hyperboloid of one sheet.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangent-planes
+  stem:
+    en: 'The tangent plane to $x^2 + 2y^2 - z^2 = 2$ at $(1, 1, 1)$ is'
+  options:
+  - en: '$x + 2y - z = 0$'
+  - en: '$x + 2y + z = 4$'
+  - en: '$2x + 4y - 2z = 2$'
+  - en: '$x + 2y - z = 2$'
+  answer: 3
+  explanation:
+    en: |-
+      Replace $x^2 \to x x_1$, and so on:
+      $$x\cdot1 + 2y\cdot1 - z\cdot1 = 2 \;\Rightarrow\; x + 2y - z = 2.$$
+      Check: $(1, 1, 1)$ lies on it ($1 + 2 - 1 = 2$).
+
+      - $x + 2y - z = 0$ passes through the centre, not through $P$.
+      - $x + 2y + z = 4$ has a sign slip in the $z^2$ term.
+      - $2x + 4y - 2z = 2$ uses the gradient but keeps the right-hand side $2$. It misses $P$, because $2 + 4 - 2 = 4 \ne 2$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-planes
+  stem:
+    en: 'The plane $x + y + z = k$ ($k > 0$) touches the ellipsoid $\dfrac{x^2}{4} + \dfrac{y^2}{9} + \dfrac{z^2}{12} = 1$ when $k$ equals'
+  options:
+  - en: '$\dfrac23$'
+  - en: '$25$'
+  - en: '$\sqrt{13}$'
+  - en: '$5$'
+  answer: 3
+  explanation:
+    en: |-
+      For $\frac{x^2}{A^2} + \frac{y^2}{B^2} + \frac{z^2}{C^2} = 1$, the plane $lx + my + nz = p$ touches when $A^2l^2 + B^2m^2 + C^2n^2 = p^2$:
+      $$k^2 = 4 + 9 + 12 = 25 \;\Rightarrow\; k = 5.$$
+      The point of contact is $\left(\frac{4}{5}, \frac{9}{5}, \frac{12}{5}\right)$.
+
+      - $\frac23 = \sqrt{\frac14 + \frac19 + \frac1{12}}$ divides by the squares instead of multiplying.
+      - $25$ is $k^2$.
+      - $\sqrt{13}$ drops the $z$-term.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - tangent-planes
+  stem:
+    en: 'The point $(1, 1, 1)$ lies on $x^2 + 2y^2 - z^2 + 4xy - 2x + 2z - 6 = 0$. The tangent plane there is'
+  options:
+  - en: '$3x + 4y - z = 6$'
+  - en: '$x + 2y = 0$'
+  - en: '$x + 2y = 3$'
+  - en: '$2x + y = 3$'
+  answer: 2
+  explanation:
+    en: |-
+      $\tfrac12F_x = x + 2y - 1$, $\tfrac12F_y = 2x + 2y$, $\tfrac12F_z = -z + 1$. At $(1, 1, 1)$ these are $2, 4, 0$. So the tangent plane is
+      $$2(x - 1) + 4(y - 1) + 0 = 0 \;\Rightarrow\; x + 2y = 3.$$
+      The substitution rule gives the same result: $x + 2y - z + 2(x + y) - (x + 1) + (z + 1) - 6 = 2x + 4y - 6 = 0$.
+
+      - $3x + 4y - z = 6$ uses only the quadratic part's gradient $(6, 8, -2)$ and forgets the linear terms.
+      - $x + 2y = 0$ does not pass through $P$.
+      - $2x + y = 3$ swaps the coefficients.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - non-central
+  stem:
+    en: 'The surface $x^2 + 2xy + y^2 - 4z = 0$ is'
+  options:
+  - en: an elliptic paraboloid
+  - en: a parabolic cylinder
+  - en: a hyperbolic paraboloid
+  - en: a cone
+  answer: 1
+  explanation:
+    en: |-
+      The quadratic part is a perfect square: $(x + y)^2 = 4z$. So $A$ has rank $1$ (eigenvalues $2, 0, 0$).
+
+      Rotate so that $X = \frac{x + y}{\sqrt2}$. Then $2X^2 = 4z$: a parabola in the $Xz$-plane, extended along the direction $(1, -1, 0)$. This is a **parabolic cylinder**.
+
+      - A paraboloid needs rank $A = 2$.
+      - A cone needs $D \ne 0$ (or at least a homogeneous equation). The term $-4z$ makes this equation non-homogeneous.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - non-central
+  - classification
+  stem:
+    en: 'The quadric $x^2 + y^2 + z^2 + 2xy + 2x - 2y = 0$, referred to suitable rectangular axes, becomes'
+  options:
+  - en: '$2X^2 + Y^2 = 4Z$'
+  - en: '$2X^2 + Y^2 = 2\sqrt2\,Z$'
+  - en: '$2X^2 - Y^2 = 2\sqrt2\,Z$'
+  - en: '$2X^2 + Y^2 = 2Z$'
+  answer: 1
+  explanation:
+    en: |-
+      $A = \begin{pmatrix} 1 & 1 & 0\\ 1 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}$ has eigenvalues $2, 1, 0$, so $D = 0$. The unit eigenvector for $0$ is $n = \frac{1}{\sqrt2}(1, -1, 0)$.
+
+      $L = (1, -1, 0)$, so $p = L\cdot n = \sqrt2$. Check: $\Delta = -4$, and
+      $$p^2 = -\frac{\Delta}{\lambda_1\lambda_2} = -\frac{-4}{2} = 2.$$
+      Hence $2X^2 + Y^2 + 2\sqrt2\,Z' = 0$, i.e. (reversing $Z$) $2X^2 + Y^2 = 2\sqrt2\,Z$: an **elliptic paraboloid**.
+
+      - $4Z$ uses the non-unit vector $(1, -1, 0)$, so $p = 2$.
+      - The minus sign contradicts both nonzero eigenvalues being positive.
+      - $2Z$ takes $p = 1$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - classification
+  stem:
+    en: 'The equation $x^2 + y^2 - z^2 - 2x + 4y + 2z + 4 = 0$ represents'
+  options:
+  - en: 'a hyperboloid of one sheet with centre $(1, -2, 1)$'
+  - en: 'a hyperboloid of two sheets with centre $(1, -2, 1)$'
+  - en: 'a cone with vertex $(1, -2, 1)$'
+  - en: 'a cone with vertex $(-1, 2, -1)$'
+  answer: 2
+  explanation:
+    en: |-
+      Complete the squares:
+      $$(x - 1)^2 + (y + 2)^2 - (z - 1)^2 = -4 + 1 + 4 - 1 = 0.$$
+      The constant after the shift is $0$, i.e. $\Delta = 0$ with $D = -1 \ne 0$. So it is a **cone** with vertex at the centre $(1, -2, 1)$.
+
+      - Hyperboloids need a nonzero constant ($+1$ would give one sheet, $-1$ two sheets).
+      - $(-1, 2, -1)$ has the sign of the shift reversed.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - non-central
+  - classification
+  stem:
+    en: 'The equation $x^2 + y^2 + z^2 + 2xy + 2yz + 2zx = 1$ represents'
+  options:
+  - en: a pair of intersecting planes
+  - en: a pair of parallel planes
+  - en: a sphere
+  - en: a parabolic cylinder
+  answer: 1
+  explanation:
+    en: |-
+      The left side is $(x + y + z)^2$, so the equation is $x + y + z = \pm 1$: **two parallel planes**.
+
+      In terms of ranks: $A$ is the all-ones matrix, with rank $1$, and $E$ has rank $2$.
+
+      - Intersecting planes need rank $A = 2$.
+      - A sphere has no cross terms.
+      - A parabolic cylinder (rank $E = 3$) needs a linear term that is not a multiple of $x + y + z$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - classification
+  - central-reduction
+  stem:
+    en: 'The equation $2xy + 2yz + 2zx - 4z + k = 0$ represents a cone if $k$ equals'
+  options:
+  - en: '$-2$'
+  - en: '$2$'
+  - en: '$0$'
+  - en: '$-4$'
+  answer: 0
+  explanation:
+    en: |-
+      $A = \begin{pmatrix} 0 & 1 & 1\\ 1 & 0 & 1\\ 1 & 1 & 0\end{pmatrix}$, with $D = 2 \ne 0$, so there is a unique centre. Solve $AX_0 = -L = (0, 0, 2)$:
+      $$y + z = 0, \qquad x + z = 0, \qquad x + y = 2.$$
+      This gives $(1, 1, -1)$. The constant after the shift is
+      $$d' = wz_0 + k = (-2)(-1) + k = k + 2.$$
+      It is a cone (with vertex $(1, 1, -1)$) exactly when $d' = 0$, i.e. $\Delta = 0$: $k = -2$.
+
+      - $k = 2$ has the sign of $wz_0$ reversed.
+      - $k = 0$ would be right only if the vertex were the origin.
+      - $k = -4$ forgets to halve $-4z$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangent-planes
+  stem:
+    en: 'The plane $lx + my + nz = p$ touches the central conicoid $ax^2 + by^2 + cz^2 = 1$ if and only if'
+  options:
+  - en: '$\dfrac{l^2}{a} + \dfrac{m^2}{b} + \dfrac{n^2}{c} = p^2$'
+  - en: '$al^2 + bm^2 + cn^2 = p^2$'
+  - en: '$\dfrac{l^2}{a} + \dfrac{m^2}{b} + \dfrac{n^2}{c} = p$'
+  - en: '$al^2 + bm^2 + cn^2 = \dfrac{1}{p^2}$'
+  answer: 0
+  explanation:
+    en: |-
+      The tangent plane at $(\alpha, \beta, \gamma)$ is $a\alpha x + b\beta y + c\gamma z = 1$. Matching it with $lx + my + nz = p$ gives $\alpha = \frac{l}{ap}$, $\beta = \frac{m}{bp}$, $\gamma = \frac{n}{cp}$. Substituting into $a\alpha^2 + b\beta^2 + c\gamma^2 = 1$:
+      $$\frac{l^2}{a} + \frac{m^2}{b} + \frac{n^2}{c} = p^2.$$
+
+      $al^2 + \cdots = p^2$ is the tempting slip. It is the right form only when written with semi-axes ($a = 1/A^2$). The other two options are not homogeneous of degree $2$ in $(l, m, n, p)$, as a tangency condition must be.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - central-reduction
+  stem:
+    en: 'The longest axis of the ellipsoid $2x^2 + 5y^2 + 3z^2 + 4xy = 6$ lies along the line'
+  options:
+  - en: '$\dfrac{x}{2} = \dfrac{y}{-1}$, $z = 0$'
+  - en: '$\dfrac{x}{1} = \dfrac{y}{2}$, $z = 0$'
+  - en: 'the $z$-axis'
+  - en: '$x = y$, $z = 0$'
+  answer: 0
+  explanation:
+    en: |-
+      $A = \begin{pmatrix} 2 & 2 & 0\\ 2 & 5 & 0\\ 0 & 0 & 3\end{pmatrix}$. The $xy$-block has $\lambda^2 - 7\lambda + 6 = 0$, so $\lambda = 1, 6$; the $z$-eigenvalue is $3$. The reduced form is
+      $$X^2 + 6Y^2 + 3Z^2 = 6,$$
+      with semi-axes $\sqrt6, 1, \sqrt2$. The longest one belongs to the **smallest** eigenvalue $\lambda = 1$. Its eigenvector solves $(2 - 1)x + 2y = 0$, giving $(2, -1, 0)$.
+
+      - $(1, 2, 0)$ is the eigenvector for $\lambda = 6$: the **shortest** axis.
+      - The $z$-axis carries the middle axis $\sqrt2$.
+      - $x = y$ is not an eigenvector, because $a \ne b$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - invariants
+  stem:
+    en: 'Consider $ax^2 + by^2 + cz^2 + 2fyz + 2gzx + 2hxy + 2ux + 2vy + 2wz + d = 0$, with $A$ the matrix of its quadratic part, $D = \det A$ and $\Delta$ the determinant of its $4\times4$ matrix.'
+  statements:
+  - en: '$a + b + c$ is unchanged by any rotation of rectangular axes about the origin.'
+  - en: '$\Delta$ is unchanged by any translation of the origin.'
+  - en: '$D$ changes, in general, when the origin is translated.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. **True.** $A' = P^TAP$, so the trace is preserved.
+      2. **True.** $E' = T^TET$ with $T = \begin{pmatrix} I & t\\ 0 & 1\end{pmatrix}$, and $\det T = 1$.
+      3. **False.** A translation $x = X + \alpha$, and so on, does not change the second-degree coefficients $a, b, c, f, g, h$. So $A$, and with it $D$, is unchanged. Only $u, v, w, d$ change.
+
+      For example, shifting $x^2 + y^2 - z^2 - 1 = 0$ to $(1, 2, 3)$ changes the linear terms, but $D = -1$ and $\Delta = 1$ both stay.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - central-reduction
+  - non-central
+  - standard-surfaces
+  stem:
+    en: Consider the following statements about quadrics.
+  statements:
+  - en: 'If $D = \det A \ne 0$, the quadric has exactly one centre.'
+  - en: 'The elliptic paraboloid $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{2z}{c}$ has a unique centre.'
+  - en: 'The plane $x = k$ meets the hyperboloid $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$ in a real curve only if $\lvert k\rvert \ge a$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      1. **True.** The centre solves $AX_0 = -L$, which has a unique solution when $\det A \ne 0$.
+      2. **False.** Here $\tfrac12F_z$ is the constant $-\frac{1}{c} \ne 0$, so the centre equations are inconsistent. A paraboloid has **no** centre ($D = 0$).
+      3. **True.** Putting $x = k$ gives $\frac{y^2}{b^2} + \frac{z^2}{c^2} = \frac{k^2}{a^2} - 1$. This has real points only when $\lvert k\rvert \ge a$, which is the gap between the two sheets.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - standard-surfaces
+  stem:
+    en: 'Match each equation ($a, b, c > 0$) with the surface it represents.'
+  left:
+  - en: 'A. $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$'
+  - en: 'B. $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$'
+  - en: 'C. $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{2z}{c}$'
+  - en: 'D. $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 0$'
+  right:
+  - en: 1. elliptic paraboloid
+  - en: 2. hyperboloid of two sheets
+  - en: 3. elliptic cone
+  - en: 4. hyperboloid of one sheet
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 1
+  explanation:
+    en: |-
+      - **A:** two positive squares $= 1$, so a hyperboloid of **one** sheet (4).
+      - **B:** one positive square $= 1$, so **two** sheets (2).
+      - **C:** squares equal to a linear term, both the same sign, so an elliptic paraboloid (1).
+      - **D:** homogeneous, so a cone with vertex $O$ (3).
+
+      The common swap is A with B: count the **positive** squares, not the negative ones.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - classification
+  stem:
+    en: 'For a real quadric, $A$ is the $3\times3$ matrix of the quadratic part and $E$ the $4\times4$ matrix of the whole equation. Match the ranks with the type of quadric.'
+  left:
+  - en: 'A. $\operatorname{rank}A = 3$, $\operatorname{rank}E = 4$'
+  - en: 'B. $\operatorname{rank}A = 3$, $\operatorname{rank}E = 3$'
+  - en: 'C. $\operatorname{rank}A = 2$, $\operatorname{rank}E = 4$'
+  - en: 'D. $\operatorname{rank}A = 1$, $\operatorname{rank}E = 3$'
+  right:
+  - en: 1. parabolic cylinder
+  - en: 2. paraboloid
+  - en: 3. cone
+  - en: 4. ellipsoid or hyperboloid
+  options:
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-4, B-3, C-1, D-2'
+  answer: 2
+  explanation:
+    en: |-
+      - **A:** $D \ne 0$ (unique centre) and $\Delta \ne 0$ (non-degenerate): a central conicoid, i.e. an ellipsoid or hyperboloid (4).
+      - **B:** $D \ne 0$ but $\Delta = 0$: a cone with vertex at the centre (3).
+      - **C:** $D = 0$ with rank $A = 2$, and $\Delta \ne 0$: a paraboloid, e.g. $x^2 + y^2 = 2z$ (2).
+      - **D:** a perfect-square quadratic part with an independent linear term, e.g. $x^2 = 2z$: a parabolic cylinder (1).
+
+      Swapping B and C confuses "no centre" ($D = 0$) with "degenerate" ($\Delta = 0$).
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - classification
+  - central-reduction
+  assertion:
+    en: 'The surface $2yz + 2zx + 2xy = 1$ is a hyperboloid of two sheets.'
+  reason:
+    en: 'The matrix of $2yz + 2zx + 2xy$ has eigenvalues $2, -1, -1$, and the centre is the origin, so the equation reduces to $2X^2 - Y^2 - Z^2 = 1$.'
+  answer: 0
+  explanation:
+    en: |-
+      $A = J - I$, where $J$ is the all-ones matrix. $J$ has eigenvalues $3, 0, 0$, so $A$ has $2, -1, -1$. There are no linear terms, so the centre is $O$ and the constant stays $-1$:
+      $$2X^2 - Y^2 - Z^2 = 1.$$
+      Exactly one positive square gives two sheets. **Both are true, and R is exactly the reduction that proves A.**
+
+      (It is a surface of revolution about the line $x = y = z$.)
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - non-central
+  - classification
+  assertion:
+    en: 'Every quadric with $D = \det A = 0$ is a paraboloid.'
+  reason:
+    en: 'If $D = 0$, the quadric does not have a unique centre.'
+  answer: 3
+  explanation:
+    en: |-
+      **R is true:** the centre equations $AX_0 = -L$ have no solution, or infinitely many, when $\det A = 0$.
+
+      **A is false:** $D = 0$ also covers cylinders and pairs of planes. For example, the cylinder $x^2 + y^2 = 1$ has $D = 0$ and a whole line of centres (the $z$-axis). It is a paraboloid only when, in addition, $\Delta \ne 0$ with rank $A = 2$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-planes
+  assertion:
+    en: 'The tangent plane to $x^2 + 2y^2 + 3z^2 = 6$ at $(1, 1, 1)$ is $x + 2y + 3z = 6$.'
+  reason:
+    en: The normal to a central conicoid at any point of it passes through the centre.
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** by the substitution rule $x^2 \to xx_1$, the tangent plane is $x + 2y + 3z = 6$. Also $1 + 2 + 3 = 6$, so $P$ is on it.
+
+      **R is false:** the normal at $(1, 1, 1)$ has direction $(1, 2, 3)$. The line from the centre $O$ to $P$ has direction $(1, 1, 1)$. These are not parallel, so the normal misses $O$. Normals pass through the centre for every point only on a sphere ($a = b = c$).
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - non-central
+  - central-reduction
+  assertion:
+    en: 'The hyperbolic paraboloid $z = xy$ has no centre.'
+  reason:
+    en: The hyperbolic paraboloid contains two families of straight lines.
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** with $F = xy - z$, the centre equations are $\tfrac12F_x = \frac{y}{2} = 0$, $\tfrac12F_y = \frac{x}{2} = 0$ and $\tfrac12F_z = -\tfrac12 = 0$. The last is impossible, so there is no centre.
+
+      **R is true:** for example, the lines $x = \lambda$, $z = \lambda y$ lie on it for every $\lambda$, and so do $y = \mu$, $z = \mu x$.
+
+      But being ruled has nothing to do with having a centre: the hyperboloid of one sheet is ruled **and** central. So **both are true, but R does not explain A**.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - central-reduction
+  - invariants
+  assertion:
+    en: 'The quadric $3x^2 + 3y^2 + 2z^2 + 2xy = 4$ is a surface of revolution.'
+  reason:
+    en: 'If the discriminating cubic of a central quadric $\lambda_1X^2 + \lambda_2Y^2 + \lambda_3Z^2 = K$ has $\lambda_2 = \lambda_3$, the quadric is a surface of revolution about the $X$-axis (the principal axis of $\lambda_1$).'
+  answer: 0
+  explanation:
+    en: |-
+      The cubic is $\lambda^3 - 8\lambda^2 + 20\lambda - 16 = (\lambda - 4)(\lambda - 2)^2$, so the reduced form is $4X^2 + 2(Y^2 + Z^2) = 4$.
+
+      **R is true:** $\lambda_1X^2 + \lambda_2(Y^2 + Z^2) = K$ depends on $Y, Z$ only through $Y^2 + Z^2$, so it is unchanged by rotations about the $X$-axis.
+
+      **A is true for exactly that reason:** the repeated root $2$ makes the surface a spheroid about the line $x = y$, $z = 0$ (the eigenvector of $\lambda = 4$). **Both are true, and R explains A.**
+  status: ai-generated

@@ -1,0 +1,18 @@
+id: math.geometry.quadrics
+title:
+  en: Quadrics
+summary:
+  en: The general second-degree equation in x, y, z and its matrix form, the invariants I, J, D and Δ, reduction to canonical form by eigenvalues, central and non-central quadrics, classification (ellipsoid, hyperboloids, paraboloids, cones, cylinders, pairs of planes) and tangent planes to conicoids.
+order: 8
+exams: [slst-1112]
+prerequisites: [math.linalg.quadratic-forms, math.geometry.sphere]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Shanti Narayan and P. K. Mittal, Analytical Solid Geometry, chs. on the central conicoids, the paraboloids and the general equation of the second degree
+  - R. J. T. Bell, An Elementary Treatise on Coordinate Geometry of Three Dimensions, chs. on the conicoid and reduction of the general equation
+  - J. G. Chakravorty and P. R. Ghosh, Advanced Analytical Geometry, chs. on conicoids and the general equation of the second degree
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) IV.B.5
+retired: []

@@ -1,0 +1,18 @@
+id: math.geometry.axes-conics
+title:
+  en: Transformation of Axes and General Conics
+summary:
+  en: Translation and rotation of rectangular axes, the invariants a + b, ab − h² and Δ, removing the xy-term, the centre of a conic, reduction of the general second-degree equation to canonical form, classification of conics, and the standard properties of the ellipse, parabola and hyperbola.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.quadratic-forms]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. L. Loney, The Elements of Coordinate Geometry, Part I, chs. on change of axes and the general equation of the second degree
+  - J. G. Chakravorty and P. R. Ghosh, Advanced Analytical Geometry, chs. on transformation of axes and reduction of the general equation
+  - R. K. Ghosh and K. C. Maity, An Introduction to Analytical Geometry and Vector Analysis, chs. on conics
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.A.1–2 and (PG) IV.A
+retired: []

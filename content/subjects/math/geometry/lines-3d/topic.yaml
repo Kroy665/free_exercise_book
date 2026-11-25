@@ -1,0 +1,18 @@
+id: math.geometry.lines-3d
+title:
+  en: Straight Lines in Space
+summary:
+  en: Symmetric and parametric forms, reduction of a line given by two planes, angle between a line and a plane, a line lying in a plane, foot of the perpendicular and image of a point, coplanarity and intersection of two lines, and the shortest distance between skew lines with the equations of the line of shortest distance.
+order: 6
+exams: [slst-0910, slst-1112]
+prerequisites: [math.geometry.planes]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - "B. C. Das and B. N. Mukherjee, Analytical Geometry of Two and Three Dimensions, ch. on the straight line in space"
+  - R. M. Khan, Analytical Geometry of Two and Three Dimensions, ch. on straight lines in three dimensions
+  - "Shanti Narayan and P. K. Mittal, Analytical Solid Geometry, ch. 3"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.B.3 and (PG) IV.B.3
+retired: []

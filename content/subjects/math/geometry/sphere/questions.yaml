@@ -1,0 +1,638 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-1112
+  refs:
+  - general-equation
+  stem:
+    en: 'The centre and radius of the sphere $x^2 + y^2 + z^2 - 2x + 4y - 6z - 11 = 0$ are'
+  options:
+  - en: '$(-1, 2, -3)$ and $5$'
+  - en: '$(1, -2, 3)$ and $5$'
+  - en: '$(1, -2, 3)$ and $\sqrt3$'
+  - en: '$(2, -4, 6)$ and $5$'
+  answer: 1
+  explanation:
+    en: |-
+      Compare with $x^2 + y^2 + z^2 + 2ux + 2vy + 2wz + d = 0$: $u = -1$, $v = 2$, $w = -3$, $d = -11$.
+      $$\text{centre } (-u, -v, -w) = (1, -2, 3), \qquad r = \sqrt{1 + 4 + 9 + 11} = 5.$$
+      $(-1, 2, -3)$ forgets to change the sign; $\sqrt3$ comes from $u^2 + v^2 + w^2 + d$; $(2, -4, 6)$ forgets to halve the coefficients.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - given-data
+  stem:
+    en: 'The sphere having the points $(1, 2, 3)$ and $(3, -2, 1)$ as ends of a diameter is'
+  options:
+  - en: '$x^2 + y^2 + z^2 - 4x - 4z - 2 = 0$'
+  - en: '$x^2 + y^2 + z^2 + 4x + 4z + 2 = 0$'
+  - en: '$x^2 + y^2 + z^2 - 4x - 4z - 16 = 0$'
+  - en: '$x^2 + y^2 + z^2 - 4x - 4z + 2 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      Use $(x - x_1)(x - x_2) + (y - y_1)(y - y_2) + (z - z_1)(z - z_2) = 0$:
+      $$(x - 1)(x - 3) + (y - 2)(y + 2) + (z - 3)(z - 1) = 0 \implies x^2 + y^2 + z^2 - 4x - 4z + 2 = 0.$$
+      Check: the centre $(2, 0, 2)$ is the midpoint, and $r^2 = 4 + 4 - 2 = 6 = \left(\tfrac12 AB\right)^2 = \tfrac{24}{4}$. The option with $-16$ uses $AB^2 = 24$ as $r^2$ instead of $\left(\tfrac12AB\right)^2$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - general-equation
+  stem:
+    en: 'The equation $ax^2 + by^2 + cz^2 + 2fyz + 2gzx + 2hxy + 2ux + 2vy + 2wz + d = 0$ represents a sphere (real, point or virtual) if and only if'
+  options:
+  - en: '$a = b = c \ne 0$'
+  - en: '$f = g = h = 0$ and $u = v = w$'
+  - en: '$a + b + c = 0$ and $f = g = h = 0$'
+  - en: '$a = b = c \ne 0$ and $f = g = h = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      After dividing by $a$, a sphere's equation must be $x^2 + y^2 + z^2 + (\text{linear}) = 0$: the squared terms have equal nonzero coefficients and there are no product terms.
+      $$a = b = c \ne 0, \qquad f = g = h = 0.$$
+      Equal squared coefficients alone are not enough: $x^2 + y^2 + z^2 + 2xy = 1$ is $(x + y)^2 + z^2 = 1$, a cylinder. The linear coefficients $u, v, w$ only move the centre.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - given-data
+  stem:
+    en: 'The radius of the sphere through the four points $(0, 0, 0)$, $(2, 0, 0)$, $(0, 4, 0)$ and $(0, 0, 6)$ is'
+  options:
+  - en: '$\sqrt{14}$'
+  - en: '$14$'
+  - en: '$2\sqrt{14}$'
+  - en: '$\sqrt7$'
+  answer: 0
+  explanation:
+    en: |-
+      Through the origin, $d = 0$; then $(a, 0, 0)$ gives $u = -\frac a2$, and so on:
+      $$x^2 + y^2 + z^2 - 2x - 4y - 6z = 0.$$
+      Centre $(1, 2, 3)$, radius $\sqrt{1 + 4 + 9} = \sqrt{14}$. $2\sqrt{14} = \sqrt{4 + 16 + 36}$ is the diameter, and $14$ is $r^2$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - plane-section
+  stem:
+    en: 'The centre and radius of the circle $x^2 + y^2 + z^2 = 25$, $x + 2y + 2z = 9$ are'
+  options:
+  - en: '$(1, 2, 2)$ and $4$'
+  - en: '$(1, 2, 2)$ and $3$'
+  - en: '$(3, 6, 6)$ and $4$'
+  - en: '$(1, 2, 2)$ and $\sqrt{34}$'
+  answer: 0
+  explanation:
+    en: |-
+      The sphere has centre $O$ and radius $5$. The distance from $O$ to the plane is $\delta = \frac{9}{\sqrt{1 + 4 + 4}} = 3$.
+      - Centre of the circle: the foot of the perpendicular from $O$, $t(1, 2, 2)$ with $9t = 9$, so $(1, 2, 2)$.
+      - Radius: $\sqrt{25 - 9} = 4$.
+
+      $3$ is the distance $\delta$, not the radius; $\sqrt{34}$ uses $r^2 + \delta^2$; $(3, 6, 6)$ takes $t = 9/3$ instead of $9/9$ (and is not even on the plane).
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - plane-section
+  stem:
+    en: 'The radius of the circle in which the plane $x + 2y + 2z = 15$ cuts the sphere $x^2 + y^2 + z^2 - 2y - 4z - 11 = 0$ is'
+  options:
+  - en: '$5$'
+  - en: '$\sqrt7$'
+  - en: '$1$'
+  - en: '$\sqrt{13}$'
+  answer: 1
+  explanation:
+    en: |-
+      The sphere has centre $(0, 1, 2)$ and radius $\sqrt{1 + 4 + 11} = 4$. The distance of the centre from the plane is
+      $$\delta = \frac{\lvert 0 + 2 + 4 - 15\rvert}{3} = 3, \qquad \rho = \sqrt{16 - 9} = \sqrt7.$$
+      $5 = \sqrt{16 + 9}$ adds instead of subtracting; $1 = 4 - 3$ subtracts the lengths instead of their squares.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - through-circle
+  stem:
+    en: 'The sphere through the circle $x^2 + y^2 + z^2 = 9$, $2x + 3y + 4z = 5$ and the origin is'
+  options:
+  - en: '$5(x^2 + y^2 + z^2) + 18x + 27y + 36z = 0$'
+  - en: '$x^2 + y^2 + z^2 - 2x - 3y - 4z = 0$'
+  - en: '$5(x^2 + y^2 + z^2) - 18x - 27y - 36z = 0$'
+  - en: '$5(x^2 + y^2 + z^2) - 18x - 27y - 36z - 90 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      Every sphere through the circle is $x^2 + y^2 + z^2 - 9 + \lambda(2x + 3y + 4z - 5) = 0$. At the origin, $-9 - 5\lambda = 0$, so $\lambda = -\frac95$. Multiply by $5$:
+      $$5(x^2 + y^2 + z^2) - 45 - 18x - 27y - 36z + 45 = 0 \implies 5(x^2 + y^2 + z^2) - 18x - 27y - 36z = 0.$$
+      Check: no constant term, so it passes through $O$. The option with $+18x$ takes $\lambda = +\frac95$; the one with $-90$ forgets the constant $-5$ in the plane.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - through-circle
+  stem:
+    en: 'The sphere having the circle $x^2 + y^2 + z^2 = 25$, $x + y + z = 3$ as a great circle is'
+  options:
+  - en: '$x^2 + y^2 + z^2 + 2x + 2y + 2z - 31 = 0$'
+  - en: '$x^2 + y^2 + z^2 - 2x - 2y - 2z - 19 = 0$'
+  - en: '$x^2 + y^2 + z^2 - 2x - 2y - 2z - 25 = 0$'
+  - en: '$x^2 + y^2 + z^2 - x - y - z - 22 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Take $x^2 + y^2 + z^2 - 25 + \lambda(x + y + z - 3) = 0$, with centre $\left(-\frac\lambda2, -\frac\lambda2, -\frac\lambda2\right)$. For a great circle the centre lies on the plane:
+      $$-\frac{3\lambda}{2} = 3 \implies \lambda = -2, \qquad x^2 + y^2 + z^2 - 2x - 2y - 2z - 19 = 0.$$
+      Check: centre $(1, 1, 1)$, $r^2 = 3 + 19 = 22$; and the circle's radius is $\sqrt{25 - 3} = \sqrt{22}$ (distance $\sqrt3$ from $O$), as it should be. $\lambda = +2$ gives the $-31$ option; the $-25$ option drops the term $-3\lambda$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The tangent plane to the sphere $x^2 + y^2 + z^2 = 14$ at the point $(1, 2, 3)$ is'
+  options:
+  - en: '$x + 2y + 3z = 0$'
+  - en: '$x + 2y + 3z = 14$'
+  - en: '$x + 2y + 3z = \sqrt{14}$'
+  - en: '$3x + 2y + z = 14$'
+  answer: 1
+  explanation:
+    en: |-
+      For $x^2 + y^2 + z^2 = a^2$ the tangent plane at $(x_1, y_1, z_1)$ is $xx_1 + yy_1 + zz_1 = a^2$:
+      $$x + 2y + 3z = 14.$$
+      Check: $(1, 2, 3)$ gives $1 + 4 + 9 = 14$. $x + 2y + 3z = 0$ is the parallel plane through the centre; $\sqrt{14}$ uses the radius in place of $a^2$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The tangent plane at $(1, 1, 1)$ to the sphere $x^2 + y^2 + z^2 + 2x - 4y + 2z - 3 = 0$ is'
+  options:
+  - en: '$2x - y + 2z - 3 = 0$'
+  - en: '$x - y + z - 1 = 0$'
+  - en: '$x + y + z - 3 = 0$'
+  - en: '$y = 1$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $u = 1$, $v = -2$, $w = 1$, $d = -3$. Use $T = 0$:
+      $$x + y + z + (x + 1) - 2(y + 1) + (z + 1) - 3 = 0 \implies 2x - y + 2z - 3 = 0.$$
+      Check: the normal $(2, -1, 2)$ is $(x_1 + u, y_1 + v, z_1 + w)$, the direction from the centre $(-1, 2, -1)$ to the point. $x - y + z = 1$ comes from replacing $2ux$ by $2u(x + x_1)$; $x + y + z = 3$ keeps only $xx_1 + yy_1 + zz_1$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The plane $2x - y + 2z = k$ touches the sphere $x^2 + y^2 + z^2 - 2x - 4y + 2z - 3 = 0$ if and only if'
+  options:
+  - en: '$k = 7$ or $k = -11$'
+  - en: '$k = 11$ or $k = -7$'
+  - en: '$k = 9$ or $k = -9$'
+  - en: '$k = 7$ only'
+  answer: 0
+  explanation:
+    en: |-
+      Centre $(1, 2, -1)$, radius $\sqrt{1 + 4 + 1 + 3} = 3$. Tangency: distance from the centre $=$ radius.
+      $$\frac{\lvert 2 - 2 - 2 - k\rvert}{3} = 3 \iff \lvert k + 2\rvert = 9 \iff k = 7 \text{ or } k = -11.$$
+      Two parallel tangent planes always exist, so "7 only" is incomplete. $\pm 9$ is the answer for a sphere centred where $2x - y + 2z = 0$; $11, -7$ is the sign slip.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The plane $lx + my + nz = p$ touches the sphere $x^2 + y^2 + z^2 + 2ux + 2vy + 2wz + d = 0$ if and only if'
+  options:
+  - en: '$(ul + vm + wn - p)^2 = (l^2 + m^2 + n^2)(u^2 + v^2 + w^2 - d)$'
+  - en: '$(ul + vm + wn + p)^2 = (l^2 + m^2 + n^2)(u^2 + v^2 + w^2 + d)$'
+  - en: '$(ul + vm + wn + p)^2 = (l^2 + m^2 + n^2)(u^2 + v^2 + w^2 - d)$'
+  - en: '$(ul + vm + wn + p)^2 = u^2 + v^2 + w^2 - d$'
+  answer: 2
+  explanation:
+    en: |-
+      The distance from the centre $(-u, -v, -w)$ to $lx + my + nz - p = 0$ must equal the radius:
+      $$\frac{\lvert -ul - vm - wn - p\rvert}{\sqrt{l^2 + m^2 + n^2}} = \sqrt{u^2 + v^2 + w^2 - d}.$$
+      Squaring gives $(ul + vm + wn + p)^2 = (l^2 + m^2 + n^2)(u^2 + v^2 + w^2 - d)$. The $-p$ version uses the centre as $(u, v, w)$; the last option forgets $\sqrt{l^2 + m^2 + n^2}$. Check with $u = v = w = 0$, $d = -a^2$: $p^2 = a^2(l^2 + m^2 + n^2)$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - radical-plane
+  stem:
+    en: 'The length of the tangent from the point $(1, 1, 1)$ to the sphere $x^2 + y^2 + z^2 - 2x + 4y - 6z + 5 = 0$ is'
+  options:
+  - en: '$4$'
+  - en: '$\sqrt{13}$'
+  - en: '$2$'
+  - en: '$\sqrt2$'
+  answer: 2
+  explanation:
+    en: |-
+      The square of the tangent length is the power $S_1$:
+      $$S_1 = 1 + 1 + 1 - 2 + 4 - 6 + 5 = 4, \qquad \text{length} = 2.$$
+      Check: centre $(1, -2, 3)$, $r = 3$, $CP^2 = 0 + 9 + 4 = 13$, and $13 - 9 = 4$. $4$ is the power itself, not its square root; $\sqrt{13}$ is the distance to the centre.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - radical-plane
+  stem:
+    en: 'The radical plane of the spheres $x^2 + y^2 + z^2 + 2x + 2y + 2z - 2 = 0$ and $x^2 + y^2 + z^2 - 4x + 6y + 4 = 0$ is'
+  options:
+  - en: '$3x - 2y + z + 3 = 0$'
+  - en: '$3x - 2y + z - 1 = 0$'
+  - en: '$x - 4y - z + 1 = 0$'
+  - en: '$3x - 2y + z - 3 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      Both are in standard form, so subtract:
+      $$S_1 - S_2 = 6x - 4y + 2z - 6 = 0 \implies 3x - 2y + z - 3 = 0.$$
+      Check: its normal $(3, -2, 1)$ is parallel to the line of centres $(-1, -1, -1) \to (2, -3, 0)$, direction $(3, -2, 1)$. The $+3$ option subtracts the constants the wrong way round.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - radical-plane
+  stem:
+    en: 'With $\Sigma = x^2 + y^2 + z^2$, the radical centre of the spheres $\Sigma - 2x - 7 = 0$, $\Sigma - 4y - 5 = 0$, $\Sigma - 6z - 3 = 0$ and $\Sigma - 9 = 0$ is'
+  options:
+  - en: '$(1, 1, 1)$'
+  - en: '$(-1, -1, -1)$'
+  - en: '$(1, 2, 3)$'
+  - en: '$(-4, -1, 2)$'
+  answer: 0
+  explanation:
+    en: |-
+      Subtract the last sphere from each of the others:
+      $$-2x + 2 = 0,\quad -4y + 4 = 0,\quad -6z + 6 = 0 \implies (x, y, z) = (1, 1, 1).$$
+      Check: the power of $(1, 1, 1)$ is $3 - 2 - 7 = 3 - 4 - 5 = 3 - 6 - 3 = 3 - 9 = -6$ for all four. The centres $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, $O$ are non-coplanar, so the radical centre is unique. $(1, 2, 3)$ collects the centres' coordinates; $(-1, -1, -1)$ is a sign slip.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - orthogonal
+  stem:
+    en: 'The spheres $x^2 + y^2 + z^2 - 2x - 4y - 6z + k = 0$ and $x^2 + y^2 + z^2 + 4x + 2y - 2z + 3 = 0$ cut orthogonally if $k$ equals'
+  options:
+  - en: '$5$'
+  - en: '$-5$'
+  - en: '$-1$'
+  - en: '$-7$'
+  answer: 1
+  explanation:
+    en: |-
+      Orthogonality: $2(u_1u_2 + v_1v_2 + w_1w_2) = d_1 + d_2$, with $(u_1, v_1, w_1) = (-1, -2, -3)$ and $(u_2, v_2, w_2) = (2, 1, -1)$:
+      $$2(-2 - 2 + 3) = k + 3 \implies k = -5.$$
+      Check: $r_1^2 = 14 + 5 = 19$, $r_2^2 = 3$, and the distance between the centres $(1, 2, 3)$, $(-2, -1, 1)$ is $\sqrt{9 + 9 + 4} = \sqrt{22} = \sqrt{19 + 3}$. $k = -1$ drops the factor $2$; $k = 5$ is a sign slip.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - through-circle
+  - plane-section
+  stem:
+    en: 'The radius of the circle of intersection of the spheres $x^2 + y^2 + z^2 = 16$ and $x^2 + y^2 + z^2 - 6x - 8y + 9 = 0$ is'
+  options:
+  - en: '$\dfrac52$'
+  - en: '$\dfrac{\sqrt{89}}{2}$'
+  - en: '$2\sqrt3$'
+  - en: '$\dfrac{\sqrt{39}}{2}$'
+  answer: 3
+  explanation:
+    en: |-
+      The plane of the circle is $S_1 - S_2 = 6x + 8y - 25 = 0$. Its distance from $O$ is $\frac{25}{10} = \frac52$, so
+      $$\rho = \sqrt{16 - \frac{25}{4}} = \frac{\sqrt{39}}{2}.$$
+      Check by symmetry: the second sphere has centre $(3, 4, 0)$ and radius $4$, equal to the first, so the plane bisects $OC_2$ (length $5$) at distance $\frac52$. $\frac52$ is that distance, not the radius; $\frac{\sqrt{89}}{2}$ adds the squares.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - given-data
+  - tangent-plane
+  stem:
+    en: 'The sphere that touches the plane $x + y + z = 3$ at the point $(1, 1, 1)$ and passes through the origin is'
+  options:
+  - en: '$x^2 + y^2 + z^2 - 2x - 2y - 2z = 0$'
+  - en: '$x^2 + y^2 + z^2 - 3x - 3y - 3z + 6 = 0$'
+  - en: '$x^2 + y^2 + z^2 - x - y - z = 0$'
+  - en: '$x^2 + y^2 + z^2 + x + y + z - 6 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      Point sphere at $(1, 1, 1)$ plus $\lambda$ times the plane:
+      $$(x - 1)^2 + (y - 1)^2 + (z - 1)^2 + \lambda(x + y + z - 3) = 0.$$
+      At the origin, $3 - 3\lambda = 0$, so $\lambda = 1$, giving $x^2 + y^2 + z^2 - x - y - z = 0$. Check: centre $\left(\frac12, \frac12, \frac12\right)$, $r = \frac{\sqrt3}{2}$, and its distance to the plane is $\frac{3/2}{\sqrt3} = \frac{\sqrt3}{2}$.
+
+      $x^2 + y^2 + z^2 - 2x - 2y - 2z = 0$ passes through $O$ and $(1,1,1)$, but its centre $(1,1,1)$ is on the plane, so it cuts the plane rather than touching it. The $+6$ option ($\lambda = -1$) misses $O$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The tangent planes to the sphere $x^2 + y^2 + z^2 - 2x - 4y - 6z + 5 = 0$ parallel to the plane $2x - y + 2z = 0$ are'
+  options:
+  - en: '$2x - y + 2z - 3 = 0$ and $2x - y + 2z + 15 = 0$'
+  - en: '$2x - y + 2z + 9 = 0$ and $2x - y + 2z - 9 = 0$'
+  - en: '$2x - y + 2z - 3 = 0$ and $2x - y + 2z - 9 = 0$'
+  - en: '$2x - y + 2z + 3 = 0$ and $2x - y + 2z - 15 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      Centre $(1, 2, 3)$, radius $\sqrt{14 - 5} = 3$. Write the planes as $2x - y + 2z + k = 0$:
+      $$\frac{\lvert 2 - 2 + 6 + k\rvert}{3} = 3 \iff \lvert 6 + k\rvert = 9 \iff k = 3 \text{ or } k = -15.$$
+      $\pm 9$ ignores the centre (correct only for a sphere centred at $O$); $k = -3, -9$ forgets to multiply by $\sqrt{4 + 1 + 4} = 3$; the second option is the sign slip.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  stem:
+    en: 'The plane $x + 2y + 2z = 14$ touches the sphere $x^2 + y^2 + z^2 + 2x - 2y - 4z - 3 = 0$. The point of contact is'
+  options:
+  - en: '$(-2, -1, 0)$'
+  - en: '$(1, 5, 6)$'
+  - en: '$(0, 3, 4)$'
+  - en: '$\left(\dfrac{14}{9}, \dfrac{28}{9}, \dfrac{28}{9}\right)$'
+  answer: 2
+  explanation:
+    en: |-
+      The point of contact is the foot of the perpendicular from the centre $(-1, 1, 2)$ (radius $3$). Move along the normal $(1, 2, 2)$:
+      $$(-1 + t,\ 1 + 2t,\ 2 + 2t):\quad 5 + 9t = 14 \implies t = 1 \implies (0, 3, 4).$$
+      Check: $0 + 9 + 16 + 0 - 6 - 16 - 3 = 0$, so it is on the sphere. $(-2, -1, 0)$ goes the wrong way ($t = -1$): it is the diametrically opposite point, on the sphere but not on the plane; $\left(\frac{14}{9}, \frac{28}{9}, \frac{28}{9}\right)$ is the foot from the **origin**, not from the centre.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - orthogonal
+  stem:
+    en: 'The spheres $x^2 + y^2 + z^2 = 4$ and $x^2 + y^2 + z^2 - 6x - 8y + k = 0$ touch each other externally when $k$ equals'
+  options:
+  - en: '$-24$'
+  - en: '$21$'
+  - en: '$16$'
+  - en: '$0$'
+  answer: 2
+  explanation:
+    en: |-
+      Centres $O$ and $(3, 4, 0)$, so $\delta = 5$; radii $2$ and $\sqrt{25 - k}$. External contact: $\delta = r_1 + r_2$:
+      $$2 + \sqrt{25 - k} = 5 \implies 25 - k = 9 \implies k = 16.$$
+      $k = -24$ gives $r_2 = 7 = 5 + 2$: **internal** contact ($\delta = r_2 - r_1$). $k = 21$ gives equal radii $2$, which do not meet; $k = 0$ gives $r_2 = 5$, which passes through the other centre.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - plane-section
+  - radical-plane
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'A plane at distance $\delta$ from the centre of a sphere of radius $r$ $(0 < \delta < r)$ cuts it in a circle of radius $r - \delta$.'
+  - en: The radical plane of two non-concentric spheres is perpendicular to the line joining their centres.
+  - en: 'The centre of the circle $x^2 + y^2 + z^2 = 25$, $x + 2y + 2z = 9$ is $(1, 2, 2)$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 3 only
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  answer: 3
+  explanation:
+    en: |-
+      1. False: the radius is $\sqrt{r^2 - \delta^2}$ (Pythagoras), not $r - \delta$. For $r = 5$, $\delta = 3$ it is $4$, not $2$.
+      2. True: $S_1 - S_2 = 0$ has normal $(u_1 - u_2, v_1 - v_2, w_1 - w_2)$, which is the direction of the line of centres $(-u_1, -v_1, -w_1) \to (-u_2, -v_2, -w_2)$.
+      3. True: the foot of the perpendicular from $O$ is $t(1, 2, 2)$ with $9t = 9$, i.e. $(1, 2, 2)$, and it lies on the plane.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - orthogonal
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'Two spheres with radii $r_1, r_2$ and centres a distance $\delta$ apart cut orthogonally if and only if $\delta^2 = r_1^2 + r_2^2$.'
+  - en: 'If two spheres cut orthogonally, the power of the centre of the first with respect to the second equals the square of the radius of the first.'
+  - en: 'The spheres $x^2 + y^2 + z^2 = 9$ and $x^2 + y^2 + z^2 - 8x + 7 = 0$ cut orthogonally.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. True: at a common point $Q$ the radii $C_1Q$, $C_2Q$ are normals to the two tangent planes; they are perpendicular iff $\delta^2 = r_1^2 + r_2^2$ (Pythagoras).
+      2. True: the power of $C_1$ with respect to $S_2$ is $\delta^2 - r_2^2 = r_1^2$.
+      3. False: centres $O$ and $(4, 0, 0)$, radii $3$ and $\sqrt{16 - 7} = 3$, so $r_1^2 + r_2^2 = 18 \ne 16 = \delta^2$. In coefficient form, $2(0) = 0 \ne d_1 + d_2 = -9 + 7 = -2$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - given-data
+  - tangent-plane
+  - radical-plane
+  - through-circle
+  stem:
+    en: 'Here $S \equiv x^2 + y^2 + z^2 + 2ux + 2vy + 2wz + d$, and $S_1 = 0$, $S_2 = 0$ are spheres in this standard form. Match each item in List I with its equation in List II.'
+  left:
+  - en: 'Sphere on the diameter joining $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$'
+  - en: 'Tangent plane to $S = 0$ at its point $(x_1, y_1, z_1)$'
+  - en: 'Radical plane of $S_1 = 0$ and $S_2 = 0$'
+  - en: 'A sphere through the circle $S = 0$, $P = 0$'
+  right:
+  - en: '$S + \lambda P = 0$'
+  - en: '$(x - x_1)(x - x_2) + (y - y_1)(y - y_2) + (z - z_1)(z - z_2) = 0$'
+  - en: '$S_1 - S_2 = 0$'
+  - en: '$xx_1 + yy_1 + zz_1 + u(x + x_1) + v(y + y_1) + w(z + z_1) + d = 0$'
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-3, C-4, D-1'
+  answer: 1
+  explanation:
+    en: |-
+      - A: $\angle APB = \frac\pi2$ on a diameter, i.e. $\vec{PA}\cdot\vec{PB} = 0$: 2.
+      - B: $T = 0$: 4.
+      - C: equal powers, $S_1 = S_2$: 3.
+      - D: $S + \lambda P$ vanishes wherever $S = 0$ and $P = 0$: 1.
+
+      Swapping C and D confuses the two linear-combination ideas: $S_1 - S_2$ is a plane, $S + \lambda P$ is a sphere.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - radical-plane
+  - plane-section
+  stem:
+    en: 'For the sphere $S \equiv x^2 + y^2 + z^2 - 2x - 4y + 4z - 16 = 0$, match each quantity in List I with its value in List II.'
+  left:
+  - en: 'Power of the origin with respect to $S$'
+  - en: 'Square of the length of the tangent from $(1, 2, 8)$'
+  - en: 'Radius of the circle cut by the plane $z = 1$'
+  - en: 'Largest $k$ for which the plane $z = k$ meets $S$'
+  right:
+  - en: '$3$'
+  - en: '$4$'
+  - en: '$-16$'
+  - en: '$75$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      The centre is $(1, 2, -2)$ and the radius is $\sqrt{1 + 4 + 4 + 16} = 5$.
+      - A: $S(0, 0, 0) = -16$ (negative: the origin is inside): 3.
+      - B: $S(1, 2, 8) = 1 + 4 + 64 - 2 - 8 + 32 - 16 = 75$; equivalently $CP^2 - r^2 = 100 - 25$: 4.
+      - C: the plane $z = 1$ is at distance $3$ from the centre, so the radius is $\sqrt{25 - 9} = 4$: 2.
+      - D: $z$ ranges over $[-2 - 5, -2 + 5]$, so the largest $k$ is $3$: 1.
+
+      Swapping C and D confuses the section radius $4$ with the top height $3$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - general-equation
+  assertion:
+    en: 'The equation $x^2 + y^2 + z^2 - 2x + 4y - 6z + 14 = 0$ is satisfied by exactly one real point.'
+  reason:
+    en: 'The sphere $x^2 + y^2 + z^2 + 2ux + 2vy + 2wz + d = 0$ has centre $(-u, -v, -w)$ and radius $\sqrt{u^2 + v^2 + w^2 - d}$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is the standard result: complete the squares. For the equation in A, $u^2 + v^2 + w^2 - d = 1 + 4 + 9 - 14 = 0$, so
+      $$(x - 1)^2 + (y + 2)^2 + (z - 3)^2 = 0,$$
+      which holds only at $(1, -2, 3)$: a point sphere. A is true, and R gives exactly this radius computation, so R explains A.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangent-plane
+  assertion:
+    en: 'The tangent plane to $x^2 + y^2 + z^2 = a^2$ at its point $(x_1, y_1, z_1)$ is $xx_1 + yy_1 + zz_1 = a^2$.'
+  reason:
+    en: The tangent plane at a point of a sphere is parallel to the radius through that point.
+  answer: 2
+  explanation:
+    en: |-
+      A is true: the plane through $(x_1, y_1, z_1)$ with normal $(x_1, y_1, z_1)$ is $x_1(x - x_1) + y_1(y - y_1) + z_1(z - z_1) = 0$, i.e. $xx_1 + yy_1 + zz_1 = x_1^2 + y_1^2 + z_1^2 = a^2$.
+
+      R is false: the tangent plane is **perpendicular** to the radius at the point of contact. The radius is its normal.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangent-plane
+  assertion:
+    en: 'The plane $2x - y + 2z = 3$ touches the sphere $x^2 + y^2 + z^2 = 9$.'
+  reason:
+    en: A plane touches a sphere if and only if the perpendicular distance of the centre from the plane equals the radius.
+  answer: 3
+  explanation:
+    en: |-
+      R is the standard condition of tangency, true. Apply it to A: the distance from $O$ is
+      $$\frac{\lvert -3\rvert}{\sqrt{4 + 1 + 4}} = 1 \ne 3,$$
+      so the plane cuts the sphere in a circle of radius $\sqrt{9 - 1} = 2\sqrt2$. A is false. (Comparing $3$ with the radius without dividing by $\sqrt{l^2 + m^2 + n^2}$ is the trap.) The tangent planes in this direction are $2x - y + 2z = \pm 9$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - orthogonal
+  - radical-plane
+  assertion:
+    en: 'The spheres $x^2 + y^2 + z^2 = 4$ and $x^2 + y^2 + z^2 - 6x + 4 = 0$ cut orthogonally.'
+  reason:
+    en: 'The radical plane of these two spheres is $x = \dfrac43$.'
+  answer: 1
+  explanation:
+    en: |-
+      A: here $(u_1, v_1, w_1) = (0, 0, 0)$, $d_1 = -4$ and $(u_2, v_2, w_2) = (-3, 0, 0)$, $d_2 = 4$. Then $2(u_1u_2 + v_1v_2 + w_1w_2) = 0 = d_1 + d_2$: orthogonal. Geometrically, $r_1^2 + r_2^2 = 4 + 5 = 9 = \delta^2$. A is true.
+
+      R: $S_1 - S_2 = 6x - 8 = 0$, i.e. $x = \frac43$. True. But the position of the radical plane says nothing about the angle between the spheres, so R does not explain A.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - through-circle
+  - plane-section
+  assertion:
+    en: 'Every sphere through the circle $x^2 + y^2 + z^2 = 9$, $z = 0$ has its centre on the $z$-axis.'
+  reason:
+    en: The line joining the centre of a sphere to the centre of any of its plane sections is perpendicular to the plane of the section.
+  answer: 0
+  explanation:
+    en: |-
+      R is true: the centre of a section is the foot of the perpendicular from the centre of the sphere.
+
+      For A, every sphere through the circle has the circle as a plane section, with section centre $O$ and section plane $z = 0$. By R its centre lies on the normal to $z = 0$ through $O$: the $z$-axis. Directly: $x^2 + y^2 + z^2 - 9 + \lambda z = 0$ has centre $\left(0, 0, -\frac\lambda2\right)$. Both true, and R explains A.
+  status: ai-generated

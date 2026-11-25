@@ -1,0 +1,14 @@
+id: math.geometry
+subject: math
+title: { en: Analytical Geometry }
+order: 6
+# Planned topics: docs/SYLLABUS.md (Block 5). Only written topics are listed.
+topics:
+  - math.geometry.axes-conics
+  - math.geometry.pair-of-lines
+  - math.geometry.tangents-polars
+  - math.geometry.polar-equations
+  - math.geometry.planes
+  - math.geometry.lines-3d
+  - math.geometry.sphere
+  - math.geometry.quadrics

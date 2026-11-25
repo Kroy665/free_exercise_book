@@ -1,0 +1,18 @@
+id: math.ode.ode-linear-clairaut
+title:
+  en: Linear, Bernoulli and Clairaut Equations
+summary:
+  en: First-order linear equations and the integrating factor, Bernoulli and other equations reducible to linear form, first-order equations of higher degree (solvable for p, y or x), Clairaut's equation, singular solutions via the p- and c-discriminants, and orthogonal trajectories in Cartesian and polar coordinates.
+order: 2
+exams: [slst-0910, slst-1112]
+prerequisites: [math.ode.ode-first-order]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - "H. T. H. Piaggio, An Elementary Treatise on Differential Equations and Their Applications, ch. 2–4"
+  - M. D. Raisinghania, Ordinary and Partial Differential Equations, ch. on linear equations, equations of higher degree and singular solutions
+  - "G. F. Simmons, Differential Equations with Applications and Historical Notes, ch. 1–2"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) V.1 and (PG) III.2–4
+retired: []

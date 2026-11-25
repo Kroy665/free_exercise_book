@@ -1,0 +1,688 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - angle
+  stem:
+    en: 'The equation $6x^2 - 5xy - 6y^2 = 0$ represents'
+  options:
+  - en: a pair of coincident lines through the origin
+  - en: a pair of perpendicular lines through the origin
+  - en: 'a pair of lines through the origin inclined at $\dfrac{\pi}{4}$'
+  - en: only the origin (imaginary lines)
+  answer: 1
+  explanation:
+    en: |-
+      In the form $ax^2 + 2hxy + by^2 = 0$: $a = 6$, $b = -6$, so $a + b = 0$, and the lines are **perpendicular**. Also $h^2 - ab = \tfrac{25}{4} + 36 > 0$, so they are real.
+
+      Check by factorising: $$6x^2 - 5xy - 6y^2 = (3x + 2y)(2x - 3y),$$ with slopes $-\tfrac32$ and $\tfrac23$, whose product is $-1$.
+
+      Coincident lines would need $h^2 = ab$, which fails here since $ab < 0$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - angle
+  stem:
+    en: 'The acute angle between the lines $x^2 - 4xy + y^2 = 0$ is'
+  options:
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\tan^{-1}\sqrt{15}$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $a = b = 1$ and $2h = -4$, so $h = -2$:
+      $$\tan\theta = \frac{2\sqrt{h^2 - ab}}{\lvert a + b\rvert} = \frac{2\sqrt{4 - 1}}{2} = \sqrt3, \qquad \theta = \frac{\pi}{3}.$$
+
+      $\tan^{-1}\sqrt{15}$ comes from taking $h = -4$ (forgetting that the $xy$ coefficient is $2h$). $\frac{\pi}{6}$ inverts the tangent.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The sum of the slopes of the lines $2x^2 + 5xy + 3y^2 = 0$ is'
+  options:
+  - en: '$-\dfrac56$'
+  - en: '$-\dfrac53$'
+  - en: '$\dfrac53$'
+  - en: '$\dfrac23$'
+  answer: 1
+  explanation:
+    en: |-
+      For $ax^2 + 2hxy + by^2 = 0$ the slopes satisfy $bm^2 + 2hm + a = 0$, so
+      $$m_1 + m_2 = -\frac{2h}{b} = -\frac{5}{3}.$$
+
+      Check: $2x^2 + 5xy + 3y^2 = (2x + 3y)(x + y)$, with slopes $-\tfrac23$ and $-1$. $\tfrac23$ is the **product** $a/b$; $-\tfrac56$ uses $h$ in place of $2h$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - angle
+  stem:
+    en: 'The lines $(\lambda - 3)x^2 + 4xy + (2\lambda + 1)y^2 = 0$ are perpendicular when $\lambda$ equals'
+  options:
+  - en: '$\dfrac23$'
+  - en: '$-\dfrac23$'
+  - en: '$\dfrac32$'
+  - en: '$2$'
+  answer: 0
+  explanation:
+    en: |-
+      Perpendicular $\iff$ coefficient of $x^2$ + coefficient of $y^2 = 0$:
+      $$(\lambda - 3) + (2\lambda + 1) = 3\lambda - 2 = 0 \;\Rightarrow\; \lambda = \frac23.$$
+
+      When $a + b = 0$, $h^2 - ab = h^2 + a^2 > 0$, so the lines are automatically real. $-\tfrac23$ is a sign slip, and $\tfrac32$ inverts the answer.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - angle
+  - homogeneous
+  stem:
+    en: 'The equation $kx^2 + 12xy + 9y^2 = 0$ represents a pair of coincident lines when $k$ equals'
+  options:
+  - en: '$16$'
+  - en: '$-4$'
+  - en: '$4$'
+  - en: '$9$'
+  answer: 2
+  explanation:
+    en: |-
+      Coincident $\iff h^2 = ab$. Here $h = 6$, $b = 9$:
+      $$36 = 9k \;\Rightarrow\; k = 4,$$
+      and then the equation is $(2x + 3y)^2 = 0$.
+
+      $k = 16$ comes from taking $h = 12$: then $144 = 9k$. That is the usual slip of forgetting that the $xy$ coefficient is $2h$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - bisectors
+  stem:
+    en: 'The equation of the bisectors of the angles between the lines $2x^2 + 6xy + y^2 = 0$ is'
+  options:
+  - en: '$3x^2 + xy - 3y^2 = 0$'
+  - en: '$x^2 - 3xy - y^2 = 0$'
+  - en: '$3x^2 - xy - 3y^2 = 0$'
+  - en: '$6x^2 - xy - 6y^2 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      The bisectors of $ax^2 + 2hxy + by^2 = 0$ are $h(x^2 - y^2) = (a - b)xy$. Here $a = 2$, $h = 3$, $b = 1$:
+      $$3(x^2 - y^2) = xy \;\Rightarrow\; 3x^2 - xy - 3y^2 = 0.$$
+
+      $x^2 - 3xy - y^2 = 0$ swaps the roles of $h$ and $a - b$. It is still a perpendicular pair, so the "coefficient sum $= 0$" check does not catch it. $6x^2 - xy - 6y^2$ uses $h = 6$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - general-condition
+  stem:
+    en: 'Taking the general form $ax^2 + 2hxy + by^2 + 2gx + 2fy + c = 0$, the equation $\lambda x^2 - 10xy + 12y^2 + 5x - 16y - 3 = 0$ represents a pair of straight lines when $\lambda$ equals'
+  options:
+  - en: '$2$'
+  - en: '$-2$'
+  - en: '$\dfrac12$'
+  - en: '$4$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $a = \lambda$, $h = -5$, $b = 12$, $g = \tfrac52$, $f = -8$, $c = -3$. The condition is
+      $$\Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = 0.$$
+      Substituting,
+      $$\Delta = -36\lambda + 2(-8)\left(\tfrac52\right)(-5) - 64\lambda - 12\cdot\tfrac{25}{4} + 3\cdot 25 = 200 - 100\lambda.$$
+      So $\lambda = 2$.
+
+      Check: $2x^2 - 10xy + 12y^2 + 5x - 16y - 3 = (x - 2y + 3)(2x - 6y - 1)$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - general-condition
+  stem:
+    en: 'The equation $x^2 - 5xy + 4y^2 + x + 2y - 2 = 0$ represents the pair of lines'
+  options:
+  - en: '$x - y + 1 = 0$ and $x - 4y - 2 = 0$'
+  - en: '$x - 4y - 1 = 0$ and $x - y + 2 = 0$'
+  - en: '$x - y - 1 = 0$ and $x - 4y + 2 = 0$'
+  - en: '$x + y - 1 = 0$ and $x + 4y + 2 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      The second-degree part factorises as $x^2 - 5xy + 4y^2 = (x - y)(x - 4y)$. So try $(x - y + p)(x - 4y + q)$. Matching the $x$ and $y$ terms:
+      $$p + q = 1, \qquad -4p - q = 2 \;\Rightarrow\; p = -1,\ q = 2.$$
+      The constant is $pq = -2$, as required. So the lines are $x - y - 1 = 0$ and $x - 4y + 2 = 0$.
+
+      The second option has the right $x, y$ parts but the wrong signs of the constants: its $x$ term is $-x$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - angle
+  - intersection
+  stem:
+    en: 'The acute angle between the lines represented by $x^2 - 5xy + 4y^2 + x + 2y - 2 = 0$ is'
+  options:
+  - en: '$\tan^{-1}\dfrac{3}{10}$'
+  - en: '$\tan^{-1}\dfrac35$'
+  - en: '$\tan^{-1}\dfrac53$'
+  - en: '$\tan^{-1}\dfrac34$'
+  answer: 1
+  explanation:
+    en: |-
+      The angle depends only on the second-degree terms. So use $a = 1$, $h = -\tfrac52$, $b = 4$:
+      $$\tan\theta = \frac{2\sqrt{\tfrac{25}{4} - 4}}{1 + 4} = \frac{2\cdot\tfrac32}{5} = \frac35.$$
+
+      Check with slopes $1$ and $\tfrac14$: $\dfrac{1 - \tfrac14}{1 + \tfrac14} = \dfrac35$. $\tfrac{3}{10}$ drops the factor $2$; $\tfrac53$ is the cotangent.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogenisation
+  stem:
+    en: 'The joint equation of the lines joining the origin to the points where $x + y = 1$ meets the circle $x^2 + y^2 = 4$ is'
+  options:
+  - en: '$3x^2 - 8xy + 3y^2 = 0$'
+  - en: '$5x^2 + 8xy + 5y^2 = 0$'
+  - en: '$3x^2 + 8xy + 3y^2 = 0$'
+  - en: '$3x^2 + 4xy + 3y^2 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      Homogenise the circle with $(x + y) = 1$; the constant needs the factor twice:
+      $$x^2 + y^2 = 4(x + y)^2 \;\Rightarrow\; 3x^2 + 8xy + 3y^2 = 0.$$
+
+      $5x^2 + 8xy + 5y^2$ adds instead of subtracting. $3x^2 + 4xy + 3y^2$ forgets the $2$ in $(x + y)^2 = x^2 + 2xy + y^2$. Check: $h^2 - ab = 16 - 9 > 0$, so the lines are real, as they must be since the line cuts the circle.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogenisation
+  stem:
+    en: 'The line $y = 2x + c$ meets the circle $x^2 + y^2 = 10$ at $P$ and $Q$, and $\angle POQ = 90^\circ$, where $O$ is the origin. Then $c^2$ equals'
+  options:
+  - en: '$50$'
+  - en: '$10$'
+  - en: '$5$'
+  - en: '$25$'
+  answer: 3
+  explanation:
+    en: |-
+      Homogenise with $\dfrac{y - 2x}{c} = 1$:
+      $$c^2(x^2 + y^2) = 10(y - 2x)^2.$$
+      $OP \perp OQ$ requires the $x^2$ and $y^2$ coefficients to add to $0$:
+      $$2c^2 - 10(4 + 1) = 0 \;\Rightarrow\; c^2 = 25.$$
+
+      This is the standard condition $2c^2 = r^2(1 + m^2)$. $c^2 = 50$ forgets the $2$ on the left.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogenisation
+  stem:
+    en: 'The chord $x = k$ ($k > 0$) of the parabola $y^2 = 4ax$ ($a > 0$) subtends a right angle at the vertex. Then $k$ equals'
+  options:
+  - en: '$4a$'
+  - en: '$2a$'
+  - en: '$a$'
+  - en: '$8a$'
+  answer: 0
+  explanation:
+    en: |-
+      Homogenise $y^2 = 4ax$ with $\dfrac{x}{k} = 1$:
+      $$y^2 = 4ax\cdot\frac{x}{k} \;\Rightarrow\; 4ax^2 - ky^2 = 0.$$
+      A right angle at the vertex needs $4a - k = 0$, so $k = 4a$.
+
+      Direct check: the ends are $(4a, \pm 4a)$, and the vectors $(4a, 4a)$ and $(4a, -4a)$ have dot product $0$. $k = a$ gives the latus rectum, which subtends an obtuse angle.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - intersection
+  stem:
+    en: 'The distance between the parallel lines represented by $9x^2 - 24xy + 16y^2 - 12x + 16y - 12 = 0$ is'
+  options:
+  - en: '$\dfrac45$'
+  - en: '$\dfrac65$'
+  - en: '$\dfrac{8}{25}$'
+  - en: '$\dfrac85$'
+  answer: 3
+  explanation:
+    en: |-
+      The second-degree part is $(3x - 4y)^2$. Put $u = 3x - 4y$:
+      $$u^2 - 4u - 12 = (u - 6)(u + 2) = 0.$$
+      So the lines are $3x - 4y - 6 = 0$ and $3x - 4y + 2 = 0$, and
+      $$d = \frac{\lvert -6 - 2\rvert}{\sqrt{9 + 16}} = \frac85.$$
+
+      The formula $2\sqrt{\dfrac{g^2 - ac}{a(a + b)}}$ with $g = -6$, $a = 9$, $b = 16$, $c = -12$ gives $2\cdot\tfrac{12}{15} = \tfrac85$, the same value. $\tfrac45$ forgets the factor $2$, and $\tfrac{8}{25}$ divides by $25$ instead of $5$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The pair of lines through the origin perpendicular to the lines $2x^2 - 5xy + 3y^2 = 0$ is'
+  options:
+  - en: '$3x^2 - 5xy + 2y^2 = 0$'
+  - en: '$2x^2 + 5xy + 3y^2 = 0$'
+  - en: '$3x^2 + 5xy - 2y^2 = 0$'
+  - en: '$3x^2 + 5xy + 2y^2 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      The pair perpendicular to $ax^2 + 2hxy + by^2 = 0$ is $bx^2 - 2hxy + ay^2 = 0$:
+      $$3x^2 + 5xy + 2y^2 = 0.$$
+
+      Check: $2x^2 - 5xy + 3y^2 = (2x - 3y)(x - y)$ has slopes $\tfrac23, 1$. The answer $(3x + 2y)(x + y)$ has slopes $-\tfrac32, -1$, and each slope product is $-1$. $3x^2 - 5xy + 2y^2$ forgets to change the sign of $h$. $2x^2 + 5xy + 3y^2$ reflects the lines in the $x$-axis (slopes $-\tfrac23, -1$); the line of slope $-\tfrac23$ is perpendicular to neither given line.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - bisectors
+  - intersection
+  stem:
+    en: 'The pair of lines $x^2 - 5xy + 4y^2 + x + 2y - 2 = 0$ meets at $(2, 1)$. The equation of the bisectors of the angles between them is'
+  options:
+  - en: '$5(x - 2)^2 + 6(x - 2)(y - 1) - 5(y - 1)^2 = 0$'
+  - en: '$5(x - 2)^2 - 6(x - 2)(y - 1) - 5(y - 1)^2 = 0$'
+  - en: '$5x^2 - 6xy - 5y^2 = 0$'
+  - en: '$5(x - 1)^2 - 6(x - 1)(y - 2) - 5(y - 2)^2 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Shift the origin to $(2, 1)$: with $X = x - 2$, $Y = y - 1$ the pair is $X^2 - 5XY + 4Y^2 = 0$. Here $a = 1$, $h = -\tfrac52$, $b = 4$, and the bisectors are $h(X^2 - Y^2) = (a - b)XY$:
+      $$-\tfrac52(X^2 - Y^2) = -3XY \;\Rightarrow\; 5X^2 - 6XY - 5Y^2 = 0.$$
+
+      So the answer is $5(x - 2)^2 - 6(x - 2)(y - 1) - 5(y - 1)^2 = 0$. The option $5x^2 - 6xy - 5y^2 = 0$ gives the bisector **directions**, but through the origin. The option with $+6$ drops the sign of $h$. The last option centres the bisectors at $(1, 2)$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  - exam-tips
+  stem:
+    en: 'The area of the triangle formed by the lines $x^2 - 4xy + y^2 = 0$ and the line $x + y = 3$ is'
+  options:
+  - en: '$\dfrac{3\sqrt3}{2}$'
+  - en: '$3\sqrt3$'
+  - en: '$\dfrac{9\sqrt3}{2}$'
+  - en: '$\dfrac{3\sqrt3}{4}$'
+  answer: 0
+  explanation:
+    en: |-
+      Use $\text{Area} = \dfrac{n^2\sqrt{h^2 - ab}}{\lvert am^2 - 2hlm + bl^2\rvert}$ with $a = b = 1$, $h = -2$, $l = m = 1$, $n = -3$:
+      $$\text{Area} = \frac{9\sqrt{3}}{1 + 4 + 1} = \frac{3\sqrt3}{2}.$$
+
+      **Check.** The lines make $60^\circ$ with each other and are symmetric about $y = x$, which is perpendicular to $x + y = 3$. So the triangle is equilateral, with altitude $\tfrac{3}{\sqrt2}$ and side $\sqrt6$:
+      $$\text{Area} = \frac{\sqrt3}{4}\cdot 6 = \frac{3\sqrt3}{2}.$$
+      $3\sqrt3$ forgets the factor $\tfrac12$ in the area of a triangle.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - general-condition
+  stem:
+    en: 'The general second-degree equation $ax^2 + 2hxy + by^2 + 2gx + 2fy + c = 0$ represents a pair of straight lines only if'
+  options:
+  - en: '$abc + 2fgh - ag^2 - bf^2 - ch^2 = 0$'
+  - en: '$abc + 2fgh - af^2 - bg^2 - ch^2 = 0$'
+  - en: '$abc - 2fgh - af^2 - bg^2 - ch^2 = 0$'
+  - en: '$abc + 2fgh + af^2 + bg^2 + ch^2 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      The condition is that the determinant vanishes:
+      $$\Delta = \begin{vmatrix} a & h & g\\ h & b & f\\ g & f & c\end{vmatrix} = abc + 2fgh - af^2 - bg^2 - ch^2 = 0.$$
+
+      Expanding along the first row gives $a(bc - f^2) - h(hc - fg) + g(hf - bg)$. So $a$ pairs with $f^2$ and $b$ with $g^2$. The second option swaps these pairs, which is the classic slip.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - intersection
+  stem:
+    en: 'The point of intersection of the lines $2x^2 + 5xy + 3y^2 + 6x + 7y + 4 = 0$ is'
+  options:
+  - en: '$(-1, 2)$'
+  - en: '$(1, -2)$'
+  - en: '$(2, -1)$'
+  - en: '$(-2, 1)$'
+  answer: 1
+  explanation:
+    en: |-
+      Solve $\dfrac{\partial S}{\partial x} = 0$ and $\dfrac{\partial S}{\partial y} = 0$:
+      $$4x + 5y + 6 = 0, \qquad 5x + 6y + 7 = 0.$$
+      This gives $x = 1$, $y = -2$.
+
+      Check: $S = (2x + 3y + 4)(x + y + 1)$, and $(1, -2)$ lies on both lines: $2 - 6 + 4 = 0$ and $1 - 2 + 1 = 0$. The point $(-1, 2)$ comes from a sign slip in $g$ and $f$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogenisation
+  stem:
+    en: 'The angle between the lines joining the origin to the points of intersection of the curve $3x^2 + 5xy - 3y^2 + 2x + 3y = 0$ and the line $3x - 2y = 1$ is'
+  options:
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\dfrac{\pi}{2}$'
+  - en: '$\dfrac{\pi}{6}$'
+  answer: 2
+  explanation:
+    en: |-
+      Homogenise the first-degree terms using $3x - 2y = 1$:
+      $$3x^2 + 5xy - 3y^2 + (2x + 3y)(3x - 2y) = 0 \;\Rightarrow\; 9x^2 + 10xy - 9y^2 = 0.$$
+      Here $a + b = 9 - 9 = 0$, so the lines are perpendicular, and the angle is $\dfrac{\pi}{2}$.
+
+      Note that the second-degree part $3x^2 + 5xy - 3y^2$ already has $a + b = 0$, and the added product $6x^2 + 5xy - 6y^2$ also has coefficient sum $0$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'If $3x + 4y = 0$ is one of the lines represented by $6x^2 - xy + 4cy^2 = 0$, then $c$ equals'
+  options:
+  - en: '$3$'
+  - en: '$-\dfrac13$'
+  - en: '$-3$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      Substitute the slope $m = -\tfrac34$ of $3x + 4y = 0$, that is, put $y = -\tfrac34 x$:
+      $$6 + \frac34 + 4c\cdot\frac{9}{16} = 0 \;\Rightarrow\; \frac{27}{4} + \frac{9c}{4} = 0 \;\Rightarrow\; c = -3.$$
+
+      Check: $6x^2 - xy - 12y^2 = (3x + 4y)(2x - 3y)$. $c = 3$ comes from substituting $y = \tfrac34 x$ (a sign slip in the slope).
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  - exam-tips
+  stem:
+    en: 'If the slope of one of the lines $ax^2 + 2hxy + by^2 = 0$ is twice the slope of the other, then'
+  options:
+  - en: '$8h^2 = 9ab$'
+  - en: '$9h^2 = 8ab$'
+  - en: '$2h^2 = 9ab$'
+  - en: '$4h^2 = 9ab$'
+  answer: 0
+  explanation:
+    en: |-
+      Let the slopes be $m$ and $2m$. Then
+      $$3m = -\frac{2h}{b}, \qquad 2m^2 = \frac{a}{b}.$$
+      Eliminate $m$: $2\cdot\dfrac{4h^2}{9b^2} = \dfrac{a}{b}$, which gives $8h^2 = 9ab$.
+
+      In general, slopes in the ratio $k:1$ give $4kh^2 = (1 + k)^2ab$. $2h^2 = 9ab$ uses $m_1 + m_2 = -h/b$, forgetting the $2$. Check with $(y - x)(y - 2x) = 2x^2 - 3xy + y^2$: $a = 2$, $h = -\tfrac32$, $b = 1$, and $8\cdot\tfrac94 = 18 = 9\cdot 2$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  - angle
+  - bisectors
+  stem:
+    en: 'Consider the equation $ax^2 + 2hxy + by^2 = 0$, where $a, h, b$ are real and not all zero. Consider the following statements:'
+  statements:
+  - en: 'If $a + b = 0$, the equation represents a pair of real, perpendicular lines.'
+  - en: 'If $h^2 < ab$, the equation represents two distinct real lines through the origin.'
+  - en: 'Whenever the equation represents two distinct real lines, the two bisectors of the angles between them are perpendicular to each other.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 3 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True. If $a + b = 0$, then $h^2 - ab = h^2 + a^2 > 0$ (not both zero, else $b = 0$ too), so the lines are real and $1 + m_1m_2 = 1 + \tfrac{a}{b} = 0$. (If $b = 0$, then $a = 0$, and the pair is $xy = 0$.)
+      2. False. $h^2 < ab$ gives imaginary lines; only the origin is real. For example, $x^2 + y^2 = 0$.
+      3. True. The bisectors are $hx^2 - (a - b)xy - hy^2 = 0$, whose $x^2$ and $y^2$ coefficients add to $0$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - general-condition
+  - intersection
+  stem:
+    en: 'Let $S \equiv ax^2 + 2hxy + by^2 + 2gx + 2fy + c$ and $\Delta = abc + 2fgh - af^2 - bg^2 - ch^2$. Consider the following statements:'
+  statements:
+  - en: 'If $S = 0$ represents two intersecting lines, the angle between them depends on $g$, $f$ and $c$ as well as on $a$, $h$ and $b$.'
+  - en: 'If $\Delta = 0$, then $S = 0$ represents a pair of real straight lines.'
+  - en: 'If $S = 0$ represents two lines meeting at $(\alpha, \beta)$, then $a\alpha + h\beta + g = 0$ and $h\alpha + b\beta + f = 0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 3 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. False. Shifting the origin to the point of intersection removes the linear terms and leaves $aX^2 + 2hXY + bY^2 = 0$. So the angle depends on $a, h, b$ only.
+      2. False. $\Delta = 0$ means a pair of lines, which may be **imaginary**. For $x^2 + y^2 = 0$, $\Delta = 0$, but its only real point is the origin.
+      3. True. The intersection point is where $\partial S/\partial x = \partial S/\partial y = 0$.
+  status: ai-generated
+- id: q0024
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogenisation
+  stem:
+    en: 'The line $lx + my = n$ ($n \ne 0$) meets the circle $x^2 + y^2 = r^2$ at $P$ and $Q$, and $O$ is the origin. Consider the following statements:'
+  statements:
+  - en: 'The joint equation of $OP$ and $OQ$ is $n^2(x^2 + y^2) = r^2(lx + my)^2$.'
+  - en: '$\angle POQ = 90^\circ$ if and only if $2n^2 = r^2(l^2 + m^2)$.'
+  - en: '$OP$ and $OQ$ coincide if and only if the line touches the circle.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 3
+  explanation:
+    en: |-
+      1. True. Homogenise $x^2 + y^2 = r^2$ using $\dfrac{lx + my}{n} = 1$.
+      2. True. The coefficients of $x^2$ and $y^2$ are $n^2 - r^2l^2$ and $n^2 - r^2m^2$; their sum vanishes exactly when $2n^2 = r^2(l^2 + m^2)$.
+      3. True. For the joint equation,
+      $$h^2 - ab = n^2\left[r^2(l^2 + m^2) - n^2\right],$$
+      which is $0$ exactly when $n^2 = r^2(l^2 + m^2)$, the tangency condition (distance from $O$ equals $r$).
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  - angle
+  stem:
+    en: Match each equation in List I with what it represents in List II.
+  left:
+  - en: '$x^2 - 2xy + y^2 = 0$'
+  - en: '$x^2 + xy + y^2 = 0$'
+  - en: '$2x^2 + 3xy - 2y^2 = 0$'
+  - en: '$x^2 - 5xy + 6y^2 = 0$'
+  right:
+  - en: two real perpendicular lines
+  - en: two coincident lines
+  - en: only the origin (imaginary lines)
+  - en: 'two real, distinct, non-perpendicular lines'
+  options:
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-2, B-3, C-1, D-4'
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-1, B-3, C-2, D-4'
+  answer: 1
+  explanation:
+    en: |-
+      Compare $h^2$ with $ab$, and test $a + b$:
+      - A: $h = -1$, $h^2 = 1 = ab$: $(x - y)^2 = 0$, coincident (2).
+      - B: $h = \tfrac12$, $h^2 = \tfrac14 < 1 = ab$: imaginary (3).
+      - C: $a + b = 0$: perpendicular, $(2x - y)(x + 2y) = 0$ (1).
+      - D: $(x - 2y)(x - 3y) = 0$, slopes $\tfrac12, \tfrac13$, and $a + b = 7 \ne 0$ (4).
+
+      Answer: A-2, B-3, C-1, D-4.
+  status: ai-generated
+- id: q0026
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - angle
+  stem:
+    en: Match each pair of lines in List I with the acute angle between them in List II.
+  left:
+  - en: '$x^2 - 4xy + y^2 = 0$'
+  - en: '$x^2 + xy = 0$'
+  - en: '$\sqrt3\,x^2 - xy = 0$'
+  - en: '$6x^2 - 5xy - 6y^2 = 0$'
+  right:
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{2}$'
+  options:
+  - en: 'A-1, B-2, C-3, D-4'
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 3
+  explanation:
+    en: |-
+      Use $\tan\theta = \dfrac{2\sqrt{h^2 - ab}}{\lvert a + b\rvert}$:
+      - A: $a = b = 1$, $h = -2$: $\tan\theta = \sqrt3$, so $\tfrac{\pi}{3}$ (3).
+      - B: $x(x + y) = 0$, the lines $x = 0$ and $y = -x$: $\tfrac{\pi}{4}$ (2). By the formula, $a = 1$, $h = \tfrac12$, $b = 0$ give $\tan\theta = 1$.
+      - C: $x(\sqrt3\,x - y) = 0$, the lines $x = 0$ and $y = \sqrt3\,x$ (at $60^\circ$ to the $x$-axis): $\tfrac{\pi}{6}$ (1). By the formula, $\tan\theta = \dfrac{2\cdot\tfrac12}{\sqrt3} = \dfrac{1}{\sqrt3}$.
+      - D: $a + b = 0$: $\tfrac{\pi}{2}$ (4).
+
+      Answer: A-3, B-2, C-1, D-4.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - angle
+  assertion:
+    en: 'The equation $3x^2 + 8xy - 3y^2 = 0$ represents a pair of perpendicular lines.'
+  reason:
+    en: 'The equation $ax^2 + 2hxy + by^2 = 0$ ($a, h, b$ not all zero) represents a pair of perpendicular lines if and only if $a + b = 0$.'
+  answer: 0
+  explanation:
+    en: |-
+      Assertion: true, because $3 + (-3) = 0$. Indeed, $3x^2 + 8xy - 3y^2 = (3x - y)(x + 3y)$, with slopes $3$ and $-\tfrac13$.
+
+      Reason: true; it is the standard condition, since $\tan\theta = \dfrac{2\sqrt{h^2 - ab}}{a + b}$ is undefined exactly when $a + b = 0$. The reason is exactly the test used, so it explains the assertion.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - angle
+  - general-condition
+  assertion:
+    en: 'The acute angle between the lines $x^2 - 5xy + 4y^2 + x + 2y - 2 = 0$ equals the acute angle between the lines $x^2 - 5xy + 4y^2 = 0$.'
+  reason:
+    en: 'For the equation $x^2 - 5xy + 4y^2 + x + 2y - 2 = 0$, $\Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = 0$.'
+  answer: 1
+  explanation:
+    en: |-
+      Assertion: true. The lines are $x - y - 1 = 0$ and $x - 4y + 2 = 0$, which are parallel to $x - y = 0$ and $x - 4y = 0$. So both angles are $\tan^{-1}\tfrac35$.
+
+      Reason: true. With $a = 1$, $h = -\tfrac52$, $b = 4$, $g = \tfrac12$, $f = 1$, $c = -2$:
+      $$\Delta = -8 - \tfrac52 - 1 - 1 + \tfrac{25}{2} = 0.$$
+      But $\Delta = 0$ only says the equation is a pair of lines. The equality of the angles comes from the second-degree terms being the same, so the reason does not explain the assertion.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - intersection
+  - general-condition
+  assertion:
+    en: 'The equation $x^2 + 2xy + y^2 - 2x - 2y - 3 = 0$ represents a pair of parallel straight lines.'
+  reason:
+    en: 'Whenever $h^2 = ab$, the equation $ax^2 + 2hxy + by^2 + 2gx + 2fy + c = 0$ represents a pair of parallel straight lines.'
+  answer: 2
+  explanation:
+    en: |-
+      Assertion: true. Put $u = x + y$: $u^2 - 2u - 3 = (u - 3)(u + 1) = 0$, so the lines are $x + y = 3$ and $x + y = -1$.
+
+      Reason: false. $h^2 = ab$ makes the second-degree part a perfect square, but $\Delta = 0$ is also needed. The parabola $y^2 = 4x$ has $h^2 = ab = 0$ but $\Delta = -4 \ne 0$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogenisation
+  assertion:
+    en: 'The chord $x + 2y = 2$ of the circle $x^2 + y^2 = 4$ subtends a right angle at the origin.'
+  reason:
+    en: 'The chord $lx + my = n$ of the circle $x^2 + y^2 = r^2$ subtends a right angle at the origin if and only if $2n^2 = r^2(l^2 + m^2)$.'
+  answer: 3
+  explanation:
+    en: |-
+      Reason: true. Homogenising gives $n^2(x^2 + y^2) = r^2(lx + my)^2$, and the $x^2$ and $y^2$ coefficients add to $2n^2 - r^2(l^2 + m^2)$.
+
+      Assertion: false. Here $2n^2 = 8$ but $r^2(l^2 + m^2) = 4\cdot 5 = 20$. Directly: the chord meets the circle at $(2, 0)$ and $\left(-\tfrac65, \tfrac85\right)$, and the dot product of these vectors is $-\tfrac{12}{5} \ne 0$.
+  status: ai-generated

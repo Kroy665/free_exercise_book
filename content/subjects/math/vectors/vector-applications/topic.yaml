@@ -1,0 +1,18 @@
+id: math.vectors.vector-applications
+title:
+  en: Vector Applications and Calculus
+summary:
+  en: Work done by a force, moment of a force about a point and about a line, vector equations of lines and planes, shortest distance, volume of a tetrahedron, and differentiation of vector functions with velocity and acceleration.
+order: 2
+exams: [slst-1112]
+prerequisites: [math.vectors.vector-algebra]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Shanti Narayan and P. K. Mittal, A Textbook of Vector Analysis, ch. on applications and vector differentiation
+  - M. R. Spiegel, Vector Analysis (Schaum's Outline), ch. 1–3
+  - B. Spain, Vector Analysis, ch. 1–2
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) V.1–V.2
+retired: []

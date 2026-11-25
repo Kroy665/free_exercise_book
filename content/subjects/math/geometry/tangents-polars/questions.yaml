@@ -1,0 +1,651 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - tangency
+  stem:
+    en: 'The tangent to the circle $x^2 + y^2 = 25$ at the point $(3, 4)$ is'
+  options:
+  - en: '$4x + 3y = 25$'
+  - en: '$3x - 4y = 25$'
+  - en: '$3x + 4y = 25$'
+  - en: '$3x + 4y = 5$'
+  answer: 2
+  explanation:
+    en: |-
+      Use $T = 0$: replace $x^2$ by $3x$ and $y^2$ by $4y$:
+      $$3x + 4y = 25.$$
+      Check: $(3, 4)$ gives $9 + 16 = 25$. $4x + 3y = 25$ swaps the coordinates: it is the tangent at $(4, 3)$ and does not pass through $(3,4)$. $3x + 4y = 5$ uses the radius instead of $a^2$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'The line $y = x + c$ touches the ellipse $\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1$ if and only if'
+  options:
+  - en: '$c = \pm\sqrt5$'
+  - en: '$c = \pm 13$'
+  - en: '$c = \pm 5$'
+  - en: '$c = \pm\sqrt{13}$'
+  answer: 3
+  explanation:
+    en: |-
+      For the ellipse the condition is $c^2 = a^2m^2 + b^2$. Here $a^2 = 9$, $b^2 = 4$, $m = 1$:
+      $$c^2 = 9 + 4 = 13,\qquad c = \pm\sqrt{13}.$$
+      $\pm\sqrt5$ comes from the hyperbola condition $c^2 = a^2m^2 - b^2$; $\pm 13$ forgets the square root.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'The tangent to the parabola $y^2 = 8x$ with slope $2$ is'
+  options:
+  - en: '$y = 2x + 4$'
+  - en: '$y = 2x - 1$'
+  - en: '$y = 2x + \dfrac12$'
+  - en: '$y = 2x + 1$'
+  answer: 3
+  explanation:
+    en: |-
+      Here $4a = 8$, so $a = 2$. The tangent of slope $m$ is $y = mx + \frac am$:
+      $$y = 2x + \frac22 = 2x + 1.$$
+      Check by substitution: $(2x + 1)^2 = 8x \iff 4x^2 - 4x + 1 = 0 \iff (2x - 1)^2 = 0$, a double root. $y = 2x + 4$ uses $am$ instead of $\frac am$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'The line $3x + 4y = k$ touches the circle $x^2 + y^2 - 2x - 4y - 4 = 0$ for'
+  options:
+  - en: '$k = 4$ or $k = -26$'
+  - en: '$k = 26$ or $k = -4$'
+  - en: '$k = 15$ or $k = -15$'
+  - en: '$k = 11$ only'
+  answer: 1
+  explanation:
+    en: |-
+      The centre is $(1, 2)$ and the radius is $\sqrt{1 + 4 + 4} = 3$. Tangency means distance from the centre = radius:
+      $$\frac{\lvert 3 + 8 - k\rvert}{5} = 3 \iff \lvert 11 - k\rvert = 15 \iff k = 26 \text{ or } k = -4.$$
+      $k = \pm 15$ is the answer for a circle centred at the origin; $k = 11$ is the line through the centre.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'The line $lx + my + n = 0$ touches the parabola $y^2 = 4ax$ $(a \ne 0,\ l \ne 0)$ if and only if'
+  options:
+  - en: '$mn = al^2$'
+  - en: '$ln = am^2$'
+  - en: '$ln + am^2 = 0$'
+  - en: '$n^2 = a(l^2 + m^2)$'
+  answer: 1
+  explanation:
+    en: |-
+      Put $x = -\frac{my + n}{l}$ into $y^2 = 4ax$:
+      $$ly^2 + 4amy + 4an = 0.$$
+      Tangency means a double root: $16a^2m^2 - 16aln = 0$, i.e. $ln = am^2$.
+
+      Check with $y = mx + \frac am$, i.e. $mx - y + \frac am = 0$: $l = m$, $m \to -1$, $n = \frac am$, and $ln = a = a\cdot(-1)^2$. The sign-flipped option fails this check.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - normals
+  stem:
+    en: 'The normal to the parabola $y^2 = 4ax$ with slope $m$ is'
+  options:
+  - en: '$y = mx - 2am - am^3$'
+  - en: '$y = mx + 2am + am^3$'
+  - en: '$y = mx - am - 2am^3$'
+  - en: '$y = mx + \dfrac am$'
+  answer: 0
+  explanation:
+    en: |-
+      The normal at $(at^2, 2at)$ is $y + tx = 2at + at^3$, of slope $-t$. Put $t = -m$:
+      $$y - mx = -2am - am^3 \implies y = mx - 2am - am^3,$$
+      with foot $(am^2, -2am)$. Check: $(am^2, -2am)$ satisfies it, since $am^3 - 2am - am^3 = -2am$. The option $y = mx + \frac am$ is the **tangent** of slope $m$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - normals
+  stem:
+    en: 'The number of normals that can be drawn from the point $(5, 0)$ to the parabola $y^2 = 4x$ is'
+  options:
+  - en: '$1$'
+  - en: '$2$'
+  - en: '$3$'
+  - en: '$4$'
+  answer: 2
+  explanation:
+    en: |-
+      With $a = 1$, the normal $y = mx - 2m - m^3$ passes through $(5, 0)$ iff
+      $$0 = 5m - 2m - m^3 \iff m(m^2 - 3) = 0 \iff m = 0, \pm\sqrt3.$$
+      Three real normals: the axis $y = 0$ and $y = \pm\sqrt3(x - 5)$. In general $(h, 0)$ gives three normals iff $h > 2a$; here $5 > 2$. Four is the bound for an ellipse, not a parabola.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - pair-of-tangents
+  stem:
+    en: 'The angle between the two tangents drawn from $(4, 0)$ to the circle $x^2 + y^2 = 4$ is'
+  options:
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{2}$'
+  - en: '$\dfrac{2\pi}{3}$'
+  answer: 0
+  explanation:
+    en: |-
+      Distance to the centre $d = 4$, radius $2$. The half-angle $\alpha$ satisfies
+      $$\sin\alpha = \frac{2}{4} = \frac12 \implies \alpha = \frac{\pi}{6},$$
+      so the tangents meet at $2\alpha = \frac{\pi}{3}$. $\frac\pi6$ is only the half-angle. $\frac\pi2$ would need $d^2 = 2r^2 = 8$ (the director circle).
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'The tangent to the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ at the point $(a\cos\theta, b\sin\theta)$ is'
+  options:
+  - en: '$\dfrac{x\cos\theta}{a} - \dfrac{y\sin\theta}{b} = 1$'
+  - en: '$ax\sec\theta - by\csc\theta = a^2 - b^2$'
+  - en: '$\dfrac{x\cos\theta}{a} + \dfrac{y\sin\theta}{b} = 1$'
+  - en: '$\dfrac{x\sec\theta}{a} - \dfrac{y\tan\theta}{b} = 1$'
+  answer: 2
+  explanation:
+    en: |-
+      Put $x_1 = a\cos\theta$, $y_1 = b\sin\theta$ into $\frac{xx_1}{a^2} + \frac{yy_1}{b^2} = 1$:
+      $$\frac{x\cos\theta}{a} + \frac{y\sin\theta}{b} = 1.$$
+      $ax\sec\theta - by\csc\theta = a^2 - b^2$ is the **normal** at the same point, and $\frac{x\sec\theta}{a} - \frac{y\tan\theta}{b} = 1$ is the hyperbola's tangent.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - chord-of-contact
+  stem:
+    en: 'The chord of contact of the tangents from $(2, 3)$ to the circle $x^2 + y^2 = 4$ is'
+  options:
+  - en: '$3x + 2y = 4$'
+  - en: '$2x + 3y = 13$'
+  - en: '$2x + 3y = 4$'
+  - en: '$2x - 3y = 4$'
+  answer: 2
+  explanation:
+    en: |-
+      The chord of contact is $T = 0$: $2x + 3y = 4$. ($S_1 = 9 > 0$, so $(2,3)$ is outside and two real tangents exist.)
+
+      $2x + 3y = 13$ is the chord **bisected** at $(2,3)$ ($T = S_1$ gives $2x + 3y - 4 = 9$); it is parallel to the chord of contact but different.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - chord-of-contact
+  stem:
+    en: 'The equation of the chord of the ellipse $\dfrac{x^2}{16} + \dfrac{y^2}{9} = 1$ whose midpoint is $(2, 1)$ is'
+  options:
+  - en: '$9x + 8y = 26$'
+  - en: '$9x + 8y = 72$'
+  - en: '$8x + 9y = 25$'
+  - en: '$9x - 8y = 10$'
+  answer: 0
+  explanation:
+    en: |-
+      Use $T = S_1$:
+      $$\frac{2x}{16} + \frac{y}{9} - 1 = \frac{4}{16} + \frac19 - 1 \iff \frac x8 + \frac y9 = \frac{13}{36}.$$
+      Multiply by $72$: $9x + 8y = 26$. Check: $(2,1)$ gives $18 + 8 = 26$.
+
+      $9x + 8y = 72$ is $T = 0$, the polar of $(2, 1)$; it is parallel to the answer but does not pass through $(2,1)$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - poles-polars
+  stem:
+    en: 'The pole of the line $2x + 3y = 6$ with respect to the ellipse $\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1$ is'
+  options:
+  - en: '$(2, 3)$'
+  - en: '$(3, 2)$'
+  - en: '$\left(\dfrac13, \dfrac12\right)$'
+  - en: '$\left(\dfrac{2}{3}, \dfrac{3}{2}\right)$'
+  answer: 1
+  explanation:
+    en: |-
+      The polar of $(h, k)$ is $\frac{hx}{9} + \frac{ky}{4} = 1$. The given line is $\frac x3 + \frac y2 = 1$. Comparing:
+      $$\frac h9 = \frac13,\quad \frac k4 = \frac12 \implies (h, k) = (3, 2).$$
+      Check with the table: $\left(-\frac{a^2l}{n}, -\frac{b^2m}{n}\right) = \left(-\frac{9\cdot2}{-6}, -\frac{4\cdot3}{-6}\right) = (3, 2)$. $\left(\frac13, \frac12\right)$ forgets to multiply by $a^2, b^2$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - poles-polars
+  stem:
+    en: 'The pole of the line $lx + my + n = 0$ $(l \ne 0)$ with respect to the parabola $y^2 = 4ax$ is'
+  options:
+  - en: '$\left(\dfrac nl, -\dfrac{2am}{l}\right)$'
+  - en: '$\left(-\dfrac nl, \dfrac{2am}{l}\right)$'
+  - en: '$\left(\dfrac nl, \dfrac{2am}{l}\right)$'
+  - en: '$\left(-\dfrac{2an}{l}, -\dfrac ml\right)$'
+  answer: 0
+  explanation:
+    en: |-
+      The polar of $(h, k)$ is $ky = 2a(x + h)$, i.e. $2ax - ky + 2ah = 0$. Compare with $lx + my + n = 0$:
+      $$\frac{2a}{l} = \frac{-k}{m} = \frac{2ah}{n} \implies h = \frac nl,\quad k = -\frac{2am}{l}.$$
+      Check: the tangent at the vertex $x = 0$ ($l = 1, m = 0, n = 0$) has pole $(0, 0)$, the vertex itself. The directrix $x + a = 0$ has pole $(a, 0)$, the focus. The sign-flipped option gives $(-a, 0)$ there.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - chord-of-contact
+  stem:
+    en: 'The length of the tangent from $(5, 3)$ to the circle $x^2 + y^2 - 4x + 2y - 4 = 0$ is'
+  options:
+  - en: '$16$'
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$6$'
+  answer: 1
+  explanation:
+    en: |-
+      $L = \sqrt{S_1}$:
+      $$S_1 = 25 + 9 - 20 + 6 - 4 = 16,\qquad L = 4.$$
+      $16$ is $L^2$. Check: centre $(2, -1)$, radius $3$, distance $5$; $L = \sqrt{25 - 9} = 4$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - chord-of-contact
+  stem:
+    en: 'Tangents are drawn from $(4, 3)$ to the circle $x^2 + y^2 = 9$. The length of the chord of contact is'
+  options:
+  - en: '$\dfrac{24}{5}$'
+  - en: '$\dfrac{12}{5}$'
+  - en: '$5$'
+  - en: '$\dfrac{16}{5}$'
+  answer: 0
+  explanation:
+    en: |-
+      $L = \sqrt{16 + 9 - 9} = 4$, $r = 3$, $d = 5$. The chord is
+      $$\frac{2rL}{\sqrt{r^2 + L^2}} = \frac{2\cdot3\cdot4}{5} = \frac{24}{5}.$$
+      Directly: the chord $4x + 3y = 9$ is at distance $\frac95$ from $O$, so its half-length is $\sqrt{9 - \frac{81}{25}} = \frac{12}{5}$. The option $\frac{12}{5}$ is only the half-chord.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - poles-polars
+  stem:
+    en: 'The locus of the poles, with respect to the circle $x^2 + y^2 = b^2$, of the tangents to the circle $x^2 + y^2 = a^2$ $(a, b > 0)$ is'
+  options:
+  - en: '$x^2 + y^2 = \dfrac{a^4}{b^2}$'
+  - en: '$x^2 + y^2 = ab$'
+  - en: '$x^2 + y^2 = \dfrac{b^2}{a}$'
+  - en: '$x^2 + y^2 = \dfrac{b^4}{a^2}$'
+  answer: 3
+  explanation:
+    en: |-
+      The polar of $(h, k)$ with respect to $x^2 + y^2 = b^2$ is $hx + ky = b^2$. It touches $x^2 + y^2 = a^2$ iff its distance from $O$ is $a$:
+      $$\frac{b^2}{\sqrt{h^2 + k^2}} = a \iff h^2 + k^2 = \frac{b^4}{a^2}.$$
+      Check with $a = b$: the poles of tangents to a circle with respect to itself are the points of contact, on the same circle; $\frac{b^4}{a^2} = a^2$. The option $\frac{a^4}{b^2}$ swaps the roles of the circles.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - poles-polars
+  - normals
+  stem:
+    en: 'The locus of the poles of normal chords of the parabola $y^2 = 4ax$ $(a > 0)$ is'
+  options:
+  - en: '$(x - 2a)y^2 + 4a^3 = 0$'
+  - en: '$(x + 2a)y^2 + 4a^3 = 0$'
+  - en: '$(x + 2a)y^2 = 4a^3$'
+  - en: '$(x + a)y^2 + 2a^3 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      The normal at $t$ is $tx + y - 2at - at^3 = 0$. Its pole $\left(\frac nl, -\frac{2am}{l}\right)$ with $l = t$, $m = 1$, $n = -2at - at^3$ is
+      $$h = -2a - at^2,\qquad k = -\frac{2a}{t}.$$
+      Then $t^2 = \frac{4a^2}{k^2}$ and $h + 2a = -\frac{4a^3}{k^2}$, so $(x + 2a)y^2 + 4a^3 = 0$.
+
+      Check: $h = -2a - at^2 < -2a$, so the locus lies left of $x = -2a$; the option $(x + 2a)y^2 = 4a^3$ would put it on the right.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate
+  stem:
+    en: 'The points $(1, 2)$ and $(k, 3)$ are conjugate with respect to the circle $x^2 + y^2 = 10$. Then $k =$'
+  options:
+  - en: '$-4$'
+  - en: '$16$'
+  - en: '$2$'
+  - en: '$4$'
+  answer: 3
+  explanation:
+    en: |-
+      Conjugate means each lies on the polar of the other. The polar of $(1, 2)$ is $x + 2y = 10$; put in $(k, 3)$:
+      $$k + 6 = 10 \implies k = 4.$$
+      The sign slip $k + 6 = -10$, or forgetting that the right side is $a^2 = 10$, gives the wrong options.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate
+  stem:
+    en: 'The lines $l_1x + m_1y + n_1 = 0$ and $l_2x + m_2y + n_2 = 0$ are conjugate with respect to the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ if and only if'
+  options:
+  - en: '$a^2l_1l_2 - b^2m_1m_2 = n_1n_2$'
+  - en: '$\dfrac{l_1l_2}{a^2} + \dfrac{m_1m_2}{b^2} = n_1n_2$'
+  - en: '$a^2l_1l_2 + b^2m_1m_2 = n_1n_2$'
+  - en: '$a^2l_1m_1 + b^2l_2m_2 = n_1n_2$'
+  answer: 2
+  explanation:
+    en: |-
+      The pole of the first line is $\left(-\frac{a^2l_1}{n_1}, -\frac{b^2m_1}{n_1}\right)$. It lies on the second iff
+      $$-\frac{a^2l_1l_2}{n_1} - \frac{b^2m_1m_2}{n_1} + n_2 = 0 \iff a^2l_1l_2 + b^2m_1m_2 = n_1n_2.$$
+      The minus-sign version is the hyperbola's condition. Dividing by $a^2, b^2$ is the conjugate-**points** pattern, not the lines pattern.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - pair-of-tangents
+  stem:
+    en: 'The combined equation of the pair of tangents from the origin to the circle $x^2 + y^2 - 6x - 4y + 9 = 0$ is'
+  options:
+  - en: '$5x^2 - 12xy = 0$'
+  - en: '$5y^2 + 12xy = 0$'
+  - en: '$4y^2 - 12xy = 0$'
+  - en: '$5y^2 - 12xy = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      Use $SS_1 = T^2$ with $S_1 = 9$ and $T = -3x - 2y + 9$:
+      $$9(x^2 + y^2 - 6x - 4y + 9) = (9 - 3x - 2y)^2.$$
+      The right side is $81 + 9x^2 + 4y^2 - 54x - 36y + 12xy$. Cancelling gives $5y^2 - 12xy = 0$, i.e. $y = 0$ and $12x = 5y$.
+
+      Check: the centre $(3, 2)$ is at distance $2$ (= radius) from $y = 0$, and at distance $\frac{\lvert 36 - 10\rvert}{13} = 2$ from $12x - 5y = 0$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - normals
+  stem:
+    en: 'The line $lx + my + n = 0$ is a normal to the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ $(a > b > 0)$ if and only if'
+  options:
+  - en: '$\dfrac{a^2}{l^2} + \dfrac{b^2}{m^2} = \dfrac{(a^2 - b^2)^2}{n^2}$'
+  - en: '$\dfrac{a^2}{l^2} - \dfrac{b^2}{m^2} = \dfrac{(a^2 + b^2)^2}{n^2}$'
+  - en: '$a^2l^2 + b^2m^2 = n^2$'
+  - en: '$\dfrac{l^2}{a^2} + \dfrac{m^2}{b^2} = \dfrac{(a^2 - b^2)^2}{n^2}$'
+  answer: 0
+  explanation:
+    en: |-
+      The normal at $\theta$ is $ax\sec\theta - by\csc\theta = a^2 - b^2$. Comparing with $lx + my + n = 0$:
+      $$\frac{a\sec\theta}{l} = \frac{-b\csc\theta}{m} = \frac{a^2 - b^2}{-n} \implies \cos\theta = -\frac{an}{l(a^2 - b^2)},\ \sin\theta = \frac{bn}{m(a^2 - b^2)}.$$
+      Squaring and adding: $\frac{a^2}{l^2} + \frac{b^2}{m^2} = \frac{(a^2 - b^2)^2}{n^2}$.
+
+      $a^2l^2 + b^2m^2 = n^2$ is the **tangency** condition; the minus/plus version belongs to the hyperbola.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - normals
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'At most three normals can be drawn to the parabola $y^2 = 4ax$ from any point.'
+  - en: 'If three normals are drawn from a point to $y^2 = 4ax$, the sum of the ordinates of their feet is zero.'
+  - en: At most four normals can be drawn to an ellipse from any point.
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 3
+  explanation:
+    en: |-
+      1. True: the normal $y = mx - 2am - am^3$ passes through $(h, k)$ iff $am^3 + (2a - h)m + k = 0$, a cubic in $m$.
+      2. True: the cubic has no $m^2$ term, so $m_1 + m_2 + m_3 = 0$; the feet have ordinates $-2am_i$, which add to $0$.
+      3. True: the feet are the intersections of the ellipse with a rectangular hyperbola (Apollonius), at most four points. For example, from $\left(\frac1{10}, \frac1{20}\right)$ to $\frac{x^2}{4} + y^2 = 1$ there are exactly four.
+
+      The tempting "1 and 2 only" comes from carrying the parabola's bound of three over to the ellipse.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conjugate
+  - poles-polars
+  - pair-of-tangents
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'The points $(x_1, y_1)$ and $(x_2, y_2)$ are conjugate with respect to $x^2 + y^2 = a^2$ if and only if $x_1x_2 + y_1y_2 = a^2$.'
+  - en: 'The polar of $(1, 2)$ with respect to $y^2 = 4x$ is $y = x + 1$.'
+  - en: 'The director circle of the hyperbola $\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1$ is $x^2 + y^2 = 7$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      1. True: the polar of $(x_1, y_1)$ is $xx_1 + yy_1 = a^2$; conjugacy means $(x_2, y_2)$ lies on it.
+      2. True: the polar is $2y = 2(x + 1)$, i.e. $y = x + 1$. Since $(1, 2)$ is on the parabola, this is the tangent there.
+      3. False: the director circle of a hyperbola is $x^2 + y^2 = a^2 - b^2 = 9 - 16 = -7$, which has no real points. No point sees this hyperbola under a right angle. $x^2 + y^2 = 7$ comes from computing $b^2 - a^2$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tangency
+  stem:
+    en: 'Match each conic in List I $(a, b > 0)$ with the condition in List II for the line $y = mx + c$ to touch it.'
+  left:
+  - en: '$x^2 + y^2 = a^2$'
+  - en: '$y^2 = 4ax$'
+  - en: '$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$'
+  - en: '$\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$'
+  right:
+  - en: '$c^2 = a^2m^2 - b^2$'
+  - en: '$c = \dfrac am$'
+  - en: '$c^2 = a^2(1 + m^2)$'
+  - en: '$c^2 = a^2m^2 + b^2$'
+  options:
+  - en: 'A-3, B-2, C-1, D-4'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-3, C-4, D-1'
+  answer: 1
+  explanation:
+    en: |-
+      Substitute $y = mx + c$ and set the discriminant to zero.
+      - A: $(1 + m^2)x^2 + 2mcx + c^2 - a^2 = 0$ gives $c^2 = a^2(1 + m^2)$: 3.
+      - B: $m^2x^2 + (2mc - 4a)x + c^2 = 0$ gives $mc = a$: 2.
+      - C: $c^2 = a^2m^2 + b^2$: 4.
+      - D: $c^2 = a^2m^2 - b^2$: 1.
+
+      The usual slip swaps C and D. A check: the ellipse with $b = a$ is the circle, and $a^2m^2 + a^2 = a^2(1 + m^2)$ agrees with A.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - pair-of-tangents
+  stem:
+    en: Match each curve in List I with the locus in List II of points from which two perpendicular tangents can be drawn to it.
+  left:
+  - en: '$\dfrac{x^2}{16} + \dfrac{y^2}{9} = 1$'
+  - en: '$\dfrac{x^2}{16} - \dfrac{y^2}{9} = 1$'
+  - en: '$y^2 = 8x$'
+  - en: '$x^2 + y^2 = 8$'
+  right:
+  - en: '$x = -2$'
+  - en: '$x^2 + y^2 = 16$'
+  - en: '$x^2 + y^2 = 25$'
+  - en: '$x^2 + y^2 = 7$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-2, B-4, C-1, D-3'
+  answer: 0
+  explanation:
+    en: |-
+      These are the director circles.
+      - A: ellipse, $x^2 + y^2 = a^2 + b^2 = 25$: 3.
+      - B: hyperbola, $x^2 + y^2 = a^2 - b^2 = 7$: 4 (real since $a > b$).
+      - C: parabola with $a = 2$: the directrix $x = -2$: 1.
+      - D: circle of radius $\sqrt8$: $x^2 + y^2 = 2\cdot 8 = 16$: 2.
+
+      Swapping A and B mixes up $a^2 \pm b^2$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - poles-polars
+  assertion:
+    en: 'The polar of the focus $(ae, 0)$ of the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ $(0 < e < 1)$ is the directrix $x = \dfrac ae$.'
+  reason:
+    en: 'The polar of $(x_1, y_1)$ with respect to $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ is $\dfrac{xx_1}{a^2} + \dfrac{yy_1}{b^2} = 1$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is the definition $T = 0$, true. Put $(x_1, y_1) = (ae, 0)$:
+      $$\frac{x\cdot ae}{a^2} = 1 \implies x = \frac ae,$$
+      the directrix on the same side. So A is true and follows directly from R.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - pair-of-tangents
+  assertion:
+    en: 'The two tangents drawn from $(3, 1)$ to the circle $x^2 + y^2 = 5$ are perpendicular.'
+  reason:
+    en: 'Perpendicular tangents can be drawn to $x^2 + y^2 = a^2$ only from points of the circle $x^2 + y^2 = 4a^2$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $3^2 + 1^2 = 10 = 2\cdot5$, so $(3, 1)$ lies on the director circle $x^2 + y^2 = 2a^2$. Directly, $\sin\alpha = \frac{\sqrt5}{\sqrt{10}} = \frac{1}{\sqrt2}$, so the half-angle is $\frac\pi4$ and the angle is $\frac\pi2$.
+
+      R is false: the director circle has radius $a\sqrt2$, not $2a$. From a point at distance $2a$, $\sin\alpha = \frac12$ and the tangents meet at $\frac\pi3$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - poles-polars
+  - tangency
+  assertion:
+    en: 'The polar of $(1, 1)$ with respect to the ellipse $\dfrac{x^2}{4} + \dfrac{y^2}{2} = 1$ meets the ellipse in two real points.'
+  reason:
+    en: 'A point $(x_1, y_1)$ lies inside $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ if and only if $\dfrac{x_1^2}{a^2} + \dfrac{y_1^2}{b^2} < 1$.'
+  answer: 3
+  explanation:
+    en: |-
+      R is true (the standard $S_1 < 0$ test).
+
+      A is false. $\frac14 + \frac12 < 1$, so $(1, 1)$ is inside, and the polar of an interior point does not meet the conic. Directly: the polar is $\frac x4 + \frac y2 = 1$, i.e. $x = 4 - 2y$. Substituting,
+      $$\frac{(4 - 2y)^2}{4} + \frac{y^2}{2} = 1 \iff 3y^2 - 8y + 6 = 0,$$
+      whose discriminant $64 - 72 < 0$. No real intersection.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - tangency
+  assertion:
+    en: 'The locus of the foot of the perpendicular from a focus to a variable tangent of the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ $(a > b > 0)$ is the auxiliary circle $x^2 + y^2 = a^2$.'
+  reason:
+    en: 'The product of the perpendiculars from the two foci to any tangent of the ellipse $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ is $b^2$.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true. Take the tangent $y = mx + c$ with $c^2 = a^2m^2 + b^2$.
+
+      A: the perpendicular from $S(ae, 0)$ is $my + x = ae$. Squaring and adding $y - mx = c$ and $my + x = ae$:
+      $$(1 + m^2)(x^2 + y^2) = c^2 + a^2e^2 = a^2m^2 + b^2 + a^2 - b^2 = a^2(1 + m^2),$$
+      so $x^2 + y^2 = a^2$.
+
+      R: $p_1p_2 = \frac{\lvert(mae + c)(-mae + c)\rvert}{1 + m^2} = \frac{\lvert c^2 - m^2a^2e^2\rvert}{1 + m^2} = \frac{a^2m^2 + b^2 - m^2(a^2 - b^2)}{1 + m^2} = b^2$.
+
+      R is a different property; it does not give the locus in A. So the answer is "both true, R does not explain A".
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - pair-of-tangents
+  assertion:
+    en: 'The tangents to $y^2 = 4ax$ $(a > 0)$ drawn from any point of the directrix $x = -a$ are perpendicular.'
+  reason:
+    en: 'The slopes of the tangents to $y^2 = 4ax$ from $(h, k)$, $h \ne 0$, are the roots of $hm^2 - km + a = 0$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is true: the tangent $y = mx + \frac am$ passes through $(h, k)$ iff $k = mh + \frac am$, i.e. $hm^2 - km + a = 0$.
+
+      By R the product of the slopes is $\frac ah$. On the directrix $h = -a$, so the product is $-1$: the tangents are perpendicular. (The discriminant $k^2 + 4a^2 > 0$, so both are real.) R explains A.
+  status: ai-generated

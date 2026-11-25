@@ -1,0 +1,18 @@
+id: math.geometry.polar-equations
+title:
+  en: Polar Equations
+summary:
+  en: Polar coordinates and conversion, the polar equations of a straight line and a circle, the conic l/r = 1 + e cos θ with a focus as pole, chords, tangents and normals in polar form, and the properties of focal chords.
+order: 4
+exams: [slst-0910, slst-1112]
+prerequisites: [math.geometry.axes-conics]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. L. Loney, The Elements of Coordinate Geometry, Part I, chs. on polar coordinates and polar equation of a conic
+  - J. G. Chakravorty and P. R. Ghosh, Analytical Geometry and Vector Analysis, ch. on polar equations
+  - S. K. Mapa, Analytical Geometry (Two and Three Dimensions), ch. on polar equation of a conic
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.A.5 and (PG) Analytical Geometry A
+retired: []

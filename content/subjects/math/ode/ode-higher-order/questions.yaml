@@ -1,0 +1,652 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - constant-coefficients
+  stem:
+    en: 'The general solution of $y'''' - 5y'' + 6y = 0$ is'
+  options:
+  - en: '$y = c_1e^{-2x} + c_2e^{-3x}$'
+  - en: '$y = c_1e^{2x} + c_2e^{3x}$'
+  - en: '$y = c_1e^{x} + c_2e^{6x}$'
+  - en: '$y = c_1e^{2x} + c_2e^{-3x}$'
+  answer: 1
+  explanation:
+    en: |-
+      Auxiliary equation:
+      $$m^2 - 5m + 6 = (m - 2)(m - 3) = 0 \;\Rightarrow\; m = 2, 3.$$
+      So $y = c_1e^{2x} + c_2e^{3x}$.
+      $e^{-2x}, e^{-3x}$ comes from a sign slip (those are the roots of $m^2 + 5m + 6$). $e^{x}, e^{6x}$ uses $1 \cdot 6 = 6$ but $1 + 6 \ne 5$. Check: the roots must add to $5$ and multiply to $6$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - constant-coefficients
+  stem:
+    en: 'The general solution of $y'''' + 4y = 0$ is'
+  options:
+  - en: '$y = c_1e^{2x} + c_2e^{-2x}$'
+  - en: '$y = (c_1 + c_2x)e^{2x}$'
+  - en: '$y = c_1\cos 2x + c_2\sin 2x$'
+  - en: '$y = c_1\cos 4x + c_2\sin 4x$'
+  answer: 2
+  explanation:
+    en: |-
+      $m^2 + 4 = 0$ gives $m = \pm 2i$, so $\alpha = 0$, $\beta = 2$:
+      $$y = c_1\cos 2x + c_2\sin 2x.$$
+      $c_1e^{2x} + c_2e^{-2x}$ solves $y'' - 4y = 0$ (sign slip). $\cos 4x$ uses $\beta = 4$ instead of $\sqrt4$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - constant-coefficients
+  stem:
+    en: 'The general solution of $y'''' - 6y'' + 9y = 0$ is'
+  options:
+  - en: '$y = c_1e^{3x} + c_2e^{-3x}$'
+  - en: '$y = (c_1 + c_2x)e^{3x}$'
+  - en: '$y = (c_1 + c_2x)e^{-3x}$'
+  - en: '$y = c_1\cos 3x + c_2\sin 3x$'
+  answer: 1
+  explanation:
+    en: |-
+      $m^2 - 6m + 9 = (m - 3)^2 = 0$, so $m = 3$ is a double root. A repeated root needs the extra factor $x$:
+      $$y = (c_1 + c_2x)e^{3x}.$$
+      $(c_1 + c_2x)e^{-3x}$ is the sign slip; it solves $y'' + 6y' + 9y = 0$. $c_1e^{3x} + c_2e^{-3x}$ treats the root as $\pm 3$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - wronskian
+  stem:
+    en: 'The Wronskian $W(e^{2x}, e^{3x})$ equals'
+  options:
+  - en: '$-e^{5x}$'
+  - en: '$5e^{5x}$'
+  - en: '$6e^{5x}$'
+  - en: '$e^{5x}$'
+  answer: 3
+  explanation:
+    en: |-
+      $$W = \begin{vmatrix} e^{2x} & e^{3x} \\ 2e^{2x} & 3e^{3x} \end{vmatrix} = 3e^{5x} - 2e^{5x} = e^{5x}.$$
+      In general $W(e^{ax}, e^{bx}) = (b - a)e^{(a + b)x}$. $-e^{5x}$ takes $y_1'y_2 - y_1y_2'$ (wrong order). $5e^{5x}$ adds the exponents instead of subtracting them.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 + 3D + 2)y = e^{3x}$, where $D = \frac{d}{dx}$, is'
+  options:
+  - en: '$\dfrac{e^{3x}}{2}$'
+  - en: '$\dfrac{e^{3x}}{14}$'
+  - en: '$\dfrac{e^{3x}}{20}$'
+  - en: '$\dfrac{e^{3x}}{11}$'
+  answer: 2
+  explanation:
+    en: |-
+      Since $f(3) = 9 + 9 + 2 = 20 \ne 0$,
+      $$y_p = \frac{1}{f(D)}e^{3x} = \frac{e^{3x}}{f(3)} = \frac{e^{3x}}{20}.$$
+      $\frac{e^{3x}}{2}$ comes from $f(-3) = 9 - 9 + 2$ (sign slip). $\frac{e^{3x}}{11}$ forgets the $3D$ term. Check: $D^2 + 3D + 2$ applied to $e^{3x}$ gives $20e^{3x}$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 + 4)y = \sin x$ is'
+  options:
+  - en: '$\dfrac{\sin x}{3}$'
+  - en: '$-\dfrac{\sin x}{3}$'
+  - en: '$\dfrac{\sin x}{5}$'
+  - en: '$-\dfrac{\sin x}{5}$'
+  answer: 0
+  explanation:
+    en: |-
+      Replace $D^2$ by $-a^2 = -1$:
+      $$y_p = \frac{1}{-1 + 4}\sin x = \frac{\sin x}{3}.$$
+      $\frac{\sin x}{5}$ replaces $D^2$ by $+1$. Check: $(\sin x/3)'' + 4\sin x/3 = (-1 + 4)\sin x/3 = \sin x$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 + 4)y = \cos 2x$ is'
+  options:
+  - en: '$\dfrac{x\sin 2x}{2}$'
+  - en: '$-\dfrac{x\cos 2x}{4}$'
+  - en: '$\dfrac{x\cos 2x}{4}$'
+  - en: '$\dfrac{x\sin 2x}{4}$'
+  answer: 3
+  explanation:
+    en: |-
+      $\cos 2x$ lies in the CF, since $D^2 + 4$ vanishes at $D^2 = -4$. Use the resonance rule
+      $$\frac{1}{D^2 + a^2}\cos ax = \frac{x\sin ax}{2a} \;\Rightarrow\; y_p = \frac{x\sin 2x}{4}.$$
+      $-\frac{x\cos 2x}{4}$ is the PI for $\sin 2x$. $\frac{x\sin 2x}{2}$ forgets the factor $a = 2$ in $2a$.
+      Check: $D^2\left(\frac{x\sin 2x}{4}\right) = \cos 2x - x\sin 2x$, and adding $x\sin 2x$ leaves $\cos 2x$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 - 3D + 2)y = e^{x}$ is'
+  options:
+  - en: '$xe^{x}$'
+  - en: '$-xe^{x}$'
+  - en: '$-\dfrac{x^2e^{x}}{2}$'
+  - en: '$\dfrac{xe^{x}}{2}$'
+  answer: 1
+  explanation:
+    en: |-
+      $f(1) = 1 - 3 + 2 = 0$, so $e^{x}$ is in the CF and the simple rule fails. With $f'(D) = 2D - 3$ and $f'(1) = -1 \ne 0$,
+      $$y_p = x\frac{e^{x}}{f'(1)} = -xe^{x}.$$
+      $xe^{x}$ drops the sign of $f'(1)$. The $x^2$ form is for a double root, but $1$ is a simple root ($f = (D - 1)(D - 2)$).
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 - 4)y = x^2$ is'
+  options:
+  - en: '$-\dfrac{x^2}{4} + \dfrac18$'
+  - en: '$\dfrac{x^2}{4} + \dfrac18$'
+  - en: '$-\dfrac{x^2}{4} - \dfrac18$'
+  - en: '$-\dfrac{x^2}{4} - \dfrac12$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\frac{1}{D^2 - 4}x^2 = -\frac14\left(1 - \frac{D^2}{4}\right)^{-1}x^2 = -\frac14\left(1 + \frac{D^2}{4}\right)x^2 = -\frac14\left(x^2 + \frac12\right).$$
+      So $y_p = -\frac{x^2}{4} - \frac18$. $+\frac18$ expands $(1 - u)^{-1}$ as $1 - u$. $-\frac12$ forgets the $\frac14$ in front.
+      Check: $D^2y_p = -\frac12$, and $-4y_p = x^2 + \frac12$; the sum is $x^2$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D - 1)^2y = xe^{x}$ is'
+  options:
+  - en: '$\dfrac{x^3e^{x}}{6}$'
+  - en: '$\dfrac{x^3e^{x}}{3}$'
+  - en: '$\dfrac{x^2e^{x}}{2}$'
+  - en: '$\dfrac{x^3}{6}$'
+  answer: 0
+  explanation:
+    en: |-
+      Exponential shift, $D \to D + 1$:
+      $$\frac{1}{(D - 1)^2}e^{x}x = e^{x}\frac{1}{D^2}x = e^{x}\cdot\frac{x^3}{6}.$$
+      $\frac{x^2e^{x}}{2}$ is the PI for $e^{x}$ alone. $\frac{x^3}{6}$ drops the factor $e^{x}$ after the shift. $\frac{x^3e^{x}}{3}$ integrates $x$ twice wrongly ($\iint x = \frac{x^3}{6}$).
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wronskian
+  stem:
+    en: 'Let $y_1, y_2$ be solutions of $y'''' + 2y'' + 5y = 0$ with Wronskian $W(0) = 3$. Then $W(x)$ equals'
+  options:
+  - en: '$3e^{2x}$'
+  - en: '$3e^{-2x}$'
+  - en: '$3e^{-5x}$'
+  - en: '$3$'
+  answer: 1
+  explanation:
+    en: |-
+      Abel's formula for $y'' + Py' + Qy = 0$ gives $W(x) = W(0)e^{-\int_0^x P\,dt}$. Here $P = 2$, so
+      $$W(x) = 3e^{-2x}.$$
+      $3e^{2x}$ drops the minus sign. $3e^{-5x}$ uses $Q$ instead of $P$. Check with $y_1 = e^{-x}\cos 2x$, $y_2 = e^{-x}\sin 2x$: their Wronskian is $2e^{-2x}$, a constant multiple of $e^{-2x}$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-euler
+  stem:
+    en: 'For $x > 0$, the general solution of $x^2y'''' - 2xy'' + 2y = 0$ is'
+  options:
+  - en: '$y = c_1x + c_2x^2$'
+  - en: '$y = c_1x^{-1} + c_2x^{-2}$'
+  - en: '$y = x\left[c_1\cos(\ln x) + c_2\sin(\ln x)\right]$'
+  - en: '$y = c_1x + c_2x^3$'
+  answer: 0
+  explanation:
+    en: |-
+      Try $y = x^m$:
+      $$m(m - 1) - 2m + 2 = m^2 - 3m + 2 = 0 \;\Rightarrow\; m = 1, 2.$$
+      So $y = c_1x + c_2x^2$. The $\cos(\ln x)$ option uses $x^2D^2 = \theta^2$, which gives $m^2 - 2m + 2 = 0$ and $m = 1 \pm i$. $x^{-1}, x^{-2}$ is a sign slip. Check: $y = x^2$ gives $2x^2 - 4x^2 + 2x^2 = 0$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - cauchy-euler
+  stem:
+    en: 'For $x > 0$, the general solution of $x^2y'''' + xy'' + y = 0$ is'
+  options:
+  - en: '$y = c_1\cos x + c_2\sin x$'
+  - en: '$y = c_1x + c_2x^{-1}$'
+  - en: '$y = c_1 + c_2\ln x$'
+  - en: '$y = c_1\cos(\ln x) + c_2\sin(\ln x)$'
+  answer: 3
+  explanation:
+    en: |-
+      With $x = e^{z}$: $\theta(\theta - 1) + \theta + 1 = \theta^2 + 1$, so $(\theta^2 + 1)y = 0$ and
+      $$y = c_1\cos z + c_2\sin z = c_1\cos(\ln x) + c_2\sin(\ln x).$$
+      $c_1x + c_2x^{-1}$ solves $x^2y'' + xy' - y = 0$. $c_1 + c_2\ln x$ solves $x^2y'' + xy' = 0$. $\cos x$ forgets to change back from $z$ to $\ln x$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - constant-coefficients
+  stem:
+    en: 'The linear equation with constant coefficients whose general solution is $y = e^{x}(c_1\cos 2x + c_2\sin 2x)$ is'
+  options:
+  - en: '$y'''' + 2y'' + 5y = 0$'
+  - en: '$y'''' - 2y'' + 3y = 0$'
+  - en: '$y'''' - 2y'' - 3y = 0$'
+  - en: '$y'''' - 2y'' + 5y = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      The roots are $1 \pm 2i$. Their sum is $2$ and their product is $1 + 4 = 5$, so the auxiliary equation is $m^2 - 2m + 5 = 0$:
+      $$y'' - 2y' + 5y = 0.$$
+      $y'' + 2y' + 5y = 0$ has roots $-1 \pm 2i$ (the solutions decay). $y'' - 2y' + 3y = 0$ computes the product as $1 - 4$ wrongly.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator-advanced
+  stem:
+    en: 'The solution of $y'''' + 4y = 4$ with $y(0) = 0$, $y''(0) = 0$ is'
+  options:
+  - en: '$y = 1 + \cos 2x$'
+  - en: '$y = \dfrac{1 - \cos 2x}{4}$'
+  - en: '$y = 1 - \cos 2x + \sin 2x$'
+  - en: '$y = 1 - \cos 2x$'
+  answer: 3
+  explanation:
+    en: |-
+      PI: $\frac{1}{D^2 + 4}\,4 = 1$. The general solution is $y = c_1\cos 2x + c_2\sin 2x + 1$.
+      - $y(0) = c_1 + 1 = 0$ gives $c_1 = -1$.
+      - $y'(0) = 2c_2 = 0$ gives $c_2 = 0$.
+
+      So $y = 1 - \cos 2x$. $\frac{1 - \cos 2x}{4}$ takes the PI as $\frac14$ (it solves $y'' + 4y = 1$). $1 + \cos 2x$ fails $y(0) = 0$. The $+\sin 2x$ option fails $y'(0) = 0$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'A particular integral of $(D^2 - 2D + 5)y = e^{x}\cos 2x$ is'
+  options:
+  - en: '$\dfrac{xe^{x}\sin 2x}{2}$'
+  - en: '$\dfrac{xe^{x}\sin 2x}{4}$'
+  - en: '$-\dfrac{xe^{x}\sin 2x}{4}$'
+  - en: '$\dfrac{xe^{x}\cos 2x}{4}$'
+  answer: 1
+  explanation:
+    en: |-
+      Shift $e^{x}$ through, $D \to D + 1$:
+      $$(D + 1)^2 - 2(D + 1) + 5 = D^2 + 4, \qquad y_p = e^{x}\frac{1}{D^2 + 4}\cos 2x = e^{x}\cdot\frac{x\sin 2x}{4}.$$
+      This is resonance: the roots $1 \pm 2i$ make $e^{x}\cos 2x$ part of the CF, so a factor $x$ must appear. $\frac{x\sin 2x}{2}$ forgets the $2a = 4$. $\frac{xe^{x}\cos 2x}{4}$ uses the $\sin$ rule pattern with the wrong function and sign.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - d-operator-advanced
+  stem:
+    en: 'A particular integral of $(D^2 + 1)y = x\sin x$ is'
+  options:
+  - en: '$-\dfrac{x^2\cos x}{4} + \dfrac{x\sin x}{4}$'
+  - en: '$-\dfrac{x^2\cos x}{4}$'
+  - en: '$\dfrac{x^2\sin x}{4} + \dfrac{x\cos x}{4}$'
+  - en: '$-\dfrac{x^2\cos x}{2} + \dfrac{x\sin x}{2}$'
+  answer: 0
+  explanation:
+    en: |-
+      Write $x\sin x = \operatorname{Im}(xe^{ix})$ and shift:
+      $$\frac{1}{D^2 + 1}xe^{ix} = e^{ix}\frac{1}{2iD\left(1 + \frac{D}{2i}\right)}x = e^{ix}\frac{1}{2i}\left(\frac{x^2}{2} - \frac{x}{2i}\right) = e^{ix}\left(-\frac{ix^2}{4} + \frac{x}{4}\right).$$
+      The imaginary part is $-\frac{x^2\cos x}{4} + \frac{x\sin x}{4}$.
+      $-\frac{x^2\cos x}{4}$ alone drops the correction term from $\left(1 + \frac{D}{2i}\right)^{-1}$. Since $x\sin x$ is not in the CF, it cannot be omitted. Check by substitution: $(D^2 + 1)\left(-\frac{x^2\cos x}{4}\right) = x\sin x - \frac{\cos x}{2}$, and $(D^2 + 1)\frac{x\sin x}{4} = \frac{\cos x}{2}$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - variation-of-parameters
+  stem:
+    en: 'By variation of parameters, a particular integral of $y'''' + y = \sec x$ on $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ is'
+  options:
+  - en: '$x\sin x - \cos x\,\ln(\cos x)$'
+  - en: '$x\cos x + \sin x\,\ln(\cos x)$'
+  - en: '$x\sin x + \cos x\,\ln(\cos x)$'
+  - en: '$-x\sin x + \cos x\,\ln(\cos x)$'
+  answer: 2
+  explanation:
+    en: |-
+      $y_1 = \cos x$, $y_2 = \sin x$, $W = 1$, $R = \sec x$:
+      $$u_1' = -\frac{y_2R}{W} = -\tan x \Rightarrow u_1 = \ln(\cos x), \qquad u_2' = \frac{y_1R}{W} = 1 \Rightarrow u_2 = x.$$
+      $$y_p = \cos x\,\ln(\cos x) + x\sin x.$$
+      $x\sin x - \cos x\ln\cos x$ integrates $-\tan x$ as $-\ln\cos x$ (sign slip). $x\cos x + \sin x\ln\cos x$ attaches $u_1, u_2$ to the wrong functions.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-euler
+  stem:
+    en: 'For $x > 0$, the general solution of $x^2y'''' - xy'' + y = \ln x$ is'
+  options:
+  - en: '$y = (c_1 + c_2\ln x)x + \ln x + 2$'
+  - en: '$y = (c_1 + c_2\ln x)x + \ln x - 2$'
+  - en: '$y = (c_1 + c_2\ln x)x + \ln x$'
+  - en: '$y = c_1x + c_2x^{-1} + \ln x + 2$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $x = e^{z}$: $\theta(\theta - 1) - \theta + 1 = (\theta - 1)^2$, so $(\theta - 1)^2y = z$.
+      - CF: double root $1$, so $(c_1 + c_2z)e^{z} = (c_1 + c_2\ln x)x$.
+      - PI: $(1 - \theta)^{-2}z = (1 + 2\theta + 3\theta^2 + \cdots)z = z + 2$.
+
+      So $y = (c_1 + c_2\ln x)x + \ln x + 2$. $\ln x - 2$ is the sign slip; $\ln x$ alone drops the $2\theta z$ term. Check: $y = \ln x + 2$ gives $-1 - 1 + \ln x + 2 = \ln x$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-euler
+  stem:
+    en: 'For $x > -1$, the general solution of $(1 + x)^2y'''' + (1 + x)y'' + y = 0$ is'
+  options:
+  - en: '$y = c_1\cos(\ln x) + c_2\sin(\ln x)$'
+  - en: '$y = c_1\cos\ln(1 + x) + c_2\sin\ln(1 + x)$'
+  - en: '$y = c_1(1 + x) + c_2(1 + x)^{-1}$'
+  - en: '$y = \left[c_1 + c_2\ln(1 + x)\right](1 + x)$'
+  answer: 1
+  explanation:
+    en: |-
+      This is Legendre's linear equation. Put $1 + x = e^{z}$, so $(1 + x)D = \theta$ and $(1 + x)^2D^2 = \theta(\theta - 1)$:
+      $$\theta(\theta - 1) + \theta + 1 = \theta^2 + 1 \;\Rightarrow\; y = c_1\cos z + c_2\sin z, \quad z = \ln(1 + x).$$
+      $\cos(\ln x)$ substitutes $x = e^{z}$ instead of $1 + x = e^{z}$. $(1 + x)^{\pm1}$ solves the equation with $-y$ in place of $+y$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - constant-coefficients
+  stem:
+    en: 'The general solution of $y'''''' - y = 0$ is'
+  options:
+  - en: '$c_1e^{-x} + e^{x/2}\left(c_2\cos\frac{\sqrt3}{2}x + c_3\sin\frac{\sqrt3}{2}x\right)$'
+  - en: '$c_1e^{x} + e^{x/2}\left(c_2\cos\frac{\sqrt3}{2}x + c_3\sin\frac{\sqrt3}{2}x\right)$'
+  - en: '$c_1e^{x} + e^{-x/2}\left(c_2\cos\frac{\sqrt3}{2}x + c_3\sin\frac{\sqrt3}{2}x\right)$'
+  - en: '$c_1e^{x} + c_2e^{-x} + c_3\cos x$'
+  answer: 2
+  explanation:
+    en: |-
+      $m^3 - 1 = (m - 1)(m^2 + m + 1) = 0$, so $m = 1$ and $m = -\frac12 \pm \frac{\sqrt3}{2}i$. Hence
+      $$y = c_1e^{x} + e^{-x/2}\left(c_2\cos\tfrac{\sqrt3}{2}x + c_3\sin\tfrac{\sqrt3}{2}x\right).$$
+      The $e^{-x}, e^{x/2}$ option solves $y''' + y = 0$. The $e^{x}, e^{x/2}$ option takes the wrong sign of $\alpha$. Check: the three roots must sum to $0$ (no $m^2$ term): $1 - \frac12 - \frac12 = 0$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - linear-theory
+  - constant-coefficients
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: '$e^{x}$ and $xe^{x}$ are linearly independent solutions of $y'''' - 2y'' + y = 0$.'
+  - en: 'The only solution of $y'''' + y = 0$ with $y(0) = 0$ and $y''(0) = 0$ is $y \equiv 0$.'
+  - en: 'Every solution of $y'''' + 3y'' + 2y = 0$ tends to $0$ as $x \to \infty$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  answer: 0
+  explanation:
+    en: |-
+      - **1 is true:** $m = 1$ is a double root, so $e^{x}$ and $xe^{x}$ are solutions, and $W(e^{x}, xe^{x}) = e^{2x} \ne 0$.
+      - **2 is true:** $y \equiv 0$ is a solution, and the existence and uniqueness theorem allows only one solution of an initial value problem.
+      - **3 is true:** the roots are $-1, -2$, so $y = c_1e^{-x} + c_2e^{-2x} \to 0$.
+
+      Do not confuse 2 with the **boundary** problem $y(0) = y(\pi) = 0$, which has the solutions $c\sin x$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - wronskian
+  stem:
+    en: 'Let $I$ be an open interval. Consider the following statements:'
+  statements:
+  - en: 'If differentiable functions $y_1, y_2$ have $W(y_1, y_2)(x_0) \ne 0$ at some $x_0 \in I$, then $y_1, y_2$ are linearly independent on $I$.'
+  - en: 'If $W(y_1, y_2) \equiv 0$ on $I$ for differentiable $y_1, y_2$, then $y_1, y_2$ are linearly dependent on $I$.'
+  - en: 'If $y_1, y_2$ are solutions of $y'''' + P(x)y'' + Q(x)y = 0$ with $P, Q$ continuous on $I$, then $W(y_1, y_2)$ is either identically zero on $I$ or never zero on $I$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 3 only
+  answer: 3
+  explanation:
+    en: |-
+      - **1 is true:** if $c_1y_1 + c_2y_2 \equiv 0$, differentiating gives $c_1y_1' + c_2y_2' \equiv 0$. At $x_0$ this $2 \times 2$ system has determinant $W(x_0) \ne 0$, so $c_1 = c_2 = 0$.
+      - **2 is false:** $y_1 = x^2$ and $y_2 = x\lvert x\rvert$ on $(-1, 1)$ have $W \equiv 0$ but are independent.
+      - **3 is true:** by Abel's formula, $W(x) = W(x_0)e^{-\int_{x_0}^{x}P}$.
+
+      Statement 2 does hold when $y_1, y_2$ are solutions of such an equation, which is why it is tempting.
+  status: ai-generated
+- id: q0024
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  stem:
+    en: 'Here $D = \frac{d}{dx}$ and $f$ is a polynomial with constant coefficients. Consider the following statements:'
+  statements:
+  - en: '$\dfrac{1}{D - a}X = e^{ax}\displaystyle\int e^{-ax}X\,dx$.'
+  - en: 'If $\phi(-a^2) \ne 0$, then $\dfrac{1}{\phi(D^2)}\sin ax = \dfrac{\sin ax}{\phi(-a^2)}$.'
+  - en: '$\dfrac{1}{f(D)}e^{ax} = \dfrac{e^{ax}}{f(a)}$ holds whether or not $f(a) = 0$, after cancelling common factors.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 only
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      - **1 is true:** $(D - a)y = X$ is first-order linear with integrating factor $e^{-ax}$: $(ye^{-ax})' = Xe^{-ax}$.
+      - **2 is true:** $D^2\sin ax = -a^2\sin ax$, so $\phi(D^2)\sin ax = \phi(-a^2)\sin ax$. Divide by $\phi(-a^2) \ne 0$.
+      - **3 is false:** if $f(a) = 0$, the formula divides by zero. For example, $(D - 1)y = e^{x}$ has PI $xe^{x}$, not $\frac{e^{x}}{0}$. The correct rule is $\frac{xe^{ax}}{f'(a)}$ when $a$ is a simple root.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - constant-coefficients
+  stem:
+    en: Match each equation in List I with its general solution in List II.
+  left:
+  - en: '$y'''' - 4y = 0$'
+  - en: '$y'''' + 4y = 0$'
+  - en: '$y'''' - 4y'' + 4y = 0$'
+  - en: '$y'''' - 4y'' + 8y = 0$'
+  right:
+  - en: '$e^{2x}(c_1\cos 2x + c_2\sin 2x)$'
+  - en: '$c_1e^{2x} + c_2e^{-2x}$'
+  - en: '$c_1\cos 2x + c_2\sin 2x$'
+  - en: '$(c_1 + c_2x)e^{2x}$'
+  options:
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-2, B-3, C-1, D-4'
+  - en: 'A-2, B-4, C-3, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $m^2 = 4$, $m = \pm 2$: **2**.
+      - B: $m^2 = -4$, $m = \pm 2i$: **3**.
+      - C: $(m - 2)^2 = 0$, double root $2$: **4**.
+      - D: $m = \frac{4 \pm \sqrt{16 - 32}}{2} = 2 \pm 2i$: **1**.
+
+      Matching C with 1 confuses a double root with a complex pair.
+  status: ai-generated
+- id: q0026
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  - d-operator-advanced
+  stem:
+    en: 'Match each expression in List I with a particular integral in List II ($D = \frac{d}{dx}$).'
+  left:
+  - en: '$\dfrac{1}{D^2 + 1}e^{2x}$'
+  - en: '$\dfrac{1}{D^2 + 1}\sin 2x$'
+  - en: '$\dfrac{1}{D^2 + 1}x^2$'
+  - en: '$\dfrac{1}{D^2 + 1}\cos x$'
+  right:
+  - en: '$\dfrac{x\sin x}{2}$'
+  - en: '$x^2 - 2$'
+  - en: '$\dfrac{e^{2x}}{5}$'
+  - en: '$-\dfrac{\sin 2x}{3}$'
+  options:
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $\frac{e^{2x}}{4 + 1}$: **3**.
+      - B: $D^2 \to -4$: $\frac{\sin 2x}{-4 + 1} = -\frac{\sin 2x}{3}$: **4**.
+      - C: $(1 + D^2)^{-1}x^2 = (1 - D^2 + \cdots)x^2 = x^2 - 2$: **2**.
+      - D: resonance, $\frac{x\sin ax}{2a}$ with $a = 1$: **1**.
+
+      Check C: $(x^2 - 2)'' + (x^2 - 2) = 2 + x^2 - 2 = x^2$.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - d-operator
+  - exam-tips
+  assertion:
+    en: 'A particular integral of $(D^2 + 9)y = \cos 3x$ cannot be of the form $a\cos 3x + b\sin 3x$ with constants $a, b$; it must contain a factor $x$.'
+  reason:
+    en: '$\cos 3x$ and $\sin 3x$ are solutions of the homogeneous equation $(D^2 + 9)y = 0$.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** the auxiliary roots are $\pm 3i$.
+
+      **A is true, and R explains it:** by R, $(D^2 + 9)(a\cos 3x + b\sin 3x) = 0 \ne \cos 3x$ for every $a, b$. So the PI must be different: $\frac{x\sin 3x}{6}$, with a factor $x$. This is resonance: the forcing term lies in the CF.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - wronskian
+  assertion:
+    en: '$x^2$ and $x\lvert x\rvert$ are linearly independent on $(-1, 1)$.'
+  reason:
+    en: 'The Wronskian of $x^2$ and $x\lvert x\rvert$ is not identically zero on $(-1, 1)$.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** if $c_1x^2 + c_2x\lvert x\rvert \equiv 0$, then $x = \frac12$ gives $c_1 + c_2 = 0$ and $x = -\frac12$ gives $c_1 - c_2 = 0$, so $c_1 = c_2 = 0$.
+
+      **R is false:** for $x \ge 0$ the functions are $x^2, x^2$; for $x < 0$ they are $x^2, -x^2$. In both cases the columns of $W$ are proportional, so $W \equiv 0$ (and $x\lvert x\rvert$ is differentiable at $0$, with derivative $2\lvert x\rvert$).
+
+      So $W \equiv 0$ does not imply dependence for arbitrary functions. It does for solutions of a common equation $y'' + Py' + Qy = 0$ with continuous coefficients.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - cauchy-euler
+  assertion:
+    en: 'Every equation $x^2y'''' + axy'' + by = 0$ ($a, b$ real constants) has a solution of the form $y = x^m$ on $x > 0$ with $m$ real.'
+  reason:
+    en: 'On $x > 0$, the substitution $x = e^{z}$ turns $x^2y'''' + axy'' + by = 0$ into a linear equation with constant coefficients in $z$.'
+  answer: 3
+  explanation:
+    en: |-
+      **A is false:** $x^2y'' + xy' + y = 0$ has indicial equation $m^2 + 1 = 0$, with no real root. Its solutions are $c_1\cos(\ln x) + c_2\sin(\ln x)$, and no real power $x^m$ is among them.
+
+      **R is true:** $xD = \theta$ and $x^2D^2 = \theta(\theta - 1)$, so the equation becomes $\left[\theta^2 + (a - 1)\theta + b\right]y = 0$. Real powers $x^m$ come out only when this quadratic has real roots.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - constant-coefficients
+  assertion:
+    en: 'The roots of the auxiliary equation of $y'''' + 2y'' + 5y = 0$ are $-1 \pm 2i$.'
+  reason:
+    en: 'Every solution of $y'''' + 2y'' + 5y = 0$ tends to $0$ as $x \to \infty$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** $m = \frac{-2 \pm \sqrt{4 - 20}}{2} = -1 \pm 2i$.
+
+      **R is true:** $y = e^{-x}(c_1\cos 2x + c_2\sin 2x)$ and $\lvert y\rvert \le (\lvert c_1\rvert + \lvert c_2\rvert)e^{-x} \to 0$.
+
+      **But R does not explain A:** R is a consequence of A (negative real parts give decay), not a reason for it. The roots come from the quadratic formula alone.
+  status: ai-generated

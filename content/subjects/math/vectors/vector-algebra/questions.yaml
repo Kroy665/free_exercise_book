@@ -1,0 +1,697 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - scalar-product
+  stem:
+    en: 'The scalar projection (component) of $\vec a = 2\hat i - \hat j + 2\hat k$ on $\vec b = \hat i + 2\hat j - 2\hat k$ is'
+  options:
+  - en: '$\frac{4}{3}$'
+  - en: '$-\frac{4}{3}$'
+  - en: '$-\frac{4}{9}$'
+  - en: '$-4$'
+  answer: 1
+  explanation:
+    en: |-
+      $$\vec a\cdot\vec b = 2 - 2 - 4 = -4, \qquad |\vec b| = \sqrt{1 + 4 + 4} = 3,$$
+      so the component of $\vec a$ along $\vec b$ is
+      $$\frac{\vec a\cdot\vec b}{|\vec b|} = -\frac{4}{3}.$$
+
+      $-\frac49$ divides by $|\vec b|^2$: that is the coefficient of $\vec b$ in the vector projection, not the scalar projection. $\frac43$ drops the sign; the negative sign says $\vec a$ leans against $\vec b$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - vector-product
+  stem:
+    en: 'The area of the parallelogram with adjacent sides $\vec a = \hat i + 2\hat j + 3\hat k$ and $\vec b = 3\hat i - 2\hat j + \hat k$ is'
+  options:
+  - en: '$8\sqrt{3}$'
+  - en: '$4\sqrt{3}$'
+  - en: '$14$'
+  - en: '$192$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\vec a\times\vec b = \begin{vmatrix} \hat i & \hat j & \hat k \\ 1 & 2 & 3 \\ 3 & -2 & 1 \end{vmatrix} = 8\hat i + 8\hat j - 8\hat k,$$
+      $$|\vec a\times\vec b| = \sqrt{64 \cdot 3} = 8\sqrt3.$$
+
+      $4\sqrt3$ is the area of the **triangle** on these sides. $14 = |\vec a|\,|\vec b|$ forgets the factor $\sin\theta$, and $192$ is $|\vec a\times\vec b|^2$.
+
+      **Check:** $(8, 8, -8)\cdot(1, 2, 3) = 0$ and $(8, 8, -8)\cdot(3, -2, 1) = 0$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  stem:
+    en: 'The volume of the parallelepiped with coterminous edges $\hat i + 2\hat j + 3\hat k$, $\hat j + 2\hat k$ and $2\hat i + \hat k$ is'
+  options:
+  - en: '$\frac{1}{2}$'
+  - en: '$\frac{3}{2}$'
+  - en: '$3$'
+  - en: '$9$'
+  answer: 2
+  explanation:
+    en: |-
+      The volume is the absolute value of the scalar triple product:
+      $$\begin{vmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \\ 2 & 0 & 1 \end{vmatrix} = 1(1 - 0) - 2(0 - 4) + 3(0 - 2) = 1 + 8 - 6 = 3.$$
+
+      $\frac12 = \frac{3}{6}$ is the volume of the **tetrahedron** on the same edges, and $\frac32$ wrongly halves as for a triangle. A parallelepiped takes no factor.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - collinearity-coplanarity
+  stem:
+    en: 'The points with position vectors $2\hat i - \hat j + 3\hat k$, $3\hat i - 5\hat j + \hat k$ and $-\hat i + \lambda\hat j + 9\hat k$ are collinear. Then $\lambda$ equals'
+  options:
+  - en: '$-13$'
+  - en: '$13$'
+  - en: '$11$'
+  - en: '$7$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\vec{AB} = \hat i - 4\hat j - 2\hat k, \qquad \vec{AC} = -3\hat i + (\lambda + 1)\hat j + 6\hat k.$$
+      The $\hat i$- and $\hat k$-components force $\vec{AC} = -3\,\vec{AB}$. Then the $\hat j$-component gives
+      $$\lambda + 1 = (-3)(-4) = 12 \;\Rightarrow\; \lambda = 11.$$
+
+      $-13$ comes from the sign slip $\lambda + 1 = -12$; $13$ from writing $\lambda - 1 = 12$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - vectors-basics
+  stem:
+    en: 'The direction cosines of the vector $2\hat i - 3\hat j + 6\hat k$ are'
+  options:
+  - en: '$\frac{2}{7}, \frac{3}{7}, \frac{6}{7}$'
+  - en: '$\frac{2}{7}, -\frac{3}{7}, \frac{6}{7}$'
+  - en: '$\frac{2}{5}, -\frac{3}{5}, \frac{6}{5}$'
+  - en: '$\frac{2}{49}, -\frac{3}{49}, \frac{6}{49}$'
+  answer: 1
+  explanation:
+    en: |-
+      $|\vec a| = \sqrt{4 + 9 + 36} = 7$, and the direction cosines are the components of $\hat a = \vec a/7$:
+      $$l, m, n = \frac27,\ -\frac37,\ \frac67, \qquad l^2 + m^2 + n^2 = \frac{4 + 9 + 36}{49} = 1.$$
+
+      Dropping the minus sign gives a different direction. Dividing by $2 - 3 + 6 = 5$ or by $|\vec a|^2 = 49$ fails the check $l^2 + m^2 + n^2 = 1$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - scalar-product
+  stem:
+    en: 'The vectors $2\hat i + \lambda\hat j + \hat k$ and $\hat i - 2\hat j + 3\hat k$ are perpendicular when $\lambda$ equals'
+  options:
+  - en: '$-\frac{5}{2}$'
+  - en: '$\frac{1}{2}$'
+  - en: '$5$'
+  - en: '$\frac{5}{2}$'
+  answer: 3
+  explanation:
+    en: |-
+      Perpendicular non-zero vectors have zero dot product:
+      $$2\cdot 1 + \lambda\cdot(-2) + 1\cdot 3 = 5 - 2\lambda = 0 \;\Rightarrow\; \lambda = \frac52.$$
+
+      $-\frac52$ forgets the sign of $-2$; $\frac12$ drops the term $3$ from $\hat k$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-product
+  stem:
+    en: 'A unit vector perpendicular to both $\hat i + \hat j + \hat k$ and $\hat i - \hat j$ is'
+  options:
+  - en: '$\frac{1}{\sqrt6}(\hat i + \hat j - 2\hat k)$'
+  - en: '$\frac{1}{\sqrt6}(\hat i + \hat j + 2\hat k)$'
+  - en: '$\frac{1}{\sqrt6}(\hat i - \hat j + 2\hat k)$'
+  - en: '$\frac{1}{\sqrt6}(2\hat i - \hat j - \hat k)$'
+  answer: 0
+  explanation:
+    en: |-
+      $$\vec a\times\vec b = \begin{vmatrix} \hat i & \hat j & \hat k \\ 1 & 1 & 1 \\ 1 & -1 & 0 \end{vmatrix} = (0 + 1)\hat i - (0 - 1)\hat j + (-1 - 1)\hat k = \hat i + \hat j - 2\hat k,$$
+      with modulus $\sqrt6$. So the unit vectors are $\pm\frac{1}{\sqrt6}(\hat i + \hat j - 2\hat k)$.
+
+      **Check the others by dot products:** $(1, 1, 2)\cdot(1, 1, 1) = 4 \ne 0$; $(1, -1, 2)\cdot(1, -1, 0) = 2 \ne 0$; $(2, -1, -1)\cdot(1, -1, 0) = 3 \ne 0$. Each fails to be perpendicular to one of the vectors.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  stem:
+    en: 'The vectors $2\hat i - \hat j + \hat k$, $\hat i + 2\hat j - 3\hat k$ and $3\hat i + \lambda\hat j + 5\hat k$ are coplanar if $\lambda$ equals'
+  options:
+  - en: '$-4$'
+  - en: '$4$'
+  - en: '$-2$'
+  - en: '$2$'
+  answer: 0
+  explanation:
+    en: |-
+      Coplanar $\iff$ the scalar triple product is $0$:
+      $$\begin{vmatrix} 2 & -1 & 1 \\ 1 & 2 & -3 \\ 3 & \lambda & 5 \end{vmatrix} = 2(10 + 3\lambda) + (5 + 9) + (\lambda - 6) = 7\lambda + 28.$$
+      So $\lambda = -4$.
+
+      The middle term is $-(-1)(5 + 9) = +14$; $\lambda = 4$ is the root of $7\lambda - 28$, a sign slip when solving.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - collinearity-coplanarity
+  stem:
+    en: 'The position vector of the point dividing the join of the points with position vectors $2\vec a + \vec b$ and $\vec a - 3\vec b$ **externally** in the ratio $1 : 2$ is'
+  options:
+  - en: '$\frac{1}{3}(5\vec a - \vec b)$'
+  - en: '$-3\vec a - 5\vec b$'
+  - en: '$-7\vec b$'
+  - en: '$3\vec a + 5\vec b$'
+  answer: 3
+  explanation:
+    en: |-
+      With $P = 2\vec a + \vec b$, $Q = \vec a - 3\vec b$ and ratio $m : n = 1 : 2$, the external point is
+      $$\frac{m\,Q - n\,P}{m - n} = \frac{(\vec a - 3\vec b) - 2(2\vec a + \vec b)}{1 - 2} = \frac{-3\vec a - 5\vec b}{-1} = 3\vec a + 5\vec b.$$
+
+      $\frac13(5\vec a - \vec b)$ is the **internal** point $\frac{Q + 2P}{3}$. $-3\vec a - 5\vec b$ forgets to divide by $m - n = -1$. $-7\vec b$ swaps the roles of the two end-points: $\frac{P - 2Q}{1 - 2}$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-triple-product
+  stem:
+    en: 'For $\vec a = \hat i + \hat j$, $\vec b = \hat j + \hat k$, $\vec c = \hat k + \hat i$, the vector $\vec a\times(\vec b\times\vec c)$ is'
+  options:
+  - en: '$-\hat i + \hat j$'
+  - en: '$\hat i - \hat j$'
+  - en: '$-\hat i + \hat k$'
+  - en: '$\hat j + \hat k$'
+  answer: 0
+  explanation:
+    en: |-
+      Use $\vec a\times(\vec b\times\vec c) = (\vec a\cdot\vec c)\vec b - (\vec a\cdot\vec b)\vec c$. Here $\vec a\cdot\vec c = 1$ and $\vec a\cdot\vec b = 1$, so
+      $$\vec a\times(\vec b\times\vec c) = \vec b - \vec c = -\hat i + \hat j.$$
+
+      $-\hat i + \hat k$ is $(\vec a\times\vec b)\times\vec c = (\vec a\cdot\vec c)\vec b - (\vec b\cdot\vec c)\vec a = \vec b - \vec a$: the other bracketing. $\hat i - \hat j$ has the sign of the expansion reversed.
+
+      **Check:** the answer must be perpendicular to $\vec a$: $(-1, 1, 0)\cdot(1, 1, 0) = 0$.
+  status: ai-generated
+- id: q0011
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  assertion:
+    en: 'If $\vec a, \vec b, \vec c$ are coplanar, then $\vec a\times\vec b$, $\vec b\times\vec c$, $\vec c\times\vec a$ are also coplanar.'
+  reason:
+    en: '$[\vec a\times\vec b\ \ \vec b\times\vec c\ \ \vec c\times\vec a] = [\vec a\,\vec b\,\vec c]^2$ for all vectors $\vec a, \vec b, \vec c$.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      R is a standard identity: expand $(\vec b\times\vec c)\times(\vec c\times\vec a) = [\vec b\,\vec c\,\vec a]\,\vec c$ by the four-vector formula, then dot with $\vec a\times\vec b$ to get $[\vec a\,\vec b\,\vec c]^2$.
+
+      If $\vec a, \vec b, \vec c$ are coplanar, $[\vec a\,\vec b\,\vec c] = 0$, so by R the triple product of the cross products is $0$: they are coplanar. (Indeed all three cross products are then parallel to the common normal.)
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-triple-product
+  stem:
+    en: 'If $|\vec a| = 2$, $|\vec b| = 5$ and $\vec a\cdot\vec b = 6$, then $|\vec a\times\vec b|$ equals'
+  options:
+  - en: '$64$'
+  - en: '$2\sqrt{34}$'
+  - en: '$4$'
+  - en: '$8$'
+  answer: 3
+  explanation:
+    en: |-
+      By Lagrange's identity,
+      $$|\vec a\times\vec b|^2 = |\vec a|^2|\vec b|^2 - (\vec a\cdot\vec b)^2 = 100 - 36 = 64,$$
+      so $|\vec a\times\vec b| = 8$.
+
+      $64$ forgets the square root; $2\sqrt{34} = \sqrt{136}$ adds $(\vec a\cdot\vec b)^2$ instead of subtracting it.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-product
+  stem:
+    en: 'If $|\vec a| = 3$, $|\vec b| = 4$ and the angle between $\vec a$ and $\vec b$ is $\frac{\pi}{3}$, then $|\vec a + \vec b|$ equals'
+  options:
+  - en: '$\sqrt{13}$'
+  - en: '$7$'
+  - en: '$\sqrt{37}$'
+  - en: '$5$'
+  answer: 2
+  explanation:
+    en: |-
+      $$|\vec a + \vec b|^2 = |\vec a|^2 + |\vec b|^2 + 2|\vec a||\vec b|\cos\frac{\pi}{3} = 9 + 16 + 12 = 37.$$
+
+      $\sqrt{13}$ is $|\vec a - \vec b|$; $7$ would need $\theta = 0$; $5$ would need $\theta = \frac{\pi}{2}$.
+  status: ai-generated
+- id: q0014
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - vector-product
+  stem:
+    en: 'For vectors $\vec a, \vec b, \vec c$ in space, consider the following statements:'
+  statements:
+  - en: '$\vec b\times\vec a = -\,\vec a\times\vec b$'
+  - en: '$\vec a\times(\vec b\times\vec c) = (\vec a\times\vec b)\times\vec c$ for all $\vec a, \vec b, \vec c$'
+  - en: 'If $\vec a, \vec b$ are non-zero and $\vec a\times\vec b = \vec 0$, then $\vec a$ and $\vec b$ are parallel.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 1 and 3 only
+  - en: 1 only
+  - en: 2 and 3 only
+  answer: 1
+  explanation:
+    en: |-
+      Statement 1 is anti-commutativity. Statement 3 holds because $|\vec a\times\vec b| = |\vec a||\vec b|\sin\theta = 0$ with non-zero lengths forces $\sin\theta = 0$, so $\theta = 0$ or $\pi$.
+
+      Statement 2 is false: the cross product is not associative. With $\vec a = \vec b = \hat i$, $\vec c = \hat j$:
+      $$\hat i\times(\hat i\times\hat j) = \hat i\times\hat k = -\hat j, \qquad (\hat i\times\hat i)\times\hat j = \vec 0.$$
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  stem:
+    en: 'If $[\vec a\,\vec b\,\vec c] = 3$, then $[\vec a + \vec b\ \ \vec b + \vec c\ \ \vec c + \vec a]$ equals'
+  options:
+  - en: '$6$'
+  - en: '$0$'
+  - en: '$3$'
+  - en: '$9$'
+  answer: 0
+  explanation:
+    en: |-
+      Each new vector is a combination of $\vec a, \vec b, \vec c$ with coefficient rows $(1,1,0), (0,1,1), (1,0,1)$. So
+      $$[\vec a + \vec b\ \ \vec b + \vec c\ \ \vec c + \vec a] = \begin{vmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{vmatrix}[\vec a\,\vec b\,\vec c] = 2 \cdot 3 = 6.$$
+
+      $0$ is the value for $[\vec a - \vec b\ \ \vec b - \vec c\ \ \vec c - \vec a]$, whose three vectors add to $\vec 0$. $3$ forgets the second surviving term $[\vec b\,\vec c\,\vec a]$ in the expansion.
+  status: ai-generated
+- id: q0016
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-product
+  - vector-product
+  stem:
+    en: 'Let $\vec a = \hat i + 2\hat j + 2\hat k$ and $\vec b = 3\hat i + 4\hat k$. Match each quantity in List I with its value in List II.'
+  left:
+  - en: '$\vec a\cdot\vec b$'
+  - en: 'the scalar projection of $\vec a$ on $\vec b$'
+  - en: 'the area of the triangle with sides $\vec a$, $\vec b$'
+  - en: 'the cosine of the angle between $\vec a$ and $\vec b$'
+  right:
+  - en: '$\frac{11}{15}$'
+  - en: '$\sqrt{26}$'
+  - en: '$11$'
+  - en: '$\frac{11}{5}$'
+  options:
+  - en: 'A-3, B-1, C-2, D-4'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 2
+  explanation:
+    en: |-
+      $|\vec a| = 3$, $|\vec b| = 5$ and $\vec a\cdot\vec b = 3 + 0 + 8 = 11$ (A-3).
+
+      - B: $\dfrac{\vec a\cdot\vec b}{|\vec b|} = \dfrac{11}{5}$ (B-4).
+      - C: $\vec a\times\vec b = 8\hat i + 2\hat j - 6\hat k$, $|\vec a\times\vec b| = \sqrt{104} = 2\sqrt{26}$, so the triangle has area $\sqrt{26}$ (C-2).
+      - D: $\cos\theta = \dfrac{11}{3\cdot 5} = \dfrac{11}{15}$ (D-1).
+
+      Swapping B and D confuses the projection (divide by $|\vec b|$) with the cosine (divide by $|\vec a||\vec b|$).
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-triple-product
+  stem:
+    en: 'For all vectors $\vec a, \vec b, \vec c, \vec d$, the product $(\vec a\times\vec b)\cdot(\vec c\times\vec d)$ equals'
+  options:
+  - en: '$(\vec a\cdot\vec d)(\vec b\cdot\vec c) - (\vec a\cdot\vec c)(\vec b\cdot\vec d)$'
+  - en: '$(\vec a\cdot\vec c)(\vec b\cdot\vec d) - (\vec a\cdot\vec d)(\vec b\cdot\vec c)$'
+  - en: '$(\vec a\cdot\vec b)(\vec c\cdot\vec d) - (\vec a\cdot\vec d)(\vec b\cdot\vec c)$'
+  - en: '$(\vec a\cdot\vec c)(\vec b\cdot\vec d) + (\vec a\cdot\vec d)(\vec b\cdot\vec c)$'
+  answer: 1
+  explanation:
+    en: |-
+      Swap dot and cross, then expand the vector triple product:
+      $$(\vec a\times\vec b)\cdot(\vec c\times\vec d) = \vec a\cdot\big(\vec b\times(\vec c\times\vec d)\big) = \vec a\cdot\big((\vec b\cdot\vec d)\vec c - (\vec b\cdot\vec c)\vec d\big),$$
+      which is $\begin{vmatrix} \vec a\cdot\vec c & \vec a\cdot\vec d \\ \vec b\cdot\vec c & \vec b\cdot\vec d \end{vmatrix}$.
+
+      **Check with** $\vec c = \vec a$, $\vec d = \vec b$: the answer must give Lagrange's $|\vec a|^2|\vec b|^2 - (\vec a\cdot\vec b)^2 \ge 0$. The reversed option gives its negative, and the "$+$" option gives $|\vec a|^2|\vec b|^2 + (\vec a\cdot\vec b)^2$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-triple-product
+  stem:
+    en: 'For all vectors $\vec a, \vec b, \vec c, \vec d$, the vector $(\vec a\times\vec b)\times(\vec c\times\vec d)$ equals'
+  options:
+  - en: '$[\vec a\,\vec b\,\vec c]\,\vec d - [\vec a\,\vec b\,\vec d]\,\vec c$'
+  - en: '$[\vec b\,\vec c\,\vec d]\,\vec a - [\vec a\,\vec c\,\vec d]\,\vec b$'
+  - en: '$[\vec a\,\vec b\,\vec d]\,\vec c + [\vec a\,\vec b\,\vec c]\,\vec d$'
+  - en: '$[\vec a\,\vec b\,\vec d]\,\vec c - [\vec a\,\vec b\,\vec c]\,\vec d$'
+  answer: 3
+  explanation:
+    en: |-
+      Treat $\vec u = \vec a\times\vec b$ as one vector: $\vec u\times(\vec c\times\vec d) = (\vec u\cdot\vec d)\vec c - (\vec u\cdot\vec c)\vec d$, and $\vec u\cdot\vec d = [\vec a\,\vec b\,\vec d]$, $\vec u\cdot\vec c = [\vec a\,\vec b\,\vec c]$. So
+      $$(\vec a\times\vec b)\times(\vec c\times\vec d) = [\vec a\,\vec b\,\vec d]\,\vec c - [\vec a\,\vec b\,\vec c]\,\vec d.$$
+
+      The other true form is $[\vec a\,\vec c\,\vec d]\,\vec b - [\vec b\,\vec c\,\vec d]\,\vec a$; the option $[\vec b\,\vec c\,\vec d]\vec a - [\vec a\,\vec c\,\vec d]\vec b$ is its **negative**.
+
+      **Check:** $\vec a = \hat i$, $\vec b = \hat j$, $\vec c = \hat k$, $\vec d = \hat i$ gives $\hat k\times\hat j = -\hat i$ on the left, and $0\cdot\hat k - 1\cdot\hat i = -\hat i$ from the key; the second option gives $+\hat i$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-triple-product
+  - vector-product
+  stem:
+    en: 'Let $\vec a = \hat i + 2\hat j$, $\vec b = \hat i + \hat k$ and $\vec c = \hat j + \hat k$. The vector $\vec r$ satisfying $\vec r\times\vec b = \vec a\times\vec b$ and $\vec r\cdot\vec c = 0$ is'
+  options:
+  - en: '$3\hat i + 2\hat j + 2\hat k$'
+  - en: '$-\hat i + 2\hat j + 2\hat k$'
+  - en: '$-\hat i + 2\hat j - 2\hat k$'
+  - en: '$\hat i + 2\hat j$'
+  answer: 2
+  explanation:
+    en: |-
+      $(\vec r - \vec a)\times\vec b = \vec 0$, so $\vec r = \vec a + t\vec b$. Then
+      $$\vec r\cdot\vec c = \vec a\cdot\vec c + t\,\vec b\cdot\vec c = 2 + t = 0 \;\Rightarrow\; t = -2,$$
+      $$\vec r = (\hat i + 2\hat j) - 2(\hat i + \hat k) = -\hat i + 2\hat j - 2\hat k.$$
+
+      $3\hat i + 2\hat j + 2\hat k$ uses $t = +2$ (sign slip) and gives $\vec r\cdot\vec c = 4$. $\hat i + 2\hat j = \vec a$ satisfies the first equation only: $\vec a\cdot\vec c = 2 \ne 0$. $-\hat i + 2\hat j + 2\hat k$ fails the first equation, since it differs from $\vec a$ by $-2\hat i + 2\hat k$, which is not parallel to $\vec b$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vectors-basics
+  stem:
+    en: 'If $4\hat i + 3\hat j + 5\hat k = x(\hat i + \hat j) + y(\hat j + \hat k) + z(\hat k + \hat i)$, then $(x, y, z)$ is'
+  options:
+  - en: '$(3, 2, 1)$'
+  - en: '$(2, 1, 3)$'
+  - en: '$(1, 3, 2)$'
+  - en: '$(1, 2, 3)$'
+  answer: 3
+  explanation:
+    en: |-
+      The three vectors are non-coplanar ($[\,\cdot\,] = 2$), so the expansion is unique. Compare components:
+      $$x + z = 4, \qquad x + y = 3, \qquad y + z = 5.$$
+      Adding, $x + y + z = 6$, so $x = 6 - 5 = 1$, $y = 6 - 4 = 2$, $z = 6 - 3 = 3$.
+
+      **Check:** $(1,1,0) + 2(0,1,1) + 3(1,0,1) = (4, 3, 5)$. The order $(3, 2, 1)$ pairs each coefficient with the wrong vector.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - collinearity-coplanarity
+  - scalar-triple-product
+  stem:
+    en: 'The four points $A(3, 2, 1)$, $B(4, \lambda, 5)$, $C(4, 2, -2)$ and $D(6, 5, -1)$ are coplanar. Then $\lambda$ equals'
+  options:
+  - en: '$-5$'
+  - en: '$5$'
+  - en: '$3$'
+  - en: '$7$'
+  answer: 1
+  explanation:
+    en: |-
+      Coplanar points $\iff [\vec{AB}\ \vec{AC}\ \vec{AD}] = 0$, with $\vec{AB} = (1, \lambda - 2, 4)$, $\vec{AC} = (1, 0, -3)$, $\vec{AD} = (3, 3, -2)$:
+      $$\begin{vmatrix} 1 & \lambda - 2 & 4 \\ 1 & 0 & -3 \\ 3 & 3 & -2 \end{vmatrix} = 1(0 + 9) - (\lambda - 2)(-2 + 9) + 4(3 - 0) = 35 - 7\lambda.$$
+      So $\lambda = 5$.
+
+      $\lambda = -5$ solves $35 + 7\lambda = 0$, a sign slip in the middle term $-(\lambda - 2)\cdot 7$. Using the position vectors themselves instead of the differences $\vec{AB}, \vec{AC}, \vec{AD}$ tests the wrong thing (coplanarity with the origin).
+  status: ai-generated
+- id: q0022
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - scalar-product
+  stem:
+    en: 'If $\vec a + \vec b + \vec c = \vec 0$ with $|\vec a| = 3$, $|\vec b| = 5$ and $|\vec c| = 7$, then the angle between $\vec a$ and $\vec b$ is'
+  options:
+  - en: '$\frac{2\pi}{3}$'
+  - en: '$\frac{\pi}{3}$'
+  - en: '$\frac{\pi}{6}$'
+  - en: '$\frac{\pi}{4}$'
+  answer: 1
+  explanation:
+    en: |-
+      $\vec a + \vec b = -\vec c$, so
+      $$|\vec a|^2 + |\vec b|^2 + 2\,\vec a\cdot\vec b = |\vec c|^2 \;\Rightarrow\; 9 + 25 + 2\,\vec a\cdot\vec b = 49 \;\Rightarrow\; \vec a\cdot\vec b = \frac{15}{2}.$$
+      Then $\cos\theta = \dfrac{15/2}{3\cdot 5} = \dfrac12$, so $\theta = \dfrac{\pi}{3}$.
+
+      $\frac{2\pi}{3}$ is the **interior angle** of the triangle formed head to tail by $\vec a, \vec b, \vec c$ (by the cosine rule, opposite the side $7$). The angle between the vectors is its supplement.
+  status: ai-generated
+- id: q0023
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  stem:
+    en: '$\vec a, \vec b, \vec c$ are unit vectors, and the angle between each pair is $\frac{\pi}{3}$. The volume of the parallelepiped with coterminous edges $\vec a, \vec b, \vec c$ is'
+  options:
+  - en: '$\frac{1}{2}$'
+  - en: '$\frac{1}{\sqrt2}$'
+  - en: '$\frac{\sqrt3}{2}$'
+  - en: '$\frac{1}{6\sqrt2}$'
+  answer: 1
+  explanation:
+    en: |-
+      Use the Gram determinant, with every $\vec a\cdot\vec b = \cos\frac{\pi}{3} = \frac12$:
+      $$[\vec a\,\vec b\,\vec c]^2 = \begin{vmatrix} 1 & \frac12 & \frac12 \\ \frac12 & 1 & \frac12 \\ \frac12 & \frac12 & 1 \end{vmatrix} = 1\cdot\frac34 - \frac12\cdot\frac14 + \frac12\cdot\left(-\frac14\right) = \frac12.$$
+      So the volume is $\sqrt{1/2} = \frac{1}{\sqrt2}$.
+
+      $\frac12$ forgets that the Gram determinant gives the **square** of the volume. $\frac{1}{6\sqrt2}$ is the volume of the regular tetrahedron on these edges.
+  status: ai-generated
+- id: q0024
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-triple-product
+  stem:
+    en: 'For vectors $\vec a, \vec b, \vec c$, the equality $\vec a\times(\vec b\times\vec c) = (\vec a\times\vec b)\times\vec c$ holds if and only if'
+  options:
+  - en: '$(\vec c\times\vec a)\times\vec b = \vec 0$'
+  - en: '$\vec a$ is parallel to $\vec b$'
+  - en: '$\vec a$ is perpendicular to $\vec c$'
+  - en: '$\vec b$ is perpendicular to $\vec c$'
+  answer: 0
+  explanation:
+    en: |-
+      Expand both sides:
+      $$\vec a\times(\vec b\times\vec c) = (\vec a\cdot\vec c)\vec b - (\vec a\cdot\vec b)\vec c, \qquad (\vec a\times\vec b)\times\vec c = (\vec a\cdot\vec c)\vec b - (\vec b\cdot\vec c)\vec a.$$
+      Their difference is $(\vec b\cdot\vec c)\vec a - (\vec a\cdot\vec b)\vec c = (\vec c\times\vec a)\times\vec b$. So the two are equal iff $(\vec c\times\vec a)\times\vec b = \vec 0$.
+
+      None of the other conditions is enough. Take $\vec a = \vec b = \hat i$, $\vec c = \hat j$: here $\vec a \parallel \vec b$, $\vec a \perp \vec c$ and $\vec b \perp \vec c$ all hold, yet $\hat i\times(\hat i\times\hat j) = -\hat j$ while $(\hat i\times\hat i)\times\hat j = \vec 0$.
+  status: ai-generated
+- id: q0025
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-triple-product
+  - vector-product
+  assertion:
+    en: 'For all vectors $\vec a, \vec b$: $|\vec a\times\vec b|^2 + (\vec a\cdot\vec b)^2 = |\vec a|^2|\vec b|^2$.'
+  reason:
+    en: '$\vec a\times\vec b$ is perpendicular to both $\vec a$ and $\vec b$.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true, but R does not explain A.
+
+      A is Lagrange's identity: with $\theta$ the angle between non-zero $\vec a, \vec b$,
+      $$|\vec a\times\vec b|^2 + (\vec a\cdot\vec b)^2 = |\vec a|^2|\vec b|^2(\sin^2\theta + \cos^2\theta) = |\vec a|^2|\vec b|^2,$$
+      and it is trivial if either vector is $\vec 0$. It rests on the **magnitudes** $|\vec a||\vec b|\sin\theta$ and $|\vec a||\vec b|\cos\theta$.
+
+      R is true (it fixes the **direction** of $\vec a\times\vec b$), but direction plays no role in A.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-product
+  assertion:
+    en: 'If $\vec a \ne \vec 0$, $\vec a\cdot\vec b = \vec a\cdot\vec c$ and $\vec a\times\vec b = \vec a\times\vec c$, then $\vec b = \vec c$.'
+  reason:
+    en: 'If $\vec a \ne \vec 0$ and $\vec a\cdot\vec b = \vec a\cdot\vec c$, then $\vec b = \vec c$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true, R is false.
+
+      **A:** put $\vec d = \vec b - \vec c$. Then $\vec a\cdot\vec d = 0$ and $\vec a\times\vec d = \vec 0$, so $\vec d$ is both perpendicular and parallel to the non-zero $\vec a$. By Lagrange, $|\vec a|^2|\vec d|^2 = 0$, so $\vec d = \vec 0$.
+
+      **R** fails: $\vec a = \hat i$, $\vec b = \hat j$, $\vec c = \hat k$ give $\vec a\cdot\vec b = \vec a\cdot\vec c = 0$ but $\vec b \ne \vec c$. The dot product only says $\vec a \perp (\vec b - \vec c)$.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  assertion:
+    en: 'The vectors $\hat i + \hat j$, $\hat j + \hat k$ and $\hat k + \hat i$ are coplanar.'
+  reason:
+    en: Three vectors are coplanar if and only if their scalar triple product is zero.
+  answer: 3
+  explanation:
+    en: |-
+      A is false, R is true.
+
+      R is the coplanarity test. Applying it,
+      $$\begin{vmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{vmatrix} = 1(1 - 0) - 1(0 - 1) + 0 = 2 \ne 0,$$
+      so the vectors are **not** coplanar; they even form a basis of $\R^3$.
+  status: ai-generated
+- id: q0028
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-triple-product
+  stem:
+    en: 'For vectors $\vec a, \vec b, \vec c$ and a real number $\lambda$, consider the following statements:'
+  statements:
+  - en: '$[\vec a\,\vec b\,\vec c] = [\vec b\,\vec c\,\vec a]$'
+  - en: '$[\vec a\,\vec c\,\vec b] = -[\vec a\,\vec b\,\vec c]$'
+  - en: '$[\lambda\vec a\ \ \lambda\vec b\ \ \lambda\vec c] = \lambda[\vec a\,\vec b\,\vec c]$'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  - en: 1 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      The scalar triple product is a $3\times3$ determinant with rows $\vec a, \vec b, \vec c$.
+
+      1. A cyclic permutation is two row swaps, so the value is unchanged. True.
+      2. One row swap changes the sign. True.
+      3. False: $\lambda$ comes out of **each** of the three rows, so
+      $$[\lambda\vec a\ \ \lambda\vec b\ \ \lambda\vec c] = \lambda^3[\vec a\,\vec b\,\vec c].$$
+      With $\hat i, \hat j, \hat k$ and $\lambda = 2$: the left side is $8$, not $2$.
+  status: ai-generated
+- id: q0029
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vectors-basics
+  - scalar-product
+  stem:
+    en: 'Consider the following statements about non-zero vectors in $\R^3$:'
+  statements:
+  - en: '$\vec a$ and $\vec b$ are collinear if and only if $\vec a\cdot\vec b = |\vec a|\,|\vec b|$.'
+  - en: 'Any four vectors in $\R^3$ are linearly dependent.'
+  - en: 'If $\vec a, \vec b, \vec c$ are coplanar, then $\vec c$ is a linear combination of $\vec a$ and $\vec b$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 only
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      2. True: $\R^3$ has dimension $3$, so any four vectors are dependent.
+
+      1. False: $\vec a\cdot\vec b = |\vec a||\vec b|$ means $\cos\theta = 1$, i.e. the **same** direction. Collinear vectors may be opposite: $\vec a = \hat i$, $\vec b = -\hat i$ are collinear with $\vec a\cdot\vec b = -1$. The correct test is $|\vec a\cdot\vec b| = |\vec a||\vec b|$, or $\vec a\times\vec b = \vec 0$.
+
+      3. False: $\hat i, 2\hat i, \hat j$ are coplanar, but $\hat j$ is not a combination of $\hat i$ and $2\hat i$. Coplanarity only says that **some** one of the three is a combination of the other two (here $2\hat i = 2\cdot\hat i + 0\cdot\hat j$).
+  status: ai-generated
+- id: q0030
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - scalar-product
+  - vector-product
+  - scalar-triple-product
+  - exam-tips
+  stem:
+    en: 'For non-zero vectors $\vec a, \vec b, \vec c$, match each condition in List I with its geometric meaning in List II.'
+  left:
+  - en: '$\vec a\cdot\vec b = 0$'
+  - en: '$\vec a\times\vec b = \vec 0$'
+  - en: '$[\vec a\,\vec b\,\vec c] = 0$'
+  - en: '$\lvert\vec a\times\vec b\rvert = \vec a\cdot\vec b$'
+  right:
+  - en: '$\vec a, \vec b, \vec c$ are coplanar'
+  - en: 'the angle between $\vec a$ and $\vec b$ is $\frac{\pi}{4}$'
+  - en: '$\vec a$ is parallel to $\vec b$'
+  - en: '$\vec a$ is perpendicular to $\vec b$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-4, B-1, C-3, D-2'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $|\vec a||\vec b|\cos\theta = 0$ gives $\theta = \frac{\pi}{2}$ (A-4).
+      - B: $|\vec a||\vec b|\sin\theta = 0$ gives $\theta = 0$ or $\pi$: parallel (B-3).
+      - C: zero scalar triple product means zero volume: coplanar (C-1).
+      - D: $|\vec a||\vec b|\sin\theta = |\vec a||\vec b|\cos\theta$, so $\tan\theta = 1$ and $\theta = \frac{\pi}{4}$ (D-2).
+
+      Swapping A and B is the classic slip: the **dot** product vanishes for perpendicular vectors, the **cross** product for parallel ones.
+  status: ai-generated

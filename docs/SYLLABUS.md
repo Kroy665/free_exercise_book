@@ -2,7 +2,7 @@
 
 The content plan and study plan for **WBSSC SLST (Assistant Teacher) Mathematics**: Class IX–X (GRAD, code 86) and Class XI–XII (PG, code 19). The official syllabus is transcribed in [syllabus/wbssc-slst-mathematics.md](syllabus/wbssc-slst-mathematics.md).
 
-**80 topics, 29 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
+**80 topics, 42 written.** Status: ✅ written · 🔲 queued. **IX–XII** = in both syllabi; **XI–XII** = PG syllabus only. Topics are written to PG depth, so every topic serves both papers.
 
 ## The plan: 6 months at 1–2 hours a day
 
@@ -96,9 +96,9 @@ Short, formula-driven, and high-scoring.
 
 | Q | ID | Topic | Covers | Level | Status |
 |---|---|---|---|---|---|
-| 30 | `math.ode.ode-first-order` | First-Order Equations | Formation, order and degree, separable, homogeneous, exact equations, integrating factors | IX–XII | 🔲 |
-| 31 | `math.ode.ode-linear-clairaut` | Linear, Bernoulli and Clairaut Equations | Linear and Bernoulli equations, Clairaut's equation, singular solutions, orthogonal trajectories | IX–XII | 🔲 |
-| 32 | `math.ode.ode-higher-order` | Higher-Order Linear Equations | Constant coefficients, CF and PI, D-operator, variation of parameters, Cauchy–Euler | IX–XII | 🔲 |
+| 30 | `math.ode.ode-first-order` | First-Order Equations | Formation, order and degree, separable, homogeneous, exact equations, integrating factors | IX–XII | ✅ |
+| 31 | `math.ode.ode-linear-clairaut` | Linear, Bernoulli and Clairaut Equations | Linear and Bernoulli equations, Clairaut's equation, singular solutions, orthogonal trajectories | IX–XII | ✅ |
+| 32 | `math.ode.ode-higher-order` | Higher-Order Linear Equations | Constant coefficients, CF and PI, D-operator, variation of parameters, Cauchy–Euler | IX–XII | ✅ |
 
 ### Block 5: Analytical Geometry and Vectors (Weeks 10–11)
 
@@ -106,16 +106,16 @@ Standard results and quick computation.
 
 | Q | ID | Topic | Covers | Level | Status |
 |---|---|---|---|---|---|
-| 33 | `math.geometry.axes-conics` | Transformation of Axes and General Conics | Translation, rotation, invariants, general second-degree equation, classification | IX–XII | 🔲 |
-| 34 | `math.geometry.pair-of-lines` | Pair of Straight Lines | Condition, angle, bisectors, lines joining origin to intersections with a conic | IX–XII | 🔲 |
-| 35 | `math.geometry.tangents-polars` | Tangents, Poles and Polars | Pair of tangents, chord of contact, poles and polars, conjugate points (circle to hyperbola) | IX–XII | 🔲 |
-| 36 | `math.geometry.polar-equations` | Polar Equations | Lines, circles, conic with focus as pole; tangent, normal, chord | IX–XII | 🔲 |
-| 37 | `math.geometry.planes` | 3D Coordinates and Planes | Direction cosines, projection, plane forms, distance, angle, bisectors | IX–XII | 🔲 |
-| 38 | `math.geometry.lines-3d` | Straight Lines in Space | Symmetric and parametric forms, coplanarity, shortest distance between skew lines | IX–XII | 🔲 |
-| 39 | `math.geometry.sphere` | The Sphere | General equation, circle, radical plane, tangent plane | XI–XII | 🔲 |
-| 40 | `math.geometry.quadrics` | Quadrics | General second-degree equation in three variables, classification | XI–XII | 🔲 |
-| 41 | `math.vectors.vector-algebra` | Vector Algebra | Collinearity, coplanarity, scalar/vector/triple products, geometric applications | IX–XII | 🔲 |
-| 42 | `math.vectors.vector-applications` | Vector Applications and Calculus | Work, moment, vector equations of lines and planes, tetrahedron volume, vector differentiation | XI–XII | 🔲 |
+| 33 | `math.geometry.axes-conics` | Transformation of Axes and General Conics | Translation, rotation, invariants, general second-degree equation, classification | IX–XII | ✅ |
+| 34 | `math.geometry.pair-of-lines` | Pair of Straight Lines | Condition, angle, bisectors, lines joining origin to intersections with a conic | IX–XII | ✅ |
+| 35 | `math.geometry.tangents-polars` | Tangents, Poles and Polars | Pair of tangents, chord of contact, poles and polars, conjugate points (circle to hyperbola) | IX–XII | ✅ |
+| 36 | `math.geometry.polar-equations` | Polar Equations | Lines, circles, conic with focus as pole; tangent, normal, chord | IX–XII | ✅ |
+| 37 | `math.geometry.planes` | 3D Coordinates and Planes | Direction cosines, projection, plane forms, distance, angle, bisectors | IX–XII | ✅ |
+| 38 | `math.geometry.lines-3d` | Straight Lines in Space | Symmetric and parametric forms, coplanarity, shortest distance between skew lines | IX–XII | ✅ |
+| 39 | `math.geometry.sphere` | The Sphere | General equation, circle, radical plane, tangent plane | XI–XII | ✅ |
+| 40 | `math.geometry.quadrics` | Quadrics | General second-degree equation in three variables, classification | XI–XII | ✅ |
+| 41 | `math.vectors.vector-algebra` | Vector Algebra | Collinearity, coplanarity, scalar/vector/triple products, geometric applications | IX–XII | ✅ |
+| 42 | `math.vectors.vector-applications` | Vector Applications and Calculus | Work, moment, vector equations of lines and planes, tetrahedron volume, vector differentiation | XI–XII | ✅ |
 
 ### Block 6: Modern Algebra (Weeks 12–13)
 

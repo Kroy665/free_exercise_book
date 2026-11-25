@@ -1,0 +1,18 @@
+id: math.geometry.sphere
+title:
+  en: The Sphere
+summary:
+  en: General equation, centre and radius, the sphere on a diameter and through four points, plane sections, spheres through a circle (S + λP = 0), intersection of two spheres, tangent planes and the condition of tangency, power of a point, radical plane, line and centre, and orthogonal and touching spheres.
+order: 7
+exams: [slst-1112]
+prerequisites: [math.geometry.planes]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - Shanti Narayan and P. K. Mittal, Analytical Solid Geometry, ch. on the sphere
+  - R. J. T. Bell, An Elementary Treatise on Coordinate Geometry of Three Dimensions, ch. on the sphere
+  - J. G. Chakravorty and P. R. Ghosh, Analytical Geometry and Vector Analysis, ch. on the sphere
+  - WBSSC 2nd SLST syllabus, Mathematics (PG) IV.B.4
+retired: []

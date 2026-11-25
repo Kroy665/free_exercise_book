@@ -1,0 +1,658 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-1112
+  refs:
+  - work-moment
+  stem:
+    en: 'A force $\vec F = 2\hat i + 3\hat j - \hat k$ moves its point of application from $A(1, -1, 2)$ to $B(3, 2, 4)$. The work done is'
+  options:
+  - en: '$11$'
+  - en: '$8$'
+  - en: '$-11$'
+  - en: '$5$'
+  answer: 0
+  explanation:
+    en: |-
+      The displacement is $\vec d = \vec{AB} = (3 - 1, 2 + 1, 4 - 2) = (2, 3, 2)$. Then
+      $$W = \vec F\cdot\vec d = 4 + 9 - 2 = 11.$$
+
+      $8$ is $\vec F\cdot\vec{OB}$: it uses the position vector of the end point instead of the displacement. $-11$ uses $\vec{BA}$; $5$ uses $\vec a + \vec b$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - work-moment
+  stem:
+    en: 'A force $\vec F = 3\hat i + 2\hat j - 4\hat k$ acts at the point $P(1, -1, 2)$. Its moment about the origin is'
+  options:
+  - en: '$10\hat j + 5\hat k$'
+  - en: '$-10\hat j - 5\hat k$'
+  - en: '$-10\hat j + 5\hat k$'
+  - en: '$8\hat i + 10\hat j + 5\hat k$'
+  answer: 0
+  explanation:
+    en: |-
+      The moment about $O$ is $\vec r\times\vec F$ with $\vec r = \vec{OP} = (1, -1, 2)$:
+      $$\vec r\times\vec F = \begin{vmatrix}\hat i&\hat j&\hat k\\1&-1&2\\3&2&-4\end{vmatrix} = (4 - 4)\hat i - (-4 - 6)\hat j + (2 + 3)\hat k = 10\hat j + 5\hat k.$$
+
+      $-10\hat j - 5\hat k$ is $\vec F\times\vec r$ (wrong order). $-10\hat j + 5\hat k$ drops the minus sign of the $\hat j$ cofactor. Check: the answer is perpendicular to $\vec F$, since $\vec F\cdot(0, 10, 5) = 20 - 20 = 0$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - work-moment
+  stem:
+    en: 'A force $\vec F = 2\hat i + \hat j - \hat k$ acts at $A(1, 2, 3)$. Its moment about the point $B(2, -1, 1)$ is'
+  options:
+  - en: '$5\hat i - 3\hat j + 7\hat k$'
+  - en: '$-5\hat i + 7\hat j - 3\hat k$'
+  - en: '$-5\hat i + 3\hat j - 7\hat k$'
+  - en: '$-5\hat i - 3\hat j - 7\hat k$'
+  answer: 2
+  explanation:
+    en: |-
+      Use the vector **from** the reference point **to** the point of application: $\vec{BA} = (1 - 2, 2 + 1, 3 - 1) = (-1, 3, 2)$.
+      $$\vec{BA}\times\vec F = \begin{vmatrix}\hat i&\hat j&\hat k\\-1&3&2\\2&1&-1\end{vmatrix} = (-3 - 2)\hat i - (1 - 4)\hat j + (-1 - 6)\hat k = -5\hat i + 3\hat j - 7\hat k.$$
+
+      $5\hat i - 3\hat j + 7\hat k$ uses $\vec{AB}$ (or $\vec F\times\vec{BA}$). $-5\hat i + 7\hat j - 3\hat k$ is $\vec{OA}\times\vec F$, the moment about the origin.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - work-moment
+  stem:
+    en: 'A force $\vec F = 2\hat i + \hat j + \hat k$ acts at $P(1, -1, 2)$. Its moment $(\vec{AP}\times\vec F)\cdot\hat\ell$ about the line through $A(0, 1, 1)$ in the direction of $2\hat i + \hat j - 2\hat k$ is'
+  options:
+  - en: '$-5$'
+  - en: '$5$'
+  - en: '$-15$'
+  - en: '$-3$'
+  answer: 0
+  explanation:
+    en: |-
+      $\vec{AP} = (1, -2, 1)$ and
+      $$\vec{AP}\times\vec F = \begin{vmatrix}\hat i&\hat j&\hat k\\1&-2&1\\2&1&1\end{vmatrix} = (-3, 1, 5).$$
+      With $\hat\ell = \frac13(2, 1, -2)$:
+      $$M_L = \frac{-6 + 1 - 10}{3} = -5.$$
+
+      $-15$ forgets to divide by $|\vec\ell| = 3$. $-3$ uses $\vec{OP}$ instead of $\vec{AP}$: the line does not pass through $O$. $5$ reverses the order in the cross product.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - lines
+  stem:
+    en: 'The Cartesian form of the line $\vec r = (\hat i - 3\hat j + 2\hat k) + t(4\hat i + \hat j - 2\hat k)$ is'
+  options:
+  - en: '$\dfrac{x - 4}{1} = \dfrac{y - 1}{-3} = \dfrac{z + 2}{2}$'
+  - en: '$\dfrac{x - 1}{4} = \dfrac{y + 3}{1} = \dfrac{z - 2}{-2}$'
+  - en: '$\dfrac{x + 1}{4} = \dfrac{y - 3}{1} = \dfrac{z + 2}{-2}$'
+  - en: '$\dfrac{x - 1}{4} = \dfrac{y + 3}{1} = \dfrac{z - 2}{2}$'
+  answer: 1
+  explanation:
+    en: |-
+      The line passes through $(1, -3, 2)$ with direction ratios $4 : 1 : -2$, so
+      $$\frac{x - 1}{4} = \frac{y + 3}{1} = \frac{z - 2}{-2}.$$
+
+      The second option swaps point and direction. The third has the point's signs reversed. The fourth drops the sign of the last direction ratio.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - planes
+  stem:
+    en: 'The perpendicular distance of the origin from the plane $\vec r\cdot(2\hat i - \hat j + 2\hat k) = 9$ is'
+  options:
+  - en: '$9$'
+  - en: '$3$'
+  - en: '$1$'
+  - en: '$\dfrac{9}{\sqrt5}$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide by $|\vec n| = \sqrt{4 + 1 + 4} = 3$ to reach the normal form $\vec r\cdot\hat n = 3$. So the distance is
+      $$\frac{|d|}{|\vec n|} = \frac93 = 3.$$
+
+      $9$ forgets to normalise. $1$ divides by $|\vec n|^2$. $\frac{9}{\sqrt5}$ leaves out one component of $\vec n$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - planes
+  stem:
+    en: 'The vector equation of the plane through $A(1, 0, 2)$, $B(2, 1, 1)$ and $C(0, 2, 3)$ is'
+  options:
+  - en: '$\vec r\cdot(\hat i + \hat k) = 3$'
+  - en: '$\vec r\cdot(\hat i + \hat k) = -3$'
+  - en: '$\vec r\cdot(\hat i - \hat k) = -1$'
+  - en: '$\vec r\cdot(3\hat i + 3\hat k) = 3$'
+  answer: 0
+  explanation:
+    en: |-
+      $\vec{AB} = (1, 1, -1)$ and $\vec{AC} = (-1, 2, 1)$, so a normal is
+      $$\vec{AB}\times\vec{AC} = \begin{vmatrix}\hat i&\hat j&\hat k\\1&1&-1\\-1&2&1\end{vmatrix} = (3, 0, 3) \parallel (1, 0, 1).$$
+      Then $d = \vec a\cdot(1, 0, 1) = 1 + 2 = 3$, giving $\vec r\cdot(\hat i + \hat k) = 3$, i.e. $x + z = 3$.
+
+      Check: $B$ gives $2 + 1 = 3$ and $C$ gives $0 + 3 = 3$. The option $\vec r\cdot(3\hat i + 3\hat k) = 3$ scales the normal but not $d$ (it should be $9$).
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - planes
+  stem:
+    en: 'The distance of the point $(3, -1, 2)$ from the plane $\vec r\cdot(2\hat i + \hat j - 2\hat k) = 4$ is'
+  options:
+  - en: '$\dfrac53$'
+  - en: '$3$'
+  - en: '$1$'
+  - en: '$\dfrac13$'
+  answer: 2
+  explanation:
+    en: |-
+      $$d = \frac{|\vec p\cdot\vec n - 4|}{|\vec n|} = \frac{|6 - 1 - 4 - 4|}{3} = \frac{3}{3} = 1.$$
+
+      $\frac53$ comes from $|\vec p\cdot\vec n + 4|$ (sign of $d$). $3$ forgets to divide by $|\vec n|$; $\frac13$ divides by $|\vec n|^2$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - planes
+  stem:
+    en: 'The angle between the line $\vec r = (\hat i - \hat j) + t(\hat i + 2\hat j + 2\hat k)$ and the plane $\vec r\cdot(2\hat i - \hat j + 2\hat k) = 5$ is'
+  options:
+  - en: '$\sin^{-1}\dfrac49$'
+  - en: '$\cos^{-1}\dfrac49$'
+  - en: '$\sin^{-1}\dfrac{4}{81}$'
+  - en: '$\cos^{-1}\dfrac{4}{81}$'
+  answer: 0
+  explanation:
+    en: |-
+      With $\vec b = (1, 2, 2)$ and $\vec n = (2, -1, 2)$: $\vec b\cdot\vec n = 2 - 2 + 4 = 4$ and $|\vec b| = |\vec n| = 3$. The line makes the angle $\varphi$ with the plane, where
+      $$\sin\varphi = \frac{|\vec b\cdot\vec n|}{|\vec b|\,|\vec n|} = \frac49.$$
+
+      $\cos^{-1}\frac49$ is the angle between the line and the **normal**, the complement of $\varphi$. The $\frac{4}{81}$ options divide by the squares of the lengths.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - planes
+  stem:
+    en: 'The line $\vec r = (\hat i + \hat j) + t(2\hat i + \lambda\hat j + \hat k)$ is parallel to the plane $\vec r\cdot(3\hat i - 2\hat j + 4\hat k) = 7$ when $\lambda$ equals'
+  options:
+  - en: '$-5$'
+  - en: '$1$'
+  - en: '$5$'
+  - en: '$-1$'
+  answer: 2
+  explanation:
+    en: |-
+      The line is parallel to the plane iff its direction is perpendicular to the normal:
+      $$(2, \lambda, 1)\cdot(3, -2, 4) = 6 - 2\lambda + 4 = 0 \Rightarrow \lambda = 5.$$
+
+      For $\lambda = 5$ the point $(1, 1, 0)$ gives $\vec a\cdot\vec n = 3 - 2 = 1 \ne 7$, so the line is parallel to the plane but does not lie in it. $-5$ comes from a sign slip in $-2\lambda$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - shortest-distance
+  stem:
+    en: 'The shortest distance between the lines $\vec r = (\hat i + 2\hat j + 3\hat k) + t(\hat i - 3\hat j + 2\hat k)$ and $\vec r = (4\hat i + 5\hat j + 6\hat k) + s(2\hat i + 3\hat j + \hat k)$ is'
+  options:
+  - en: '$\dfrac{9}{\sqrt{19}}$'
+  - en: '$\dfrac{1}{\sqrt{19}}$'
+  - en: '$\dfrac{3}{\sqrt{19}}$'
+  - en: '$\dfrac{3}{19}$'
+  answer: 2
+  explanation:
+    en: |-
+      $$\vec b_1\times\vec b_2 = \begin{vmatrix}\hat i&\hat j&\hat k\\1&-3&2\\2&3&1\end{vmatrix} = (-9, 3, 9), \qquad |\vec b_1\times\vec b_2| = \sqrt{171} = 3\sqrt{19}.$$
+      With $\vec a_2 - \vec a_1 = (3, 3, 3)$: $(3, 3, 3)\cdot(-9, 3, 9) = 9$. So
+      $$d = \frac{9}{3\sqrt{19}} = \frac{3}{\sqrt{19}}.$$
+
+      $\frac{9}{\sqrt{19}}$ uses $\sqrt{19}$ for $|\vec b_1\times\vec b_2|$, dropping the factor $3 = \sqrt9$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - shortest-distance
+  stem:
+    en: 'The distance between the parallel lines $\vec r = (\hat i + \hat j) + t(\hat i + 2\hat j + 2\hat k)$ and $\vec r = (2\hat i + \hat j - \hat k) + s(\hat i + 2\hat j + 2\hat k)$ is'
+  options:
+  - en: '$\dfrac13$'
+  - en: '$\dfrac{\sqrt{17}}{3}$'
+  - en: '$\sqrt{17}$'
+  - en: '$\sqrt2$'
+  answer: 1
+  explanation:
+    en: |-
+      The skew-line formula gives $\frac00$, so use $d = \dfrac{|(\vec a_2 - \vec a_1)\times\vec b|}{|\vec b|}$ with $\vec a_2 - \vec a_1 = (1, 0, -1)$ and $|\vec b| = 3$:
+      $$(1, 0, -1)\times(1, 2, 2) = (2, -3, 2), \qquad d = \frac{\sqrt{4 + 9 + 4}}{3} = \frac{\sqrt{17}}{3}.$$
+
+      $\frac13 = \frac{|(\vec a_2 - \vec a_1)\cdot\vec b|}{|\vec b|}$ is the projection **along** the lines, not across them. $\sqrt2 = |\vec a_2 - \vec a_1|$ is the distance between the two given points.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - shortest-distance
+  - lines
+  stem:
+    en: 'The lines $\vec r = (\hat i + 2\hat j + 3\hat k) + t(2\hat i + 3\hat j + 4\hat k)$ and $\vec r = (2\hat i + 4\hat j + 5\hat k) + s(\hat i + 2\hat j + k\hat k)$ intersect when $k$ equals'
+  options:
+  - en: '$-2$'
+  - en: '$2$'
+  - en: '$4$'
+  - en: '$\dfrac12$'
+  answer: 1
+  explanation:
+    en: |-
+      The directions $(2, 3, 4)$ and $(1, 2, k)$ are never parallel ($2 : 3 \ne 1 : 2$), so the lines meet iff they are coplanar:
+      $$\begin{vmatrix} 1 & 2 & 2 \\ 2 & 3 & 4 \\ 1 & 2 & k \end{vmatrix} = 1(3k - 8) - 2(2k - 4) + 2(4 - 3) = 2 - k = 0 \Rightarrow k = 2.$$
+
+      Check: $t = 0$, $s = -1$ give the common point $(1, 2, 3)$ on both lines. $-2$ comes from a sign slip in the expansion.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - tetrahedron
+  stem:
+    en: 'The volume of the tetrahedron with vertices $A(1, 1, 1)$, $B(3, 2, 1)$, $C(2, 4, 2)$, $D(1, 2, 5)$ is'
+  options:
+  - en: '$6$'
+  - en: '$9$'
+  - en: '$\dfrac{16}{3}$'
+  - en: '$3$'
+  answer: 3
+  explanation:
+    en: |-
+      The edges from $A$ are $\vec{AB} = (2, 1, 0)$, $\vec{AC} = (1, 3, 1)$, $\vec{AD} = (0, 1, 4)$:
+      $$[\vec{AB}\ \vec{AC}\ \vec{AD}] = \begin{vmatrix} 2 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 4 \end{vmatrix} = 2(12 - 1) - 1(4 - 0) = 18, \qquad V = \frac{18}{6} = 3.$$
+
+      $6$ and $9$ divide by $3$ and $2$. $\frac{16}{3}$ uses the position vectors of $B, C, D$, which gives the tetrahedron $OBCD$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - tetrahedron
+  stem:
+    en: 'A tetrahedron has coterminous edges $\hat i + 2\hat j$, $\hat j + \lambda\hat k$ and $2\hat i + \hat k$, and volume $\dfrac32$. Then $\lambda$ is'
+  options:
+  - en: '$2$ only'
+  - en: '$-2$ or $\dfrac52$'
+  - en: '$\dfrac78$ or $-\dfrac{11}{8}$'
+  - en: '$2$ or $-\dfrac52$'
+  answer: 3
+  explanation:
+    en: |-
+      $$[\vec a\,\vec b\,\vec c] = \begin{vmatrix} 1 & 2 & 0 \\ 0 & 1 & \lambda \\ 2 & 0 & 1 \end{vmatrix} = 1(1 - 0) - 2(0 - 2\lambda) + 0 = 1 + 4\lambda.$$
+      So $\frac16|1 + 4\lambda| = \frac32$, i.e. $1 + 4\lambda = \pm 9$, giving $\lambda = 2$ or $\lambda = -\frac52$.
+
+      "$2$ only" ignores the modulus. $-2$ or $\frac52$ comes from a sign slip in the middle cofactor ($1 - 4\lambda$). $\frac78$ or $-\frac{11}{8}$ uses $\frac13$ in place of $\frac16$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - velocity-acceleration
+  stem:
+    en: 'A particle moves so that $\vec r = (t^2 + 1)\hat i + (4t - 3)\hat j + (2t^2 - 6t)\hat k$. Its speed at $t = 1$ is'
+  options:
+  - en: '$2\sqrt5$'
+  - en: '$\sqrt{21}$'
+  - en: '$\sqrt6$'
+  - en: '$2\sqrt6$'
+  answer: 3
+  explanation:
+    en: |-
+      $\vec v = 2t\,\hat i + 4\hat j + (4t - 6)\hat k$, so $\vec v(1) = (2, 4, -2)$ and
+      $$|\vec v(1)| = \sqrt{4 + 16 + 4} = 2\sqrt6.$$
+
+      $2\sqrt5$ is $|\vec a| = |(2, 0, 4)|$. $\sqrt{21}$ is $|\vec r(1)| = |(2, 1, -4)|$, the distance from the origin.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-differentiation
+  stem:
+    en: 'For $\vec r(t) = a\cos t\,\hat i + a\sin t\,\hat j + bt\,\hat k$ ($a, b$ constants), $\vec r\cdot\dfrac{d\vec r}{dt}$ equals'
+  options:
+  - en: '$0$'
+  - en: '$bt$'
+  - en: '$a^2 + b^2 t$'
+  - en: '$b^2 t$'
+  answer: 3
+  explanation:
+    en: |-
+      $\dfrac{d\vec r}{dt} = -a\sin t\,\hat i + a\cos t\,\hat j + b\hat k$, so
+      $$\vec r\cdot\vec r\,' = -a^2\sin t\cos t + a^2\sin t\cos t + b^2 t = b^2 t.$$
+
+      $0$ would hold only if $|\vec r|$ were constant; here $|\vec r|^2 = a^2 + b^2t^2$, and indeed $\vec r\cdot\vec r\,' = \frac12\frac{d}{dt}|\vec r|^2 = b^2 t$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-differentiation
+  stem:
+    en: 'If $\vec r$ is a twice-differentiable vector function of $t$, then $\dfrac{d}{dt}\left(\vec r\times\dfrac{d\vec r}{dt}\right)$ equals'
+  options:
+  - en: '$\dfrac{d\vec r}{dt}\times\dfrac{d^2\vec r}{dt^2}$'
+  - en: '$\vec r\times\dfrac{d^2\vec r}{dt^2}$'
+  - en: '$\dfrac{d^2\vec r}{dt^2}\times\vec r$'
+  - en: '$\vec 0$'
+  answer: 1
+  explanation:
+    en: |-
+      By the product rule, keeping the order:
+      $$\frac{d}{dt}(\vec r\times\vec r\,') = \vec r\,'\times\vec r\,' + \vec r\times\vec r\,'' = \vec r\times\vec r\,'',$$
+      since $\vec r\,'\times\vec r\,' = \vec 0$.
+
+      $\vec r\,''\times\vec r$ has the opposite sign. $\vec 0$ is wrong in general: for $\vec r = (t, t^2, t^3)$, $\vec r\times\vec r\,'' = (4t^3, -6t^2, 2t) \ne \vec 0$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-differentiation
+  stem:
+    en: 'If $\vec r$ is a thrice-differentiable vector function of $t$ and dashes denote $\frac{d}{dt}$, then $\dfrac{d}{dt}[\vec r\ \ \vec r\,''\ \ \vec r\,'''']$ equals'
+  options:
+  - en: '$[\vec r\,''\ \ \vec r\,''''\ \ \vec r\,'''''']$'
+  - en: '$[\vec r\ \ \vec r\,''\ \ \vec r\,'''''']$'
+  - en: '$[\vec r\ \ \vec r\,''''\ \ \vec r\,'''''']$'
+  - en: '$0$'
+  answer: 1
+  explanation:
+    en: |-
+      Differentiate each slot in turn:
+      $$\frac{d}{dt}[\vec r\,\vec r\,'\,\vec r\,''] = [\vec r\,'\,\vec r\,'\,\vec r\,''] + [\vec r\,\vec r\,''\,\vec r\,''] + [\vec r\,\vec r\,'\,\vec r\,'''].$$
+      The first two have a repeated vector and vanish, leaving $[\vec r\ \vec r\,'\ \vec r\,''']$.
+
+      $[\vec r\,'\,\vec r\,''\,\vec r\,''']$ differentiates every slot at once, which is not the product rule. Check with $\vec r = (t, t^2, t^4)$: the bracket is $\begin{vmatrix} t & t^2 & t^4\\ 1 & 2t & 4t^3\\ 0 & 2 & 12t^2\end{vmatrix} = 6t^4$, whose derivative $24t^3$ equals $[\vec r\,\vec r\,'\,\vec r\,''']$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - velocity-acceleration
+  stem:
+    en: 'A particle has position $\vec r = t^2\hat i + 3\cos 2t\,\hat j + 3\sin 2t\,\hat k$. The magnitude of its acceleration at $t = 0$ is'
+  options:
+  - en: '$2\sqrt{37}$'
+  - en: '$\sqrt{40}$'
+  - en: '$6$'
+  - en: '$12$'
+  answer: 0
+  explanation:
+    en: |-
+      $\vec v = 2t\,\hat i - 6\sin 2t\,\hat j + 6\cos 2t\,\hat k$ and
+      $$\vec a = 2\hat i - 12\cos 2t\,\hat j - 12\sin 2t\,\hat k.$$
+      At $t = 0$, $\vec a = (2, -12, 0)$, so $|\vec a| = \sqrt{4 + 144} = \sqrt{148} = 2\sqrt{37}$.
+
+      $\sqrt{40}$ applies the chain-rule factor $2$ only once ($-6\cos 2t$ in place of $-12\cos 2t$). $6$ is the speed at $t = 0$; $12$ ignores the $\hat i$ component.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - velocity-acceleration
+  stem:
+    en: 'For $\vec r = \cos t\,\hat i + \sin t\,\hat j + \dfrac{t^2}{2}\hat k$, the tangential component of acceleration at $t = 1$ is'
+  options:
+  - en: '$\sqrt{\dfrac32}$'
+  - en: '$1$'
+  - en: '$\sqrt2$'
+  - en: '$\dfrac{1}{\sqrt2}$'
+  answer: 3
+  explanation:
+    en: |-
+      $\vec v = (-\sin t, \cos t, t)$ and $\vec a = (-\cos t, -\sin t, 1)$, so $\vec v\cdot\vec a = t$ and $|\vec v| = \sqrt{1 + t^2}$. At $t = 1$:
+      $$a_T = \frac{\vec v\cdot\vec a}{|\vec v|} = \frac{1}{\sqrt2}.$$
+      Check: $a_T = \frac{d}{dt}\sqrt{1 + t^2} = \frac{t}{\sqrt{1 + t^2}}$.
+
+      $\sqrt{3/2}$ is the **normal** component: $|\vec a|^2 = 2$, so $a_N = \sqrt{2 - \frac12}$. $\sqrt2$ is $|\vec a|$ itself; $1$ is $\vec v\cdot\vec a$ without dividing by the speed.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - planes
+  - lines
+  stem:
+    en: 'Consider the following statements about lines and planes in space:'
+  statements:
+  - en: 'In $\vec r\cdot\hat n = p$ with $\hat n$ a unit vector and $p \ge 0$, $p$ is the perpendicular distance of the origin from the plane.'
+  - en: 'The line $\vec r = \vec a + t\vec b$ is parallel to the plane $\vec r\cdot\vec n = d$ if and only if $\vec b\times\vec n = \vec 0$.'
+  - en: 'The lines $\vec r = \vec a_1 + t\vec b_1$ and $\vec r = \vec a_2 + s\vec b_2$ intersect if and only if $[\vec a_2 - \vec a_1\ \ \vec b_1\ \ \vec b_2] = 0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 1 and 2 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. True: the foot of the perpendicular from $O$ is $p\hat n$, at distance $p$.
+      2. False: parallel to the plane means $\vec b\perp\vec n$, i.e. $\vec b\cdot\vec n = 0$. The condition $\vec b\times\vec n = \vec 0$ means the line is **perpendicular** to the plane. Example: $\vec b = \hat i$, $\vec n = \hat k$.
+      3. False: the triple product vanishes for coplanar lines, which include distinct **parallel** lines. Example: the $x$-axis and the line $\vec r = \hat j + s\hat i$ give $[\hat j\ \hat i\ \hat i] = 0$ but never meet. Intersection needs also $\vec b_1\times\vec b_2 \ne \vec 0$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-differentiation
+  stem:
+    en: 'Let $\vec r(t)$ be a differentiable vector function. Consider the following statements:'
+  statements:
+  - en: 'If $|\vec r(t)|$ is constant, then $\vec r\cdot\dfrac{d\vec r}{dt} = 0$ for all $t$.'
+  - en: 'If $\vec r(t) \ne \vec 0$ has constant direction, then $\vec r\times\dfrac{d\vec r}{dt} = \vec 0$ for all $t$.'
+  - en: '$\left|\dfrac{d\vec r}{dt}\right| = \dfrac{d}{dt}|\vec r|$ wherever $\vec r \ne \vec 0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True: $\vec r\cdot\vec r = c$ gives $2\vec r\cdot\vec r\,' = 0$.
+      2. True: write $\vec r = f(t)\,\hat u$ with $\hat u$ constant; then $\vec r\,' = f'(t)\hat u$ is parallel to $\vec r$, so $\vec r\times\vec r\,' = \vec 0$.
+      3. False: for $\vec r = \cos t\,\hat i + \sin t\,\hat j$, $|\vec r\,'| = 1$ but $\frac{d}{dt}|\vec r| = 0$. The correct relation is $\frac{d}{dt}|\vec r| = \frac{\vec r\cdot\vec r\,'}{|\vec r|}$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - work-moment
+  - tetrahedron
+  stem:
+    en: 'Match each quantity in List I with its vector expression in List II ($\vec F$ acts at $P$; $A, B, C, D$ are points; $\hat\ell$ is a unit vector along a line through $A$).'
+  left:
+  - en: 'Work done when the point of application moves from $A$ to $B$'
+  - en: 'Moment of $\vec F$ about the point $A$'
+  - en: 'Moment of $\vec F$ about the line through $A$ along $\hat\ell$'
+  - en: 'Volume of the tetrahedron $ABCD$'
+  right:
+  - en: '$\frac16\lvert[\vec{AB}\ \vec{AC}\ \vec{AD}]\rvert$'
+  - en: '$\vec{AP}\times\vec F$'
+  - en: '$\vec F\cdot\vec{AB}$'
+  - en: '$(\vec{AP}\times\vec F)\cdot\hat\ell$'
+  options:
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  - en: 'A-3, B-2, C-1, D-4'
+  answer: 2
+  explanation:
+    en: |-
+      - Work is a scalar: $\vec F\cdot\vec{AB}$ (3).
+      - Moment about a point is a vector: $\vec{AP}\times\vec F$ (2).
+      - Moment about a line is the resolved part of that vector along the line: $(\vec{AP}\times\vec F)\cdot\hat\ell$ (4).
+      - Tetrahedron: $\frac16$ of the box product of three edges from one vertex (1).
+
+      So A-3, B-2, C-4, D-1. Mixing up the two moments (B and C) is the usual slip: only one of them is a scalar.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - vector-differentiation
+  - velocity-acceleration
+  stem:
+    en: 'For $\vec r(t) = 2t\,\hat i + t^2\hat j + \dfrac{t^3}{3}\hat k$, match each quantity at $t = 2$ in List I with its value in List II.'
+  left:
+  - en: '$\lvert\vec r\,''\rvert$'
+  - en: '$\lvert\vec r\,''''\rvert$'
+  - en: '$\vec r\,''\cdot\vec r\,''''$'
+  - en: '$\lvert\vec r\,''\times\vec r\,''''\rvert$'
+  right:
+  - en: '$12$'
+  - en: '$24$'
+  - en: '$6$'
+  - en: '$2\sqrt5$'
+  options:
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-2, C-4, D-1'
+  answer: 2
+  explanation:
+    en: |-
+      $\vec r\,' = (2, 2t, t^2) = (2, 4, 4)$ and $\vec r\,'' = (0, 2, 2t) = (0, 2, 4)$ at $t = 2$.
+      - $|\vec r\,'| = \sqrt{4 + 16 + 16} = 6$ (3).
+      - $|\vec r\,''| = \sqrt{0 + 4 + 16} = 2\sqrt5$ (4).
+      - $\vec r\,'\cdot\vec r\,'' = 0 + 8 + 16 = 24$ (2).
+      - $\vec r\,'\times\vec r\,'' = (16 - 8, 0 - 8, 4 - 0) = (8, -8, 4)$, of length $12$ (1).
+
+      So A-3, B-4, C-2, D-1. Check with Lagrange: $|\vec r\,'\times\vec r\,''|^2 = 36\cdot 20 - 24^2 = 144$.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - work-moment
+  assertion:
+    en: 'The moment of the force $\vec F = 2\hat i - \hat j + \hat k$ acting at $P(1, 1, 1)$ about the point $Q(3, 0, 2)$ is $\vec 0$.'
+  reason:
+    en: 'The moment of a non-zero force about a point is $\vec 0$ if and only if the point lies on the line of action of the force.'
+  answer: 0
+  explanation:
+    en: |-
+      $\vec{QP} = (-2, 1, -1) = -\vec F$, so $Q$ lies on the line of action $\vec r = \vec p + t\vec F$ (at $t = 1$), and $\vec{QP}\times\vec F = -\vec F\times\vec F = \vec 0$.
+
+      The reason is true ($\vec{QP}\times\vec F = \vec 0 \iff \vec{QP}\parallel\vec F$) and it is exactly why the assertion holds.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - work-moment
+  assertion:
+    en: 'The work done by the force $\vec F = 2\hat i - \hat j + \hat k$ in moving its point of application from $(1, 2, 3)$ to $(3, 4, 5)$ is $4$.'
+  reason:
+    en: The work done by the resultant of several forces acting on a particle equals the sum of the works done by the separate forces.
+  answer: 1
+  explanation:
+    en: |-
+      Assertion: true. $\vec d = (2, 2, 2)$ and $\vec F\cdot\vec d = 4 - 2 + 2 = 4$.
+
+      Reason: true, because the dot product distributes over addition: $\left(\sum\vec F_i\right)\cdot\vec d = \sum\vec F_i\cdot\vec d$. But only one force acts here, so the reason does not explain the assertion; the explanation is $W = \vec F\cdot\vec d$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - tetrahedron
+  assertion:
+    en: 'The volume of the tetrahedron with coterminous edges $\vec a, \vec b, \vec c$ is $\dfrac16\lvert[\vec a\,\vec b\,\vec c]\rvert$.'
+  reason:
+    en: A tetrahedron has one-third the volume of the parallelepiped with the same three coterminous edges.
+  answer: 2
+  explanation:
+    en: |-
+      Assertion: true. Volume $= \frac13\times$ base area $\times$ height $= \frac13\cdot\frac12|\vec b\times\vec c|\cdot\frac{\lvert[\vec a\,\vec b\,\vec c]\rvert}{|\vec b\times\vec c|} = \frac16\lvert[\vec a\,\vec b\,\vec c]\rvert$.
+
+      Reason: false. The parallelepiped has volume $\lvert[\vec a\,\vec b\,\vec c]\rvert$, so the tetrahedron is **one-sixth** of it. One-third is the ratio to the prism on the same triangular base, whose base area is half that of the parallelepiped.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - lines
+  - shortest-distance
+  assertion:
+    en: 'The lines $\vec r = t(\hat i + \hat j + \hat k)$ and $\vec r = \hat i + s(2\hat i + 2\hat j + 2\hat k)$ are skew.'
+  reason:
+    en: Two lines are skew if and only if they are neither parallel nor intersecting.
+  answer: 3
+  explanation:
+    en: |-
+      Assertion: false. The direction vectors are proportional, $(2, 2, 2) = 2(1, 1, 1)$, so the lines are **parallel**. They are distinct ($\hat i$ is not a multiple of $\hat i + \hat j + \hat k$), with distance $\frac{|\hat i\times(1, 1, 1)|}{\sqrt3} = \frac{\sqrt2}{\sqrt3}$.
+
+      Reason: true; this is the definition of skew lines. Equivalently, $[\vec a_2 - \vec a_1\ \vec b_1\ \vec b_2] \ne 0$, which fails here.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - vector-differentiation
+  assertion:
+    en: 'If $\vec a, \vec b$ are constant, perpendicular unit vectors and $\vec r(t) = \cos t\,\vec a + \sin t\,\vec b$, then $\dfrac{d\vec r}{dt}$ is perpendicular to $\vec r$ for every $t$.'
+  reason:
+    en: 'If a differentiable vector function has constant magnitude, then it is perpendicular to its derivative wherever the derivative is non-zero.'
+  answer: 0
+  explanation:
+    en: |-
+      Assertion: true. $|\vec r|^2 = \cos^2 t + \sin^2 t + 2\sin t\cos t\,(\vec a\cdot\vec b) = 1$, a constant. Directly, $\vec r\,' = -\sin t\,\vec a + \cos t\,\vec b$ and $\vec r\cdot\vec r\,' = -\sin t\cos t + \sin t\cos t = 0$.
+
+      Reason: true, since $\frac{d}{dt}(\vec r\cdot\vec r) = 2\vec r\cdot\vec r\,' = 0$. The assertion follows from it once $|\vec r| = 1$ is noted, so the reason explains the assertion.
+  status: ai-generated

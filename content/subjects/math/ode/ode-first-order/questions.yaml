@@ -1,0 +1,686 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - order-degree
+  stem:
+    en: 'The order and degree of $\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2} = \frac{d^2y}{dx^2}$ are respectively'
+  options:
+  - en: '$2$ and $1$'
+  - en: '$2$ and $\frac{3}{2}$'
+  - en: '$2$ and $2$'
+  - en: '$1$ and $3$'
+  answer: 2
+  explanation:
+    en: |-
+      The highest derivative is $y''$, so the order is $2$. Make the equation polynomial in the derivatives by squaring:
+      $$\left(1 + y'^2\right)^3 = \left(y''\right)^2.$$
+      The highest-order derivative $y''$ now appears to the power $2$, so the degree is $2$.
+
+      Reading the degree before removing the radical gives $1$; $\frac32$ is not a degree at all (degree is a positive integer); $3$ is the power of $(1 + y'^2)$, which involves the lower derivative $y'$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - order-degree
+  stem:
+    en: 'For the equation $\frac{d^2y}{dx^2} + \sin\left(\frac{dy}{dx}\right) = 0$,'
+  options:
+  - en: 'the order is $2$ and the degree is $1$'
+  - en: 'the order is $1$ and the degree is $1$'
+  - en: 'the order is $2$ and the degree is $2$'
+  - en: 'the order is $2$ and the degree is not defined'
+  answer: 3
+  explanation:
+    en: |-
+      The order is $2$ (highest derivative $y''$). The degree is defined only when the equation can be written as a polynomial in **all** the derivatives. Here $y'$ sits inside $\sin$, and $\sin y'$ is not a polynomial in $y'$, so the degree is **not defined**.
+
+      Answering "degree $1$" looks only at $y''$ and ignores the requirement that the whole equation be polynomial in the derivatives.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - order-degree
+  stem:
+    en: Which of the following differential equations is linear?
+  options:
+  - en: '$y\frac{d^2y}{dx^2} + \frac{dy}{dx} = 0$'
+  - en: '$\frac{d^2y}{dx^2} + \sin y = 0$'
+  - en: '$\left(\frac{dy}{dx}\right)^2 + y = x$'
+  - en: '$\frac{d^2y}{dx^2} + x^2y = \sin x$'
+  answer: 3
+  explanation:
+    en: |-
+      An ODE is linear when $y$ and its derivatives appear only to the first power, are not multiplied together, and have coefficients depending on $x$ alone.
+
+      $y'' + x^2y = \sin x$ qualifies: the coefficient $x^2$ and the right side $\sin x$ involve only $x$.
+
+      The others fail: $yy''$ is a product of $y$ and $y''$; $\sin y$ is not first-degree in $y$; $(y')^2$ is a square.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - formation
+  stem:
+    en: 'The differential equation of the family $y = Ae^{2x} + Be^{-2x}$ ($A$, $B$ arbitrary constants) is'
+  options:
+  - en: '$\frac{d^2y}{dx^2} + 4y = 0$'
+  - en: '$\frac{d^2y}{dx^2} - 2y = 0$'
+  - en: '$\frac{d^2y}{dx^2} - 4\frac{dy}{dx} = 0$'
+  - en: '$\frac{d^2y}{dx^2} - 4y = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      Two constants, so differentiate twice:
+      $$y' = 2Ae^{2x} - 2Be^{-2x}, \qquad y'' = 4Ae^{2x} + 4Be^{-2x} = 4y.$$
+      So $y'' - 4y = 0$.
+
+      $y'' + 4y = 0$ has solutions $\cos 2x$, $\sin 2x$, not exponentials. $y'' - 2y = 0$ forgets that each differentiation brings a factor $2$. **Check:** $e^{2x}$ in $y'' - 4y'$ gives $4e^{2x} - 8e^{2x} \ne 0$.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - formation
+  stem:
+    en: 'The differential equation of all circles passing through the origin and having their centres on the $x$-axis is'
+  options:
+  - en: '$2xy\frac{dy}{dx} = x^2 - y^2$'
+  - en: '$2xy\frac{dy}{dx} = y^2 - x^2$'
+  - en: '$xy\frac{dy}{dx} = y^2 - x^2$'
+  - en: '$2xy\frac{dy}{dx} = x^2 + y^2$'
+  answer: 1
+  explanation:
+    en: |-
+      The family is $x^2 + y^2 = 2ax$ (one constant). Differentiate: $2x + 2yy' = 2a$, so $a = x + yy'$. Substitute back:
+      $$x^2 + y^2 = 2x(x + yy') \;\Rightarrow\; 2xy\,y' = y^2 - x^2.$$
+
+      **Check:** the circle $x^2 + y^2 = 2x$ has a horizontal tangent at $(1, 1)$, so $y' = 0$ there, and indeed $y^2 - x^2 = 0$ at $(1, 1)$. The option $x^2 - y^2$ is the sign slip from moving $2x^2$ to the wrong side; $x^2 + y^2$ fails the same check, since it would need $y' = 1$ at $(1, 1)$. The option without the factor $2$ drops the $2$ from $2x(x + yy')$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - existence
+  stem:
+    en: 'The largest open interval containing $x = 0$ on which the solution of $\frac{dy}{dx} = y^2$, $y(0) = 1$, exists is'
+  options:
+  - en: '$(-\infty, 1)$'
+  - en: '$(-\infty, \infty)$'
+  - en: '$(-1, 1)$'
+  - en: '$(1, \infty)$'
+  answer: 0
+  explanation:
+    en: |-
+      Separate: $\frac{dy}{y^2} = dx$, so $-\frac1y = x + C$. At $x = 0$, $y = 1$: $C = -1$. Hence
+      $$y = \frac{1}{1 - x}.$$
+      This is continuous on $(-\infty, 1)$ and blows up as $x \to 1^-$, so the maximal interval through $0$ is $(-\infty, 1)$.
+
+      $f(x, y) = y^2$ is smooth everywhere, but Picard's theorem is only **local**; smoothness of $f$ does not give a solution on all of $\R$. $(1, \infty)$ is the other branch, which does not contain $0$; nothing stops the solution at $x = -1$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - separable
+  stem:
+    en: 'The general solution of $\frac{dy}{dx} = \frac{1 + y^2}{1 + x^2}$ is'
+  options:
+  - en: '$\tan^{-1}y + \tan^{-1}x = C$'
+  - en: '$\tan^{-1}y = \tan^{-1}x + C$'
+  - en: '$\ln(1 + y^2) = \ln(1 + x^2) + C$'
+  - en: '$y = x + C$'
+  answer: 1
+  explanation:
+    en: |-
+      Separate the variables:
+      $$\int\frac{dy}{1 + y^2} = \int\frac{dx}{1 + x^2} \;\Rightarrow\; \tan^{-1}y = \tan^{-1}x + C.$$
+      Equivalently $\frac{y - x}{1 + xy} = k$.
+
+      The "$+$" option comes from putting both terms on one side without changing a sign. The logarithm option integrates $\frac{2y}{1 + y^2}$, not $\frac{1}{1 + y^2}$. **Check** $y = x + C$: its slope is $1$, but $\frac{1 + y^2}{1 + x^2} \ne 1$ unless $C = 0$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - separable
+  stem:
+    en: 'The solution of $\frac{dy}{dx} = e^{x + y}$ with $y(0) = 0$ is'
+  options:
+  - en: '$y = \ln(2 - e^x)$'
+  - en: '$y = -\ln(2 - e^x)$'
+  - en: '$y = -\ln(2 - e^{-x})$'
+  - en: '$y = x$'
+  answer: 1
+  explanation:
+    en: |-
+      $e^{-y}\,dy = e^x\,dx$, so $-e^{-y} = e^x + C$. At $(0, 0)$: $-1 = 1 + C$, $C = -2$. Then
+      $$e^{-y} = 2 - e^x \;\Rightarrow\; y = -\ln(2 - e^x) \qquad (x < \ln 2).$$
+
+      **Check:** $y' = \frac{e^x}{2 - e^x}$ and $e^{x + y} = \frac{e^x}{2 - e^x}$. The option without the minus sign has slope $-1$ at $0$, but the equation needs $y'(0) = e^0 = 1$. $y = x$ has slope $1$ everywhere, while $e^{2x}$ is not $1$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - separable
+  stem:
+    en: 'The general solution of $\frac{dy}{dx} = (x + y + 1)^2$ is'
+  options:
+  - en: '$\tan^{-1}(x + y + 1) = y + C$'
+  - en: '$x + y + 1 = \tan x + C$'
+  - en: '$\tan^{-1}(x + y + 1) = x + C$'
+  - en: '$-\frac{1}{x + y + 1} = x + C$'
+  answer: 2
+  explanation:
+    en: |-
+      Put $v = x + y + 1$. Then $\frac{dv}{dx} = 1 + \frac{dy}{dx} = 1 + v^2$, which is separable:
+      $$\int\frac{dv}{1 + v^2} = \int dx \;\Rightarrow\; \tan^{-1}(x + y + 1) = x + C,$$
+      i.e. $y = \tan(x + C) - x - 1$.
+
+      $-\frac1v = x + C$ forgets the $1$ in $v' = 1 + y'$. $v = \tan x + C$ puts the constant in the wrong place: $\tan^{-1}v = x + C$ gives $v = \tan(x + C)$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The general solution of $(x^2 + y^2)\,dx - 2xy\,dy = 0$ is'
+  options:
+  - en: '$x^2 - y^2 = Cx$'
+  - en: '$x^2 + y^2 = Cx$'
+  - en: '$x^2 - y^2 = Cy$'
+  - en: '$x^2 - y^2 = Cx^2$'
+  answer: 0
+  explanation:
+    en: |-
+      Homogeneous of degree $2$. Put $y = vx$:
+      $$v + xv' = \frac{1 + v^2}{2v} \;\Rightarrow\; xv' = \frac{1 - v^2}{2v} \;\Rightarrow\; \int\frac{2v\,dv}{1 - v^2} = \ln\lvert x\rvert + c.$$
+      So $-\ln\lvert 1 - v^2\rvert = \ln\lvert x\rvert + c$, i.e. $x(1 - v^2) = C$, i.e. $x^2 - y^2 = Cx$.
+
+      **Check** with $u = \frac{x^2 - y^2}{x}$: the slope $-\frac{u_x}{u_y} = \frac{x^2 + y^2}{2xy}$, as required. $x^2 + y^2 = Cx$ (circles) solves $2xyy' = y^2 - x^2$ instead; $x^2 - y^2 = Cx^2$ is just a pair of lines $y = \pm kx$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The general solution of $\frac{dy}{dx} = \frac{y}{x} + \tan\frac{y}{x}$ is'
+  options:
+  - en: '$\sin\frac{y}{x} = Cx$'
+  - en: '$\cos\frac{y}{x} = Cx$'
+  - en: '$\tan\frac{y}{x} = Cx$'
+  - en: '$\sin\frac{y}{x} = \frac{C}{x}$'
+  answer: 0
+  explanation:
+    en: |-
+      Put $y = vx$: $v + xv' = v + \tan v$, so
+      $$\int\cot v\,dv = \int\frac{dx}{x} \;\Rightarrow\; \ln\lvert\sin v\rvert = \ln\lvert x\rvert + c \;\Rightarrow\; \sin\frac{y}{x} = Cx.$$
+
+      $\int\cot v\,dv = \ln\lvert\sin v\rvert$, not $\ln\lvert\cos v\rvert$ (that would be $-\int\tan v\,dv$). $\frac{C}{x}$ comes from a sign slip in $\ln\lvert x\rvert$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - homogeneous
+  stem:
+    en: 'The general solution of $\frac{dy}{dx} = \frac{x + y + 1}{2x + 2y + 3}$ is'
+  options:
+  - en: '$6y - 3x + \ln\lvert 3x + 3y + 4\rvert = C$'
+  - en: '$6y - 3x - \ln\lvert 3x + 3y + 4\rvert = C$'
+  - en: '$6y + 3x + \ln\lvert 3x + 3y + 4\rvert = C$'
+  - en: '$3y - 6x + \ln\lvert 3x + 3y + 4\rvert = C$'
+  answer: 0
+  explanation:
+    en: |-
+      Here $a_1b_2 - a_2b_1 = 1\cdot 2 - 2\cdot 1 = 0$: the lines are parallel, so no shift of origin works. Put $z = x + y$:
+      $$\frac{dz}{dx} = 1 + \frac{z + 1}{2z + 3} = \frac{3z + 4}{2z + 3}.$$
+      Since $2z + 3 = \frac23(3z + 4) + \frac13$,
+      $$\int\left(\frac23 + \frac{1}{3(3z + 4)}\right)dz = x + c \;\Rightarrow\; \frac23 z + \frac19\ln\lvert 3z + 4\rvert = x + c.$$
+      Multiply by $9$: $6(x + y) + \ln\lvert 3z + 4\rvert = 9x + C$, i.e. $6y - 3x + \ln\lvert 3x + 3y + 4\rvert = C$.
+
+      **Check:** differentiating the key gives $6y' - 3 + \frac{3 + 3y'}{3x + 3y + 4} = 0$, which rearranges to the given equation. The other sign choices fail this test.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - exact
+  stem:
+    en: 'The equation $(3x^2 + kxy^2)\,dx + (2x^2y + 4y^3)\,dy = 0$ is exact when $k$ equals'
+  options:
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$1$'
+  - en: '$-2$'
+  answer: 1
+  explanation:
+    en: |-
+      Exactness needs $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$:
+      $$\frac{\partial}{\partial y}(3x^2 + kxy^2) = 2kxy, \qquad \frac{\partial}{\partial x}(2x^2y + 4y^3) = 4xy.$$
+      So $2k = 4$, $k = 2$. Then the solution is $x^3 + x^2y^2 + y^4 = C$.
+
+      $k = 4$ equates $kxy^2$ with $4xy$ without differentiating $y^2$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - exact
+  stem:
+    en: 'The general solution of $(2xy + e^x)\,dx + (x^2 + \cos y)\,dy = 0$ is'
+  options:
+  - en: '$2x^2y + e^x + \sin y = C$'
+  - en: '$x^2y + e^x - \sin y = C$'
+  - en: '$x^2y - e^x + \sin y = C$'
+  - en: '$x^2y + e^x + \sin y = C$'
+  answer: 3
+  explanation:
+    en: |-
+      $M_y = 2x = N_x$, so the equation is exact. Integrate $M$ with $y$ held constant: $x^2y + e^x$. The term of $N$ that does not contain $x$ is $\cos y$, which integrates to $\sin y$:
+      $$x^2y + e^x + \sin y = C.$$
+
+      $2x^2y$ comes from integrating the $x^2$ of $N$ a second time; that term is already accounted for in $x^2y$. **Check:** $\frac{\partial}{\partial y}(x^2y + e^x + \sin y) = x^2 + \cos y = N$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - exact
+  stem:
+    en: 'The solution of $(ye^{xy} + 2x)\,dx + (xe^{xy} - 2y)\,dy = 0$ satisfying $y(0) = 1$ is'
+  options:
+  - en: '$e^{xy} + x^2 - y^2 = 0$'
+  - en: '$e^{xy} + x^2 - y^2 = 1$'
+  - en: '$e^{xy} - x^2 - y^2 = 0$'
+  - en: '$e^{xy} + x^2 + y^2 = 2$'
+  answer: 0
+  explanation:
+    en: |-
+      $M_y = e^{xy} + xye^{xy} = N_x$, so it is exact, with
+      $$u = \int(ye^{xy} + 2x)\,dx + \int(-2y)\,dy = e^{xy} + x^2 - y^2.$$
+      At $(0, 1)$: $u = 1 + 0 - 1 = 0$, so $e^{xy} + x^2 - y^2 = 0$.
+
+      The "$= 1$" option forgets to evaluate $e^{xy}$ at the point; the other two pass through $(0, 1)$ but have the wrong signs, so their gradients are not $(M, N)$.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'Which of the following is **not** an integrating factor of $y\,dx - x\,dy = 0$?'
+  options:
+  - en: '$\frac{1}{x^2}$'
+  - en: '$\frac{1}{xy^2}$'
+  - en: '$\frac{1}{xy}$'
+  - en: '$\frac{1}{x^2 + y^2}$'
+  answer: 1
+  explanation:
+    en: |-
+      Three of them are standard:
+      $$\frac{y\,dx - x\,dy}{x^2} = -d\left(\frac{y}{x}\right), \quad \frac{y\,dx - x\,dy}{xy} = d\left(\ln\left\lvert\frac{x}{y}\right\rvert\right), \quad \frac{y\,dx - x\,dy}{x^2 + y^2} = -d\left(\tan^{-1}\frac{y}{x}\right).$$
+
+      For $\frac{1}{xy^2}$: $M = \frac{1}{xy}$, $N = -\frac{1}{y^2}$, so $M_y = -\frac{1}{xy^2}$ while $N_x = 0$. Not exact.
+
+      **Reason:** all IFs are $\mu\,g(u)$ with $\mu = \frac{1}{x^2}$, $u = \frac{y}{x}$, i.e. $\frac{1}{x^2}g\!\left(\frac{y}{x}\right)$, which are homogeneous of degree $-2$. $\frac{1}{xy^2}$ has degree $-3$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'An integrating factor of $\left(xy^2 - e^{1/x^3}\right)dx - x^2y\,dy = 0$ is'
+  options:
+  - en: '$x^4$'
+  - en: '$\frac{1}{x^4}$'
+  - en: '$\frac{1}{x^2}$'
+  - en: '$\frac{1}{y^2}$'
+  answer: 1
+  explanation:
+    en: |-
+      $M_y = 2xy$ and $N_x = -2xy$. Then
+      $$\frac{M_y - N_x}{N} = \frac{4xy}{-x^2y} = -\frac4x,$$
+      a function of $x$ alone, so the IF is $e^{\int -4/x\,dx} = x^{-4}$.
+
+      After multiplying: $\left(\frac{y^2}{x^3} - \frac{e^{1/x^3}}{x^4}\right)dx - \frac{y}{x^2}\,dy = 0$, which is exact. $x^4$ is the result of dropping the minus sign in $-\frac4x$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'The general solution of $(x^2 + y^2 + x)\,dx + xy\,dy = 0$ is'
+  options:
+  - en: '$3x^4 + 4x^3 + 3x^2y^2 = C$'
+  - en: '$x^3 + 3xy^2 + \frac{3}{2}x^2 = C$'
+  - en: '$3x^4 + 4x^3 + 6x^2y^2 = C$'
+  - en: '$3x^4 - 4x^3 + 6x^2y^2 = C$'
+  answer: 2
+  explanation:
+    en: |-
+      $\frac{M_y - N_x}{N} = \frac{2y - y}{xy} = \frac1x$, so the IF is $x$:
+      $$(x^3 + xy^2 + x^2)\,dx + x^2y\,dy = 0 \;\Rightarrow\; \frac{x^4}{4} + \frac{x^2y^2}{2} + \frac{x^3}{3} = c.$$
+      Multiply by $12$: $3x^4 + 6x^2y^2 + 4x^3 = C$.
+
+      The third option integrates the original (non-exact) $M$ directly. The option with $3x^2y^2$ loses the factor $2$ when clearing denominators.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'An integrating factor of the homogeneous equation $y^2\,dx + (x^2 - xy - y^2)\,dy = 0$ is'
+  options:
+  - en: '$\frac{1}{y(x^2 - y^2)}$'
+  - en: '$\frac{1}{y(x^2 + y^2)}$'
+  - en: '$\frac{1}{x(x^2 - y^2)}$'
+  - en: '$\frac{1}{x^2y^2}$'
+  answer: 0
+  explanation:
+    en: |-
+      $M$ and $N$ are homogeneous of degree $2$, so use $\frac{1}{Mx + Ny}$:
+      $$Mx + Ny = xy^2 + x^2y - xy^2 - y^3 = x^2y - y^3 = y(x^2 - y^2).$$
+      So the IF is $\frac{1}{y(x^2 - y^2)}$ (where $Mx + Ny \ne 0$).
+
+      The $x^2 + y^2$ option is a sign slip in $-y\cdot y^2$; the third option swaps the roles of $x$ and $y$.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'An integrating factor of $y(xy + 2x^2y^2)\,dx + x(xy - x^2y^2)\,dy = 0$ is'
+  options:
+  - en: '$\frac{1}{x^2y^2}$'
+  - en: '$x^3y^3$'
+  - en: '$\frac{1}{x^3y^3}$'
+  - en: '$\frac{1}{xy}$'
+  answer: 2
+  explanation:
+    en: |-
+      The equation has the form $y f_1(xy)\,dx + x f_2(xy)\,dy = 0$, so use $\frac{1}{Mx - Ny}$:
+      $$Mx - Ny = xy(xy + 2x^2y^2) - xy(xy - x^2y^2) = 3x^3y^3.$$
+      Hence $\frac{1}{3x^3y^3}$, or simply $\frac{1}{x^3y^3}$, is an IF. Multiplying gives
+      $$\left(\frac{1}{x^2y} + \frac{2}{x}\right)dx + \left(\frac{1}{xy^2} - \frac{1}{y}\right)dy = 0,$$
+      which is exact: both cross-derivatives equal $-\frac{1}{x^2y^2}$.
+
+      $\frac{1}{x^2y^2}$ cancels only the lowest terms and leaves a non-exact equation. The homogeneous rule does not apply here, because $M$ is not homogeneous.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: 'An integrating factor of $(y^4 + 2y)\,dx + (xy^3 + 2y^4 - 4x)\,dy = 0$ is'
+  options:
+  - en: '$y^3$'
+  - en: '$\frac{1}{y^4}$'
+  - en: '$\frac{1}{y^3}$'
+  - en: '$e^{-3x}$'
+  answer: 2
+  explanation:
+    en: |-
+      $M_y = 4y^3 + 2$ and $N_x = y^3 - 4$. Then
+      $$\frac{N_x - M_y}{M} = \frac{-3y^3 - 6}{y(y^3 + 2)} = -\frac{3}{y},$$
+      a function of $y$ alone, so the IF is $e^{\int -3/y\,dy} = y^{-3}$.
+
+      The equation becomes $\left(y + \frac{2}{y^2}\right)dx + \left(x + 2y - \frac{4x}{y^3}\right)dy = 0$, which is exact, with solution $xy + \frac{2x}{y^2} + y^2 = C$. Using $\frac{M_y - N_x}{M}$ (wrong sign) gives $y^3$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 1
+  exams: *id001
+  refs:
+  - order-degree
+  - formation
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: 'The differential equation of the family $y = (A + B)e^{x + C}$ ($A$, $B$, $C$ arbitrary constants) is of order $1$.'
+  - en: 'The degree of $\left(\frac{d^3y}{dx^3}\right)^{2/3} = \frac{dy}{dx}$ is $2$.'
+  - en: 'The differential equation of all straight lines in the plane is $\frac{dy}{dx} = 0$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 only
+  - en: 1 and 3 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      **1 is true.** $(A + B)e^{x + C} = Ke^x$ with $K = (A + B)e^C$: only one essential constant, giving $y' = y$.
+
+      **2 is true.** Cube both sides: $\left(y'''\right)^2 = \left(y'\right)^3$. The highest derivative $y'''$ now has power $2$.
+
+      **3 is false.** $y = mx + c$ has two constants; differentiating twice gives $y'' = 0$. $y' = 0$ describes only horizontal lines.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - exact
+  - integrating-factors
+  stem:
+    en: 'Consider the following statements about $M\,dx + N\,dy = 0$:'
+  statements:
+  - en: '$x\,dy - y\,dx = 0$ is exact.'
+  - en: 'If $\mu$ is an integrating factor and $u(x, y) = C$ is the resulting solution, then $\mu\,g(u)$ is also an integrating factor for every differentiable $g$.'
+  - en: '$(x + y)\,dx + (x - y)\,dy = 0$ is exact.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 2
+  explanation:
+    en: |-
+      **1 is false.** $M = -y$, $N = x$: $M_y = -1 \ne 1 = N_x$. (Its IFs include $\frac{1}{x^2}$, giving $d\left(\frac{y}{x}\right) = 0$.)
+
+      **2 is true.** $\mu M = u_x$ and $\mu N = u_y$, so $\mu g(u)M = g(u)u_x = \frac{\partial G(u)}{\partial x}$ and $\mu g(u)N = \frac{\partial G(u)}{\partial y}$, where $G' = g$. This is why IFs are never unique.
+
+      **3 is true.** $M_y = 1 = N_x$. The solution is $\frac{x^2}{2} + xy - \frac{y^2}{2} = C$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - separable
+  - homogeneous
+  stem:
+    en: Match each equation with the substitution or method that solves it most directly.
+  left:
+  - en: '$\frac{dy}{dx} = \frac{x^2 + y^2}{2xy}$'
+  - en: '$\frac{dy}{dx} = \frac{x + y - 1}{x + y + 1}$'
+  - en: '$\frac{dy}{dx} = \frac{x - y + 1}{x + y - 3}$'
+  - en: '$e^x\tan y\,dx + (1 - e^x)\sec^2 y\,dy = 0$'
+  right:
+  - en: separate the variables directly
+  - en: 'put $y = vx$'
+  - en: 'put $x = X + 1$, $y = Y + 2$'
+  - en: 'put $z = x + y$'
+  options:
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-1, B-4, C-3, D-2'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-2, B-4, C-3, D-1'
+  answer: 3
+  explanation:
+    en: |-
+      - A is homogeneous (degree $2$ over degree $2$): A-2.
+      - B: the lines $x + y - 1 = 0$ and $x + y + 1 = 0$ are parallel ($a_1b_2 - a_2b_1 = 0$), so no shift works; $z = x + y$ makes it separable: B-4.
+      - C: $x - y + 1 = 0$ and $x + y - 3 = 0$ meet at $(1, 2)$, and $a_1b_2 - a_2b_1 = 2 \ne 0$; shifting the origin there makes it homogeneous: C-3.
+      - D: divide by $(1 - e^x)\tan y$ to get $\frac{e^x}{1 - e^x}dx + \frac{\sec^2 y}{\tan y}dy = 0$: D-1.
+
+      Swapping B and C is the usual trap: the shift works only when the lines **intersect**.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  stem:
+    en: Match each equation with an integrating factor.
+  left:
+  - en: '$(y + xy^2)\,dx - x\,dy = 0$'
+  - en: '$x\,dy - y\,dx = (x^2 + y^2)\,dx$'
+  - en: '$(x^2y - 2xy^2)\,dx - (x^3 - 3x^2y)\,dy = 0$'
+  - en: '$(x + y)\,dx + dy = 0$'
+  right:
+  - en: '$e^x$'
+  - en: '$\frac{1}{x^2y^2}$'
+  - en: '$\frac{1}{y^2}$'
+  - en: '$\frac{1}{x^2 + y^2}$'
+  options:
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-3, B-4, C-1, D-2'
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-2, B-4, C-3, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      - A: $\frac{y\,dx - x\,dy}{y^2} + x\,dx = d\left(\frac{x}{y} + \frac{x^2}{2}\right)$: A-3.
+      - B: $\frac{x\,dy - y\,dx}{x^2 + y^2} = dx$ is $d\left(\tan^{-1}\frac{y}{x}\right) = dx$: B-4.
+      - C: homogeneous of degree $3$ with $Mx + Ny = x^3y - 2x^2y^2 - x^3y + 3x^2y^2 = x^2y^2$: C-2.
+      - D: $\frac{M_y - N_x}{N} = \frac{1 - 0}{1} = 1$, so the IF is $e^x$, giving $d\left(e^x(x + y - 1)\right) = 0$: D-1.
+
+      Each IF works for its own equation only; for example $\frac{1}{y^2}$ does not make B exact.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - formation
+  assertion:
+    en: 'The differential equation of the family $y = c(x - c)^2$ has order $1$.'
+  reason:
+    en: 'The family $y = c(x - c)^2$ contains exactly one essential arbitrary constant.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      The order of the ODE of a family equals the number of essential constants. Here there is one ($c$), so the ODE has order $1$. Eliminating $c$ gives
+      $$\left(y'\right)^3 = 4y\left(xy' - 2y\right),$$
+      which has order $1$ (and degree $3$).
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - exact
+  - homogeneous
+  assertion:
+    en: '$(2x + y)\,dx + (x + 2y)\,dy = 0$ is exact.'
+  reason:
+    en: '$(2x + y)\,dx + (x + 2y)\,dy = 0$ is a homogeneous equation.'
+  answer: 1
+  explanation:
+    en: |-
+      Both are true, but R does not explain A.
+
+      A: $M_y = 1 = N_x$, so it is exact, with solution $x^2 + xy + y^2 = C$.
+
+      R: $M$ and $N$ are both homogeneous of degree $1$. But homogeneity does not imply exactness: $y\,dx - x\,dy = 0$ is homogeneous and not exact. A holds because $M_y = N_x$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - homogeneous
+  assertion:
+    en: '$\frac{dy}{dx} = \frac{x + y + 1}{x + y - 1}$ can be made homogeneous by a shift of origin $x = X + h$, $y = Y + k$.'
+  reason:
+    en: 'For $\frac{dy}{dx} = \frac{a_1x + b_1y + c_1}{a_2x + b_2y + c_2}$ with $a_1b_2 - a_2b_1 \ne 0$, the shift of origin to the intersection of $a_1x + b_1y + c_1 = 0$ and $a_2x + b_2y + c_2 = 0$ makes the equation homogeneous.'
+  answer: 3
+  explanation:
+    en: |-
+      A is false, R is true.
+
+      R is the standard method: at the intersection $(h, k)$ the constant terms vanish, leaving $\frac{dY}{dX} = \frac{a_1X + b_1Y}{a_2X + b_2Y}$.
+
+      In A, $a_1b_2 - a_2b_1 = 1\cdot 1 - 1\cdot 1 = 0$: the lines $x + y + 1 = 0$ and $x + y - 1 = 0$ are parallel, so there is no $(h, k)$ that kills both constants. The right method is $z = x + y$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - existence
+  assertion:
+    en: 'The initial value problem $\frac{dy}{dx} = x^2 + y^2$, $y(0) = 0$, has a unique solution on some interval $\lvert x\rvert < h$, $h > 0$.'
+  reason:
+    en: 'Whenever $f(x, y)$ is continuous near $(x_0, y_0)$, the problem $y'' = f(x, y)$, $y(x_0) = y_0$, has a unique solution near $x_0$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true, R is false.
+
+      A: $f = x^2 + y^2$ and $\frac{\partial f}{\partial y} = 2y$ are continuous on every rectangle around $(0, 0)$, so Picard's theorem gives a unique local solution.
+
+      R: continuity gives only **existence** (Peano). For $y' = 3y^{2/3}$, $y(0) = 0$, the function $f$ is continuous, yet $y = 0$ and $y = x^3$ are two different solutions. Uniqueness needs a Lipschitz condition in $y$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - integrating-factors
+  assertion:
+    en: '$\frac{1}{x^2 + y^2}$ is an integrating factor of $(x + y)\,dx - (x - y)\,dy = 0$.'
+  reason:
+    en: 'If $M\,dx + N\,dy = 0$ is homogeneous and $Mx + Ny \ne 0$, then $\frac{1}{Mx + Ny}$ is an integrating factor.'
+  answer: 0
+  explanation:
+    en: |-
+      Both are true, and R explains A.
+
+      $M = x + y$ and $N = -(x - y)$ are homogeneous of degree $1$, and
+      $$Mx + Ny = x^2 + xy - xy + y^2 = x^2 + y^2 \ne 0.$$
+      So by R the IF is $\frac{1}{x^2 + y^2}$. Indeed
+      $$\frac{x\,dx + y\,dy}{x^2 + y^2} - \frac{x\,dy - y\,dx}{x^2 + y^2} = d\left(\tfrac12\ln(x^2 + y^2) - \tan^{-1}\frac{y}{x}\right),$$
+      so the solution is $\tfrac12\ln(x^2 + y^2) - \tan^{-1}\frac{y}{x} = C$.
+  status: ai-generated

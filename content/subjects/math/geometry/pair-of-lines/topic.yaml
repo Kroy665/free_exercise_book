@@ -1,0 +1,18 @@
+id: math.geometry.pair-of-lines
+title:
+  en: Pair of Straight Lines
+summary:
+  en: Homogeneous second-degree equations, angle between the pair, perpendicular and coincident conditions, angle bisectors, the condition Δ = 0 for the general equation, the point of intersection, and homogenisation to join the origin to the intersections of a line with a conic.
+order: 2
+exams: [slst-0910, slst-1112]
+prerequisites: [math.geometry.axes-conics]
+estimated_minutes: 60
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. L. Loney, The Elements of Coordinate Geometry, Part I, ch. on equations representing two or more straight lines
+  - "B. C. Das and B. N. Mukherjee, Analytical Geometry of Two and Three Dimensions, ch. on pairs of straight lines"
+  - R. M. Khan, Analytical Geometry of Two and Three Dimensions, ch. on pair of straight lines
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.A.3 and (PG) IV.A
+retired: []

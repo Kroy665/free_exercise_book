@@ -1,0 +1,9 @@
+id: math.ode
+subject: math
+title: { en: Ordinary Differential Equations }
+order: 5
+# Planned topics: docs/SYLLABUS.md (Block 4). Only written topics are listed.
+topics:
+  - math.ode.ode-first-order
+  - math.ode.ode-linear-clairaut
+  - math.ode.ode-higher-order

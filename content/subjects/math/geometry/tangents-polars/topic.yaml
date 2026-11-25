@@ -1,0 +1,18 @@
+id: math.geometry.tangents-polars
+title:
+  en: Tangents, Poles and Polars
+summary:
+  en: Tangents and normals to the circle, parabola, ellipse and hyperbola in point, slope and parametric forms, conditions of tangency, the pair of tangents SS₁ = T², chord of contact, chord with a given midpoint, poles and polars, conjugate points and lines, and the director circle.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.geometry.axes-conics]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - S. L. Loney, The Elements of Coordinate Geometry, Part I, chs. on the circle, parabola, ellipse and hyperbola
+  - J. G. Chakravorty and P. R. Ghosh, Analytical Geometry and Vector Analysis, chs. on tangents, normals, poles and polars
+  - S. K. Mapa, Analytical Geometry (Two and Three Dimensions), ch. on poles and polars
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.A.4 and (PG) Analytical Geometry A
+retired: []

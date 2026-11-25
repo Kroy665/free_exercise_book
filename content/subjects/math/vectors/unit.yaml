@@ -1,0 +1,8 @@
+id: math.vectors
+subject: math
+title: { en: Vector Algebra and Applications }
+order: 7
+# Planned topics: docs/SYLLABUS.md (Block 5). Only written topics are listed.
+topics:
+  - math.vectors.vector-algebra
+  - math.vectors.vector-applications

@@ -1,0 +1,677 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - coordinates
+  stem:
+    en: 'The distance between the points $(1, 2, 3)$ and $(4, -2, 15)$ is'
+  options:
+  - en: '$\sqrt{349}$'
+  - en: '$19$'
+  - en: '$13$'
+  - en: '$12$'
+  answer: 2
+  explanation:
+    en: |-
+      The coordinate differences are $3$, $-4$, $12$:
+      $$d = \sqrt{3^2 + (-4)^2 + 12^2} = \sqrt{169} = 13.$$
+
+      $\sqrt{349}$ comes from adding $3$ and $15$ instead of subtracting for $z$. $19$ adds the absolute differences, which is not a Euclidean distance.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - coordinates
+  stem:
+    en: 'The point dividing the join of $A(2, -3, 4)$ and $B(8, 0, 10)$ internally in the ratio $1 : 2$ is'
+  options:
+  - en: '$(4, -2, 6)$'
+  - en: '$(6, -1, 8)$'
+  - en: '$(-4, -6, -2)$'
+  - en: '$(5, -\tfrac32, 7)$'
+  answer: 0
+  explanation:
+    en: |-
+      With $m : n = 1 : 2$, the point is $\dfrac{mB + nA}{m + n}$:
+      $$\left(\frac{8 + 4}{3},\ \frac{0 - 6}{3},\ \frac{10 + 8}{3}\right) = (4, -2, 6).$$
+
+      $(6, -1, 8)$ swaps the weights (it divides in $2 : 1$); $(-4, -6, -2)$ is the external point; $(5, -\tfrac32, 7)$ is the midpoint. Check: $(4, -2, 6)$ is one third of the way from $A$ to $B$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - direction-cosines
+  stem:
+    en: 'A line has direction ratios $2, -3, 6$. One set of its direction cosines is'
+  options:
+  - en: '$\tfrac25, -\tfrac35, \tfrac65$'
+  - en: '$\tfrac27, -\tfrac37, \tfrac67$'
+  - en: '$-\tfrac27, \tfrac37, \tfrac67$'
+  - en: '$\tfrac{2}{\sqrt7}, -\tfrac{3}{\sqrt7}, \tfrac{6}{\sqrt7}$'
+  answer: 1
+  explanation:
+    en: |-
+      Divide by $\sqrt{2^2 + 3^2 + 6^2} = \sqrt{49} = 7$:
+      $$l, m, n = \tfrac27, -\tfrac37, \tfrac67, \qquad l^2 + m^2 + n^2 = \tfrac{4 + 9 + 36}{49} = 1.$$
+
+      Dividing by the sum $2 - 3 + 6 = 5$ is a common slip; its squares add to $\tfrac{49}{25}$. The set $-\tfrac27, \tfrac37, \tfrac67$ flips only two signs, so it is not proportional to $2, -3, 6$. Dividing by $\sqrt7$ forgets the square root of $49$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - direction-cosines
+  stem:
+    en: 'The angle between the lines with direction ratios $1, 1, 2$ and $\sqrt3 - 1, -\sqrt3 - 1, 4$ is'
+  options:
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\dfrac{\pi}{2}$'
+  answer: 1
+  explanation:
+    en: |-
+      The dot product is $(\sqrt3 - 1) + (-\sqrt3 - 1) + 8 = 6$. The lengths are $\sqrt6$ and
+      $$\sqrt{(4 - 2\sqrt3) + (4 + 2\sqrt3) + 16} = \sqrt{24}.$$
+      So
+      $$\cos\theta = \frac{6}{\sqrt6\,\sqrt{24}} = \frac{6}{12} = \frac12, \qquad \theta = \frac{\pi}{3}.$$
+
+      $\tfrac{\pi}{6}$ reads $\tfrac12$ as a sine. The $\sqrt3$ terms cancel in the dot product but not in the length, so the lines are not perpendicular.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - pair-of-planes
+  stem:
+    en: 'The equation $x^2 - 2y^2 + z^2 - xy - yz + \lambda zx = 0$ represents a pair of planes. The positive value of $\lambda$ is'
+  options:
+  - en: '$\dfrac52$'
+  - en: '$4$'
+  - en: '$2$'
+  - en: '$1$'
+  answer: 2
+  explanation:
+    en: |-
+      Here $a = 1$, $b = -2$, $c = 1$, $f = -\tfrac12$, $g = \tfrac{\lambda}{2}$, $h = -\tfrac12$. The condition is
+      $$\Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = 0:$$
+      $$-2 + \frac{\lambda}{4} - \frac14 + \frac{\lambda^2}{2} - \frac14 = \frac{2\lambda^2 + \lambda - 10}{4} = \frac{(\lambda - 2)(2\lambda + 5)}{4} = 0.$$
+      So $\lambda = 2$ or $-\tfrac52$, and the positive value is $2$.
+
+      Check: $(x + y + z)(x - 2y + z) = x^2 - 2y^2 + z^2 - xy - yz + 2zx$. The value $\tfrac52$ is the other root with its sign lost; $\lambda = 4$ comes from taking $g = \lambda$ instead of $\lambda/2$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - direction-cosines
+  stem:
+    en: 'The length of the projection of the segment joining $P(3, -1, 2)$ and $Q(5, 2, -4)$ on the line with direction ratios $2, -6, 3$ is'
+  options:
+  - en: '$\dfrac47$'
+  - en: '$32$'
+  - en: '$\dfrac{32}{7}$'
+  - en: '$7$'
+  answer: 2
+  explanation:
+    en: |-
+      $\vec{PQ} = (2, 3, -6)$. The direction cosines of the line are $\tfrac27, -\tfrac67, \tfrac37$. So the projection is
+      $$2\cdot\tfrac27 + 3\cdot\left(-\tfrac67\right) + (-6)\cdot\tfrac37 = \frac{4 - 18 - 18}{7} = -\frac{32}{7},$$
+      of length $\tfrac{32}{7}$.
+
+      $32$ forgets to divide by $7$ (uses d.r.s instead of d.c.s). $7$ is the length $PQ$ itself, not its projection. $\tfrac47$ loses the sign of $-6$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - direction-cosines
+  - exam-tips
+  stem:
+    en: The acute angle between two body diagonals of a cube is
+  options:
+  - en: '$\cos^{-1}\dfrac13$'
+  - en: '$\cos^{-1}\dfrac{1}{\sqrt3}$'
+  - en: '$\cos^{-1}\dfrac23$'
+  - en: '$\cos^{-1}\sqrt{\dfrac23}$'
+  answer: 0
+  explanation:
+    en: |-
+      Take the unit cube with a vertex at $O$. The diagonals from $(0,0,0)$ to $(1,1,1)$ and from $(1,0,0)$ to $(0,1,1)$ have d.r.s $(1, 1, 1)$ and $(-1, 1, 1)$:
+      $$\cos\theta = \frac{-1 + 1 + 1}{\sqrt3\,\sqrt3} = \frac13.$$
+
+      $\cos^{-1}\tfrac{1}{\sqrt3}$ is the angle between a diagonal and an **edge**; $\cos^{-1}\sqrt{2/3}$ is between a body diagonal and a face diagonal.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - plane-forms
+  stem:
+    en: 'The intercepts made on the $x$-, $y$- and $z$-axes by the plane $2x - 3y + 4z = 12$ are'
+  options:
+  - en: '$6, 4, 3$'
+  - en: '$\tfrac16, -\tfrac14, \tfrac13$'
+  - en: '$6, -4, 3$'
+  - en: '$2, -3, 4$'
+  answer: 2
+  explanation:
+    en: |-
+      Divide by $12$:
+      $$\frac{x}{6} + \frac{y}{-4} + \frac{z}{3} = 1,$$
+      so the intercepts are $6, -4, 3$. (Or put two coordinates zero: $y = z = 0$ gives $x = 6$, and so on.)
+
+      Dropping the sign gives $6, 4, 3$; the reciprocals are the coefficients after dividing, not the intercepts; $2, -3, 4$ are d.r.s of the normal.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - plane-forms
+  stem:
+    en: 'The normal form of the plane $2x - y + 2z + 9 = 0$ is'
+  options:
+  - en: '$\tfrac23x - \tfrac13y + \tfrac23z = 3$'
+  - en: '$-\tfrac23x + \tfrac13y - \tfrac23z = 3$'
+  - en: '$-\tfrac29x + \tfrac19y - \tfrac29z = 1$'
+  - en: '$-\tfrac23x + \tfrac13y - \tfrac23z = 1$'
+  answer: 1
+  explanation:
+    en: |-
+      Write $2x - y + 2z = -9$ and divide by $-\sqrt{4 + 1 + 4} = -3$ so that the right side is positive:
+      $$-\tfrac23x + \tfrac13y - \tfrac23z = 3.$$
+      The distance from $O$ is $p = 3$, and the normal from $O$ has d.c.s $-\tfrac23, \tfrac13, -\tfrac23$.
+
+      $\tfrac23x - \tfrac13y + \tfrac23z = 3$ is the parallel plane on the other side of $O$ (the sign of the constant was changed alone). Dividing by $9$ does not give unit coefficients: $\tfrac{4 + 1 + 4}{81} \ne 1$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - plane-forms
+  stem:
+    en: 'The plane through $A(2, 1, 0)$, $B(3, -2, -2)$ and $C(3, 1, 7)$ is'
+  options:
+  - en: '$7x + 3y - z = 17$'
+  - en: '$7x + 3y - z = 14$'
+  - en: '$7x - 3y - z = 11$'
+  - en: '$7x + 3y + z = 17$'
+  answer: 0
+  explanation:
+    en: |-
+      $\vec{AB} = (1, -3, -2)$ and $\vec{AC} = (1, 0, 7)$. The normal is
+      $$\vec{AB} \times \vec{AC} = (-21, -9, 3) \parallel (7, 3, -1).$$
+      Through $A$: $7(x - 2) + 3(y - 1) - z = 0$, i.e. $7x + 3y - z = 17$.
+
+      Check: $B$ gives $21 - 6 + 2 = 17$ and $C$ gives $21 + 3 - 7 = 17$. The other options fail at least one point; for example, $7x + 3y + z = 17$ fails at $C$ ($31$).
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - coordinates
+  - plane-forms
+  stem:
+    en: 'The points $A(0, -1, 0)$, $B(2, 1, -1)$, $C(1, 1, 1)$ and $D(4, 5, k)$ are coplanar when $k$ equals'
+  options:
+  - en: '$-1$'
+  - en: '$2$'
+  - en: '$0$'
+  - en: '$1$'
+  answer: 3
+  explanation:
+    en: |-
+      Coplanar $\iff$ the determinant of $\vec{AB}, \vec{AC}, \vec{AD}$ vanishes:
+      $$\det\begin{pmatrix} 2 & 2 & -1\\ 1 & 2 & 1\\ 4 & 6 & k\end{pmatrix} = 2(2k - 6) - 2(k - 4) - (6 - 8) = 2k - 2 = 0.$$
+      So $k = 1$.
+
+      Check: the plane $ABC$ is $4x - 3y + 2z = 3$, and $D$ gives $16 - 15 + 2k = 3$, so $k = 1$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'The distance of the point $(2, 3, -5)$ from the plane $x + 2y - 2z = 9$ is'
+  options:
+  - en: '$\dfrac{11}{3}$'
+  - en: '$9$'
+  - en: '$3$'
+  - en: '$6$'
+  answer: 2
+  explanation:
+    en: |-
+      $$d = \frac{\lvert 2 + 6 - 2(-5) - 9\rvert}{\sqrt{1 + 4 + 4}} = \frac{9}{3} = 3.$$
+
+      $\tfrac{11}{3}$ takes $-2z$ as $-10$ (sign slip on $z = -5$). $9$ forgets the denominator, and $6$ forgets the constant $-9$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'The distance between the parallel planes $2x - 2y + z + 3 = 0$ and $4x - 4y + 2z + 5 = 0$ is'
+  options:
+  - en: '$\dfrac23$'
+  - en: '$\dfrac{11}{6}$'
+  - en: '$\dfrac13$'
+  - en: '$\dfrac16$'
+  answer: 3
+  explanation:
+    en: |-
+      First make the coefficients identical: the second plane is $2x - 2y + z + \tfrac52 = 0$. Then
+      $$d = \frac{\lvert 3 - \tfrac52\rvert}{\sqrt{4 + 4 + 1}} = \frac{1/2}{3} = \frac16.$$
+
+      $\tfrac23 = \tfrac{\lvert 3 - 5\rvert}{3}$ uses the constants without equalising the coefficients. $\tfrac{11}{6}$ adds the constants, as if the planes were on opposite sides of $O$ (they are on the same side, since $3$ and $\tfrac52$ have the same sign).
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'The acute angle between the planes $2x - y + 2z = 5$ and $x - y = 3$ is'
+  options:
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{2}$'
+  answer: 1
+  explanation:
+    en: |-
+      The normals are $(2, -1, 2)$ and $(1, -1, 0)$:
+      $$\cos\theta = \frac{2 + 1 + 0}{3\cdot\sqrt2} = \frac{1}{\sqrt2}, \qquad \theta = \frac{\pi}{4}.$$
+
+      The plane $x - y = 3$ has no $z$ term; its normal still has three components, with the last one $0$. Ignoring the $+1$ from $(-1)(-1)$ would give $\cos\theta = \tfrac{1}{3\sqrt2}$, not a standard angle.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'The image of the point $(1, 3, 4)$ in the plane $2x - y + z + 3 = 0$ is'
+  options:
+  - en: '$(-1, 4, 3)$'
+  - en: '$(5, 1, 6)$'
+  - en: '$(-7, 8, -1)$'
+  - en: '$(-3, 5, 2)$'
+  answer: 3
+  explanation:
+    en: |-
+      Let $t = \dfrac{2(1) - 3 + 4 + 3}{2^2 + 1^2 + 1^2} = \dfrac{6}{6} = 1$. The image is
+      $$P' = P - 2t\,(2, -1, 1) = (1, 3, 4) - (4, -2, 2) = (-3, 5, 2).$$
+
+      $(-1, 4, 3)$ is the **foot** of the perpendicular (one step, not two). $(5, 1, 6)$ moves in the wrong direction. Check: the midpoint of $(1, 3, 4)$ and $(-3, 5, 2)$ is $(-1, 4, 3)$, which lies on the plane.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - family
+  stem:
+    en: 'The plane through the line of intersection of $x + y + z = 6$ and $2x + 3y + 4z + 5 = 0$ that passes through $(1, 1, 1)$ is'
+  options:
+  - en: '$20x + 23y + 26z + 69 = 0$'
+  - en: '$8x + 5y + 2z - 99 = 0$'
+  - en: '$20x + 23y + 26z - 69 = 0$'
+  - en: '$x + y + z - 3 = 0$'
+  answer: 2
+  explanation:
+    en: |-
+      Take $(x + y + z - 6) + \lambda(2x + 3y + 4z + 5) = 0$. At $(1, 1, 1)$:
+      $$-3 + 14\lambda = 0, \qquad \lambda = \tfrac{3}{14}.$$
+      Multiplying by $14$:
+      $$14(x + y + z - 6) + 3(2x + 3y + 4z + 5) = 20x + 23y + 26z - 69 = 0.$$
+
+      $8x + 5y + 2z - 99 = 0$ uses $\lambda = -\tfrac{3}{14}$: it contains the line but not $(1, 1, 1)$. $x + y + z = 3$ passes through the point but does not contain the line.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - family
+  stem:
+    en: 'The plane through the line of intersection of $x + 2y + 3z - 4 = 0$ and $2x + y - z + 5 = 0$ and perpendicular to the plane $5x + 3y + 6z + 8 = 0$ is'
+  options:
+  - en: '$65x + 43y - 8z + 117 = 0$'
+  - en: '$51x + 15y - 50z - 173 = 0$'
+  - en: '$51x - 15y + 50z + 173 = 0$'
+  - en: '$51x + 15y - 50z + 173 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      The family is $(x + 2y + 3z - 4) + \lambda(2x + y - z + 5) = 0$, with normal $(1 + 2\lambda,\ 2 + \lambda,\ 3 - \lambda)$. Perpendicular to $(5, 3, 6)$:
+      $$5(1 + 2\lambda) + 3(2 + \lambda) + 6(3 - \lambda) = 29 + 7\lambda = 0, \qquad \lambda = -\tfrac{29}{7}.$$
+      Then $7(x + 2y + 3z - 4) - 29(2x + y - z + 5) = 0$:
+      $$-51x - 15y + 50z - 173 = 0 \iff 51x + 15y - 50z + 173 = 0.$$
+
+      Check: $5(51) + 3(15) + 6(-50) = 0$. $65x + 43y - 8z + 117 = 0$ comes from $\lambda = +\tfrac{29}{7}$; it contains the line but is not perpendicular to the given plane.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - bisectors
+  stem:
+    en: 'The plane bisecting the angle between the planes $2x - y + 2z + 3 = 0$ and $3x - 2y + 6z + 8 = 0$ that contains the origin is'
+  options:
+  - en: '$5x - y - 4z - 3 = 0$'
+  - en: '$23x - 13y + 32z + 45 = 0$'
+  - en: '$x - y + 4z + 5 = 0$'
+  - en: '$5x - y - 4z + 3 = 0$'
+  answer: 0
+  explanation:
+    en: |-
+      Both constants are positive, so the bisector of the angle containing $O$ takes the $+$ sign:
+      $$\frac{2x - y + 2z + 3}{3} = +\frac{3x - 2y + 6z + 8}{7}.$$
+      So $14x - 7y + 14z + 21 = 9x - 6y + 18z + 24$, i.e. $5x - y - 4z - 3 = 0$.
+
+      $23x - 13y + 32z + 45 = 0$ is the other bisector ($-$ sign). $x - y + 4z + 5 = 0$ equates the two left sides without dividing by the norms $3$ and $7$; it contains the common line but is not a bisector.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - bisectors
+  stem:
+    en: 'The plane bisecting the acute angle between the planes $2x - y + 2z + 3 = 0$ and $2x + 3y - 6z + 14 = 0$ is'
+  options:
+  - en: '$20x + 2y - 4z + 63 = 0$'
+  - en: '$8x - 16y + 32z + 21 = 0$'
+  - en: '$20x + 2y - 4z - 63 = 0$'
+  - en: '$8x - 16y + 32z - 21 = 0$'
+  answer: 3
+  explanation:
+    en: |-
+      The norms are $3$ and $7$, and both constants are positive. The bisectors are
+      $$7(2x - y + 2z + 3) = \pm 3(2x + 3y - 6z + 14).$$
+      - $+$: $8x - 16y + 32z - 21 = 0$ (the angle containing $O$).
+      - $-$: $20x + 2y - 4z + 63 = 0$.
+
+      Now $a_1a_2 + b_1b_2 + c_1c_2 = 4 - 3 - 12 = -11 < 0$, so the origin lies in the **acute** angle, and the $+$ bisector is the acute one.
+
+      Check: the normal $(1, -2, 4)$ of the answer makes with $(2, -1, 2)$ an angle with $\cos = \tfrac{12}{3\sqrt{21}} \approx 0.87$, which is less than $45^\circ$. So it lies in the acute angle. The plane $20x + 2y - 4z + 63 = 0$ bisects the obtuse angle.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - coordinates
+  - plane-forms
+  - exam-tips
+  stem:
+    en: 'A plane meets the coordinate axes at $A$, $B$, $C$, and the centroid of the tetrahedron $OABC$ is $(1, 2, 3)$. The plane is'
+  options:
+  - en: '$6x + 3y + 2z = 24$'
+  - en: '$6x + 3y + 2z = 18$'
+  - en: '$6x + 3y + 2z = 6$'
+  - en: '$x + 2y + 3z = 14$'
+  answer: 0
+  explanation:
+    en: |-
+      Let the intercepts be $\alpha, \beta, \gamma$. The centroid of $O, A, B, C$ is $\left(\tfrac{\alpha}{4}, \tfrac{\beta}{4}, \tfrac{\gamma}{4}\right) = (1, 2, 3)$, so $\alpha = 4$, $\beta = 8$, $\gamma = 12$:
+      $$\frac{x}{4} + \frac{y}{8} + \frac{z}{12} = 1 \iff 6x + 3y + 2z = 24.$$
+
+      $6x + 3y + 2z = 18$ is the answer when $(1, 2, 3)$ is the centroid of the **triangle** $ABC$ (factor $3$). $6x + 3y + 2z = 6$ uses $1, 2, 3$ as the intercepts. $x + 2y + 3z = 14$ is the plane through $(1, 2, 3)$ normal to $OG$, which is a different condition.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'A variable plane stays at a constant distance $p$ from the origin and meets the axes at $A$, $B$, $C$. The locus of the centroid of the triangle $ABC$ is'
+  options:
+  - en: '$x^{-2} + y^{-2} + z^{-2} = 9p^{-2}$'
+  - en: '$x^{-2} + y^{-2} + z^{-2} = 16p^{-2}$'
+  - en: '$x^{-2} + y^{-2} + z^{-2} = p^{-2}$'
+  - en: '$x^2 + y^2 + z^2 = 9p^2$'
+  answer: 0
+  explanation:
+    en: |-
+      Let the plane be $\dfrac{x}{\alpha} + \dfrac{y}{\beta} + \dfrac{z}{\gamma} = 1$. Its distance from $O$ is $p$:
+      $$\frac{1}{\alpha^2} + \frac{1}{\beta^2} + \frac{1}{\gamma^2} = \frac{1}{p^2}.$$
+      The centroid is $(x, y, z) = \left(\tfrac{\alpha}{3}, \tfrac{\beta}{3}, \tfrac{\gamma}{3}\right)$, so $\alpha = 3x$, etc.:
+      $$\frac{1}{9x^2} + \frac{1}{9y^2} + \frac{1}{9z^2} = \frac{1}{p^2} \iff x^{-2} + y^{-2} + z^{-2} = 9p^{-2}.$$
+
+      $16p^{-2}$ is the locus for the centroid of the **tetrahedron** $OABC$. $x^2 + y^2 + z^2 = 9p^2$ inverts wrongly: the relation is between reciprocals of squares.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - direction-cosines
+  stem:
+    en: 'Consider the following statements about direction cosines:'
+  statements:
+  - en: 'There is a line making angles $45^\circ$, $60^\circ$ and $120^\circ$ with the positive $x$-, $y$- and $z$-axes respectively.'
+  - en: 'There is a line making angles $30^\circ$, $45^\circ$ and $60^\circ$ with the positive $x$-, $y$- and $z$-axes respectively.'
+  - en: 'If $l, m, n$ are the direction cosines of a line, then $l + m + n \le \sqrt3$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 only
+  - en: 1 and 3 only
+  - en: 2 and 3 only
+  - en: '1, 2 and 3'
+  answer: 1
+  explanation:
+    en: |-
+      Angles $\alpha, \beta, \gamma$ are possible iff $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$.
+
+      1. True: $\tfrac12 + \tfrac14 + \tfrac14 = 1$.
+      2. False: $\tfrac34 + \tfrac12 + \tfrac14 = \tfrac32 \ne 1$.
+      3. True: by Cauchy–Schwarz, $l + m + n \le \sqrt3\sqrt{l^2 + m^2 + n^2} = \sqrt3$, with equality for $l = m = n = \tfrac{1}{\sqrt3}$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - distance-angle
+  stem:
+    en: 'Consider the plane $\Pi : x + 2y - 3z + 1 = 0$ and the following statements:'
+  statements:
+  - en: 'The points $(1, 1, 1)$ and $(2, -1, 0)$ lie on opposite sides of $\Pi$.'
+  - en: '$\Pi$ is perpendicular to the plane $3x + 3y + 3z = 7$.'
+  - en: 'The distance between $\Pi$ and the plane $2x + 4y - 6z + 9 = 0$ is $\dfrac{\sqrt{14}}{4}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 3 only
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  answer: 3
+  explanation:
+    en: |-
+      1. False. $x + 2y - 3z + 1$ equals $1 + 2 - 3 + 1 = 1$ at $(1, 1, 1)$ and $2 - 2 - 0 + 1 = 1$ at $(2, -1, 0)$. Same sign, so the **same** side.
+      2. True. $(1, 2, -3)\cdot(3, 3, 3) = 3 + 6 - 9 = 0$.
+      3. True. Halve the second plane: $x + 2y - 3z + \tfrac92 = 0$. Then
+      $$d = \frac{\lvert\tfrac92 - 1\rvert}{\sqrt{14}} = \frac{7}{2\sqrt{14}} = \frac{\sqrt{14}}{4}.$$
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - plane-forms
+  - distance-angle
+  stem:
+    en: 'For the plane $2x + 3y + 6z = 14$, match each quantity in List I with its value in List II.'
+  left:
+  - en: distance of the plane from the origin
+  - en: 'intercept on the $x$-axis'
+  - en: '$n$, the third direction cosine of the normal from the origin'
+  - en: 'distance of the point $(1, 1, 1)$ from the plane'
+  right:
+  - en: '$\dfrac37$'
+  - en: '$2$'
+  - en: '$\dfrac67$'
+  - en: '$7$'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-1, B-4, C-3, D-2'
+  answer: 0
+  explanation:
+    en: |-
+      The norm of the normal is $\sqrt{4 + 9 + 36} = 7$, so the normal form is $\tfrac27x + \tfrac37y + \tfrac67z = 2$.
+      - A: $p = 2$ (2).
+      - B: $y = z = 0$ gives $x = 7$ (4).
+      - C: $n = \tfrac67$ (3).
+      - D: $\dfrac{\lvert 2 + 3 + 6 - 14\rvert}{7} = \dfrac37$ (1).
+
+      Answer: A-2, B-4, C-3, D-1.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - pair-of-planes
+  stem:
+    en: Each equation in List I represents a pair of planes through the origin. Match it with the acute angle between the planes in List II.
+  left:
+  - en: '$x^2 - y^2 = 0$'
+  - en: '$z^2 + yz = 0$'
+  - en: '$y^2 + xy + yz + zx = 0$'
+  - en: '$\sqrt3\,x^2 + xy = 0$'
+  right:
+  - en: '$\dfrac{\pi}{6}$'
+  - en: '$\dfrac{\pi}{4}$'
+  - en: '$\dfrac{\pi}{3}$'
+  - en: '$\dfrac{\pi}{2}$'
+  options:
+  - en: 'A-4, B-3, C-2, D-1'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-4, B-2, C-1, D-3'
+  answer: 1
+  explanation:
+    en: |-
+      Factorise and use the normals (or $\tan\theta = \dfrac{2\sqrt{f^2 + g^2 + h^2 - ab - bc - ca}}{\lvert a + b + c\rvert}$):
+      - A: $(x - y)(x + y)$; $a + b + c = 0$, so $\tfrac{\pi}{2}$ (4).
+      - B: $z(z + y)$; normals $(0, 0, 1)$, $(0, 1, 1)$: $\cos\theta = \tfrac{1}{\sqrt2}$, so $\tfrac{\pi}{4}$ (2).
+      - C: $(x + y)(y + z)$; normals $(1, 1, 0)$, $(0, 1, 1)$: $\cos\theta = \tfrac12$, so $\tfrac{\pi}{3}$ (3).
+      - D: $x(\sqrt3\,x + y)$; normals $(1, 0, 0)$, $(\sqrt3, 1, 0)$: $\cos\theta = \tfrac{\sqrt3}{2}$, so $\tfrac{\pi}{6}$ (1).
+
+      Answer: A-4, B-2, C-3, D-1.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - direction-cosines
+  assertion:
+    en: 'No line can make an angle of $60^\circ$ with each of the three coordinate axes.'
+  reason:
+    en: 'The direction cosines $l, m, n$ of every line satisfy $l^2 + m^2 + n^2 = 1$.'
+  answer: 0
+  explanation:
+    en: |-
+      Reason: true; it is the basic identity for direction cosines.
+
+      Assertion: true. If $l = m = n = \cos 60^\circ = \tfrac12$, then $l^2 + m^2 + n^2 = \tfrac34 \ne 1$. The reason is exactly what rules it out, so it explains the assertion.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - bisectors
+  assertion:
+    en: 'The plane $5x - y - 4z - 3 = 0$ bisects the acute angle between the planes $2x - y + 2z + 3 = 0$ and $3x - 2y + 6z + 8 = 0$.'
+  reason:
+    en: 'If $d_1, d_2 > 0$ and $a_1a_2 + b_1b_2 + c_1c_2 > 0$, then the origin lies in the obtuse angle between the planes $a_1x + b_1y + c_1z + d_1 = 0$ and $a_2x + b_2y + c_2z + d_2 = 0$.'
+  answer: 3
+  explanation:
+    en: |-
+      Reason: true; it is the standard test (the region containing $O$ has dihedral angle $\pi$ minus the angle between the normals).
+
+      Assertion: false. $5x - y - 4z - 3 = 0$ is the $+$ bisector $7(2x - y + 2z + 3) = 3(3x - 2y + 6z + 8)$, i.e. the one containing the origin. Since $6 + 2 + 12 = 20 > 0$, that angle is **obtuse**. The acute bisector is $23x - 13y + 32z + 45 = 0$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - distance-angle
+  assertion:
+    en: 'The points $(1, -1, 2)$ and $(2, 1, 1)$ lie on the same side of the plane $x + y + z = 1$.'
+  reason:
+    en: 'The plane $x + y + z = 1$ is equally inclined to the three coordinate axes.'
+  answer: 1
+  explanation:
+    en: |-
+      Assertion: true. $x + y + z - 1$ equals $1$ at $(1, -1, 2)$ and $3$ at $(2, 1, 1)$: both positive, so the same side.
+
+      Reason: true. The normal has d.c.s $\tfrac{1}{\sqrt3}, \tfrac{1}{\sqrt3}, \tfrac{1}{\sqrt3}$, so it makes equal angles with the axes, and so does the plane (each angle is the complement). But the inclination says nothing about which side two points lie on; the test is the sign of $x + y + z - 1$. So the reason does not explain the assertion.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - pair-of-planes
+  assertion:
+    en: 'The equation $x^2 - 2y^2 + z^2 - xy - yz + 2zx = 0$ represents a pair of perpendicular planes.'
+  reason:
+    en: 'Every homogeneous equation of the second degree in $x, y, z$ represents a pair of planes through the origin.'
+  answer: 2
+  explanation:
+    en: |-
+      Assertion: true. It factorises as $(x + y + z)(x - 2y + z) = 0$, and the normals satisfy $(1, 1, 1)\cdot(1, -2, 1) = 0$. (Equivalently, $a + b + c = 1 - 2 + 1 = 0$.)
+
+      Reason: false. A homogeneous quadratic is a pair of planes only when $\Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = 0$. For example, $x^2 + y^2 - z^2 = 0$ has $\Delta = -1 \ne 0$; it is a cone. (In two variables every homogeneous quadratic is a pair of lines, which is the source of this trap.)
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - family
+  assertion:
+    en: 'The plane through the line of intersection of $x + y + z = 1$ and $2x + 3y - z + 4 = 0$ that is parallel to the $x$-axis is $y - 3z + 6 = 0$.'
+  reason:
+    en: 'A plane $ax + by + cz + d = 0$ is parallel to the $x$-axis if and only if $a = 0$.'
+  answer: 0
+  explanation:
+    en: |-
+      Reason: true. The plane is parallel to the $x$-axis iff its normal $(a, b, c)$ is perpendicular to $(1, 0, 0)$, i.e. $a = 0$.
+
+      Assertion: true. In $(x + y + z - 1) + \lambda(2x + 3y - z + 4) = 0$, the coefficient of $x$ is $1 + 2\lambda$. Setting it to $0$ gives $\lambda = -\tfrac12$:
+      $$(x + y + z - 1) - \tfrac12(2x + 3y - z + 4) = -\tfrac12 y + \tfrac32 z - 3 = 0 \iff y - 3z + 6 = 0.$$
+      The reason is the condition used, so it explains the assertion.
+  status: ai-generated

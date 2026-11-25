@@ -80,6 +80,16 @@ python3 -I tools/content-check/validate.py content
 - **Convention-sensitive keys.** Avoid keys that depend on convention: for example, whether $0 \in \mathbb{N}$, whether "increasing" means strict, or $\log$ vs $\ln$. Where unavoidable, state the convention in the stem.
 - **Hypotheses.** Be exact about them: closed vs open intervals, differentiable vs continuous, absolutely vs conditionally convergent, $f$ bounded, and so on.
 
+## Differential equation topics
+- **Checks.** Verify every solution with `sp.dsolve` and/or `sp.checkodesol`; check integrating factors, singular solutions and orthogonal trajectories by substituting back.
+- **Graphs.** A ```plot of a solution family (several `f:` curves), a Clairaut family with its envelope, or orthogonal trajectories helps.
+- **Constants.** Keys that are general solutions must be equivalent up to the arbitrary constant; make distractors differ in substance (wrong sign, wrong exponent), not just in how the constant is written.
+
+## Geometry and vector topics
+- **Checks.** Verify with SymPy: distances, angles (via `sp.acos` or cosines), invariants, determinants for coplanarity/degeneracy, discriminants for classification, intersections with `sp.solve`, triple products with `sp.Matrix`.
+- **Graphs.** Use ```plot with `implicit:` for conics, pairs of lines and polars; `param:` or `polar:` for polar equations. 3D topics need no graphs; use tables instead.
+- **Conventions.** State the form a conic or line is written in (e.g. $ax^2+2hxy+by^2+2gx+2fy+c=0$) in every stem that uses $a,h,b,g,f,c$.
+
 ## Accuracy rules
 - **Only standard, textbook-verifiable mathematics.** Theorem statements must have the right hypotheses (continuity on a closed interval, monic polynomials, field vs ring, and so on).
 - Where books differ in convention, state the convention and keep questions convention-safe. Examples: whether a principal argument range is $(-\pi,\pi]$; whether log means ln; whether "rank" is defined via minors.

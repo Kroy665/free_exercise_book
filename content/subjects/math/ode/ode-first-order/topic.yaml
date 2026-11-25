@@ -1,0 +1,18 @@
+id: math.ode.ode-first-order
+title:
+  en: First-Order Equations
+summary:
+  en: Order and degree, formation of ODEs by eliminating constants, the existence-uniqueness theorem, separable and homogeneous equations (and those reducible to them), exact equations and the standard rules for integrating factors.
+order: 1
+exams: [slst-0910, slst-1112]
+prerequisites: [math.integral.integration-methods]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - G. F. Simmons, Differential Equations with Applications and Historical Notes, chs. 1–2
+  - S. L. Ross, Differential Equations, chs. 1–2
+  - M. D. Raisinghania, Ordinary and Partial Differential Equations, chs. on equations of first order and first degree
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) V.1 and (PG) III.1–2
+retired: []

@@ -1,0 +1,628 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - polar-coordinates
+  stem:
+    en: 'The Cartesian coordinates of the point with polar coordinates $\left(2, \dfrac{2\pi}{3}\right)$ are'
+  options:
+  - en: '$(1, -\sqrt3)$'
+  - en: '$(-1, \sqrt3)$'
+  - en: '$(-\sqrt3, 1)$'
+  - en: '$(1, \sqrt3)$'
+  answer: 1
+  explanation:
+    en: |-
+      $$x = 2\cos\frac{2\pi}{3} = -1,\qquad y = 2\sin\frac{2\pi}{3} = \sqrt3.$$
+      The point is in quadrant II, as $\frac{2\pi}{3}$ is. $(-\sqrt3, 1)$ swaps sine and cosine (that is the point at $\frac{5\pi}{6}$); $(1, \sqrt3)$ is the point at $\frac\pi3$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - polar-coordinates
+  stem:
+    en: 'With $r > 0$ and $-\pi < \theta \le \pi$, the polar coordinates of the point $(-1, -1)$ are'
+  options:
+  - en: '$\left(\sqrt2, -\dfrac{3\pi}{4}\right)$'
+  - en: '$\left(\sqrt2, \dfrac{\pi}{4}\right)$'
+  - en: '$\left(\sqrt2, \dfrac{3\pi}{4}\right)$'
+  - en: '$\left(2, -\dfrac{3\pi}{4}\right)$'
+  answer: 0
+  explanation:
+    en: |-
+      $r = \sqrt{1 + 1} = \sqrt2$. The point is in quadrant III, so
+      $$\theta = -\pi + \frac\pi4 = -\frac{3\pi}{4}.$$
+      $\frac\pi4$ is what $\tan^{-1}\frac{-1}{-1}$ gives; it is the point $(1, 1)$. $\frac{3\pi}{4}$ is in quadrant II; $r = 2$ forgets the square root.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - polar-coordinates
+  stem:
+    en: 'The distance between the points $\left(3, \dfrac\pi6\right)$ and $\left(4, \dfrac\pi2\right)$ is'
+  options:
+  - en: '$\sqrt{13}$'
+  - en: '$5$'
+  - en: '$\sqrt{37}$'
+  - en: '$1$'
+  answer: 0
+  explanation:
+    en: |-
+      By the cosine rule,
+      $$d^2 = 3^2 + 4^2 - 2\cdot3\cdot4\cos\left(\frac\pi2 - \frac\pi6\right) = 25 - 24\cdot\frac12 = 13.$$
+      $5$ treats the angle at the pole as a right angle; $\sqrt{37}$ uses $+24\cos$; $1$ just subtracts the radii.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  stem:
+    en: 'The tangents to the conic $\dfrac2r = 1 + \cos\theta$ at the points $\theta = \dfrac\pi3$ and $\theta = -\dfrac\pi3$ meet at the point (Cartesian coordinates, pole as origin, initial line as $x$-axis)'
+  options:
+  - en: '$(2, 0)$'
+  - en: '$\left(\dfrac43, 0\right)$'
+  - en: '$\left(\dfrac23, 0\right)$'
+  - en: '$(4, 0)$'
+  answer: 1
+  explanation:
+    en: |-
+      Tangents at $\alpha, \beta$ of $\frac lr = 1 + e\cos\theta$ meet at
+      $$\theta = \frac{\alpha + \beta}{2} = 0,\qquad \frac lr = e\cos\frac{\alpha + \beta}{2} + \cos\frac{\alpha - \beta}{2} = 1 + \frac12 = \frac32.$$
+      So $r = \frac{2}{3/2} = \frac43$, the point $\left(\frac43, 0\right)$.
+
+      Check in Cartesian form: the conic is $y^2 = 4 - 4x$, the point $\theta = \frac\pi3$ is $\left(\frac23, \frac{2}{\sqrt3}\right)$, and its tangent $\frac{2}{\sqrt3}y = -2x + \frac83$ meets $y = 0$ at $x = \frac43$. $(2, 0)$ is where the directrix meets the axis (tangents at the ends of a **focal** chord meet there, but $\pm\frac\pi3$ is not a focal chord).
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - straight-line
+  stem:
+    en: 'The Cartesian equation of the line $r\cos\left(\theta - \dfrac\pi3\right) = 4$ is'
+  options:
+  - en: '$\sqrt3 x + y = 8$'
+  - en: '$x + \sqrt3 y = 4$'
+  - en: '$x + \sqrt3 y = 8$'
+  - en: '$x - \sqrt3 y = 8$'
+  answer: 2
+  explanation:
+    en: |-
+      Expand: $r\cos\theta\cos\frac\pi3 + r\sin\theta\sin\frac\pi3 = 4$, i.e.
+      $$\frac12x + \frac{\sqrt3}{2}y = 4 \iff x + \sqrt3y = 8.$$
+      Check: the foot of the perpendicular $(4, \frac\pi3) = (2, 2\sqrt3)$ satisfies $2 + 6 = 8$. $\sqrt3x + y = 8$ is the line with $\alpha = \frac\pi6$; $x + \sqrt3y = 4$ forgets to clear the $\frac12$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - straight-line
+  stem:
+    en: 'The line $r(\cos\theta + \sqrt3\sin\theta) = 3$ in the normal form $r\cos(\theta - \alpha) = p$ $(p > 0)$ is'
+  options:
+  - en: '$r\cos\left(\theta - \dfrac\pi6\right) = \dfrac32$'
+  - en: '$r\cos\left(\theta - \dfrac\pi3\right) = 3$'
+  - en: '$r\cos\left(\theta + \dfrac\pi3\right) = \dfrac32$'
+  - en: '$r\cos\left(\theta - \dfrac\pi3\right) = \dfrac32$'
+  answer: 3
+  explanation:
+    en: |-
+      Divide by $\sqrt{1 + 3} = 2$:
+      $$r\left(\tfrac12\cos\theta + \tfrac{\sqrt3}{2}\sin\theta\right) = \tfrac32 \iff r\cos\left(\theta - \tfrac\pi3\right) = \tfrac32.$$
+      So $p = \frac32$ and $\alpha = \frac\pi3$ ($\cos\alpha = \frac12$, $\sin\alpha = \frac{\sqrt3}{2}$). Taking $\alpha = \frac\pi6$ swaps sine and cosine; $p = 3$ skips the division; $+\frac\pi3$ flips the sign of the $\sin\theta$ term.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - circle
+  stem:
+    en: 'The polar equation of the circle with centre $\left(2, \dfrac\pi3\right)$ and radius $3$ is'
+  options:
+  - en: '$r^2 - 4r\cos\left(\theta - \dfrac\pi3\right) + 5 = 0$'
+  - en: '$r^2 - 4r\cos\left(\theta - \dfrac\pi3\right) - 5 = 0$'
+  - en: '$r^2 - 2r\cos\left(\theta - \dfrac\pi3\right) - 5 = 0$'
+  - en: '$r^2 - 4r\cos\left(\theta + \dfrac\pi3\right) - 5 = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      For centre $(c, \alpha)$ and radius $a$: $r^2 - 2cr\cos(\theta - \alpha) + c^2 - a^2 = 0$. Here $c = 2$, $a = 3$:
+      $$r^2 - 4r\cos\left(\theta - \frac\pi3\right) + 4 - 9 = 0.$$
+      The constant is $c^2 - a^2 = -5$ (negative: the pole is inside the circle, since $2 < 3$). $+5$ uses $a^2 - c^2$; $2r$ forgets the factor $2$ of the cosine rule.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - circle
+  stem:
+    en: 'The curve $r = 6\sin\theta$ is a circle with'
+  options:
+  - en: 'centre $(0, 6)$ and radius $6$'
+  - en: 'centre $(3, 0)$ and radius $3$'
+  - en: 'centre $(0, 3)$ and radius $3$'
+  - en: 'centre $(0, -3)$ and radius $3$'
+  answer: 2
+  explanation:
+    en: |-
+      Multiply by $r$: $x^2 + y^2 = 6y$, i.e.
+      $$x^2 + (y - 3)^2 = 9.$$
+      Centre $(0, 3)$, radius $3$; the circle passes through the pole. $r = 2a\sin\theta$ has radius $a$, not $2a$. Centre $(3, 0)$ belongs to $r = 6\cos\theta$.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - circle
+  stem:
+    en: 'A circle passes through the pole, has its centre on the initial line, and passes through the point $\left(4, \dfrac\pi3\right)$. Its equation is'
+  options:
+  - en: '$r = 8\cos\theta$'
+  - en: '$r = 4\cos\theta$'
+  - en: '$r = 8\sin\theta$'
+  - en: '$r = 16\cos\theta$'
+  answer: 0
+  explanation:
+    en: |-
+      Such a circle is $r = 2a\cos\theta$. Put in the point:
+      $$4 = 2a\cos\frac\pi3 = a \implies r = 8\cos\theta.$$
+      Check: radius $4$, centre $(4, 0)$, and the distance from $(4, 0)$ to $(4, \frac\pi3) = (2, 2\sqrt3)$ is $\sqrt{4 + 12} = 4$. $r = 4\cos\theta$ takes $2a = 4$; $\sin\theta$ puts the centre on $\theta = \frac\pi2$.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'The conic $\dfrac8r = 2 + 4\cos\theta$ is'
+  options:
+  - en: 'a hyperbola with eccentricity $2$'
+  - en: 'a hyperbola with eccentricity $4$'
+  - en: 'an ellipse with eccentricity $\dfrac12$'
+  - en: a parabola
+  answer: 0
+  explanation:
+    en: |-
+      Make the constant term $1$: divide by $2$,
+      $$\frac4r = 1 + 2\cos\theta.$$
+      Compare with $\frac lr = 1 + e\cos\theta$: $e = 2 > 1$, $l = 4$. A hyperbola. Reading $e = 4$ off the unnormalised equation is the trap; $\frac12$ inverts the ratio.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'The length of the latus rectum of the conic $\dfrac{10}{r} = 3 - 2\cos\theta$ is'
+  options:
+  - en: '$\dfrac{10}{3}$'
+  - en: '$20$'
+  - en: '$5$'
+  - en: '$\dfrac{20}{3}$'
+  answer: 3
+  explanation:
+    en: |-
+      Divide by $3$: $\frac{10/3}{r} = 1 - \frac23\cos\theta$. So $l = \frac{10}{3}$, $e = \frac23$ (an ellipse), and
+      $$\text{latus rectum} = 2l = \frac{20}{3}.$$
+      Check: at $\theta = \pm\frac\pi2$, $r = \frac{10}{3}$, the two half-chords. $\frac{10}{3}$ is the semi-latus rectum; $20$ forgets to normalise; $5$ uses $\frac{10}{3 - 1}$.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'The length of the major axis of the ellipse $\dfrac{15}{r} = 3 + 2\cos\theta$ is'
+  options:
+  - en: '$18$'
+  - en: '$15$'
+  - en: '$9$'
+  - en: '$6\sqrt5$'
+  answer: 0
+  explanation:
+    en: |-
+      The vertices are on the axis: $\theta = 0$ gives $r = \frac{15}{5} = 3$ and $\theta = \pi$ gives $r = \frac{15}{1} = 15$. They lie on opposite sides of the focus, so
+      $$2a = 3 + 15 = 18.$$
+      Equivalently $l = 5$, $e = \frac23$ and $2a = \frac{2l}{1 - e^2} = \frac{10}{5/9} = 18$. $9$ is the semi-major axis; $6\sqrt5 = 2\cdot\frac{l}{\sqrt{1 - e^2}}$ is the **minor** axis.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'The Cartesian equation of $\dfrac2r = 1 + \cos\theta$ (pole as origin, initial line as $x$-axis) is'
+  options:
+  - en: '$y^2 = 4 + 4x$'
+  - en: '$y^2 = 4 - 2x$'
+  - en: '$x^2 = 4 - 4y$'
+  - en: '$y^2 = 4 - 4x$'
+  answer: 3
+  explanation:
+    en: |-
+      $2 = r + r\cos\theta = r + x$, so $r = 2 - x$ and
+      $$x^2 + y^2 = (2 - x)^2 \iff y^2 = 4 - 4x.$$
+      A parabola opening to the left with focus at the origin and directrix $x = 2$ (the initial line points from the focus towards the directrix). $y^2 = 4 + 4x$ belongs to $\frac2r = 1 - \cos\theta$.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'For the hyperbola $\dfrac lr = 1 + 2\cos\theta$, $r \to \infty$ in the directions'
+  options:
+  - en: '$\theta = \pm\dfrac{\pi}{3}$'
+  - en: '$\theta = \pm\dfrac{\pi}{6}$'
+  - en: '$\theta = \pm\dfrac{2\pi}{3}$'
+  - en: '$\theta = \pm\dfrac{5\pi}{6}$'
+  answer: 2
+  explanation:
+    en: |-
+      $r \to \infty$ when $1 + 2\cos\theta = 0$, i.e.
+      $$\cos\theta = -\frac12,\qquad \theta = \pm\frac{2\pi}{3}.$$
+      These are the directions of the asymptotes. $\pm\frac\pi3$ solves $\cos\theta = +\frac12$ (sign slip). In general the directions are $\cos\theta = -\frac1e$.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  stem:
+    en: 'The tangent to the conic $\dfrac2r = 1 + \cos\theta$ at the point $\theta = \dfrac\pi2$ is'
+  options:
+  - en: '$\dfrac2r = 1 + \sin\theta$'
+  - en: '$\dfrac2r = \cos\theta - \sin\theta$'
+  - en: '$\dfrac2r = \cos\theta + \sin\theta$'
+  - en: '$\dfrac2r = 1 + \cos\theta + \sin\theta$'
+  answer: 2
+  explanation:
+    en: |-
+      The tangent at $\alpha$ to $\frac lr = 1 + e\cos\theta$ is $\frac lr = e\cos\theta + \cos(\theta - \alpha)$. With $e = 1$, $\alpha = \frac\pi2$:
+      $$\frac2r = \cos\theta + \sin\theta \iff x + y = 2.$$
+      Check: the point is $(0, 2)$; on $y^2 = 4 - 4x$ the slope there is $-\frac{2}{y} = -1$, giving $x + y = 2$. $1 + \sin\theta$ copies the constant $1$ from the conic; that curve is a parabola, not a line.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  stem:
+    en: 'The normal to the conic $\dfrac2r = 1 + \cos\theta$ at the point $\theta = \dfrac\pi2$ is'
+  options:
+  - en: '$\dfrac2r = \cos\theta + \sin\theta$'
+  - en: '$\dfrac2r = \cos\theta - \sin\theta$'
+  - en: '$\dfrac2r = \sin\theta - \cos\theta$'
+  - en: '$\dfrac1r = \sin\theta - \cos\theta$'
+  answer: 2
+  explanation:
+    en: |-
+      The normal at $\alpha$ to $\frac lr = 1 + e\cos\theta$ is
+      $$\frac{le\sin\alpha}{1 + e\cos\alpha}\cdot\frac1r = e\sin\theta + \sin(\theta - \alpha).$$
+      With $l = 2$, $e = 1$, $\alpha = \frac\pi2$: $\frac2r = \sin\theta - \cos\theta$, i.e. $y - x = 2$.
+
+      Check: the tangent at $(0, 2)$ has slope $-1$, so the normal is $y = x + 2$. $\cos\theta + \sin\theta$ is the tangent; $\cos\theta - \sin\theta$ is $x - y = 2$, which misses $(0, 2)$.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  stem:
+    en: 'The chord of the conic $\dfrac2r = 1 + \cos\theta$ joining the points $\theta = 0$ and $\theta = \dfrac\pi2$ is'
+  options:
+  - en: '$\dfrac2r = \cos\theta + \sqrt2\cos\left(\theta - \dfrac\pi4\right)$'
+  - en: '$\dfrac2r = \cos\theta + \cos\left(\theta - \dfrac\pi4\right)$'
+  - en: '$\dfrac2r = 1 + \sqrt2\cos\left(\theta - \dfrac\pi4\right)$'
+  - en: '$\dfrac2r = \cos\theta + \dfrac{1}{\sqrt2}\cos\left(\theta - \dfrac\pi4\right)$'
+  answer: 0
+  explanation:
+    en: |-
+      The chord joining $\alpha - \beta$ and $\alpha + \beta$ is $\frac lr = e\cos\theta + \sec\beta\cos(\theta - \alpha)$. Here $\alpha = \beta = \frac\pi4$, $\sec\beta = \sqrt2$:
+      $$\frac2r = \cos\theta + \sqrt2\cos\left(\theta - \frac\pi4\right) = 2\cos\theta + \sin\theta \iff 2x + y = 2.$$
+      Check: it passes through $(1, 0)$ ($\theta = 0$, $r = 1$) and $(0, 2)$ ($\theta = \frac\pi2$, $r = 2$). Without $\sec\beta$ you get the tangent at $\frac\pi4$; $\frac1{\sqrt2}$ uses $\cos\beta$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - focal-chords
+  stem:
+    en: 'A focal chord of a parabola is divided by the focus into segments of lengths $3$ and $6$. The length of the latus rectum is'
+  options:
+  - en: '$4$'
+  - en: '$9$'
+  - en: '$8$'
+  - en: '$\dfrac92$'
+  answer: 2
+  explanation:
+    en: |-
+      The semi-latus rectum is the harmonic mean of the segments:
+      $$l = \frac{2\cdot3\cdot6}{3 + 6} = 4,\qquad \text{latus rectum} = 2l = 8.$$
+      $4$ is the **semi**-latus rectum; $9$ is the chord itself; $\frac92$ is the arithmetic mean.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - focal-chords
+  stem:
+    en: 'For the ellipse $\dfrac6r = 2 + \cos\theta$, the length of the focal chord inclined at $\dfrac\pi3$ to the major axis is'
+  options:
+  - en: '$\dfrac{96}{13}$'
+  - en: '$6$'
+  - en: '$8$'
+  - en: '$\dfrac{32}{5}$'
+  answer: 3
+  explanation:
+    en: |-
+      Normalise: $\frac3r = 1 + \frac12\cos\theta$, so $l = 3$, $e = \frac12$. The focal chord at angle $\theta$ to the axis has length
+      $$\frac{2l}{1 - e^2\cos^2\theta} = \frac{6}{1 - \frac14\cdot\frac14} = \frac{6}{15/16} = \frac{32}{5}.$$
+      Directly: $r(\tfrac\pi3) = \frac{3}{5/4} = \frac{12}{5}$ and $r(\tfrac{4\pi}{3}) = \frac{3}{3/4} = 4$, sum $\frac{32}{5}$. $\frac{96}{13}$ uses $\sin^2\theta$; $6$ is the latus rectum; $8$ is the major axis.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - focal-chords
+  stem:
+    en: '$PQ$ and $RT$ are perpendicular focal chords of the ellipse $\dfrac6r = 2 + \cos\theta$. Then $\dfrac1{PQ} + \dfrac1{RT}$ equals'
+  options:
+  - en: '$\dfrac{1}{3}$'
+  - en: '$\dfrac{7}{24}$'
+  - en: '$\dfrac{3}{8}$'
+  - en: '$\dfrac{7}{12}$'
+  answer: 1
+  explanation:
+    en: |-
+      With $l = 3$, $e = \frac12$, a focal chord at angle $\theta$ has $\frac1{PQ} = \frac{1 - e^2\cos^2\theta}{2l}$. For the perpendicular chord replace $\cos^2\theta$ by $\sin^2\theta$ and add:
+      $$\frac1{PQ} + \frac1{RT} = \frac{2 - e^2}{2l} = \frac{2 - \frac14}{6} = \frac{7}{24}.$$
+      Check with the axis and the latus rectum: $\frac18 + \frac16 = \frac{7}{24}$. $\frac38$ comes from $2 + e^2$; $\frac{7}{12}$ forgets the $2$ in $2l$.
+  status: ai-generated
+- id: q0021
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  stem:
+    en: 'The line $\dfrac3r = \cos\theta + k\sin\theta$ touches the conic $\dfrac3r = 1 + \dfrac12\cos\theta$ if and only if'
+  options:
+  - en: '$k = \pm\dfrac12$'
+  - en: '$k = \pm\dfrac{\sqrt3}{2}$'
+  - en: '$k = \pm\sqrt3$'
+  - en: '$k = \pm\dfrac{\sqrt5}{2}$'
+  answer: 1
+  explanation:
+    en: |-
+      The line $\frac lr = A\cos\theta + B\sin\theta$ touches $\frac lr = 1 + e\cos\theta$ iff $(A - e)^2 + B^2 = 1$ (the tangent at $\alpha$ has $A = e + \cos\alpha$, $B = \sin\alpha$). Here $A = 1$, $e = \frac12$:
+      $$\frac14 + k^2 = 1 \implies k = \pm\frac{\sqrt3}{2}.$$
+      In fact $A - e = \frac12 = \cos\alpha$ gives $\alpha = \pm\frac\pi3$. $\pm\frac12$ comes from $A^2 + B^2 = 1 + e^2$; $\pm\frac{\sqrt5}{2}$ from $B^2 = 1 + e^2$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - circle
+  stem:
+    en: 'Consider the following statements:'
+  statements:
+  - en: '$r = 2a\cos\theta$ $(a > 0)$ is a circle through the pole with centre $(a, 0)$ and radius $a$.'
+  - en: '$r = a$ $(a > 0)$ is a circle with centre at the pole and radius $a$.'
+  - en: '$r^2 - 4r\cos\theta + 3 = 0$ is a circle with centre $(2, 0)$ and radius $\sqrt3$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: '1, 2 and 3'
+  - en: 2 and 3 only
+  - en: 1 only
+  - en: 1 and 2 only
+  answer: 3
+  explanation:
+    en: |-
+      1. True: $x^2 + y^2 = 2ax$, i.e. $(x - a)^2 + y^2 = a^2$.
+      2. True: $x^2 + y^2 = a^2$.
+      3. False: in $r^2 - 2cr\cos(\theta - \alpha) + c^2 - a^2 = 0$, $c = 2$ and $c^2 - a^2 = 3$, so $a = 1$. In Cartesian form, $x^2 + y^2 - 4x + 3 = 0$, i.e. $(x - 2)^2 + y^2 = 1$. The value $\sqrt3$ treats the constant as the radius squared.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - focal-chords
+  stem:
+    en: 'Consider the following statements about the conic $\dfrac lr = 1 + e\cos\theta$ $(l > 0)$:'
+  statements:
+  - en: 'For every focal chord $PSQ$, $\dfrac1{SP} + \dfrac1{SQ} = \dfrac2l$.'
+  - en: 'When $e = 1$ (parabola $y^2 = 4ax$, $l = 2a$), the focal chord inclined at $\theta$ to the axis has length $4a\operatorname{cosec}^2\theta$.'
+  - en: 'When $0 < e < 1$, the latus rectum is the shortest focal chord.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 1 and 3 only
+  - en: 2 only
+  - en: '1, 2 and 3'
+  answer: 3
+  explanation:
+    en: |-
+      1. True: $\frac1{SP} + \frac1{SQ} = \frac{1 + e\cos\theta}{l} + \frac{1 - e\cos\theta}{l} = \frac2l$.
+      2. True: $PQ = \frac{2l}{1 - \cos^2\theta} = \frac{4a}{\sin^2\theta}$.
+      3. True: $PQ = \frac{2l}{1 - e^2\cos^2\theta}$ is least when $\cos\theta = 0$, giving $2l$, the latus rectum. (The longest is the major axis, $\frac{2l}{1 - e^2}$.)
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - straight-line
+  - circle
+  - conic-focus-pole
+  stem:
+    en: 'Match each polar equation in List I $(a, p > 0)$ with the curve in List II.'
+  left:
+  - en: '$r\cos(\theta - \alpha) = p$'
+  - en: '$r = 2a\cos\theta$'
+  - en: '$\dfrac4r = 1 + \cos\theta$'
+  - en: '$\dfrac4r = 2 + 3\cos\theta$'
+  right:
+  - en: hyperbola
+  - en: straight line
+  - en: parabola
+  - en: circle through the pole
+  options:
+  - en: 'A-2, B-4, C-1, D-3'
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-4, B-2, C-3, D-1'
+  - en: 'A-2, B-3, C-4, D-1'
+  answer: 1
+  explanation:
+    en: |-
+      - A: $x\cos\alpha + y\sin\alpha = p$, a straight line: 2.
+      - B: $x^2 + y^2 = 2ax$, a circle through the pole: 4.
+      - C: $e = 1$, a parabola: 3.
+      - D: $\frac2r = 1 + \frac32\cos\theta$, $e = \frac32 > 1$, a hyperbola: 1. Normalise before reading $e$.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  stem:
+    en: 'For the conic $\dfrac6r = 2 + \cos\theta$, match each quantity in List I with its value in List II.'
+  left:
+  - en: eccentricity
+  - en: semi-latus rectum
+  - en: semi-major axis
+  - en: distance from the pole to the corresponding directrix
+  right:
+  - en: '$6$'
+  - en: '$\dfrac12$'
+  - en: '$4$'
+  - en: '$3$'
+  options:
+  - en: 'A-2, B-4, C-3, D-1'
+  - en: 'A-2, B-3, C-4, D-1'
+  - en: 'A-2, B-1, C-3, D-4'
+  - en: 'A-4, B-2, C-3, D-1'
+  answer: 0
+  explanation:
+    en: |-
+      Normalise: $\frac3r = 1 + \frac12\cos\theta$.
+      - A: $e = \frac12$: 2.
+      - B: $l = 3$: 4.
+      - C: $a = \frac{l}{1 - e^2} = \frac{3}{3/4} = 4$ (vertex distances $2$ and $6$ add to $8$): 3.
+      - D: the directrix is $r\cos\theta = \frac le = 6$: 1.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - straight-line
+  - polar-coordinates
+  assertion:
+    en: 'The curve $r\cos\theta = 3$ is a straight line perpendicular to the initial line.'
+  reason:
+    en: 'In polar coordinates $x = r\cos\theta$.'
+  answer: 0
+  explanation:
+    en: 'R is the conversion formula. By R, $r\cos\theta = 3$ is $x = 3$, a line perpendicular to the $x$-axis (the initial line) at distance $3$ from the pole. It is the normal form $r\cos(\theta - \alpha) = p$ with $\alpha = 0$, $p = 3$. Both true, and R explains A.'
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - conic-focus-pole
+  assertion:
+    en: 'The conic $\dfrac5r = 1 + 2\cos\theta$ is a hyperbola.'
+  reason:
+    en: 'The length of the latus rectum of the conic $\dfrac lr = 1 + e\cos\theta$ is $l$.'
+  answer: 2
+  explanation:
+    en: |-
+      A is true: $e = 2 > 1$.
+
+      R is false: at $\theta = \pm\frac\pi2$, $r = l$, so $l$ is the **semi**-latus rectum and the latus rectum is $2l$. For this hyperbola it is $10$.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - focal-chords
+  assertion:
+    en: 'Every focal chord of the parabola $\dfrac4r = 1 + \cos\theta$ has length $8$.'
+  reason:
+    en: 'For every focal chord $PSQ$ of $\dfrac lr = 1 + e\cos\theta$, $\dfrac1{SP} + \dfrac1{SQ} = \dfrac2l$.'
+  answer: 3
+  explanation:
+    en: |-
+      R is true: $\frac{1 + e\cos\theta}{l} + \frac{1 - e\cos\theta}{l} = \frac2l$.
+
+      A is false: the focal chord at $\theta$ has length $\frac{2l}{\sin^2\theta} = \frac{8}{\sin^2\theta}$. Only the latus rectum has length $8$; at $\theta = \frac\pi4$ the length is $16$. A fixed harmonic mean does not fix the sum $SP + SQ$.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - focal-chords
+  - chord-tangent-normal
+  assertion:
+    en: 'The tangents at the ends of any focal chord of the parabola $\dfrac lr = 1 + \cos\theta$ meet on its directrix.'
+  reason:
+    en: The semi-latus rectum of a conic is the harmonic mean of the segments of any focal chord.
+  answer: 1
+  explanation:
+    en: |-
+      A is true: the ends are $\alpha$ and $\alpha + \pi$, with tangents
+      $$\frac lr = \cos\theta + \cos(\theta - \alpha),\qquad \frac lr = \cos\theta - \cos(\theta - \alpha).$$
+      Adding, the intersection satisfies $\frac lr = \cos\theta$, which is the directrix $r\cos\theta = l$.
+
+      R is also true ($\frac1{SP} + \frac1{SQ} = \frac2l$), but it is about lengths along the chord and plays no part in locating the tangents' intersection. So R does not explain A.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - chord-tangent-normal
+  assertion:
+    en: 'The tangent at the point $\alpha$ of the conic $\dfrac lr = 1 + e\cos\theta$ is $\dfrac lr = e\cos\theta + \cos(\theta - \alpha)$.'
+  reason:
+    en: 'The chord joining the points $\alpha - \beta$ and $\alpha + \beta$ of the conic $\dfrac lr = 1 + e\cos\theta$ is $\dfrac lr = e\cos\theta + \sec\beta\cos(\theta - \alpha)$.'
+  answer: 0
+  explanation:
+    en: |-
+      R is true: the right side is linear in $\cos\theta, \sin\theta$, so it is a line; at $\theta = \alpha \pm \beta$ it equals $e\cos\theta + 1$, which is the conic's value of $\frac lr$.
+
+      A is true and follows from R: the tangent is the limit of the chord as the two points coincide, $\beta \to 0$, and $\sec\beta \to 1$. Both true, and R explains A.
+  status: ai-generated

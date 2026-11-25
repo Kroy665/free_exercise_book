@@ -1,0 +1,664 @@
+- id: q0001
+  type: single
+  difficulty: 1
+  exams: &id001
+  - slst-0910
+  - slst-1112
+  refs:
+  - linear-equations
+  - exam-tips
+  stem:
+    en: 'An integrating factor of $x\dfrac{dy}{dx} - 2y = x^3$ $(x > 0)$ is'
+  options:
+  - en: '$x^2$'
+  - en: '$e^{-2x}$'
+  - en: '$\dfrac1x$'
+  - en: '$\dfrac{1}{x^2}$'
+  answer: 3
+  explanation:
+    en: |-
+      Standard form: $\dfrac{dy}{dx} - \dfrac{2}{x}y = x^2$, so $P = -\dfrac2x$ and
+      $$\text{IF} = e^{\int -2/x\,dx} = e^{-2\ln x} = \frac{1}{x^2}.$$
+      $x^2$ ignores the minus sign in $P$; $e^{-2x}$ forgets to divide by $x$ before reading off $P$.
+  status: ai-generated
+- id: q0002
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - linear-equations
+  stem:
+    en: 'An integrating factor of $\dfrac{dy}{dx} + y\tan x = \sec x$ on $\left(-\dfrac\pi2, \dfrac\pi2\right)$ is'
+  options:
+  - en: '$\cos x$'
+  - en: '$e^{\tan x}$'
+  - en: '$e^{\sec x}$'
+  - en: '$\sec x$'
+  answer: 3
+  explanation:
+    en: |-
+      $$\text{IF} = e^{\int \tan x\,dx} = e^{\ln\sec x} = \sec x.$$
+      Then $y\sec x = \int\sec^2x\,dx = \tan x + C$, so $y = \sin x + C\cos x$.
+
+      $\cos x$ comes from $\int\tan x\,dx = \ln\cos x$ (wrong sign); $e^{\tan x}$ forgets to integrate $P$.
+  status: ai-generated
+- id: q0003
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - linear-equations
+  - exam-tips
+  stem:
+    en: 'The general solution of $\dfrac{dy}{dx} + 2y = e^{-x}$ is'
+  options:
+  - en: '$y = -e^{-x} + Ce^{-2x}$'
+  - en: '$y = e^{-x} + Ce^{2x}$'
+  - en: '$y = xe^{-2x} + Ce^{-2x}$'
+  - en: '$y = e^{-x} + Ce^{-2x}$'
+  answer: 3
+  explanation:
+    en: |-
+      IF $= e^{2x}$:
+      $$ye^{2x} = \int e^{-x}e^{2x}\,dx = e^{x} + C \implies y = e^{-x} + Ce^{-2x}.$$
+      Check: for $y = e^{-x}$, $y' + 2y = -e^{-x} + 2e^{-x} = e^{-x}$. The constant part must solve $y' + 2y = 0$, so it is $Ce^{-2x}$, not $Ce^{2x}$. The form $xe^{-2x}$ would be needed only if the right side were $e^{-2x}$.
+  status: ai-generated
+- id: q0004
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - linear-equations
+  stem:
+    en: 'The general solution of $x\dfrac{dy}{dx} + 2y = x^2$ $(x > 0)$ is'
+  options:
+  - en: '$y = \dfrac{x^2}{4} + \dfrac{C}{x^2}$'
+  - en: '$y = \dfrac{x^2}{3} + \dfrac{C}{x^2}$'
+  - en: '$y = \dfrac{x^2}{4} + Cx^2$'
+  - en: '$y = \dfrac{x^2}{2} + \dfrac{C}{x^2}$'
+  answer: 0
+  explanation:
+    en: |-
+      Standard form: $y' + \dfrac{2}{x}y = x$, so IF $= x^2$ and
+      $$x^2y = \int x^3\,dx = \frac{x^4}{4} + C \implies y = \frac{x^2}{4} + \frac{C}{x^2}.$$
+      $\dfrac{x^2}{3}$ integrates $x^2$ instead of $x^3$ (forgetting to divide the equation by $x$); $Cx^2$ multiplies by the IF instead of dividing.
+  status: ai-generated
+- id: q0005
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - linear-equations
+  stem:
+    en: 'If $\dfrac{dy}{dx} + y = 1$ and $y(0) = 0$, then $y(\ln 2)$ equals'
+  options:
+  - en: '$\dfrac12$'
+  - en: '$\dfrac32$'
+  - en: '$1$'
+  - en: '$\dfrac14$'
+  answer: 0
+  explanation:
+    en: |-
+      IF $= e^x$: $ye^x = e^x + C$, so $y = 1 + Ce^{-x}$. From $y(0) = 0$, $C = -1$:
+      $$y = 1 - e^{-x}, \qquad y(\ln 2) = 1 - \tfrac12 = \tfrac12.$$
+      $\frac32$ comes from $C = +1$ (sign slip); $1$ is the limit as $x \to \infty$, not the value at $\ln 2$.
+  status: ai-generated
+- id: q0006
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - linear-equations
+  stem:
+    en: 'The general solution of $y\,dx = (x + y^2)\,dy$ $(y > 0)$ is'
+  options:
+  - en: '$x = y^2 + \dfrac{C}{y}$'
+  - en: '$x = y^2 + Cy$'
+  - en: '$y = x^2 + Cx$'
+  - en: '$x = \dfrac{y^2}{2} + Cy$'
+  answer: 1
+  explanation:
+    en: |-
+      The equation is linear in $x$:
+      $$\frac{dx}{dy} - \frac{x}{y} = y, \qquad \text{IF} = e^{-\int dy/y} = \frac1y.$$
+      Then $\dfrac{x}{y} = \int y\cdot\dfrac1y\,dy = y + C$, so $x = y^2 + Cy$.
+
+      $\dfrac{C}{y}$ uses IF $y$ (sign slip in $P$); $y = x^2 + Cx$ swaps the roles of $x$ and $y$. Check: $x = y^2 + Cy$ gives $\frac{dx}{dy} = 2y + C = \frac{x}{y} + y$.
+  status: ai-generated
+- id: q0007
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - bernoulli
+  - exam-tips
+  stem:
+    en: 'The equation $\dfrac{dy}{dx} + \dfrac{y}{x} = xy^3$ becomes linear under the substitution'
+  options:
+  - en: '$v = y^{-3}$'
+  - en: '$v = y^{2}$'
+  - en: '$v = y^{-2}$'
+  - en: '$v = y^{-4}$'
+  answer: 2
+  explanation:
+    en: |-
+      This is Bernoulli with $n = 3$, and the substitution is $v = y^{1-n} = y^{-2}$. It gives
+      $$\frac{dv}{dx} - \frac{2}{x}v = -2x.$$
+      $y^{-3}$ uses $y^{-n}$ (the factor you divide by), not $y^{1-n}$.
+  status: ai-generated
+- id: q0008
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - bernoulli
+  stem:
+    en: 'The general solution of $\dfrac{dy}{dx} + y = xy^2$ (apart from $y = 0$) is'
+  options:
+  - en: '$\dfrac1y = x - 1 + Ce^{x}$'
+  - en: '$\dfrac1y = x + 1 + Ce^{x}$'
+  - en: '$\dfrac1y = x + 1 + Ce^{-x}$'
+  - en: '$y = x + 1 + Ce^{x}$'
+  answer: 1
+  explanation:
+    en: |-
+      Bernoulli with $n = 2$: put $v = \dfrac1y$, so $v' = -\dfrac{y'}{y^2}$. Dividing the equation by $-y^2$:
+      $$v' - v = -x, \qquad \text{IF } e^{-x}, \qquad ve^{-x} = \int -xe^{-x}\,dx = (x + 1)e^{-x} + C.$$
+      So $\dfrac1y = x + 1 + Ce^{x}$.
+
+      $Ce^{-x}$ forgets that the factor $(1 - n) = -1$ flips the sign of $P$; $x - 1$ is an integration-by-parts slip.
+  status: ai-generated
+- id: q0009
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - bernoulli
+  stem:
+    en: 'The general solution of $\sec^2 y\,\dfrac{dy}{dx} + 2x\tan y = x^3$ is'
+  options:
+  - en: '$\tan y = \dfrac{x^2 + 1}{2} + Ce^{-x^2}$'
+  - en: '$\tan y = \dfrac{x^2 - 1}{2} + Ce^{-x^2}$'
+  - en: '$\tan y = \dfrac{x^2 - 1}{2} + Ce^{x^2}$'
+  - en: '$\tan y = \dfrac{x^4}{4} + Ce^{-x^2}$'
+  answer: 1
+  explanation:
+    en: |-
+      Put $v = \tan y$, so $v' = \sec^2 y\,y'$:
+      $$v' + 2xv = x^3, \qquad \text{IF} = e^{x^2}.$$
+      With $t = x^2$: $\displaystyle\int x^3e^{x^2}dx = \tfrac12\int te^t\,dt = \tfrac12(x^2 - 1)e^{x^2}$. So
+      $$\tan y = \frac{x^2 - 1}{2} + Ce^{-x^2}.$$
+      $x^2 + 1$ is a sign slip in $\int te^t\,dt$; $\frac{x^4}{4}$ integrates $x^3$ without the IF.
+  status: ai-generated
+- id: q0010
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - higher-degree
+  stem:
+    en: 'The general solution of $p^2 - (x + y)p + xy = 0$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$(2y - x^2 - c)(y - ce^{-x}) = 0$'
+  - en: '$(2y - x^2 - c)(y - ce^{x}) = 0$'
+  - en: '$(y - x^2 - c)(y - ce^{x}) = 0$'
+  - en: '$(2y + x^2 - c)(y - ce^{x}) = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      The equation factorises: $(p - x)(p - y) = 0$.
+      - $p = x$ gives $y = \frac{x^2}{2} + \frac{c}{2}$, i.e. $2y - x^2 - c = 0$.
+      - $p = y$ gives $y = ce^x$.
+
+      So the general solution is $(2y - x^2 - c)(y - ce^x) = 0$, with one constant. $ce^{-x}$ solves $p = -y$; $y - x^2$ forgets the $\frac12$ in $\int x\,dx$.
+  status: ai-generated
+- id: q0011
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - higher-degree
+  stem:
+    en: 'For $y = 2px + p^2$, where $p = \dfrac{dy}{dx}$, differentiating with respect to $x$ and solving gives $x$ in terms of the parameter $p$ as'
+  options:
+  - en: '$x = \dfrac{c}{p^2} + \dfrac{2p}{3}$'
+  - en: '$x = cp^2 - \dfrac{2p}{3}$'
+  - en: '$x = \dfrac{c}{p} - p$'
+  - en: '$x = \dfrac{c}{p^2} - \dfrac{2p}{3}$'
+  answer: 3
+  explanation:
+    en: |-
+      Differentiating, $p = 2p + (2x + 2p)\dfrac{dp}{dx}$, so $-p\,\dfrac{dx}{dp} = 2x + 2p$:
+      $$\frac{dx}{dp} + \frac{2}{p}x = -2.$$
+      This is linear in $x$ with IF $p^2$: $xp^2 = \int -2p^2\,dp = -\frac{2p^3}{3} + c$. So
+      $$x = \frac{c}{p^2} - \frac{2p}{3}, \qquad y = 2px + p^2.$$
+      $cp^2$ multiplies by the IF instead of dividing; $+\frac{2p}{3}$ loses the minus sign.
+  status: ai-generated
+- id: q0012
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - singular-solutions
+  stem:
+    en: 'The singular solution of $p^2 + y^2 = 1$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$y = \pm1$'
+  - en: '$y = 0$'
+  - en: '$x = \pm1$'
+  - en: there is none
+  answer: 0
+  explanation:
+    en: |-
+      The $p$-discriminant: $\partial F/\partial p = 2p = 0$ with $F = 0$ gives $y^2 = 1$.
+
+      The general solution is $y = \sin(x + c)$ (from $\frac{dy}{\sqrt{1 - y^2}} = \pm dx$). The lines $y = \pm1$ satisfy the equation ($p = 0$, $0 + 1 = 1$), but no value of $c$ gives them. So they are singular solutions: the envelope of the sine curves.
+
+      $y = 0$ does not satisfy the equation: it would need $p^2 = 1$, but $p = 0$.
+  status: ai-generated
+- id: q0013
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - clairaut
+  stem:
+    en: 'The general solution of $y = px + p^2$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$y = cx + c^2$'
+  - en: '$y = cx^2 + c$'
+  - en: '$y = cx + c$'
+  - en: '$x^2 + 4y = 0$'
+  answer: 0
+  explanation:
+    en: |-
+      This is Clairaut's equation $y = px + f(p)$ with $f(p) = p^2$. Differentiating gives $(x + 2p)\,\frac{dp}{dx} = 0$. Then $\frac{dp}{dx} = 0$ gives $p = c$:
+      $$y = cx + c^2.$$
+      $x^2 + 4y = 0$ is the **singular** solution (from $x + 2p = 0$), not the general one.
+  status: ai-generated
+- id: q0014
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - clairaut
+  - singular-solutions
+  stem:
+    en: 'The singular solution of $y = px + p^2$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$x^2 - 4y = 0$'
+  - en: '$x^2 + 4y = 0$'
+  - en: '$y^2 + 4x = 0$'
+  - en: '$4x^2 + y = 0$'
+  answer: 1
+  explanation:
+    en: |-
+      Eliminate $p$ from $y = px + p^2$ and $x + 2p = 0$. With $p = -\frac{x}{2}$:
+      $$y = -\frac{x^2}{2} + \frac{x^2}{4} = -\frac{x^2}{4} \implies x^2 + 4y = 0.$$
+      Check: $y = -\frac{x^2}{4}$ has $p = -\frac{x}{2}$, and $px + p^2 = -\frac{x^2}{2} + \frac{x^2}{4} = y$. $x^2 - 4y = 0$ has the wrong sign: the lines $y = cx + c^2$ touch a downward parabola.
+  status: ai-generated
+- id: q0015
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - clairaut
+  stem:
+    en: 'The singular solution of $y = px - e^{p}$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$y = x\ln x + x$'
+  - en: '$y = x\ln x - x$'
+  - en: '$y = x\ln x$'
+  - en: '$y = x - x\ln x$'
+  answer: 1
+  explanation:
+    en: |-
+      Clairaut with $f(p) = -e^p$. The singular solution comes from $x + f'(p) = 0$:
+      $$x - e^p = 0 \implies p = \ln x \;(x > 0), \qquad y = x\ln x - e^{\ln x} = x\ln x - x.$$
+      Check: $y' = \ln x$, and $px - e^p = x\ln x - x = y$.
+
+      $x\ln x + x$ comes from $f(p) = +e^p$; $x\ln x$ drops the $-e^p$ term.
+  status: ai-generated
+- id: q0016
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - clairaut
+  - singular-solutions
+  stem:
+    en: 'The singular solution of $y = px + \sqrt{a^2p^2 + b^2}$ $(a, b > 0)$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$'
+  - en: '$x^2 + y^2 = a^2 + b^2$'
+  - en: '$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$'
+  - en: '$\dfrac{x^2}{b^2} + \dfrac{y^2}{a^2} = 1$'
+  answer: 2
+  explanation:
+    en: |-
+      The general solution is $y = cx + \sqrt{a^2c^2 + b^2}$. These are exactly the tangents of slope $c$ to the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, so their envelope is that ellipse.
+
+      Directly: $x + \dfrac{a^2p}{\sqrt{a^2p^2 + b^2}} = 0$ gives $x = -\dfrac{a^2p}{s}$ and $y = px + s = \dfrac{b^2}{s}$, where $s = \sqrt{a^2p^2 + b^2}$. Then
+      $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{a^2p^2 + b^2}{s^2} = 1.$$
+      The hyperbola has tangents $y = mx \pm\sqrt{a^2m^2 - b^2}$ (minus sign); $x^2 + y^2 = a^2 + b^2$ is the director circle.
+  status: ai-generated
+- id: q0017
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - clairaut
+  stem:
+    en: 'Using $X = x^2$, $Y = y^2$, the general solution of $x^2(y - px) = yp^2$, where $p = \dfrac{dy}{dx}$, is'
+  options:
+  - en: '$y^2 = cx^2 + c^2$'
+  - en: '$y = cx^2 + c^2$'
+  - en: '$y^2 = cx + c^2$'
+  - en: '$y^2 = cx^2 + c$'
+  answer: 0
+  explanation:
+    en: |-
+      With $P = \dfrac{dY}{dX} = \dfrac{2y\,dy}{2x\,dx} = \dfrac{yp}{x}$, we have $p = \dfrac{xP}{y}$. Substituting and multiplying by $y$:
+      $$x^2y^2 - x^4P = x^2P^2 \implies Y = PX + P^2.$$
+      This is Clairaut in $X, Y$, so $Y = cX + c^2$, i.e. $y^2 = cx^2 + c^2$.
+
+      $y = cx^2 + c^2$ forgets to convert $Y$ back to $y^2$; $y^2 = cx^2 + c$ uses the wrong $f(P)$.
+  status: ai-generated
+- id: q0018
+  type: single
+  difficulty: 2
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  stem:
+    en: 'The orthogonal trajectories of the family $y = cx^2$ are'
+  options:
+  - en: '$2x^2 + y^2 = k$'
+  - en: '$x^2 - 2y^2 = k$'
+  - en: '$x^2 + 2y^2 = k$'
+  - en: '$x^2 + y^2 = k$'
+  answer: 2
+  explanation:
+    en: |-
+      Eliminate $c$: $p = 2cx = \dfrac{2y}{x}$. Replace $p$ by $-\dfrac1p$:
+      $$-\frac{dx}{dy} = \frac{2y}{x} \implies x\,dx + 2y\,dy = 0 \implies x^2 + 2y^2 = k.$$
+      $2x^2 + y^2 = k$ belongs to the family $y^2 = cx$ (the roles of $x$ and $y$ swapped); $x^2 - 2y^2$ forgets the minus sign in $-\frac1p$.
+  status: ai-generated
+- id: q0019
+  type: single
+  difficulty: 3
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  stem:
+    en: 'The orthogonal trajectories of the cardioids $r = a(1 + \cos\theta)$ are'
+  options:
+  - en: '$r = b(1 + \sin\theta)$'
+  - en: '$r = b(1 + \cos\theta)$'
+  - en: '$r^2 = b\cos\theta$'
+  - en: '$r = b(1 - \cos\theta)$'
+  answer: 3
+  explanation:
+    en: |-
+      $\dfrac1r\dfrac{dr}{d\theta} = \dfrac{-\sin\theta}{1 + \cos\theta} = -\tan\dfrac\theta2$. Replace $\dfrac1r\dfrac{dr}{d\theta}$ by $-r\dfrac{d\theta}{dr}$:
+      $$r\frac{d\theta}{dr} = \tan\frac\theta2 \implies \frac{dr}{r} = \cot\frac\theta2\,d\theta \implies \ln r = 2\ln\sin\frac\theta2 + \text{const}.$$
+      So $r = b\sin^2\frac\theta2$, i.e. $r = b(1 - \cos\theta)$.
+
+      $r = b(1 + \cos\theta)$ is the original family; $r = b(1 + \sin\theta)$ is only the family rotated by $90^\circ$, which does not cut it orthogonally.
+  status: ai-generated
+- id: q0020
+  type: single
+  difficulty: 1
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  stem:
+    en: 'To find orthogonal trajectories of a family given in polar form $F\left(r, \theta, \dfrac{dr}{d\theta}\right) = 0$, replace $\dfrac{dr}{d\theta}$ by'
+  options:
+  - en: '$r^2\dfrac{d\theta}{dr}$'
+  - en: '$-\dfrac{d\theta}{dr}$'
+  - en: '$-r^2\dfrac{d\theta}{dr}$'
+  - en: '$-\dfrac{1}{r^2}\dfrac{d\theta}{dr}$'
+  answer: 2
+  explanation:
+    en: |-
+      The angle $\psi$ from the radius vector to the tangent satisfies $\tan\psi = r\dfrac{d\theta}{dr}$. For orthogonal curves at the same point, $\tan\psi_1\tan\psi_2 = -1$:
+      $$r\frac{d\theta}{dr}\bigg|_{\text{new}} = -\frac{1}{r\,d\theta/dr}\bigg|_{\text{old}} \implies \frac{dr}{d\theta}\bigg|_{\text{old}} = -r^2\frac{d\theta}{dr}\bigg|_{\text{new}}.$$
+      $-\dfrac{d\theta}{dr}$ is the Cartesian rule $p \to -1/p$ copied blindly; it ignores the factor $r$ in $\tan\psi$.
+  status: ai-generated
+- id: q0021
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - linear-equations
+  - bernoulli
+  stem:
+    en: Consider the following statements.
+  statements:
+  - en: '$\dfrac{dy}{dx} + xy^2 = x$ is a linear equation in $y$.'
+  - en: 'For $\dfrac{dy}{dx} + Py = Qy^n$ $(n \ne 0, 1)$, the substitution $v = y^{1-n}$ gives $\dfrac{dv}{dx} + (1 - n)Pv = (1 - n)Q$.'
+  - en: 'An integrating factor of $\dfrac{dx}{dy} + P(y)\,x = Q(y)$ is $e^{\int P(y)\,dy}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 2 and 3 only
+  - en: 1 and 2 only
+  - en: 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. **False.** The term $xy^2$ is quadratic in $y$. (It is in fact separable: $\frac{dy}{dx} = x(1 - y^2)$.)
+      2. **True.** $v' = (1 - n)y^{-n}y'$. Dividing the equation by $y^n$ gives $y^{-n}y' + Pv = Q$, and multiplying by $(1 - n)$ gives the stated linear form.
+      3. **True.** It is linear with $x$ dependent and $y$ independent, so the IF is $e^{\int P\,dy}$.
+  status: ai-generated
+- id: q0022
+  type: statements
+  difficulty: 3
+  exams: *id001
+  refs:
+  - singular-solutions
+  - clairaut
+  stem:
+    en: 'Consider the following statements about a first-order equation $F(x, y, p) = 0$ with general solution $\phi(x, y, c) = 0$.'
+  statements:
+  - en: 'The general solution of a Clairaut equation $y = px + f(p)$ is a family of straight lines.'
+  - en: 'A singular solution is obtained from the general solution by giving the constant $c$ a suitable particular value.'
+  - en: 'An envelope appears once in the $c$-discriminant, a node locus twice and a cusp locus three times.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  - en: 1 only
+  answer: 2
+  explanation:
+    en: |-
+      1. **True.** It is $y = cx + f(c)$.
+      2. **False.** That is the definition of a *particular* solution. A singular solution satisfies the equation but is not obtained for any $c$ (e.g. $x^2 + 4y = 0$ for $y = px + p^2$).
+      3. **True.** Schematically, the $c$-discriminant is $E\,N^2C^3 = 0$, while the $p$-discriminant is $E\,T^2C = 0$.
+  status: ai-generated
+- id: q0023
+  type: statements
+  difficulty: 2
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  stem:
+    en: Consider the following statements about orthogonal trajectories.
+  statements:
+  - en: 'The family of parabolas $y^2 = 4a(x + a)$ is self-orthogonal.'
+  - en: 'The orthogonal trajectories of the circles $x^2 + y^2 = 2cx$ are the circles $x^2 + y^2 = 2ky$.'
+  - en: 'The orthogonal trajectories of $y = ce^{x}$ are $y = ke^{-x}$.'
+  question:
+    en: Which of the statements given above is/are correct?
+  options:
+  - en: 1 and 2 only
+  - en: 2 and 3 only
+  - en: 1 and 3 only
+  - en: '1, 2 and 3'
+  answer: 0
+  explanation:
+    en: |-
+      1. **True.** Eliminating $a$ (with $2yp = 4a$) gives $y = 2xp + yp^2$. Replacing $p$ by $-\frac1p$ and multiplying by $p^2$ gives back the same equation.
+      2. **True.** For $x^2 + y^2 = 2cx$, $p = \dfrac{y^2 - x^2}{2xy}$. For $x^2 + y^2 = 2ky$, $p = \dfrac{2xy}{x^2 - y^2}$, which is exactly $-\frac1p$ of the first.
+      3. **False.** For $y = ce^x$, $p = y$; the trajectories satisfy $p = -\frac1y$, so $y^2 = k - 2x$ (parabolas). $y = ke^{-x}$ would come from $p = -y$.
+  status: ai-generated
+- id: q0024
+  type: match
+  difficulty: 1
+  exams: *id001
+  refs:
+  - linear-equations
+  stem:
+    en: Match each equation with an integrating factor.
+  left:
+  - en: '$\dfrac{dy}{dx} + \dfrac{y}{x} = x^2$'
+  - en: '$\dfrac{dy}{dx} - \dfrac{y}{x} = x$'
+  - en: '$\dfrac{dy}{dx} + y\cot x = \cos x$'
+  - en: '$\dfrac{dy}{dx} + 2xy = x$'
+  right:
+  - en: '$\sin x$'
+  - en: '$e^{x^2}$'
+  - en: '$x$'
+  - en: '$\dfrac1x$'
+  options:
+  - en: 'A-4, B-3, C-1, D-2'
+  - en: 'A-3, B-4, C-2, D-1'
+  - en: 'A-1, B-4, C-3, D-2'
+  - en: 'A-3, B-4, C-1, D-2'
+  answer: 3
+  explanation:
+    en: |-
+      IF $= e^{\int P\,dx}$ (take $x > 0$ and $0 < x < \pi$):
+      - A: $P = \frac1x$, IF $= x$.
+      - B: $P = -\frac1x$, IF $= \frac1x$.
+      - C: $P = \cot x$, IF $= e^{\ln\sin x} = \sin x$.
+      - D: $P = 2x$, IF $= e^{x^2}$.
+
+      Swapping A and B is the sign slip in $P$.
+  status: ai-generated
+- id: q0025
+  type: match
+  difficulty: 2
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  stem:
+    en: Match each family with its orthogonal trajectories.
+  left:
+  - en: '$y = cx$'
+  - en: '$xy = c$'
+  - en: '$y^2 = cx$'
+  - en: '$r = a\cos\theta$'
+  right:
+  - en: '$x^2 - y^2 = k$'
+  - en: '$x^2 + y^2 = k$'
+  - en: '$r = b\sin\theta$'
+  - en: '$2x^2 + y^2 = k$'
+  options:
+  - en: 'A-2, B-1, C-3, D-4'
+  - en: 'A-1, B-2, C-4, D-3'
+  - en: 'A-2, B-1, C-4, D-3'
+  - en: 'A-2, B-4, C-1, D-3'
+  answer: 2
+  explanation:
+    en: |-
+      - A: $p = \frac yx$; trajectories $\frac{dy}{dx} = -\frac xy$, so $x^2 + y^2 = k$.
+      - B: $p = -\frac yx$; trajectories $\frac{dy}{dx} = \frac xy$, so $x^2 - y^2 = k$.
+      - C: $2yp = c = \frac{y^2}{x}$, so $p = \frac{y}{2x}$; trajectories $y\,dy = -2x\,dx$, so $2x^2 + y^2 = k$.
+      - D: $\frac1r\frac{dr}{d\theta} = -\tan\theta$; then $r\frac{d\theta}{dr} = \tan\theta$, so $\frac{dr}{r} = \cot\theta\,d\theta$ and $r = b\sin\theta$.
+
+      The circles through the origin tangent to the $y$-axis are cut orthogonally by those tangent to the $x$-axis.
+  status: ai-generated
+- id: q0026
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - clairaut
+  - singular-solutions
+  assertion:
+    en: 'The equation $y = px + \dfrac1p$, where $p = \dfrac{dy}{dx}$, has the singular solution $y^2 = 4x$.'
+  reason:
+    en: 'The singular solution of Clairaut''s equation $y = px + f(p)$ is the envelope of the family of lines $y = cx + f(c)$.'
+  answer: 0
+  explanation:
+    en: |-
+      **A is true.** From $x - \frac{1}{p^2} = 0$, $p = \frac{1}{\sqrt x}$, and $y = \sqrt x + \sqrt x = 2\sqrt x$, so $y^2 = 4x$.
+
+      **R is true** and it is exactly why A holds: $y = cx + \frac1c$ is the tangent of slope $c$ to the parabola $y^2 = 4x$, so the envelope of these lines is that parabola.
+  status: ai-generated
+- id: q0027
+  type: assertion-reason
+  difficulty: 1
+  exams: *id001
+  refs:
+  - bernoulli
+  - linear-equations
+  assertion:
+    en: '$\dfrac{dy}{dx} + \dfrac{y}{x} = y^2$ $(x > 0)$ is a Bernoulli equation.'
+  reason:
+    en: 'Every first-order linear equation is a Bernoulli equation with $n = 0$.'
+  answer: 1
+  explanation:
+    en: |-
+      **A is true:** it has the form $y' + Py = Qy^n$ with $P = \frac1x$, $Q = 1$, $n = 2$.
+
+      **R is true:** with $n = 0$, $Qy^0 = Q$. But R is about $n = 0$, and A has $n = 2$, so R does not explain A.
+  status: ai-generated
+- id: q0028
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - singular-solutions
+  - higher-degree
+  assertion:
+    en: 'The equation $y = px + p^2$, where $p = \dfrac{dy}{dx}$, has a singular solution.'
+  reason:
+    en: 'Every first-order equation of degree greater than one in $p$ has a singular solution.'
+  answer: 2
+  explanation:
+    en: |-
+      **A is true:** $x^2 + 4y = 0$ satisfies it and is not a member of $y = cx + c^2$.
+
+      **R is false.** $p^2 - 5p + 6 = 0$ has degree 2, but its $p$-discriminant $25 - 24 = 1$ never vanishes. Its solutions are only the lines $y = 2x + c$ and $y = 3x + c$, and there is no singular solution.
+  status: ai-generated
+- id: q0029
+  type: assertion-reason
+  difficulty: 3
+  exams: *id001
+  refs:
+  - orthogonal-trajectories
+  assertion:
+    en: 'The orthogonal trajectories of the family $y^2 = 4a(x + a)$ form a family different from the given one.'
+  reason:
+    en: 'In Cartesian coordinates, orthogonal trajectories are found by replacing $\dfrac{dy}{dx}$ by $-\dfrac{dx}{dy}$ in the differential equation of the family.'
+  answer: 3
+  explanation:
+    en: |-
+      **A is false.** The family's equation is $y = 2xp + yp^2$. Replace $p$ by $-\frac1p$: $y = -\frac{2x}{p} + \frac{y}{p^2}$. Multiplying by $p^2$ gives $yp^2 = -2xp + y$, i.e. $y = 2xp + yp^2$ again. The family (confocal parabolas) is **self-orthogonal**.
+
+      **R is true:** this is the standard rule, since slopes of perpendicular curves multiply to $-1$.
+  status: ai-generated
+- id: q0030
+  type: assertion-reason
+  difficulty: 2
+  exams: *id001
+  refs:
+  - linear-equations
+  - singular-solutions
+  assertion:
+    en: 'The linear equation $\dfrac{dy}{dx} + P(x)\,y = Q(x)$, with $P$ and $Q$ continuous on an interval $I$, has no singular solution on $I$.'
+  reason:
+    en: 'For such an equation there is exactly one solution through each point $(x_0, y_0)$ with $x_0 \in I$, and $y\,e^{\int P\,dx} = \int Qe^{\int P\,dx}\,dx + C$ gives all solutions.'
+  answer: 0
+  explanation:
+    en: |-
+      **R is true:** this is the existence and uniqueness theorem for linear equations. Every solution through $(x_0, y_0)$ is the member of the general solution with the matching $C$.
+
+      **A follows from R:** a singular solution would be a solution not in the family $y\mu = \int Q\mu + C$, and uniqueness rules that out. So both are true and R explains A.
+  status: ai-generated

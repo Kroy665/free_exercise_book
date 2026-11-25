@@ -1,0 +1,19 @@
+id: math.ode.ode-higher-order
+title:
+  en: Higher-Order Linear Equations
+summary:
+  en: Linear equations of order n, the Wronskian and linear independence, homogeneous equations with constant coefficients, particular integrals by the D-operator (e^{ax}, sin and cos, x^m, e^{ax}V, xV), variation of parameters, and Cauchy–Euler and Legendre linear equations.
+order: 3
+exams: [slst-0910, slst-1112]
+prerequisites: [math.ode.ode-linear-clairaut]
+estimated_minutes: 70
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - "H. T. H. Piaggio, An Elementary Treatise on Differential Equations and Their Applications, ch. 5–7"
+  - M. D. Raisinghania, Ordinary and Partial Differential Equations, ch. on linear equations with constant coefficients, homogeneous linear equations and variation of parameters
+  - "G. F. Simmons, Differential Equations with Applications and Historical Notes, ch. 3"
+  - "E. A. Coddington, An Introduction to Ordinary Differential Equations, ch. 2–3"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) V.2 and (PG) III.5
+retired: []

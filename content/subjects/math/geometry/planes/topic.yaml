@@ -1,0 +1,18 @@
+id: math.geometry.planes
+title:
+  en: 3D Coordinates and Planes
+summary:
+  en: Coordinates in space, distance and section formula, direction cosines and ratios, angle between lines and projection; the plane in general, intercept, normal and three-point forms, signed distance and sides of a plane, angle between planes, planes through the intersection of two planes, bisector planes and pairs of planes.
+order: 5
+exams: [slst-0910, slst-1112]
+prerequisites: [math.linalg.determinants]
+estimated_minutes: 65
+version: 0.1.0
+status: ai-generated
+reviewers: []
+sources:
+  - "B. C. Das and B. N. Mukherjee, Analytical Geometry of Two and Three Dimensions, ch. on coordinates, direction cosines and the plane"
+  - R. J. T. Bell, An Elementary Treatise on Coordinate Geometry of Three Dimensions, ch. 1 to 3
+  - "Shanti Narayan and P. K. Mittal, Analytical Solid Geometry, ch. 1 and 2"
+  - WBSSC 2nd SLST syllabus, Mathematics (GRAD) II.B.1 to II.B.2 and (PG) IV.B.1 to IV.B.2
+retired: []
