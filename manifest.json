@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": 1794995993,
+  "generated_at": 1795586590,
   "min_app_version": "0.1.0",
   "packs": [
     {
@@ -1075,6 +1075,484 @@
       "file": "math.integral.area-length-volume@0.1.0.pack",
       "size": 13254,
       "sha256": "aa80c9306b14041278a975acd5ba00030008b2dc7080e7fb258a2193515f3812"
+    },
+    {
+      "id": "math.ode.ode-first-order",
+      "version": "0.1.0",
+      "title": {
+        "en": "First-Order Equations"
+      },
+      "summary": {
+        "en": "Order and degree, formation of ODEs by eliminating constants, the existence-uniqueness theorem, separable and homogeneous equations (and those reducible to them), exact equations and the standard rules for integrating factors."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.ode",
+      "unit_title": {
+        "en": "Ordinary Differential Equations"
+      },
+      "unit_order": 5,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.ode.ode-first-order@0.1.0.pack",
+      "size": 13873,
+      "sha256": "f0a182159280d242140db3f7a82066f1551e888398020eb0e1919ac6a6f89f61"
+    },
+    {
+      "id": "math.ode.ode-linear-clairaut",
+      "version": "0.1.0",
+      "title": {
+        "en": "Linear, Bernoulli and Clairaut Equations"
+      },
+      "summary": {
+        "en": "First-order linear equations and the integrating factor, Bernoulli and other equations reducible to linear form, first-order equations of higher degree (solvable for p, y or x), Clairaut's equation, singular solutions via the p- and c-discriminants, and orthogonal trajectories in Cartesian and polar coordinates."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.ode",
+      "unit_title": {
+        "en": "Ordinary Differential Equations"
+      },
+      "unit_order": 5,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.ode.ode-linear-clairaut@0.1.0.pack",
+      "size": 13006,
+      "sha256": "59c3de82de1cccab423a542432acc9ed59ddd66968d3c80e49af8446664545e3"
+    },
+    {
+      "id": "math.ode.ode-higher-order",
+      "version": "0.1.0",
+      "title": {
+        "en": "Higher-Order Linear Equations"
+      },
+      "summary": {
+        "en": "Linear equations of order n, the Wronskian and linear independence, homogeneous equations with constant coefficients, particular integrals by the D-operator (e^{ax}, sin and cos, x^m, e^{ax}V, xV), variation of parameters, and Cauchy–Euler and Legendre linear equations."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.ode",
+      "unit_title": {
+        "en": "Ordinary Differential Equations"
+      },
+      "unit_order": 5,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.ode.ode-higher-order@0.1.0.pack",
+      "size": 14101,
+      "sha256": "c0da3a001f7d4b502567cc68c0c85764db528b4da2ad3251371317bbb63d9eee"
+    },
+    {
+      "id": "math.geometry.axes-conics",
+      "version": "0.1.0",
+      "title": {
+        "en": "Transformation of Axes and General Conics"
+      },
+      "summary": {
+        "en": "Translation and rotation of rectangular axes, the invariants a + b, ab − h² and Δ, removing the xy-term, the centre of a conic, reduction of the general second-degree equation to canonical form, classification of conics, and the standard properties of the ellipse, parabola and hyperbola."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.geometry.axes-conics@0.1.0.pack",
+      "size": 13864,
+      "sha256": "bb700299617ab6a8b03a96e86dc6e47edd710d8cf7a379d28cccb5c19d1d4604"
+    },
+    {
+      "id": "math.geometry.pair-of-lines",
+      "version": "0.1.0",
+      "title": {
+        "en": "Pair of Straight Lines"
+      },
+      "summary": {
+        "en": "Homogeneous second-degree equations, angle between the pair, perpendicular and coincident conditions, angle bisectors, the condition Δ = 0 for the general equation, the point of intersection, and homogenisation to join the origin to the intersections of a line with a conic."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.geometry.pair-of-lines@0.1.0.pack",
+      "size": 12696,
+      "sha256": "5fa23d91986a461d791166f9918505cd3dfe3696fc569c0a52a1ba94e7d67f5c"
+    },
+    {
+      "id": "math.geometry.tangents-polars",
+      "version": "0.1.0",
+      "title": {
+        "en": "Tangents, Poles and Polars"
+      },
+      "summary": {
+        "en": "Tangents and normals to the circle, parabola, ellipse and hyperbola in point, slope and parametric forms, conditions of tangency, the pair of tangents SS₁ = T², chord of contact, chord with a given midpoint, poles and polars, conjugate points and lines, and the director circle."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 3,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.geometry.tangents-polars@0.1.0.pack",
+      "size": 13719,
+      "sha256": "fbc582eb18fa565f23e0d8481a2275f84d4bba2d60ae19e0128650bb4f04ef84"
+    },
+    {
+      "id": "math.geometry.polar-equations",
+      "version": "0.1.0",
+      "title": {
+        "en": "Polar Equations"
+      },
+      "summary": {
+        "en": "Polar coordinates and conversion, the polar equations of a straight line and a circle, the conic l/r = 1 + e cos θ with a focus as pole, chords, tangents and normals in polar form, and the properties of focal chords."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 4,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.geometry.polar-equations@0.1.0.pack",
+      "size": 12660,
+      "sha256": "c4689e46eca31d5c7df408679a1142f8ded98bbde725ffd8f6bb1c9fcc6ac40a"
+    },
+    {
+      "id": "math.geometry.planes",
+      "version": "0.1.0",
+      "title": {
+        "en": "3D Coordinates and Planes"
+      },
+      "summary": {
+        "en": "Coordinates in space, distance and section formula, direction cosines and ratios, angle between lines and projection; the plane in general, intercept, normal and three-point forms, signed distance and sides of a plane, angle between planes, planes through the intersection of two planes, bisector planes and pairs of planes."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 5,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.geometry.planes@0.1.0.pack",
+      "size": 14776,
+      "sha256": "46da58fa05fae97b03e19d32cb666503d1035c47b811025469d967a0ef3d44c0"
+    },
+    {
+      "id": "math.geometry.lines-3d",
+      "version": "0.1.0",
+      "title": {
+        "en": "Straight Lines in Space"
+      },
+      "summary": {
+        "en": "Symmetric and parametric forms, reduction of a line given by two planes, angle between a line and a plane, a line lying in a plane, foot of the perpendicular and image of a point, coplanarity and intersection of two lines, and the shortest distance between skew lines with the equations of the line of shortest distance."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 6,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.geometry.lines-3d@0.1.0.pack",
+      "size": 14007,
+      "sha256": "979988cb7967818ae55cbfb6f9b0f7b3f68885cf10e4c3cb780c61b9ce55948e"
+    },
+    {
+      "id": "math.geometry.sphere",
+      "version": "0.1.0",
+      "title": {
+        "en": "The Sphere"
+      },
+      "summary": {
+        "en": "General equation, centre and radius, the sphere on a diameter and through four points, plane sections, spheres through a circle (S + λP = 0), intersection of two spheres, tangent planes and the condition of tangency, power of a point, radical plane, line and centre, and orthogonal and touching spheres."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 7,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 65,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.geometry.sphere@0.1.0.pack",
+      "size": 13766,
+      "sha256": "dbba3a6b12f9f8ad00d1e682558f400391ea329b8838372e69654feca1694efe"
+    },
+    {
+      "id": "math.geometry.quadrics",
+      "version": "0.1.0",
+      "title": {
+        "en": "Quadrics"
+      },
+      "summary": {
+        "en": "The general second-degree equation in x, y, z and its matrix form, the invariants I, J, D and Δ, reduction to canonical form by eigenvalues, central and non-central quadrics, classification (ellipsoid, hyperboloids, paraboloids, cones, cylinders, pairs of planes) and tangent planes to conicoids."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.geometry",
+      "unit_title": {
+        "en": "Analytical Geometry"
+      },
+      "unit_order": 6,
+      "order": 8,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 70,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.geometry.quadrics@0.1.0.pack",
+      "size": 15525,
+      "sha256": "2bb5bf71604ccd350d097e1db6a937a3bfc6ecd04470585e0d1bf571cb0c2495"
+    },
+    {
+      "id": "math.vectors.vector-algebra",
+      "version": "0.1.0",
+      "title": {
+        "en": "Vector Algebra"
+      },
+      "summary": {
+        "en": "Free and position vectors, linear combinations, collinearity and coplanarity, the section formula, scalar and vector products with projection and area, scalar and vector triple products, Lagrange's identity and products of four vectors."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.vectors",
+      "unit_title": {
+        "en": "Vector Algebra and Applications"
+      },
+      "unit_order": 7,
+      "order": 1,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-0910",
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 7,
+        "questions": 30
+      },
+      "file": "math.vectors.vector-algebra@0.1.0.pack",
+      "size": 14314,
+      "sha256": "c4ead4cb45725fece0e2b2c527ebdf22ef37cfa30f842f8a3045eebc237290f2"
+    },
+    {
+      "id": "math.vectors.vector-applications",
+      "version": "0.1.0",
+      "title": {
+        "en": "Vector Applications and Calculus"
+      },
+      "summary": {
+        "en": "Work done by a force, moment of a force about a point and about a line, vector equations of lines and planes, shortest distance, volume of a tetrahedron, and differentiation of vector functions with velocity and acceleration."
+      },
+      "subject": "math",
+      "subject_title": {
+        "en": "Mathematics"
+      },
+      "subject_order": 1,
+      "unit": "math.vectors",
+      "unit_title": {
+        "en": "Vector Algebra and Applications"
+      },
+      "unit_order": 7,
+      "order": 2,
+      "langs": [
+        "en"
+      ],
+      "exams": [
+        "slst-1112"
+      ],
+      "status": "ai-generated",
+      "estimated_minutes": 60,
+      "counts": {
+        "sections": 8,
+        "questions": 30
+      },
+      "file": "math.vectors.vector-applications@0.1.0.pack",
+      "size": 14968,
+      "sha256": "f8f2905519e78a8a8066eb400fba3a94dd974630ad7c2d6255ba42be02c51d4f"
     }
   ],
   "exams": [
