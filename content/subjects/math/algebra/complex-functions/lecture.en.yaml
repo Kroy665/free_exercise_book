@@ -1,0 +1,307 @@
+# Spoken lecture for "Functions of a Complex Variable".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: exponential
+    say: >
+      Welcome. In this lecture we extend the elementary functions to complex arguments: the
+      exponential, sine and cosine, the hyperbolic functions, the logarithm, general powers and
+      the inverse functions. By the end you should be able to find all values of a logarithm or a
+      power such as i to the power i, solve equations like cos z equals two, and separate any of
+      these functions into real and imaginary parts without falling into the sign traps.
+
+  - section: exponential
+    focus: '$$e^z = \exp z = e^x(\cos y + i\sin y).$$'
+    say: >
+      Everything is built from one definition, on the board. For z equal to x plus i y, e to the
+      z is e to the x, times cos y plus i sin y. The real part of z sets the size, and the
+      imaginary part sets the direction. Put x equal to zero and you get Euler's formula, and
+      from it cosine and sine as the average and the difference of e to the i y and e to the
+      minus i y. Remember e to the i pi is minus one.
+
+  - section: exponential
+    focus: '$e^z \neq 0$ for every $z$, because $\lvert e^z\rvert = e^x > 0$.'
+    say: >
+      Read the key facts. The modulus of e to the z is e to the real part of z, which is always
+      positive, so the exponential never vanishes. The usual law e to the a times e to the b
+      equals e to the a plus b still holds. And the exponential takes every non zero complex
+      value, in fact infinitely often. Zero is the one value it misses.
+
+  - section: exponential
+    focus: '**Periodic with period $2\pi i$:** $e^{z + 2\pi i} = e^z$. Every period is $2n\pi i$, $n \in \Z$; $2\pi i$ is the fundamental period.'
+    say: >
+      Here is the genuinely new feature. Adding two pi i to z adds two pi to the angle, so
+      nothing changes. The complex exponential is periodic, with the imaginary period two pi i.
+      Every period is an integer multiple of two pi i, and e to the z equals one exactly when z
+      is such a multiple. So e to the z equals e to the w only tells you that z minus w is a
+      multiple of two pi i.
+
+  - section: exponential
+    focus: '$e^z$ is **not** one-to-one on $\C$: $e^{0} = e^{2\pi i}$.'
+    say: >
+      That is the caution in the box. The exponential is not one to one, because e to the zero
+      and e to the two pi i are both one. This single fact is the reason the logarithm will be
+      many valued. To solve e to the z equals w, match the modulus and the angle: e to the x is
+      the modulus of w, and y is any argument of w. For e to the z equals minus one, you get z
+      equals an odd multiple of pi i.
+
+  - section: exponential
+    question: q0005
+    say: >
+      A quick one on periods. What is the fundamental period of e to the z?
+    answer: >
+      The answer is two pi i. Adding two pi i only adds two pi to the angle, which changes
+      nothing. The tempting option is two pi, but adding the real number two pi multiplies e to
+      the z by e to the two pi, so that is not a period at all.
+
+  - section: circular-functions
+    focus: '$$\sin z = \frac{e^{iz} - e^{-iz}}{2i}, \qquad \cos z = \frac{e^{iz} + e^{-iz}}{2}, \qquad \tan z = \frac{\sin z}{\cos z}.$$'
+    say: >
+      Euler's formula tells us how to define sine and cosine for every complex z. Sine z is e to
+      the i z minus e to the minus i z, over two i. Cosine z is the sum, over two. Tangent is the
+      ratio. Because they are built from the exponential, every algebraic identity survives:
+      sine squared plus cosine squared is one, the addition formulae hold, sine is odd, cosine is
+      even, and the periods are two pi, and pi for the tangent.
+
+  - section: circular-functions
+    focus: '**The only zeros are the real ones.**'
+    say: >
+      The zeros also survive unchanged. Sine z is zero only at the integer multiples of pi, and
+      cosine z only at the odd multiples of pi by two. No new complex zeros appear. The proof
+      idea is short: sine z equals zero means e to the two i z equals one, so two i z is a
+      multiple of two pi i, and z is a multiple of pi.
+
+  - section: circular-functions
+    focus: '$$\cos(iy) = \frac{e^{-y} + e^{y}}{2} = \cosh y, \qquad \sin(iy) = \frac{e^{-y} - e^{y}}{2i} = i\sinh y.$$'
+    say: >
+      Now what fails: boundedness. On the imaginary axis, cos of i y is cosh y, and sin of i y is
+      i times sinh y. Both grow like half of e to the modulus of y. So complex sine and cosine are
+      unbounded, and an equation like cos z equals two has solutions. The neat formula to keep is
+      that the modulus of sin z, squared, equals sine squared x plus sinh squared y. For cosine,
+      replace sine squared x by cosine squared x.
+
+  - section: circular-functions
+    focus: '**Example: solve $\cos z = 2$.**'
+    say: >
+      Let's walk through cos z equals two. Write cos z as cos x cosh y, minus i sin x sinh y. The
+      imaginary part must vanish. y cannot be zero, since cos x cannot be two, so sin x is zero.
+      Then cos x is plus or minus one, and because cosh y is positive, cos x must be plus one. So
+      x is two n pi, and cosh y equals two, giving y equals plus or minus log of two plus root
+      three.
+
+  - section: circular-functions
+    question: q0013
+    say: >
+      Now try it in the exam format. Find all solutions of cos z equals two.
+    answer: >
+      The answer is two n pi, plus or minus i times log of two plus root three. The real part
+      must be an even multiple of pi, because cos x has to equal plus one, not minus one. So n pi
+      is wrong. And "no solutions" is the trap from real analysis: complex cosine is unbounded.
+
+  - section: circular-functions
+    focus: '$\lvert\sin z\rvert \le 1$ and $\lvert\cos z\rvert \le 1$ are true only for **real** $z$.'
+    say: >
+      Keep this caution in mind. The bound by one holds only for real z. For example, the modulus
+      of sin of two i is sinh two, about 3.63. The exam tip adds the deeper reason: Liouville's
+      theorem says a bounded entire function is constant, so sine had to be unbounded. In the
+      exam, quoting cos of i y equals cosh y is enough.
+
+  - section: hyperbolic-functions
+    focus: '| $\sin(iz) = i\sinh z$ | $\sinh(iz) = i\sin z$ |'
+    say: >
+      The hyperbolic functions are defined exactly as in the real case, with e to the z and e to
+      the minus z. The table is the bridge to the circular functions. Sin of i z is i sinh z, and
+      sinh of i z is i sin z. Cos of i z is cosh z, and cosh of i z is cos z. Tangent and tanh
+      behave like sine, with a factor i. Memorise these rows; almost every question uses one.
+
+  - section: hyperbolic-functions
+    focus: '**Osborn''s rule**: change the sign of every term containing a product of two $\sinh$ factors'
+    say: >
+      Because of this bridge, any circular identity becomes a hyperbolic one. Osborn's rule tells
+      you how: replace each function by its hyperbolic partner, and change the sign of every term
+      that contains a product of two sinh factors. So cos squared plus sin squared equals one
+      becomes cosh squared minus sinh squared equals one, and cos two z equals one minus two sin
+      squared becomes cosh two z equals one plus two sinh squared.
+
+  - section: hyperbolic-functions
+    focus: 'So the zeros of the hyperbolic functions lie on the **imaginary** axis; only $z = 0$ is real.'
+    say: >
+      Periods and zeros are rotated versions of the circular ones. Sinh and cosh have period two
+      pi i, and tanh has period pi i. Sinh z vanishes at the multiples of pi i, and cosh z at the
+      odd multiples of pi i by two. So the hyperbolic zeros all lie on the imaginary axis, and the
+      only real one is the zero of sinh at the origin.
+
+  - section: hyperbolic-functions
+    focus: '**Example: solve $\sinh z = i$.**'
+    say: >
+      To solve sinh z equals i, use the bridge. Sinh z is minus i times sin of i z, so sin of i z
+      must be minus one. That gives i z equals minus pi by two plus two n pi, and so z equals i
+      times pi by two plus two n pi. Notice that three pi i by two is not a solution: sinh of that
+      is minus i. Only every second odd multiple works.
+
+  - section: hyperbolic-functions
+    question: q0004
+    say: >
+      Check the bridge. For every complex z, what does sin of i z equal?
+    answer: >
+      Sin of i z equals i sinh z. Put i z into the definition of sine: the i squared in the
+      exponents gives e to the minus z minus e to the z, over two i, which is i times sinh z. The
+      tempting wrong option is minus i sinh z, which comes from a sign slip with one over i.
+
+  - section: hyperbolic-functions
+    focus: 'Watch the sign in $\cosh^2 z - \sinh^2 z = 1$ (minus) against $\cos^2 z + \sin^2 z = 1$ (plus).'
+    say: >
+      Two signs to watch. Cosh squared minus sinh squared is one, with a minus, while cos squared
+      plus sin squared is one, with a plus. And sin of i z is plus i sinh z, never minus i sinh z,
+      and never plain sinh z. For real x, cosh x is at least one and sinh x takes every real
+      value, which is why the real inverse functions are single valued.
+
+  - section: logarithm
+    focus: '$$\log z = \ln\lvert z\rvert + i\left(\operatorname{Arg} z + 2n\pi\right), \qquad n \in \Z.$$'
+    say: >
+      Now the logarithm. A logarithm of a non zero z is any w with e to the w equal to z. Matching
+      modulus and angle gives the formula on the board: log z is the real log of the modulus of z,
+      plus i times the principal argument plus two n pi. So log z has infinitely many values,
+      spaced two pi i apart on a vertical line. Log of zero does not exist, because the
+      exponential is never zero.
+
+  - section: logarithm
+    focus: '$$\operatorname{Log} z = \ln\lvert z\rvert + i\operatorname{Arg} z, \qquad -\pi < \operatorname{Arg} z \le \pi.$$'
+    say: >
+      The principal value, written with a capital L, takes n equal to zero. Its imaginary part
+      lies in the interval from minus pi, excluded, to pi, included. So the principal log of minus
+      one is i pi, not minus i pi. From the table, keep two rows: Log i is i pi by two, and Log of
+      one plus i is half log two plus i pi by four.
+
+  - section: logarithm
+    focus: '**For principal values, they can fail:**'
+    say: >
+      The laws of logarithms need care. As sets of values, log of a product is the sum of the
+      logs; every value on one side is a value on the other. But for principal values the law can
+      fail by two pi i, because adding two arguments can push you out of the principal interval.
+      Similarly, log of z squared and two log z are different sets: two log z keeps only the even
+      multiples.
+
+  - section: logarithm
+    question: q0015
+    say: >
+      Here is the standard counterexample. Take both numbers equal to minus one plus i, and
+      compute the difference of principal logs.
+    answer: >
+      The answer is two pi i. Each argument is three pi by four, so the two Logs add to log two
+      plus three pi i by two. But the product is minus two i, whose principal argument is minus pi
+      by two. The difference is exactly two pi i, not zero.
+
+  - section: logarithm
+    focus: 'But $\operatorname{Log}(e^z) = z$ holds **only** when $-\pi < \operatorname{Im} z \le \pi$.'
+    say: >
+      One more asymmetry. e to the Log z always gives back z. But Log of e to the z gives back z
+      only when the imaginary part of z lies in the principal interval. For example, Log of e to
+      the two pi i is Log one, which is zero. And read the notation in the question: capital Log
+      means principal value; if the options contain n, the general value is wanted.
+
+  - section: general-power
+    focus: '$$a^z = e^{z\log a} = e^{z(\operatorname{Log} a + 2n\pi i)}, \qquad n \in \Z.$$'
+    say: >
+      General powers are defined through the logarithm: a to the z is e to the z log a. Since log
+      a has many values, so does a to the z, and the principal value uses Log a. How many values?
+      Look at the table. An integer exponent gives one value. A rational p over q in lowest terms
+      gives exactly q values, as in De Moivre. Anything else, irrational or non real, gives
+      infinitely many.
+
+  - section: general-power
+    focus: 'Every value is a positive real number, and the **principal value is $e^{-\pi/2} \approx 0.208$**.'
+    say: >
+      The famous example is i to the power i. Log i is i times pi by two plus two n pi.
+      Multiplying by i turns i times i into minus one, so i to the i is e to the minus pi by two
+      minus two n pi. Every value is real and positive, and the principal value is e to the minus
+      pi by two, about 0.208. Similarly, one to the i has principal value one, but infinitely many
+      other real values.
+
+  - section: general-power
+    question: q0003
+    say: >
+      Try it now. What is the principal value of i to the power i?
+    answer: >
+      e to the minus pi by two. Principal Log i is i pi by two, so i times Log i is minus pi by
+      two, and you exponentiate. The tempting option e to the pi by two comes from forgetting that
+      i times i is minus one.
+
+  - section: general-power
+    focus: 'Only $a^{z}a^{w} = a^{z + w}$ (same base, same branch of $\log a$) is safe.'
+    say: >
+      The caution here: the index laws fail for principal values. The power of a power, and the
+      product of powers with different bases, need not behave. Minus one squared, to the power a
+      half, is one, but minus one to the power one is minus one. Only the law a to the z times a
+      to the w equals a to the z plus w is safe. Method: compute Log a, multiply by z, then
+      exponentiate.
+
+  - section: inverse-functions
+    focus: '$$e^{iw} = iz \pm \sqrt{1 - z^2}, \qquad\text{so}\quad w = -i\log\left(iz + \sqrt{1 - z^2}\right).$$'
+    say: >
+      Inverse functions are many valued, and each can be written as a logarithm. For sine inverse
+      z, set sin w equal to z, multiply through by e to the i w, and you get a quadratic in e to
+      the i w. Solve it, take logs, and sine inverse z is minus i log of i z plus the square root
+      of one minus z squared. Every formula in the table comes from the same method.
+
+  - section: inverse-functions
+    focus: '| $\sinh^{-1} z$ | $\log\left(z + \sqrt{z^2 + 1}\right)$ | none |'
+    say: >
+      From the table, the hyperbolic inverses are easiest to remember. Sinh inverse z is log of z
+      plus root of z squared plus one. Cosh inverse z has z squared minus one. Tanh inverse z is
+      half the log of one plus z over one minus z. Tan inverse has one plus i z over one minus i
+      z, with a factor one over two i in front. To check a formula, test a real point: sinh
+      inverse of zero must be log one, which is zero.
+
+  - section: inverse-functions
+    focus: '$\cos^{-1} 2 = -i\log(2 \pm \sqrt3) = 2n\pi \pm i\ln(2 + \sqrt3)$, since $\ln(2 - \sqrt3) = -\ln(2 + \sqrt3)$.'
+    say: >
+      Look at this example. Cos inverse two, from the log form, is two n pi plus or minus i log of
+      two plus root three, exactly the solution of cos z equals two we found earlier. The plus or
+      minus works because two minus root three is the reciprocal of two plus root three. Notice
+      too that tan z can never equal plus or minus i: that would force e to the i z to be zero.
+
+  - section: real-imaginary-parts
+    focus: '$$\cos(x + iy) = \cos x\cosh y - i\sin x\sinh y,$$'
+    say: >
+      Finally, separating real and imaginary parts. Use the addition formula and the bridge.
+      Sin of x plus i y is sin x cosh y, plus i cos x sinh y. Cos of x plus i y is cos x cosh y,
+      minus i sin x sinh y. Note the minus sign in the cosine, and note that y always appears
+      through cosh and sinh, never through cos and sin.
+
+  - section: real-imaginary-parts
+    question: q0009
+    say: >
+      Pick the correct separation of sin of x plus i y.
+    answer: >
+      Sin x cosh y, plus i cos x sinh y. Test the options at y equals zero, where it must reduce to
+      sin x, and at x equals zero, where it must give i sinh y. The option with a minus sign
+      fails the second test, and the one with cos y and sin y has forgotten the hyperbolic
+      functions.
+
+  - section: real-imaginary-parts
+    focus: '$$\tan(x + iy) = \frac{\sin 2x + i\sinh 2y}{\cos 2x + \cosh 2y}.$$'
+    say: >
+      For the tangent, multiply top and bottom by two cos of x minus i y. The result is sin two x
+      plus i sinh two y, over cos two x plus cosh two y. For tan inverse of x plus i y equals
+      alpha plus i beta, apply the tangent addition formula to the sum and difference of alpha
+      plus i beta and alpha minus i beta: tan two alpha comes out as two x over one minus x
+      squared minus y squared.
+
+  - section: real-imaginary-parts
+    focus: 'So $\cos$ maps each horizontal line $\beta = c \ne 0$ to an ellipse'
+    say: >
+      The classic example: if cos of alpha plus i beta equals x plus i y, then x is cos alpha
+      cosh beta and y is minus sin alpha sinh beta. Eliminate alpha using cos squared plus sin
+      squared, and you get an ellipse with cosh beta and sinh beta as semi axes. Eliminate beta
+      using cosh squared minus sinh squared, and you get a hyperbola. All these conics share the
+      foci plus and minus one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. The modulus of e to the x plus i y is e to the x. The exponential has period
+      two pi i, sine and cosine have period two pi. Sine and cosine have only real zeros, sinh and
+      cosh only imaginary ones, and complex sine and cosine are unbounded. The principal log has
+      imaginary part in the interval from minus pi to pi, with pi included. i to the i is real,
+      with principal value e to the minus pi by two. Test separation formulas at y equals zero.
+      Now try the practice questions.

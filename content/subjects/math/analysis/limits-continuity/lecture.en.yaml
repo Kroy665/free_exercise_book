@@ -1,0 +1,328 @@
+# Spoken lecture for "Limits and Continuity".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: limit-definition
+    say: >
+      Welcome. Today we rebuild limits and continuity from the definitions up. By the end you
+      should be able to write a clean epsilon delta proof, show that a limit does not exist with
+      two sequences, evaluate the standard limits including the one to the power infinity form,
+      classify any discontinuity, and use the big theorems on closed bounded intervals with
+      their exact hypotheses.
+
+  - section: limit-definition
+    focus: 'The condition $0 < |x - c|$ means the value $f(c)$ plays **no part** in the limit.'
+    say: >
+      Start with Cauchy's definition. The limit of f at c is l if, for every epsilon greater than
+      zero, there is a delta greater than zero such that whenever x is within delta of c, but not
+      equal to c, f of x is within epsilon of l. Notice the highlighted remark. Because x is
+      never equal to c, the value f of c plays no part in the limit. The function need not even
+      be defined at c.
+
+  - section: limit-definition
+    focus: '**Heine (sequential) definition.**'
+    say: >
+      Heine's definition uses sequences: for every sequence x n tending to c, with x n never
+      equal to c, the sequence f of x n must tend to l. The two definitions are equivalent. The
+      useful direction in practice is the negative one: to kill a limit, find two sequences
+      tending to c along which f has different limits, or one sequence along which f of x n
+      diverges.
+
+  - section: limit-definition
+    focus: 'So $\lim_{x\to 0}\sin(1/x)$ does not exist.'
+    say: >
+      The classic is sine of one over x at zero. Along x n equal to one over n pi, the sine is
+      always zero. Along y n equal to two over four n plus one times pi, the sine is always one.
+      Both sequences tend to zero, but the values tend to different limits, so the limit of sine
+      of one over x at zero does not exist.
+
+  - section: limit-definition
+    focus: 'For the floor function $[x]$ (greatest integer $\le x$) at an integer $n$: $[n-] = n - 1$ and $[n+] = n$, so $\lim_{x\to n}[x]$ does not exist.'
+    say: >
+      One sided limits use only points to the right, or only points to the left. The limit exists
+      exactly when both one sided limits exist and are equal. For the floor function at an integer
+      n, the left limit is n minus one and the right limit is n, so there is no limit there. Also
+      remember that an infinite limit does not count as the limit existing.
+
+  - section: limit-definition
+    focus: '$$\delta = \min\left\{1, \frac{\varepsilon}{7}\right\}$$'
+    say: >
+      Now a typical epsilon delta proof: x squared tends to nine as x tends to three. Factor the
+      difference as the modulus of x minus three times the modulus of x plus three. First
+      restrict x to within one of three, so x lies between two and four and the second factor is
+      less than seven. Then the difference is less than seven times the modulus of x minus three.
+      So delta equal to the minimum of one and epsilon by seven works.
+
+  - section: limit-definition
+    focus: '$\delta = \varepsilon/7$ alone is **not** enough'
+    say: >
+      The caution is the whole point of this example. Delta equal to epsilon by seven alone is
+      not enough. If epsilon is large, delta is large, and then the bound of seven on the modulus
+      of x plus three is no longer guaranteed. The minimum with one is what makes the proof valid.
+
+  - section: limit-definition
+    question: q0020
+    say: >
+      Let's check that. Which choice of delta works for every epsilon?
+    answer: >
+      The minimum of one and epsilon by seven. The restriction to within one of three bounds the
+      modulus of x plus three by seven, not six, so the options with six fail. And epsilon by
+      seven alone fails for large epsilon: with epsilon equal to seventy, delta is ten, and the
+      error can reach a hundred and sixty.
+
+  - section: algebra-sandwich
+    focus: '- The **converses fail.** $\lim(f + g)$ may exist when neither $\lim f$ nor $\lim g$ does: $f = \sin(1/x)$, $g = -\sin(1/x)$.'
+    say: >
+      The algebra of limits works as you expect when both limits are finite: sums, products,
+      quotients with non zero denominator, and the modulus. But the converses fail. Sine of one
+      over x plus minus sine of one over x has limit zero, though neither piece has a limit. So
+      you may split a limit only when you already know the pieces exist.
+
+  - section: algebra-sandwich
+    focus: 'Strict inequality is **not** preserved: $x^2 > 0$ for $x \ne 0$, but the limit is $0$.'
+    say: >
+      Order is preserved by limits, but strict order is not. x squared is positive for every
+      non zero x, yet its limit at zero is zero. Two useful local facts: if the limit is positive,
+      the function is positive in a deleted neighbourhood of c; and if a finite limit exists, the
+      function is bounded near c.
+
+  - section: algebra-sandwich
+    focus: 'The most used corollary: **bounded × (tends to 0) → 0.**'
+    say: >
+      The sandwich rule: if f is trapped between g and h near c, and g and h have the same limit,
+      then f has that limit too. Its most used corollary is bounded times null tends to zero. The
+      graph shows x sine one over x trapped between minus the modulus of x and the modulus of x,
+      so it tends to zero. Notice that the product rule cannot be used here, because sine of one
+      over x has no limit.
+
+  - section: algebra-sandwich
+    focus: '**Limit of a composite.**'
+    say: >
+      For a composite, if f tends to L and g is continuous at L, then g of f tends to g of L. If g
+      merely has a limit at L, this can fail. Take f identically zero and let g be zero except at
+      zero, where it is one. Then g has limit zero at zero, but g of f is always one. And as the
+      exam tip says, sine x over x at infinity is zero by bounded times null; don't reach for
+      L'Hospital.
+
+  - section: standard-limits
+    focus: '| $\lim_{x\to 0}\dfrac{1 - \cos x}{x^2}$ | $\tfrac12$ | $1 - \cos x = 2\sin^2\frac{x}{2}$ |'
+    say: >
+      Now the table of standard limits, all as x tends to zero unless stated. Sine x over x, tan x
+      over x, log of one plus x over x, and e to the x minus one over x all tend to one. a to the x
+      minus one over x tends to log a. One plus x, to the power one over x, tends to e. The row to
+      watch is the highlighted one: one minus cos x, over x squared, tends to one half, not one.
+
+  - section: standard-limits
+    focus: '**Working rule.** Scale the variable so a standard form appears:'
+    say: >
+      The working rule is to scale the variable until a standard form appears. For log of one plus
+      two x over sine five x, multiply and divide by two x and by five x. The two standard pieces
+      tend to one, and what remains is two fifths. Similarly, three to the x minus two to the x,
+      over x, splits into two standard limits and gives log three minus log two, which is log of
+      three halves.
+
+  - section: standard-limits
+    focus: '$$\lim f(x)^{g(x)} = e^{\lim g(x)\,(f(x) - 1)},$$'
+    say: >
+      The one to the power infinity form deserves a rule of its own. If f tends to one and g tends
+      to infinity, then f to the power g tends to e to the power of the limit of g times f minus
+      one. For cos x to the power one over x squared, cos x minus one over x squared tends to minus
+      one half, so the answer is e to the minus one half. And one plus two over x, to the power
+      three x, at infinity gives e to the six.
+
+  - section: standard-limits
+    focus: 'Read where $x$ tends before using a table entry.'
+    say: >
+      A trap worth hearing aloud. One plus x, to the power one over x, tends to e as x tends to
+      zero, but to one as x tends to infinity. And sine x over x tends to one at zero, but to zero
+      at infinity. Read where x tends before you use a table entry.
+
+  - section: standard-limits
+    question: q0016
+    say: >
+      Try this one. Find the limit as x tends to zero of one plus sine x, to the power cot x.
+    answer: >
+      It is a one to the power infinity form, so the answer is e to the limit of cot x times sine
+      x. That product is cos x, which tends to one, so the limit is e. The tempting wrong answer is
+      one, which treats one to the power infinity as one.
+
+  - section: continuity
+    focus: 'that is, three things: $f(c)$ is defined, the limit exists, and they are equal.'
+    say: >
+      Continuity at c is the same epsilon delta statement, but now x may equal c and the limit
+      must be f of c. At a limit point of the domain, it means three things: f of c is defined,
+      the limit exists, and they are equal. At an isolated point of the domain, a function is
+      automatically continuous. On a closed interval, we ask only for one sided continuity at
+      the end points.
+
+  - section: continuity
+    focus: '- $|f|$ continuous does **not** imply $f$ continuous: take $f = 1$ on $\Q$ and $-1$ off $\Q$.'
+    say: >
+      Sums, products, quotients, moduli and composites of continuous functions are continuous,
+      and all the elementary functions are continuous on their domains. But the modulus of f being
+      continuous does not make f continuous. Take f equal to one on the rationals and minus one on
+      the irrationals: its modulus is the constant one, yet f is discontinuous everywhere.
+
+  - section: continuity
+    focus: '*Example.* $f(x) = x^2 + a$ for $x < 1$, $f(1) = 3$, $f(x) = bx + 1$ for $x > 1$.'
+    say: >
+      To find constants for continuity, equate the value at the break point with each one sided
+      limit. For one minus cos two x over x squared, write the numerator as two sine squared x;
+      the limit is two, so k must be two. In the piecewise example, the left limit is one plus a
+      and the right limit is b plus one, and both must equal three, so a and b are both two.
+
+  - section: continuity
+    question: q0008
+    say: >
+      Here is the first of those examples to do yourself. What value of k makes the function
+      continuous at zero?
+    answer: >
+      k equals two. One minus cos two x equals two sine squared x, so the limit is two times the
+      square of sine x over x, which is two. The tempting one half is the limit of one minus cos
+      x over x squared, without the doubled angle.
+
+  - section: continuity
+    focus: 'A continuous function on an interval that takes only rational values (or only integer values) is **constant**.'
+    say: >
+      A small exam tip with a big payoff: a continuous function on an interval that takes only
+      rational values, or only integer values, must be constant. If it took two different values,
+      the intermediate value property would force it through an irrational value in between.
+
+  - section: discontinuities
+    focus: '| **Jump** (first kind) | $f(c-)$, $f(c+)$ both exist (finite) and $f(c-) \ne f(c+)$ | $[x]$ at an integer; $\operatorname{sgn} x$ |'
+    say: >
+      Now discontinuities, classified by one sided limits. Removable: the limit exists, but f of c
+      is undefined or different. Jump: both one sided limits exist and are finite, but they
+      differ, like the floor function at an integer or the signum function at zero. Second kind:
+      at least one one sided limit fails to exist, like sine of one over x, or one over x, or e to
+      the one over x.
+
+  - section: discontinuities
+    focus: 'Questions here keep the three labels **removable**, **jump** and **second kind** separate.'
+    say: >
+      Notice the caution on conventions. Some books count a removable discontinuity as being of
+      the first kind. In this course the three labels removable, jump, and second kind are kept
+      separate. A removable discontinuity can be removed by redefining f of c as the limit; a jump
+      cannot be removed.
+
+  - section: discontinuities
+    question: q0006
+    say: >
+      Which of these functions has a removable discontinuity at zero?
+    answer: >
+      Sine x over x, with value zero at the origin. Its limit is one, which exists but differs
+      from the value, so redefining f of zero as one removes the problem. The floor function has a
+      jump, while sine of one over x and one over x are of the second kind.
+
+  - section: discontinuities
+    focus: '- $[x]$: continuous at non-integers; a **jump** of size $1$ at each integer. $[x] + [-x]$ equals $0$ at integers and $-1$ elsewhere, so it has a **removable** discontinuity at each integer.'
+    say: >
+      Look at the floor examples. The floor function jumps by one at every integer. But floor of x
+      plus floor of minus x is zero at integers and minus one elsewhere. Its one sided limits at
+      an integer are both minus one, so the discontinuity there is removable. That one appears
+      often in exams.
+
+  - section: discontinuities
+    focus: '- $x D(x)$, or $f(x) = x$ on $\Q$ and $0$ off $\Q$: continuous **only at $0$**.'
+    say: >
+      The Dirichlet function, one on the rationals and zero on the irrationals, is discontinuous
+      everywhere. Multiply it by x and it becomes continuous only at zero. The general rule, from
+      the exam tips: if f equals g on the rationals and h on the irrationals, with g and h
+      continuous, then f is continuous exactly where g equals h.
+
+  - section: discontinuities
+    question: q0021
+    say: >
+      Apply that rule. f is x on the rationals and one minus x on the irrationals. Where is it
+      continuous?
+    answer: >
+      Only at one half. Near any point c there are rationals with values near c and irrationals
+      with values near one minus c, so a limit exists only when c equals one minus c. The option
+      with only zero belongs to the function that is x on rationals and zero elsewhere.
+
+  - section: discontinuities
+    focus: 'So $T$ is continuous at every irrational and has a removable discontinuity at every rational.'
+    say: >
+      The Thomae function is one over q at a rational p over q in lowest terms, and zero at
+      irrationals. In any bounded interval only finitely many fractions have one over q at least
+      epsilon, so the limit is zero everywhere. Hence it is continuous at every irrational, with a
+      removable discontinuity at every rational. Finally, a monotone function has one sided limits
+      everywhere, so its discontinuities are all jumps, and there are at most countably many.
+
+  - section: closed-interval
+    focus: '2. **Extreme values.** $f$ attains its supremum and infimum: there are $p, q \in [a, b]$ with $f(p) = \sup f$ and $f(q) = \inf f$.'
+    say: >
+      Now the big theorems. Let f be continuous on a closed bounded interval. Then f is bounded,
+      and it attains its supremum and its infimum. It takes every value between f of a and f of b.
+      In particular, if f of a and f of b have opposite signs, f has a zero strictly inside; that
+      is Bolzano's theorem. Altogether, the image of a closed bounded interval is again a closed
+      bounded interval.
+
+  - section: closed-interval
+    focus: '| closed | $\frac1x$ on $(0, 1]$: continuous, unbounded |'
+    say: >
+      Every hypothesis matters, and the table gives a counterexample for each. One over x on the
+      half open interval from zero to one is continuous but unbounded, so closed is needed. x on
+      the whole half line is unbounded, so bounded is needed. x on the open interval is bounded,
+      but attains neither maximum nor minimum. And the signum function on minus one to one never
+      takes the value one half.
+
+  - section: closed-interval
+    focus: '**Fixed-point corollary.**'
+    say: >
+      Two quick corollaries. Any continuous map from the closed unit interval into itself has a
+      fixed point: apply Bolzano to f of x minus x, which is non negative at zero and non positive
+      at one. And every real polynomial of odd degree has a real root, because it tends to plus
+      and minus infinity at the two ends.
+
+  - section: closed-interval
+    question: q0013
+    say: >
+      Locate a root with the intermediate value theorem. Where does x cubed minus x minus one
+      have a root?
+    answer: >
+      Between one and two. p of one is minus one and p of two is five, so there is a sign change,
+      and Bolzano gives a root in that open interval. In the other intervals the end values have
+      the same sign. The root is about 1.32.
+
+  - section: closed-interval
+    focus: 'The IVT has **no converse**.'
+    say: >
+      Notice the caution. The intermediate value theorem has no converse. Sine of one over x, with
+      value zero at the origin, has the intermediate value property on minus one to one, yet it is
+      discontinuous at zero. Derivatives also have this property, by Darboux's theorem, even when
+      they are not continuous. And remember: no sign change does not prove there is no root.
+
+  - section: inverse-functions
+    focus: '- $f^{-1}$ is **strictly increasing** and **continuous** on $J$.'
+    say: >
+      Last, inverses. If f is strictly increasing and continuous on an interval, then its image is
+      an interval, f is a bijection onto it, and the inverse is strictly increasing and
+      continuous. Why continuous? The inverse is monotone, so it could only have jumps. But a jump
+      would leave a gap in its range, and its range is the whole interval. So no gap, no jump.
+
+  - section: inverse-functions
+    focus: 'For example, $f^{-1}(2) = 1$.'
+    say: >
+      Conversely, a continuous injective function on an interval is strictly monotone. This is how
+      sine inverse, log and the n-th root are continuous. It even works with no formula: x to the
+      fifth plus x is strictly increasing and continuous on the real line, so its inverse is
+      continuous, and since f of one is two, the inverse at two is one. The caution shows the
+      interval matters: on a union of two intervals the inverse can jump.
+
+  - section: inverse-functions
+    focus: 'On a closed bounded interval, continuity implies uniform continuity.'
+    say: >
+      A brief mention of uniform continuity: one delta that works at all points at once. On a
+      closed bounded interval, continuity implies uniform continuity. One over x on the open unit
+      interval, and x squared on the whole line, are continuous but not uniformly continuous. The
+      details belong to the next topic.
+
+  - section: exam-tips
+    say: >
+      Let's recap. The value at c never affects the limit. Bounded times null is zero. Scale to a
+      standard form, and use the e to the power rule for one to the power infinity. Classify
+      discontinuities by one sided limits: equal gives removable, different gives a jump, missing
+      gives second kind. Rational and irrational definitions are continuous where the two
+      formulas agree. Closed and bounded is essential for the extreme value theorem. Now try the
+      practice questions.

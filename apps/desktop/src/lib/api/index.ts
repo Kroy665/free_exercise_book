@@ -106,7 +106,11 @@ export interface Stats {
 }
 
 // `lang` is the content language; the UI is always English.
-export type Settings = Record<"lang" | "theme" | "font_size" | "daily_goal" | "onboarded" | "exams" | "auto_update", string>;
+export type Settings = Record<
+  | "lang" | "theme" | "font_size" | "daily_goal" | "onboarded" | "exams" | "auto_update"
+  | "assistant" | "ollama_url" | "ollama_model" | "claude_model" | "tts_voice" | "tts_speed",
+  string
+>;
 
 export interface ApiError {
   code: string;
@@ -118,7 +122,20 @@ export function errorMessage(e: unknown): string {
   return String(e);
 }
 
+export interface LectureSegment {
+  section: string;
+  focus?: string;
+  say: string;
+  question?: string;
+  answer?: string;
+}
+
+export interface Lecture {
+  segments: LectureSegment[];
+}
+
 export const api = {
+  lectureGet: (id: string, lang: string) => invoke<Lecture | null>("lecture_get", { id, lang }),
   libraryTree: (lang: string) => invoke<LibrarySubject[]>("library_tree", { lang }),
   topicGet: (id: string, lang: string) => invoke<TopicView>("topic_get", { id, lang }),
   practiceQuestions: (topicId: string, lang: string) =>
@@ -412,4 +429,63 @@ export const dataApi = {
 export const EXAMS: { id: string; label: string; hint: string }[] = [
   { id: "slst-0910", label: "WBSSC SLST (Class IX–X)", hint: "Assistant Teacher, graduation-level syllabus" },
   { id: "slst-1112", label: "WBSSC SLST (Class XI–XII)", hint: "Assistant Teacher, post-graduation-level syllabus" },
+];
+
+// ---------- Study assistant and speech ----------
+
+export interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+export interface AskContext {
+  selection?: string | null;
+  topic_id?: string | null;
+  question_id?: string | null;
+  answered?: boolean;
+}
+
+export interface AssistantStatus {
+  provider: "off" | "ollama" | "claude";
+  ollama: { reachable: boolean; models: string[]; has_model: boolean };
+  claude_has_key: boolean;
+}
+
+export interface AssistantEvent {
+  id: string;
+  kind: "delta" | "done" | "error";
+  text: string;
+}
+
+export interface Suggestion {
+  href: string;
+  topic: string;
+  section: string;
+}
+
+export interface TtsStatus {
+  ready: boolean;
+  missing_bytes: number;
+}
+
+export const assistantApi = {
+  status: () => invoke<AssistantStatus>("assistant_status"),
+  setKey: (key: string) => invoke<void>("assistant_set_key", { key }),
+  links: () => invoke<string[]>("assistant_links"),
+  suggest: (text: string) => invoke<Suggestion[]>("assistant_suggest", { text }),
+  chat: (id: string, messages: ChatMessage[], context: AskContext) =>
+    invoke<void>("assistant_chat", { id, messages, context }),
+  cancel: (id: string) => invoke<void>("assistant_cancel", { id }),
+  pull: (model: string) => invoke<void>("assistant_ollama_pull", { model }),
+  ttsStatus: (voice: string) => invoke<TtsStatus>("tts_status", { voice }),
+  ttsDownload: (voice: string) => invoke<void>("tts_download", { voice }),
+  ttsRemove: () => invoke<void>("tts_remove"),
+};
+
+export const TTS_VOICES: { id: string; label: string }[] = [
+  { id: "af_heart", label: "Heart (American, female)" },
+  { id: "af_bella", label: "Bella (American, female)" },
+  { id: "bf_emma", label: "Emma (British, female)" },
+  { id: "am_michael", label: "Michael (American, male)" },
+  { id: "bm_george", label: "George (British, male)" },
 ];

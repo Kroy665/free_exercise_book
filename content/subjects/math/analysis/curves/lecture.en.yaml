@@ -1,0 +1,307 @@
+# Spoken lecture for "Tangents, Normals, Asymptotes and Curvature".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: tangents-normals
+    say: >
+      Welcome. This lecture covers the geometry of plane curves through calculus: tangents and
+      normals, polar curves and pedal equations, asymptotes, curvature, envelopes and curve
+      tracing. The questions here are formula driven, so by the end you should know the key
+      formulas, the standard values for the classic curves, and the quick checks that catch
+      sign and factor slips in seconds.
+
+  - section: tangents-normals
+    focus: '| $F(x, y) = 0$ | $(x - x_1)F_x + (y - y_1)F_y = 0$ | $\dfrac{x - x_1}{F_x} = \dfrac{y - y_1}{F_y}$ |'
+    say: >
+      The table gives the tangent and normal in three forms. For y equals f of x, the tangent has
+      slope f dash at the point. For an implicit curve F of x and y equal to zero, the tangent is x
+      minus x one times F x, plus y minus y one times F y, equal to zero, and the normal runs along
+      the direction F x, F y. For a parametric curve, use x dot and y dot. A vertical tangent occurs
+      where d x by d y is zero.
+
+  - section: tangents-normals
+    focus: 'For the parabola $y^2 = 4ax$: $2yy'' = 4a$, so the **subnormal is $2a$**, the same at every point, and the subtangent is $2x$ (twice the abscissa).'
+    say: >
+      Next, the lengths. The subtangent is y over y dash, and the subnormal is y times y dash, both
+      in modulus. For the parabola y squared equals four a x, differentiating gives two y y dash
+      equal to four a, so the subnormal is two a, the same at every point, and the subtangent is two
+      x, twice the abscissa. The exam tip generalises this: for y to the n equals k x to the m, the
+      subtangent is n over m times x.
+
+  - section: tangents-normals
+    focus: 'Its intercepts are $a\cos t$ and $a\sin t$, so the part between the axes has length $a$ at every point.'
+    say: >
+      The astroid gives a beautiful example. With x equal to a cos cubed t and y equal to a sine
+      cubed t, the slope is minus tan t, and the tangent becomes x over a cos t plus y over a sine t
+      equal to one. Its intercepts on the axes are a cos t and a sine t. Finally, two curves cut
+      orthogonally when the product of their slopes at the common point is minus one.
+
+  - section: tangents-normals
+    question: q0003
+    say: >
+      Finish the astroid example. What is the length of the tangent between the axes?
+    answer: >
+      It is a, the same at every point. The intercepts are a cos t and a sine t, so the length is
+      the square root of a squared cos squared t plus a squared sine squared t, which is a. The
+      option a times the modulus of sine two t looks like a product of the intercepts, but the
+      length is the hypotenuse.
+
+  - section: polar-pedal
+    focus: '$$\tan\phi = r\,\frac{d\theta}{dr}, \qquad \psi = \theta + \phi.$$'
+    say: >
+      Now polar curves. Let phi be the angle from the radius vector to the tangent. Then tan phi
+      equals r times d theta by d r. And psi, the angle the tangent makes with the initial line, is
+      theta plus phi. Keep these two angles apart: phi is measured from the radius vector, psi from
+      the initial line. Some books swap the letters.
+
+  - section: polar-pedal
+    focus: '| perpendicular from the pole to the tangent | $p = r\sin\phi$ |'
+    say: >
+      The perpendicular from the pole to the tangent is p equals r sine phi. In terms of u equal to
+      one over r, one over p squared equals u squared plus d u by d theta, squared. That formula is
+      how you find pedal equations. And the angle between two polar curves is just the difference
+      of their phi values.
+
+  - section: polar-pedal
+    focus: '- Equiangular spiral $r = ae^{\theta\cot\alpha}$: $\tan\phi = \tan\alpha$, so $\phi = \alpha$, a constant. This is the defining property.'
+    say: >
+      Memorise the standard angles. For the equiangular spiral, tan phi equals tan alpha, so phi is
+      the constant alpha: the spiral cuts every radius at the same angle, which is its defining
+      property. For the cardioid r equals a times one plus cos theta, phi is a right angle plus
+      half theta. So the two cardioids, with plus and minus cos theta, cut orthogonally.
+
+  - section: polar-pedal
+    question: q0004
+    say: >
+      Now the other cardioid, a times one minus cos theta. Find phi.
+    answer: >
+      Phi is theta by two. Tan phi is r times d theta by d r, which is one minus cos theta over sine
+      theta. Using half angle formulas, that is tan of theta by two. The option right angle plus half
+      theta belongs to the other cardioid, with plus cos theta.
+
+  - section: polar-pedal
+    focus: '| parabola $y^2 = 4ax$ (focus) | $p^2 = ar$ |'
+    say: >
+      A pedal equation relates p and r alone: eliminate theta between the curve and the formula for
+      one over p squared. The table lists the standard ones. Parabola, with the focus as pole: p
+      squared equals a r. Cardioid: p squared equals r cubed over two a. Lemniscate: p times a
+      squared equals r cubed. Equiangular spiral: p equals r sine alpha.
+
+  - section: polar-pedal
+    focus: '$$p\,a^n = r^{n+1}.$$'
+    say: >
+      Three of those rows come from one rule. For r to the n equals a to the n cos n theta, phi is a
+      right angle plus n theta, so p equals r cos n theta, and the pedal equation is p times a to
+      the n equals r to the n plus one. n equal to two gives the lemniscate, n equal to one half the cardioid, with a replaced by two a,
+      and n equal to minus one a straight line. And remember the caution: a pedal equation
+      depends on the pole.
+
+  - section: asymptotes
+    focus: '**Non-vertical asymptote $y = mx + c$** of $y = f(x)$: $m = \lim \frac{y}{x}$, $c = \lim (y - mx)$ as $x \to \pm\infty$.'
+    say: >
+      Asymptotes. A line is an asymptote of an infinite branch if the distance from the curve to the
+      line tends to zero as the point recedes to infinity. For y equals f of x, the slope m is the
+      limit of y over x, and the intercept c is the limit of y minus m x. A vertical asymptote x
+      equals a needs y to become infinite as x tends to a.
+
+  - section: asymptotes
+    focus: 'Asymptotes parallel to the $x$-axis: equate to zero the coefficient of the **highest power of $x$** (if it is not a constant).'
+    say: >
+      For algebraic curves there are rules. Group the equation by degree. Asymptotes parallel to the
+      x axis: set the coefficient of the highest power of x equal to zero, if it is not a constant.
+      Parallel to the y axis: the coefficient of the highest power of y. So x y minus y minus two x
+      minus three has asymptotes y equals two and x equals one.
+
+  - section: asymptotes
+    focus: '- **Oblique.** The slopes are the real roots of $\phi_n(m) = 0$. For each simple root,'
+    say: >
+      For oblique asymptotes, put x equal to one and y equal to m in the highest degree terms, phi n
+      of m. The slopes are the real roots of phi n of m equal to zero. For each simple root, c is
+      minus phi n minus one of m over phi n dash of m. For the folium, phi three is one plus m
+      cubed, so m is minus one, and c works out to minus a: the asymptote is x plus y plus a equal
+      to zero.
+
+  - section: asymptotes
+    focus: 'giving two parallel asymptotes'
+    say: >
+      If m is a double root and phi n minus one also vanishes there, c comes from a quadratic, and
+      you get two parallel asymptotes. For x minus y squared times x plus y minus eight x, this gives
+      y equals x plus two and y equals x minus two, together with y equals minus x. A curve of degree
+      n has at most n asymptotes.
+
+  - section: asymptotes
+    question: q0010
+    say: >
+      Here is the famous trap from the exam tips. Find the asymptotes of this cubic.
+    answer: >
+      y equals x, two y equals x, and three y equals x. Phi three of m is minus m minus one times two
+      m minus one times three m minus one, so the slopes are one, one half and one third. There are
+      no second degree terms, so every c is zero. The trap is y equals two x and three x, which
+      misreads the factor x minus two y.
+
+  - section: asymptotes
+    focus: 'A parabola has **no** asymptote.'
+    say: >
+      Two more facts. For a polar curve with one over r equal to f of theta, if f vanishes at theta
+      one, then r sine of theta minus theta one equals one over f dash of theta one is an asymptote.
+      The hyperbolic spiral r theta equals a has the asymptote y equals a. And notice the caution: a
+      parabola has no asymptote. y over x tends to zero, but y itself runs off to infinity.
+
+  - section: curvature
+    focus: '**Curvature** at $P$ is $\kappa = \left\lvert\dfrac{d\psi}{ds}\right\rvert$: the rate of turning of the tangent per unit arc.'
+    say: >
+      Curvature is the rate at which the tangent turns per unit length of arc: d psi by d s. The
+      radius of curvature rho is its reciprocal, d s by d psi. A straight line has zero curvature;
+      a circle of radius a has rho equal to a everywhere. The caution says it plainly: curvature is
+      d psi by d s, not the other way round.
+
+  - section: curvature
+    focus: '| $y = f(x)$ | $\dfrac{(1 + y_1^2)^{3/2}}{\lvert y_2\rvert}$ |'
+    say: >
+      The table gives rho in every form. The Cartesian one is the most used: one plus y one squared,
+      to the power three halves, over the modulus of y two. Note that the three halves power is on
+      one plus y one squared, not on y one. For a pedal curve, rho is simply r times d r by d p. At
+      a point of inflexion, y two is zero, so the curvature is zero and rho is infinite.
+
+  - section: curvature
+    focus: '| $y^2 = 4ax$ at the vertex | $2a$ (the semi-latus rectum) |'
+    say: >
+      The standard values are worth memorising. The parabola y squared equals four a x has rho equal
+      to two a at the vertex, the semi latus rectum, not a. y equals x squared has one half at the
+      origin. The ellipse has b squared over a at the end of the major axis. The catenary has rho
+      equal to y squared over c. And the astroid has three a times the modulus of sine t cos t.
+
+  - section: curvature
+    focus: '**Cardioid by the pedal form.**'
+    say: >
+      For the cardioid, the pedal form is fastest. From p squared equals r cubed over two a,
+      differentiate: two p d p equals three r squared over two a, d r. So rho, which is r d r by d p,
+      equals four a p over three r. Now p over r is sine phi, which for this cardioid is cos of theta
+      by two.
+
+  - section: curvature
+    question: q0015
+    say: >
+      Complete that calculation. What is the radius of curvature of the cardioid?
+    answer: >
+      Four a over three, times cos of theta by two. Rho is four a p over three r, and p over r is cos
+      of theta by two. The polar formula gives the same value. Check at theta equal to zero: rho is
+      four a over three. Note the distractor with sine of theta by two instead of cosine.
+
+  - section: curvature
+    focus: 'If $y_1$ is infinite (vertical tangent), use $\rho = \dfrac{(1 + x_1^2)^{3/2}}{\lvert x_2\rvert}$ with $x$ as a function of $y$.'
+    say: >
+      An exam tip: rho does not depend on which variable is independent. So at a vertical tangent,
+      where y one is infinite, swap the roles and treat x as a function of y, using the same formula
+      with x one and x two.
+
+  - section: centre-of-curvature
+    focus: '- if the curve **touches the $x$-axis** at $O$: $\rho = \lim\limits_{x \to 0}\dfrac{x^2}{2y}$;'
+    say: >
+      At the origin, Newton's formulae are quickest. If the curve touches the x axis at the origin,
+      rho is the limit of x squared over two y. If it touches the y axis, rho is the limit of y
+      squared over two x. The reason: near the origin y is about half of y two times x squared. For
+      the folium, the branch touching the x axis has y about x squared over three a, so rho is three
+      a over two.
+
+  - section: centre-of-curvature
+    focus: 'Newton''s formula needs the axis to be the **tangent** at $O$.'
+    say: >
+      The caution is essential. Newton's formula needs the axis to be the tangent at the origin.
+      Applied to a branch that does not touch the x axis, the limit is zero or meaningless. For a
+      general tangent direction, substitute y equals p x plus q by two x squared, compare
+      coefficients, and use the Cartesian formula.
+
+  - section: centre-of-curvature
+    focus: 'It lies on the normal, at distance $\rho$, on the concave side.'
+    say: >
+      The centre of curvature lies on the normal, at distance rho, on the concave side. Its x
+      coordinate is x minus y one times one plus y one squared, over y two; its y coordinate is y
+      plus one plus y one squared, over y two. The circle with that centre and radius rho is the
+      osculating circle, and the locus of the centre is the evolute, which is also the envelope of
+      the normals.
+
+  - section: centre-of-curvature
+    question: q0016
+    say: >
+      Use the formula for y equals x squared at the point one comma one.
+    answer: >
+      The centre is minus four comma seven halves. Here y one and y two are both two, and one plus y
+      one squared is five. So x bar is one minus ten over two, which is minus four, and y bar is one
+      plus five halves, which is seven halves. The parabola is concave upward, so y bar must exceed
+      one; options with minus three halves have the wrong sign.
+
+  - section: centre-of-curvature
+    focus: '| through the pole (polar curve) | $2\rho\sin\phi = 2p\dfrac{dr}{dp}$ |'
+    say: >
+      The chord of curvature is the chord of the osculating circle through the point. Parallel to
+      the x axis it is two rho sine psi, parallel to the y axis two rho cos psi, and through the pole
+      two rho sine phi. For the cardioid, the chord through the pole comes out as four r by three.
+
+  - section: envelopes
+    focus: '**Quadratic shortcut.** If the family is $A\alpha^2 + B\alpha + C = 0$ ($A, B, C$ functions of $x, y$), the envelope is $B^2 = 4AC$: two members coincide.'
+    say: >
+      Envelopes. For a one parameter family of curves, the envelope touches every member. To find it,
+      eliminate the parameter between the equation and its partial derivative with respect to the
+      parameter. When the family is quadratic in the parameter, there is a shortcut: the envelope is
+      B squared equals four A C, the condition for a repeated root.
+
+  - section: envelopes
+    question: q0017
+    say: >
+      Try the shortcut. Find the envelope of the lines y equals m x plus a over m.
+    answer: >
+      y squared equals four a x. Clearing the denominator gives x m squared minus y m plus a equal to
+      zero, a quadratic in m. B squared equals four A C gives y squared equals four a x. This is the
+      familiar tangent form of the parabola. y squared equals a x forgets the four.
+
+  - section: envelopes
+    focus: '| $\frac{x}{a} + \frac{y}{b} = 1$, $a^2 + b^2 = c^2$ | astroid $x^{2/3} + y^{2/3} = c^{2/3}$ |'
+    say: >
+      The table of standard envelopes has a family of rows for x over a plus y over b equals one, and
+      the answer depends on the constraint. a plus b fixed gives root x plus root y equals root c. a
+      b fixed gives a rectangular hyperbola. a squared plus b squared fixed is the sliding ladder, and
+      its envelope is the astroid, as the graph shows. Also, lines at a fixed distance a from the
+      origin envelop the circle of radius a.
+
+  - section: envelopes
+    focus: 'Check that the curve found actually touches the members.'
+    say: >
+      A caution. The eliminant can also contain a locus of singular points of the members, such as
+      nodes or cusps, which is not a true envelope. So check that the curve you found actually
+      touches the members. One more fact links this to curvature: the envelope of the normals of a
+      curve is its evolute, the locus of its centres of curvature.
+
+  - section: curve-tracing
+    focus: '1. **Symmetry.**'
+    say: >
+      Finally, curve tracing. Follow the steps. Symmetry: only even powers of y means symmetry about
+      the x axis; unchanged when x and y are swapped means symmetry about y equals x. Does the curve
+      pass through the origin, and what are the tangents there? Those come from the lowest degree
+      terms. Then intercepts, asymptotes, the region where y is real, and monotonicity from the
+      derivatives.
+
+  - section: curve-tracing
+    focus: '| imaginary | **conjugate (isolated) point** |'
+    say: >
+      At a double point there are two tangents. Real and distinct gives a node, where two branches
+      cross. Real and coincident usually gives a cusp, though it can also be a tacnode. Imaginary
+      gives a conjugate, or isolated, point. For y squared equals x squared times x minus one, the
+      lowest terms give imaginary tangents, so the origin is an isolated point of the curve.
+
+  - section: curve-tracing
+    focus: '| folium $x^3 + y^3 = 3axy$ | symmetric about $y = x$; node at $O$ with tangents $x = 0,\ y = 0$; loop in the first quadrant reaching $(\frac{3a}{2}, \frac{3a}{2})$; asymptote $x + y + a = 0$ |'
+    say: >
+      The table summarises the familiar curves. The folium is symmetric about y equals x, has a node
+      at the origin with the axes as tangents, a loop in the first quadrant, and the asymptote x plus
+      y plus a equal to zero. The cissoid has a cusp at the origin and asymptote x equals two a. The
+      astroid has four cusps and no asymptote. The lemniscate has a node at the pole with tangents at
+      plus and minus pi by four.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Tan phi is r d theta by d r, and p is r sine phi. Know the pedal equations of the
+      parabola, cardioid and lemniscate. Oblique asymptotes come from the roots of phi n of m, and
+      the slopes of the famous cubic are one, one half and one third. Rho is one plus y one squared to
+      the three halves over y two; at the parabola's vertex it is two a. For envelopes, use B squared
+      equals four A C. Now try the practice questions.

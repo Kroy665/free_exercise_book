@@ -312,14 +312,14 @@
   options:
   - en: '$5$'
   - en: '$-5$'
-  - en: '$-1$'
+  - en: '$-4$'
   - en: '$-7$'
   answer: 1
   explanation:
     en: |-
       Orthogonality: $2(u_1u_2 + v_1v_2 + w_1w_2) = d_1 + d_2$, with $(u_1, v_1, w_1) = (-1, -2, -3)$ and $(u_2, v_2, w_2) = (2, 1, -1)$:
       $$2(-2 - 2 + 3) = k + 3 \implies k = -5.$$
-      Check: $r_1^2 = 14 + 5 = 19$, $r_2^2 = 3$, and the distance between the centres $(1, 2, 3)$, $(-2, -1, 1)$ is $\sqrt{9 + 9 + 4} = \sqrt{22} = \sqrt{19 + 3}$. $k = -1$ drops the factor $2$; $k = 5$ is a sign slip.
+      Check: $r_1^2 = 14 + 5 = 19$, $r_2^2 = 3$, and the distance between the centres $(1, 2, 3)$, $(-2, -1, 1)$ is $\sqrt{9 + 9 + 4} = \sqrt{22} = \sqrt{19 + 3}$. $k = -4$ drops the factor $2$; $k = 5$ is a sign slip.
   status: ai-generated
 - id: q0017
   type: single

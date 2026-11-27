@@ -76,7 +76,21 @@ md.block.ruler.before("fence", "math_block", (state, startLine, endLine, silent)
 
 md.renderer.rules.math_inline = (t, i) => tex(t[i].content, false);
 md.renderer.rules.math_display_inline = (t, i) => `<span class="math-display">${tex(t[i].content, true)}</span>`;
-md.renderer.rules.math_block = (t, i) => `<div class="math-display">${tex(t[i].content, true)}</div>\n`;
+md.renderer.rules.math_block = (t, i) => `<div class="math-display"${lines(t[i])}>${tex(t[i].content, true)}</div>\n`;
+
+// Source line range of a block (data-line / data-line-end), so the lecture can highlight
+// the block that holds a given piece of the notes.
+function lines(tok: { map: [number, number] | null }): string {
+  return tok.map ? ` data-line="${tok.map[0]}" data-line-end="${tok.map[1]}"` : "";
+}
+md.core.ruler.push("source_lines", (state) => {
+  for (const tok of state.tokens) {
+    if (tok.map && tok.nesting === 1 && tok.block) {
+      tok.attrSet("data-line", String(tok.map[0]));
+      tok.attrSet("data-line-end", String(tok.map[1]));
+    }
+  }
+});
 
 // ---------- Graphs and charts: ```plot / ```chart fenced blocks (figures.ts) ----------
 const defaultFence = md.renderer.rules.fence!;
@@ -96,7 +110,7 @@ md.renderer.rules.fence = (tokens, idx, opts, env, self) => {
       .join("");
     const legend = keys ? `<div class="fig-legend">${keys}</div>` : "";
     const cap = fig.title ? `<figcaption>${md.renderInline(fig.title)}</figcaption>` : "";
-    return `<figure class="fig">${fig.svg}${legend}${cap}</figure>\n`;
+    return `<figure class="fig"${lines(tok)}>${fig.svg}${legend}${cap}</figure>\n`;
   } catch (e) {
     const msg = e instanceof FigureError ? e.message : String(e);
     return `<div class="fig-error" role="note">Could not draw this ${kind}: ${md.utils.escapeHtml(msg)}</div>\n`;
@@ -113,7 +127,7 @@ for (const kind of KINDS) {
         const date = tok.info.trim().split(/\s+/)[1];
         if (date) label += ` ${date}`;
       }
-      return `<aside class="callout callout-${kind}"><div class="callout-title">${md.utils.escapeHtml(label)}</div>\n`;
+      return `<aside class="callout callout-${kind}"${lines(tok)}><div class="callout-title">${md.utils.escapeHtml(label)}</div>\n`;
     },
   });
 }

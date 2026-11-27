@@ -1,0 +1,319 @@
+# Spoken lecture for "Straight Lines in Space".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: line-forms
+    say: >
+      Welcome. Today we revise straight lines in three dimensional space. This chapter sits
+      on top of the topic on planes, and it is a favourite source of quick one minute
+      questions. By the end you should be able to read a line correctly from any form, reduce
+      a pair of planes to a line, find feet, images and distances, decide whether two lines
+      meet, and compute the shortest distance between skew lines without fumbling the formula.
+
+  - section: line-forms
+    focus: '$$\frac{x - x_1}{l} = \frac{y - y_1}{m} = \frac{z - z_1}{n}.$$'
+    say: >
+      A line is fixed by one point on it and one direction. Look at the symmetric form on the
+      board: x minus x one over l, equals y minus y one over m, equals z minus z one over n.
+      The point is x one, y one, z one, and l, m, n are direction ratios, not all zero. Each
+      fraction measures how far you have moved along the line, scaled by the direction.
+
+  - section: line-forms
+    focus: 'So the **general point** of the line is $(x_1 + lt,\; y_1 + mt,\; z_1 + nt)$.'
+    say: >
+      Now the single most useful idea in the chapter. Set each fraction equal to a parameter
+      t, and you get the general point: x one plus l t, y one plus m t, z one plus n t. Almost
+      every problem follows the same script. Write the general point, then impose the
+      condition, whether it is lying on a plane, being perpendicular to something, or being
+      at a given distance. Then solve for t.
+
+  - section: line-forms
+    focus: 'If $l, m, n$ are the actual **direction cosines**, then $\lvert t\rvert$ is the distance of the point from $A$.'
+    say: >
+      One subtlety about the parameter. If l, m, n are genuine direction cosines, so their
+      squares add to one, then the modulus of t is exactly the distance from the base point.
+      With mere direction ratios, the distance is the modulus of t times the square root of l
+      squared plus m squared plus n squared. Use direction cosines whenever a problem asks for
+      a point at a given distance along a line.
+
+  - section: line-forms
+    focus: '**Zero denominators.** A $0$ in a denominator is a convention: it means the numerator is $0$.'
+    say: >
+      You will often see a zero in a denominator. This is not division by zero; it is a
+      convention meaning the numerator is zero. So x minus one over zero, equals y minus two
+      over three, equals z over four, is a line lying in the plane x equals one. The x axis
+      itself is x over one equals y over zero equals z over zero, that is, y and z both zero.
+
+  - section: line-forms
+    focus: 'Reading $3, 2, 4$ straight from the denominators above is the commonest slip.'
+    say: >
+      Here is the commonest slip in the whole topic. Before you read the denominators, every
+      numerator must be x, y or z with coefficient plus one. In the example on the board, two x
+      minus one over three must be rewritten as x minus one half over three halves, and one
+      minus y over two becomes y minus one over minus two. Only then do the denominators give
+      the direction: three halves, minus two, four, that is three, minus four, eight.
+
+  - section: line-forms
+    question: q0001
+    say: >
+      Let's test that straight away. A question has appeared beside the notes. Read it,
+      choose an option, and press Check. I'll wait for you.
+    answer: >
+      The answer is three, minus four, eight. Divide the first fraction by two so that x has
+      coefficient one, which turns its denominator into three halves, and flip the sign of the
+      second fraction so it reads y minus one. Three, two, four reads the denominators raw,
+      and three, minus two, four fixes the sign but forgets to divide by two.
+
+  - section: planes-to-line
+    focus: 'meet in a line. This pair of equations is the **general (unsymmetric) form** of the line.'
+    say: >
+      Next, a line given as the intersection of two non parallel planes. The pair of equations
+      together is called the general, or unsymmetric, form. Remember that a single linear
+      equation in x, y and z is always a plane, never a line. You need two of them.
+
+  - section: planes-to-line
+    focus: '1. **Direction.** The line lies in both planes, so it is perpendicular to both normals:'
+    say: >
+      To convert to symmetric form, you need a direction and a point. The direction is easy to
+      justify: the line lies in both planes, so it is perpendicular to both normals, and
+      therefore parallel to their cross product. For the point, put one coordinate equal to
+      something convenient, usually z equals zero, and solve the two equations for the other
+      two. If that system has no solution, the line is parallel to that coordinate plane, so
+      set a different coordinate instead.
+
+  - section: planes-to-line
+    focus: 'Check: the point $t = 1$, $(2, -4, -3)$, satisfies both planes'
+    say: >
+      In the worked example, the normals are two, one, minus one and one, minus one, two. Their
+      cross product is one, minus five, minus three. Putting z equal to zero gives x equals y
+      equals one. Notice the check on the board: take t equals one, get the point two, minus
+      four, minus three, and confirm it satisfies both planes. That ten second check catches
+      almost every sign error in a cross product.
+
+  - section: planes-to-line
+    focus: 'Every plane through the line $P_1 = 0 = P_2$ (other than $P_2 = 0$ itself) is $P_1 + \lambda P_2 = 0$.'
+    say: >
+      Two more facts you will use constantly. Every plane through the line P one equals zero
+      equals P two is P one plus lambda times P two equals zero, apart from P two itself. And
+      for a line in symmetric form, a plane through its point contains the whole line exactly
+      when a l plus b m plus c n is zero, that is, the normal is perpendicular to the
+      direction.
+
+  - section: planes-to-line
+    focus: 'Remember the cross product by the cyclic pattern'
+    say: >
+      The exam tip here: a line parallel to two planes has the same direction as their line
+      of intersection, the cross product of the normals. To compute it quickly, use the cyclic
+      pattern. The x component uses b and c, the y component uses c and a, the z component
+      uses a and b, each as a two by two cross difference.
+
+  - section: planes-to-line
+    question: q0007
+    say: >
+      Try this one. Find the symmetric form of the line given by two planes.
+    answer: >
+      The answer is the first option: x minus one over three, equals y minus two over minus one,
+      equals z minus three over minus two. The cross product of the normals one, one, one and
+      one, minus one, two is three, minus one, minus two, and the point one, two, three lies on
+      both planes. The tempting wrong option uses the second normal as the direction, but a
+      direction must be perpendicular to both normals.
+
+  - section: line-and-plane
+    focus: '**Angle.** The angle $\theta$ between a line and a plane is the complement of the angle between the line and the normal.'
+    say: >
+      Now a line and a plane. The angle between them is the complement of the angle between
+      the line and the normal. That is why the formula uses sine: the sine of theta is the
+      modulus of a l plus b m plus c n, divided by the length of the normal times the length
+      of the direction. Theta lies between zero and a right angle. For direction two, one, two
+      and the plane three x plus four z equals one, the sine is fourteen fifteenths.
+
+  - section: line-and-plane
+    focus: '| $L$ lies in $\Pi$ | $al + bm + cn = 0$ **and** $ax_1 + by_1 + cz_1 + d = 0$ |'
+    say: >
+      The table classifies the relations. Perpendicular to the plane means the direction is
+      proportional to the normal. Parallel to the plane means a l plus b m plus c n is zero.
+      Look at the highlighted row: to lie in the plane you need two conditions, the direction
+      condition and one point of the line satisfying the plane. If a l plus b m plus c n is not
+      zero, the line meets the plane in exactly one point.
+
+  - section: line-and-plane
+    focus: '**Point of intersection.** Substitute the general point into the plane:'
+    say: >
+      To find where a line meets a plane, substitute the general point into the plane
+      equation. It is linear in t, so t equals minus the value of the plane at the base point,
+      divided by a l plus b m plus c n. Notice the denominator vanishes exactly in the parallel
+      case, which is consistent with the table.
+
+  - section: line-and-plane
+    focus: 'It is not the perpendicular distance.'
+    say: >
+      Two applications. The distance of a point from a plane measured parallel to a given line
+      means: draw the line through the point with that direction, find where it meets the
+      plane, and measure that segment. It is not the perpendicular distance. And the
+      projection of a line on a plane is the intersection of the plane with a second plane
+      through the line perpendicular to the first; its normal is the cross product of the
+      line's direction and the plane's normal.
+
+  - section: line-and-plane
+    focus: 'The angle between a line and a plane uses **sine**, not cosine'
+    say: >
+      The caution on the board deserves a second look. Sine, not cosine, because you measured
+      against the normal. And if a l plus b m plus c n is zero, the angle is zero, meaning the
+      line is parallel to the plane, not perpendicular to it. Students who think in terms of
+      two lines get this backwards.
+
+  - section: line-and-plane
+    question: q0004
+    say: >
+      Here is a question on exactly that point. Find the angle between the given line and
+      plane.
+    answer: >
+      The answer is pi by six. The direction is one, one, two and the normal is two, minus one,
+      one. Their dot product is three, and each has length root six, so the sine of theta is
+      three over six, one half. Pi by three comes from using cosine, which is the angle with
+      the normal, the complement of what was asked.
+
+  - section: perpendicular-image
+    focus: '3. Solve for $t$. Then $Q$ is the **foot**, $PQ$ is the **distance**, and the **image** of $P$ in the line is $P'' = 2Q - P$.'
+    say: >
+      Next, the foot of the perpendicular from a point P to a line. Again, general point first.
+      Take Q on the line in terms of t, and require P Q to be perpendicular to the direction.
+      That is one linear equation in t. Solve it, and Q is the foot, P Q is the distance, and
+      the image of P in the line is twice Q minus P, because the foot is the midpoint of P and
+      its image.
+
+  - section: perpendicular-image
+    focus: 'Foot $Q = (-4, 1, -3)$, distance $\sqrt{36 + 9 + 4} = 7$, image $(-10, -2, -5)$.'
+    say: >
+      In the worked example the perpendicularity condition collapses to ninety eight t minus
+      ninety eight equals zero, so t is one. The foot is minus four, one, minus three, the
+      distance is seven, and the image is minus ten, minus two, minus five. There is also a
+      vector shortcut for the distance alone: the modulus of A P cross b, divided by the
+      modulus of b.
+
+  - section: perpendicular-image
+    focus: 'Example: for $P(1, 2, 3)$ and $x + 2y + 2z = 2$, the ratio is $-\dfrac{9}{9} = -1$.'
+    say: >
+      For a point and a plane there is a ready formula. The perpendicular runs along the
+      normal, so the common ratio is minus the value of the plane at the point, divided by a
+      squared plus b squared plus c squared. Use that ratio once for the foot, and twice for
+      the image. For the point one, two, three and the plane x plus two y plus two z equals
+      two, the ratio is minus one, so the foot is zero, zero, one and the image is minus one,
+      minus two, minus one.
+
+  - section: perpendicular-image
+    focus: 'Check an image by the midpoint: $\frac12(P + P'')$ must be the foot.'
+    say: >
+      The exam tip on the board is worth the few seconds it costs. A foot must satisfy two
+      facts: it lies on the line or plane, and P Q is perpendicular to the direction. An image
+      is checked by its midpoint with P, which must be the foot. If you wrote the foot by
+      mistake, this check catches it at once.
+
+  - section: perpendicular-image
+    question: q0011
+    say: >
+      Now you try. Find the image of a point in a plane.
+    answer: >
+      The answer is minus three, five, two. The plane evaluated at one, three, four gives six,
+      and a squared plus b squared plus c squared is also six, so the ratio for the image is
+      minus two. Minus one, four, three uses the factor minus one, which is the foot, not the
+      image. Check: the image gives minus six in the plane, equal and opposite to six.
+
+  - section: coplanar-lines
+    focus: 'Two lines in space are of exactly one of three kinds: **parallel** (directions proportional), **intersecting**, or **skew** (neither, so not coplanar).'
+    say: >
+      Now two lines. In the plane, lines either meet or are parallel. In space there is a third
+      possibility: skew lines, which neither meet nor are parallel, and therefore do not lie in
+      any common plane. Keep this trichotomy in mind; many traps rest on forgetting it.
+
+  - section: coplanar-lines
+    focus: 'For **non-parallel** lines this is the condition for them to **intersect**. Parallel lines always satisfy it (and are always coplanar).'
+    say: >
+      The coplanarity test is one determinant. Its first row is the vector joining the two base
+      points, and the other rows are the two directions. The lines are coplanar exactly when the
+      three vectors are coplanar, that is, the determinant is zero. Read the highlighted
+      sentence carefully. For non parallel lines, zero means they intersect. Parallel lines
+      always make it zero, so check the directions before you say the lines meet.
+
+  - section: coplanar-lines
+    focus: 'that is, the plane through $A_1$ with normal $\vec b_1 \times \vec b_2$.'
+    say: >
+      The plane containing two intersecting lines passes through either base point, with normal
+      equal to the cross product of the directions. To find the meeting point, equate the two
+      general points, solve two of the three equations for t and s, and the third equation
+      must then hold. In the example the lines meet at three, two, two, on the plane three x
+      plus y minus two z equals seven.
+
+  - section: coplanar-lines
+    question: q0015
+    say: >
+      Try this. For which value of k do the two lines intersect?
+    answer: >
+      The answer is k equals nine halves. The lines are not parallel, so they meet exactly when
+      the determinant vanishes, and expanding it gives two k minus nine equals zero. Eleven
+      halves comes from writing k minus one instead of k plus one for the y component of the
+      joining vector; the base points have y coordinates k and minus one, so the difference
+      is k plus one.
+
+  - section: shortest-distance
+    focus: 'there is **exactly one** line meeting both at right angles'
+    say: >
+      Finally, skew lines. For two skew lines there is exactly one line meeting both at right
+      angles, the common perpendicular, or line of shortest distance. Its direction must be
+      perpendicular to both lines, so it is along b one cross b two. The shortest distance is
+      the length of the segment between its two feet.
+
+  - section: shortest-distance
+    focus: 'It is the projection of $\overrightarrow{A_1A_2}$ on the common normal.'
+    say: >
+      Why the formula on the board? Take any segment joining the two lines, say from A one to A
+      two, and project it onto the common normal. That projection is the shortest distance. So
+      the shortest distance is the modulus of the scalar triple product of A one A two, b one
+      and b two, divided by the modulus of b one cross b two. It is zero exactly when the non
+      parallel lines intersect.
+
+  - section: shortest-distance
+    focus: '**Parallel lines** ($\vec b_1 = \vec b_2 = \vec b$): the formula fails since $\vec b \times \vec b = \vec 0$.'
+    say: >
+      For parallel lines the formula breaks down, because the cross product of a vector with
+      itself is zero. Then use the distance of a point of one line from the other: the
+      modulus of A one A two cross b, divided by the modulus of b.
+
+  - section: shortest-distance
+    focus: '*Method 1 (feet).* Take general points $P$ on $L_1$ and $Q$ on $L_2$.'
+    say: >
+      To get the equations of the shortest distance line, take general points P and Q on the two
+      lines, and impose that P Q is perpendicular to both directions. That gives two linear
+      equations in t and s. In the worked example they give t equals zero and s equals minus
+      one half, and the line runs along zero, one, one, which is the cross product, as it must.
+      The alternative is to intersect the two planes through each line containing the common
+      normal.
+
+  - section: shortest-distance
+    focus: 'divide by $\lvert \vec b_1 \times \vec b_2\rvert$, not by $\lvert \vec b_1\rvert\,\lvert \vec b_2\rvert$'
+    say: >
+      The caution here is the most common formula error. Divide by the modulus of the cross
+      product, not by the product of the moduli. These agree only when the lines are
+      perpendicular. And do not drop the modulus in the numerator; a distance is never
+      negative.
+
+  - section: shortest-distance
+    question: q0013
+    say: >
+      Here is a full calculation. Find the shortest distance between the two lines shown.
+    answer: >
+      The answer is two root twenty nine. The cross product of the directions is four, six,
+      eight, and the joining vector is minus four, minus six, minus eight, so the triple product
+      has modulus 116, and the cross product has length root 116. The quotient is root 116,
+      which is two root twenty nine. The option with root 129 divides by the product of the
+      lengths, exactly the error we just warned about.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Normalise the form before reading the direction. The direction of two planes
+      is the cross product of their normals. Line and plane use sine. A line lies in a plane
+      only with both the direction condition and a point. The image is twice the foot minus the
+      point. A zero determinant means intersecting or parallel, and lines that do not meet may be
+      skew. For the shortest distance, divide by the modulus of the cross product. Most
+      questions are one of three moves: general point, cross product, or one determinant. Now
+      try the practice questions.

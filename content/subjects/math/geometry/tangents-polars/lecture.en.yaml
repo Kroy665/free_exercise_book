@@ -1,0 +1,305 @@
+# Spoken lecture for "Tangents, Poles and Polars".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: tangency
+    say: >
+      Welcome. Today we revise tangents, normals, poles and polars for the circle, parabola,
+      ellipse and hyperbola in standard form. By the end you should be able to write any tangent,
+      chord of contact, polar or bisected chord from one rule, recall the four tangency
+      conditions without mixing them, count normals, and handle conjugate points and lines. The
+      whole chapter runs on two symbols, S one and T.
+
+  - section: tangency
+    focus: 'is obtained from $S$ by the **substitution rule**'
+    say: >
+      Write the conic as S equals zero, normalised so that, for example, the ellipse is x squared
+      over a squared plus y squared over b squared minus one. S one is the value of S at a point
+      P. The point is outside, on, or inside the conic as S one is positive, zero, or negative. T
+      is made from S by the substitution rule: x squared becomes x x one, y squared becomes y y
+      one, two x y becomes x y one plus x one y, two x becomes x plus x one, and two y becomes y
+      plus y one.
+
+  - section: tangency
+    focus: 'If $P$ lies on the conic, **$T = 0$ is the tangent at $P$**.'
+    say: >
+      The first use: if P lies on the conic, T equals zero is the tangent at P. So the tangent to
+      x squared plus y squared equals twenty five at three, four is three x plus four y equals
+      twenty five. For the parabola y squared equals four a x, the rule gives y y one equals two a
+      times x plus x one, because four a x is two a times two x. The table also lists the
+      parametric forms, such as x cos theta over a plus y sin theta over b equals one for the
+      ellipse.
+
+  - section: tangency
+    focus: '**Condition of tangency** for $y = mx + c$'
+    say: >
+      Now the condition for y equals m x plus c to be a tangent. Substitute into the conic, get a
+      quadratic in x, and set its discriminant to zero. The four results are worth knowing cold.
+      Circle: c squared equals a squared times one plus m squared. Parabola: c equals a over m.
+      Ellipse: c squared equals a squared m squared plus b squared. Hyperbola: c squared equals a
+      squared m squared minus b squared. The ellipse and hyperbola differ only in that sign, and
+      that is the standard distractor.
+
+  - section: tangency
+    question: q0002
+    say: >
+      Try this. When does y equals x plus c touch the ellipse x squared over nine plus y squared
+      over four equals one?
+    answer: >
+      For the ellipse, c squared equals a squared m squared plus b squared, which is nine plus
+      four, thirteen. So c is plus or minus root thirteen. Plus or minus root five is the trap:
+      it uses the hyperbola condition with the minus sign. Plus or minus thirteen forgets the
+      square root.
+
+  - section: tangency
+    focus: 'For a general circle, the line touches iff the distance from the centre equals the radius.'
+    say: >
+      For a circle that is not centred at the origin, the cleanest test is geometric: a line
+      touches exactly when its distance from the centre equals the radius. For three x plus four
+      y equals k and the circle with centre one, two and radius three, the modulus of eleven
+      minus k over five must be three, so k is twenty six or minus four.
+
+  - section: tangency
+    focus: 'which is not a tangent at any finite point'
+    say: >
+      A caution on the hyperbola. A real tangent of slope m exists only when a squared m squared
+      exceeds b squared, that is, when the modulus of m is greater than b over a. At exactly b
+      over a, c becomes zero and the line is an asymptote, which is not a tangent at any finite
+      point. Also note two focal facts for the ellipse: the feet of the perpendiculars from a
+      focus to any tangent lie on the auxiliary circle, and the product of the perpendiculars
+      from the two foci is b squared.
+
+  - section: normals
+    focus: 'y = mx - 2am - am^3'
+    say: >
+      Next, normals, the lines perpendicular to the tangent at the point of contact. For a
+      circle every normal passes through the centre. For the parabola, the normal at the point
+      with parameter t is y plus t x equals two a t plus a t cubed. Putting m equal to minus t
+      gives the slope form on the board: y equals m x minus two a m minus a m cubed, with foot a
+      m squared, minus two a m.
+
+  - section: normals
+    focus: '$$am^3 + (2a - h)m + k = 0.$$'
+    say: >
+      Ask which normals pass through a given point h, k. Substitute, and you get a cubic in m: a
+      m cubed plus two a minus h times m plus k equals zero. A cubic has at most three roots, so
+      at most three normals can be drawn to a parabola from a point. There is no m squared term,
+      so the three slopes add to zero, and hence the ordinates of the three feet also add to
+      zero. From a point h, zero on the axis, there are three real normals exactly when h
+      exceeds two a.
+
+  - section: normals
+    question: q0007
+    say: >
+      Let's test that. How many normals can be drawn from the point five, zero to the parabola y
+      squared equals four x?
+    answer: >
+      Here a is one, and the cubic is m cubed minus three m equals zero, so m is zero or plus or
+      minus root three. That is three real normals: the axis and two symmetric lines. In general
+      h, zero gives three normals when h is greater than two a, and five is greater than two. Four
+      is the bound for an ellipse, not a parabola.
+
+  - section: normals
+    focus: '**at most four** normals'
+    say: >
+      For the ellipse, the feet of the normals from a point satisfy a quartic, so there are at
+      most four normals. Do not carry the parabola's three over to the ellipse. The notes also
+      give the condition for a line to be a normal to the ellipse. It comes from comparing the
+      line with the parametric normal and using cos squared plus sin squared equals one.
+
+  - section: normals
+    focus: 'Do not mix up the signs: the ellipse normal has $a^2 - b^2$ on the right'
+    say: >
+      The exam tip on signs. The ellipse normal at theta is a x sec theta minus b y cosec theta
+      equals a squared minus b squared. The hyperbola normal has a plus between the terms and a
+      squared plus b squared on the right. To check, put the foot back in. At a cos theta, b sin
+      theta, the ellipse form gives a squared minus b squared, exactly as it must.
+
+  - section: pair-of-tangents
+    focus: '$$SS_1 = T^2.$$'
+    say: >
+      Now the pair of tangents. From a point outside, two real tangents can be drawn; from a
+      point on the conic, one; from a point inside, none. The combined equation of the pair is S
+      times S one equals T squared. The reason: a point Q is on a tangent from P exactly when the
+      line P Q meets the conic in coincident points. Dividing P Q in a ratio lambda gives a
+      quadratic in lambda, and its discriminant is T squared minus S S one.
+
+  - section: pair-of-tangents
+    focus: '$$\sin\alpha = \frac{a}{d},\qquad \tan\alpha = \frac{a}{L}.$$'
+    say: >
+      For a circle the angle between the tangents is easier by geometry. Draw the radius to the
+      point of contact; it is perpendicular to the tangent. If d is the distance from P to the
+      centre, and L is the tangent length, then the half angle alpha has sine a over d and tangent
+      a over L. Remember to double it at the end.
+
+  - section: pair-of-tangents
+    question: q0008
+    say: >
+      Try this. Find the angle between the tangents drawn from four, zero to the circle x squared
+      plus y squared equals four.
+    answer: >
+      The distance is four and the radius is two, so sine of the half angle is one half, and the
+      half angle is pi by six. The tangents meet at pi by three. The tempting option pi by six is
+      only the half angle.
+
+  - section: pair-of-tangents
+    focus: '| ellipse | $x^2 + y^2 = a^2 + b^2$ |'
+    say: >
+      The director circle is the locus of points from which the two tangents are perpendicular.
+      From h, k, the slope form gives a quadratic in m, and setting the product of its roots to
+      minus one gives the locus. For the circle it is x squared plus y squared equals two a
+      squared; for the ellipse, a squared plus b squared; for the hyperbola, a squared minus b
+      squared. For the parabola the product of slopes is a over h, so h is minus a: perpendicular
+      tangents always meet on the directrix.
+
+  - section: pair-of-tangents
+    focus: 'The hyperbola''s director circle has radius $\sqrt{a^2 - b^2}$, not $\sqrt{a^2 + b^2}$.'
+    say: >
+      The caution: the hyperbola's director circle has radius root of a squared minus b squared,
+      not a squared plus b squared. So when b exceeds a, as for x squared over nine minus y
+      squared over sixteen, no real point sees the hyperbola at a right angle. For the rectangular
+      hyperbola the circle shrinks to the centre.
+
+  - section: chord-of-contact
+    focus: 'The tangent at $Q(\alpha, \beta)$ is $T_Q = 0$ and passes through $P$; this relation is symmetric'
+    say: >
+      The chord of contact. Tangents from P touch at Q and R, and the chord Q R is again T equals
+      zero. The proof is a lovely symmetry argument. The tangent at Q passes through P. But the
+      expression T is symmetric in the two points, so Q lies on T of P equals zero. The same is
+      true of R, and two points fix the line. From two, three to x squared plus y squared equals
+      four, the chord of contact is two x plus three y equals four.
+
+  - section: chord-of-contact
+    focus: 'tangent length $L = \sqrt{S_1}$;'
+    say: >
+      For a circle with unit coefficients of x squared and y squared, the tangent length from P
+      is root S one. With radius r, the chord of contact has length two r L over root of r
+      squared plus L squared. From four, three to the circle of radius three, L is four, and the
+      chord is twenty four fifths. The caution: root S one needs those unit coefficients, so
+      divide through first if the equation starts with two x squared plus two y squared.
+
+  - section: chord-of-contact
+    focus: '$$T = S_1.$$'
+    say: >
+      Now a different chord: the chord whose midpoint is a given point. Its equation is T equals
+      S one. The reason, for the ellipse: if the ends are the midpoint plus and minus a small
+      displacement, subtracting the two conic equations shows the chord has the direction of T,
+      and it passes through the midpoint. Letting the midpoint vary over chords of a fixed slope
+      gives a straight line through the centre, called a diameter.
+
+  - section: chord-of-contact
+    question: q0011
+    say: >
+      Try this. Find the chord of the ellipse x squared over sixteen plus y squared over nine
+      equals one whose midpoint is two, one.
+    answer: >
+      Use T equals S one. T is two x over sixteen plus y over nine minus one, and S one is four
+      sixteenths plus one ninth minus one. Simplifying gives x over eight plus y over nine equals
+      thirteen over thirty six, that is nine x plus eight y equals twenty six. The tempting
+      option nine x plus eight y equals seventy two is T equals zero, the polar, which does not
+      pass through two, one.
+
+  - section: chord-of-contact
+    focus: 'the chord of contact from $P$ and the chord bisected at $P$ are **parallel**'
+    say: >
+      That leads to the exam tip. T equals zero and T equals S one have the same x and y
+      coefficients, so the chord of contact from P and the chord bisected at P are parallel. If an
+      option has the right coefficients but the constant of T equals zero, it is the chord of
+      contact, not the bisected chord. Always check that your bisected chord passes through the
+      midpoint.
+
+  - section: poles-polars
+    focus: 'is the line $T = 0$. $P$ is the **pole** of that line.'
+    say: >
+      Now poles and polars. The polar of any point P with respect to a conic is the line T equals
+      zero, and P is called the pole of that line. Notice how this unifies what we have done. If P
+      is outside, the polar is the chord of contact. If P is on the conic, it is the tangent. In
+      every case it is the locus of the harmonic conjugate of P with respect to the ends of a
+      variable chord through P.
+
+  - section: poles-polars
+    focus: 'If $P$ is inside, the polar is a real line that **does not meet** the conic.'
+    say: >
+      If P is inside, there are no real tangents, but the polar is still a real line. It does not
+      meet the conic. It is the locus of the points where the tangents at the ends of chords
+      through P meet. The graph on the board shows the outside case: from P, three, four, the two
+      tangents to the ellipse and the polar through the points of contact.
+
+  - section: poles-polars
+    focus: 'Compare it with the polar $T = 0$ of an unknown $(h, k)$'
+    say: >
+      To find the pole of a given line, do not memorise the table. Write the polar of an unknown
+      point h, k, and match coefficients with the given line. The table on the board is just the
+      result of that matching for the four standard conics.
+
+  - section: poles-polars
+    question: q0012
+    say: >
+      Try it. Find the pole of the line two x plus three y equals six with respect to the ellipse
+      x squared over nine plus y squared over four equals one.
+    answer: >
+      The polar of h, k is h x over nine plus k y over four equals one. The line is x over three
+      plus y over two equals one. Matching, h over nine is one third and k over four is one half,
+      so the pole is three, two. The option two, three just reads off the coefficients.
+
+  - section: poles-polars
+    focus: '**Reciprocity (La Hire).**'
+    say: >
+      Now the standard properties. Reciprocity: if Q lies on the polar of P, then P lies on the
+      polar of Q, because T is symmetric in the two points. The polar of a focus is the
+      corresponding directrix: for a e, zero on the ellipse, T gives x equals a over e. And the
+      polar of the centre of a central conic is the line at infinity, since T reduces to minus one
+      equals zero.
+
+  - section: poles-polars
+    focus: 'the polar of $P$ is **perpendicular to $CP$** at distance $\frac{a^2}{CP}$ from $C$'
+    say: >
+      For a circle, the polar of P is perpendicular to the line joining the centre to P, at
+      distance a squared over C P from the centre. For locus problems, write the moving line as
+      the polar of h, k and impose its condition. If the polar with respect to the circle of
+      radius b touches the circle of radius a, the poles lie on the circle x squared plus y
+      squared equals b to the fourth over a squared.
+
+  - section: conjugate
+    focus: 'The condition is $T_P(Q) = 0$, i.e. $S_{12} = 0$'
+    say: >
+      Finally, conjugacy. Two points are conjugate when one lies on the polar of the other, and by
+      reciprocity this is symmetric. The condition is just T of P evaluated at Q equal to zero.
+      For the circle, x one x two plus y one y two equals a squared. A point is conjugate to
+      itself exactly when it lies on the conic.
+
+  - section: conjugate
+    question: q0018
+    say: >
+      A quick one. The points one, two and k, three are conjugate with respect to x squared plus y
+      squared equals ten. Find k.
+    answer: >
+      The polar of one, two is x plus two y equals ten. Putting in k, three gives k plus six
+      equals ten, so k is four. The option minus four comes from a sign slip.
+
+  - section: conjugate
+    focus: 'Two lines are conjugate if each passes through the pole of the other'
+    say: >
+      Two lines are conjugate if each passes through the pole of the other, and one condition
+      implies the other. To derive the condition, put the pole of the first line into the second.
+      For the ellipse this gives a squared l one l two plus b squared m one m two equals n one n
+      two. For two lines through the centre the right side is zero, and in slopes it becomes the
+      product of slopes equal to minus b squared over a squared: the familiar condition for
+      conjugate diameters.
+
+  - section: conjugate
+    focus: 'The circle condition has $a^2$ multiplying **both** $l_1l_2$ and $m_1m_2$.'
+    say: >
+      The exam tip of this section: every condition is the T form with one point replaced by the
+      other, so you can regenerate both tables in seconds. And the caution: for the circle, a
+      squared multiplies both l one l two and m one m two. Dropping it from the second term is a
+      slip carried over from the ellipse.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Tangent at a point, chord of contact and polar are all T equals zero. The chord
+      bisected at a point is T equals S one, and the pair of tangents is S S one equals T squared.
+      Ellipse tangency has plus b squared, hyperbola minus. Director circles: two a squared, a
+      squared plus b squared, a squared minus b squared, and the directrix. A parabola has at most
+      three normals, an ellipse four. The polar of a focus is the directrix. Now try the practice
+      questions.

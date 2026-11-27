@@ -1,0 +1,361 @@
+# Spoken lecture for "Alternating and Arbitrary Series".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: absolute-convergence
+    say: >
+      Welcome. So far you have tested series of positive terms. Today the terms may have both
+      signs. By the end of this lecture you should be able to classify any such series as
+      absolutely convergent, conditionally convergent or divergent, apply the Leibniz, Abel and
+      Dirichlet tests with their exact hypotheses, use the Leibniz error bound, and settle the
+      endpoints of an interval of convergence, which is where most exam marks are won or lost.
+
+  - section: absolute-convergence
+    focus: 'The tests for positive series (comparison, Raabe, condensation) do not apply to it directly.'
+    say: >
+      First, what we lose. Comparison, Raabe and condensation are tests for positive series,
+      and they do not apply directly when the signs change. What survives is Cauchy's
+      criterion: the series converges exactly when the sum of any long enough block of
+      consecutive terms is small. And the necessary condition still holds: if the series
+      converges, the terms tend to zero. The converse, as always, is false.
+
+  - section: absolute-convergence
+    focus: '- $\sum a_n$ is **conditionally convergent** if $\sum a_n$ converges but $\sum |a_n|$ diverges.'
+    say: >
+      Two definitions. A series is absolutely convergent if the series of moduli converges. It is
+      conditionally convergent if the series itself converges but the series of moduli
+      diverges. Every real series is exactly one of three things: absolutely convergent,
+      conditionally convergent, or divergent. Keep that three way split in mind; most exam
+      questions simply ask which box a series falls into.
+
+  - section: absolute-convergence
+    focus: '- **Absolute convergence implies convergence**, and $\left|\sum a_n\right| \le \sum |a_n|$.'
+    say: >
+      The key fact: absolute convergence implies convergence. The proof is one line with
+      Cauchy's criterion. The modulus of a block of terms is at most the block of moduli, by
+      the triangle inequality. So if the blocks of moduli become small, so do the blocks of the
+      original series. The converse fails: the alternating harmonic series converges, while the
+      harmonic series diverges.
+
+  - section: absolute-convergence
+    focus: 'So in a conditionally convergent series, the positive terms alone and the negative terms alone **both** sum to $\infty$.'
+    say: >
+      Split each term into its positive part p n and its negative part q n. If both parts give
+      convergent series, the series is absolutely convergent. If exactly one diverges, the
+      series diverges. If both diverge, anything can happen. Notice the highlighted
+      consequence: in a conditionally convergent series, the positive terms alone add up to
+      infinity, and so do the negative terms. We will use this later for Riemann's theorem.
+
+  - section: absolute-convergence
+    focus: 'Comparison works only with **non-negative** terms.'
+    say: >
+      Now a trap. Limit comparison needs non negative terms. Take b n equal to minus one to the
+      n over root n, which converges by Leibniz, and let a n be b n plus one over n. The ratio
+      a n over b n tends to one, yet the series of a n diverges, because it is a convergent
+      series plus the harmonic series. So never conclude convergence from asymptotic
+      equivalence when the signs change.
+
+  - section: absolute-convergence
+    focus: 'That shows only that the series is **not absolutely** convergent; $\sum a_n$ itself may still converge.'
+    say: >
+      And the matching exam tip. Any positive term test may be used on the series of moduli.
+      But if that series diverges, you have shown only that the series is not absolutely
+      convergent. The series itself may still converge. Students often write divergent at
+      this point and lose the mark.
+
+  - section: leibniz-test
+    focus: '**Leibniz test.** If $(u_n)$ is **monotone decreasing** ($u_{n+1} \le u_n$ for all $n$) and $u_n \to 0$, then $\sum (-1)^{n+1} u_n$ converges.'
+    say: >
+      The workhorse for alternating series is the Leibniz test. If u n is positive, monotone
+      decreasing, and tends to zero, then u one minus u two plus u three and so on converges.
+      Two hypotheses: decreasing, and tending to zero. Both are needed, and we will see why in
+      a moment.
+
+  - section: leibniz-test
+    focus: '**Proof idea.**'
+    say: >
+      Why is it true? The even partial sums increase, because each bracket, u odd minus u even,
+      is non negative. The odd partial sums decrease, for the same reason. Every even partial
+      sum lies below every odd one, and the gap between neighbours is a single term, which
+      tends to zero. So we get nested closed intervals shrinking to a single point, and that
+      point is the sum.
+
+  - section: leibniz-test
+    focus: 'title: Partial sums $S_n$ of $1 - \frac12 + \frac13 - \cdots$ oscillate about $\ln 2$'
+    say: >
+      The graph shows exactly that picture for the alternating harmonic series. The partial
+      sums jump to one, down to one half, up to five sixths, and so on, zig zagging above and
+      below the horizontal line at log two, with the swings getting smaller each time.
+
+  - section: leibniz-test
+    focus: '- **error bound:** $|S - S_n| \le u_{n+1}$, the first omitted term;'
+    say: >
+      The zig zag gives a free error estimate. The sum always lies between two consecutive
+      partial sums, so the error after n terms is at most the first omitted term, u n plus one.
+      Also, the error has the sign of that first omitted term. This bound is the basis of a
+      whole family of numerical questions.
+
+  - section: leibniz-test
+    focus: '- Monotonicity is needed: take $u_{2k-1} = \frac1k$ and $u_{2k} = \frac{1}{k^2}$. Then $u_n \to 0$, but pairing gives $\sum\left(\frac1k - \frac1{k^2}\right) = \infty$.'
+    say: >
+      Both hypotheses matter. Without terms tending to zero, minus one to the n times n over n
+      plus one diverges. Without monotonicity, look at the highlighted example: odd terms one
+      over k, even terms one over k squared. The terms do tend to zero, but each pair gives one
+      over k minus one over k squared, and those pairs sum to infinity. On the positive side,
+      it is enough for u n to decrease eventually, from some point on.
+
+  - section: leibniz-test
+    focus: 'For $u_n = \frac{\ln n}{n}$: $f''(x) = \frac{1 - \ln x}{x^2} < 0$ for $x > e$'
+    say: >
+      To check monotonicity, write u n as f of n and differentiate. For log n over n, the
+      derivative is one minus log x, over x squared, which is negative once x exceeds e. So the
+      terms decrease from n equals three onwards, and the alternating series of log n over n
+      converges.
+
+  - section: leibniz-test
+    focus: 'We need $\frac{1}{n+1} < 10^{-3}$, so $n + 1 > 1000$, i.e. $n \ge 1000$ terms (the bound is safe, not sharp).'
+    say: >
+      Now use the error bound. For the alternating harmonic series to be within one thousandth
+      of log two, we need one over n plus one to be less than one thousandth, so n is at least
+      one thousand. That is safe, not sharp. For the series for one over e, the factorials
+      shrink so fast that six terms already give an error at most one over seven hundred and
+      twenty. Remember the caution: this bound needs the Leibniz hypotheses; it is not a fact
+      about convergent series in general.
+
+  - section: leibniz-test
+    question: q0004
+    say: >
+      Try this one. How many terms of the alternating harmonic series guarantee an error less
+      than one hundredth?
+    answer: >
+      The answer is 100. The first omitted term is one over n plus one, and we need it strictly
+      less than one hundredth, so n plus one is greater than 100, and n is at least 100. The
+      tempting 99 fails, because then the omitted term is exactly one hundredth, which is not
+      less than one hundredth.
+
+  - section: standard-examples
+    focus: '- $\displaystyle \sum \frac{(-1)^n}{n^p}$: absolutely convergent for $p > 1$; conditionally convergent for $0 < p \le 1$; divergent for $p \le 0$ (terms do not tend to $0$).'
+    say: >
+      Now the standard examples. The alternating harmonic series sums to log two, and it is
+      conditionally convergent. The alternating p series is the model for everything: absolutely
+      convergent for p greater than one, conditionally convergent for p between zero and one,
+      with one included, and divergent for p less than or equal to zero, because then the terms
+      do not even tend to zero.
+
+  - section: standard-examples
+    focus: '**Why the sum is $\ln 2$.**'
+    say: >
+      Why log two? The 2n-th partial sum equals the 2n-th harmonic number minus the n-th
+      harmonic number. That is the sum of one over k for k from n plus one to 2n, which is a
+      Riemann sum for the integral from one to two of d x over x. So it tends to log two. It is
+      also log of one plus x at x equals one, the endpoint of the Maclaurin series, justified by
+      Abel's limit theorem.
+
+  - section: standard-examples
+    focus: '| $\sum_{n \ge 2} \frac{(-1)^n}{n \ln n}$ | conditional | condensation: $\sum \frac{1}{n\ln n} = \infty$ |'
+    say: >
+      The table classifies a dozen series. A few rows to memorise. One over log n and one over n
+      log n are both conditional; the second needs Cauchy condensation to see that the moduli
+      diverge. But one over n times log n squared is absolute. One minus cos of one over n
+      behaves like one over 2n squared, so it is absolute, while sine of one over n behaves like
+      one over n, so it is conditional.
+
+  - section: standard-examples
+    focus: '**Method.**'
+    say: >
+      Here is the method in three steps. First, do the terms tend to zero? If not, it diverges,
+      and you are done. Second, test the series of moduli with a positive term test, usually
+      limit comparison with one over n to the p. If it converges, the series is absolutely
+      convergent. Third, if not, try Leibniz or Dirichlet. If that works, it is conditionally
+      convergent. As the exam tip says, terms like a constant over n to the p, with p between
+      zero and one, almost always mean conditional.
+
+  - section: standard-examples
+    question: q0008
+    say: >
+      Classify this one: the alternating series of root of n plus one, minus root n.
+    answer: >
+      It is conditionally convergent. Rationalise: the term is one over root of n plus one plus
+      root n, which behaves like one over two root n. So the moduli diverge, like a p series
+      with p one half. But the terms decrease to zero, so Leibniz gives convergence. Not
+      absolutely, but conditionally.
+
+  - section: ratio-root
+    focus: '- **Ratio test (D''Alembert).** Let $L = \lim \left|\frac{a_{n+1}}{a_n}\right|$. If $L < 1$, then $\sum a_n$ converges absolutely. If $L > 1$, then $\sum a_n$ **diverges**. If $L = 1$, the test fails.'
+    say: >
+      The ratio and root tests apply to the moduli. If the limit L is less than one, the series
+      converges absolutely. Now the important part: if L is greater than one, the series itself
+      diverges, not merely the series of moduli. If L equals one, the test says nothing. For the
+      root test, use the limit superior of the n-th root of the modulus.
+
+  - section: ratio-root
+    focus: 'This is special to these two tests.'
+    say: >
+      Why do these two tests give divergence of the series itself? Because when L exceeds one,
+      the moduli do not tend to zero. In the ratio test they eventually increase; in the root
+      test they exceed one infinitely often. So the terms fail the necessary condition. This is
+      special to ratio and root. Divergence of the moduli by comparison or Raabe tells you only
+      that convergence is not absolute.
+
+  - section: ratio-root
+    question: q0007
+    say: >
+      Here is a quick check. Classify the series of minus two to the n over n squared.
+    answer: >
+      It is divergent. The ratio of moduli is two times n over n plus one, squared, which tends
+      to two. Since two is greater than one, the terms do not tend to zero, and the series
+      itself diverges. Leibniz cannot rescue it, because two to the n over n squared increases
+      without bound.
+
+  - section: ratio-root
+    focus: 'So when the ratio test decides, the root test decides the same way, but not conversely.'
+    say: >
+      Root beats ratio. The limits of the ratio always enclose the limits of the n-th root, so
+      whenever the ratio test decides, the root test agrees, but not conversely. The example on
+      the board has ratios alternating between one eighth and two, so the ratio test fails,
+      yet the n-th roots tend to one half and the series converges. And remember the caution:
+      L equal to one tells you nothing. One over n, minus one to the n over n, and one over n
+      squared all have L equal to one.
+
+  - section: abel-dirichlet
+    focus: 'These handle products $\sum a_n b_n$ where Leibniz does not apply directly.'
+    say: >
+      Next, Abel's and Dirichlet's tests, for series of products a n times b n. Both rest on
+      Abel's partial summation, which is the discrete version of integration by parts: you move
+      the differences onto the b's and the partial sums onto the a's.
+
+  - section: abel-dirichlet
+    focus: '| Dirichlet | partial sums bounded | monotone, $b_n \to 0$ |'
+    say: >
+      Learn the table as a pair. Dirichlet: the partial sums of a n are merely bounded, and b n
+      is monotone and tends to zero. Abel: the series of a n actually converges, and b n is
+      monotone and bounded, without needing to tend to zero. Leibniz is just Dirichlet with a n
+      equal to plus and minus one, whose partial sums are one, zero, one, zero.
+
+  - section: abel-dirichlet
+    focus: '- $\sum \frac{\sin nx}{n}$ **converges for every real $x$**'
+    say: >
+      The main application uses the trigonometric sums. For x not a multiple of two pi, the
+      partial sums of sine k x and of cos k x are bounded by one over the modulus of sine x by
+      two. So with b n equal to one over n, Dirichlet shows that the series of sine n x over n
+      converges for every real x. For x strictly between zero and two pi, its sum is pi minus x,
+      over two.
+
+  - section: abel-dirichlet
+    focus: '- $\sum \frac{\cos nx}{n}$ converges if and only if $x \notin 2\pi\Z$ (at $x = 2k\pi$ it is the harmonic series).'
+    say: >
+      But it is not absolutely convergent unless x is a multiple of pi: the modulus of sine n x
+      is at least sine squared n x, which is one minus cos 2 n x, over two, and that pushes in a
+      harmonic series. The cosine series is different: it converges exactly when x is not a
+      multiple of two pi, because at those points every cosine is one and you get the harmonic
+      series.
+
+  - section: abel-dirichlet
+    question: q0016
+    say: >
+      Your turn. For x strictly between zero and pi, how does the series of sine n x over n
+      behave?
+    answer: >
+      It is conditionally convergent. Dirichlet gives convergence, because the partial sums of
+      sine k x are bounded and one over n decreases to zero. But the modulus of sine n x over n
+      dominates a harmonic series, so the convergence is not absolute. Absolutely convergent is
+      the tempting wrong choice.
+
+  - section: abel-dirichlet
+    focus: 'Monotonicity of $(b_n)$ cannot be dropped.'
+    say: >
+      Two traps. Monotonicity of b n cannot be dropped: with a n equal to minus one to the n and
+      b n equal to minus one to the n over n, the product is one over n, which diverges. And in
+      Abel's test, bounded partial sums are not enough; the series of a n must converge. For an
+      Abel example, the alternating harmonic series times one plus one over n, to the power n,
+      converges, because that factor increases to e.
+
+  - section: rearrangements
+    focus: '- **Dirichlet''s theorem.** If $\sum a_n$ converges absolutely to $S$, then every rearrangement converges absolutely to the same sum $S$.'
+    say: >
+      Now rearrangements. A rearrangement takes the same terms in a different order. Dirichlet's
+      theorem says that an absolutely convergent series can be rearranged freely: every
+      rearrangement converges absolutely to the same sum. So for real series, being
+      rearrangement proof is exactly the same as absolute convergence.
+
+  - section: rearrangements
+    focus: '**Idea of Riemann''s proof.**'
+    say: >
+      Riemann's theorem says the opposite for conditional convergence: a rearrangement can
+      converge to any real number you like, or diverge to plus or minus infinity. The proof uses
+      the fact we met earlier. The positive terms sum to infinity, and so do the negative ones.
+      Add positive terms until you just pass your target, then negative terms until you just
+      drop below it, and repeat. The overshoot is at most the last term used, which tends to zero.
+
+  - section: rearrangements
+    focus: '**Alternating harmonic rearrangements.**'
+    say: >
+      For the alternating harmonic series there is a neat formula. Take p positive terms, then q
+      negative terms, in turn. The sum becomes log two plus one half of log of p over q. One
+      positive then two negatives gives one half of log two. Two positives then one negative
+      gives three halves of log two. Also notice: inserting brackets never changes a sum, but
+      removing them can, as one minus one plus one minus one shows.
+
+  - section: rearrangements
+    question: q0018
+    say: >
+      Try this. Two positive terms, then one negative term, in turn. What is the sum?
+    answer: >
+      Three halves of log two. With p equal to two and q equal to one, the formula gives log two
+      plus one half of log two. Log two is the tempting wrong answer; it assumes rearranging
+      cannot change the sum, which holds only for absolutely convergent series.
+
+  - section: rearrangements
+    focus: '- **Mertens'' theorem.** If $\sum a_n = A$ **absolutely** and $\sum b_n = B$ (convergent), then $\sum c_n = AB$.'
+    say: >
+      Finally the Cauchy product, whose n-th term collects all a k times b n minus k. Mertens'
+      theorem says that if one series converges absolutely and the other merely converges, the
+      product converges to the product of the sums. That is how e to the x times e to the y
+      becomes e to the x plus y. The caution on the board shows that two conditionally
+      convergent series can fail: squaring the alternating series of one over root n plus one
+      gives terms that do not even tend to zero.
+
+  - section: interval-of-convergence
+    focus: '2. **Test the two endpoints separately**, by substituting them.'
+    say: >
+      Last topic: for which x does a power series converge? Apply the ratio or root test to the
+      moduli. That gives absolute convergence inside an open interval, and divergence outside
+      it. Then test the two endpoints separately, by substituting them. At the endpoints the
+      ratio limit is exactly one, so use the p test, Leibniz, or the n-th term test instead.
+
+  - section: interval-of-convergence
+    focus: '| $\sum \frac{x^n}{n^2}$ | $[-1, 1]$ | both absolute |'
+    say: >
+      The table shows how the endpoints decide. x to the n over n converges on the half open
+      interval from minus one, included, to one, excluded: at one it is harmonic, at minus one it
+      is alternating harmonic. x to the n over n squared converges on the closed interval, both
+      ends absolutely. x to the n over n factorial converges everywhere, and n factorial x to
+      the n only at zero.
+
+  - section: interval-of-convergence
+    focus: 'Watch out for gaps in the powers'
+    say: >
+      The exam tip is worth hearing twice. The options usually differ only at the endpoints, so
+      the endpoint check is the whole question. And watch out for gaps in the powers. For x to
+      the 2n over n times four to the n, the ratio limit is x squared over four, so the open
+      interval is from minus two to two. At both endpoints you get the harmonic series, so both
+      are excluded.
+
+  - section: interval-of-convergence
+    question: q0011
+    say: >
+      Here is a typical one, centred at two. Find the set of convergence.
+    answer: >
+      The ratio limit is the modulus of x minus two, over three, so the open interval runs from
+      minus one to five. At five the series is the harmonic series, which diverges. At minus one
+      it is the alternating harmonic series, which converges. So the answer is minus one
+      included, five excluded. The option from minus three to three forgets the centre.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist. Terms first: if they do not tend to zero, stop. Absolute
+      implies convergent, never the reverse. Leibniz needs decreasing terms tending to zero, and
+      the error is at most the first omitted term. Ratio or root above one means the series
+      itself diverges. Limit comparison needs positive terms. Dirichlet needs bounded partial
+      sums, Abel a convergent series. Conditional series can be rearranged to anything. And
+      always test endpoints separately. Now try the practice questions.

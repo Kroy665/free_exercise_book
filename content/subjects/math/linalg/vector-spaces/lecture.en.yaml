@@ -1,0 +1,304 @@
+# Spoken lecture for "Vector Spaces".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: axioms
+    say: >
+      Welcome. Today we rebuild the language of linear algebra: vector spaces, subspaces, span,
+      independence, basis and dimension. Nearly every linear algebra question in the exam is
+      secretly a dimension count or a closure check. By the end you should be able to decide in
+      seconds whether a set is a subspace, compute the dimension of standard matrix and
+      polynomial spaces without hesitation, and use the dimension formula for sums and
+      intersections.
+
+  - section: axioms
+    focus: 'A **vector space over $F$** is a set $V$ with an addition $V \times V \to V$ and a scalar multiplication $F \times V \to V$'
+    say: >
+      Recall the definition. A vector space over a field F is a set with two operations: adding
+      two vectors, and multiplying a vector by a scalar from F. Under addition it must be an
+      abelian group, with a zero vector and negatives. The scalar multiplication must satisfy
+      the two distributive laws, the associative law for scalars, and the quiet one at the end:
+      one times v equals v. Notice the phrase over F. The field is part of the data.
+
+  - section: axioms
+    focus: '| $\C^n$ over $\R$ | the same set, only real scalars allowed | $2n$ |'
+    say: >
+      The table of standard examples is worth knowing by heart. Two rows deserve attention.
+      C n over the complex numbers has dimension n, but the same set over the reals has
+      dimension two n, because each complex coordinate needs a real part and an imaginary part.
+      And the polynomials of degree at most n have dimension n plus one, not n. Count the
+      constant term.
+
+  - section: axioms
+    focus: 'And $\R$ is **not** a vector space over $\C$: $i\cdot 1 = i \notin \R$, so scalar multiplication is not closed.'
+    say: >
+      The field really matters. The complex numbers over themselves have the single basis
+      vector one. Over the reals you need one and i, since i is not a real multiple of one. And
+      the reals cannot be made a vector space over the complex numbers at all, because i times
+      one is i, which is not real. Also note that the reals over the rationals is infinite
+      dimensional.
+
+  - section: axioms
+    question: q0002
+    say: >
+      Try this one. What is the dimension of C three as a vector space over the reals?
+    answer: >
+      The answer is six. A real basis is e one, i e one, e two, i e two, e three, i e three. The
+      tempting answer three is the dimension over the complex field, not over the reals.
+
+  - section: axioms
+    focus: 'When an exam gives a "strange" operation, test the axiom that is easiest to break: usually $1\cdot v = v$ or $(a + b)v = av + bv$. One failure is enough.'
+    say: >
+      Look at the caution box. When the exam invents a strange operation, do not check all ten
+      axioms. Go straight to the fragile ones: one times v equals v, and the distributive law
+      over a sum of scalars. In the non-example where a times x comma y is defined as a x comma
+      zero, one times the vector one comma one gives one comma zero, so the axiom fails, and one
+      failure is enough.
+
+  - section: subspaces
+    focus: '**One-step test.** A subset $W \subseteq V$ is a subspace iff $W \ne \varnothing$ and $au + bv \in W$ for all $u, v \in W$ and $a, b \in F$.'
+    say: >
+      A subspace is a subset that is a vector space under the same operations. The laws like
+      associativity are inherited, so only closure needs checking. That gives the one step
+      test: the set must be non-empty, and for any two of its vectors, every linear combination
+      a u plus b v must stay inside. In practice, check first that the zero vector belongs. If
+      it does not, you are done: not a subspace.
+
+  - section: subspaces
+    focus: '| $x^2 = y^2$ | no | contains $(1,1,0)$ and $(1,-1,0)$, not their sum |'
+    say: >
+      The table of tests in R three is the whole method in miniature. A homogeneous linear
+      equation passes. A constant on the right, like x plus y plus z equals one, fails because
+      zero is missing. A product like x y equals zero, or an inequality like x non-negative,
+      fails closure. Look at the highlighted row: x squared equals y squared contains one comma
+      one comma zero and one comma minus one comma zero, but not their sum, two comma zero comma
+      zero.
+
+  - section: subspaces
+    focus: 'Invertible matrices do not ($0$ is missing), and singular matrices do not either'
+    say: >
+      In matrix spaces, the symmetric, skew symmetric, diagonal, upper triangular and trace zero
+      matrices all form subspaces. Invertible matrices do not, since the zero matrix is not
+      invertible. And here is the subtle one: singular matrices do not form a subspace either.
+      They are closed under scaling, but diag of one and zero plus diag of zero and one is the
+      identity, which is not singular.
+
+  - section: subspaces
+    focus: 'A condition gives a subspace when it is **linear and homogeneous** in the coordinates.'
+    say: >
+      Here is the rule of thumb on the board. A condition gives a subspace when it is linear and
+      homogeneous in the coordinates. Any constant term, product, square, inequality, or an or
+      between conditions, usually kills it. To disprove, never argue in general; give one
+      explicit pair of vectors whose sum or multiple escapes.
+
+  - section: subspaces
+    question: q0001
+    say: >
+      Let's test it. Which of these subsets of R three is a subspace?
+    answer: >
+      The plane x plus two y minus z equals zero. It is a homogeneous linear condition, a plane
+      through the origin. The plane with right side one misses the origin, x y equals zero
+      fails under addition, and x non-negative fails under multiplication by minus one.
+
+  - section: span-independence
+    focus: 'It is the **smallest subspace containing $S$**.'
+    say: >
+      Now span and independence. The span of a set S is the set of all finite linear
+      combinations of its vectors, and by convention the span of the empty set is the zero
+      space. The key way to think of it: the span is the smallest subspace that contains S. Any
+      subspace containing S must contain all those combinations.
+
+  - section: span-independence
+    focus: '- A set is dependent iff some vector is a combination of the **others** (in an ordered list, of the preceding ones).'
+    say: >
+      Vectors are dependent when some non-trivial combination gives zero. Equivalently, one of
+      them is a combination of the others. The quick facts follow: any set containing zero is
+      dependent, a single non-zero vector is independent, and two vectors are dependent exactly
+      when they are proportional. A superset of a dependent set stays dependent, but a subset of
+      a dependent set may well be independent.
+
+  - section: span-independence
+    focus: 'For $n$ vectors in $\R^n$ the matrix is square: independent $\iff \det A \ne 0$. More than $n$ vectors in $\R^n$ are always dependent.'
+    say: >
+      To test vectors in R n, put them as rows of a matrix. They are independent exactly when
+      the rank equals the number of vectors, and the rank is also the dimension of their span.
+      For n vectors in R n the matrix is square, so just compute the determinant. And more than
+      n vectors in R n are always dependent, without any calculation.
+
+  - section: span-independence
+    question: q0009
+    say: >
+      Here is the classic. For which k are one one zero, zero one one, and one zero k dependent?
+    answer: >
+      Expand the determinant along the first row: one times k, minus one times zero minus one,
+      which is k plus one. Setting it to zero gives k equals minus one. Check: the first vector
+      minus the second is one, zero, minus one. A sign slip in the second cofactor gives the
+      wrong answer k equals one.
+
+  - section: span-independence
+    focus: 'Independence depends on the field. In $\C$ over $\C$, $1$ and $i$ are dependent ($i\cdot 1 - 1\cdot i = 0$). In $\C$ over $\R$ they are independent.'
+    say: >
+      And again the field. One and i are dependent over the complex numbers, because i times one
+      minus one times i is zero, a combination with non-zero complex coefficients. Over the
+      reals the same two numbers are independent. Always ask: which scalars am I allowed?
+
+  - section: basis-dimension
+    focus: '**Replacement (exchange) theorem.** If $V$ is spanned by $m$ vectors, then any independent set in $V$ has at most $m$ vectors.'
+    say: >
+      A basis is an independent spanning set, and every vector is then a unique combination of
+      the basis vectors. The engine behind dimension is the replacement theorem: if m vectors
+      span V, no independent set can have more than m vectors. Apply it both ways to two bases
+      and they must have the same size. That common size is the dimension.
+
+  - section: basis-dimension
+    focus: '- If $\dim V = n$: any $n + 1$ vectors are dependent; any $n$ independent vectors form a basis; any $n$ vectors that span $V$ form a basis.'
+    say: >
+      The highlighted line is the one you use most. In a space of dimension n, any n plus one
+      vectors are dependent. And with exactly n vectors, you only need to check one of the two
+      basis conditions: n independent vectors automatically span, and n spanning vectors are
+      automatically independent. Also, a subspace of the same finite dimension as V must be V
+      itself.
+
+  - section: basis-dimension
+    focus: '| skew-symmetric | strictly above (diagonal is $0$) | $\frac{n(n-1)}{2}$ |'
+    say: >
+      Now the dimension table for n by n matrices, which is exam gold. All matrices: n squared.
+      Diagonal: n. Upper triangular and symmetric: n times n plus one over two, the entries on
+      and above the diagonal. Skew symmetric: n times n minus one over two, because the
+      diagonal is forced to be zero. Trace zero: n squared minus one. And as a check, symmetric
+      plus skew adds up to n squared.
+
+  - section: basis-dimension
+    question: q0007
+    say: >
+      Try one from the table. What is the dimension of the real four by four skew symmetric
+      matrices?
+    answer: >
+      Six. Only the entries strictly above the diagonal are free, and four times three over two
+      is six. The tempting ten is the symmetric count, which wrongly lets the diagonal be free.
+
+  - section: basis-dimension
+    focus: 'but they do over $\R$, with dimension $n^2$'
+    say: >
+      Hermitian matrices are a nice trap. Over the complex numbers they are not a subspace,
+      since i times the identity is not Hermitian. Over the reals they are, with dimension n
+      squared: n real diagonal entries, plus each of the n times n minus one over two entries
+      above the diagonal is a complex number, worth two real parameters.
+
+  - section: basis-dimension
+    focus: 'A subspace cut out by $r$ **independent** linear conditions in an $n$-dimensional space has dimension $n - r$.'
+    say: >
+      For subspaces cut out by conditions, count: r independent linear conditions in an n
+      dimensional space leave dimension n minus r. Polynomials of degree at most three that
+      vanish at one and minus one form a space of dimension four minus two, that is two. And for
+      matrices commuting with a given A, write a general matrix and solve the linear equations;
+      for the two by two Jordan block with eigenvalue one, the answer has dimension two.
+
+  - section: sum-intersection
+    focus: '- **Union.** $W_1 \cup W_2$ is a subspace **iff** $W_1 \subseteq W_2$ or $W_2 \subseteq W_1$.'
+    say: >
+      Now combine two subspaces. The intersection is always a subspace. The union almost never
+      is: only when one contains the other. The reason is short. Take u in the first but not the
+      second, and v in the second but not the first. If u plus v were in the first, then v,
+      which is u plus v minus u, would be too. The x axis union the y axis in the plane is the
+      standard picture.
+
+  - section: sum-intersection
+    focus: '$$\dim(W_1 + W_2) = \dim W_1 + \dim W_2 - \dim(W_1 \cap W_2).$$'
+    say: >
+      The sum W one plus W two is the smallest subspace containing both, the span of the union.
+      Its dimension obeys the formula on the board: dimension of the sum equals the sum of the
+      dimensions minus the dimension of the intersection. The proof: take a basis of the
+      intersection, extend it separately to bases of W one and W two, and the combined list is a
+      basis of the sum. It is inclusion and exclusion for dimensions.
+
+  - section: sum-intersection
+    focus: '- Two planes through the origin in $\R^3$: $\dim(W_1 \cap W_2) \ge 2 + 2 - 3 = 1$. They always share a line.'
+    say: >
+      Since the sum sits inside R n, its dimension is at most n, so the intersection has
+      dimension at least the sum of the two dimensions minus n. Two planes through the origin in
+      R three must share at least a line. A three dimensional and a four dimensional subspace of
+      R five meet in dimension at least two.
+
+  - section: sum-intersection
+    question: q0011
+    say: >
+      Use that bound now. W one and W two in R five have dimensions three and four. What is the
+      least possible dimension of their intersection?
+    answer: >
+      Two. The sum has dimension at most five, so the intersection has dimension at least three
+      plus four minus five, which is two, and this is attained by coordinate subspaces sharing
+      e one and e two. Zero forgets that the whole space is only five dimensional.
+
+  - section: sum-intersection
+    focus: '"$W_1 \cap W_2 = \{0\}$" alone does not give $V = W_1 \oplus W_2$: the sum must also be all of $V$.'
+    say: >
+      A direct sum means the sum is all of V and the intersection is only zero; equivalently,
+      every vector splits uniquely. The standard example is every square matrix as its
+      symmetric part plus its skew symmetric part. The trap on the board: a zero intersection
+      alone is not enough. Two lines in R three meeting only at the origin do not make up R
+      three.
+
+  - section: row-column-space
+    focus: '**Theorem.** For every matrix, row rank $=$ column rank $=$ rank $\rho(A)$'
+    say: >
+      The row space of a matrix is the span of its rows, and the column space is the span of its
+      columns. The column space is exactly the set of all A X, so A X equals b is consistent
+      precisely when b lies in the column space. The theorem on the board says row rank equals
+      column rank, and both equal the rank, the order of the largest non-vanishing minor.
+
+  - section: row-column-space
+    focus: 'Row operations **change the column space** in general, but they **preserve linear relations among the columns**.'
+    say: >
+      Now be careful about row operations. They do not change the row space, because each new
+      row is a combination of old rows and the step is reversible. So the non-zero rows of an
+      echelon form are a basis of the row space. But they do change the column space. What they
+      preserve is the linear relations among the columns, so the pivot positions tell you which
+      original columns form a basis.
+
+  - section: row-column-space
+    focus: 'For $(1,2,1), (2,1,0), (3,3,1), (1,-1,-1)$: the third is the sum of the first two'
+    say: >
+      To find the dimension of a span, find the rank. Before you start row reducing, look for
+      obvious relations. In the example on the board the third vector is the sum of the first
+      two, and the fourth is the second minus the first. The first two are not proportional, so
+      the dimension is two. And remember: the row space and column space have the same
+      dimension, but they are different spaces in general.
+
+  - section: coordinates
+    focus: '$$[v]_B = (a_1, \dots, a_n)^T.$$'
+    say: >
+      Finally, coordinates. Fix an ordered basis B. Each vector has a unique expression as a
+      combination of the basis vectors, and the list of coefficients is its coordinate vector
+      relative to B. This map respects sums and scalar multiples, so every n dimensional space
+      over F behaves exactly like F n. That is why polynomial and matrix problems reduce to rank
+      and determinant problems in R n.
+
+  - section: coordinates
+    focus: 'The substitution trick works for any basis $1, (x - c), (x - c)^2, \dots$: the coordinates are the Taylor coefficients $\frac{p^{(k)}(c)}{k!}$.'
+    say: >
+      In R n, put the basis vectors as columns of P; then the coordinates are P inverse times v.
+      For polynomials there is a neat trick. For the basis one, one plus x, one plus x squared,
+      substitute t equals one plus x and expand. Two plus three x plus x squared becomes t plus t
+      squared, so the coordinates are zero, one, one. In general the coordinates relative to
+      powers of x minus c are the Taylor coefficients at c.
+
+  - section: coordinates
+    question: q0012
+    say: >
+      Now you. Find the coordinates of three comma one relative to the ordered basis one comma
+      one, and one comma minus one.
+    answer: >
+      Solve a plus b equals three and a minus b equals one, giving a equals two and b equals one.
+      So the coordinate vector is two comma one. The option one comma two is the answer for the
+      basis in reverse order, and three comma one just copies the standard coordinates, which is
+      the trap in the caution box.
+
+  - section: exam-tips
+    say: >
+      Let's recap. For a subspace, check zero first, then closure; linear homogeneous conditions
+      pass, while constants, products, squares, inequalities and or fail. A union is a subspace
+      only when one contains the other. Use the dimension formula, and in R n the intersection
+      bound. Watch the field: C n over the reals has dimension two n. Polynomials of degree at
+      most n have dimension n plus one. Know the matrix dimensions cold. For n vectors in R n,
+      use the determinant. Now try the practice questions.

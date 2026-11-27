@@ -1,0 +1,287 @@
+# Spoken lecture for "Taylor's Theorem and Expansions".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: taylor-theorem
+    say: >
+      Welcome. Today's topic is Taylor's theorem, the natural continuation of the mean value
+      theorem. By the end you should be able to state it with the exact hypotheses, write both
+      the Lagrange and the Cauchy remainder, find theta, quote the standard expansions with their
+      ranges, build new expansions quickly from old ones, evaluate limits by series, and count
+      how many terms a given accuracy needs.
+
+  - section: taylor-theorem
+    focus: '- **Hypotheses.** $f^{(n)}$ is continuous on $[a, a + h]$ and $f^{(n+1)}$ exists on the open interval $(a, a + h)$.'
+    say: >
+      Read the hypotheses carefully, because they mirror Lagrange's theorem one level up. The
+      n-th derivative must be continuous on the closed interval from a to a plus h, and the n
+      plus one-th derivative must exist on the open interval. Nothing is said about continuity of
+      that last derivative. Then f of a plus h equals the Taylor polynomial of degree n in h,
+      plus a remainder R n plus one.
+
+  - section: taylor-theorem
+    focus: '- **Cauchy form:** $\displaystyle R_{n+1} = \frac{h^{n+1}(1 - \theta)^{n}}{n!}\,f^{(n+1)}(a + \theta h)$.'
+    say: >
+      There are two remainders to know. Lagrange's form is h to the n plus one, over n plus one
+      factorial, times the n plus one-th derivative at a plus theta h. Cauchy's form is h to the
+      n plus one, times one minus theta to the n, over n factorial, times the same derivative.
+      Notice the factorials: n plus one factorial for Lagrange, only n factorial for Cauchy, but
+      with the extra factor one minus theta to the n.
+
+  - section: taylor-theorem
+    focus: '- $\theta$ depends on $f$, $a$, $h$, $n$ **and on the form** chosen.'
+    say: >
+      Theta lies strictly between zero and one, and it depends on everything: the function, a, h,
+      n, and on which form you use. The Lagrange theta and the Cauchy theta are usually different
+      numbers. With n equal to zero, the Lagrange form is exactly the mean value theorem. Both
+      forms are special cases of the Schlomilch Roche form with a parameter p: p equal to n plus
+      one gives Lagrange, p equal to one gives Cauchy.
+
+  - section: taylor-theorem
+    focus: '**Proof idea.** Fix $p$ and apply Rolle''s theorem on $[a, a + h]$ to'
+    say: >
+      The proof is Rolle's theorem once more. Take f of a plus h, subtract the Taylor polynomial
+      built at a moving point x, and subtract a constant times a plus h minus x, to the power p.
+      Choose the constant so this function vanishes at both ends. When you differentiate, the
+      sum telescopes to a single term, and setting the derivative zero at Rolle's point gives the
+      remainder.
+
+  - section: taylor-theorem
+    focus: '**Finding $\theta$.** For $f(x) = (1 - x)^{5/2}$, $a = 0$, $h = 1$, $n = 1$ (Lagrange):'
+    say: >
+      To find theta, write out the formula and solve. For one minus x to the power five halves,
+      with a zero, h one and n one, the equation reads zero equals one, minus five halves, plus one
+      half times fifteen fourths times the square root of one minus theta. For x cubed with n one,
+      Lagrange gives theta equal to one third, while Cauchy gives theta times one minus theta
+      equal to one sixth: a different value.
+
+  - section: taylor-theorem
+    question: q0010
+    say: >
+      Now solve that first example yourself. Find theta for one minus x to the power five halves.
+    answer: >
+      Theta is nine over twenty five. The equation gives the square root of one minus theta equal
+      to four fifths, so one minus theta is sixteen over twenty five, and theta is nine over
+      twenty five. The distractors sixteen over twenty five and four fifths are the intermediate
+      quantities, and one third is only the limiting value of theta as h tends to zero.
+
+  - section: taylor-theorem
+    focus: 'then $\theta \to \frac13$ as $h \to 0$'
+    say: >
+      That limiting value is an exam favourite. If the remainder comes after the linear term, and
+      the third derivative is continuous and non zero at a, then theta tends to one third as h
+      tends to zero. In general, with n terms before the remainder, theta tends to one over n plus
+      one. For the mean value theorem itself, it is one half.
+
+  - section: maclaurin-theorem
+    focus: 'It equals $f(x)$ **if and only if $R_{n}(x) \to 0$** as $n \to \infty$.'
+    say: >
+      Put a equal to zero and h equal to x, and Taylor becomes Maclaurin. If f has derivatives of
+      all orders, you can always write down the Maclaurin series. But it equals f of x if and only
+      if the remainder tends to zero as n tends to infinity. Convergence of the series alone is not
+      enough; we will see a function whose series converges everywhere, to the wrong answer.
+
+  - section: maclaurin-theorem
+    focus: '**A sufficient test.**'
+    say: >
+      The easy sufficient test: if all the derivatives are bounded by one constant M between zero
+      and x, the Lagrange remainder is at most M times the modulus of x to the n plus one over n
+      plus one factorial, which tends to zero. That settles sine, cosine, and e to the x, for
+      every real x.
+
+  - section: maclaurin-theorem
+    focus: '**Why both remainders are needed: $\log(1 + x)$.**'
+    say: >
+      For log of one plus x you need both forms. The Lagrange remainder is bounded by one over n
+      plus one when x is between zero and one, so it tends to zero there. But for x between minus
+      one and minus one half the Lagrange bound fails. There the Cauchy form rescues you, because
+      one minus theta over one plus theta x is less than one. The binomial series is handled the
+      same way, with the Cauchy form.
+
+  - section: standard-expansions
+    focus: '| $\log(1 + x)$ | $x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \cdots$ | $-1 < x \le 1$ |'
+    say: >
+      Now the table of standard expansions. e to the x, a to the x, sine and cosine are valid for
+      all real x. The ranges to memorise are the others. Log of one plus x is valid for x greater
+      than minus one, up to and including one. Tan inverse x is valid on the closed interval from
+      minus one to one. The binomial series is valid on the open interval, with endpoints depending
+      on m. And for a to the x, the coefficient of x to the n is log a to the n, over n factorial.
+
+  - section: standard-expansions
+    focus: '| $-1 < m < 0$ | converges (conditionally) | diverges |'
+    say: >
+      The binomial endpoints follow a pattern in m. For m positive, both endpoints converge
+      absolutely. For m between minus one and zero, the series converges conditionally at one, but
+      diverges at minus one. For m at most minus one, both diverge. So the square root of one plus x
+      is represented on the closed interval, one over root of one plus x on minus one excluded to
+      one included, and one over one plus x only on the open interval.
+
+  - section: standard-expansions
+    question: q0021
+    say: >
+      Let's test that table. On what set does the binomial series of one over root of one plus x
+      represent the function?
+    answer: >
+      On the interval from minus one, excluded, to one, included. Here m is minus one half, which
+      lies between minus one and zero. At one, the series alternates with terms decreasing to
+      zero, so it converges, and Abel's theorem gives the right sum. At minus one, all terms are
+      positive and behave like one over root n, so it diverges. The open interval forgets the
+      endpoint one.
+
+  - section: standard-expansions
+    focus: 'The arctan series still converges at $x = \pm1$ (alternating series with terms decreasing to $0$), and the sum is correct there.'
+    say: >
+      A caution on tan inverse. Its series comes from integrating one over one plus t squared,
+      whose geometric series converges only for the modulus of t less than one. But the arctan
+      series still converges at plus and minus one, as an alternating series, and the sum is
+      correct there. That is where pi by four equals one minus one third plus one fifth and so on.
+      Integration can gain endpoints.
+
+  - section: expansion-by-series
+    focus: 'Direct differentiation is slow.'
+    say: >
+      Direct differentiation is slow. Instead, multiply, substitute and divide the standard series,
+      keeping only the powers you need. For e to the x times sine x up to x cubed, multiply the two
+      truncated series: you get x plus x squared plus one third x cubed. For log of one plus sine
+      x, substitute the sine series into the log series and collect: x minus half x squared plus
+      one sixth x cubed. Dividing sine by cosine gives tan x as x plus x cubed by three plus two x
+      to the fifth over fifteen.
+
+  - section: expansion-by-series
+    focus: '**Derivatives at $0$ from a series.** If $f(x) = \sum c_k x^k$ near $0$, then $f^{(n)}(0) = n!\,c_n$.'
+    say: >
+      Series also give derivatives at zero for free. The n-th derivative at zero is n factorial
+      times the coefficient of x to the n. For tan inverse x, the coefficient of x to the fifth is
+      one fifth, so the fifth derivative at zero is five factorial over five, which is 24. And
+      because tan inverse is odd, all its even order derivatives at zero vanish.
+
+  - section: expansion-by-series
+    question: q0011
+    say: >
+      Use that idea here. Find the tenth derivative at zero of x squared e to the x.
+    answer: >
+      The answer is 90. x squared e to the x is the sum of x to the k plus two over k factorial,
+      so the coefficient of x to the ten is one over eight factorial. Multiply by ten factorial to
+      get ten times nine, which is 90. One over eight factorial is the coefficient, not the
+      derivative, and 45 forgets a factor of two.
+
+  - section: expansion-by-series
+    focus: 'Convergence is pointwise in $n$ for each fixed $x$, not with a fixed degree.'
+    say: >
+      Look at the graph of sine x with its Taylor polynomials of degree one, three and five. Each
+      higher degree hugs the sine curve over a wider interval, but every polynomial eventually
+      leaves it. For each fixed x the polynomials converge as the degree grows; no single
+      polynomial is good everywhere.
+
+  - section: non-analytic
+    focus: 'induction on the difference quotient gives **$f^{(n)}(0) = 0$ for every $n$**'
+    say: >
+      Now the most famous counterexample in this chapter. Let f be e to the minus one over x
+      squared, with f of zero equal to zero. Away from zero, every derivative is a polynomial in
+      one over x times e to the minus one over x squared. The exponential crushes any power, so by
+      induction on the difference quotient, every derivative at zero is zero.
+
+  - section: non-analytic
+    focus: '- But $f(x) > 0$ for $x \ne 0$. The series represents $f$ **only at $x = 0$**.'
+    say: >
+      So f is infinitely differentiable, and its Maclaurin series is identically zero. That series
+      converges for every x, but to zero, while f is positive away from the origin. It represents f
+      only at zero. In Taylor's language, the remainder is f of x for every n, and does not tend to
+      zero. The lesson: infinitely differentiable does not imply analytic.
+
+  - section: non-analytic
+    question: q0005
+    say: >
+      Here is how the exam asks it. What is the Maclaurin series of this function?
+    answer: >
+      It is identically zero, because every derivative at zero is zero. The tempting wrong option
+      says the series is not defined because f dash of zero does not exist. In fact all
+      derivatives exist; the series simply converges to the wrong function. The series one minus x
+      squared plus and so on belongs to e to the minus x squared, a different function.
+
+  - section: limits-by-series
+    focus: '$$\lim_{x \to 0}\frac{\tan x - x}{x^3} = \frac13, \qquad \lim_{x \to 0}\frac{\cos x - 1 + \frac{x^2}{2}}{x^4} = \frac{1}{24}.$$'
+    say: >
+      Series are the fastest way to evaluate zero by zero limits at the origin. Expand numerator
+      and denominator to the first power that survives. x minus sine x over x cubed is one sixth.
+      e to the x minus one minus x, over x squared, is one half. tan x minus x over x cubed is one
+      third. And cos x minus one plus half x squared, over x to the fourth, is one over 24.
+
+  - section: limits-by-series
+    focus: '**$\infty - \infty$.** Combine first, or expand.'
+    say: >
+      For infinity minus infinity, combine or expand. Sine squared x is x squared minus x to the
+      fourth by three, so one over sine squared x is one over x squared plus one third plus higher
+      terms. Subtract it from one over x squared and the limit is minus one third. For the exponent
+      form, one plus x to the power one over x equals e times one minus x by two and so on, so e
+      minus that, over x, tends to e by two.
+
+  - section: limits-by-series
+    question: q0017
+    say: >
+      Try the first of those. Find the limit of one over x squared minus one over sine squared x.
+    answer: >
+      Minus one third. One over sine squared x is one over x squared plus one third plus higher
+      powers, so the difference tends to minus one third. Plus one third is the sign slip, the
+      limit taken the other way round, and minus one sixth comes from expanding sine x instead of
+      sine squared x.
+
+  - section: limits-by-series
+    focus: 'Stop expanding at the **first power that survives** in the denominator.'
+    say: >
+      The exam tip saves time. Stop expanding at the first power that survives in the denominator.
+      If the denominator is x cubed, keep every numerator term up to x cubed, and check that the
+      lower powers cancel. If they don't, the limit is infinite, and you should look for that
+      option.
+
+  - section: error-estimates
+    focus: 'To guarantee an error below $10^{-3}$ we need $(n+1)! > 3000$.'
+    say: >
+      Finally, error estimates. The Lagrange remainder gives a guaranteed bound once you bound the
+      next derivative. For e, with x equal to one, the error after the term one over n factorial is
+      e to the theta over n plus one factorial, which is less than three over n plus one factorial.
+      For an error below one thousandth we need n plus one factorial greater than three thousand.
+      Six factorial is 720, too small, and seven factorial is 5040, so n is six: seven terms.
+
+  - section: error-estimates
+    focus: 'State the tolerance before counting terms.'
+    say: >
+      Notice the subtlety on the board. Three correct decimal places means an error less than five
+      ten thousandths, which needs n plus one factorial greater than six thousand, so n equals
+      seven by the bound, even though six happens to suffice in fact. The two phrasings give
+      different answers, so fix the tolerance before you count terms.
+
+  - section: error-estimates
+    question: q0013
+    say: >
+      Count the terms yourself. What is the smallest n for an error less than one thousandth?
+    answer: >
+      n equals six. We need three over n plus one factorial below one thousandth, so n plus one
+      factorial must exceed three thousand. Seven factorial is 5040, so n plus one is seven and n
+      is six. Seven is the slip of solving n factorial greater than three thousand.
+
+  - section: error-estimates
+    focus: '**Using a zero term.**'
+    say: >
+      A neat trick: use a zero term. For sine x, the x to the fourth coefficient is zero, so x
+      minus x cubed by six is also the degree four Taylor polynomial. The remainder after the x to
+      the fourth term is at most the modulus of x to the fifth over 120. At x equal to one tenth,
+      that is about eight times ten to the minus eight, far better than the bound from stopping at
+      x cubed.
+
+  - section: error-estimates
+    focus: '$\log 2 = 1 - \frac12 + \frac13 - \cdots$ converges very slowly'
+    say: >
+      For alternating series with terms decreasing to zero, the error is at most the first omitted
+      term. But beware: the series for log two converges very slowly, needing about a thousand
+      terms for three decimals. Use log of one plus one third over one minus one third instead,
+      which is twice one third plus one over three times twenty seven, and so on.
+
+  - section: exam-tips
+    say: >
+      Let's recap. The n-th derivative continuous on the closed interval, the next one existing on
+      the open interval. Lagrange has n plus one factorial; Cauchy has n factorial and one minus
+      theta to the n. Log of one plus x is valid on minus one excluded to one included; tan
+      inverse on the closed interval. Check the constant and linear terms first; use parity.
+      Derivatives at zero are n factorial times the coefficient. e to the minus one over x squared
+      is smooth but not analytic. Now try the practice questions.

@@ -1,0 +1,319 @@
+# Spoken lecture for "Real Quadratic Forms".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: matrix-of-form
+    say: >
+      Welcome. Today we revise real quadratic forms. This chapter connects symmetric
+      matrices, eigenvalues and congruence, and it produces quick, reliable exam questions.
+      By the end you should be able to write the matrix of a form without slips, reduce a
+      form to a sum of squares in two different ways, read off rank, index and signature,
+      and classify a form as definite, semi definite or indefinite. Let's begin with the
+      matrix of a form.
+
+  - section: matrix-of-form
+    focus: 'Many matrices give the same form ($x^TAx = x^TA^Tx$), but exactly **one symmetric** matrix does, namely $\tfrac12(A + A^T)$.'
+    say: >
+      A real quadratic form is a homogeneous polynomial of degree two, which we write as x
+      transpose A x. Many matrices give the same form, because x transpose A x equals x
+      transpose A transpose x. But exactly one symmetric matrix does, namely one half of A
+      plus A transpose. Whenever anyone says the matrix of the form, they mean this symmetric
+      one.
+
+  - section: matrix-of-form
+    focus: 'The coefficient of the cross term $x_ix_j$ ($i \ne j$) is **split in half** between positions $(i, j)$ and $(j, i)$.'
+    say: >
+      The rule is simple. Squares go on the diagonal. The coefficient of a cross term like x
+      y is split in half between the two symmetric positions. Going back from matrix to form,
+      each off diagonal entry is doubled. So in the reverse example, the entry minus one in
+      positions one two and two one becomes minus two x y in the form.
+
+  - section: matrix-of-form
+    focus: 'The most common slip is forgetting to halve:'
+    say: >
+      And that is exactly where marks are lost. The matrix of x squared plus four x y plus
+      three y squared has rows one, two and two, three, not one, four and four, three. The
+      second matrix gives eight x y. The non symmetric matrix with rows one, four and zero,
+      three also reproduces the form, but its eigenvalues and minors tell you nothing about
+      the form. Check any candidate by adding its two off diagonal entries; they must give
+      the cross coefficient.
+
+  - section: matrix-of-form
+    question: q0001
+    say: >
+      Let's check that straight away. Choose the symmetric matrix of x squared plus four x y
+      plus three y squared.
+    answer: >
+      The squares give one and three on the diagonal, and the cross coefficient four is
+      halved, so two goes in each off diagonal place. The answer is the matrix with rows one,
+      two and two, three. The tempting option with fours forgets to halve, and would give
+      eight x y.
+
+  - section: congruence
+    focus: 'So the new matrix is $B = P^TAP$.'
+    say: >
+      Now change variables. Put x equal to P y, with P real and non singular. Then x
+      transpose A x becomes y transpose, P transpose A P, y. So the new matrix is P
+      transpose A P, and two matrices related this way are called congruent. Congruence is an
+      equivalence relation. It preserves symmetry, it preserves rank, because P is
+      invertible, and it preserves the sign of the determinant, since the new determinant is
+      the determinant of P squared times the old one.
+
+  - section: congruence
+    focus: 'It does **not** preserve the determinant itself, the trace or the eigenvalues.'
+    say: >
+      What it does not preserve is just as important: the determinant itself, the trace, and
+      the eigenvalues. Congruence is not similarity, because P transpose is usually not P
+      inverse. The two coincide only when P is orthogonal. In the worked example, 2 x y
+      becomes 2 u squared minus 2 v squared, and the determinant moves from minus one to
+      minus four, keeping its sign but not its value.
+
+  - section: congruence
+    focus: 'Applying an elementary row operation and then the **same** column operation replaces $A$ by $E^TAE$.'
+    say: >
+      In practice you can diagonalise a symmetric matrix by congruence using paired
+      operations. Apply a row operation, then the same column operation; that replaces A by E
+      transpose A E. Repeating such pairs diagonalises any real symmetric matrix, and doing
+      the column operations on the identity records P. Note the caution: P inverse A P would
+      be similarity, a different relation altogether.
+
+  - section: lagrange
+    focus: '1. Pick a variable whose square appears, say $x_1$ with $a_{11} \ne 0$. Collect every term containing $x_1$ and complete the square:'
+    say: >
+      The first reduction method is Lagrange's: completing squares. Pick a variable whose
+      square appears, gather every term containing it, and complete the square. Then repeat
+      on what is left, which no longer contains that variable. The substitution is
+      triangular, so it is non singular, provided you keep a full set of n new variables.
+
+  - section: lagrange
+    focus: '3. **No square terms left** (only products)? If $x_ix_j$ appears, put $x_i = u + v$, $x_j = u - v$. This creates $u^2 - v^2$, and you can continue.'
+    say: >
+      If no square terms are left, only products, use a trick. Put one variable equal to u
+      plus v and the other equal to u minus v. Their product becomes u squared minus v
+      squared, and you can carry on completing squares. In example three, 2 x y plus 2 y z
+      reduces this way to one positive and one negative square, so rank two with p and q both
+      equal to one.
+
+  - section: lagrange
+    focus: 'So $p = 2$, $q = 1$, and $Q$ is **indefinite**, even though every diagonal coefficient is positive.'
+    say: >
+      Example one carries the lesson. Every diagonal coefficient is positive, yet after
+      completing squares we get x plus y squared, plus y plus 2 z squared, minus z squared.
+      There is a negative square, so the form is indefinite. The exam tip says: always expand
+      your answer back once. The leftover minus z squared is easy to drop, and dropping it
+      changes the signature.
+
+  - section: lagrange
+    question: q0018
+    say: >
+      Now you do it. Complete squares in x squared plus 2 y squared plus 3 z squared plus 2 x
+      y plus 4 y z.
+    answer: >
+      First, x squared plus 2 x y is x plus y squared, minus y squared. That leaves y squared
+      plus 4 y z plus 3 z squared, which is y plus 2 z squared, minus 4 z squared, plus 3 z
+      squared. So the answer ends in minus z squared. The tempting option with plus z
+      squared gets the sign of three minus four wrong.
+
+  - section: lagrange
+    focus: 'Only two squares: rank $2$. $Q \ge 0$ always, and $Q = 0$ at $(-2, 1, 1)$, so $Q$ is positive semi-definite but not positive definite.'
+    say: >
+      Example two shows another outcome. Completing squares gives only two squares, x plus y
+      plus z squared, plus y minus z squared, in three variables. So the rank is two. The
+      form is never negative, but it vanishes at the non zero point minus two, one, one. That
+      makes it positive semi definite but not positive definite.
+
+  - section: orthogonal-reduction
+    focus: 'This is the **canonical form under an orthogonal transformation**. The coefficients are exactly the eigenvalues of $A$.'
+    say: >
+      The second method uses eigenvalues. A real symmetric matrix has real eigenvalues and an
+      orthonormal basis of eigenvectors. Put those as columns of an orthogonal P. Then P
+      transpose A P equals P inverse A P, which is the diagonal matrix of eigenvalues. So the
+      form becomes the sum of lambda i times y i squared. The coefficients are exactly the
+      eigenvalues, and the new axes are the principal axes of the conic or quadric.
+
+  - section: orthogonal-reduction
+    focus: 'The curve $Q = 4$ is an ellipse with semi-axes $\sqrt2$ along $y = -x$ and $1$ along $y = x$.'
+    say: >
+      Look at the graph. For 3 x squared plus 2 x y plus 3 y squared, the matrix has trace
+      six and determinant eight, so eigenvalues two and four. The form becomes 2 X squared
+      plus 4 Y squared. The curve where the form equals four is an ellipse, tilted at
+      forty five degrees, with semi axis root two along y equals minus x, and one along y
+      equals x. The larger eigenvalue gives the shorter axis.
+
+  - section: orthogonal-reduction
+    question: q0006
+    say: >
+      Try this. Reduce 3 x squared plus 2 x y plus 3 y squared by an orthogonal
+      transformation.
+    answer: >
+      The matrix has rows three, one and one, three, with trace six and determinant eight, so
+      the eigenvalues are two and four. The canonical form is 2 X squared plus 4 Y squared.
+      The option X squared plus 5 Y squared comes from the unhalved matrix with twos off the
+      diagonal.
+
+  - section: orthogonal-reduction
+    focus: '$$\lambda_{\min} \le \frac{x^TAx}{x^Tx} \le \lambda_{\max}.$$'
+    say: >
+      A useful consequence is the Rayleigh bound on the board. For non zero x, x transpose A
+      x over x transpose x lies between the smallest and the largest eigenvalue. So on the
+      unit circle or sphere, the maximum of the form is the largest eigenvalue and the
+      minimum is the smallest, attained at the unit eigenvectors. For 5 x squared plus 4 x y
+      plus 2 y squared, the eigenvalues are six and one, so the maximum on the unit circle is
+      six.
+
+  - section: orthogonal-reduction
+    focus: 'Lagrange''s method and orthogonal reduction usually give **different coefficients**'
+    say: >
+      Now the caution. The two methods usually give different coefficients. x plus y squared
+      plus 2 y squared is X squared plus 2 Y squared by completing squares, but its matrix
+      has eigenvalues two plus root two and two minus root two. Only the signs must agree.
+      Never treat Lagrange coefficients as eigenvalues.
+
+  - section: inertia
+    focus: '- **Sylvester''s law of inertia.** The numbers $p$ and $q$ do not depend on the transformation used.'
+    say: >
+      That agreement of signs is Sylvester's law of inertia. Reduce the form to a diagonal
+      form by any real non singular transformation, and count p positive and q negative
+      coefficients. Those two numbers do not depend on the transformation. Scaling each square
+      gives the normal form: p plus signs, then q minus signs. And since the eigenvalues give
+      one diagonal form, p and q are simply the numbers of positive and negative eigenvalues.
+
+  - section: inertia
+    focus: '- **Classification.** Two real symmetric $n \times n$ matrices are congruent $\iff$ they have the same rank and the same index (equivalently, the same $p$ and $q$).'
+    say: >
+      This gives a complete classification. Two real symmetric matrices of the same order are
+      congruent exactly when they have the same rank and the same index. So x squared minus y
+      squared and 2 x y are congruent, while x squared plus y squared and x squared minus y
+      squared are not.
+
+  - section: inertia
+    focus: 'In this course, **signature means $p - q$**, and questions say so.'
+    say: >
+      Mind the terminology. The rank is p plus q. The index is p. In this course the
+      signature is p minus q, as in most Indian texts, though some books call p itself the
+      signature. From rank r and signature s, p is r plus s over two, and q is r minus s over
+      two. So r and s must have the same parity. Rank three with signature two is impossible.
+
+  - section: inertia
+    focus: 'So $r = 3$, $p = 1$, $q = 2$, $s = -1$, and the normal form is $z_1^2 - z_2^2 - z_3^2$.'
+    say: >
+      In the example, 2 x y plus 2 y z plus 2 z x has matrix J minus I, where J is the all
+      ones matrix. J has eigenvalues three, zero, zero, so this matrix has two, minus one,
+      minus one. The rank is three, p is one, q is two, and the signature is minus one.
+
+  - section: inertia
+    question: q0005
+    say: >
+      Let's test that example. Give the rank, index and signature of 2 x y plus 2 y z plus 2
+      z x.
+    answer: >
+      The eigenvalues are two, minus one and minus one. So the rank is three, the index p is
+      one, and the signature, p minus q, is minus one. The tempting option three, two, one
+      swaps p and q.
+
+  - section: inertia
+    focus: 'There are $\frac{(n + 1)(n + 2)}{2}$ classes: $6$ for $n = 2$ and $10$ for $n = 3$.'
+    say: >
+      Two more facts. A congruence class is fixed by the pair p, q with p plus q at most n,
+      which gives n plus one times n plus two over two classes: six for order two and ten for
+      order three. And over the complex numbers only the rank survives, because minus one is
+      a square there. Sylvester's law is a statement about real forms.
+
+  - section: definiteness
+    focus: '| indefinite | takes both signs | some $> 0$, some $< 0$ | $p \ge 1,\ q \ge 1$ |'
+    say: >
+      Now definiteness. A form is positive definite if it is positive at every non zero x,
+      which means all eigenvalues are positive, or p equals n. Negative definite is the
+      mirror image. Semi definite allows zero, so no negative eigenvalues in the positive
+      case. Indefinite means the form takes both signs: at least one positive and one
+      negative eigenvalue. The caution reminds you that some Indian texts reserve semi
+      definite for forms that also vanish somewhere, so questions here say semi definite but
+      not definite.
+
+  - section: definiteness
+    focus: '- **Sylvester''s criterion.** $Q$ is PD $\iff$ $D_1 > 0, D_2 > 0, \dots, D_n > 0$.'
+    say: >
+      The main test is Sylvester's criterion. The form is positive definite exactly when all
+      the leading principal minors, D one, D two, up to the determinant, are strictly
+      positive. For negative definite, apply it to minus A: the minors alternate in sign,
+      starting negative. In two variables, a x squared plus 2 h x y plus b y squared is
+      positive definite when a is positive and a b minus h squared is positive, and
+      indefinite when a b minus h squared is negative.
+
+  - section: definiteness
+    focus: '- **Jacobi''s rule.** If every $D_k \ne 0$, then $Q = \sum_k \frac{D_k}{D_{k-1}}\,y_k^2$ ($D_0 = 1$), so $q$ = number of **sign changes** in $1, D_1, D_2, \dots, D_n$.'
+    say: >
+      Jacobi's rule goes further. If every leading minor is non zero, the form reduces to the
+      sum of D k over D k minus one, times y k squared. So the number of negative squares is
+      the number of sign changes in the sequence one, D one, D two, and so on. With minors
+      two, minus one, four, the sequence one, two, minus one, four has two sign changes, so q
+      is two, p is one, and the signature is minus one.
+
+  - section: definiteness
+    focus: '**Example (parameter).** $x^2 + 2y^2 + z^2 + 2xy + 2ayz$'
+    say: >
+      The parameter example is a favourite question type. Write the matrix, halving the
+      cross terms, then compute each leading minor and demand that all be positive. Also
+      keep the quick eliminators in mind: a positive definite matrix has positive diagonal
+      entries, positive trace and positive determinant. These are necessary only; none is
+      sufficient alone.
+
+  - section: definiteness
+    question: q0011
+    say: >
+      Now try that parameter example yourself. For which values of a is the form positive
+      definite?
+    answer: >
+      The matrix has rows one, one, zero; one, two, a; and zero, a, one. D one is one, D two
+      is two minus one, which is one, and D three works out to one minus a squared. So the
+      condition is a strictly between minus one and one. The tempting option, root two,
+      looks only at the lower two by two minor and ignores the x y coupling.
+
+  - section: semidefinite
+    focus: 'Sylvester''s criterion needs **strict** inequalities. Relaxing them to $D_k \ge 0$ does **not** test semi-definiteness.'
+    say: >
+      Now a famous trap. Sylvester's criterion needs strict inequalities. If you relax them to
+      greater than or equal to zero, you do not get a test for semi definiteness. The first
+      counter example is minus y squared: both leading minors are zero, yet the form is
+      negative at zero, one.
+
+  - section: semidefinite
+    focus: '- $Q$ is positive semi-definite $\iff$ **every principal minor** (all $2^n - 1$ of them, not only the leading ones) is $\ge 0$.'
+    say: >
+      The correct statement: a form is positive semi definite exactly when every principal
+      minor, not just the leading ones, is non negative. For a three by three, that means the
+      three diagonal entries, the three two by two minors, and the determinant. In the second
+      counter example, the leading minors are one, zero, zero, but the minor on rows and
+      columns two and three is minus one, which exposes an indefinite form. The safest route
+      is still eigenvalues, or completing squares.
+
+  - section: semidefinite
+    question: q0020
+    say: >
+      Here is that second counter example. Classify x squared plus y squared plus 2 x y plus
+      2 y z plus 2 z x.
+    answer: >
+      The leading minors are one, zero, zero, which proves nothing. Complete the square: the
+      form is x plus y plus z, squared, minus z squared. One positive and one negative
+      square, so it is indefinite; it equals minus one at one, zero, minus one. The tempting
+      answer, positive semi definite, comes from trusting the leading minors.
+
+  - section: semidefinite
+    focus: 'In a classification question, first look at $\det A$.'
+    say: >
+      The exam tip gives a fast routine. Look at the determinant first. If it is zero, the
+      rank is less than n, so positive definite and negative definite are out at once. Then a
+      single test vector where the form is negative, or positive, decides between semi
+      definite and indefinite. Remember also that x squared plus y squared plus z squared
+      minus x y minus y z minus z x is half the sum of squared differences: positive semi
+      definite, rank two, vanishing on the line x equals y equals z.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist. Halve the cross terms going into the matrix, double
+      them coming out. Congruence keeps rank, symmetry and the sign of the determinant, but
+      not eigenvalues. Eigenvalues give the orthogonal canonical form; Lagrange coefficients
+      only share their signs. Signature is p minus q, with the same parity as the rank.
+      Positive diagonal does not mean positive definite. Negative definite minors alternate,
+      starting negative. Leading minors that are merely non negative prove nothing. Now try
+      the practice questions.

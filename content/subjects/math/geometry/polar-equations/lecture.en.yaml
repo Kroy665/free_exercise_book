@@ -1,0 +1,314 @@
+# Spoken lecture for "Polar Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: polar-coordinates
+    say: >
+      Welcome. Today we revise polar equations: of the straight line, the circle, and above all
+      the conic with a focus as pole. By the end you should be able to convert between polar
+      and Cartesian forms, read the eccentricity and latus rectum off an equation after
+      normalising it, write the chord, tangent and normal at a point, and use the harmonic mean
+      property of focal chords.
+
+  - section: polar-coordinates
+    focus: 'x = r\cos\theta,\quad y = r\sin\theta'
+    say: >
+      Fix a pole O and an initial line O X. A point P has polar coordinates r, theta when O P is
+      r and the angle from O X to O P, measured anticlockwise, is theta. With O as origin, x is r
+      cos theta, y is r sin theta, r squared is x squared plus y squared, and tan theta is y over
+      x. These four relations do every conversion in the chapter.
+
+  - section: polar-coordinates
+    focus: '**place $\theta$ by quadrant**'
+    say: >
+      Polar coordinates are not unique. r, theta is the same point as r, theta plus two pi, and
+      also as minus r, theta plus pi; a negative r means go the other way. When a unique answer
+      is wanted, take r positive and theta in the interval from minus pi, open, to pi, closed,
+      and place theta by quadrant, exactly as for the argument of a complex number. Tan inverse
+      of y over x alone cannot see the quadrant.
+
+  - section: polar-coordinates
+    question: q0002
+    say: >
+      Try this. With r positive and theta between minus pi and pi, find the polar coordinates of
+      the point minus one, minus one.
+    answer: >
+      r is root two. The point is in the third quadrant, so theta is minus pi plus pi by four,
+      which is minus three pi by four. The tempting option pi by four is what tan inverse of
+      minus one over minus one returns, but that is the point one, one.
+
+  - section: polar-coordinates
+    focus: '$$PQ^2 = r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2).$$'
+    say: >
+      The distance between two points comes from the cosine rule in triangle O P Q: P Q squared
+      is r one squared plus r two squared minus two r one r two cos of the angle between them.
+      The area of triangle O P Q is half r one r two times the sine of that angle. For three,
+      pi by six and four, pi by two, the angle is pi by three, so the distance squared is
+      thirteen.
+
+  - section: polar-coordinates
+    focus: 'check the pole is not lost'
+    say: >
+      To convert curves, substitute in either direction. Two rows of the table are worth
+      memorising: x squared plus y squared equals two a x is r equals two a cos theta, and x
+      squared minus y squared equals a squared is r squared cos two theta equals a squared. The
+      caution: when you divide by r, check that the pole is not lost. Here it is not, since theta
+      equal to pi by two gives r equal to zero.
+
+  - section: straight-line
+    focus: '$$r\cos(\theta - \alpha) = p.$$'
+    say: >
+      Now the straight line. Let p be the length of the perpendicular O N from the pole to the
+      line, and alpha the angle of O N. For any point P on the line, triangle O N P is right
+      angled at N, so r cos of theta minus alpha equals p. That is the normal form, and in
+      Cartesian terms it is x cos alpha plus y sin alpha equals p. Any line not through the pole
+      can also be written one over r equals A cos theta plus B sin theta.
+
+  - section: straight-line
+    focus: '**Reducing to normal form.**'
+    say: >
+      To reduce r times a cos theta plus b sin theta equals c to normal form, with c positive,
+      divide by the root of a squared plus b squared. Then p is c over that root, and cos alpha
+      and sin alpha are a and b over that root. Decide alpha from both its cosine and its sine,
+      not just one of them.
+
+  - section: straight-line
+    question: q0006
+    say: >
+      Try it. Write r times cos theta plus root three sin theta equals three in normal form.
+    answer: >
+      Divide by root of one plus three, which is two. Then cos alpha is one half and sin alpha is
+      root three by two, so alpha is pi by three, and p is three halves. The answer is r cos of
+      theta minus pi by three equals three halves. Taking alpha as pi by six swaps sine and
+      cosine, and leaving p as three forgets to divide.
+
+  - section: straight-line
+    focus: 'a **perpendicular** line is $r\sin(\theta - \alpha) = p''$'
+    say: >
+      Given r cos of theta minus alpha equals p, a parallel line just changes p, and a
+      perpendicular line is r sin of theta minus alpha equals a new constant. The line through
+      two given points has a symmetric formula in sines, which comes from splitting triangle O P
+      one P two into two triangles and adding their areas.
+
+  - section: straight-line
+    focus: 'To read a polar line quickly, convert'
+    say: >
+      The exam tip: to read a polar line, convert it. r cos of theta minus pi by three equals
+      four expands to half x plus root three by two y equals four, that is x plus root three y
+      equals eight. Its distance from the pole is four, and the foot of the perpendicular is the
+      point four, pi by three. And a caution: p must not be negative. If it comes out negative,
+      add pi to alpha instead.
+
+  - section: circle
+    focus: 'is the **power of the pole**'
+    say: >
+      Now the circle. Let the centre be c, alpha and the radius a. The cosine rule in triangle O
+      C P gives r squared minus two c r cos of theta minus alpha plus c squared minus a squared
+      equals zero. For fixed theta this is a quadratic in r, whose two roots are the distances to
+      the two points where the ray meets the circle. Their product, c squared minus a squared, is
+      the power of the pole, the intersecting chords theorem in disguise.
+
+  - section: circle
+    focus: 'not $a^2 - c^2$'
+    say: >
+      The caution here. The constant is c squared minus a squared, the distance of the pole from
+      the centre squared minus the radius squared, not the other way round. For r squared minus
+      four r cos theta plus three equals zero, c is two, c squared minus a squared is three, and
+      so the radius is one.
+
+  - section: circle
+    question: q0007
+    say: >
+      Try this. Write the polar equation of the circle with centre two, pi by three and radius
+      three.
+    answer: >
+      With c two and a three, the equation is r squared minus four r cos of theta minus pi by
+      three, plus four minus nine, equals zero. So the constant is minus five; it is negative
+      because the pole lies inside the circle. The option with plus five uses a squared minus c
+      squared.
+
+  - section: circle
+    focus: '| through the pole, centre $(a, \alpha)$ | $r = 2a\cos(\theta - \alpha)$ |'
+    say: >
+      If the circle passes through the pole, c equals a, the constant disappears, and you can
+      divide by r: r equals two a cos of theta minus alpha. With the centre on the initial line
+      it is r equals two a cos theta; on the line theta equals pi by two it is r equals two a sin
+      theta. Notice that the radius is a, not two a. The chord through the pole at angle theta has
+      length two a cos of theta minus alpha, by the angle in a semicircle.
+
+  - section: circle
+    focus: '$r = A\cos\theta + B\sin\theta$ is the circle through the pole'
+    say: >
+      More generally, r equals A cos theta plus B sin theta is the circle through the pole x
+      squared plus y squared equals A x plus B y, with centre A by two, B by two and radius half
+      the root of A squared plus B squared. So r equals six sin theta has centre zero, three and
+      radius three. For the tangent to r equals two a cos theta at angle alpha, note that the
+      radius to that point makes angle two alpha with the initial line; that gives r cos of theta
+      minus two alpha equals two a cos squared alpha.
+
+  - section: conic-focus-pole
+    focus: '**directed from the focus towards that directrix**'
+    say: >
+      Now the most examined part: the conic with a focus as pole. Take the focus S as pole, and
+      the axis as initial line, directed from the focus towards the directrix at distance d. For
+      a point P, its distance from the directrix is d minus r cos theta. The focus directrix
+      property, S P equals e times P M, then gives l over r equals one plus e cos theta, where l
+      is e times d.
+
+  - section: conic-focus-pole
+    focus: 'At $\theta = \pm\frac\pi2$, $r = l$: so $l$ is the **semi-latus rectum**'
+    say: >
+      At theta equal to plus or minus pi by two, r equals l. So l is the semi latus rectum, and
+      the latus rectum is two l. The directrix itself is r cos theta equals l over e. If the
+      directrix lies instead in the direction theta equals pi, behind the pole, the equation
+      becomes l over r equals one minus e cos theta; if it lies in the direction pi by two, sin
+      theta replaces cos theta.
+
+  - section: conic-focus-pole
+    focus: '**Reading an equation.** Make the constant term $1$ first'
+    say: >
+      Reading an equation is where marks are lost. Make the constant term one first. Ten over r
+      equals three minus two cos theta becomes ten thirds over r equals one minus two thirds cos
+      theta. Only now can you read e as two thirds, an ellipse, and l as ten thirds, so the latus
+      rectum is twenty thirds.
+
+  - section: conic-focus-pole
+    question: q0010
+    say: >
+      Try this. What is the conic eight over r equals two plus four cos theta?
+    answer: >
+      Divide by two: four over r equals one plus two cos theta. So e is two, which is greater
+      than one, and the conic is a hyperbola with eccentricity two, and l is four. Reading e as
+      four from the unnormalised equation is exactly the trap.
+
+  - section: conic-focus-pole
+    focus: '2a = \frac{2l}{1 - e^2}'
+    say: >
+      For an ellipse, the vertices are at l over one plus e, at theta zero, and l over one minus
+      e, at theta pi. They lie on opposite sides of the focus, so their sum is the major axis:
+      two a equals two l over one minus e squared, and l equals b squared over a. For the
+      parabola, e is one and l is two a. For a hyperbola, r tends to infinity when cos theta is
+      minus one over e, which gives the asymptote directions; for e equal to two, that is plus or
+      minus two pi by three.
+
+  - section: conic-focus-pole
+    focus: 'gives only the branch **nearer** to the chosen focus and directrix'
+    say: >
+      A caution on the hyperbola. With r positive, the equation traces only the branch nearer to
+      the chosen focus and directrix. The other branch appears with negative r, for the angles
+      where one plus e cos theta is negative. The graph on the board shows an ellipse and a
+      parabola sharing the same focus at the pole.
+
+  - section: chord-tangent-normal
+    focus: '$$\frac lr = e\cos\theta + \sec\beta\cos(\theta - \alpha).$$'
+    say: >
+      Now chords, tangents and normals, with points named by their vectorial angle. The chord
+      joining alpha minus beta and alpha plus beta is l over r equals e cos theta plus sec beta
+      cos of theta minus alpha. The proof idea: every line not through the pole has the form A
+      cos theta plus B sin theta. Try e cos theta plus k cos of theta minus alpha. At the two
+      ends it must agree with the conic, one plus e cos theta, which forces k cos beta equal to
+      one.
+
+  - section: chord-tangent-normal
+    focus: '**Tangent** at $\alpha$ (let $\beta \to 0$):'
+    say: >
+      Let beta tend to zero, and the chord becomes the tangent at alpha: l over r equals e cos
+      theta plus cos of theta minus alpha. The common slip is to write one plus cos of theta
+      minus alpha, simply copying the conic. The tangent has e cos theta, not one. The normal at
+      alpha has a sine form, which the notes give in full.
+
+  - section: chord-tangent-normal
+    question: q0015
+    say: >
+      Try this. Find the tangent to two over r equals one plus cos theta at the point theta
+      equals pi by two.
+    answer: >
+      With e equal to one and alpha pi by two, the tangent is two over r equals cos theta plus
+      cos of theta minus pi by two, which is cos theta plus sin theta. In Cartesian form that is x
+      plus y equals two. The tempting option one plus cos theta plus sin theta copies the conic's
+      one.
+
+  - section: chord-tangent-normal
+    focus: '**Tangents at $\alpha$ and $\beta$** meet where'
+    say: >
+      The tangents at alpha and beta meet where cos of theta minus alpha equals cos of theta
+      minus beta, that is at theta equal to the half sum, alpha plus beta over two. For the
+      parabola two over r equals one plus cos theta, the tangents at plus and minus pi by three
+      meet on the axis at four thirds, zero.
+
+  - section: chord-tangent-normal
+    focus: '$$(A - e)^2 + B^2 = 1.$$'
+    say: >
+      Expanding the tangent at alpha gives e plus cos alpha times cos theta, plus sin alpha
+      times sin theta. So a line l over r equals A cos theta plus B sin theta is a tangent
+      exactly when A minus e is a cosine and B the matching sine, that is when A minus e squared
+      plus B squared equals one. That is the polar condition of tangency.
+
+  - section: chord-tangent-normal
+    focus: 'is simply $Ax + By = l$'
+    say: >
+      The exam tip: check any polar answer by converting. l over r equals A cos theta plus B sin
+      theta is simply A x plus B y equals l. Then test that it passes through the point. And the
+      caution: the chord formula uses the half difference beta, not the difference. For the
+      points zero and pi by two, beta is pi by four, and sec beta is root two.
+
+  - section: focal-chords
+    focus: 'SQ = \frac{l}{1 - e\cos\theta}'
+    say: >
+      Finally, focal chords, the chords through the focus. With the focus as pole, the two ends
+      are at theta and theta plus pi. So the two segments are S P equals l over one plus e cos
+      theta, and S Q equals l over one minus e cos theta. Everything in this section follows from
+      these two lines.
+
+  - section: focal-chords
+    focus: '**Harmonic mean property.**'
+    say: >
+      Add the reciprocals. One over S P plus one over S Q is one plus e cos theta plus one minus e
+      cos theta, all over l, which is two over l. The cos theta terms cancel, so this holds for
+      every focal chord. In words, the semi latus rectum is the harmonic mean of the two
+      segments: l equals two S P times S Q, over S P plus S Q.
+
+  - section: focal-chords
+    question: q0018
+    say: >
+      Try this. A focal chord of a parabola is divided by the focus into segments three and six.
+      Find the latus rectum.
+    answer: >
+      The semi latus rectum is the harmonic mean: two times three times six over nine, which is
+      four. So the latus rectum is eight. The option four is only the semi latus rectum, and nine
+      halves is the arithmetic mean.
+
+  - section: focal-chords
+    focus: '**Length** of the focal chord inclined at $\theta$ to the axis'
+    say: >
+      Add the segments instead and you get the length: two l over one minus e squared cos squared
+      theta, where theta is measured from the axis. For an ellipse this is least for the latus
+      rectum and greatest along the major axis. For a parabola it becomes four a cosec squared
+      theta, at least four a. For the ellipse six over r equals two plus cos theta, at pi by three
+      to the axis, the length is thirty two fifths.
+
+  - section: focal-chords
+    focus: '**Perpendicular focal chords**'
+    say: >
+      For two perpendicular focal chords, replace cos squared by sin squared and add the
+      reciprocals of their lengths: the sum is two minus e squared, over two l, a constant. And
+      the tangents at the two ends of a focal chord meet on the directrix; adding their equations
+      gives l over r equals e cos theta, which is the directrix. For the parabola they also meet
+      at right angles.
+
+  - section: focal-chords
+    focus: 'The length formula has $\cos^2\theta$ where $\theta$ is measured from the **axis**.'
+    say: >
+      The caution: the length formula has cos squared theta, with theta measured from the axis.
+      Using sin squared gives the chord perpendicular to the one asked for. For a hyperbola, a
+      focal chord with ends on different branches makes the denominator negative, so take its
+      modulus.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Normalise first: make the constant one before reading e and l. The latus
+      rectum is two l, not l. The vertex distances add to the major axis. A line r cos of theta
+      minus alpha equals p sits at distance p with foot at p, alpha. A circle through the pole, r
+      equals two a cos theta, has radius a. The tangent at alpha has e cos theta, not one. Focal
+      chords: reciprocals of the segments add to two over l. Place theta by quadrant. Now try the
+      practice questions.

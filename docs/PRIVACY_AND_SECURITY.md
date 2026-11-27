@@ -5,7 +5,7 @@
 1. **No account.** Ever required.
 2. **No telemetry or analytics** by default. If an opt-in crash reporter is ever added, it must be off by default, show exactly what is sent, and never include study data.
 3. **Your study data stays on your device.** Progress, notes, highlights and bookmarks are never uploaded.
-4. **Network use is limited to:** fetching the content manifest and packs, the embedding model (if enabled), and app updates. All of these can be turned off in Settings → Network.
+4. **Network use is limited to:** fetching the content manifest and packs, the embedding model (if enabled), app updates, the Kokoro voice model (downloaded once, the first time the user presses Listen, from huggingface.co, and checked against pinned SHA-256 hashes), and the study assistant. The assistant talks to a local Ollama server by default; only if the user chooses **Claude API** in Settings and adds their own key are questions (with the selected text, the question on screen and a list of note titles) sent to api.anthropic.com. The key is stored in its own file in the app data folder, never in the settings table or progress backups.
 5. **No ads, no trackers, no third-party SDKs** in the app.
 6. "Report error" opens the user's browser with a **pre-filled** issue. Nothing is sent unless the user submits it themselves.
 

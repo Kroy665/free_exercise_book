@@ -1,0 +1,317 @@
+# Spoken lecture for "Transformation of Axes and General Conics".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: translation
+    say: >
+      Welcome. Today we revise change of axes and the general equation of second degree. By the
+      end you should be able to shift and rotate axes without sign errors, remove the x y term,
+      use invariants to skip the trigonometry, find the centre, reduce a conic to canonical form,
+      and classify any second degree equation using two numbers, C and delta. Throughout, the
+      equation is a x squared plus two h x y plus b y squared plus two g x plus two f y plus c.
+
+  - section: translation
+    focus: '$$x = X + \alpha, \qquad y = Y + \beta \qquad'
+    say: >
+      First, translation. Move the origin to the point alpha, beta, keeping the axes parallel.
+      Look at the highlighted formulas: old x is new X plus alpha, so new X is old x minus alpha.
+      The rule to remember is new equals old minus the new origin. With the origin moved to two,
+      minus three, the point five, one becomes three, four.
+
+  - section: translation
+    focus: 'the new constant is $c'' = S(\alpha, \beta)$, the value of the left side at the new origin.'
+    say: >
+      What happens to the equation? Substitute and collect. The second degree part is unchanged:
+      a, h and b keep their values. The linear coefficients change. And the new constant is
+      simply the left side evaluated at the new origin. If you choose the new origin so that both
+      linear coefficients vanish, you have shifted to the centre, and the equation loses its
+      first degree terms.
+
+  - section: translation
+    focus: 'the radius never changes under a change of axes'
+    say: >
+      Now the sign trap. Shifting the origin to alpha, beta means substituting x equals X plus
+      alpha, not X minus alpha. A circle with centre one, two, shifted to its centre, becomes X
+      squared plus Y squared equals four. Notice the radius stayed two. A change of axes moves
+      the observer, not the curve, so lengths, the radius, and the shape never change.
+
+  - section: translation
+    question: q0001
+    say: >
+      A quick one. The origin is shifted to two, minus three. Find the new coordinates of the
+      point five, one.
+    answer: >
+      New equals old minus origin: five minus two is three, and one minus minus three is four.
+      So the answer is three, four. The tempting option seven, minus two adds the shift instead
+      of subtracting it. Check by adding back: three, four plus two, minus three gives five, one.
+
+  - section: rotation
+    focus: '$$X = x\cos\theta + y\sin\theta, \qquad Y = -x\sin\theta + y\cos\theta.$$'
+    say: >
+      Next, rotation of axes anticlockwise through theta. Old x is X cos theta minus Y sin
+      theta, and old y is X sin theta plus Y cos theta. The inverse, on the highlighted line,
+      gives new X as x cos theta plus y sin theta, and new Y as minus x sin theta plus y cos
+      theta. Rotating the axes anticlockwise is the same as rotating the point clockwise, which
+      is why the point two, zero gets new coordinates root two, minus root two.
+
+  - section: rotation
+    focus: 'is orthogonal with determinant $1$, so distances, angles and areas are preserved.'
+    say: >
+      The matrix of the rotation is orthogonal with determinant one. That is the reason
+      distances, angles and areas are preserved, and it is also the reason for the invariants we
+      meet shortly. The table on the board gives three quick examples; check the one with
+      one, root three through sixty degrees, which lands on two, zero.
+
+  - section: rotation
+    focus: 'A useful form: $a'' = \tfrac{a + b}{2} + \tfrac{a - b}{2}\cos 2\theta + h\sin 2\theta$.'
+    say: >
+      Under rotation, the quadratic part keeps its form but the coefficients change. You need
+      not memorise all three formulas. Remember the highlighted one: a dash equals a plus b over
+      two, plus a minus b over two times cos two theta, plus h sin two theta. Then b dash comes
+      free from the invariant a plus b. The linear part rotates like a vector, and the constant c
+      is unchanged.
+
+  - section: rotation
+    focus: 'Example: rotating through $45^\circ$, $x = \frac{X - Y}{\sqrt2}$, $y = \frac{X + Y}{\sqrt2}$, so'
+    say: >
+      For forty five degrees, x is X minus Y over root two and y is X plus Y over root two. Use
+      this on x squared minus y squared. The difference of the squares of X minus Y and X plus
+      Y is minus four X Y, and dividing by two gives minus two X Y. Hold that thought and try
+      the question.
+
+  - section: rotation
+    question: q0005
+    say: >
+      On rotating the axes anticlockwise through forty five degrees, what does x squared minus
+      y squared equals two become?
+    answer: >
+      x squared minus y squared becomes minus two X Y, so minus two X Y equals two, that is X Y
+      equals minus one: a rectangular hyperbola referred to its asymptotes. The tempting option
+      X Y equals one is what a clockwise rotation gives.
+
+  - section: rotation
+    focus: 'Check any rotated equation by a point.'
+    say: >
+      The exam tip: check any rotated equation with a single point. Root two, zero lies on x
+      squared minus y squared equals two. Its new coordinates for forty five degrees are one,
+      minus one, and indeed their product is minus one. Since the sign of the answer depends on
+      the direction of rotation, read the word anticlockwise carefully.
+
+  - section: invariants
+    focus: 'Under **any rotation**: $a'' + b'' = a + b$'
+    say: >
+      Now the invariants, the biggest time saver in this chapter. Under any rotation, a plus b,
+      a b minus h squared, g squared plus f squared, and c are all unchanged. Under any
+      translation, a, h and b are unchanged, but g, f and c change. And delta, the three by
+      three determinant, is unchanged under both.
+
+  - section: invariants
+    focus: 'So the trace $a + b$, the determinant $ab - h^2$ and the eigenvalues are unchanged.'
+    say: >
+      Why? The quadratic part has the symmetric matrix with rows a, h and h, b. A rotation
+      replaces this matrix by P transpose A P, with P orthogonal. That is a similarity, so the
+      trace a plus b, the determinant a b minus h squared, and the eigenvalues all survive. The
+      three by three matrix of delta transforms the same way with a matrix of determinant one,
+      so delta survives translation too.
+
+  - section: invariants
+    focus: '\tan 2\theta = \frac{2h}{a - b}\quad (a \ne b)'
+    say: >
+      To remove the x y term, set h dash to zero. That gives tan two theta equals two h over a
+      minus b, and when a equals b, theta is forty five degrees. After that, the new
+      coefficients are the eigenvalues of the matrix, the roots of lambda squared minus a plus b
+      times lambda plus a b minus h squared. Which root goes with X depends on the angle chosen,
+      so find a dash from its formula and get b dash from the sum.
+
+  - section: invariants
+    focus: 'and the curve is $4X^2 + 16Y^2 = 16$'
+    say: >
+      In the worked example, seven x squared minus six root three x y plus thirteen y squared
+      equals sixteen, tan two theta is root three, so theta is thirty degrees. The formula gives
+      a dash equal to four, and the sum twenty gives b dash equal to sixteen. So the curve is X
+      squared over four plus Y squared equals one. Check with the product: four times sixteen
+      is sixty four, and ninety one minus twenty seven is sixty four.
+
+  - section: invariants
+    question: q0009
+    say: >
+      Here is the exam tip as a question. Under a rotation, x squared plus six x y plus y
+      squared gets a dash equal to two. Find b dash and h dash, without any trigonometry.
+    answer: >
+      The sum is invariant: a dash plus b dash is two, so b dash is zero. The determinant is
+      invariant: a dash b dash minus h dash squared equals one minus nine, which is minus eight,
+      so h dash squared is eight, and the modulus of h dash is two root two. The option with
+      root ten comes from using a b plus h squared.
+
+  - section: invariants
+    focus: '$g^2 + f^2$ is invariant under rotation but **not** under translation'
+    say: >
+      A caution. g squared plus f squared is invariant under rotation, but not under
+      translation. And a minus b, and h on its own, are not invariant under rotation at all.
+      Only quote an invariant for the move it belongs to.
+
+  - section: centre
+    focus: 'A **centre** is a point that bisects every chord through it.'
+    say: >
+      Next, the centre: a point that bisects every chord through it. It is found by setting
+      both partial derivatives of S to zero, that is, a x plus h y plus g equals zero and h x
+      plus b y plus f equals zero. If C, which is a b minus h squared, is nonzero, there is a
+      unique centre, and we call the conic central: ellipse, hyperbola, or a pair of
+      intersecting lines. If C is zero, there is no centre, as for a parabola, or a whole line
+      of centres, as for parallel lines.
+
+  - section: centre
+    focus: '$$c'' = gx_0 + fy_0 + c = \frac{\Delta}{ab - h^2}.$$'
+    say: >
+      Shifting to the centre removes the linear terms, and the new constant is g x nought plus f
+      y nought plus c, which also equals delta over C. The first form follows from Euler's
+      theorem on homogeneous functions, since both partial derivatives vanish at the centre. In
+      the worked example the centre is one, one, and the new constant is minus six, which
+      matches delta minus nine hundred divided by C equal to one hundred and fifty.
+
+  - section: centre
+    focus: 'Do not drop $h$ when solving for the centre.'
+    say: >
+      The caution here is simple but common. Do not drop h when solving for the centre.
+      Writing a x plus g equals zero and b y plus f equals zero works only when there is no x
+      y term.
+
+  - section: canonical-form
+    focus: '$$\lambda_1 X^2 + \lambda_2 Y^2 + \frac{\Delta}{C} = 0.$$'
+    say: >
+      Now we put the pieces together. For a central conic, translate to the centre, then rotate
+      to remove the X Y term. The result is lambda one X squared plus lambda two Y squared plus
+      delta over C equals zero, where the lambdas are the eigenvalues. So you never need the
+      angle to get the canonical form: you need the centre constant and the eigenvalues.
+
+  - section: canonical-form
+    question: q0014
+    say: >
+      Try the full reduction. Find the canonical form of three x squared plus two x y plus three
+      y squared minus two x plus ten y plus three equals zero, with the major axis along X.
+    answer: >
+      The centre solves three x plus y minus one equals zero and x plus three y plus five equals
+      zero, giving one, minus two. The new constant is minus one minus ten plus three, which is
+      minus eight. The eigenvalues are two and four. So two X squared plus four Y squared equals
+      eight, that is X squared over four plus Y squared over two equals one. The option X
+      squared plus five Y squared uses the unhalved h.
+
+  - section: canonical-form
+    focus: '$$e^2 = 1 - \frac{\lambda_1}{\lambda_2}.$$'
+    say: >
+      For the eccentricity, write the reduced equation as lambda one X squared plus lambda two
+      Y squared equals k, with lambda one belonging to the major or transverse axis. For an
+      ellipse that is the eigenvalue of smaller modulus; for a hyperbola, the one with the same
+      sign as k. Then e squared is one minus lambda one over lambda two. For five x squared plus
+      six x y plus five y squared equals eight, the eigenvalues are eight and two, so e squared
+      is one minus two eighths, and e is root three by two.
+
+  - section: canonical-form
+    focus: '$$\text{latus rectum} = \frac{2\sqrt{-\Delta}}{(a + b)^{3/2}}.$$'
+    say: >
+      The parabola needs a different method, since C is zero and there is no centre. The
+      quadratic part is a perfect square. Write it as the square of alpha x plus beta y plus
+      lambda, and choose lambda so that this line, the axis, is perpendicular to the line on the
+      other side, the tangent at the vertex. Normalising both lines gives Y squared equals l X.
+      Or use the formula: latus rectum is two root minus delta over a plus b to the power three
+      halves.
+
+  - section: canonical-form
+    focus: '$$(3x - 4y + 7)^2 = 15(4x + 3y + 2).$$'
+    say: >
+      In the example, nine x squared minus twenty four x y plus sixteen y squared and so on, the
+      perpendicularity condition gives lambda equal to seven. Notice that three x minus four y
+      and four x plus three y are perpendicular. Dividing each line by five gives Y squared
+      equals three X, so the latus rectum is three. The formula agrees: two times three hundred
+      seventy five by two, over one hundred and twenty five, is three.
+
+  - section: classification
+    focus: '| $C = 0$ ($h^2 = ab$) | parabola | pair of parallel lines (distinct, coincident or imaginary) |'
+    say: >
+      Classification uses two numbers. C, which is a b minus h squared, decides the type: C
+      positive is ellipse type, C zero is parabola type, C negative is hyperbola type. Delta
+      decides whether it is genuine or degenerate. With delta nonzero you get an ellipse, a
+      parabola or a hyperbola. With delta zero you get a point, a pair of parallel lines, or a
+      pair of intersecting lines.
+
+  - section: classification
+    focus: 'ellipse: real if $(a + b)\Delta < 0$, imaginary if $(a + b)\Delta > 0$'
+    say: >
+      For an ellipse there is one more check. It is real only if a plus b times delta is
+      negative. If that product is positive, the ellipse is imaginary, with no real points at
+      all. A circle is the case a equals b with h zero. A rectangular hyperbola is the case a
+      plus b equals zero with delta nonzero; then C is automatically negative, and the
+      asymptotes are perpendicular.
+
+  - section: classification
+    focus: '$h^2 = ab$ alone does **not** mean parabola'
+    say: >
+      Now the main trap of the section. h squared equal to a b alone does not mean parabola,
+      and h squared less than a b alone does not mean a real ellipse. Always compute delta, and
+      for an ellipse its sign. x squared plus y squared plus one equals zero has C positive and
+      delta nonzero, yet it has no real points.
+
+  - section: classification
+    question: q0019
+    say: >
+      Try this. What does four x squared plus four x y plus y squared minus twelve x minus six y
+      plus five equals zero represent?
+    answer: >
+      h squared equals a b, which tempts you to say parabola. But delta works out to zero. In
+      fact the quadratic part is the square of two x plus y, and the equation factors in u,
+      which is two x plus y, as u squared minus six u plus five, so u is one or five. It is a
+      pair of parallel straight lines.
+
+  - section: standard-conics
+    focus: 'ellipse $e < 1$, parabola $e = 1$, hyperbola $e > 1$.'
+    say: >
+      Finally, the standard conics. A conic is the locus of a point whose distance from the
+      focus is e times its distance from the directrix. Ellipse when e is less than one,
+      parabola when e equals one, hyperbola when e exceeds one. The table collects the facts for
+      the three standard forms. For both ellipse and hyperbola, the foci are at plus or minus a
+      e, and the directrices at plus or minus a over e.
+
+  - section: standard-conics
+    focus: '| latus rectum | $\frac{2b^2}{a}$ | $\frac{2b^2}{a}$ | $4a$ |'
+    say: >
+      Memorise the latus rectum row: two b squared over a for both central conics, and four a
+      for the parabola y squared equals four a x. For nine x squared plus sixteen y squared
+      equals one hundred and forty four, a is four and b is three, so the latus rectum is
+      eighteen over four, that is nine halves. Swapping a and b is the usual slip.
+
+  - section: standard-conics
+    focus: 'Its vertices are $(c, c)$ and $(-c, -c)$'
+    say: >
+      For the rectangular hyperbola, e is root two. The form x y equals c squared is X squared
+      minus Y squared equals two c squared, rotated through forty five degrees. Its vertices are
+      c, c and minus c, minus c, and its foci are root two c, root two c and its negative.
+      Do not confuse the vertices with the foci. For the conjugate hyperbola, the reciprocals of
+      the squared eccentricities add to one.
+
+  - section: standard-conics
+    focus: 'decide **which axis is transverse**'
+    say: >
+      The exam tip. For a hyperbola that comes from a general equation, decide which axis is
+      transverse before using e squared equals one plus b squared over a squared. Eight X
+      squared minus two Y squared equals minus eight is Y squared over four minus X squared
+      equals one. The transverse axis is the Y axis, with semi axis two, so e is root five by
+      two, not root five.
+
+  - section: standard-conics
+    question: q0016
+    say: >
+      Here is exactly that situation. Find the eccentricity of three x squared plus ten x y plus
+      three y squared plus eight equals zero.
+    answer: >
+      The eigenvalues are eight and minus two, so the reduced equation is eight X squared minus
+      two Y squared equals minus eight, which is Y squared over four minus X squared equals one.
+      The transverse semi axis is two and the conjugate is one, so e squared is five quarters
+      and e is root five by two. Root five is the trap of taking X as transverse.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Under translation, new equals old minus origin, a, h and b stay, and the new
+      constant is S at the new origin. Under rotation, c, a plus b, a b minus h squared and g
+      squared plus f squared stay. Tan two theta is two h over a minus b. The centre constant is
+      delta over C. Classify with both C and delta. A rectangular hyperbola has a plus b zero.
+      Decide the transverse axis before computing e. Now try the practice questions.

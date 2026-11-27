@@ -1,0 +1,265 @@
+# Spoken lecture for "Matrices, Inverse and Rank".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: matrix-algebra
+    say: >
+      Welcome. This lecture revises matrix algebra, inverses and rank. By the end you should be
+      able to handle products and transposes without order mistakes, find inverses by the adjoint
+      or by row reduction, compute rank by minors or echelon form, use the rank inequalities, and
+      recognise the normal form, congruence and orthogonal matrices. Most errors in this chapter
+      are about order, so we will watch that throughout.
+
+  - section: matrix-algebra
+    focus: '- **Product:** if $A$ is $m\times n$ and $B$ is $n\times p$, then $AB$ is $m\times p$ with'
+    say: >
+      The product is defined only when the inner sizes match: an m by n matrix times an n by p
+      matrix is m by p. The entry in row i, column j is row i of the first times column j of the
+      second. Multiplication is associative and distributes over addition, but it is not
+      commutative. B A may be undefined, of a different size, or simply different.
+
+  - section: matrix-algebra
+    focus: '**Zero divisors.** $AB = O$ does not force $A = O$ or $B = O$:'
+    say: >
+      Two consequences of non commutativity catch people out. First, zero divisors: a product can
+      be the zero matrix with neither factor zero, as in the example on the board, where A B is
+      zero but B A is not. So A B equal to A C does not let you cancel A, unless A is
+      non singular. Second, A plus B, squared, equals A squared plus two A B plus B squared only
+      when A and B commute.
+
+  - section: matrix-algebra
+    focus: '**Trace:** $\operatorname{tr} A = \sum a_{ii}$. It is linear, and $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ even when $AB \ne BA$.'
+    say: >
+      Skim the table of special matrices: idempotent means A squared is A, nilpotent means some
+      power is zero, involutory means A squared is the identity. The trace is the sum of the
+      diagonal entries. It is linear, and the trace of A B equals the trace of B A, even when the
+      products differ. And recall from determinants: the determinant of k A is k to the n times
+      the determinant of A.
+
+  - section: transpose-symmetric
+    focus: 'The **reversal law** extends: $(ABC)^T = C^TB^TA^T$.'
+    say: >
+      The transpose swaps rows and columns. The key rule is the reversal law: the transpose of A B
+      is B transpose times A transpose, in the reverse order. It extends to three or more factors.
+      The order must reverse, because otherwise the sizes would not even match for rectangular
+      matrices.
+
+  - section: transpose-symmetric
+    focus: '- In a skew-symmetric matrix $a_{ii} = -a_{ii}$, so **every diagonal entry is $0$** (over $\R$ or $\C$).'
+    say: >
+      A symmetric matrix equals its transpose, and a skew symmetric one equals minus its
+      transpose. In a skew symmetric matrix each diagonal entry equals its own negative, so it is
+      zero, and odd order forces the determinant to be zero. For any matrix A, A times A transpose
+      is symmetric. And the product of two symmetric matrices is symmetric exactly when they
+      commute.
+
+  - section: transpose-symmetric
+    focus: 'Every square matrix is **uniquely** the sum of a symmetric and a skew-symmetric matrix:'
+    say: >
+      Every square matrix splits uniquely into a symmetric part, half of A plus A transpose, and a
+      skew symmetric part, half of A minus A transpose. Uniqueness is quick: if A is P plus Q, then
+      A transpose is P minus Q, and solving these two equations forces the formulas.
+
+  - section: transpose-symmetric
+    question: q0007
+    say: >
+      Try the decomposition. Find the entry in row one, column three of the skew symmetric part.
+    answer: >
+      Minus two. The entry is half of the one three entry minus the three one entry, that is half
+      of three minus seven. Plus two has the subtraction the wrong way round, and five is the
+      symmetric part's entry, half of three plus seven.
+
+  - section: transpose-symmetric
+    focus: '| Hermitian | $A^* = A$ | real |'
+    say: >
+      For complex matrices, the conjugate transpose plays the role of the transpose. A matrix is
+      Hermitian if it equals its conjugate transpose, and then its diagonal entries are real.
+      Skew Hermitian means the conjugate transpose is minus A, and the diagonal is purely
+      imaginary or zero. A is Hermitian exactly when i A is skew Hermitian. To make a matrix
+      Hermitian, set each entry equal to the conjugate of its mirror image.
+
+  - section: adjoint-inverse
+    focus: '$$A^{-1} = \frac{1}{\det A}\operatorname{adj}A, \qquad \begin{pmatrix}a & b\\ c & d\end{pmatrix}^{-1} = \frac{1}{ad - bc}\begin{pmatrix}d & -b\\ -c & a\end{pmatrix}.$$'
+    say: >
+      The adjoint is the transpose of the cofactor matrix, and A times its adjoint is the
+      determinant times the identity. So a square matrix has an inverse exactly when its
+      determinant is non zero, and the inverse is the adjoint divided by the determinant. For two
+      by two: swap the diagonal entries, change the signs of the other two, and divide by a d
+      minus b c. For square matrices, A B equal to the identity already forces B A equal to the
+      identity.
+
+  - section: adjoint-inverse
+    focus: '| $(AB)^{-1} = B^{-1}A^{-1}$ | $\operatorname{adj}(AB) = \operatorname{adj}B\,\operatorname{adj}A$ |'
+    say: >
+      The rules table. Inverse and adjoint both obey the reversal law: the inverse of A B is B
+      inverse times A inverse, and the adjoint of A B is adjoint B times adjoint A. The adjoint of
+      k A is k to the n minus one times the adjoint. The determinant of the adjoint is the
+      determinant to the n minus one, and the adjoint of the adjoint is the determinant to the n
+      minus two, times A. The adjoint rules hold even for singular matrices.
+
+  - section: adjoint-inverse
+    question: q0013
+    say: >
+      Use the reversal law. Given A inverse and B inverse, find the inverse of A B.
+    answer: >
+      It is B inverse times A inverse: the matrix with rows one, two and three, seven. The
+      tempting option with rows seven, two and three, one is A inverse times B inverse, the
+      original order, which is exactly the trap the reversal law warns about.
+
+  - section: adjoint-inverse
+    focus: '**Inverse from a polynomial identity.** If $A^2 - A + I = O$, then $A(I - A) = I$, so $A^{-1} = I - A$.'
+    say: >
+      A neat route to the inverse: from a polynomial identity. If A squared minus A plus the
+      identity is zero, rewrite it as A times, identity minus A, equals the identity. So the
+      inverse is the identity minus A. Cayley-Hamilton, in a later topic, supplies such identities.
+      And the caution again: the adjoint uses the transposed cofactors. Forgetting the transpose
+      ruins every non symmetric inverse.
+
+  - section: elementary-operations
+    focus: '- A row operation on $A$ equals **pre-multiplication** $EA$, where $E$ is the result of the same operation on $I_m$.'
+    say: >
+      Elementary operations come in three types: swap two rows, multiply a row by a non zero
+      scalar, and add a multiple of one row to another. An elementary matrix is the identity after
+      one such operation. The key fact: a row operation on A is pre multiplication by the
+      corresponding elementary matrix, and a column operation is post multiplication.
+
+  - section: elementary-operations
+    focus: '| $R_i \to R_i + kR_j$ | $1$ | $R_i \to R_i - kR_j$ |'
+    say: >
+      Every elementary matrix is invertible, and its inverse is elementary of the same type, the
+      operation that undoes it. A swap undoes itself and has determinant minus one. Scaling by k
+      is undone by scaling by one over k, with determinant k. Adding k times a row is undone by
+      subtracting k times it, with determinant one.
+
+  - section: elementary-operations
+    question: q0012
+    say: >
+      Find the inverse of this elementary matrix.
+    answer: >
+      The same matrix with minus two in place of two. E comes from adding two times row three to
+      row one, so its inverse subtracts two times row three from row one. Moving the two to a
+      different position is wrong, and so is a half: that would undo a scaling, not an addition.
+
+  - section: elementary-operations
+    focus: 'Row-reduce $[A \mid I]$.'
+    say: >
+      A square matrix is non singular exactly when it is a product of elementary matrices, that is,
+      when row operations alone reduce it to the identity. That is the Gauss-Jordan method. Row
+      reduce A with the identity beside it. If the left reaches the identity, the right block is A
+      inverse, because the same operations applied to the identity build the inverse. Use only row
+      operations; mixing in column operations breaks the argument.
+
+  - section: rank
+    focus: 'The **rank** $\rho(A)$ of a non-zero matrix is the largest $r$ such that $A$ has a non-zero minor of order $r$; $\rho(O) = 0$.'
+    say: >
+      Now rank. The rank of a non zero matrix is the order of its largest non zero minor. So rank r
+      means some r by r minor is non zero and every minor of order r plus one is zero. The rank is
+      at most the smaller dimension, and a square matrix of order n is non singular exactly when
+      its rank is n.
+
+  - section: rank
+    focus: '$$\rho(A) = \text{number of non-zero rows in any row echelon form of } A.$$'
+    say: >
+      In practice, use the echelon form. Elementary operations do not change rank, so reduce the
+      matrix until each leading entry lies to the right of the one above, and count the non zero
+      rows. In the example on the board, two sweeps leave two non zero rows, so the rank is two.
+      Rank is also the maximum number of independent rows, or of columns.
+
+  - section: rank
+    focus: 'The rank is $3$ for $k \ne 1, -2$; $1$ for $k = 1$ (all rows equal); $2$ for $k = -2$'
+    say: >
+      For parameter questions, factor the determinant first. For the matrix with k on the
+      diagonal and ones elsewhere, the determinant is k plus two times k minus one squared. So the
+      rank is three unless k is one or minus two. Then test each root separately: at one, all rows
+      are equal and the rank drops to one; at minus two, a two by two minor survives.
+
+  - section: rank
+    question: q0019
+    say: >
+      Apply that. When is the rank of this matrix exactly two?
+    answer: >
+      When k equals minus two. The determinant vanishes, so the rank is less than three, but a two
+      by two minor such as k squared minus one equals three is non zero. The tempting answer k
+      equals one also makes the determinant zero, but there all rows are equal and the rank is one.
+
+  - section: rank-properties
+    focus: '3. $\rho(AB) \le \min\{\rho(A), \rho(B)\}$, whenever $AB$ is defined.'
+    say: >
+      Properties of rank. Transposing or conjugating does not change it, nor does a non zero scalar.
+      Multiplying by non singular matrices on either side preserves rank. The rank of a product is
+      at most the smaller of the two ranks. And the rank of a sum is at most the sum of the ranks.
+      For a real matrix, A transpose A has the same rank as A.
+
+  - section: rank-properties
+    focus: 'If $A$ is $3\times 2$ and $B$ is $2\times 3$, then $AB$ is $3\times 3$ with $\rho(AB) \le 2$, so $\det(AB) = 0$ **always**.'
+    say: >
+      The product bound has a quick and popular consequence. A three by two matrix times a two by
+      three matrix is three by three, but its rank is at most two. So the determinant of the
+      product is always zero. Any product n by k times k by n, with k less than n, is singular.
+
+  - section: rank-properties
+    focus: '**Rank of the adjoint** ($A$ of order $n \ge 2$):'
+    say: >
+      The rank of the adjoint follows a three case rule. If A has full rank n, so does its
+      adjoint. If the rank is n minus one, the adjoint has rank exactly one: A times the adjoint is
+      zero, which forces rank at most one, and some cofactor is non zero. If the rank is n minus
+      two or less, every cofactor vanishes, and the adjoint is zero.
+
+  - section: rank-properties
+    question: q0017
+    say: >
+      Try it. A four by four matrix has rank three. What is the rank of its adjoint?
+    answer: >
+      One. The rank is n minus one, so the adjoint is non zero but has rank one. The tempting
+      answer three copies the rank of A, and zero would need rank two or less.
+
+  - section: rank-properties
+    focus: 'Rank is **not** additive: $\rho(A + B)$ can be smaller than $\rho(A) + \rho(B)$.'
+    say: >
+      Two cautions. Rank is not additive: with B equal to minus A, the sum has rank zero. And the
+      ranks of A B and B A can differ, as in the zero divisor example. A rank one matrix is a
+      column times a row, so all rows are multiples of one row. The exam tip: a zero row, two
+      proportional rows, or a row equal to the sum of others all lower the rank. Spot them before
+      computing anything.
+
+  - section: normal-form
+    focus: 'In matrix form: there exist non-singular $P$ ($m\times m$) and $Q$ ($n\times n$), products of elementary matrices, with $PAQ = N$.'
+    say: >
+      Using both row and column operations, every matrix of rank r reduces to the normal form: an
+      identity block of size r, with zeros elsewhere. In matrix terms, P A Q equals N, with P and
+      Q non singular. Two matrices are equivalent, meaning one is P A Q of the other, exactly when
+      they have the same order and the same rank.
+
+  - section: normal-form
+    focus: 'The determinant is **not** preserved: $\det(P^TAP) = (\det P)^2\det A$, which keeps only its sign over $\R$.'
+    say: >
+      Congruence is stricter: B equals P transpose A P. In practice, apply a row operation and then
+      the same column operation. Congruent matrices have the same rank, and congruence preserves
+      symmetry and skew symmetry. But the determinant is not preserved: it gets multiplied by the
+      square of the determinant of P, so over the reals only its sign survives.
+
+  - section: normal-form
+    focus: '- $\det A = \pm 1$ (from $\det A^T\det A = 1$).'
+    say: >
+      Orthogonal matrices satisfy A A transpose equals the identity, so the inverse is the
+      transpose. The rows, and the columns, are orthonormal, and the determinant is plus or minus
+      one. In two dimensions they are rotations, with determinant one, and reflections, with
+      determinant minus one. But the caution: determinant plus or minus one does not make a matrix
+      orthogonal.
+
+  - section: normal-form
+    question: q0015
+    say: >
+      Find the missing entry that makes this matrix orthogonal.
+    answer: >
+      x equals minus two. Row three must be orthogonal to rows one and two. Against row one, x plus
+      four minus two is zero; against row two, two x plus two plus two is zero. Both give minus
+      two, and row three then has length one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Check orders before multiplying. Transpose, inverse and adjoint of a product all
+      reverse the order. For order three with determinant five, the adjoint has determinant
+      twenty five. Rank is at most the smaller dimension, the rank of a product is at most the
+      smaller rank, and a thin product is singular. Equivalent means same order and same rank.
+      Orthogonal means the inverse is the transpose. Now try the practice questions.

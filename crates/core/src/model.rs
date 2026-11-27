@@ -145,6 +145,30 @@ impl RawQuestion {
     }
 }
 
+/// A spoken lecture for a topic (`lecture.<lang>.yaml`, docs/CONTENT_STRUCTURE.md §6.3):
+/// a teacher's script, step by step, each step pointing at the part of the notes it explains.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct Lecture {
+    pub segments: Vec<LectureSegment>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct LectureSegment {
+    /// Notes section this step is about (its anchor).
+    pub section: String,
+    /// Exact text from that section's Markdown to highlight while this step plays.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub focus: Option<String>,
+    /// What the teacher says: plain spoken English, no LaTeX or Markdown.
+    pub say: String,
+    /// A question from this topic to put beside the notes ("q0007").
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub question: Option<String>,
+    /// Spoken after the student answers `question`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub answer: Option<String>,
+}
+
 /// One current-affairs item (`content/current-affairs/<yyyy>/<mm>/items.yaml`,
 /// docs/CONTENT_STRUCTURE.md §10).
 #[derive(Debug, Clone, Serialize, Deserialize)]

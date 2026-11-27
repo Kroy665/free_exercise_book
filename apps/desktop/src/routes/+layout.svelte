@@ -7,6 +7,11 @@
   import { page } from "$app/state";
   import LanguageMenu from "$lib/components/LanguageMenu.svelte";
   import CommandPalette from "$lib/components/CommandPalette.svelte";
+  import AssistantPanel from "$lib/components/AssistantPanel.svelte";
+  import SelectionAsk from "$lib/components/SelectionAsk.svelte";
+  import VoiceStatus from "$lib/components/VoiceStatus.svelte";
+  import { chat } from "$lib/stores/assistant.svelte";
+  import MessageCircleQuestion from "@lucide/svelte/icons/message-circle-question";
   import Search from "@lucide/svelte/icons/search";
   import { autoUpdate, packBadge, packNotice, refreshCaNav, refreshDueBadge, refreshPackBadge } from "$lib/stores/packs.svelte";
   import { loadSettings, setSetting, settings, t, toggleLang } from "$lib/stores/settings.svelte";
@@ -85,11 +90,23 @@
   });
 
   let paletteOpen = $state(false);
+  let shell = $state<HTMLElement | null>(null);
+
+  // The assistant knows which topic is open.
+  $effect(() => {
+    const m = /^\/topic\/([^/]+)/.exec(page.url.pathname);
+    chat.topicId = m ? decodeURIComponent(m[1]) : null;
+  });
 
   function onkeydown(e: KeyboardEvent) {
     if (!examMode && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
       e.preventDefault();
       paletteOpen = !paletteOpen;
+      return;
+    }
+    if (!examMode && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "j") {
+      e.preventDefault();
+      chat.open = !chat.open;
       return;
     }
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "l") {
@@ -112,7 +129,7 @@
   <!-- Exam view: full window, no sidebar or top bar (like the real computer-based test). -->
   {@render children()}
 {:else if settings.loaded}
-  <div class="shell">
+  <div class="shell" class:with-chat={chat.open} bind:this={shell}>
     <nav class="sidebar chrome" aria-label={t("nav.main")}>
       <div class="brand">
         <img src="/favicon.png" alt="" width="24" height="24" />
@@ -150,6 +167,16 @@
           <kbd>{navigator.platform.startsWith("Mac") ? "⌘K" : "Ctrl K"}</kbd>
         </button>
         <span class="spacer"></span>
+        <button
+          class="btn btn-ghost askbtn"
+          class:on={chat.open}
+          onclick={() => (chat.open = !chat.open)}
+          title="Teacher (⌘J)"
+          aria-pressed={chat.open}
+          aria-keyshortcuts="Control+J Meta+J"
+        >
+          <MessageCircleQuestion size={18} aria-hidden="true" /><span>Ask</span>
+        </button>
         <LanguageMenu />
         <button
           class="btn btn-ghost"
@@ -171,8 +198,11 @@
         </div>
       {/if}
     </div>
+    {#if chat.open}<AssistantPanel />{/if}
   </div>
   <CommandPalette bind:open={paletteOpen} />
+  <SelectionAsk root={shell} />
+  {#if !chat.open}<VoiceStatus floating />{/if}
 {/if}
 
 <style>
@@ -195,9 +225,18 @@
   }
   .shell {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px minmax(0, 1fr);
     height: 100vh;
     overflow: hidden;
+  }
+  .shell.with-chat {
+    grid-template-columns: 220px minmax(0, 1fr) minmax(320px, 400px);
+  }
+  .askbtn {
+    gap: var(--space-1);
+  }
+  .askbtn.on {
+    background: var(--accent-soft);
   }
   .sidebar {
     display: flex;
@@ -329,7 +368,10 @@
   }
   @media (max-width: 1100px) {
     .shell {
-      grid-template-columns: 64px 1fr;
+      grid-template-columns: 64px minmax(0, 1fr);
+    }
+    .shell.with-chat {
+      grid-template-columns: 64px minmax(0, 1fr) minmax(300px, 360px);
     }
     .brand span,
     nav a span:not(.icon):not(.count) {

@@ -1,0 +1,318 @@
+# Spoken lecture for "Functions of Two Variables".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: limits-continuity
+    say: >
+      Welcome. Today we move from one variable to two, and the main lesson is that several facts
+      you trust in one variable stop being true. By the end you should be able to show a double
+      limit does not exist, compute partial derivatives at awkward points from the definition,
+      test differentiability, use the chain rule and implicit differentiation, apply Euler's
+      theorem, and classify stationary points with the r t minus s squared test.
+
+  - section: limits-continuity
+    focus: 'The point may approach $(a,b)$ along **any** path, and the limit must be the same along all of them.'
+    say: >
+      The double limit uses the same epsilon delta idea as before, with distance in the plane. f
+      tends to L if f is within epsilon of L whenever the point is within delta of a comma b, but
+      not equal to it. Notice the highlighted sentence: the point may approach along any path at
+      all, and the limit must be the same along every one. That is what makes two variable limits
+      harder.
+
+  - section: limits-continuity
+    focus: 'The value depends on $m$ (it is $0$ on the axes and $\tfrac12$ on $y = x$), so the limit does not exist and $f$ is discontinuous at the origin.'
+    say: >
+      That gives the path test for non existence. For x y over x squared plus y squared, put y
+      equals m x. The value becomes m over one plus m squared, which depends on m: zero on the
+      axes, one half on the line y equals x. The graph shows this value as a function of the slope.
+      Different paths, different limits, so there is no limit, and the function is discontinuous at
+      the origin.
+
+  - section: limits-continuity
+    focus: '**Straight lines are not enough.**'
+    say: >
+      But straight lines are not enough. For x squared y over x to the fourth plus y squared, every
+      line through the origin gives zero. Along the parabola y equals x squared, however, you get
+      one half. The parabola balances the degrees: x squared is the natural partner for y here. So
+      if all lines agree, try a curve before believing the limit exists.
+
+  - section: limits-continuity
+    question: q0003
+    say: >
+      Let's check that. What happens to x squared y over x to the fourth plus y squared at the
+      origin?
+    answer: >
+      The limit does not exist. Every line y equals m x gives zero, which is the trap. But along y
+      equals x squared the value is x to the fourth over two x to the fourth, which is one half. Two
+      paths with different limits mean no limit.
+
+  - section: limits-continuity
+    focus: 'with $x = r\cos\theta$, $y = r\sin\theta$, $|f| = r^2\cos^2\theta\sin^2\theta \le r^2 \to 0$, uniformly in $\theta$'
+    say: >
+      To prove a limit does exist, paths are useless; you need an inequality. Polar coordinates are
+      the usual tool. For x squared y squared over x squared plus y squared, the modulus becomes r
+      squared cos squared theta sine squared theta, which is at most r squared. The key words are
+      uniformly in theta: the bound depends only on r, so the limit is zero.
+
+  - section: limits-continuity
+    focus: '- They may differ: for $\dfrac{x - y}{x + y}$ at $(0,0)$'
+    say: >
+      Repeated limits take one variable at a time. They can differ: for x minus y over x plus y,
+      letting y go first gives one, letting x go first gives minus one. They can agree while the
+      double limit fails, as for x y over x squared plus y squared. And the double limit can exist
+      while a repeated limit does not, as for x sine one over y plus y sine one over x.
+
+  - section: limits-continuity
+    focus: '- So if the double limit and both repeated limits exist, all three are equal. Unequal repeated limits prove the double limit does not exist.'
+    say: >
+      The theorem connecting them: if the double limit exists and the inner limit exists, the
+      repeated limit equals the double limit. So when all three exist, they are equal. The useful
+      corollary for the exam: unequal repeated limits prove the double limit does not exist. But
+      equal repeated limits prove nothing.
+
+  - section: partial-derivatives
+    focus: 'In practice, differentiate with respect to one variable and hold the other constant.'
+    say: >
+      Partial derivatives are the ordinary derivatives of the one variable sections. In practice,
+      differentiate with respect to one variable and hold the other constant. Geometrically, f x at
+      a comma b is the slope of the curve cut from the surface by the plane y equals b.
+
+  - section: partial-derivatives
+    focus: 'Both partial derivatives exist, yet $f$ is **not continuous** at the origin (see the path test).'
+    say: >
+      At an exceptional point, where the function is defined separately, use the definition. For x
+      y over x squared plus y squared, f is zero on both axes, so both partial derivatives at the
+      origin are zero. Yet we just saw that f is not continuous there. A partial derivative looks
+      only along the two axis directions, so it knows nothing about other paths.
+
+  - section: partial-derivatives
+    focus: '**existence of $f_x$ and $f_y$ does not imply continuity**'
+    say: >
+      So here is the first big difference from one variable. Existence of both partial derivatives
+      does not imply continuity. And the converse fails too: the modulus of x plus the modulus of y
+      is continuous at the origin, but its partial derivative in x does not exist there, because
+      modulus h over h has no limit.
+
+  - section: partial-derivatives
+    focus: '| $u = f(r)$, $r = \sqrt{x^2+y^2}$ | $u_{xx} + u_{yy} = f''''(r) + \dfrac{f''(r)}{r}$ |'
+    say: >
+      The table lists identities to recognise. The important one is for a function of r alone, with
+      r the distance from the origin. Then u x x plus u y y equals f double dash of r plus f dash
+      of r over r. In three variables the second term becomes two f dash over r, so don't mix the
+      two. Log of x squared plus y squared is harmonic, and f of x plus c t plus g of x minus c t
+      solves the wave equation.
+
+  - section: differentiability
+    focus: '$$f(a+h, b+k) - f(a,b) = Ah + Bk + \varepsilon\sqrt{h^2+k^2}, \qquad \varepsilon \to 0 \text{ as } (h,k)\to(0,0).$$'
+    say: >
+      The right two variable analogue of differentiable is stronger. f is differentiable at a comma
+      b if the change in f equals a linear part, A h plus B k, plus an error that is small compared
+      with the distance, the square root of h squared plus k squared. If this holds, A and B must
+      be the two partial derivatives, and the linear part is the total differential, f x d x plus f
+      y d y.
+
+  - section: differentiability
+    focus: '| $f_x$, $f_y$ exist near $(a,b)$ and are continuous at $(a,b)$ | $f$ differentiable at $(a,b)$ |'
+    say: >
+      Learn the hierarchy on the board. Continuous partial derivatives imply differentiable.
+      Differentiable implies continuous, and the partials exist. Partials merely existing imply
+      nothing about continuity. None of these arrows reverses. A sharper sufficient condition: one
+      partial derivative exists at the point and the other is continuous there.
+
+  - section: differentiability
+    focus: '**Example (continuous, partials exist, not differentiable).**'
+    say: >
+      The standard example sits between the levels: the square root of the modulus of x y. It is
+      continuous, because it is at most half the sum of the moduli of x and y. Both partials at the
+      origin are zero, since f vanishes on the axes. But along h equals k, the ratio of f to the
+      distance is one over root two, which does not tend to zero. So it is not differentiable.
+
+  - section: differentiability
+    question: q0006
+    say: >
+      Now classify that example yourself. Which statement about root of modulus x y is correct?
+    answer: >
+      It is continuous, and both partial derivatives at the origin are zero, but it is not
+      differentiable. Along the line h equals k, the quotient of f by the distance stays at one over
+      root two instead of tending to zero. Differentiable is the tempting option, but continuity
+      plus existing partials is not enough.
+
+  - section: differentiability
+    focus: 'One path with a non-zero limit settles "not differentiable".'
+    say: >
+      The exam tip turns that into a routine. When f of zero comma zero is zero and both partials
+      there are zero, differentiability means exactly that f of h comma k over the distance tends to
+      zero. One path with a non zero limit settles not differentiable. For approximation, the change
+      in f is about the total differential: for x squared y at two comma three, the change works out
+      to 0.04.
+
+  - section: chain-rule
+    focus: '$$\frac{dz}{dt} = f_x\frac{dx}{dt} + f_y\frac{dy}{dt}.$$'
+    say: >
+      The chain rule. If z is a differentiable function of x and y, and x and y are differentiable
+      functions of t, then d z by d t is f x times d x by d t, plus f y times d y by d t. For x and y
+      depending on u and v, the same pattern gives z u and z v. In polar coordinates, squaring and
+      adding gives the identity z x squared plus z y squared equals z r squared plus one over r
+      squared times z theta squared.
+
+  - section: chain-rule
+    focus: 'The minus sign in $-F_x/F_y$ is the most common slip.'
+    say: >
+      For implicit functions, if F of x and y is zero and F y is non zero, differentiating with the
+      chain rule gives F x plus F y times y dash equal to zero. So d y by d x is minus F x over F y.
+      The minus sign is the most common slip. Check it on the circle: x squared plus y squared minus
+      one must give minus x over y, which is negative in the first quadrant, as it should be.
+
+  - section: chain-rule
+    question: q0009
+    say: >
+      Try this one: the folium, x cubed plus y cubed equals three a x y. Find d y by d x.
+    answer: >
+      a y minus x squared, over y squared minus a x. F x is three x squared minus three a y, and F y
+      is three y squared minus three a x. Minus F x over F y gives minus x squared minus a y over y
+      squared minus a x, which is the answer. The tempting wrong option drops the minus sign; the
+      reciprocal option gives d x by d y instead.
+
+  - section: chain-rule
+    focus: 'For $x^2 + y^2 = a^2$: $y'' = -x/y$ and $y'''' = -\dfrac{y - xy''}{y^2} = -\dfrac{x^2+y^2}{y^3} = -\dfrac{a^2}{y^3}$.'
+    say: >
+      The second derivative has a long general formula, but for the circle it is quick by hand. y
+      dash is minus x over y. Differentiate again by the quotient rule, substitute y dash, and you
+      get minus a squared over y cubed. And for u a function of x minus y, y minus z and z minus x,
+      the three partial derivatives cancel in pairs, so their sum is zero.
+
+  - section: higher-derivatives
+    focus: 'Some textbooks use the opposite order of subscripts, so the questions write the derivative out in full.'
+    say: >
+      Higher derivatives. There are two mixed derivatives: differentiate in x then y, or in y then x.
+      In these notes f x y means f x differentiated with respect to y. Some books use the opposite
+      order, so the questions write the derivatives out in full. Read them carefully.
+
+  - section: higher-derivatives
+    focus: '- **Schwarz''s theorem.** If $f_x$, $f_y$ and $f_{xy}$ exist in a neighbourhood of $(a,b)$ and $f_{xy}$ is continuous at $(a,b)$, then $f_{yx}(a,b)$ exists and $f_{yx}(a,b) = f_{xy}(a,b)$.'
+    say: >
+      For nice functions the two mixed derivatives are equal, but this needs a hypothesis. Schwarz's
+      theorem: if f x, f y and one mixed derivative exist near the point, and that mixed derivative
+      is continuous at the point, then the other mixed derivative exists and they are equal. Young's
+      theorem asks instead that f x and f y be differentiable at the point. Both conditions are
+      sufficient, not necessary.
+
+  - section: higher-derivatives
+    focus: '$$f_x(0, y) = \lim_{h\to0}\frac{f(h,y) - f(0,y)}{h} = \lim_{h\to0}\frac{y(h^2 - y^2)}{h^2 + y^2} = -y.$$'
+    say: >
+      Now the classic counterexample: x y times x squared minus y squared, over x squared plus y
+      squared. Compute f x on the line x equals zero from the definition. The difference quotient is
+      y times h squared minus y squared, over h squared plus y squared, which tends to minus y. In
+      the same way, f y on the x axis is x. Remember those two: minus y and x.
+
+  - section: higher-derivatives
+    focus: 'The mixed derivatives exist but differ.'
+    say: >
+      Differentiating minus y with respect to y gives minus one; differentiating x with respect to x
+      gives plus one. So the mixed derivatives exist but differ. Schwarz's hypothesis fails because
+      the mixed derivative is not continuous at the origin. And notice the caution: never compute f
+      x by the quotient rule and then put x and y equal to zero, because the formula is zero by zero
+      there.
+
+  - section: higher-derivatives
+    question: q0011
+    say: >
+      Which value does the derivative in y of f x take at the origin?
+    answer: >
+      Minus one. From the definition, f x of zero comma y is minus y, and its derivative in y is
+      minus one. The other order gives plus one, the tempting wrong option. Zero comes from putting x
+      and y equal to zero in a formula that is zero by zero there.
+
+  - section: euler-theorem
+    focus: '$f(x, y)$ is **homogeneous of degree $n$** if $f(tx, ty) = t^n f(x,y)$ for all $t > 0$'
+    say: >
+      Homogeneous functions. f is homogeneous of degree n if f of t x comma t y equals t to the n
+      times f, for every positive t. The degree can be any real number. A ratio of homogeneous pieces
+      of degrees p and q has degree p minus q. So root x plus root y over x plus y has degree minus
+      one half, and the cube root and square root example has degree minus one sixth.
+
+  - section: euler-theorem
+    focus: '- **Euler''s theorem.** If $f$ is homogeneous of degree $n$ and differentiable, then $x f_x + y f_y = n f$.'
+    say: >
+      Euler's theorem: for a differentiable homogeneous function of degree n, x f x plus y f y equals
+      n f. The proof: differentiate the defining identity with respect to t and put t equal to one.
+      The second order form, with continuous second partials, says x squared f x x plus two x y f x y
+      plus y squared f y y equals n times n minus one times f.
+
+  - section: euler-theorem
+    focus: '**Composite form.**'
+    say: >
+      Often u itself is not homogeneous, but some function F of u is, of degree n. Then x u x plus y
+      u y equals n F of u over F dash of u. Call this g of u. The second order expression is g times
+      g dash minus one. For sine inverse of x squared plus y squared over x plus y, sine u has
+      degree one, so g is tan u, and the second order expression is tan cubed u.
+
+  - section: euler-theorem
+    question: q0014
+    say: >
+      Use the composite form. u is tan inverse of x cubed plus y cubed over x minus y. Find x u x
+      plus y u y.
+    answer: >
+      Sine two u. Tan u is homogeneous of degree two, so Euler gives sec squared u times x u x plus y
+      u y equal to two tan u. Dividing, we get two tan u over sec squared u, which is two sine u cos
+      u, that is sine two u. The trap is two tan u, which forgets to divide by sec squared u.
+
+  - section: euler-theorem
+    focus: 'Find the degree of the **homogeneous** piece, not of $u$.'
+    say: >
+      The caution: find the degree of the homogeneous piece, not of u. For log of x to the fourth
+      plus y to the fourth over x plus y, it is e to the u that has degree three, so x u x plus y u y
+      is simply three. And a sum like x squared plus y is not homogeneous at all, so Euler's theorem
+      does not apply to it.
+
+  - section: extrema
+    focus: 'A stationary point that is not an extremum is a **saddle point**'
+    say: >
+      Finally, extrema. If f has a local extremum where both partials exist, both are zero there; such
+      points are stationary points. A stationary point that is not an extremum is a saddle point: f
+      minus its value takes both signs arbitrarily close to it. The level curves of x squared minus y
+      squared on the board show the typical saddle at the origin.
+
+  - section: extrema
+    focus: '| $rt - s^2 < 0$ | saddle point (no extremum) |'
+    say: >
+      The second derivative test, with continuous second partials. Write r for f x x, s for f x y and
+      t for f y y at the stationary point. If r t minus s squared is positive, there is an extremum: a
+      minimum if r is positive, a maximum if r is negative. If it is negative, a saddle, whatever the
+      sign of r. If it is zero, the test fails, and that does not mean saddle.
+
+  - section: extrema
+    question: q0017
+    say: >
+      Try the test. At a stationary point, f x x is two, f x y is three and f y y is four. What
+      kind of point is it?
+    answer: >
+      A saddle point. r t minus s squared is eight minus nine, which is minus one, negative. The sign
+      of r matters only when r t minus s squared is positive, so local minimum, from looking at r
+      equal to two alone, is the trap.
+
+  - section: extrema
+    focus: '**Worked example.** $f = x^3 + y^3 - 3xy$.'
+    say: >
+      In the worked example, x cubed plus y cubed minus three x y, the stationary points are the
+      origin and one comma one. At the origin r t minus s squared is minus nine: a saddle. At one
+      comma one it is twenty seven, with r positive: a local minimum, value minus one. In the doubtful
+      case, x to the fourth plus y to the fourth has a minimum, while x to the fourth minus y to the
+      fourth has a saddle, though the test fails for both.
+
+  - section: extrema
+    focus: '**Lagrange multipliers (brief).**'
+    say: >
+      For extrema under a constraint, use Lagrange multipliers. Form f plus lambda times phi and set
+      both partials to zero, together with the constraint. At the extremum the level curve of f
+      touches the constraint curve. To maximise x y on x squared plus four y squared equals eight, the
+      equations give x squared equal to four y squared, and the maximum is two, which AM GM confirms.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Lines first, then a curve like y equals m x squared. Polar bounds, uniform in
+      theta, prove a limit exists. Unequal repeated limits kill the double limit. Continuous partials
+      imply differentiable, which implies continuous; mere partials imply nothing. At exceptional
+      points use the definition; remember f x of zero comma y is minus y. Euler: x f x plus y f y
+      equals n f. Negative r t minus s squared means saddle; zero means the test fails. Now try the
+      practice questions.

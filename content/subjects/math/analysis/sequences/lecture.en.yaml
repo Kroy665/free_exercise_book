@@ -1,0 +1,310 @@
+# Spoken lecture for "Sequences".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: limit-definition
+    say: >
+      Welcome. Today we revise sequences, the foundation of all of real analysis. By the end
+      you should be able to handle the epsilon N definition with confidence, compute limits
+      by algebra, the sandwich rule and Cauchy's limit theorems, decide convergence by
+      monotonicity or the Cauchy criterion, find lim sup and lim inf, and treat recursive
+      sequences correctly. Let's begin with bounds and the definition of a limit.
+
+  - section: limit-definition
+    focus: 'For $a_n = \frac{n}{n+1}$: $\inf = \frac12$ (attained at $n = 1$), $\sup = 1$ (not attained).'
+    say: >
+      A sequence is a function on the natural numbers, so it keeps order and repetition,
+      while its range is just a set. It is bounded if all terms lie within some fixed modulus.
+      The supremum and infimum of the range need not be terms. For n over n plus one, the
+      infimum is one half, attained at n equals one, and the supremum is one, never attained.
+
+  - section: limit-definition
+    focus: '$$\forall \varepsilon > 0\ \exists N \in \N:\ |a_n - l| < \varepsilon \text{ for all } n \ge N.$$'
+    say: >
+      Now the definition on the board. a n tends to l if, for every positive epsilon, there
+      is an N such that the distance from a n to l is less than epsilon for all n from N
+      onwards. In words, every neighbourhood of l contains all but finitely many terms. In
+      the example, n plus one over n differs from one by one over n, and that is less than
+      one hundredth exactly when n exceeds one hundred. So the least valid N is one hundred
+      and one, not one hundred, because the inequality is strict.
+
+  - section: limit-definition
+    focus: '- **Convergent $\Rightarrow$ bounded:** with $\varepsilon = 1$, $|a_n| \le \max\{|a_1|, \dots, |a_{N-1}|, |l| + 1\}$.'
+    say: >
+      Three basic theorems. A limit is unique: two different limits would need disjoint
+      neighbourhoods to both contain almost all terms. A convergent sequence is bounded:
+      take epsilon equal to one, and the finitely many earlier terms are bounded anyway. The
+      converse fails, since minus one to the n is bounded but not convergent. And changing
+      finitely many terms never affects convergence or the limit.
+
+  - section: limit-definition
+    focus: 'Indian texts (Mapa, Das–Mukherjee) reserve "divergent" for $\to \pm\infty$ and call the rest "oscillatory".'
+    say: >
+      Mind the terminology. Indian texts reserve divergent for sequences tending to plus or
+      minus infinity, and call the rest oscillatory: finitely if bounded, like minus one to
+      the n, infinitely if unbounded, like minus one to the n times n. Many Western books
+      call every non convergent sequence divergent, so read the question's wording. And note:
+      unbounded does not mean tending to infinity.
+
+  - section: limit-definition
+    question: q0014
+    say: >
+      Let's test that last point. Which sequence is unbounded but tends neither to plus nor
+      to minus infinity?
+    answer: >
+      Minus one to the n, times n. Its even terms go to plus infinity and its odd terms to
+      minus infinity, so it oscillates infinitely. n squared and minus root n do tend to
+      infinity, and minus one to the n oscillates but is bounded.
+
+  - section: limit-algebra
+    focus: '- **Null times bounded is null.** If $a_n \to 0$ and $(b_n)$ is bounded, then $a_n b_n \to 0$. Example: $\frac{\sin n}{n} \to 0$.'
+    say: >
+      Limits respect sums, products, scalar multiples, quotients with non zero limit, and
+      modulus. A few further facts matter more. Inequalities pass to the limit only weakly:
+      one over n is positive, but its limit is zero. Null times bounded is null, which is why
+      sine n over n tends to zero. And the product rule cannot be reversed: one over n times
+      n converges, though n does not.
+
+  - section: limit-algebra
+    focus: '- $|a_n| \to |a|$ does **not** give $a_n \to a$: $(-1)^n$. But $|a_n| \to 0 \iff a_n \to 0$.'
+    say: >
+      Similarly, the modulus converging does not make the sequence converge: minus one to the
+      n has constant modulus one. The exception is the limit zero: a n tends to zero exactly
+      when its modulus does. That is why we may prove a sequence is null by bounding its
+      modulus alone.
+
+  - section: limit-algebra
+    focus: '**Sandwich (squeeze) rule.** If $a_n \le c_n \le b_n$ for $n \ge N$ and $a_n \to l$, $b_n \to l$, then $c_n \to l$.'
+    say: >
+      The sandwich rule: if c n is trapped between two sequences with the same limit, it has
+      that limit too. The standard use is a sum of n terms. Bound it below by n times the
+      smallest term and above by n times the largest. For the sum of one over root of n
+      squared plus k, that gives n over root of n squared plus n, and n over root of n
+      squared plus one, both tending to one.
+
+  - section: limit-algebra
+    question: q0006
+    say: >
+      Try that example. What is the limit of the sum, from k equals one to n, of one over the
+      square root of n squared plus k?
+    answer: >
+      The answer is one. Each of the n terms lies between one over root of n squared plus n
+      and one over root of n squared plus one, and n times either bound tends to one. The
+      tempting answer zero comes from saying each term tends to zero; that fails because the
+      number of terms grows.
+
+  - section: limit-algebra
+    focus: 'In general $(a_1^n + \cdots + a_k^n)^{1/n} \to \max a_i$ for $a_i > 0$.'
+    say: >
+      Two more patterns. The n-th root of two to the n plus three to the n tends to three,
+      the larger base, again by squeezing between three and three times the n-th root of two.
+      And for a difference of square roots, rationalise: root of n squared plus n, minus n,
+      tends to one half, not zero. The exam tip: for a ratio of polynomials in n, compare
+      degrees and leading coefficients.
+
+  - section: monotone-e
+    focus: '**Monotone convergence theorem.** A monotone increasing sequence bounded above converges to $\sup_n a_n$.'
+    say: >
+      Now monotone sequences. An increasing sequence that is bounded above converges to its
+      supremum, and a decreasing one bounded below converges to its infimum. So a monotone
+      sequence converges exactly when it is bounded. The proof uses completeness: s minus
+      epsilon is not an upper bound, so some term exceeds it, and monotonicity keeps all later
+      terms there. In the rationals this fails, as decimal truncations of root two show.
+
+  - section: monotone-e
+    focus: '- Passing from $n$ to $n + 1$ increases each bracket and adds a positive term, so $(a_n)$ is **strictly increasing**.'
+    say: >
+      The most famous application is the number e. Expand one plus one over n, to the power
+      n, by the binomial theorem. Going from n to n plus one increases every bracket and adds
+      a new positive term, so the sequence strictly increases. Each bracket is less than one,
+      and one over k factorial is at most one over two to the k minus one, so every term is
+      less than three. Hence it converges, and its limit is defined to be e.
+
+  - section: monotone-e
+    focus: '**Consequences.** $\left(1 + \frac xn\right)^n \to e^x$ for every real $x$.'
+    say: >
+      Look at the graph: the terms climb from two towards e, staying below three. More
+      generally, one plus x over n, to the n, tends to e to the x. So one minus one over n,
+      to the n, tends to one over e, and one plus one over n, to the power two n, tends to e
+      squared. And the caution: one to the power infinity is indeterminate. The base tends to
+      one, but the exponent grows, so the answer is e, not one.
+
+  - section: nested-cauchy
+    focus: '**Nested interval theorem.** Let $I_n = [a_n, b_n]$ be **closed and bounded** intervals with $I_1 \supseteq I_2 \supseteq \cdots$.'
+    say: >
+      Next, the nested interval theorem. A decreasing chain of closed, bounded intervals has
+      a non empty intersection, and if the lengths tend to zero, the intersection is exactly
+      one point. Both hypotheses matter. The open intervals from zero to one over n have
+      empty intersection. The closed but unbounded intervals from n to infinity also have
+      empty intersection.
+
+  - section: nested-cauchy
+    focus: '**Cauchy''s general principle of convergence.** A sequence of reals converges **if and only if** it is Cauchy.'
+    say: >
+      A Cauchy sequence is one whose terms eventually get close to each other: for every
+      epsilon, beyond some N, any two terms differ by less than epsilon. No limit is
+      mentioned. Cauchy's general principle says a real sequence converges exactly when it
+      is Cauchy. One direction is the triangle inequality. The other uses boundedness and
+      Bolzano Weierstrass, and it is really the completeness of the reals; it fails in the
+      rationals.
+
+  - section: nested-cauchy
+    focus: 'so $(s_n)$ is not Cauchy and diverges (to $+\infty$, as it increases).'
+    say: >
+      The principle proves divergence too. For the harmonic partial sums, s two n minus s n
+      is a sum of n terms each at least one over two n, so it is at least one half for every
+      n. The sequence is not Cauchy, so it diverges, and since it increases, it goes to
+      infinity. A contractive sequence, where successive gaps shrink by a fixed factor less
+      than one, is always Cauchy.
+
+  - section: nested-cauchy
+    focus: '$|a_{n+1} - a_n| \to 0$ is **not** enough for Cauchy'
+    say: >
+      Here is the trap. Successive differences tending to zero is not enough for Cauchy.
+      The harmonic sums and root n both have gaps shrinking to zero, yet both diverge. Cauchy
+      needs every pair of late terms to be close, not just neighbours.
+
+  - section: nested-cauchy
+    question: q0017
+    say: >
+      Which of these sequences is not a Cauchy sequence?
+    answer: >
+      The harmonic partial sums, one plus a half up to one over n. Their difference between
+      two n and n is always at least one half, so they are not Cauchy. The sum of one over k
+      squared converges, and minus one to the n over n and sine n over n both tend to zero, so
+      all three are Cauchy.
+
+  - section: subsequences
+    focus: '- Hence: two subsequences with different limits prove divergence. For $(-1)^n$: $a_{2k} \to 1$, $a_{2k-1} \to -1$.'
+    say: >
+      A subsequence picks terms with strictly increasing indices. If a sequence converges,
+      every subsequence has the same limit. So two subsequences with different limits prove
+      divergence. Conversely, if the even and odd terms have the same limit, the whole
+      sequence has it. And every real sequence has a monotone subsequence.
+
+  - section: subsequences
+    focus: '**Bolzano–Weierstrass theorem (sequences).** Every **bounded** sequence of reals has a convergent subsequence.'
+    say: >
+      Combine that with monotone convergence and you get Bolzano Weierstrass: every bounded
+      real sequence has a convergent subsequence. The limits of subsequences are called
+      subsequential limits. For a bounded sequence, lim sup is the greatest of them and lim
+      inf the least. Equivalently, lim sup is the limit of the supremum of the tail from n
+      onwards.
+
+  - section: subsequences
+    focus: '- $(a_n)$ converges $\iff \liminf a_n = \limsup a_n$, finite; the common value is the limit.'
+    say: >
+      The key facts. lim inf is at most lim sup. The sequence converges exactly when they are
+      equal and finite. And the infimum is at most lim inf, which is at most lim sup, which
+      is at most the supremum. The outer pair can differ from the inner pair, as the first
+      row of the table shows.
+
+  - section: subsequences
+    question: q0008
+    say: >
+      Try the first row yourself. Find lim sup and lim inf of minus one to the n, times one
+      plus one over n.
+    answer: >
+      The even terms tend to one and the odd terms to minus one, so lim sup is one and lim inf
+      is minus one. The tempting option, three halves and minus two, gives the supremum and
+      infimum, each attained only once, at n equals two and n equals one. lim sup ignores
+      finitely many terms; sup does not.
+
+  - section: cauchy-limit-theorems
+    focus: '$$\frac{a_1 + a_2 + \cdots + a_n}{n} \to l.$$'
+    say: >
+      Now Cauchy's two limit theorems. The first: if a n tends to l, finite or infinite, then
+      the averages of the first n terms tend to l too. The converse fails: minus one to the n
+      has averages tending to zero. For positive terms, the geometric means also tend to l,
+      by taking logarithms.
+
+  - section: cauchy-limit-theorems
+    focus: '**Second limit theorem (Cauchy).** If $a_n > 0$ and $\dfrac{a_{n+1}}{a_n} \to l$ (finite or $+\infty$), then'
+    say: >
+      The second theorem is the one you will use most. If a n is positive and the ratio a n
+      plus one over a n tends to l, then the n-th root of a n also tends to l. The proof
+      applies the geometric mean form to the successive ratios, whose product telescopes.
+      Again the converse fails: a sequence alternating between two and one has n-th roots
+      tending to one, but its ratios alternate between a half and two.
+
+  - section: cauchy-limit-theorems
+    focus: '$$\frac{(n!)^{1/n}}{n} \to \frac1e.$$'
+    say: >
+      The table of applications is worth memorising. The n-th root of n tends to one. The
+      n-th root of n factorial tends to infinity. For n to the n over n factorial, the ratio
+      is one plus one over n, to the n, which tends to e. That gives the important limit on
+      the board: the n-th root of n factorial, divided by n, tends to one over e. And for two
+      n choose n, the n-th root tends to four.
+
+  - section: cauchy-limit-theorems
+    question: q0011
+    say: >
+      Use the second theorem here. Find the limit of the n-th root of n to the n over n
+      factorial.
+    answer: >
+      Take a n equal to n to the n over n factorial. The ratio a n plus one over a n
+      simplifies to one plus one over n, to the n, which tends to e. So the n-th root tends to
+      e. The tempting option one over e is the limit of the reciprocal.
+
+  - section: cauchy-limit-theorems
+    focus: '- If $a_n \to l$, then $\dfrac{a_1 + 2a_2 + \cdots + n a_n}{n^2} \to \dfrac l2$.'
+    say: >
+      Applications of the first theorem: the average of the harmonic terms tends to zero, and
+      the average of the n-th roots of k tends to one. A weighted version also appears: a one
+      plus two a two up to n a n, over n squared, tends to l over two, by Stolz Cesaro. Check
+      it with a constant sequence. And the exam tip: for n-th roots of factorial expressions,
+      compute the ratio limit instead; it is usually one line.
+
+  - section: standard-limits
+    focus: 'Growth order for large $n$: $\log n \ll n^p \ll a^n\ (a > 1) \ll n! \ll n^n$.'
+    say: >
+      The table of standard limits is mostly memory work. x to the n tends to zero for modulus
+      of x less than one, and oscillates for x at most minus one. The n-th roots of a and of n
+      tend to one. The key line is the growth order: log n is beaten by any power of n, which
+      is beaten by a to the n for a greater than one, then n factorial, then n to the n.
+      Whichever is faster wins the ratio.
+
+  - section: standard-limits
+    focus: '1. Show $(x_n)$ is **bounded** and **monotone**, by induction.'
+    say: >
+      For a recursive sequence, the method has three steps, in this order. Show the sequence
+      is bounded and monotone, by induction. Conclude that it converges to some l. Only then
+      let n tend to infinity in the recurrence to get l equals f of l, and choose the root
+      consistent with the bounds.
+
+  - section: standard-limits
+    question: q0004
+    say: >
+      Try the classic. x one is root two, and x n plus one is the square root of two plus x n.
+      Find the limit.
+    answer: >
+      By induction every term lies between zero and two, and the difference of squares,
+      two minus x n times one plus x n, is positive, so the sequence increases. It converges,
+      and l squared equals two plus l gives l equals two or minus one. All terms are positive,
+      so the limit is two. Minus one is the rejected root.
+
+  - section: standard-limits
+    focus: 'This is **not monotone**: $1, \frac12, \frac23, \frac35, \dots$ (ratios of Fibonacci numbers).'
+    say: >
+      Not every recursive sequence is monotone. For x n plus one equals one over one plus x n,
+      starting at one, the terms go one, one half, two thirds, three fifths, ratios of
+      Fibonacci numbers, alternating up and down. Here you either treat odd and even terms
+      separately, or note that all terms are at least one half, which makes the sequence
+      contractive with factor four ninths. The limit is root five minus one, over two.
+
+  - section: standard-limits
+    focus: 'Never solve $l = f(l)$ before proving convergence.'
+    say: >
+      And the caution. Never solve l equals f of l before proving convergence. x n plus one
+      equals two x n, starting at one, would give l equals zero, yet the sequence doubles
+      forever and tends to infinity. The equation only tells you what the limit must be,
+      if there is one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Convergent implies bounded; bounded and monotone implies convergent;
+      bounded alone gives only a convergent subsequence. In the reals, convergent means
+      Cauchy, and gaps shrinking to zero are not enough. Converges means lim inf equals lim
+      sup. One plus one over n, to the n, increases to e. For n-th roots, use the ratio
+      limit. For sums of n terms, squeeze. For recursions, prove convergence before solving.
+      Now try the practice questions.

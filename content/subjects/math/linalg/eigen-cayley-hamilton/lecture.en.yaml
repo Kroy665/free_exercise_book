@@ -1,0 +1,350 @@
+# Spoken lecture for "Eigenvalues and Cayley–Hamilton".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: characteristic-polynomial
+    say: >
+      Welcome. Today's chapter is eigenvalues and the Cayley Hamilton theorem, one of the
+      most reliable scoring areas in the linear algebra paper. By the end you should be able
+      to write a characteristic equation without expanding a determinant, read off
+      eigenvalues of related matrices in seconds, use Cayley Hamilton for inverses and high
+      powers, and decide quickly whether a matrix is diagonalisable. Let's start with the
+      definition.
+
+  - section: characteristic-polynomial
+    focus: 'A scalar $\lambda$ is an **eigenvalue** of $A$ if $Ax = \lambda x$ for some **non-zero** vector $x$.'
+    say: >
+      Look at the highlighted line. Lambda is an eigenvalue of A if A x equals lambda x for
+      some non zero vector x. The word non zero is the whole point: the zero vector satisfies
+      that equation for every lambda. A non zero solution of A minus lambda I, times x, equals
+      zero exists exactly when A minus lambda I is singular. So the eigenvalues are the roots
+      of the determinant of lambda I minus A, set equal to zero.
+
+  - section: characteristic-polynomial
+    focus: 'Many Indian texts write $|A - \lambda I| = 0$ instead.'
+    say: >
+      A word on convention. Many Indian books write the determinant of A minus lambda I. These
+      notes use the determinant of lambda I minus A, which is monic, with leading coefficient
+      one. The two differ only by a factor of minus one to the power n. So the equation and the
+      eigenvalues are identical, and an option written as something equals zero matches
+      either way. Don't let the sign convention unsettle you in the exam.
+
+  - section: characteristic-polynomial
+    focus: '$$\chi_A(\lambda) = \lambda^3 - (\operatorname{tr} A)\,\lambda^2 + S_2\,\lambda - \det A,$$'
+    say: >
+      Now the shortcut that saves the most time. For a two by two matrix, the characteristic
+      polynomial is lambda squared, minus the trace times lambda, plus the determinant. For a
+      three by three, it is lambda cubed, minus the trace times lambda squared, plus S two
+      times lambda, minus the determinant. Here S two is the sum of the three principal minors
+      of order two, the minors of the three diagonal entries. Signs simply alternate.
+
+  - section: characteristic-polynomial
+    focus: 'So $\chi_A(\lambda) = \lambda^3 - 6\lambda^2 + 9\lambda - 4 = (\lambda - 1)^2(\lambda - 4)$, and the eigenvalues are $1, 1, 4$.'
+    say: >
+      In the worked example, the matrix with twos on the diagonal and ones elsewhere has
+      trace six, each principal minor equal to three so S two is nine, and determinant four.
+      That gives lambda cubed minus six lambda squared plus nine lambda minus four, which
+      factors as lambda minus one squared, times lambda minus four. The eigenvalues are one,
+      one and four. Notice they add to six, the trace, and multiply to four, the determinant.
+
+  - section: characteristic-polynomial
+    question: q0001
+    say: >
+      Let's try the two by two shortcut. Find the characteristic equation of the matrix with
+      rows one, two and three, four.
+    answer: >
+      The trace is five and the determinant is four minus six, which is minus two. So the
+      equation is lambda squared minus five lambda minus two equals zero. The tempting wrong
+      option ends in plus ten; that comes from adding the cross product instead of
+      subtracting it.
+
+  - section: characteristic-polynomial
+    focus: '- For a **real** matrix, non-real eigenvalues come in conjugate pairs. So a real matrix of **odd** order has at least one real eigenvalue.'
+    say: >
+      Some consequences. Over the complex numbers there are exactly n eigenvalues, counted
+      with multiplicity. For a real matrix, non real eigenvalues come in conjugate pairs, so
+      a real matrix of odd order always has a real eigenvalue. Similar matrices share the
+      characteristic polynomial, because P inverse times lambda I minus A times P has the
+      same determinant. And A B and B A have the same characteristic polynomial, even though
+      A B and B A are usually different matrices.
+
+  - section: eigenvectors
+    focus: '$$E_\lambda = \ker(A - \lambda I), \qquad \dim E_\lambda = n - \operatorname{rank}(A - \lambda I).$$'
+    say: >
+      Once you have an eigenvalue, the eigenvectors are the non zero solutions of A minus
+      lambda I, times x, equals zero. Together with zero they form the eigenspace, the kernel
+      of A minus lambda I. Its dimension is n minus the rank of A minus lambda I, by rank
+      nullity. And remember that any non zero multiple of an eigenvector is again an
+      eigenvector, so an option that is a scaled version of your answer is equally correct.
+
+  - section: eigenvectors
+    focus: '**Theorem.** Eigenvectors belonging to **distinct** eigenvalues are linearly independent.'
+    say: >
+      Here is a theorem you must be able to justify. Eigenvectors belonging to distinct
+      eigenvalues are linearly independent. Take a shortest dependence relation and apply A
+      minus lambda k I. That kills the last vector and leaves a shorter relation with non zero
+      coefficients, a contradiction. The consequence: an n by n matrix with n distinct
+      eigenvalues has n independent eigenvectors.
+
+  - section: eigenvectors
+    focus: '$$1 \le g(\lambda_0) \le a(\lambda_0).$$'
+    say: >
+      Now multiplicity. The algebraic multiplicity is how often lambda is a root of the
+      characteristic polynomial. The geometric multiplicity is the dimension of the
+      eigenspace, n minus the rank of A minus lambda I. The geometric one is always at least
+      one and at most the algebraic one. In the table, the identity has both equal to two,
+      while the matrix with rows one, one and zero, one has algebraic multiplicity two but
+      only one independent eigenvector.
+
+  - section: eigenvectors
+    focus: '$0$ **can** be an eigenvalue (exactly when $A$ is singular), but the zero **vector** is never an eigenvector.'
+    say: >
+      Two traps in the caution box. Zero can perfectly well be an eigenvalue; that happens
+      exactly when A is singular. But the zero vector is never an eigenvector. And a repeated
+      eigenvalue does not tell you by itself how many eigenvectors there are. The only safe
+      method is to compute the rank of A minus lambda I.
+
+  - section: eigenvectors
+    question: q0012
+    say: >
+      Try this one. All diagonal entries are three, and there are two ones in the first row.
+      Find the algebraic and geometric multiplicities of the eigenvalue three.
+    answer: >
+      The matrix is triangular with three on the diagonal, so the algebraic multiplicity is
+      three. A minus three I has only the first row non zero, with entries zero, one, one, so
+      its rank is one, and the geometric multiplicity is three minus one, which is two. The
+      tempting answer three and one assumes a single Jordan block, but both ones sit in the
+      same row.
+
+  - section: properties
+    focus: '| $\operatorname{adj} A$ ($A$ non-singular) | $\det A/\lambda$ | yes |'
+    say: >
+      Next, eigenvalues of related matrices. If A x equals lambda x, apply the operation to
+      both sides. k A has k lambda, A plus c I has lambda plus c, A to the m has lambda to
+      the m, and A inverse has one over lambda, all with the same eigenvector. The row worth
+      memorising is the adjoint: since adj A equals the determinant times A inverse, its
+      eigenvalues are the determinant of A divided by lambda, not one over lambda.
+
+  - section: properties
+    focus: '- **Spectral mapping:** if the eigenvalues of $A$ (over $\C$, with multiplicity) are $\lambda_1, \dots, \lambda_n$, then those of $p(A)$ are exactly $p(\lambda_1), \dots, p(\lambda_n)$.'
+    say: >
+      More generally, for any polynomial p, the eigenvalues of p of A are exactly p of each
+      eigenvalue, with multiplicity. That is the spectral mapping property. A transpose has
+      the same eigenvalues as A, because a determinant does not change under transposition,
+      but, as we will see in a moment, it need not have the same eigenvectors.
+
+  - section: properties
+    focus: '$$\lambda_1 + \lambda_2 + \cdots + \lambda_n = \operatorname{tr} A, \qquad \lambda_1\lambda_2\cdots\lambda_n = \det A.$$'
+    say: >
+      The two identities on the board are your fastest checks. The sum of the eigenvalues is
+      the trace, and their product is the determinant. So A is singular exactly when zero is
+      an eigenvalue. Also, the trace of A to the k is the sum of the k-th powers of the
+      eigenvalues. And for a triangular matrix, the eigenvalues are simply the diagonal
+      entries; never expand a determinant there.
+
+  - section: properties
+    focus: '- $\det(A + 3I) = (1 + 3)(-1 + 3)(2 + 3) = 40$.'
+    say: >
+      The worked example puts it all together. With eigenvalues one, minus one and two, the
+      determinant is minus two and the trace is two. A squared minus two A has eigenvalues
+      minus one, three and zero, so it is singular. And the determinant of A plus three I is
+      four times two times five, which is forty. No matrix is ever written down.
+
+  - section: properties
+    question: q0005
+    say: >
+      Your turn. A three by three matrix has eigenvalues one, two and three. What are the
+      eigenvalues of its adjoint?
+    answer: >
+      The determinant is one times two times three, which is six. The adjoint has eigenvalues
+      six over lambda: six, three and two. The tempting option one, one half, one third gives
+      the eigenvalues of A inverse; it forgets the factor of the determinant.
+
+  - section: properties
+    focus: 'The eigenvalues of $A + B$ or $AB$ are **not** sums or products of eigenvalues of $A$ and $B$ in general.'
+    say: >
+      And the caution. Every rule in that table involves one matrix only. The eigenvalues of
+      A plus B, or of A times B, are not the sums or products of the separate eigenvalues in
+      general. Also, A and A transpose share eigenvalues but not eigenvectors: for the upper
+      triangular matrix with rows one, one and zero, two, the vector one, zero is an
+      eigenvector of A but not of its transpose.
+
+  - section: special-matrices
+    focus: '| real skew-symmetric / skew-Hermitian | $A^T = -A$ / $A^* = -A$ | $0$ or purely imaginary |'
+    say: >
+      Now special matrices. Memorise this table. Symmetric or Hermitian matrices have real
+      eigenvalues. Skew symmetric or skew Hermitian ones have zero or purely imaginary
+      eigenvalues. Orthogonal or unitary ones have eigenvalues of modulus one. Idempotent
+      means zero or one, involutory means one or minus one, and nilpotent means only zero.
+      Each comes from applying the defining equation to an eigenvector.
+
+  - section: special-matrices
+    focus: '1. *All eigenvalues are real.*'
+    say: >
+      Why are the eigenvalues of a real symmetric matrix real? Take A x equals lambda x with x
+      possibly complex, and multiply on the left by x bar transpose. The left side equals its
+      own conjugate because A is real symmetric, and x bar transpose x is the sum of the
+      squared moduli, which is positive. So lambda is real. A similar one line argument shows
+      that eigenvectors for distinct eigenvalues are orthogonal. And the spectral theorem says
+      a real symmetric matrix is always orthogonally diagonalisable, even with repeated
+      eigenvalues.
+
+  - section: special-matrices
+    focus: 'A real orthogonal matrix can only have **real** eigenvalues $\pm 1$; any other eigenvalues are conjugate pairs $e^{\pm i\theta}$.'
+    say: >
+      For an orthogonal matrix, A preserves length, so the modulus of lambda is one. The only
+      possible real eigenvalues are plus one and minus one, and any others come in conjugate
+      pairs e to the plus or minus i theta, as for a rotation. For a real skew symmetric
+      matrix, lambda bar equals minus lambda, so eigenvalues are zero or purely imaginary,
+      and a skew symmetric matrix of odd order is always singular.
+
+  - section: special-matrices
+    question: q0019
+    say: >
+      Here is a quick one. A real symmetric two by two matrix has eigenvalues three and minus
+      one, and one, two is an eigenvector for three. Which vector is an eigenvector for minus
+      one?
+    answer: >
+      For a real symmetric matrix, eigenvectors for distinct eigenvalues are orthogonal. The
+      vectors orthogonal to one, two in the plane are multiples of two, minus one. The
+      tempting option one, minus two only looks similar; its dot product with one, two is
+      minus three, not zero.
+
+  - section: special-matrices
+    focus: '"Real eigenvalues" needs the matrix to be real symmetric (or Hermitian).'
+    say: >
+      Note the hypothesis carefully. Real eigenvalues need the matrix to be real symmetric,
+      or Hermitian. A complex symmetric matrix can have non real eigenvalues, and so can a
+      real non symmetric matrix such as a rotation.
+      So before you claim real eigenvalues, check both words: real, and symmetric.
+
+  - section: cayley-hamilton
+    focus: '- **Theorem.** Every square matrix satisfies its own characteristic equation: if $\chi_A(\lambda) = \lambda^n + c_{n-1}\lambda^{n-1} + \cdots + c_1\lambda + c_0$, then'
+    say: >
+      Now the Cayley Hamilton theorem. Every square matrix satisfies its own characteristic
+      equation. Replace lambda by A and the constant term c nought by c nought times the
+      identity, and you get the zero matrix. It holds over any field, indeed over any
+      commutative ring. The proof writes lambda I minus A times its adjugate as the
+      characteristic polynomial times I, compares coefficients of powers of lambda, multiplies
+      by powers of A, and adds. The sum telescopes to zero.
+
+  - section: cayley-hamilton
+    focus: '"Put $\lambda = A$ in $\det(\lambda I - A)$ to get $\det(A - A) = 0$" is **not** a proof: it produces the scalar $0$, not the zero matrix.'
+    say: >
+      The caution here is a classic. Putting lambda equal to A inside the determinant and
+      writing the determinant of A minus A equals zero is not a proof. It produces the
+      scalar zero, whereas the theorem claims a zero matrix. Examiners do ask which argument
+      is valid.
+
+  - section: cayley-hamilton
+    focus: 'For the example: $A(A - 5I) = -5I$, so $A^{-1} = \dfrac{5I - A}{5} = \dfrac15\begin{pmatrix} 3 & -1\\ -1 & 2\end{pmatrix}$.'
+    say: >
+      The first use is the inverse. If the constant term is non zero, factor A out of the
+      other terms and move the constant across. For a two by two with trace t and determinant
+      d, A squared minus t A plus d I is zero, so A times t I minus A equals d I, and A
+      inverse is t I minus A, over d. In the example, trace five and determinant five give A
+      inverse equals five I minus A, over five. Always multiply back to check the sign.
+
+  - section: cayley-hamilton
+    focus: '2. *Remainder method.*'
+    say: >
+      The second use is high powers. Either reduce step by step, replacing A squared each
+      time, or use the remainder method. Divide lambda to the m by the characteristic
+      polynomial; the remainder r has degree less than n, and A to the m equals r of A. Find
+      the coefficients of r by putting in each eigenvalue. At a repeated eigenvalue you are
+      short of equations, so differentiate and use the derivative too.
+
+  - section: cayley-hamilton
+    question: q0009
+    say: >
+      Let's use exactly that idea. The matrix has rows two, minus one and one, zero. Find A to
+      the power fifty.
+    answer: >
+      The trace is two and the determinant is one, so the characteristic polynomial is lambda
+      minus one, squared. Write A to the m as a A plus b I. Putting lambda equal to one gives
+      a plus b equals one, and the derivative gives a equals m. So A to the fifty is fifty A
+      minus forty nine I. The tempting answer is I, but that would need A to be
+      diagonalisable, and this A is not.
+
+  - section: diagonalisation
+    focus: '- $A$ is diagonalisable $\iff$ $A$ has $n$ **linearly independent eigenvectors**.'
+    say: >
+      Now diagonalisation. A is diagonalisable when P inverse A P is diagonal for some
+      invertible P. This happens exactly when A has n linearly independent eigenvectors. The
+      reason is the equation A P equals P D, read column by column: each column of P is an
+      eigenvector, and D lists the eigenvalues in the same order. Equivalently, the
+      characteristic polynomial splits, and geometric equals algebraic multiplicity for every
+      eigenvalue.
+
+  - section: diagonalisation
+    focus: '- **Sufficient:** $n$ distinct eigenvalues. **Not necessary:** $I$ is diagonal with a single repeated eigenvalue.'
+    say: >
+      Keep the logic straight. n distinct eigenvalues is sufficient, but not necessary; the
+      identity has one repeated eigenvalue and is already diagonal. Real symmetric matrices
+      are always diagonalisable. And once A equals P D P inverse, A to the m is P D to the m P
+      inverse, which is how the worked example gets a closed formula for powers. Check such a
+      formula at m equals one.
+
+  - section: diagonalisation
+    focus: 'More generally, a non-zero nilpotent matrix is never diagonalisable: $D$ would have to be $O$.'
+    say: >
+      The standard counter example is the matrix with rows one, one and zero, one. Its
+      eigenvalue one has algebraic multiplicity two but geometric multiplicity one, so there
+      is only one independent eigenvector. More generally, a non zero nilpotent matrix is
+      never diagonalisable, because its only eigenvalue is zero, so D would be the zero matrix
+      and then A would be zero too.
+
+  - section: diagonalisation
+    focus: 'Example: $\begin{pmatrix} 2 & 0 & 0\\ a & 2 & 0\\ b & c & 3\end{pmatrix}$ is diagonalisable exactly when $a = 0$.'
+    say: >
+      The exam tip is a quick test for triangular matrices. Only a repeated eigenvalue can
+      cause trouble. Look at A minus lambda I for that eigenvalue, and see whether an
+      off diagonal entry linking the two equal diagonal entries is non zero. If it is, the
+      rank goes up and the geometric multiplicity drops below the algebraic one.
+
+  - section: diagonalisation
+    question: q0013
+    say: >
+      Try the example from the board. For which condition on a, b and c is this lower
+      triangular matrix diagonalisable?
+    answer: >
+      The eigenvalues are two, two and three, and only the repeated two matters. A minus two
+      I has a zero first row, a second row a, zero, zero, and a non zero third row ending in
+      one. If a is non zero the rank is two; if a is zero the rank is one, giving geometric
+      multiplicity two. So the answer is a equals zero. The option a, b and c all zero is
+      sufficient but not necessary.
+
+  - section: minimal-polynomial
+    focus: 'The **minimal polynomial** $m_A(\lambda)$ is the monic polynomial of least degree with $m_A(A) = O$.'
+    say: >
+      Finally, the minimal polynomial: the monic polynomial of least degree that kills A. It
+      exists because of Cayley Hamilton, and it divides every polynomial that kills A, in
+      particular the characteristic polynomial. Crucially, it has the same roots as the
+      characteristic polynomial, ignoring multiplicity, because for an eigenvector x, m of A
+      times x equals m of lambda times x.
+
+  - section: minimal-polynomial
+    focus: '- $A$ is diagonalisable over $F$ $\iff$ $m_A$ is a product of **distinct** linear factors over $F$.'
+    say: >
+      The key fact: A is diagonalisable exactly when its minimal polynomial is a product of
+      distinct linear factors. To find it for small orders, factor the characteristic
+      polynomial, list the divisors that contain every eigenvalue, and test them in
+      increasing degree. In the table, two I has minimal polynomial lambda minus two, while
+      the matrix with a single one above the diagonal needs lambda minus two, squared.
+
+  - section: minimal-polynomial
+    focus: 'If $A^2 = A$, then $m_A$ divides $\lambda(\lambda - 1)$, which has distinct factors, so every idempotent matrix is diagonalisable.'
+    say: >
+      This gives a fast test. If A squared equals A, the minimal polynomial divides lambda
+      times lambda minus one, which has distinct factors, so every idempotent matrix is
+      diagonalisable. The same argument shows that every involutory matrix, with A squared
+      equal to I, is diagonalisable.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist on the board. Use trace and determinant first; for two
+      by two answers they eliminate most options. Triangular means read the diagonal. Check
+      an eigenvector by multiplying. The adjoint has eigenvalues determinant over lambda. A
+      inverse is t I minus A, over d. A repeated eigenvalue does not mean non diagonalisable;
+      compute n minus the rank. Orthogonal means modulus one, skew symmetric means zero or
+      purely imaginary. Now try the practice questions.

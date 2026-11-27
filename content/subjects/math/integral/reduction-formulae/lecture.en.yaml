@@ -1,0 +1,263 @@
+# Spoken lecture for "Reduction Formulae".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: method
+    say: >
+      Welcome. Today's topic is reduction formulae. These are recurrences that bring an
+      integral with a power n down to the same integral with power n minus one or n minus two.
+      By the end you should be able to derive the standard formulae in two lines, evaluate any
+      Wallis type integral over zero to pi by two at a glance, and handle the tangent
+      recurrence on zero to pi by four, which is an exam favourite.
+
+  - section: method
+    focus: '1. **Parts, then rewrite.**'
+    say: >
+      Almost every formula comes from one of two moves. The first is parts, then rewrite.
+      Integrate by parts, then use an identity such as cos squared equals one minus sine
+      squared, or tan squared equals sec squared minus one, to express the new integral using
+      I n and I n minus two. Since I n now appears on both sides, collect it and solve. The
+      second move is simpler: if the derivative of something is sitting there as a factor, as
+      sec squared is in tan to the n minus two times sec squared, integrate directly.
+
+  - section: method
+    focus: 'Collect the two $I_n$ terms: $nI_n = -\sin^{n-1}x\cos x + (n-1)I_{n-2}$.'
+    say: >
+      Here is the model derivation for sine to the n. Take u as sine to the n minus one, and d v
+      as sine x d x. Parts gives minus sine to the n minus one times cos x, plus n minus one
+      times the integral of sine to the n minus two times cos squared. Replace cos squared by
+      one minus sine squared, and that integral becomes I n minus two minus I n. Bring the I n
+      across, and you get n I n equals the boundary term plus n minus one times I n minus two.
+
+  - section: method
+    focus: 'In an MCQ, never re-derive.'
+    say: >
+      In a multiple choice question, never re-derive. Test a candidate formula at the smallest
+      index where you know both sides, usually n equals two, or differentiate the boundary term.
+      For sine squared, the formula gives minus half sine x cos x plus x by two, which is the
+      familiar x by two minus sine two x by four.
+
+  - section: method
+    focus: 'A reduction formula has a **range of validity**'
+    say: >
+      And notice the caution. Each formula has a range of validity. The sine, tan and sec
+      formulae need n at least two. The mixed sine cosine formula needs m plus n not zero. And
+      for one over x squared plus a squared to the n, the coefficient has n minus one in the
+      denominator, so it explodes at n equals one.
+
+  - section: method
+    question: q0004
+    say: >
+      Let's test that checking habit. Which is the correct reduction formula for the integral
+      of sine to the n?
+    answer: >
+      The correct one has a minus sign on the boundary term: minus sine to the n minus one cos
+      x over n, plus n minus one over n times I n minus two. At n equals two it gives minus half
+      sine x cos x plus x by two, which is right. The option with a plus boundary sign is the
+      shape of the cosine formula, not the sine one.
+
+  - section: sin-cos-powers
+    focus: 'The coefficient $\frac{n-1}{n}$ is the same in both.'
+    say: >
+      The sine and cosine formulae sit side by side on the board. They share the coefficient n
+      minus one over n. Only the boundary term differs, and its sign follows the integral of
+      the first power: the integral of sine is minus cos, so the sine formula has a minus sign;
+      the integral of cos is sine, so the cosine formula has a plus sign. For odd powers, a
+      direct substitution is faster: for sine to the five, put c equal to cos x and expand one
+      minus c squared, squared.
+
+  - section: sin-cos-powers
+    focus: '$$I_n = \frac{n-1}{n}\,I_{n-2}, \qquad I_0 = \frac{\pi}{2}, \quad I_1 = 1.$$'
+    say: >
+      Over zero to pi by two, the boundary terms vanish at both ends, because either sine or
+      cosine is zero there. So the formula becomes a pure recurrence between numbers: I n equals
+      n minus one over n times I n minus two, starting from I zero equal to pi by two and I one
+      equal to one. And by the substitution x goes to pi by two minus x, the cosine integrals
+      over this range equal the sine integrals, so one table serves both.
+
+  - section: sin-cos-powers
+    focus: 'so $nI_nI_{n-1} = \dfrac{\pi}{2}$ for all $n \ge 1$.'
+    say: >
+      Two consequences are examined. First, multiply the recurrence by n I n minus one. You find
+      that n times I n times I n minus one does not depend on n at all, so it equals its value
+      at n equals one, which is one times one times pi by two. Second, sine to the n decreases
+      with n on this interval, so I n is strictly decreasing. Squeezing the ratio I n plus one
+      over I n between n over n plus one and one shows that it tends to one, and taking even
+      n gives Wallis's product for pi by two.
+
+  - section: wallis
+    focus: 'where $K = \frac{\pi}{2}$ **only if $m$ and $n$ are both even**, and $K = 1$ otherwise.'
+    say: >
+      Unwinding the recurrence gives Wallis's formulae. For sine to the n over zero to pi by
+      two, the answer is n minus one, times n minus three, and so on, over n times n minus two,
+      and so on, each product running down to one or two, times K. For the mixed integral of
+      sine to the m times cos to the n, the numerator has both descending products and the
+      denominator starts from m plus n. The factor K is pi by two only when both indices are
+      even, and one otherwise.
+
+  - section: wallis
+    focus: '| $\int_0^{\pi/2}\sin^n x\,dx$ | $\frac{\pi}{4}$ | $\frac23$ | $\frac{3\pi}{16}$ | $\frac{8}{15}$ | $\frac{5\pi}{32}$ | $\frac{16}{35}$ | $\frac{35\pi}{256}$ |'
+    say: >
+      The table gives the first few values. Even powers carry pi, odd powers are rational.
+      Worth memorising: sine squared gives pi by four, the cube gives two thirds, the fourth
+      power gives three pi by sixteen, and the fifth gives eight fifteenths. The Gamma form in
+      the box extends all of this to real m and n greater than minus one, and links the topic
+      to the Beta function.
+
+  - section: wallis
+    question: q0008
+    say: >
+      Now the standard one. Evaluate the integral from zero to pi by two of sine to the six x
+      times cos to the four x.
+    answer: >
+      Both indices are even, so K is pi by two. The numerator is five three one times three one,
+      which is 45. The denominator runs down from ten: ten, eight, six, four, two, giving 3840.
+      So the value is three over 256, times pi by two, which is three pi over 512. Three over
+      256 alone forgets the pi by two factor.
+
+  - section: wallis
+    focus: '$\int_0^{2\pi}\sin^m x\cos^n x\,dx = 4\int_0^{\pi/2}$ when $m, n$ are both even, and $0$ otherwise.'
+    say: >
+      For other ranges, use symmetry. Over zero to pi, sine to the n is twice the zero to pi by
+      two value, but any odd power of cos gives zero, because cosine is odd about pi by two.
+      Over zero to two pi, the mixed integral is four times the basic value when both indices
+      are even, and zero otherwise.
+
+  - section: wallis
+    focus: 'Forgetting $\frac{\pi}{2}$, or including it for an odd index, is the commonest wrong option.'
+    say: >
+      Substitutions often lead you here in disguise. Putting x equal to sine theta turns x to
+      the m times a power of one minus x squared into a Wallis integral, and putting x equal to
+      a tan theta does the same for one over x squared plus a squared to the n, over zero to
+      infinity. When you then apply the formula, count the factors carefully, the denominator
+      falls in steps of two, and decide K last. Forgetting pi by two, or including it for an odd
+      index, is the commonest wrong option.
+
+  - section: sin-m-cos-n
+    focus: '$$I_{m,n} = \frac{\sin^{m+1}x\cos^{n-1}x}{m+n} + \frac{n-1}{m+n}\,I_{m,\,n-2}.$$'
+    say: >
+      For the indefinite integral of sine to the m times cos to the n, there are two reduction
+      formulae, one lowering each index by two. Both have m plus n in the denominator. Lowering
+      n gives a plus boundary term and coefficient n minus one over m plus n; lowering m gives a
+      minus boundary term and coefficient m minus one over m plus n. On zero to pi by two, the
+      boundary terms vanish, and repeating these recurrences is exactly what produces the Wallis
+      formula you just learnt.
+
+  - section: sin-m-cos-n
+    focus: 'Pick the formula that drives an index **to 0 or 1**.'
+    say: >
+      Two practical points. The derivations use only the power rule, so the formulae also hold
+      for negative integer indices, as long as no denominator vanishes, which covers quotients
+      like sine to the m over cos to the n. And choose your formula wisely, as the caution says:
+      drive an odd index down to one, because then the last integral is elementary. Lowering the
+      even index of sine cubed cos squared still leaves the odd one to deal with.
+
+  - section: sin-m-cos-n
+    focus: 'so $J_n = J_1 = \pi$ for odd $n$ and $J_n = J_0 = 0$ for even $n$.'
+    say: >
+      The syllabus also lists a sine quotient type. Since sine to the m over sine to the n is
+      just a single power, books read this as the multiple angle quotient: the integral from
+      zero to pi of sine n x over sine x. The identity sine n x minus sine of n minus two x
+      equals two cos of n minus one x times sine x shows that consecutive values with the same
+      parity are equal, because the integral of the cosine over zero to pi is zero.
+
+  - section: sin-m-cos-n
+    question: q0021
+    say: >
+      So, what is the integral from zero to pi of sine six x over sine x?
+    answer: >
+      It is zero. The recurrence says J six equals J four equals J two equals J zero, and J zero
+      is the integral of zero, so zero. The value pi belongs to odd n, where the chain ends at J
+      one, which is pi. Six pi is a guess that the integral grows with n; it does not.
+
+  - section: tan-sec-cot
+    focus: '**$\tan^n$ needs no parts:** $\tan^n x = \tan^{n-2}x\sec^2 x - \tan^{n-2}x$, and the first term integrates to $\frac{\tan^{n-1}x}{n-1}$.'
+    say: >
+      Now tan, cot, sec and cosec. Tan to the n needs no parts at all. Write tan squared as sec
+      squared minus one. Then tan to the n is tan to the n minus two times sec squared, minus
+      tan to the n minus two. The first piece integrates directly to tan to the n minus one over
+      n minus one. So the integral of tan to the n is that, minus the integral of tan to the n
+      minus two. Cot is the same with a minus sign on the first term.
+
+  - section: tan-sec-cot
+    focus: '$$\int\sec^3x\,dx = \frac12\sec x\tan x + \frac12\ln\lvert\sec x + \tan x\rvert + C.$$'
+    say: >
+      Sec to the n does need parts. Take u as sec to the n minus two and d v as sec squared.
+      Replace tan squared by sec squared minus one, collect the I n terms, and you get n minus
+      one times I n equals sec to the n minus two times tan x, plus n minus two times I n minus
+      two. The case to memorise is sec cubed: half sec x tan x plus half log of sec x plus tan
+      x. Both halves carry a plus sign.
+
+  - section: tan-sec-cot
+    focus: '$$I_n + I_{n-2} = \int_0^{\pi/4}\tan^{n-2}x\sec^2x\,dx = \left[\frac{\tan^{n-1}x}{n-1}\right]_0^{\pi/4} = \frac{1}{n-1} \qquad (n \ge 2).$$'
+    say: >
+      Now the relation the examiners love. Let I n be the integral of tan to the n from zero to
+      pi by four. Then I n plus I n minus two is the integral of tan to the n minus two times
+      sec squared, which is one over n minus one, because tan of pi by four is one. Starting
+      from I zero equal to pi by four and I one equal to half log two, you get I two equal to
+      one minus pi by four, and so on.
+
+  - section: tan-sec-cot
+    focus: '$$\frac{1}{2(n+1)} < I_n < \frac{1}{2(n-1)} \quad (n \ge 2), \qquad\text{so } I_n \to 0 \text{ and } nI_n \to \frac12.$$'
+    say: >
+      Since tan x lies between zero and one on this interval, I n is strictly decreasing. So
+      two I n is less than I n plus I n minus two, which is one over n minus one, and greater
+      than I n plus I n plus two, which is one over n plus one. That traps I n between one over
+      two times n plus one and one over two times n minus one. Hence I n tends to zero, and n
+      times I n tends to one half.
+
+  - section: tan-sec-cot
+    question: q0010
+    say: >
+      Try the classic. Given I three, find I five for the tangent integrals on zero to pi by
+      four.
+    answer: >
+      I five plus I three is one over five minus one, which is one quarter. So I five is one
+      quarter minus I three, which gives half log two minus one quarter. The option with three
+      tenths uses one fifth instead of one quarter; it is also negative, which is impossible for
+      a positive integrand. Use the larger index in one over n minus one.
+
+  - section: other-reductions
+    focus: '$$I_n = \frac{x^n e^{ax}}{a} - \frac{n}{a}\,I_{n-1}.$$'
+    say: >
+      Finally, two more families. For x to the n times e to the a x, take u as x to the n and
+      integrate the exponential. Each step lowers the power by one and brings out a factor n
+      over a with a minus sign. Over zero to infinity with e to the minus x, the boundary term
+      vanishes at both ends, so I n equals n times I n minus one, and I n is n factorial. That
+      is the Gamma function at n plus one.
+
+  - section: other-reductions
+    question: q0005
+    say: >
+      Quick one. What is the integral from zero to infinity of x to the five e to the minus x?
+    answer: >
+      It is five factorial, which is 120. The recurrence is I n equals n times I n minus one,
+      with I zero equal to one. The answer 24 comes from the wrong recurrence with n minus one,
+      and 720 is six factorial, which is Gamma of seven.
+
+  - section: other-reductions
+    focus: 'Do not mix the factors: the coefficient is $\frac{2n-3}{2(n-1)a^2}$'
+    say: >
+      For one over x squared plus a squared to the n, the trick is to integrate I n minus one by
+      parts with one as the second factor, then write x squared as x squared plus a squared,
+      minus a squared. Solving gives I n in terms of I n minus one, with coefficient two n minus
+      three over two times n minus one times a squared. Check it at n equals two and a equals
+      one: the coefficient must be one half.
+
+  - section: other-reductions
+    question: q0012
+    say: >
+      Use it. Find the integral from zero to one of one over one plus x squared, squared.
+    answer: >
+      The formula gives x over two times one plus x squared, plus half tan inverse x. From zero
+      to one, that is one quarter plus half of pi by four, so pi by eight plus one quarter. The
+      option pi by eight alone drops the boundary term, which does not vanish at x equals one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. For Wallis, write both descending products over the product from m plus n,
+      and include pi by two only when every index is even. On zero to pi by four, I n plus I n
+      minus two is one over n minus one, and n I n tends to one half. For sine powers on zero to
+      pi by two, n I n I n minus one is pi by two. The Gamma integral of x to the n e to the
+      minus x is n factorial. Sec cubed has two plus signs. And verify any formula at n equals
+      two. Now try the practice questions.

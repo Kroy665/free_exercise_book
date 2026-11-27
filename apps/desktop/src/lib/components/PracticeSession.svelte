@@ -11,6 +11,11 @@
   import ErrorBox from "./ErrorBox.svelte";
   import Flag from "@lucide/svelte/icons/flag";
   import BookOpen from "@lucide/svelte/icons/book-open";
+  import MessageCircleQuestion from "@lucide/svelte/icons/message-circle-question";
+  import Volume2 from "@lucide/svelte/icons/volume-2";
+  import Square from "@lucide/svelte/icons/square";
+  import { askAbout, chat } from "$lib/stores/assistant.svelte";
+  import { speak, tts } from "$lib/tts/tts.svelte";
 
   interface Props {
     questions: QuestionView[];
@@ -33,6 +38,16 @@
   let startedAt = performance.now();
 
   const q = $derived(queue[index]);
+
+  // The assistant sees the question on screen (with its worked solution once answered).
+  $effect(() => {
+    chat.questionId = !finished && q ? q.id : null;
+    chat.questionAnswered = !!result;
+    return () => {
+      chat.questionId = null;
+      chat.questionAnswered = false;
+    };
+  });
   const isLast = $derived(index === queue.length - 1);
   const score = $derived(results.filter((r) => r.correct).length);
   const wrong = $derived(results.filter((r) => !r.correct).map((r) => r.q));
@@ -187,6 +202,16 @@
               <BookOpen size={18} aria-hidden="true" />{t("q.revise_notes")}
             </a>
           {/if}
+          <button class="btn btn-ghost" onclick={() => askAbout("", "I don't understand this solution. Please explain it step by step.")}>
+            <MessageCircleQuestion size={18} aria-hidden="true" />Ask about this
+          </button>
+          <button class="btn btn-ghost" onclick={() => speak(`expl:${q.id}`, q.explanation)} aria-pressed={tts.key === `expl:${q.id}`}>
+            {#if tts.key === `expl:${q.id}` && (tts.phase === "speaking" || tts.phase === "loading")}
+              <Square size={16} aria-hidden="true" />Stop
+            {:else}
+              <Volume2 size={18} aria-hidden="true" />Listen
+            {/if}
+          </button>
           <button class="btn btn-ghost" onclick={() => report(q)}>
             <Flag size={18} aria-hidden="true" />{t("q.report")}
           </button>

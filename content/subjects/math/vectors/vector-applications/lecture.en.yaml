@@ -1,0 +1,273 @@
+# Spoken lecture for "Vector Applications and Calculus".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: work-moment
+    say: >
+      Welcome. Today we put the vector products to work. We will compute work and moments, write
+      lines and planes in vector form, find shortest distances and tetrahedron volumes, and then
+      differentiate vector functions to get velocity and acceleration. By the end you should be
+      able to choose the right product for each geometric or physical quantity, and avoid the
+      small slips in order, sign and normalisation that cost marks.
+
+  - section: work-moment
+    focus: '$$W = \vec F\cdot\vec d = \vec F\cdot(\vec b - \vec a), \qquad \vec d = \vec{AB}.$$'
+    say: >
+      Start with work. A constant force F moving its point of application from A to B does work
+      F dot the displacement, F dot b minus a. Work is a scalar, and it is zero when the
+      displacement is perpendicular to the force. For several forces on the same particle, the
+      total work is the work done by the resultant. The usual slip is to use the position vector
+      of B instead of the displacement.
+
+  - section: work-moment
+    focus: '- The order is **position vector first, then force**; $\vec F\times\vec r$ gives the negative.'
+    say: >
+      The moment of a force F acting at P, about a point, is the vector from that point to P,
+      crossed with F. Look at the highlighted line: position vector first, then force. Reversing
+      the order gives the negative. You may take P anywhere on the line of action, because moving
+      P along F adds a multiple of F, and F cross F is zero. The magnitude of the moment is the
+      force times the perpendicular distance to the line of action.
+
+  - section: work-moment
+    question: q0002
+    say: >
+      Let's compute one. Find the moment about the origin of the force shown. I'll wait.
+    answer: >
+      The answer is ten j plus five k. The position vector is one, minus one, two, and crossing
+      it with three, two, minus four gives zero, ten, five. Minus ten j minus five k is F cross r,
+      the wrong order, and minus ten j plus five k drops the minus sign of the j cofactor. The
+      check: the answer is perpendicular to F.
+
+  - section: work-moment
+    focus: '$$M_L = (\vec{AP}\times\vec F)\cdot\hat\ell = [\vec{AP}\ \ \vec F\ \ \hat\ell\,],$$'
+    say: >
+      The moment about a line through A with unit vector l hat is a scalar: the moment about A,
+      resolved along the line. It is the scalar triple product of A P, F and l hat. It does not
+      depend on which point of the line you use, and it is zero exactly when the force and the
+      line are coplanar. A couple, F at P and minus F at Q, has the same moment Q P cross F
+      about every point.
+
+  - section: work-moment
+    focus: 'For the moment about a line, divide by $|\vec\ell|$.'
+    say: >
+      The caution is about the word unit. In the example the direction two, minus two, one has
+      length three, so the moment about the line is ten thirds. Using the direction vector
+      without normalising would give ten, which is wrong by exactly that factor of three.
+
+  - section: lines
+    focus: '| non-parametric | $(\vec r - \vec a)\times\vec b = \vec 0$, i.e. $\vec r\times\vec b = \vec a\times\vec b$ | |'
+    say: >
+      Now lines in vector form. Through a with direction b, the line is r equals a plus t b. In
+      Cartesian form the numerators carry the point and the denominators carry the direction.
+      There is also a non parametric form on the board: r minus a crossed with b is zero, that
+      is, r cross b equals a cross b. It says the vector from a to r is parallel to b.
+
+  - section: lines
+    focus: '| $[\vec a_2 - \vec a_1\ \ \vec b_1\ \ \vec b_2] \ne 0$ | **skew** (neither parallel nor intersecting) |'
+    say: >
+      The angle between two lines is the acute angle between their directions, using the
+      modulus of the dot product. The table classifies two lines. If the directions are parallel,
+      the lines coincide or are distinct parallels. If not, they intersect when the triple product
+      of a two minus a one, b one and b two is zero, and they are skew when it is not.
+
+  - section: lines
+    focus: 'Two distinct parallel lines also give $0$ (because $\vec b_1 \parallel \vec b_2$), yet they do not meet.'
+    say: >
+      To find the point of intersection, equate the two parametric points, solve two of the three
+      component equations, and check the third. And the caution: a zero triple product only says
+      the lines are coplanar. Distinct parallel lines also give zero, yet they never meet. To
+      conclude that lines intersect, you also need the cross product of the directions to be
+      non zero.
+
+  - section: planes
+    focus: 'In the normal form, $p$ is the perpendicular distance of the origin from the plane.'
+    say: >
+      Planes in vector form. The normal form is r dot n hat equals p, with n hat a unit normal
+      and p the distance from the origin. The general form is r dot n equals d. Through a point
+      with normal n, it is r minus a dotted with n equal to zero. Through three points, the
+      triple product of r minus a, b minus a and c minus a vanishes. And planes through the line
+      of two planes are r dot n one plus lambda n two, equal to d one plus lambda d two.
+
+  - section: planes
+    focus: '- Distance of $P(\vec p)$ from $\vec r\cdot\vec n = d$: $\dfrac{|\vec p\cdot\vec n - d|}{|\vec n|}$. From the origin: $\dfrac{|d|}{|\vec n|}$.'
+    say: >
+      The distance from a point P to the plane r dot n equals d is the modulus of p dot n minus d,
+      divided by the length of n. The angle between two planes is the angle between their
+      normals. A line is parallel to a plane when its direction is perpendicular to the normal,
+      and it lies in the plane when, in addition, its point satisfies the plane. The line of
+      intersection of two planes runs along n one cross n two.
+
+  - section: planes
+    focus: 'So $\vec r\cdot(2\hat i + 3\hat j - 3\hat k) = \vec a\cdot(2, 3, -3) = 5$, i.e. $2x + 3y - 3z = 5$.'
+    say: >
+      In the three point example, the normal is A B cross A C, which is minus two, minus three,
+      three, or equivalently two, three, minus three. Dotting with the position vector of A gives
+      five, so the plane is two x plus three y minus three z equals five. The exam tip: substitute
+      all three points. A sign slip in the middle component of the cross product shows up
+      immediately.
+
+  - section: planes
+    focus: 'The line–plane angle uses **sine**, not cosine, because $\vec n$ is perpendicular to the plane.'
+    say: >
+      The angle between a line and a plane uses sine: the modulus of b dot n over the product of
+      the lengths. It is the complement of the angle with the normal. Inverse cosine of the same
+      ratio gives the angle with the normal, and that is a favourite wrong option.
+
+  - section: planes
+    question: q0009
+    say: >
+      Try this one. Find the angle between the line and the plane.
+    answer: >
+      The answer is the inverse sine of four ninths. The direction one, two, two dotted with the
+      normal two, minus one, two gives four, and both lengths are three. Inverse cosine of four
+      ninths is the angle with the normal, the complement of what was asked, and the options with
+      four over 81 divide by the squares of the lengths.
+
+  - section: shortest-distance
+    focus: 'The common perpendicular is along $\vec b_1\times\vec b_2$, and the shortest distance is the projection of $\vec a_2 - \vec a_1$ on it:'
+    say: >
+      Next, the shortest distance between two lines. When the directions are not parallel, the
+      common perpendicular runs along b one cross b two. Any segment joining the lines, such as a
+      two minus a one, projected on that direction, gives the shortest distance. So it is the
+      modulus of the triple product of a two minus a one, b one and b two, divided by the length
+      of b one cross b two. It is zero exactly when the lines intersect.
+
+  - section: shortest-distance
+    focus: '**Parallel lines** ($\vec b_1 = \vec b_2 = \vec b$). The formula above is $\frac00$; use the point-to-line distance instead:'
+    say: >
+      For parallel lines the skew formula becomes zero over zero. Use the distance of a point of
+      one line from the other instead: the length of a two minus a one cross b, divided by the
+      length of b. In the parallel example on the board, this gives root 293 over seven. The exam
+      tip: look at the directions before you calculate, and pick the formula accordingly.
+
+  - section: shortest-distance
+    question: q0011
+    say: >
+      Here is a skew line calculation. Find the shortest distance between the two lines.
+    answer: >
+      The answer is three over root nineteen. The cross product of the directions is minus nine,
+      three, nine, with length root 171, which is three root nineteen. The joining vector three,
+      three, three dotted with it gives nine, and nine over three root nineteen simplifies. Nine
+      over root nineteen drops the factor three from the length of the cross product.
+
+  - section: tetrahedron
+    focus: 'It is **one-sixth** of the parallelepiped on the same edges (and one-third of the prism on the same triangle).'
+    say: >
+      The volume of a tetrahedron with coterminous edges a, b, c is one sixth of the modulus of
+      their triple product. Why one sixth? The base triangle has area half the length of b cross
+      c, and a pyramid's volume is one third of base times height. Half times one third is one
+      sixth. So the tetrahedron is one sixth of the parallelepiped on the same edges.
+
+  - section: tetrahedron
+    focus: '$$V = \frac16\left|[\vec{AB}\ \ \vec{AC}\ \ \vec{AD}]\right| = \frac16\left|\begin{vmatrix} x_2 - x_1 & y_2 - y_1 & z_2 - z_1 \\ x_3 - x_1 & y_3 - y_1 & z_3 - z_1 \\ x_4 - x_1 & y_4 - y_1 & z_4 - z_1 \end{vmatrix}\right|.$$'
+    say: >
+      From four vertices, use the three edges from one common vertex, A B, A C and A D, and take
+      one sixth of the modulus of their determinant. Any vertex can serve. Four points are
+      coplanar exactly when this volume is zero, and the height from D is three times the volume
+      over the area of the face. In the example the determinant is five, so the volume is five
+      sixths.
+
+  - section: tetrahedron
+    focus: 'Three traps: dividing by $3$ (or $2$) instead of $6$'
+    say: >
+      The caution lists three traps. Dividing by three or two instead of six. Using the position
+      vectors of B, C, D instead of the edges from A, which gives the tetrahedron with a vertex at
+      the origin instead. And when the volume is given with an unknown, dropping one root. The
+      modulus means there are two values; in the worked example, lambda is one or minus eleven.
+
+  - section: tetrahedron
+    question: q0015
+    say: >
+      Here is the unknown case. Find lambda, and remember the modulus.
+    answer: >
+      The answer is two or minus five halves. The triple product is one plus four lambda, so one
+      sixth of its modulus equal to three halves gives one plus four lambda equal to plus or minus
+      nine. Two only ignores the modulus, minus two or five halves is a sign slip in the middle
+      cofactor, and the eighths come from using one third instead of one sixth.
+
+  - section: vector-differentiation
+    focus: 'The unit vectors $\hat i, \hat j, \hat k$ are constant, so they are not differentiated.'
+    say: >
+      Now calculus. A vector function of a scalar variable t has three component functions, and
+      limits, continuity and derivatives are all taken componentwise. The derivative, when non
+      zero, is tangent to the curve traced by r. The unit vectors i, j, k are constant, so you
+      simply differentiate each component.
+
+  - section: vector-differentiation
+    focus: '| $\vec u\times\vec v$ | $\vec u\,''\times\vec v + \vec u\times\vec v\,''$ (keep the order) |'
+    say: >
+      The product rules look exactly like the scalar ones, with one warning on the board: for the
+      cross product, keep the order, since swapping changes the sign. For the scalar triple
+      product, differentiate one slot at a time and add the three terms. Two consequences follow
+      at once. The derivative of r cross r dash is r cross r double dash, and the derivative of
+      the triple product of r, r dash, r double dash is the triple product of r, r dash, r triple
+      dash, because the other terms have a repeated vector.
+
+  - section: vector-differentiation
+    focus: '**Theorem (constant magnitude).** $|\vec r(t)|$ is constant $\iff \vec r\cdot\dfrac{d\vec r}{dt} = 0$ for all $t$.'
+    say: >
+      Two theorems are examined often. First, constant magnitude. The derivative of r dot r is
+      twice r dot r dash, so the length of r is constant exactly when r is perpendicular to its
+      derivative. Second, for non zero r, constant direction holds exactly when r cross r dash is
+      zero. Write r as its length times a unit vector; the unit vector's derivative is
+      perpendicular to it, so the cross product vanishes only when that derivative is zero.
+
+  - section: vector-differentiation
+    focus: 'For $\vec r = \cos t\,\hat i + \sin t\,\hat j$, the first is $1$ and the second is $0$.'
+    say: >
+      The caution: the modulus of the derivative and the derivative of the modulus are different
+      things. For the unit circle, the first is one, since the point moves with unit speed, but the
+      second is zero, since the distance from the origin never changes.
+
+  - section: vector-differentiation
+    question: q0017
+    say: >
+      Apply the constant magnitude idea. Compute r dot r dash for the helix shown.
+    answer: >
+      The answer is b squared t. The derivative is minus a sine t, a cosine t, b, and in the dot
+      product the sine cosine terms cancel, leaving b squared t. Zero would hold only if the length
+      were constant, but here the length squared is a squared plus b squared t squared, which grows
+      with t.
+
+  - section: velocity-acceleration
+    focus: '$$a_T = \frac{\vec v\cdot\vec a}{|\vec v|} = \frac{d|\vec v|}{dt}, \qquad a_N = \frac{|\vec v\times\vec a|}{|\vec v|}, \qquad |\vec a|^2 = a_T^2 + a_N^2.$$'
+    say: >
+      For a moving particle, velocity is the first derivative of position, acceleration is the
+      second, and speed is the length of the velocity. Resolving acceleration along the tangent
+      gives a T, v dot a over the speed, which is the rate of change of speed. The normal part a N
+      is the length of v cross a over the speed. Their squares add to the squared acceleration. So
+      the speed is constant exactly when v dot a is zero.
+
+  - section: velocity-acceleration
+    focus: 'gives $\vec v \perp \vec r$, $|\vec v| = R\omega$ and $\vec a = -\omega^2\vec r$'
+    say: >
+      Uniform circular motion is the model case. With radius R and angular speed omega, the velocity
+      is perpendicular to the position, the speed is R omega, and the acceleration is minus omega
+      squared times r, pointing to the centre with magnitude v squared over R. Integration reverses
+      differentiation componentwise, with a constant vector fixed by the initial conditions.
+
+  - section: velocity-acceleration
+    focus: 'The common slip is to take $|\vec r(t_0)|$, the distance from the origin.'
+    say: >
+      The exam tip: for speed at a given time, differentiate once and substitute; for the magnitude
+      of acceleration, differentiate twice. The common slip is to compute the length of r itself,
+      which is only the distance from the origin. In the example on the board, the speed at time
+      zero is root 37, and the acceleration has magnitude five root thirteen.
+
+  - section: velocity-acceleration
+    question: q0016
+    say: >
+      Last question. Find the speed of the particle at t equals one.
+    answer: >
+      The speed is two root six. The velocity is two t, four, four t minus six, which at t equals
+      one is two, four, minus two, with length root 24. Root 21 is the length of r at t equals one,
+      the distance from the origin, and two root five is the magnitude of the acceleration.
+
+  - section: exam-tips
+    say: >
+      To recap. Work uses the displacement. Moment is r cross F, from the reference point to the
+      line of action; about a line, project onto a unit vector. A line parallel to a plane needs b
+      dot n zero. The line and plane angle uses sine. Use the skew formula only for non parallel
+      lines, and remember coplanar lines may be parallel. A tetrahedron is one sixth, with edges
+      from a common vertex and a modulus. Keep the order in cross product derivatives, and constant
+      length means r is perpendicular to r dash. Now try the practice questions.

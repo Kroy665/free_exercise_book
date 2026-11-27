@@ -31,6 +31,15 @@ pub async fn topic_get(
 }
 
 #[tauri::command]
+pub async fn lecture_get(
+    state: State<'_, AppState>,
+    id: String,
+    lang: String,
+) -> CmdResult<Option<feb_core::model::Lecture>> {
+    library::lecture(&*state.content()?, &id, &lang).map_err(e)
+}
+
+#[tauri::command]
 pub async fn practice_questions(
     state: State<'_, AppState>,
     topic_id: String,

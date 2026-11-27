@@ -4,7 +4,7 @@
 //! - the developer path (`FEB_CONTENT_DIR`), which imports a whole folder directly.
 
 use crate::localize::pick;
-use crate::model::{CaItem, RawQuestion, SubjectFile, TopicFile, TopicMeta, UnitFile};
+use crate::model::{CaItem, Lecture, RawQuestion, SubjectFile, TopicFile, TopicMeta, UnitFile};
 use crate::{CoreError, Result};
 use regex::Regex;
 use rusqlite::{Connection, params};
@@ -39,6 +39,8 @@ pub struct TopicSource {
     pub questions: Vec<RawQuestion>,
     /// Current-affairs months only (`items.yaml`).
     pub ca_items: Vec<CaItem>,
+    /// (lang, lecture) for every `lecture.<lang>.yaml`.
+    pub lectures: Vec<(String, Lecture)>,
 }
 
 #[derive(Debug, Clone)]
@@ -113,11 +115,16 @@ fn subdirs(dir: &Path) -> Result<Vec<PathBuf>> {
 fn load_topic(dir: &Path) -> Result<TopicSource> {
     let topic: TopicFile = yaml(&dir.join("topic.yaml"))?;
     let mut notes = Vec::new();
+    let mut lectures = Vec::new();
     for path in entries(dir)? {
         let name = path
             .file_name()
             .and_then(|n| n.to_str())
             .unwrap_or_default();
+        if let Some(lang) = name.strip_prefix("lecture.").and_then(|r| r.strip_suffix(".yaml")) {
+            lectures.push((lang.to_string(), yaml::<Lecture>(&path)?));
+            continue;
+        }
         let Some(lang) = name
             .strip_prefix("notes.")
             .and_then(|r| r.strip_suffix(".md"))
@@ -171,11 +178,13 @@ fn load_topic(dir: &Path) -> Result<TopicSource> {
         }
         notes.sort_by(|a, b| a.0.cmp(&b.0));
     }
+    lectures.sort_by(|a, b| a.0.cmp(&b.0));
     Ok(TopicSource {
         topic,
         notes,
         questions,
         ca_items,
+        lectures,
     })
 }
 
@@ -328,6 +337,13 @@ pub fn write_topic(conn: &Connection, unit: &UnitFile, t: &TopicSource) -> Resul
             sections += 1;
         }
     }
+    conn.execute("DELETE FROM lectures WHERE topic_id = ?1", [id])?;
+    for (lang, lecture) in &t.lectures {
+        conn.execute(
+            "INSERT INTO lectures (topic_id, lang, data) VALUES (?1, ?2, ?3)",
+            params![id, lang, serde_json::to_string(lecture)?],
+        )?;
+    }
     conn.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
     for (ord, i) in t.ca_items.iter().enumerate() {
         conn.execute(
@@ -378,7 +394,7 @@ pub fn import_dir(conn: &mut Connection, root: &Path) -> Result<ImportReport> {
     tx.execute_batch(
         "DELETE FROM subjects; DELETE FROM units; DELETE FROM topics;
          DELETE FROM note_sections; DELETE FROM questions; DELETE FROM installed_packs;
-         DELETE FROM ca_items;",
+         DELETE FROM ca_items; DELETE FROM lectures;",
     )?;
     crate::mock::store_patterns(&tx, &exams)?;
     for s in &subjects {

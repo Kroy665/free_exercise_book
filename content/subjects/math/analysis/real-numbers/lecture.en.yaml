@@ -1,0 +1,304 @@
+# Spoken lecture for "The Real Number System".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: rationals-irrationals
+    say: >
+      Welcome. Today we rebuild the foundation of all of analysis: the real number system.
+      By the end you should be able to prove a number irrational in two lines, find the
+      supremum and infimum of any standard set and say whether they are attained, convert
+      recurring decimals instantly, and explain exactly what completeness gives the reals
+      that the rationals lack. Let's start with rationals and irrationals.
+
+  - section: rationals-irrationals
+    focus: '**$\sqrt2$ is irrational.**'
+    say: >
+      Look at the classic proof on the board. Suppose root two is p over q in lowest terms.
+      Squaring gives p squared equals two q squared, so two divides p squared, and because two
+      is prime, two divides p. Write p as two k, and then q squared equals two k squared, so two
+      divides q as well. Both even contradicts lowest terms. The whole proof rests on one lemma:
+      if a prime divides a squared, it divides a.
+
+  - section: rationals-irrationals
+    focus: 'For $n \in \N$, $\sqrt n$ is rational **if and only if** $n$ is a perfect square.'
+    say: >
+      The same argument gives a clean general rule. The square root of a natural number n is
+      rational exactly when n is a perfect square. So root twelve and root fifty are irrational,
+      while root forty nine is just seven. In an exam, simplify first: root twelve over root two
+      is root six, and six is not a perfect square, so it is irrational.
+
+  - section: rationals-irrationals
+    focus: '**$\log_2 3$ is irrational.**'
+    say: >
+      Logarithms use a parity argument. If log of three to base two were p over q, then two to
+      the p would equal three to the q. The left side is even and the right side is odd, which
+      is impossible. In general, log of n to base m is irrational when m and n have different
+      prime factors. But watch out: log of eight to base four is three halves, perfectly
+      rational, because both are powers of two.
+
+  - section: rationals-irrationals
+    focus: 'By the rational root test, the only possible rational roots are $\pm1$, and neither is a root.'
+    say: >
+      For root two plus root three, find a polynomial it satisfies. Squaring gives five plus two
+      root six; isolate the root and square again to get x to the fourth minus ten x squared
+      plus one equals zero. The rational root test says the only rational candidates are plus
+      one and minus one, and neither works. So the number is irrational. This method handles any
+      sum of surds.
+
+  - section: rationals-irrationals
+    focus: '| $r\alpha$, with $r \ne 0$ | always irrational | $\alpha = (r\alpha)/r$ |'
+    say: >
+      Now the arithmetic table. A rational plus an irrational is always irrational, and so is a
+      nonzero rational times an irrational. The proof is one line: if the result were rational,
+      you could subtract or divide by the rational and make the irrational rational. Notice the
+      condition that the rational is nonzero, since zero times anything is zero.
+
+  - section: rationals-irrationals
+    focus: '"Irrational + irrational is irrational" is **false**, and so is "irrational × irrational is irrational".'
+    say: >
+      Here is the trap. Two irrationals can add or multiply to a rational. Root two plus minus
+      root two is zero, and root two times root eight is four. So the irrationals are not closed
+      under either operation. Statement questions love to slip in "the sum of two irrationals is
+      irrational". It is false.
+
+  - section: rationals-irrationals
+    question: q0011
+    say: >
+      Let's check that. A nonzero rational a and an irrational b. Which of a plus b and a times
+      b must be irrational? Choose and press Check.
+    answer: >
+      Both. If a plus b were rational, then b would be that rational minus a, which is
+      rational. If a b were rational, then b would be that rational divided by a, and dividing
+      is allowed because a is not zero. The condition that a is nonzero is exactly what saves
+      the product.
+
+  - section: ordered-field
+    focus: 'It is an **ordered field**: there is a relation $<$ such that'
+    say: >
+      Next, the axioms. The reals form a field, with the usual rules for addition and
+      multiplication. They form an ordered field: trichotomy, transitivity, adding the same
+      number keeps an inequality, and multiplying by a positive number keeps it. From these you
+      get that every square is non negative, so one is positive, and that multiplying by a
+      negative number reverses an inequality.
+
+  - section: ordered-field
+    focus: '$\Q$ is **also** an ordered field.'
+    say: >
+      Now the key point. The rationals are also an ordered field. What separates the reals from
+      the rationals is the completeness axiom: every nonempty set that is bounded above has a
+      least upper bound. The reals are a complete ordered field, and up to isomorphism they are
+      the only one.
+
+  - section: ordered-field
+    focus: '**Cantor–Dedekind axiom.**'
+    say: >
+      The Cantor Dedekind axiom ties numbers to geometry. There is a one one, order preserving
+      correspondence between the points of a straight line and the real numbers. That is why we
+      call the reals the real line, a linear continuum with no gaps. The rational points alone do
+      not fill the line; the point at distance root two from zero is missed. Keep Cantor
+      Dedekind separate from the least upper bound axiom in your mind; examiners offer one as a
+      distractor for the other.
+
+  - section: sup-inf
+    focus: 'The **supremum** $\sup S$ is the *least* upper bound. The **infimum** $\inf S$ is the *greatest* lower bound.'
+    say: >
+      Now bounded sets. The supremum of S is its least upper bound, and the infimum is its
+      greatest lower bound. If the supremum belongs to the set, it is the maximum. But a set can
+      have a supremum and no maximum: the open interval from zero to one has supremum one, and
+      one is not in the set. Always ask: is it attained?
+
+  - section: sup-inf
+    focus: '**$\varepsilon$-characterisation.**'
+    say: >
+      The working definition is the epsilon characterisation on the board. u is the supremum
+      exactly when u is an upper bound, and for every positive epsilon some element of S
+      exceeds u minus epsilon. In words, nothing smaller than u is an upper bound. Notice it is
+      "for every epsilon", not "for some". And by flipping signs, the infimum of S is minus the
+      supremum of minus S, so completeness also gives infima.
+
+  - section: sup-inf
+    focus: 'Here $A + B = \{a + b : a \in A,\ b \in B\}$, and $a$ and $b$ are chosen **independently**.'
+    say: >
+      The rules: the supremum of A plus B is the sum of the suprema; the supremum of c times A is
+      c times the supremum of A for positive c; and the supremum of minus A is minus the infimum
+      of A. In A plus B, the elements a and b are chosen independently. That word independently
+      is where marks are lost, as we will see in the recap.
+
+  - section: sup-inf
+    focus: '| $\{(-1)^n + 1/n\}$ | $\frac32$ (at $n = 2$) | $-1$ (not attained) |'
+    say: >
+      The table of standard sets deserves a careful look. One over n has supremum one, attained,
+      and infimum zero, not attained. One minus one over n is the reverse. For sets with minus
+      one to the n, split into even and odd terms. The highlighted row gives supremum three
+      halves at n equals two, and infimum minus one, never reached. One over m plus one over n
+      has supremum two, at m and n both one.
+
+  - section: sup-inf
+    question: q0003
+    say: >
+      Try the highlighted set yourself. Minus one to the n, plus one over n. Find its supremum
+      and infimum.
+    answer: >
+      Even terms are one plus one over two k: three halves, five quarters, and so on, falling
+      towards one. Odd terms are minus one plus one over an odd number: zero, minus two thirds,
+      falling towards minus one but never reaching it. So the supremum is three halves, attained
+      at n equals two, and the infimum is minus one. The tempting answer two forgets that the
+      first term is minus one plus one, which is zero.
+
+  - section: sup-inf
+    focus: '**$\{x \in \Q : x^2 < 2\}$ has no supremum in $\Q$.**'
+    say: >
+      And the caution box gives the standard proof that the rationals are not complete. The
+      rationals whose square is less than two are bounded above by two, a rational. But any
+      rational upper bound must exceed root two, and between root two and it there is a smaller
+      rational. So there is no least rational upper bound. In the reals, the supremum is root two.
+
+  - section: archimedean
+    focus: '**Archimedean property.** For every $x > 0$ and every $y \in \R$, there is an $n \in \N$ with $nx > y$.'
+    say: >
+      The Archimedean property says: however small a positive x, and however large y, some
+      multiple n x exceeds y. Equivalent forms: the natural numbers are not bounded above, and
+      for every positive epsilon there is an n with one over n less than epsilon. The proof uses
+      completeness. If the naturals had a supremum u, some n exceeds u minus one, and then n plus
+      one exceeds u, a contradiction.
+
+  - section: archimedean
+    focus: 'Then $na < m \le na + 1 < nb$, so $r = \frac mn$ lies strictly between $a$ and $b$.'
+    say: >
+      The big consequence is density. Between any two reals a and b there is a rational. Choose n
+      so large that n times b minus a exceeds one; then the gap from n a to n b is more than one,
+      so it contains an integer m, and m over n lies between a and b. For an irrational, find a
+      rational between a minus root two and b minus root two, then add root two back.
+
+  - section: archimedean
+    focus: '$\Q$ is also Archimedean, so the Archimedean property does **not** characterise $\R$.'
+    say: >
+      Two cautions. The rationals are also Archimedean, so this property does not single out the
+      reals; completeness does. And density says nothing about how many: the rationals are
+      countable, while every interval is uncountable.
+
+  - section: archimedean
+    question: q0010
+    say: >
+      Here is a favourite. Between any two distinct real numbers, what lies?
+    answer: >
+      Infinitely many rationals and infinitely many irrationals. Density gives one rational, and
+      repeating the argument in the smaller gaps gives infinitely many. Adding root two to
+      suitable rationals does the same for irrationals. Options saying "possibly no irrational"
+      or "possibly no rational" are the traps.
+
+  - section: decimals
+    focus: '$x$ is **rational** $\iff$ its decimal expansion **terminates or recurs**.'
+    say: >
+      Now decimals. A real number is rational exactly when its decimal expansion terminates or
+      recurs. A fraction in lowest terms terminates exactly when the denominator has no prime
+      factors other than two and five. Otherwise it recurs; one seventh has period six. Note
+      that the expansion converges because its partial sums increase and are bounded, so even
+      decimals rest on completeness.
+
+  - section: decimals
+    focus: 'The rule for $0.a_1\ldots a_k\overline{b_1\ldots b_m}$ is: (all the digits) minus (the non-recurring digits), over $m$ nines followed by $k$ zeros.'
+    say: >
+      For conversion, learn the highlighted rule. Take all the digits, subtract the non recurring
+      digits, and divide by as many nines as recurring digits, followed by as many zeros as non
+      recurring digits. So point three six recurring is thirty six over ninety nine, which is four
+      over eleven. And point one six, with only the six recurring, is sixteen minus one over
+      ninety, which is one sixth.
+
+  - section: decimals
+    question: q0005
+    say: >
+      Use the rule. Point one, then six recurring. What fraction is it?
+    answer: >
+      One sixth. All digits give sixteen, minus the non recurring one gives fifteen, over one nine
+      and one zero, that is fifteen over ninety, which is one sixth. Sixteen over ninety nine makes
+      both digits recur, and sixteen over ninety forgets to subtract the non recurring part.
+
+  - section: decimals
+    focus: '**Non-uniqueness.** A number has **two** decimal expansions exactly when it has a terminating one: $0.5 = 0.4\overline9$.'
+    say: >
+      Point nine recurring equals one. As a geometric series, nine tenths over one minus one tenth
+      is one. So decimal expansions are not always unique. A number has two expansions exactly
+      when it has a terminating one, like point five and point four nine recurring. Every other
+      real has exactly one.
+
+  - section: decimals
+    focus: '"Non-terminating" does **not** mean irrational: $\frac13 = 0.333\ldots$ never terminates.'
+    say: >
+      And the trap: non terminating does not mean irrational. One third never terminates. An
+      irrational number is non terminating and non recurring, like point one zero one zero zero
+      one, where the blocks of zeros keep growing.
+
+  - section: absolute-value
+    focus: '**Triangle inequality:** $|x + y| \le |x| + |y|$, with **equality iff $xy \ge 0$**.'
+    say: >
+      On to absolute value. The modulus of x minus a is the distance from x to a, and the
+      modulus of x is less than a exactly when x lies strictly between minus a and a. The
+      triangle inequality says the modulus of x plus y is at most the modulus of x plus the
+      modulus of y. Proof: add minus modulus x, at most x, at most modulus x, to the same for y.
+      Equality holds exactly when x y is greater than or equal to zero.
+
+  - section: absolute-value
+    focus: '$|x - 1| + |x - 3|$ is the sum of the distances from $x$ to $1$ and to $3$.'
+    say: >
+      Think of moduli as distances and many problems solve themselves. The modulus of x minus one
+      plus the modulus of x minus three is the total distance from x to one and to three. For x
+      anywhere between one and three, that total is just two, the distance between them. Outside
+      it is larger. So the minimum is two, attained on the whole closed interval from one to
+      three, which the flat part of the graph shows.
+
+  - section: absolute-value
+    question: q0014
+    say: >
+      Now a careful one. When exactly does the modulus of x plus y equal the modulus of x plus
+      the modulus of y?
+    answer: >
+      Exactly when x y is greater than or equal to zero. Squaring both sides reduces the equation
+      to x y equal to the modulus of x y. The tempting option, x y strictly positive, wrongly
+      excludes the case where x or y is zero, and there equality clearly holds.
+
+  - section: nested-countable
+    focus: 'Let $I_n = [a_n, b_n]$ be **closed, bounded** intervals with $I_1 \supseteq I_2 \supseteq \cdots$.'
+    say: >
+      The nested interval property. If closed, bounded intervals are nested, each inside the
+      previous one, then their intersection is nonempty; and if the lengths tend to zero, it is a
+      single point. The proof: the left end points are bounded above by every right end point, so
+      their supremum lies in every interval. Again, completeness does the work.
+
+  - section: nested-countable
+    focus: '| $(0, \frac1n)$ | $\varnothing$ | open: by Archimedes, every $x > 0$ has $\frac1n < x$ for some $n$ |'
+    say: >
+      Both hypotheses matter, and the table shows why. The closed intervals from zero to one over
+      n meet in the single point zero. The open ones meet in nothing: zero is never in them, and
+      every positive x is eventually excluded by Archimedes. Closed but unbounded rays from n to
+      infinity also meet in nothing. And the union of the intervals from one over n to one is
+      the half open interval, open at zero.
+
+  - section: nested-countable
+    question: q0024
+    say: >
+      This match question uses exactly that table. Pair each intersection or union with the set
+      it equals.
+    answer: >
+      A three, B one, C four, D two. The closed intervals meet in zero alone. The open intervals
+      meet in the empty set. The intervals from minus one over n to one plus one over n meet in
+      the closed interval from zero to one, since the lengths do not shrink to zero. And the
+      union of the intervals from one over n to one is open at zero and closed at one.
+
+  - section: nested-countable
+    focus: 'So $\R \setminus \Q$ is uncountable'
+    say: >
+      Finally, countability, as statements. The naturals, integers, rationals and algebraic
+      numbers are countable. The reals and every interval are uncountable, by Cantor. So the
+      irrationals are uncountable, because otherwise the reals would be a union of two countable
+      sets. Remember that dense and countable are independent ideas: the rationals are dense and
+      countable, the irrationals dense and uncountable.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist. Always ask whether the supremum is attained. Split minus one
+      to the n sets into even and odd terms. In A plus B, choose independently: for one minus one
+      over n and two plus one over n, the supremum of the sum is four, not three. Multiplying by a
+      negative turns a supremum into an infimum. Completeness, not the Archimedean property,
+      separates the reals from the rationals. Nested intervals must be closed and bounded. Now try
+      the practice questions.

@@ -65,6 +65,19 @@ pub fn tree(content: &Connection, user: &Connection, lang: &str) -> Result<Vec<L
     Ok(subjects)
 }
 
+/// The topic's lecture in `lang` (English when there is none in `lang`), if it has one.
+pub fn lecture(content: &Connection, id: &str, lang: &str) -> Result<Option<crate::model::Lecture>> {
+    let data: Option<String> = content
+        .query_row(
+            "SELECT data FROM lectures WHERE topic_id = ?1 AND lang IN (?2, 'en')
+             ORDER BY lang = ?2 DESC LIMIT 1",
+            params![id, lang],
+            |r| r.get(0),
+        )
+        .optional()?;
+    Ok(data.map(|d| serde_json::from_str(&d)).transpose()?)
+}
+
 /// A topic with its notes in `lang` (falls back to English when the notes are missing).
 pub fn topic(content: &Connection, id: &str, lang: &str) -> Result<TopicView> {
     struct Row {

@@ -7,7 +7,7 @@ order: 7
 exams: [slst-0910, slst-1112]
 prerequisites: [math.linalg.vector-spaces]
 estimated_minutes: 65
-version: 0.1.0
+version: 0.2.0
 status: ai-generated
 reviewers: []
 sources:

@@ -1,0 +1,292 @@
+# Spoken lecture for "Complex Numbers and De Moivre's Theorem".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: definition
+    say: >
+      Welcome. This is the first topic of classical algebra: complex numbers and De Moivre's
+      theorem. It feeds almost every later chapter, from polynomial equations to trigonometric
+      series. By the end you should be able to find a principal argument without hesitation,
+      recognise the standard loci, raise any complex number to a power, list all n-th roots,
+      handle the cube roots of unity, and expand cos n theta in powers of cos theta. Let's
+      start from the definition.
+
+  - section: definition
+    focus: 'A **complex number** is an ordered pair $(a, b)$ of real numbers.'
+    say: >
+      Look at the highlighted line. Formally, a complex number is an ordered pair of real
+      numbers, a comma b. Addition is componentwise. Multiplication is the unusual one: a comma
+      b times c comma d is the pair, a c minus b d, comma, a d plus b c. Nothing mysterious is
+      assumed. The square root of minus one is not postulated; it is constructed.
+
+  - section: definition
+    focus: 'Write $i = (0, 1)$. Then $i^2 = (0,1)(0,1) = (-1, 0) = -1$, and every $(a, b) = a + ib$.'
+    say: >
+      Pairs of the form a comma zero behave exactly like real numbers, so the reals sit inside
+      the complex numbers. Now define i as the pair zero comma one. By the product rule, i times
+      i is minus one comma zero, which is the real number minus one. So every pair a comma b
+      can be written a plus i b. Notice that the imaginary part is the real number b, not i b.
+
+  - section: definition
+    question: q0003
+    say: >
+      Since examiners ask the ordered pair definition directly, let's check it. Which pair is
+      the product of a comma b and c comma d?
+    answer: >
+      The product is a c minus b d, comma, a d plus b c. That is just what you get by
+      multiplying a plus i b by c plus i d and using i squared equals minus one. The tempting
+      wrong option, a c comma b d, multiplies componentwise, and that would not give a field.
+
+  - section: definition
+    focus: 'To divide, multiply the numerator and denominator by the conjugate of the denominator:'
+    say: >
+      With these operations the complex numbers form a field. The inverse of a plus i b is a
+      minus i b over a squared plus b squared. In practice, to divide, multiply top and bottom
+      by the conjugate of the denominator, which makes the denominator real. On the board,
+      three plus four i over one minus two i becomes minus one plus two i. Also remember that
+      powers of i repeat with period four, so any four consecutive powers add to zero.
+
+  - section: definition
+    focus: '$\C$ **cannot be ordered**: no ordering makes it an ordered field.'
+    say: >
+      Now a classic theory question. The complex numbers cannot be made into an ordered field.
+      The reason is short. In any ordered field, every non zero square is positive. One is the
+      square of one, so one is positive. But minus one is the square of i, so minus one would
+      also be positive, and that is a contradiction. So never write z one less than z two for
+      non real numbers. Only moduli can be compared.
+
+  - section: modulus-argument
+    focus: 'The **principal value** $\arg z$ is the one in $(-\pi, \pi]$. $\arg 0$ is undefined.'
+    say: >
+      Next, conjugate, modulus and argument. The conjugate reflects z in the real axis. The
+      modulus is the distance from the origin. An argument is any angle theta with x equal to
+      the modulus times cos theta and y equal to the modulus times sin theta. There are
+      infinitely many, differing by two pi. The principal value is the one in the interval
+      from minus pi, open, to pi, closed. And the argument of zero is undefined.
+
+  - section: modulus-argument
+    focus: '| III ($x < 0, y < 0$) | $-\pi + \alpha$ |'
+    say: >
+      To find the principal argument, first compute alpha, the inverse tangent of the modulus
+      of y over x, an acute angle. Then place it by quadrant. First quadrant, alpha. Second,
+      pi minus alpha. Third, minus pi plus alpha. Fourth, minus alpha. The third quadrant is
+      where most mistakes happen, because people write pi plus alpha, which is an argument but
+      not the principal one.
+
+  - section: modulus-argument
+    question: q0002
+    say: >
+      Try it now. What is the principal argument of minus one minus i root three?
+    answer: >
+      The point is minus one comma minus root three, in the third quadrant, and alpha is the
+      inverse tangent of root three, which is pi by three. So the principal argument is minus
+      pi plus pi by three, that is minus two pi by three. Four pi by three is the tempting
+      option. It is an amplitude, but it lies outside the principal range.
+
+  - section: modulus-argument
+    focus: '| $\lvert z_1 z_2\rvert = \lvert z_1\rvert\,\lvert z_2\rvert$ | $\arg(z_1 z_2) \equiv \arg z_1 + \arg z_2$ |'
+    say: >
+      The properties table splits into two columns. The modulus rules are exact: the modulus of
+      a product is the product of the moduli, likewise for quotients and powers, and z times z
+      bar is the modulus squared. The argument rules hold only up to multiples of two pi. The
+      argument of a product is the sum of the arguments, but only modulo two pi.
+
+  - section: modulus-argument
+    focus: 'With principal values, $\arg(z_1 z_2) = \arg z_1 + \arg z_2$ can **fail**.'
+    say: >
+      Here is why that matters. Take both numbers equal to minus one plus i. Each has principal
+      argument three pi by four, so the sum is three pi by two. But the product is minus two i,
+      whose principal argument is minus pi by two. The two differ by two pi. A statement that
+      claims equality of principal arguments is false.
+
+  - section: argand-geometry
+    focus: '$|z_1 - z_2|$ is the **distance** between $z_1$ and $z_2$.'
+    say: >
+      Now geometry in the Argand plane. The single most useful fact is on the board: the
+      modulus of z one minus z two is the distance between the two points. Almost every locus
+      question is this fact in disguise. Alongside it you have the section formula, the
+      triangle inequality, and the parallelogram law, which says the squares of the two
+      diagonals add up to twice the sum of the squares of the sides.
+
+  - section: argand-geometry
+    focus: '| $\lvert z - a\rvert = k\lvert z - b\rvert,\ k \ne 1$ | a circle (circle of Apollonius) |'
+    say: >
+      Learn the locus table by reading the conditions as distances. Distance from a equal to r
+      is a circle. Equal distances from a and from b is the perpendicular bisector. Distance
+      from a equal to k times distance from b, with k not one, is a circle of Apollonius. Sum
+      of distances constant and larger than the distance between a and b is an ellipse. And a
+      fixed argument of z minus a over z minus b gives an arc of a circle through a and b.
+
+  - section: argand-geometry
+    focus: 'Multiplying by $e^{i\alpha} = \cos\alpha + i\sin\alpha$ rotates a point anticlockwise about the origin through $\alpha$, without changing its modulus.'
+    say: >
+      Multiplication has a geometric meaning too. Multiplying by cos alpha plus i sin alpha
+      rotates a point anticlockwise about the origin through alpha, and keeps its modulus.
+      Multiplying by i is a quarter turn: i times one plus two i is minus two plus i. Rotating
+      about another point works the same way once you measure from that point.
+
+  - section: argand-geometry
+    focus: 'They form an **equilateral triangle** $\iff z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1$.'
+    say: >
+      Two consequences of rotation are worth memorising. Three points are collinear exactly
+      when z three minus z one over z two minus z one is real, because the angle between the
+      two vectors is then zero or pi. And three points form an equilateral triangle exactly
+      when the sum of their squares equals the sum of their pairwise products.
+
+  - section: argand-geometry
+    question: q0011
+    say: >
+      Here is the Apollonius circle in action. Find the centre and radius of the locus where
+      the distance from one is twice the distance from minus one.
+    answer: >
+      Put z equal to x plus i y and square. You get three x squared plus three y squared plus
+      ten x plus three equals zero, so after dividing by three, the centre is minus five
+      thirds comma zero. The radius is the square root of twenty five ninths minus one, which is
+      four thirds. Sixteen ninths is the trap: that is the radius squared.
+
+  - section: de-moivre
+    focus: '**Integer index.** For every integer $n$: $(\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta$.'
+    say: >
+      Now De Moivre's theorem. For every integer n, cos theta plus i sin theta, raised to the
+      n, equals cos n theta plus i sin n theta. Notice it says every integer, including
+      negatives. The proof idea: for positive n, induction, since multiplying complex numbers
+      multiplies moduli and adds angles. For negative n, use the fact that one over cis theta
+      is cis of minus theta.
+
+  - section: de-moivre
+    focus: 'has exactly **$q$ distinct values**:'
+    say: >
+      For a rational index p over q in lowest terms, the power is no longer a single number.
+      It has exactly q distinct values, obtained by replacing theta with theta plus two k pi,
+      for k from zero to q minus one. Lowest terms is essential. For example, one plus i to the
+      power two thirds has three values, not two and not six.
+
+  - section: de-moivre
+    focus: '$$z^n + \frac{1}{z^n} = 2\cos n\theta, \qquad z^n - \frac{1}{z^n} = 2i\sin n\theta.$$'
+    say: >
+      A consequence you will use constantly. If z is cos theta plus i sin theta, then z to the
+      n plus its reciprocal is two cos n theta, and z to the n minus its reciprocal is two i
+      sin n theta. Do not forget the i in the second formula; an option without it is a
+      standard distractor.
+
+  - section: de-moivre
+    focus: '$$(1 + i)^{10} = \left(\sqrt2\right)^{10}\left(\cos\frac{10\pi}{4} + i\sin\frac{10\pi}{4}\right) = 32\left(\cos\frac{\pi}{2} + i\sin\frac{\pi}{2}\right) = 32i.$$'
+    say: >
+      To compute a power, convert to polar form, apply the theorem, and convert back. Look at
+      the highlighted line. One plus i has modulus root two and argument pi by four. Its tenth
+      power has modulus thirty two and argument ten pi by four, which reduces to pi by two.
+      So the answer is thirty two i. The next line works the same way: one plus i root three
+      over one minus i root three is cis two pi by three, and its sixth power is one.
+
+  - section: de-moivre
+    focus: '$(\cos\theta + i\sin\theta)^{1/q}$ is **many-valued**.'
+    say: >
+      The caution here: a fractional power is many valued. When a question says find all
+      values, you must list all q of them. And the familiar rule z to the a, all to the b,
+      equals z to the a b, can fail for non integer exponents, so do not apply it blindly.
+
+  - section: roots
+    focus: 'They lie on the circle $|z| = R^{1/n}$ and form a **regular $n$-gon**.'
+    say: >
+      Now n-th roots. If w has modulus R and argument phi, the equation z to the n equals w has
+      exactly n roots. Each has modulus the n-th root of R, and arguments phi plus two k pi,
+      all over n, for k from zero to n minus one. Geometrically they sit on a circle and form a
+      regular n-gon, spaced two pi over n apart.
+
+  - section: roots
+    focus: '**Product of all $n$ roots:** $(-1)^{n-1}$.'
+    say: >
+      For the roots of unity, write alpha for cis two pi over n; the roots are the powers of
+      alpha. Their sum is zero for n at least two. Their product is minus one to the n minus
+      one, which comes straight from the constant term of z to the n minus one. The sum of
+      their m-th powers is n if n divides m, and zero otherwise. And under multiplication they
+      form a cyclic group of order n, never under addition.
+
+  - section: roots
+    focus: 'Dividing by $z - 1$ and putting $z = 1$ gives $\prod_{k=1}^{n-1}(1 - \alpha^k) = n$.'
+    say: >
+      This identity is a favourite. Factor z to the n minus one as the product of z minus each
+      root. Divide by z minus one: the left side becomes one plus z plus up to z to the n minus
+      one. Now put z equal to one. The left side becomes n, so the product of one minus alpha
+      to the k, over the non trivial roots, equals n. For fifth roots it is five.
+
+  - section: roots
+    focus: '$$1 + \omega + \omega^2 = 0,\quad \omega^3 = 1,\quad \bar\omega = \omega^2,\quad 1 + \omega = -\omega^2,\quad (1 - \omega)(1 - \omega^2) = 3.$$'
+    say: >
+      The cube roots of unity deserve their own line. One, omega, and omega squared, where
+      omega is minus one plus i root three over two. Memorise the highlighted relations. One
+      plus omega plus omega squared is zero. Omega cubed is one. The conjugate of omega is
+      omega squared. One plus omega is minus omega squared. Reduce high powers by throwing
+      away multiples of three, so omega to the hundred is just omega.
+
+  - section: roots
+    question: q0007
+    say: >
+      Use those relations here. Find one plus omega minus omega squared, times one minus omega
+      plus omega squared.
+    answer: >
+      In the first bracket, one plus omega is minus omega squared, so the bracket is minus two
+      omega squared. In the second, one plus omega squared is minus omega, so it is minus two
+      omega. The product is four omega cubed, which is four. Expanding blindly takes much
+      longer and invites sign errors.
+
+  - section: roots
+    focus: 'Cube roots of $-8$: $-8 = 8\operatorname{cis}\pi$, so the roots are $2\operatorname{cis}\frac{\pi + 2k\pi}{3}$.'
+    say: >
+      A quick exam pattern: the cube roots of minus eight. Write minus eight as eight cis pi.
+      The roots are two cis of pi plus two k pi over three, which gives one plus i root three,
+      minus two, and one minus i root three. When options are given, test each candidate by
+      cubing its polar form; that takes seconds.
+
+  - section: roots
+    question: q0012
+    say: >
+      Try exactly that. Which of these options is a cube root of minus eight?
+    answer: >
+      One plus i root three is two cis pi by three, and its cube is eight cis pi, which is
+      minus eight. Minus one plus i root three looks similar, but it is two cis two pi by
+      three, and its cube is eight cis two pi, which is plus eight. Two i cubes to minus eight
+      i, and root three plus i cubes to eight i.
+
+  - section: trig-expansions
+    focus: '$$\cos 5\theta = 16c^5 - 20c^3 + 5c, \qquad \frac{\sin 5\theta}{\sin\theta} = 16c^4 - 12c^2 + 1.$$'
+    say: >
+      Last idea: multiple angle expansions. Expand cos theta plus i sin theta to the n by the
+      binomial theorem, and compare real and imaginary parts. The real part gives cos n theta,
+      the imaginary part gives sin n theta. On the board, cos three theta is four c cubed minus
+      three c, and cos five theta is sixteen c to the five minus twenty c cubed plus five c.
+
+  - section: trig-expansions
+    focus: '$$\text{so}\quad \cos^4\theta = \frac{\cos 4\theta + 4\cos 2\theta + 3}{8}.$$'
+    say: >
+      The reverse direction expresses powers of cos and sin in multiple angles. Use two cos
+      theta equals z plus one over z, expand the fourth power, and pair z to the k with z to
+      the minus k. Each pair gives two cos k theta. The result is that cos to the fourth theta
+      is cos four theta plus four cos two theta plus three, all over eight.
+
+  - section: trig-expansions
+    focus: 'Check any expansion at $\theta = 0$.'
+    say: >
+      Here is the shortcut that wins marks. Check any expansion at theta equal to zero. Sine
+      five theta over sine theta tends to five, so the right side must also give five, and
+      sixteen minus twelve plus one is indeed five. For cos to the fourth, one plus four plus
+      three over eight is one. Most wrong options fail this test immediately.
+
+  - section: trig-expansions
+    question: q0014
+    say: >
+      Put that check to work. What is sine five theta over sine theta, in powers of cos theta?
+    answer: >
+      It is sixteen cos to the fourth minus twelve cos squared plus one. At theta equal to zero
+      it gives five, as it must. The option sixteen cos to the fourth minus twenty cos squared
+      plus five looks familiar because it is cos five theta divided by cos theta, but at zero
+      it gives one, not five.
+
+  - section: exam-tips
+    say: >
+      Let's close with the checklist on the board. Take moduli first; the modulus of a quotient
+      needs no division. State the principal argument between minus pi and pi. If the modulus
+      of z is one, then z bar is one over z. Powers of i come in blocks of four that sum to
+      zero. A rational power in lowest terms p over q has q values. The product of all values
+      of a root comes from the constant term. And the roots of unity form a cyclic group under
+      multiplication. Now try the practice questions.

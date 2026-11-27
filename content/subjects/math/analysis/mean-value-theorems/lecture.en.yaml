@@ -1,0 +1,293 @@
+# Spoken lecture for "Derivatives and Mean Value Theorems".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: derivative
+    say: >
+      Welcome. Today we revise one of the most examined chapters of real analysis: derivatives
+      and the mean value theorems. By the end you should be able to say exactly when Rolle's
+      theorem applies, find the point c in Lagrange's and Cauchy's theorems in under a minute,
+      and spot the classic traps the examiners love. Let's begin with the derivative itself.
+
+  - section: derivative
+    focus: "exists and is finite"
+    say: >
+      Look at the highlighted definition. The derivative of f at a is the limit, as h goes to
+      zero, of f of a plus h, minus f of a, all divided by h. Notice the words on the board:
+      the limit must exist, and it must be finite. That second word matters. If the limit runs
+      off to infinity, the function is not differentiable there, even though the graph may
+      look smooth.
+
+  - section: derivative
+    focus: "At an interior point, $f'(a)$ exists $\\iff$ both exist and are equal."
+    say: >
+      We can approach a point from the right or from the left, and that gives the right
+      derivative and the left derivative. At an interior point, the derivative exists exactly
+      when both one sided derivatives exist and agree. When they disagree, the graph has a
+      corner. The standard example is the modulus of x at zero: the left derivative is minus
+      one, the right derivative is plus one.
+
+  - section: derivative
+    focus: "**Differentiable $\\Rightarrow$ continuous.**"
+    say: >
+      Now an important one way street. Differentiable implies continuous. The proof is one line:
+      write f of a plus h minus f of a as the difference quotient times h. The quotient tends to
+      the derivative, h tends to zero, so the product tends to zero. But the converse is false,
+      and the table below gives you the four examples every candidate should know.
+
+  - section: derivative
+    focus: "| $x^2\\sin\\frac1x$, $f(0) = 0$ | yes | yes, $f'(0) = 0$; but $f'$ is **not continuous** at $0$ |"
+    say: >
+      Spend a moment on the last row, because it is the most surprising. x squared sine of one
+      over x is differentiable at zero, with derivative zero. Yet its derivative is not
+      continuous at zero, because of the cosine of one over x term that keeps oscillating. So a
+      function can be differentiable everywhere and still have a discontinuous derivative.
+
+  - section: derivative
+    question: q0001
+    say: >
+      Let's check the basics. A question has appeared next to the notes. Read it, choose an
+      option, and press Check. I'll wait for you.
+    answer: >
+      The modulus of x is continuous at zero, but not differentiable there. The left derivative
+      is minus one and the right derivative is plus one, so they disagree, and the graph has a
+      corner. Continuity holds because the modulus of x tends to zero as x tends to zero.
+
+  - section: derivative
+    focus: "For $f(x) = x^p\\sin\\frac1x$, $f(0) = 0$ (with $p > 0$): $f$ is continuous at $0$ for $p > 0$, differentiable at $0$ for $p > 1$, and $f'$ is continuous at $0$ for $p > 2$."
+    say: >
+      Here is a pattern worth memorising. For x to the power p times sine of one over x, the
+      function is continuous at zero when p is positive, differentiable when p is greater than
+      one, and has a continuous derivative when p is greater than two. Each extra power of x
+      buys you one more level of smoothness.
+
+  - section: successive-derivatives
+    focus: "**Leibniz's theorem.** If $u$ and $v$ have $n$th derivatives, then"
+    say: >
+      Next, higher derivatives. The table of standard n-th derivatives is pure memory work,
+      so revise it on your own. The tool that matters is Leibniz's theorem. It is the binomial
+      theorem for derivatives: the n-th derivative of u times v is the sum over k of n choose k,
+      times the n minus k-th derivative of u, times the k-th derivative of v.
+
+  - section: successive-derivatives
+    focus: "Put the factor whose derivatives die out (a polynomial) as $v$."
+    say: >
+      The trick is to choose v to be the polynomial factor, because its derivatives die out.
+      For x squared times e to the x, only three terms survive, and the answer is e to the x
+      times x squared plus two n x plus n times n minus one. Always check such a formula at n
+      equals one; it should give back the first derivative.
+
+  - section: successive-derivatives
+    focus: "At $x = 0$: $y_{n+2}(0) = n^2 y_n(0)$."
+    say: >
+      The favourite exam application is y equals sine inverse x. Differentiate the relation
+      n times using Leibniz, put x equal to zero, and you get a recurrence: the n plus two-th
+      derivative at zero equals n squared times the n-th derivative at zero. Starting from the
+      first derivative equal to one, the third derivative is one, the fifth is nine, and the
+      seventh is two hundred and twenty five. All even order derivatives vanish.
+
+  - section: rolle
+    focus: "**Rolle's theorem.** Let $f$ be (i) continuous on $[a, b]$, (ii) differentiable on $(a, b)$, with (iii) $f(a) = f(b)$. Then there is at least one $c \\in (a, b)$ with $f'(c) = 0$."
+    say: >
+      Now the heart of the chapter: Rolle's theorem. Read the three hypotheses slowly.
+      One, f is continuous on the closed interval from a to b. Two, f is differentiable on the
+      open interval. Three, f takes the same value at both ends. Then somewhere strictly
+      between a and b, the derivative is zero. Closed for continuity, open for
+      differentiability. Examiners test exactly that difference.
+
+  - section: rolle
+    focus: "**Geometric meaning:** somewhere strictly between $a$ and $b$ the tangent is horizontal, parallel to the chord joining the end points."
+    say: >
+      Picture it. If you start and end at the same height, and you move smoothly in between,
+      then at some moment you must be moving neither up nor down. That is a horizontal tangent.
+      The proof uses this same idea: a continuous function on a closed interval reaches a
+      maximum and a minimum, and at an interior extreme point the derivative must be zero.
+
+  - section: rolle
+    focus: "**Finding $c$.** Solve $f'(c) = 0$ and keep only the roots inside $(a, b)$."
+    say: >
+      To find c, simply solve f dash of c equals zero, and keep only the roots strictly inside
+      the interval. This last step is where marks are lost. In the second example, the cubic
+      gives two roots, one plus or minus one over root three, but only one minus one over root
+      three lies between zero and one.
+
+  - section: rolle
+    question: q0002
+    say: >
+      Try this one yourself. Find c for the quadratic on the interval from one to three.
+    answer: >
+      f of one and f of three are both zero, so Rolle applies. The derivative is two c minus
+      four, which vanishes at c equals two, and two lies inside the interval. So c equals two.
+      Notice that for a quadratic the point is always the midpoint.
+
+  - section: rolle
+    focus: "**When a hypothesis fails**, the conclusion may fail:"
+    say: >
+      What happens when a hypothesis fails? Look at the table. The modulus of x and x to the
+      power two thirds both fail to be differentiable at zero, one with a corner, the other with
+      a cusp, and neither has a horizontal tangent. Tan x on zero to pi breaks continuity at pi
+      by two. But remember the last line: the hypotheses are sufficient, not necessary. A
+      function can break a hypothesis and still happen to have a zero derivative.
+
+  - section: rolle
+    focus: "Rolle needs **closed** $[a, b]$ for continuity but only **open** $(a, b)$ for differentiability."
+    say: >
+      And here is the trap in the other direction. The square root of one minus x squared on
+      minus one to one has no derivative at the end points, yet Rolle still applies, because
+      differentiability is only needed on the open interval.
+
+  - section: lagrange-mvt
+    focus: "**Lagrange's MVT.** If $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then for some $c \\in (a, b)$:"
+    say: >
+      Now drop the condition that the end values are equal, and you get Lagrange's mean value
+      theorem. If f is continuous on the closed interval and differentiable on the open one,
+      then f of b minus f of a, divided by b minus a, equals f dash of c for some c strictly
+      inside. The left side is the slope of the chord. The right side is the slope of a tangent.
+
+  - section: lagrange-mvt
+    focus: "**Proof idea.** Apply Rolle to"
+    say: >
+      The proof is elegant. Subtract the chord from the curve. The gap between them is zero at
+      both ends, so Rolle applies to the gap, and where its derivative vanishes, the tangent is
+      parallel to the chord. So Rolle is just Lagrange with a horizontal chord.
+
+  - section: lagrange-mvt
+    focus: "title: Lagrange's MVT for $y = \\sqrt x$ on $[1, 4]$; the tangent at $c = \\frac94$ is parallel to the chord"
+    say: >
+      Look at the graph. The curve is the square root of x, from one to four. The chord joins
+      the point one comma one to the point four comma two, with slope one third. At x equals
+      nine by four, the tangent has exactly the same slope, so it runs parallel to the chord.
+      That is the mean value theorem you can see.
+
+  - section: lagrange-mvt
+    question: q0009
+    say: >
+      Now compute it yourself. Find c for root x on the interval from one to four.
+    answer: >
+      The chord slope is two minus one over three, that is one third. The derivative is one
+      over two root c. Setting one over two root c equal to one third gives root c equals three
+      by two, so c equals nine by four, which lies between one and four.
+
+  - section: lagrange-mvt
+    focus: "**Finding $\\theta$.**"
+    say: >
+      The theta form writes f of a plus h as f of a plus h times f dash of a plus theta h, with
+      theta between zero and one. For x squared, theta is exactly one half, for every a and h.
+      For x cubed at zero, theta is one over root three. And for e to the x, theta is not a
+      constant, but it tends to one half as h tends to zero. In fact, whenever the second
+      derivative is continuous and non zero, theta tends to one half.
+
+  - section: lagrange-mvt
+    focus: "If $f'(x) = 0$ on an interval, then $f$ is constant there."
+    say: >
+      The consequences are used everywhere. Zero derivative on an interval means constant.
+      Equal derivatives mean the functions differ by a constant. And a bounded derivative gives
+      a Lipschitz inequality; for example, the difference of sines is at most the difference of
+      the angles, because the cosine is at most one in size.
+
+  - section: lagrange-mvt
+    focus: "**Inequalities via the MVT.** Bound $f'(c)$ between its values at the end points:"
+    say: >
+      To prove inequalities, choose f so that the middle quantity is f of b minus f of a, apply
+      the theorem, and then trap f dash of c between its values at the end points. For log of
+      one plus x, the derivative at c is one over one plus c, with c between zero and x. That
+      gives x over one plus x, less than log of one plus x, less than x.
+
+  - section: cauchy-mvt
+    focus: "**Cauchy's MVT.** Let $f$ and $g$ be continuous on $[a, b]$ and differentiable on $(a, b)$, with $g'(x) \\ne 0$ for every $x \\in (a, b)$. Then for some $c \\in (a, b)$:"
+    say: >
+      Cauchy's mean value theorem works with two functions at once. The ratio of their changes,
+      f of b minus f of a over g of b minus g of a, equals the ratio of their derivatives at
+      one common point c. Notice the extra hypothesis: g dash must never vanish inside the
+      interval. That guarantees the denominator g of b minus g of a is not zero.
+
+  - section: cauchy-mvt
+    focus: "You cannot prove Cauchy's MVT by applying Lagrange to $f$ and $g$ separately and dividing."
+    say: >
+      A common mistake is to apply Lagrange to f and to g separately and divide. That fails,
+      because the two points you get may be different. Cauchy's theorem promises the same point
+      for both. The correct proof applies Rolle to f minus a suitable multiple of g.
+
+  - section: cauchy-mvt
+    focus: "| $f,\\ g$ | $c$ |"
+    say: >
+      Memorise this little table; it saves a full minute in the exam. For e to the x and e to
+      the minus x, c is the arithmetic mean of a and b. For root x and one over root x, c is the
+      geometric mean. For one over x squared and one over x, c is the harmonic mean.
+
+  - section: cauchy-mvt
+    question: q0015
+    say: >
+      Let's test that table. Which value of c works for e to the x and e to the minus x?
+    answer: >
+      The left side simplifies to minus e to the a plus b, and the right side is minus e to the
+      two c. So two c equals a plus b, and c is the arithmetic mean, a plus b over two.
+
+  - section: monotonicity-darboux
+    focus: "If $f'(x) \\ge 0$ on $(a, b)$, then $f$ is non-decreasing on $[a, b]$. If $f'(x) > 0$, it is strictly increasing."
+    say: >
+      The sign of the derivative controls monotonicity, and the proof is just the mean value
+      theorem: f of x two minus f of x one equals x two minus x one times f dash of c, which has
+      the sign of f dash of c. Positive derivative, strictly increasing. Non negative,
+      non decreasing.
+
+  - section: monotonicity-darboux
+    focus: "**Strictly increasing does not force $f' > 0$.**"
+    say: >
+      Careful with the converse. x cubed is strictly increasing everywhere, yet its derivative
+      is zero at the origin. And a positive derivative at a single point does not make the
+      function increasing near that point; the example with two x squared sine one over x shows
+      the derivative swinging negative arbitrarily close to zero.
+
+  - section: monotonicity-darboux
+    focus: "**Darboux's theorem.** If $f$ is differentiable on $[a, b]$ (one-sided at the ends) and $k$ lies strictly between $f'(a)$ and $f'(b)$, then $f'(c) = k$ for some $c \\in (a, b)$."
+    say: >
+      Darboux's theorem says that a derivative always has the intermediate value property, even
+      when it is not continuous. If the derivative takes two values, it takes every value in
+      between. The big consequence: a derivative can never have a jump. So the signum function
+      and the greatest integer function are not derivatives of anything on an interval that
+      contains their jump.
+
+  - section: monotonicity-darboux
+    question: q0017
+    say: >
+      Here is a question that tests exactly this idea. Which of these functions can be a
+      derivative?
+    answer: >
+      The signum function, the unit step, and the function that is one everywhere except zero
+      at the origin all have a jump or a removable gap, so Darboux's theorem rules them out. The
+      answer is two x sine of one over x, minus cosine of one over x, with value zero at the
+      origin. It is discontinuous at zero, but it is exactly the derivative of x squared sine
+      of one over x, which we met at the start.
+
+  - section: differentials
+    focus: "$$f(a + h) \\approx f(a) + h f'(a).$$"
+    say: >
+      Finally, differentials and approximation. Near a known point a, f of a plus h is
+      approximately f of a plus h times f dash of a. Geometrically, you walk along the tangent
+      instead of the curve. For the square root of twenty six, start from twenty five: five plus
+      one over ten gives five point one, very close to the true value.
+
+  - section: differentials
+    focus: "For $y = kx^n$: $\\dfrac{\\delta y}{y} \\approx n\\,\\dfrac{\\delta x}{x}$. So the percentage error is multiplied by the power."
+    say: >
+      For errors, remember one rule: in y equals k x to the n, the percentage error in y is n
+      times the percentage error in x. One percent error in a radius gives two percent in the
+      area of a circle, and three percent in the volume of a sphere.
+
+  - section: differentials
+    question: q0007
+    say: >
+      Quick one. One percent error in the radius. What is the error in the area?
+    answer: >
+      The area is pi r squared, so the power is two, and the percentage error doubles. The
+      answer is two percent.
+
+  - section: exam-tips
+    say: >
+      Let's finish with the exam checklist on the board. Closed interval for continuity, open
+      for differentiability. Corners, cusps, vertical tangents and asymptotes are the usual
+      reasons a hypothesis fails. For a quadratic, Lagrange's c is the midpoint and theta for x
+      squared is one half. Always confirm that your c lies strictly inside the interval. And a
+      function with a jump is never a derivative. Now go to the practice tab and try all thirty
+      questions while this is fresh. If anything was unclear, select it and press Ask.

@@ -1,0 +1,290 @@
+# Spoken lecture for "Polynomials and Nature of Roots".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: division
+    say: >
+      Welcome. This lecture revises the theory of equations up to the nature of roots. By the end
+      you should be able to find remainders in seconds, use conjugate and surd pairs, count
+      positive, negative and non real roots with Descartes' rule, detect multiple roots with the
+      derivative, and locate real roots with a sign table. These are quick marks in the exam, if
+      you know the shortcuts.
+
+  - section: division
+    focus: '- **Remainder theorem:** the remainder when $f(x)$ is divided by $x - a$ is $f(a)$.'
+    say: >
+      Everything starts from the division algorithm: f equals g times q plus r, with the
+      remainder either zero or of smaller degree than g. Divide by x minus a, and the remainder is
+      a constant, which must be f of a. That is the remainder theorem. The factor theorem follows:
+      x minus a divides f exactly when f of a is zero. Dividing by a x minus b leaves f of b over
+      a.
+
+  - section: division
+    focus: '- Dividing by a quadratic leaves a remainder $px + q$: find $p, q$ by substituting the two roots of the divisor.'
+    say: >
+      When the divisor is a quadratic, the remainder is linear, p x plus q. Substitute the two
+      roots of the divisor to get two equations for p and q. For example, if f leaves three on
+      division by x minus one and five on division by x minus two, then p plus q is three and two
+      p plus q is five, so the remainder is two x plus one.
+
+  - section: division
+    focus: '**Synthetic division** divides by $x - a$ using only the coefficients.'
+    say: >
+      Synthetic division is the fast way to divide by x minus a. Write all the coefficients,
+      putting zero for any missing power. Bring down the first, multiply by a, add to the next,
+      and repeat. The last number is the remainder, and the others are the quotient. In the
+      example on the board, dividing by x minus two gives remainder eighteen, which matches f of
+      two.
+
+  - section: division
+    focus: 'For the divisor $x + a$, the multiplier is $-a$.'
+    say: >
+      Spend a moment on this caution. For the divisor x plus a, you multiply by minus a. Using plus
+      a gives f of a instead of f of minus a, and examiners always put that wrong value among the
+      options. And when dividing by a x minus b, divide synthetically by x minus b over a, then
+      divide the quotient, not the remainder, by a.
+
+  - section: division
+    focus: 'If the sum of the coefficients is $0$, then $x = 1$ is a root.'
+    say: >
+      Two root tests worth reflexes. If the coefficients add up to zero, one is a root. If the
+      coefficients of the even powers add up to the same as those of the odd powers, minus one is
+      a root. Both are just f of one and f of minus one in disguise, and they save a lot of trial
+      substitution.
+
+  - section: division
+    question: q0001
+    say: >
+      Try the remainder theorem. Find the remainder when this quartic is divided by x minus two.
+    answer: >
+      The remainder is f of two: sixteen, minus twenty four, plus four, minus five, which is minus
+      nine. If you got another value, check the signs term by term; the cube term contributes
+      minus three times eight.
+
+  - section: fundamental-theorem
+    focus: 'So a degree-$n$ equation has **exactly $n$ roots, counted with multiplicity**, and no others.'
+    say: >
+      The fundamental theorem of classical algebra says every polynomial equation of degree at
+      least one with complex coefficients has a root in the complex numbers. You only need the
+      statement. Combine it with the factor theorem and induction: peel off one linear factor at a
+      time, and f becomes the leading coefficient times n linear factors. So there are exactly n
+      roots, counted with multiplicity.
+
+  - section: fundamental-theorem
+    focus: '- If two polynomials of degree $\le n$ agree at $n + 1$ distinct points, they are identical: all their coefficients are equal.'
+    say: >
+      A key consequence is the identity of polynomials. A polynomial of degree at most n with
+      more than n roots is the zero polynomial. So two polynomials of degree at most n that agree
+      at n plus one points are identical. This gives a beautiful trick: if a monic quartic
+      satisfies f of k equals k for k equal to one, two, three and four, then f of x minus x is a
+      monic quartic with exactly those four roots.
+
+  - section: fundamental-theorem
+    question: q0007
+    say: >
+      Use that trick here. Find f of five.
+    answer: >
+      f of x equals x plus x minus one, times x minus two, times x minus three, times x minus
+      four. At five, that is five plus four times three times two times one, which is five plus
+      twenty four, or twenty nine. The tempting option five forgets the product term, and
+      twenty four forgets the x.
+
+  - section: fundamental-theorem
+    focus: '- Every real polynomial factors over $\R$ into **linear factors and irreducible quadratic factors** $x^2 + px + q$ with $p^2 < 4q$.'
+    say: >
+      Over the reals the picture changes, because x squared plus one has no real root. Every real
+      polynomial splits into linear factors and irreducible quadratics with negative
+      discriminant. So the irreducibles over the reals have degree one or two. And keep the
+      caution in mind: exactly n roots counts multiplicity, says nothing about how many are real,
+      and gives no formula for them.
+
+  - section: conjugate-roots
+    focus: 'If $f$ has **real** coefficients and $\alpha = p + iq$ ($q \ne 0$) is a root, then $\bar\alpha = p - iq$ is also a root, **with the same multiplicity**.'
+    say: >
+      Now conjugate roots. If f has real coefficients and p plus i q is a root, so is p minus i q,
+      with the same multiplicity. The proof is one line: conjugate the equation f of alpha equals
+      zero, and since the coefficients are real, you get f of alpha bar equals zero. Each pair
+      gives a real quadratic factor, x minus p, squared, plus q squared.
+
+  - section: conjugate-roots
+    focus: '- an equation of **odd degree** has at least one real root;'
+    say: >
+      Consequences follow at once. Non real roots come in pairs, so their number is even. An
+      equation of odd degree must have at least one real root. An even degree equation may have
+      none, like x to the four plus one. So a real quintic has one, three or five real roots,
+      never two or four.
+
+  - section: conjugate-roots
+    focus: 'then $a - \sqrt b$ is also a root, with the same multiplicity.'
+    say: >
+      The same idea works for surds. If the coefficients are rational and a plus root b is a root,
+      with root b irrational, then a minus root b is also a root. The pair gives the rational
+      factor x minus a, squared, minus b. And if root two plus root three is a root, all four
+      combinations of signs are roots, giving x to the four minus ten x squared plus one.
+
+  - section: conjugate-roots
+    question: q0009
+    say: >
+      Here is a surd pair in action. Given one root two plus root three, find the other two.
+    answer: >
+      Two minus root three is a root because the coefficients are rational. The roots add up to
+      five, so the third root is five minus four, which is one. Note the partner is two minus
+      root three, not minus two plus root three: only the sign of the surd changes.
+
+  - section: conjugate-roots
+    focus: '- **Conjugate pairs need real coefficients.**'
+    say: >
+      The hypotheses matter, and this is a favourite trap. Conjugate pairs need real
+      coefficients: the quadratic x minus two times x minus i has the root i but not minus i.
+      Surd pairs need rational coefficients: x minus root two has only one root. And the partner
+      of a plus root b is a minus root b, never minus a plus root b.
+
+  - section: descartes
+    focus: '- **Positive roots.** The number of positive roots of $f(x) = 0$ (counted with multiplicity) is never more than the number of sign changes $V$ in $f(x)$.'
+    say: >
+      Descartes' rule of signs, for real coefficients. Write the non zero coefficients in
+      descending powers and count the sign changes, skipping zeros. The number of positive roots
+      is at most that count, and differs from it by an even number. For negative roots, apply the
+      same rule to f of minus x. Remove any zero roots first.
+
+  - section: descartes
+    focus: '- **One sign change** means exactly one positive root.'
+    say: >
+      The parity refinement decides most questions. One sign change means exactly one positive
+      root, since one minus two is negative. No sign change means no positive root, so a
+      polynomial with all positive coefficients has no positive root. And to get f of minus x
+      quickly, just flip the signs of the odd power terms.
+
+  - section: descartes
+    question: q0012
+    say: >
+      Count the negative roots of this quintic.
+    answer: >
+      Flip the odd power terms. f of minus x has signs minus, plus, plus, plus, plus, which is
+      one change. So there is exactly one negative root. The options listing three or one, or
+      four, two or zero, come from counting the changes in f of x itself.
+
+  - section: descartes
+    focus: 'Then there are at least $n - (V^+ + V^-)$ non-real roots.'
+    say: >
+      Descartes also bounds the non real roots. If f has degree n, f of zero is not zero, and
+      the sign changes in f of x and f of minus x total some number, then at least n minus that
+      total roots are non real. In the table, x to the six plus x squared plus one has no changes
+      either way, so all six roots are non real.
+
+  - section: descartes
+    focus: '$x^2 - x + 1$ has two sign changes and no real root.'
+    say: >
+      Remember what Descartes really gives: upper bounds with parity, not exact counts. x
+      squared minus x plus one has two sign changes and no real roots at all. And a missing term
+      is skipped, not counted. In x to the four minus one the signs are plus then minus, so there
+      is exactly one positive root.
+
+  - section: general-properties
+    focus: '  - If they have **opposite signs**, $f(x) = 0$ has an **odd** number of roots in $(a, b)$, so at least one.'
+    say: >
+      Now general properties of real equations, all coming from continuity. If f of a and f of b
+      have opposite signs, there is an odd number of roots between them, so at least one. If the
+      signs agree, the number is even, possibly zero. For large x, the sign is that of the leading
+      term. So an even degree equation whose first and last coefficients have opposite signs has
+      a positive and a negative root.
+
+  - section: general-properties
+    focus: 'Then $p \mid a_n$ and $q \mid a_0$.'
+    say: >
+      The rational root theorem: if p over q in lowest terms is a root of an integer polynomial,
+      then p divides the constant term and q divides the leading coefficient. So a monic integer
+      polynomial has only integer rational roots, dividing the constant. This is also a quick
+      proof that root two is irrational. But remember, the theorem gives candidates, not roots.
+      Test each one by synthetic division.
+
+  - section: general-properties
+    focus: 'A real equation whose terms are all positive for real $x$ has no real root.'
+    say: >
+      In the worked example, the coefficients of two x cubed minus x squared minus seven x plus
+      six add to zero, so one is a root, and the quotient factors to give three halves and minus
+      two. And the exam tip: if every term is positive for real x, such as x to the four plus x
+      squared plus one, there is no real root. Spot that before reaching for Descartes.
+
+  - section: multiple-roots
+    focus: '- If $\alpha$ is a root of multiplicity $r \ge 1$ of $f$, then it is a root of multiplicity **exactly $r - 1$** of $f''$.'
+    say: >
+      Multiple roots. If alpha is a root of multiplicity r of f, it is a root of multiplicity
+      exactly r minus one of f dash. The proof: write f as x minus alpha to the r times g, with g
+      of alpha not zero. Differentiate, and the bracket that remains equals r times g of alpha,
+      which is not zero. So a simple root of f is never a root of f dash.
+
+  - section: multiple-roots
+    focus: '- The multiple roots of $f$ are exactly the roots of $\gcd(f, f'')$.'
+    say: >
+      Hence the multiple roots of f are exactly the roots of the greatest common divisor of f and
+      f dash. A root of that gcd with multiplicity s is a root of f with multiplicity s plus one.
+      In the example, f is x minus one cubed times x minus two, and the gcd is x minus one
+      squared. Dividing f by the gcd leaves the same roots, all simple.
+
+  - section: multiple-roots
+    focus: 'For $x^3 - 3x + k = 0$: $f''(x) = 0$ gives $x = \pm1$, and then $k = \mp2$.'
+    say: >
+      To find a condition for a repeated root, eliminate x between f and f dash. For x cubed minus
+      three x plus k, the derivative vanishes at plus or minus one, and substituting gives k equal
+      to minus two or plus two. In general, x cubed plus p x plus q has a repeated root exactly
+      when four p cubed plus twenty seven q squared is zero.
+
+  - section: multiple-roots
+    question: q0017
+    say: >
+      Confirm that result. For which k does this cubic have a repeated root?
+    answer: >
+      k equals plus or minus two. A repeated root must also be a root of three x squared minus
+      three, so x is one or minus one. Putting x equal to one gives k equals two, and x equal to
+      minus one gives k equals minus two. With four p cubed plus twenty seven q squared, that is
+      minus 108 plus twenty seven k squared equals zero.
+
+  - section: multiple-roots
+    focus: 'The converse fails: a root of $f''$ need not be a root of $f$ at all.'
+    say: >
+      And the caution: the converse fails. A root of f dash need not be a root of f at all. For x
+      cubed minus three x plus two, f dash vanishes at plus and minus one, but only one is a root
+      of f, and a double one. Minus one is just a turning point.
+
+  - section: rolle-location
+    focus: '**Rolle''s theorem for polynomials.** If $f$ has real coefficients and $a < b$ are real roots of $f(x) = 0$, then $f''(x) = 0$ has at least one real root in $(a, b)$.'
+    say: >
+      Finally, locating roots. Rolle's theorem for polynomials: between two real roots of f lies
+      a real root of f dash. So if f has m real roots counted with multiplicity, f dash has at
+      least m minus one. If all roots of f are real, so are all roots of its derivatives. And if
+      f dash has no real root, f has at most one, as for x to the five plus x minus one.
+
+  - section: rolle-location
+    focus: '- **Between two consecutive real roots of $f''$** there is **at most one** real root of $f$, because $f$ is monotonic there.'
+    say: >
+      The other direction is the counting tool. Between consecutive roots of f dash, f is
+      monotonic, so it has at most one root there, and exactly one if f changes sign. Method:
+      find the critical points, write the sign of f at minus infinity, at each critical point,
+      and at plus infinity. Each sign change marks exactly one real root.
+
+  - section: rolle-location
+    focus: 'title: $y = x^3 - 6x^2 + 9x - 1$ has a root between each pair of sign changes'
+    say: >
+      Look at the graph. The derivative of x cubed minus six x squared plus nine x minus one is
+      three times x minus one times x minus three. The signs at minus infinity, one, three and
+      plus infinity are minus, plus three, minus one, and plus. Three changes, so three real
+      roots, one in each gap, as the curve shows.
+
+  - section: rolle-location
+    question: q0021
+    say: >
+      Apply the sign table method. How many distinct real roots does this quartic have?
+    answer: >
+      Four. The derivative is twelve x times x minus two times x plus one, so the critical points
+      are minus one, zero and two. The values there are minus two, three and minus twenty nine,
+      and f is positive at both infinities. The signs go plus, minus, plus, minus, plus: four
+      changes, so four real roots.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Remainder on division by x minus a is f of a; for x plus a, substitute minus a.
+      Exactly n roots means counted with multiplicity. Conjugate pairs need real coefficients, surd
+      pairs need rational ones. In Descartes, one change means exactly one positive root, and two
+      means two or none. Multiplicity drops by one on differentiating. And count real roots with a
+      sign table at the critical points. Now try the practice questions.

@@ -1,0 +1,267 @@
+# Spoken lecture for "Linear, Bernoulli and Clairaut Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: linear-equations
+    say: >
+      Welcome. This lecture completes first order equations. We cover linear equations and
+      their integrating factor, Bernoulli's equation, equations of higher degree in p, where p
+      stands for d y by d x, Clairaut's equation with its singular solution, the theory of
+      discriminants, and orthogonal trajectories. By the end you should solve a linear or
+      Bernoulli equation in a few lines, and read off Clairaut's general and singular solutions
+      almost by sight.
+
+  - section: linear-equations
+    focus: '- **Integrating factor (IF):** $\mu(x) = e^{\int P\,dx}$. Multiplying by $\mu$ turns the left side into $\dfrac{d}{dx}(\mu y)$.'
+    say: >
+      A first order equation is linear in y when it can be written y dash plus P of x times y
+      equals Q of x. The integrating factor is e to the integral of P. Why does it work?
+      Multiplying by mu, the left side becomes mu y dash plus mu P y, and since mu dash is mu P,
+      that is exactly the derivative of mu times y. So mu y equals the integral of Q mu, plus
+      C.
+
+  - section: linear-equations
+    focus: 'So the formula above gives **every** solution, and a linear equation has **no singular solution**.'
+    say: >
+      There is a strong uniqueness result. If P and Q are continuous on an interval, then
+      through every initial point there is exactly one solution, and it lives on the whole
+      interval, not just near the point. Contrast that with the local Picard theorem. A
+      consequence: the formula gives every solution, so a linear equation has no singular
+      solution.
+
+  - section: linear-equations
+    focus: '**Write the equation in standard form first.** The coefficient of $y''$ must be $1$.'
+    say: >
+      The first step is always to put the equation in standard form, with the coefficient of y
+      dash equal to one. For x y dash minus two y equals x cubed, divide by x. Then P is minus
+      two over x, the integrating factor is one over x squared, and the solution is y equals x
+      cubed plus C x squared. The table lists the common factors: k over x gives x to the k,
+      tan x gives sec x, cot x gives sine x, two x gives e to the x squared.
+
+  - section: linear-equations
+    question: q0001
+    say: >
+      Let's check that. What is an integrating factor of x y dash minus two y equals x cubed?
+    answer: >
+      One over x squared. In standard form, P is minus two over x, so the integral of P is minus
+      two log x, and e to that is one over x squared. The option x squared ignores the minus
+      sign in P, and e to the minus two x forgets to divide by x first.
+
+  - section: linear-equations
+    focus: '**Linear in $x$.** Sometimes the equation is linear when $x$ is taken as the dependent variable:'
+    say: >
+      Sometimes an equation is not linear in y but is linear in x, if you treat x as a function
+      of y. For y d x equals x plus y squared, d y, write d x by d y minus x over y equals y.
+      The integrating factor is one over y, and the solution is x equals y squared plus C y.
+      When y appears awkwardly but x only to the first power, try this.
+
+  - section: linear-equations
+    focus: 'The IF is $e^{\int P\,dx}$, **not** $e^{\int Q\,dx}$, and the sign of $P$ is taken from the standard form $y'' + Py = Q$.'
+    say: >
+      Two habits from the boxes. The integrating factor uses P, not Q, and the sign of P is read
+      from the standard form. For y dash minus y over x equals x, P is minus one over x, so the
+      factor is one over x, not x. And check candidates by substitution. For y dash plus two y
+      equals e to the minus x, try e to the minus x: it works, so the solution is e to the minus
+      x plus C e to the minus two x.
+
+  - section: bernoulli
+    focus: '$$\frac{dv}{dx} + (1-n)P\,v = (1-n)\,Q.$$'
+    say: >
+      Bernoulli's equation is y dash plus P y equals Q times y to the n, with n not zero or one.
+      Divide by y to the n and put v equal to y to the power one minus n. Then v dash is one
+      minus n times y to the minus n times y dash, and the equation becomes linear in v: v dash
+      plus one minus n times P v equals one minus n times Q. For n equals two, v is one over y;
+      for n equals three, v is one over y squared.
+
+  - section: bernoulli
+    focus: 'After $v = y^{1-n}$, **both** $P$ and $Q$ are multiplied by $(1 - n)$.'
+    say: >
+      The caution is the key point. After the substitution, both P and Q are multiplied by one
+      minus n. Forgetting the factor on one side is the commonest slip. For n equals two, that
+      factor is minus one, so both signs flip. And remember that y equals zero is also a
+      solution of a Bernoulli equation with positive n, which is lost when you divide by y to
+      the n.
+
+  - section: bernoulli
+    question: q0008
+    say: >
+      Try one. Solve y dash plus y equals x y squared.
+    answer: >
+      One over y equals x plus one plus C e to the x. With v equal to one over y, dividing by
+      minus y squared gives v dash minus v equals minus x. The integrating factor is e to the
+      minus x, and integrating minus x e to the minus x gives x plus one times e to the minus x.
+      The option with C e to the minus x forgets that the factor minus one flips the sign of P.
+
+  - section: bernoulli
+    focus: 'put $v = f(y)$: it becomes $v'' + Pv = Q$. Bernoulli is the case $f(y) = y^{1-n}$.'
+    say: >
+      Bernoulli is one case of a general pattern. If the equation looks like f dash of y times y
+      dash, plus P times f of y, equals Q, put v equal to f of y, and it becomes linear in v.
+      In the example, sec squared y times y dash, plus two x tan y, equals x cubed. Here f is
+      tan y, so v is tan y, and the equation is v dash plus two x v equals x cubed, with
+      integrating factor e to the x squared.
+
+  - section: higher-degree
+    focus: 'with **one** constant $c$ (the equation is still first order).'
+    say: >
+      Next, first order equations of higher degree in p. There are three routes. If the equation
+      is solvable for p, factorise it into first degree factors, solve each one, and write the
+      general solution as the product of the separate solutions. Use only one constant, because
+      the equation is still first order, whatever its degree.
+
+  - section: higher-degree
+    question: q0010
+    say: >
+      Try it. Solve p squared minus x plus y times p, plus x y, equals zero.
+    answer: >
+      The equation factorises as p minus x times p minus y. p equals x gives two y minus x
+      squared minus c equals zero, and p equals y gives y equals c e to the x. So the answer is
+      the product of these, with the same c. The option with e to the minus x solves p equals
+      minus y, and the one with y minus x squared forgets the half from integrating x.
+
+  - section: higher-degree
+    focus: 'The important case is **Lagrange''s (d''Alembert''s) equation** $y = x\,\phi(p) + \psi(p)$.'
+    say: >
+      If the equation is solvable for y, differentiate it with respect to x. You get an equation
+      in x and p. The important case is Lagrange's, or d'Alembert's, equation: y equals x times
+      phi of p plus psi of p. After differentiating, it is linear in x as a function of p. For y
+      equals two p x plus p squared, you get d x by d p plus two x over p equals minus two, with
+      integrating factor p squared. The solution is left in parametric form, with p as
+      parameter.
+
+  - section: higher-degree
+    focus: 'Differentiate with respect to $y$ and use $\dfrac{dx}{dy} = \dfrac1p$:'
+    say: >
+      If the equation is solvable for x, differentiate with respect to y instead, using d x by
+      d y equal to one over p. For x equals y plus p squared, you get one over p equals one plus
+      two p d p by d y, which is separable in p and y. In all three routes, you finish by
+      eliminating p, or by leaving x and y in terms of p.
+
+  - section: clairaut
+    focus: '$$p = p + x\frac{dp}{dx} + f''(p)\frac{dp}{dx} \implies \big(x + f''(p)\big)\frac{dp}{dx} = 0.$$'
+    say: >
+      Now Clairaut's equation, y equals p x plus f of p. Differentiate with respect to x. The p
+      on the left cancels the p on the right, and you are left with x plus f dash of p, times d
+      p by d x, equals zero. So one of the two factors must vanish, and each gives a different
+      kind of solution.
+
+  - section: clairaut
+    focus: '- $\dfrac{dp}{dx} = 0$ gives $p = c$ and the **general solution** $y = cx + f(c)$: a one-parameter family of **straight lines**. Just replace $p$ by $c$.'
+    say: >
+      If d p by d x is zero, p is a constant c, and the general solution is y equals c x plus f
+      of c: just replace p by c. It is a family of straight lines. The other factor, x plus f
+      dash of p equal to zero, together with the equation itself, gives the singular solution
+      in parametric form. Eliminating p gives the envelope of the family of lines.
+
+  - section: clairaut
+    focus: 'Geometrically, $y = cx + \frac ac$ is the tangent of slope $c$ to the parabola $y^2 = 4ax$.'
+    say: >
+      Look at the graph. For y equals p x plus a over p, the general solution is the family of
+      lines y equals c x plus a over c. Solving x minus a over p squared equals zero gives p
+      squared equals a over x, and then y squared equals four a x. Every line is a tangent to
+      that parabola, which is their envelope. The table lists other pairs: the root of a
+      squared p squared plus b squared gives an ellipse, and a root of one plus p squared
+      gives a circle.
+
+  - section: clairaut
+    question: q0014
+    say: >
+      Use the exam tip: solve x equals minus f dash of p, and substitute. Find the singular
+      solution of y equals p x plus p squared.
+    answer: >
+      x squared plus four y equals zero. From x plus two p equals zero, p is minus x over two.
+      Then y is minus x squared over two plus x squared over four, which is minus x squared over
+      four. The option x squared minus four y has the wrong sign: these lines touch a parabola
+      that opens downward.
+
+  - section: clairaut
+    focus: 'With $X = x^2$, $Y = y^2$, we have $P = \dfrac{dY}{dX} = \dfrac{yp}{x}$.'
+    say: >
+      Some equations become Clairaut after a substitution. With capital X equal to x squared and
+      capital Y equal to y squared, the new slope is y p over x. Then x squared times y minus p
+      x equals y p squared becomes Y equals P X plus P squared, so the general solution is y
+      squared equals c x squared plus c squared. Another standard choice is X equals e to the x
+      and Y equals e to the y. The aim is always the form Y equals P X plus f of P.
+
+  - section: singular-solutions
+    focus: 'Geometrically, it is usually the **envelope** of the family of solution curves.'
+    say: >
+      In general, a singular solution satisfies the equation but cannot be obtained from the
+      general solution by any choice of c. Geometrically it is usually the envelope of the
+      family. At each of its points it touches some member of the family, so it shares x, y
+      and p with that member, and that is why it satisfies the same equation.
+
+  - section: singular-solutions
+    focus: 'So, schematically, the **$p$-discriminant is $E\,T^2\,C = 0$** and the **$c$-discriminant is $E\,N^2\,C^3 = 0$**.'
+    say: >
+      There are two discriminants. The p discriminant eliminates p between F equals zero and its
+      partial derivative in p; for a quadratic in p it is just b squared minus four a c. The c
+      discriminant eliminates c between the general solution and its derivative in c. Besides
+      the envelope, they can contain a tac locus, a node locus and a cusp locus. The p
+      discriminant is E times T squared times C; the c discriminant is E times N squared times C
+      cubed. The envelope appears once in both.
+
+  - section: singular-solutions
+    question: q0012
+    say: >
+      Try one. Find the singular solution of p squared plus y squared equals one.
+    answer: >
+      y equals plus or minus one. The p discriminant, from two p equals zero, gives y squared
+      equals one. These lines satisfy the equation, since p is zero there, and the general
+      solution y equals sine of x plus c never gives them. They touch every sine curve at its
+      crests and troughs. y equals zero fails, because it would need p squared equal to one.
+
+  - section: singular-solutions
+    focus: 'A singular solution is **not** a particular solution'
+    say: >
+      Two cautions. A singular solution is not a particular solution: particular solutions come
+      from fixing c, singular ones cannot. And not every discriminant locus is a solution. Node,
+      tac and cusp loci must be rejected by substituting into the equation. If the p
+      discriminant never vanishes, as for p squared minus five p plus six, there is no singular
+      solution at all; the solutions are just two families of parallel lines.
+
+  - section: orthogonal-trajectories
+    focus: '2. Replace $p$ by $-\dfrac1p$ (i.e. $\dfrac{dy}{dx}$ by $-\dfrac{dx}{dy}$).'
+    say: >
+      Finally, orthogonal trajectories, curves that cut every member of a family at right
+      angles. In Cartesian form: first find the differential equation of the family by
+      eliminating the parameter. Then replace p by minus one over p, since perpendicular slopes
+      multiply to minus one. Then solve. The caution matters: eliminate the parameter before
+      replacing p, or the answer will depend on which curve you started from.
+
+  - section: orthogonal-trajectories
+    question: q0018
+    say: >
+      Try the standard one. Find the orthogonal trajectories of y equals c x squared.
+    answer: >
+      x squared plus two y squared equals k, a family of ellipses. Eliminating c, p equals two y
+      over x. Replace p by minus one over p, and you get x d x plus two y d y equals zero. The
+      option two x squared plus y squared belongs to the family y squared equals c x, with the
+      roles of x and y swapped.
+
+  - section: orthogonal-trajectories
+    focus: 'Form the polar equation $F\!\left(r, \theta, \dfrac{dr}{d\theta}\right) = 0$, then replace $\dfrac{dr}{d\theta}$ by $-r^2\dfrac{d\theta}{dr}$.'
+    say: >
+      In polar form, the angle psi between the radius vector and the tangent has tan psi equal
+      to r d theta by d r. For perpendicular curves, replace d r by d theta with minus r squared
+      d theta by d r. For the cardioids a times one plus cos theta, this gives r equals b times
+      one minus cos theta, the cardioids facing the other way. Similarly a cos theta goes to b
+      sine theta.
+
+  - section: orthogonal-trajectories
+    focus: 'A family is **self-orthogonal** if its trajectories are the family itself.'
+    say: >
+      Skim the table of pairs. Lines through the origin go with circles about the origin, and
+      the rectangular hyperbolas x y equals c go with x squared minus y squared equals k. And
+      remember the special case: a family is self orthogonal if its trajectories are the family
+      itself. The standard example is the confocal parabolas y squared equals four a times x
+      plus a. Their equation is unchanged when p is replaced by minus one over p.
+
+  - section: exam-tips
+    say: >
+      Let's recap. The integrating factor is e to the integral of P, with P read from the
+      standard form. Check linear solutions by substitution. In Bernoulli, v is y to the one
+      minus n, and both P and Q get the factor one minus n. Clairaut: replace p by c for the
+      general solution; eliminate p using x plus f dash of p equals zero for the singular one.
+      The envelope appears once in both discriminants. Linear equations have no singular
+      solution. Now try the practice questions.

@@ -1,0 +1,319 @@
+# Spoken lecture for "Linear Transformations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: definition
+    say: >
+      Welcome. Today we revise linear transformations, the language in which most of linear
+      algebra is really written. By the end you should be able to test a map for linearity
+      in seconds, find its kernel and range, use the rank nullity theorem without slips,
+      write the matrix of a map in any pair of bases, change basis, and apply Sylvester's
+      law of nullity to bound the rank of a product. Let's begin with the definition.
+
+  - section: definition
+    focus: '$$T(\alpha u + \beta v) = \alpha T(u) + \beta T(v) \qquad \text{for all } u, v \in V,\ \alpha, \beta \in F.$$'
+    say: >
+      Look at the highlighted condition. A map T from V to W, both over the same field, is
+      linear if T of alpha u plus beta v equals alpha T u plus beta T v, for all vectors and
+      all scalars. Equivalently, T is additive and homogeneous. Two consequences follow at
+      once: T sends zero to zero, and T sends any linear combination to the same combination
+      of the images.
+
+  - section: definition
+    focus: '| $A \mapsto \det A$ on $M_n(F)$, $n \ge 2$ | **no** | $\det(2A) = 2^n\det A$ |'
+    say: >
+      The table lists the standard examples. Matrix multiplication, differentiation,
+      definite integration, trace and transpose are all linear. The non examples are
+      equally standard: a translation fails because it moves zero; squaring fails
+      homogeneity; a product of coordinates or a modulus fails additivity. And the
+      determinant on n by n matrices, with n at least two, is not linear, because the
+      determinant of 2 A is two to the n times the determinant of A.
+
+  - section: definition
+    question: q0006
+    say: >
+      Let's check that table. Which of these four maps is not linear?
+    answer: >
+      The determinant. For two by two matrices, the determinant of 2 A is four times the
+      determinant of A, not twice; and the determinant of I plus the determinant of I is
+      two, while the determinant of 2 I is four. Trace, differentiation and the definite
+      integral are all linear.
+
+  - section: definition
+    focus: '**A linear map is fixed by its values on a basis.**'
+    say: >
+      Here is a principle used constantly. A linear map is fixed by its values on a basis,
+      and those values can be any vectors at all. So to find T of a given vector, first write
+      that vector in the given basis, then apply linearity. In the example, T of one, one and
+      T of one, minus one are given; writing x, y as x plus y over two times the first
+      vector, plus x minus y over two times the second, gives T of x, y equal to x minus y,
+      comma, x.
+
+  - section: definition
+    focus: '$T(0) = 0$ is **necessary, not sufficient**'
+    say: >
+      The caution box. T of zero equals zero is necessary, not sufficient. x squared and the
+      map x y comma x both fix zero, yet neither is linear. And linearity depends on the
+      field. Complex conjugation is linear on the complex numbers viewed as a vector space
+      over the reals, but not over the complex numbers, because the conjugate of i z is minus
+      i times the conjugate of z.
+
+  - section: kernel-range
+    focus: '- **Kernel (null space):** $\ker T = N(T) = \{v \in V : T(v) = 0\}$, a **subspace of $V$**.'
+    say: >
+      Now kernel and range. The kernel, or null space, is everything T sends to zero; it is
+      a subspace of the domain. The range, or image, is the set of all values of T; it is a
+      subspace of the codomain. The rank is the dimension of the range and the nullity is
+      the dimension of the kernel. If you take any spanning set of V, the images span the
+      range, so the rank is the number of independent vectors among the images of a basis.
+
+  - section: kernel-range
+    focus: '**For a matrix map** $T_A(x) = Ax$: $N(T_A)$ is the solution space of $AX = O$, and $R(T_A)$ is the **column space** of $A$.'
+    say: >
+      For a matrix map, the kernel is the solution space of A X equals zero, and the range
+      is the column space of A. So the rank of the map is the rank of the matrix. In the
+      worked example, the third row of the matrix is the first minus the second, so the rank
+      is two. Solving gives the kernel spanned by three, minus one, one, so the nullity is
+      one.
+
+  - section: kernel-range
+    focus: 'To find the range quickly, reduce the **rows** of the matrix:'
+    say: >
+      The exam tip gives a fast way to describe the range. Every dependence among the rows
+      becomes an equation satisfied by every image vector. In the example, row three equals
+      row one minus row two, so every image a, b, c satisfies c equals a minus b. That is the
+      equation of the range plane, read off without solving anything.
+
+  - section: kernel-range
+    question: q0009
+    say: >
+      Try the kernel of that same map yourself. Which option is the kernel?
+    answer: >
+      From the second equation, y equals minus z. The first then gives x equals minus two y
+      plus z, which is three z. The third equation holds automatically. So the kernel is the
+      span of three, minus one, one. The tempting option with one, zero, one and two, one,
+      one spans the range, not the kernel.
+
+  - section: kernel-range
+    focus: 'The kernel lives in the **domain** and the range in the **codomain**.'
+    say: >
+      And keep the spaces straight. The kernel lives in the domain and the range in the
+      codomain. For a map from R four to R three, the kernel sits in R four, the range in R
+      three, so the rank is at most three even though the domain has dimension four.
+
+  - section: rank-nullity
+    focus: '  $$\rho(T) + \nu(T) = \dim V.$$'
+    say: >
+      Now the central theorem: rank nullity. If V is finite dimensional and T is linear from
+      V to any W, then the rank plus the nullity equals the dimension of V, the domain. For
+      an m by n matrix, the rank plus the dimension of the null space equals n, the number of
+      columns.
+
+  - section: rank-nullity
+    focus: '**Proof idea (examinable).**'
+    say: >
+      The proof is examinable, and short. Take a basis of the kernel and extend it to a basis
+      of V by adding r more vectors. The images of those r extra vectors span the range,
+      because the kernel vectors go to zero. They are independent, because any dependence
+      would put a combination of the extra vectors into the kernel, forcing all coefficients
+      to vanish. So the rank is r, which is the dimension of V minus the nullity.
+
+  - section: rank-nullity
+    focus: '- If $\dim V > \dim W$, then $\nu(T) \ge \dim V - \dim W > 0$, so $T$ is **never one-one**.'
+    say: >
+      The consequences make excellent quick questions. The rank is at most the smaller of
+      the two dimensions. A map from R five onto R three has nullity two. If the domain is
+      bigger than the codomain, the nullity is positive, so the map is never one one. If the
+      domain is smaller, the rank is too small, so the map is never onto.
+
+  - section: rank-nullity
+    focus: '| $A \mapsto A - A^T$ on $M_n(\R)$ | $\frac{n(n - 1)}{2}$ (skew-symmetric) | $\frac{n(n + 1)}{2}$ (symmetric) |'
+    say: >
+      Memorise a few rows of this table. Differentiation on polynomials of degree at most n
+      has nullity one, the constants, and rank n. The trace on n by n matrices has rank one
+      and nullity n squared minus one. And A minus A transpose has kernel the symmetric
+      matrices, of dimension n times n plus one over two, and range the skew symmetric ones,
+      of dimension n times n minus one over two.
+
+  - section: rank-nullity
+    question: q0008
+    say: >
+      Now try the worked example. Find the dimension of the kernel of this map from R four to
+      R three.
+    answer: >
+      The third row, two, three, four, five, is the sum of the first two rows, and the first
+      two are independent. So the rank is two, and the nullity is four minus two, which is
+      two. The tempting answer one assumes the rank is three, the maximum, without spotting
+      the dependence.
+
+  - section: rank-nullity
+    focus: 'The theorem needs $V$ finite-dimensional, and the sum is $\dim V$ (the **domain**), not $\dim W$.'
+    say: >
+      The caution here is simple but costly. The sum is the dimension of the domain, not the
+      codomain. For a matrix, that means the number of columns, not rows. And the theorem
+      needs V to be finite dimensional. If an option gives a nullity using the codomain,
+      cross it out at once.
+
+  - section: injective-surjective
+    focus: '- **$T$ is one-one (injective) $\iff N(T) = \{0\}$.**'
+    say: >
+      Next, one one and onto. T is one one exactly when its kernel is zero, because T u
+      equals T v means T of u minus v is zero. Equivalently, T sends independent sets to
+      independent sets. T is onto when the range is all of W, which in finite dimensions
+      means the rank equals the dimension of W.
+
+  - section: injective-surjective
+    focus: '  $$T \text{ one-one} \iff T \text{ onto} \iff T \text{ bijective} \iff \rho(T) = n \iff \nu(T) = 0.$$'
+    say: >
+      When the domain and codomain have the same finite dimension n, a miracle happens. One
+      one, onto and bijective are all equivalent, and equivalent to rank n and nullity zero.
+      It follows straight from rank nullity. For an operator with matrix A, it is the same as
+      the determinant of A being non zero.
+
+  - section: injective-surjective
+    focus: '**Infinite dimensions break this.**'
+    say: >
+      But infinite dimensions break this. On the space of all polynomials, differentiation
+      is onto but not one one, since constants die. Multiplication by x is one one but not
+      onto, since nothing maps to a constant. Likewise, even in finite dimensions, if the
+      dimensions differ the equivalence fails: the inclusion of R two into R three is one one
+      but not onto.
+
+  - section: injective-surjective
+    focus: 'Its inverse map $T^{-1} : W \to V$ is **automatically linear**.'
+    say: >
+      A bijective linear map is called invertible, and its inverse is automatically linear.
+      If T has matrix A, the inverse map has matrix A inverse. A bijective linear map is an
+      isomorphism, and two finite dimensional spaces over the same field are isomorphic
+      exactly when they have the same dimension. So polynomials of degree at most three, and
+      two by two matrices, are both copies of R four.
+
+  - section: injective-surjective
+    question: q0014
+    say: >
+      Let's find an inverse. T of x, y is two x plus y, comma, three x plus two y. Find T
+      inverse.
+    answer: >
+      The matrix has rows two, one and three, two, with determinant one. Its inverse has rows
+      two, minus one and minus three, two. So T inverse of x, y is two x minus y, comma,
+      minus three x plus two y. The tempting option two x minus three y uses the transpose of
+      the inverse. Always check by applying T to your answer.
+
+  - section: matrix-representation
+    focus: '**Convention used here:** the **$j$th column** holds the $C$-coordinates of $T(v_j)$.'
+    say: >
+      Now the matrix of a linear map. Fix an ordered basis B of V and C of W. Apply T to the
+      j-th basis vector of V and write the result in terms of C. Those coordinates form the
+      j-th column. With that convention, the coordinates of T v are the matrix times the
+      coordinates of v. A few books write the coordinates as rows and get the transpose, so
+      always check which convention the question states.
+
+  - section: matrix-representation
+    focus: '$$[D] = \begin{pmatrix}0 & 1 & 0\\ 0 & 0 & 2\\ 0 & 0 & 0\end{pmatrix}.$$'
+    say: >
+      In the standard basis, the matrix is just the coefficient matrix read row by row. For
+      differentiation on polynomials of degree at most two, with basis one, x, x squared:
+      the derivative of one is zero, of x is one, of x squared is two x. Their coordinates
+      become the columns, giving the matrix on the board, with a one and a two just above the
+      diagonal.
+
+  - section: matrix-representation
+    question: q0010
+    say: >
+      Here is that example as a question. Choose the matrix of differentiation relative to
+      the basis one, x, x squared.
+    answer: >
+      The columns are the coordinates of zero, of one, and of two x: that is zero, zero,
+      zero; then one, zero, zero; then zero, two, zero. So the matrix has a one in the first
+      row, second column, and a two in the second row, third column. The lower triangular
+      option is the transpose, with coordinates written as rows.
+
+  - section: matrix-representation
+    focus: '- **Composition ↔ product:** for $T : U \to V$ and $S : V \to W$, $[S \circ T]_{B}^{D} = [S]_{C}^{D}\,[T]_{B}^{C}$. Note the order: $S$ is applied second but written first.'
+    say: >
+      The algebra follows. Sums and scalar multiples of maps give sums and scalar multiples
+      of matrices. Composition corresponds to the product, in the order written: S after T
+      has matrix S times T, with S applied second but written first. Rank is the same for any
+      choice of bases. And the space of linear maps from an n dimensional to an m dimensional
+      space has dimension m n.
+
+  - section: matrix-representation
+    focus: 'writing the images themselves as columns instead of their **coordinates**'
+    say: >
+      With non standard bases, two slips are common: writing the images themselves as
+      columns instead of their coordinates in the codomain basis, and writing coordinates as
+      rows. In the third example, the image two, two must first be rewritten in the basis one,
+      zero and one, one, giving coordinates zero, two. Check one column by reconstructing the
+      image from it.
+
+  - section: change-of-basis
+    focus: '- For an operator $T$ on $V$: $\;[T]_{B''} = P^{-1}\,[T]_B\,P$.'
+    say: >
+      Change of basis. The transition matrix P has as its j-th column the old coordinates of
+      the j-th new basis vector. Then the matrix of an operator in the new basis is P inverse
+      times the old matrix times P. Two square matrices related this way are called similar,
+      and two matrices represent the same operator in two bases exactly when they are
+      similar. For maps between different spaces you get Q inverse A P, and such matrices
+      are called equivalent; they share the rank.
+
+  - section: change-of-basis
+    focus: '**Similarity invariants** (they belong to the operator, not to the basis): determinant, trace, rank, nullity, characteristic polynomial, eigenvalues, minimal polynomial.'
+    say: >
+      Similarity invariants belong to the operator, not the basis: determinant, trace, rank,
+      nullity, characteristic polynomial, eigenvalues, minimal polynomial. The individual
+      entries, the diagonal, and symmetry are not invariant. In the worked example, the new
+      matrix has rows one, two and one, one, and both old and new have trace two and
+      determinant minus one. Use this as a filter: cross out any option with the wrong trace
+      or determinant.
+
+  - section: change-of-basis
+    focus: 'Same trace, determinant and rank do **not** make two matrices similar.'
+    say: >
+      But never reverse that logic. Equal trace, determinant and rank do not make two
+      matrices similar. The identity and the matrix with rows one, one and zero, one agree in
+      all three, yet the only matrix similar to the identity is the identity itself, because
+      P inverse I P is I.
+
+  - section: sylvester
+    focus: '  $$\max\{N(A), N(B)\} \;\le\; N(AB) \;\le\; N(A) + N(B).$$'
+    say: >
+      Finally, Sylvester's law of nullity. For n by n matrices, the nullity of A B is at
+      least the larger of the two nullities and at most their sum. In rank form, the rank of
+      A B is at least rank A plus rank B minus n, and at most the smaller of the two ranks.
+      The proof applies rank nullity to T restricted to the kernel of S T, which lands in the
+      kernel of S and has kernel equal to the kernel of T.
+
+  - section: sylvester
+    focus: '- If $A$ is $n \times n$ and $A^2 = O$, then $0 \ge 2\rho(A) - n$, so $\rho(A) \le n/2$.'
+    say: >
+      The consequences are what get examined. Multiplying by an invertible matrix keeps the
+      rank. If A squared is zero, then zero is at least twice the rank of A minus n, so the
+      rank is at most half of n. If A B is zero, the ranks add to at most n. And in the
+      worked example with five by five matrices of nullities two and one, the nullity of A B
+      is two or three.
+
+  - section: sylvester
+    question: q0016
+    say: >
+      Try this. Four by four matrices of ranks three and two. What is the least possible rank
+      of A B?
+    answer: >
+      By Sylvester's inequality, the rank of A B is at least three plus two minus four, which
+      is one, and that is attained by suitable diagonal matrices. So A B can never be zero.
+      The tempting answer two is the upper bound, the smaller rank, not the least value.
+
+  - section: sylvester
+    focus: '$\rho(AB)$ and $\rho(BA)$ can differ.'
+    say: >
+      Two warnings. The ranks of A B and B A can differ: with the example on the board, A B
+      is zero while B A is not. And there is no nullity law for sums: take B equal to minus A
+      with A non singular, and A plus B is zero, with full nullity.
+
+  - section: exam-tips
+    say: >
+      Let's recap. To test linearity, check that zero goes to zero, then look for squares,
+      products, moduli, constants or determinants. Rank plus nullity equals the dimension of
+      the domain, the number of columns. A bigger domain means never one one; a smaller one
+      means never onto. In equal finite dimensions, one one, onto and non zero determinant
+      coincide. Columns of the matrix are coordinates of images. Similar matrices share
+      invariants, but shared invariants prove nothing. Now try the practice questions.

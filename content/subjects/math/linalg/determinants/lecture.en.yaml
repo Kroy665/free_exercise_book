@@ -1,0 +1,262 @@
+# Spoken lecture for "Determinants".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: definition
+    say: >
+      Welcome. This lecture revises determinants: the definition, the properties that make
+      computation fast, cofactors and the adjoint, symmetric and skew symmetric determinants, the
+      standard determinants every candidate should recognise, and Cramer's rule. By the end you
+      should be able to evaluate most exam determinants without full expansion, and decide at a
+      glance what a system of equations can do.
+
+  - section: definition
+    focus: '**Sarrus'' rule** (order 3 only)'
+    say: >
+      For order two, the determinant is a d minus b c. For order three, expand along the first
+      row, with alternating signs. Sarrus' rule is a shortcut: copy the first two columns to the
+      right, add the three down right diagonal products and subtract the three up right ones. But
+      remember, Sarrus works only for order three. It gives wrong answers for order four.
+
+  - section: definition
+    focus: '- Each term takes **exactly one element from each row and each column**.'
+    say: >
+      The general definition, due to Leibniz, is a sum over all permutations. Each term takes
+      exactly one element from each row and each column, so there are n factorial terms. The sign
+      of a term is plus if the column permutation is even, and minus if it is odd. For order four,
+      that means twenty four terms, half with each sign.
+
+  - section: definition
+    question: q0005
+    say: >
+      Try reading a sign. In a fourth order determinant, with which sign does this term appear?
+    answer: >
+      With a plus sign. The columns, read in row order, are two, one, four, three. That permutation
+      swaps one and two, and swaps three and four: two transpositions, so it is even. The tempting
+      answer, minus, comes from seeing a swap and stopping at one.
+
+  - section: definition
+    focus: 'A **triangular** determinant (all entries above, or all below, the diagonal are zero) equals the product of its diagonal entries.'
+    say: >
+      Laplace expansion lets you expand along any row or any column, using cofactors. Each
+      cofactor has order one less, so you reduce step by step. And the exam tip: a triangular
+      determinant equals the product of its diagonal entries. Most hand calculations aim for that
+      form, or for two zeros in a row before expanding.
+
+  - section: properties
+    focus: '| Interchange two rows (or two columns) | changes sign |'
+    say: >
+      Now the properties table, which does most of the work. Transposing leaves the determinant
+      unchanged, so every row property is also a column property. Interchanging two rows changes
+      the sign. Two identical or proportional rows give zero. Adding a multiple of one row to
+      another changes nothing. And if one row is a sum, the determinant splits into a sum of two
+      determinants.
+
+  - section: properties
+    focus: '| Multiply the whole array by $k$ | $\det(kA) = k^{n}\det A$ |'
+    say: >
+      Spend a moment on scaling, because it is the commonest trap. Multiplying one row by k
+      multiplies the determinant by k. Multiplying the whole array by k multiplies it by k to the
+      n, since every one of the n rows carries a k. So for a three by three matrix with
+      determinant five, the determinant of two A is eight times five, that is forty.
+
+  - section: properties
+    focus: 'In general $\det(A + B) \ne \det A + \det B$'
+    say: >
+      The determinant is linear in each row separately, but not in the whole array. In general,
+      the determinant of a sum is not the sum of the determinants: for the two by two identity
+      added to itself, you get four, not two. Also, an operation like row one goes to two row one
+      plus row two multiplies the value by two; only adding a multiple of another row is free.
+
+  - section: properties
+    focus: '**Factor theorem.**'
+    say: >
+      Two powerful ideas for symbolic determinants. First, zero conditions: if every row sums to
+      zero, adding all columns into the first gives a zero column. Second, the factor theorem: if
+      putting a equal to b makes the determinant vanish, then a minus b is a factor. Find all such
+      factors, compare degrees to find what remains, and fix the constant by comparing one term,
+      such as the diagonal product.
+
+  - section: properties
+    question: q0014
+    say: >
+      Combine the rules. With these determinants of A and B, find the determinant of two A B
+      transpose.
+    answer: >
+      Minus forty eight. The factor two on a three by three matrix contributes two cubed, that is
+      eight. The determinant of B transpose equals that of B, minus three. So the value is eight
+      times two times minus three. The tempting minus twelve uses two instead of eight.
+
+  - section: minors-cofactors
+    focus: '- the **cofactor** is $C_{ij} = (-1)^{i+j} M_{ij}$.'
+    say: >
+      Minors and cofactors. The minor of an element is the determinant left after deleting its row
+      and column. The cofactor is the minor with the sign minus one to the i plus j. The sign
+      pattern is a chessboard starting with plus in the top left corner. So the sign is minus
+      exactly when i plus j is odd.
+
+  - section: minors-cofactors
+    focus: '**Alien cofactors.**'
+    say: >
+      The expansion theorem says the elements of any row times their own cofactors sum to the
+      determinant. The alien cofactor rule says the elements of one row times the cofactors of a
+      different row always sum to zero. Why? That sum is the expansion of a determinant in which
+      one row has been replaced by a copy of another, and a determinant with two equal rows is
+      zero.
+
+  - section: minors-cofactors
+    question: q0003
+    say: >
+      Now find a cofactor. In this determinant, what is the cofactor of the element six, in row
+      two, column three?
+    answer: >
+      Six. The minor is one times eight minus two times seven, which is minus six. The position
+      has i plus j equal to five, which is odd, so the sign flips, and the cofactor is plus six.
+      The option minus six is the minor, not the cofactor.
+
+  - section: product-adjoint
+    focus: '$$\det(AB) = \det A \cdot \det B.$$'
+    say: >
+      The product theorem: the determinant of A B is the determinant of A times that of B. Since
+      transposing changes nothing, you may multiply row by row or column by column as well. The
+      consequences are used constantly: the determinant of A B equals that of B A, even when the
+      matrices do not commute, and the determinant of A times A transpose is the square of the
+      determinant of A.
+
+  - section: product-adjoint
+    focus: 'Multiply the two arrays row by row.'
+    say: >
+      The worked example shows the product theorem used as a trick. Take the circulant with rows
+      a b c, b c a, c a b. Rearrange a copy of it without changing its value, then multiply the two
+      row by row. The result is the determinant with entries two b c minus a squared, c squared,
+      and so on, which therefore equals the square of the circulant.
+
+  - section: product-adjoint
+    focus: '$$A\,(\operatorname{adj} A) = (\operatorname{adj} A)\,A = (\det A)\,I_n.$$'
+    say: >
+      The adjoint is the transpose of the matrix of cofactors. Notice the transpose; it is easy to
+      forget. The expansion theorem gives the determinant on the diagonal of A times adjoint A,
+      and the alien cofactor rule gives zeros off the diagonal. So A times adjoint A is the
+      determinant times the identity.
+
+  - section: product-adjoint
+    focus: '- $\det(\operatorname{adj} A) = (\det A)^{\,n-1}$ for $n \ge 2$. It holds even when $\det A = 0$.'
+    say: >
+      Take determinants of that identity, and you get the key fact: the determinant of the adjoint
+      is the determinant of A to the power n minus one. It holds even when the determinant of A is
+      zero. So for order three it is the square, and for order four the cube. Applying it twice,
+      the adjoint of the adjoint is the determinant to the n minus two, times A.
+
+  - section: product-adjoint
+    question: q0008
+    say: >
+      A quick one. A is three by three with determinant four. Find the determinant of its adjoint.
+    answer: >
+      Sixteen. The determinant of the adjoint is four to the power three minus one, which is four
+      squared. Sixty four uses the power n instead of n minus one, and four forgets the power
+      altogether.
+
+  - section: product-adjoint
+    focus: '$\det A = 0$ does **not** make $\operatorname{adj} A$ zero.'
+    say: >
+      A caution. A zero determinant does not make the adjoint zero. For the diagonal matrix with
+      entries one, one, zero, the adjoint is the diagonal matrix zero, zero, one. Only the
+      determinant of the adjoint vanishes.
+
+  - section: symmetric-skew
+    focus: '$$\det A = \det A^{T} = \det(-A) = (-1)^{n}\det A.$$'
+    say: >
+      Symmetric and skew symmetric determinants. In a skew symmetric array, each entry is minus its
+      mirror image, so the diagonal is zero. The famous result: a skew symmetric determinant of odd
+      order is zero. The proof is the line on the board. Transposing gives minus A, and pulling out
+      minus one from n rows gives minus one to the n. For odd n, the determinant equals its own
+      negative.
+
+  - section: symmetric-skew
+    focus: '**Skew-symmetric of even order is a perfect square.**'
+    say: >
+      For even order, a skew symmetric determinant is a perfect square. For order two it is a
+      squared. For order four, with entries a, b, c in the first row and d, e in the second, and f
+      in the third, it is the square of a f minus b e plus c d. In general this square root is
+      called the Pfaffian.
+
+  - section: symmetric-skew
+    question: q0021
+    say: >
+      Use that formula. Evaluate this skew symmetric determinant of order four.
+    answer: >
+      Sixty four. Here a, b and c are one, two and three, d and e are four and five, and f is six.
+      a f minus b e plus c d is six minus ten plus twelve, which is eight, and its square is sixty
+      four. Zero is the trap: only odd order skew symmetric determinants vanish.
+
+  - section: symmetric-skew
+    focus: 'A symmetric determinant with zero diagonal need **not** vanish:'
+    say: >
+      And keep the caution straight. A symmetric determinant with zero diagonal need not vanish:
+      the one with zeros on the diagonal and ones elsewhere equals two. The vanishing result is for
+      skew symmetric determinants of odd order only. For the symmetric case of order three, the
+      value is a b c plus two f g h minus a f squared minus b g squared minus c h squared.
+
+  - section: standard-determinants
+    focus: '| $(1, 1, 1),\ (a, b, c),\ (a^2, b^2, c^2)$ (Vandermonde) | $(a-b)(b-c)(c-a)$ |'
+    say: >
+      Now the standard determinants. The Vandermonde, with rows of ones, a b c, and their squares,
+      equals a minus b, times b minus c, times c minus a. Proof by the factor theorem: it vanishes
+      when any two of a, b, c are equal, the degree is three, and comparing the diagonal term fixes
+      the constant as one. With cubes in the third row, an extra factor a plus b plus c appears.
+
+  - section: standard-determinants
+    focus: '| $(a, b, c),\ (b, c, a),\ (c, a, b)$ (circulant) | $-(a^3 + b^3 + c^3 - 3abc)$ |'
+    say: >
+      The circulant equals minus, a cubed plus b cubed plus c cubed minus three a b c. Adding all
+      columns into the first takes out a plus b plus c. Watch the overall minus sign; the exam tip
+      fixes it quickly. Put a equal to one and b and c equal to zero, and the array becomes a row
+      swap of the identity, with value minus one.
+
+  - section: standard-determinants
+    focus: '| $(b+c, a, a),\ (b, c+a, b),\ (c, c, a+b)$ | $4abc$ |'
+    say: >
+      Skim the rest of the table, but memorise a few rows. One plus a, one plus b, one plus c on
+      the diagonal with ones elsewhere gives a b c plus a b plus b c plus c a. The determinant with
+      x on the diagonal and a elsewhere is x plus two a, times x minus a squared. And the one on
+      the board equals four a b c. Check any of these by putting in small numbers.
+
+  - section: cramers-rule
+    focus: '- **If $D \ne 0$:** there is a **unique** solution $x = \dfrac{D_x}{D}$, $y = \dfrac{D_y}{D}$, $z = \dfrac{D_z}{D}$.'
+    say: >
+      Finally, Cramer's rule. Let D be the coefficient determinant, and D x, D y, D z the
+      determinants with one column replaced by the constants. If D is non zero, there is a unique
+      solution, x equals D x over D, and so on. In the worked example, D is six, and the solution
+      is one, two, three.
+
+  - section: cramers-rule
+    focus: '- **If $D = 0$ and $D_x = D_y = D_z = 0$:** Cramer''s rule decides nothing.'
+    say: >
+      If D is zero and some D x, D y or D z is not, the system is inconsistent. But if D and all
+      three are zero, Cramer's rule decides nothing: there may be infinitely many solutions, or
+      none. The caution gives the example: x plus y plus z equal to one, two and three. Every
+      determinant is zero, yet the system is plainly inconsistent.
+
+  - section: cramers-rule
+    focus: '- **Homogeneous system** (all $d_i = 0$): $x = y = z = 0$ is always a solution.'
+    say: >
+      For a homogeneous system, zero is always a solution, and a non trivial solution exists if
+      and only if D is zero. For k x plus y plus z, x plus k y plus z, x plus y plus k z, the
+      determinant is k plus two times k minus one squared, the same pattern as the table.
+
+  - section: cramers-rule
+    question: q0011
+    say: >
+      Use that result. When does this homogeneous system have a non trivial solution?
+    answer: >
+      Exactly when k is one or minus two. Those are the zeros of k plus two times k minus one
+      squared. The option with k equal to one only forgets the factor k plus two, and the last
+      option describes when the only solution is the trivial one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. The determinant of k A is k to the n times the determinant. Each row swap flips
+      the sign. An n-th order determinant has n factorial terms. The cofactor carries the sign
+      minus one to the i plus j, and alien cofactors sum to zero. The determinant of the adjoint
+      is the determinant to the n minus one. Skew symmetric of odd order is zero. And in Cramer's
+      rule, D non zero means a unique solution. Now try the practice questions.

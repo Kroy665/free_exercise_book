@@ -1,0 +1,341 @@
+# Spoken lecture for "3D Coordinates and Planes".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: coordinates
+    say: >
+      Welcome. Today we begin three dimensional geometry: coordinates, direction cosines, and the
+      plane. By the end you should be able to use the section formula and the coplanarity test,
+      convert direction ratios to direction cosines, put a plane in normal form, find distances,
+      feet and images, use the family of planes through a line, and pick out the acute or obtuse
+      bisector plane by a sign test.
+
+  - section: coordinates
+    focus: 'The three coordinate planes cut space into **eight octants**'
+    say: >
+      Fix three mutually perpendicular axes, right handed. The coordinates of a point are its
+      signed distances from the three coordinate planes, and the signs tell you which of the
+      eight octants it lies in. A point on the x axis has y and z zero. The foot of the
+      perpendicular from x, y, z to the x axis is x, zero, zero, so the distance of the point
+      from the x axis is the root of y squared plus z squared.
+
+  - section: coordinates
+    focus: 'internally for $m, n > 0$; for external division replace $n$ by $-n$.'
+    say: >
+      Distance works exactly as in the plane, with a third squared difference; from one, two,
+      three to four, minus two, fifteen the differences are three, minus four, twelve, so the
+      distance is thirteen. The section formula: the point dividing P Q in the ratio m to n is m
+      times Q plus n times P, over m plus n, coordinate by coordinate. Notice that m goes with the
+      far point Q. For external division replace n by minus n, so the denominator is m minus n.
+
+  - section: coordinates
+    question: q0002
+    say: >
+      Try this. Find the point dividing the join of A, two, minus three, four, and B, eight,
+      zero, ten, internally in the ratio one to two.
+    answer: >
+      With m equal to one and n equal to two, take B plus two A, over three. That gives twelve
+      over three, minus six over three, and eighteen over three: the point four, minus two, six.
+      The tempting option six, minus one, eight swaps the weights, which is division in the
+      ratio two to one.
+
+  - section: coordinates
+    focus: 'the $yz$-plane divides $PQ$ in the ratio $-x_1 : x_2$'
+    say: >
+      To find the ratio in which a coordinate plane divides P Q, set that coordinate of the
+      section point to zero. The y z plane gives the ratio minus x one to x two. If the ratio
+      comes out negative, the plane cuts P Q produced, that is externally, which is the caution
+      in the notes.
+
+  - section: coordinates
+    focus: 'it divides each such line in the ratio $3 : 1$.'
+    say: >
+      The centroid of a triangle is the average of the three vertices; the centroid of a
+      tetrahedron is the average of the four. It lies on each line from a vertex to the centroid
+      of the opposite face, and divides it in the ratio three to one. The volume of a tetrahedron
+      is one sixth of the modulus of a four by four determinant of the coordinates with a column
+      of ones. Four points are coplanar exactly when that determinant is zero, or equally when
+      the triple product of A B, A C and A D vanishes.
+
+  - section: direction-cosines
+    focus: 'l^2 + m^2 + n^2 = 1'
+    say: >
+      Next, direction cosines. If a line makes angles alpha, beta, gamma with the three axes, its
+      direction cosines l, m, n are the cosines of those angles, and the squares add to one.
+      Reversing the line changes all three signs. Two consequences follow: the squared sines add
+      to two, and the cosines of twice the angles add to minus one. So no line can make sixty
+      degrees with all three axes, because three quarters is not one.
+
+  - section: direction-cosines
+    focus: 'Any triple $a, b, c$ proportional to $l, m, n$ is a set of **direction ratios** (d.r.s)'
+    say: >
+      Any triple proportional to the direction cosines is a set of direction ratios. For a
+      segment P Q, the differences of coordinates are direction ratios. To get back the
+      direction cosines, divide each by the root of a squared plus b squared plus c squared, with
+      the same sign throughout. For two, minus three, six the root is seven. Dividing by the
+      sum, which gives five, is a common slip.
+
+  - section: direction-cosines
+    focus: 'With d.r.s, $\cos\theta = \dfrac{a_1a_2 + b_1b_2 + c_1c_2}{\sqrt{\sum a_1^2}\sqrt{\sum a_2^2}}$.'
+    say: >
+      The angle between two lines: cos theta is l one l two plus m one m two plus n one n two, or
+      with direction ratios, the dot product over the product of the lengths. The lines are
+      perpendicular when the dot product is zero, and parallel when the ratios are proportional.
+      A line perpendicular to both has the cross product as its direction ratios.
+
+  - section: direction-cosines
+    focus: 'Example: the diagonals of a unit cube have d.r.s $(1, 1, 1)$ and $(-1, 1, 1)$'
+    say: >
+      The cube gives three classic angles. Two body diagonals, with direction ratios one, one,
+      one and minus one, one, one, give cos theta equal to one third. A body diagonal and an edge
+      give one over root three. A body diagonal and a face diagonal give root two thirds. These
+      appear as options together, so know which is which.
+
+  - section: direction-cosines
+    focus: 'i.e. $PQ\cos\theta$. Use d.c.s, not raw d.r.s.'
+    say: >
+      The projection of a segment P Q on a line is the dot product of the coordinate differences
+      with the direction cosines of the line, that is P Q cos theta. The exam tip: use direction
+      cosines, not raw direction ratios. The projection on a plane has length P Q sin theta,
+      with theta the angle to the normal, and a plane area projects by the factor modulus of cos
+      theta.
+
+  - section: direction-cosines
+    question: q0006
+    say: >
+      Try this. Find the length of the projection of the segment from three, minus one, two to
+      five, two, minus four on the line with direction ratios two, minus six, three.
+    answer: >
+      P Q has differences two, three, minus six. The line's direction cosines are two sevenths,
+      minus six sevenths, three sevenths. The dot product is four minus eighteen minus eighteen,
+      over seven, which is minus thirty two sevenths, so the length is thirty two sevenths. The
+      tempting thirty two forgets to divide by seven.
+
+  - section: plane-forms
+    focus: 'The coefficients $a, b, c$ are **direction ratios of the normal**.'
+    say: >
+      Now the plane. Every first degree equation a x plus b y plus c z plus d equals zero is a
+      plane, and every plane has such an equation. The key fact: a, b, c are direction ratios of
+      the normal. A plane through a given point with a given normal is a times x minus x one,
+      plus b times y minus y one, plus c times z minus z one, equals zero.
+
+  - section: plane-forms
+    focus: '| Intercept | $\dfrac{x}{\alpha} + \dfrac{y}{\beta} + \dfrac{z}{\gamma} = 1$ | cuts the axes at $\alpha, \beta, \gamma$ |'
+    say: >
+      The intercept form is x over alpha plus y over beta plus z over gamma equals one. For two x
+      minus three y plus four z equals twelve, divide by twelve to get intercepts six, minus four
+      and three. Keep the sign of the minus four. The tetrahedron cut off from the axes has volume
+      one sixth of the modulus of the product of the intercepts.
+
+  - section: plane-forms
+    focus: '**To the normal form.**'
+    say: >
+      The normal form is l x plus m y plus n z equals p, where l, m, n are the direction cosines
+      of the normal from the origin, and p, which is never negative, is the distance of the plane
+      from the origin. To reach it, move d to the right, so the right side is minus d, then divide
+      by the root of a squared plus b squared plus c squared, with whichever sign makes the right
+      side non negative.
+
+  - section: plane-forms
+    question: q0009
+    say: >
+      Try it. Write two x minus y plus two z plus nine equals zero in normal form.
+    answer: >
+      Move nine across: two x minus y plus two z equals minus nine. The root of four plus one plus
+      four is three, and to make the right side positive divide by minus three. That gives minus
+      two thirds x plus one third y minus two thirds z equals three, so p is three. The tempting
+      option with plus two thirds x and right side three is a different, parallel plane.
+
+  - section: plane-forms
+    focus: 'In the normal form, $p$ must be $\ge 0$.'
+    say: >
+      That is exactly the caution in the notes. Dividing by plus three gives right side minus
+      three, which is not normal form. And changing minus three to three without flipping the
+      other signs gives a different plane. Flip every sign or none.
+
+  - section: plane-forms
+    focus: '$\vec{AB} \times \vec{AC} = (-21, -9, 3) \parallel (7, 3, -1)$'
+    say: >
+      For a plane through three points, the fastest route is the cross product of two edge
+      vectors, which gives the normal. Through two, one, zero and the other two points, the cross
+      product is minus twenty one, minus nine, three, which is parallel to seven, three, minus
+      one. The point normal form then gives seven x plus three y minus z equals seventeen.
+      Always check by substituting the other two points.
+
+  - section: plane-forms
+    focus: 'A missing variable means the plane is parallel to that axis'
+    say: >
+      Special positions: a missing variable means the plane is parallel to that
+      axis: b y plus c z plus d equals zero is parallel to the x axis. A missing constant means
+      the plane passes through the origin. And z equals k is parallel to the x y plane.
+
+  - section: distance-angle
+    focus: 'The **signed distance** of $P$ from $\Pi$ is'
+    say: >
+      Now distances. The signed distance of a point from a plane is the value of a x plus b y
+      plus c z plus d at the point, divided by the root of a squared plus b squared plus c
+      squared. Its modulus is the distance. Watch the sign of each substituted term; a negative
+      z coordinate is the usual source of error.
+
+  - section: distance-angle
+    focus: 'The origin''s side is the side where the expression has the sign of $d$.'
+    say: >
+      The sign itself is useful. Two points lie on the same side of a plane when the expression
+      has the same sign at both, and on opposite sides when the signs differ. The origin gives
+      the value d, so the origin's side is the side where the expression has the sign of d. We
+      use this again for bisectors.
+
+  - section: distance-angle
+    focus: '(same $a, b, c$!) are at distance'
+    say: >
+      Two parallel planes with the same a, b, c are at distance the modulus of d one minus d two,
+      over the root of a squared plus b squared plus c squared.
+      The exam tip says make the coefficients identical, not just proportional, before you
+      subtract the constants.
+
+  - section: distance-angle
+    question: q0013
+    say: >
+      Try this. Find the distance between the planes two x minus two y plus z plus three equals
+      zero and four x minus four y plus two z plus five equals zero.
+    answer: >
+      Halve the second plane first: two x minus two y plus z plus five halves. Now the
+      coefficients match, and the distance is three minus five halves, which is one half, over
+      three. That is one sixth. The tempting two thirds subtracts three and five without
+      equalising the coefficients.
+
+  - section: distance-angle
+    focus: 'N = P - t\,(a, b, c), \quad P'' = P - 2t\,(a, b, c)'
+    say: >
+      For the foot of the perpendicular and the image, compute one number, t, equal to the value
+      of the plane expression at P over a squared plus b squared plus c squared. The foot is P
+      minus t times the normal, and the image is P minus two t times the normal. For one, three,
+      four in two x minus y plus z plus three equals zero, t is one, the foot is minus one, four,
+      three, and the image is minus three, five, two. Check that the midpoint of P and its image
+      lies on the plane.
+
+  - section: distance-angle
+    focus: '**Angle between two planes** = angle between their normals:'
+    say: >
+      The angle between two planes is the angle between their normals, and for the acute angle
+      take the modulus of the dot product. Planes are perpendicular when the normals are, and
+      parallel when the normals are proportional. For two x minus y plus two z equals five and x
+      minus y equals three, cos theta is three over three root two, so the angle is pi by four.
+      Remember that x minus y has a normal with z component zero, not a missing component.
+
+  - section: distance-angle
+    focus: '**Variable plane at distance $p$ from $O$.**'
+    say: >
+      A standard locus. A variable plane at constant distance p from the origin meets the axes at
+      alpha, beta, gamma, so the reciprocals of their squares add to one over p squared. The
+      centroid of triangle A B C is alpha by three, beta by three, gamma by three, so its locus
+      has right side nine over p squared. For the tetrahedron O A B C you divide by four, and the
+      constant becomes sixteen.
+
+  - section: family
+    focus: 'except $P_2 = 0$ itself (the value $\lambda = \infty$)'
+    say: >
+      Now the family of planes through a line. If P one and P two are two non parallel planes,
+      every plane through their common line is P one plus lambda P two equals zero, except P two
+      itself. Why? Any point on the line makes both expressions zero, so it satisfies the
+      combination. One extra condition then fixes lambda, and the table lists the usual ones:
+      through a point, perpendicular to a plane, parallel to an axis, or through the origin.
+
+  - section: family
+    question: q0016
+    say: >
+      Try this. Find the plane through the line of intersection of x plus y plus z equals six and
+      two x plus three y plus four z plus five equals zero, passing through one, one, one.
+    answer: >
+      At one, one, one, the first expression is minus three and the second is fourteen. So minus
+      three plus fourteen lambda is zero, and lambda is three fourteenths. Multiplying by
+      fourteen gives twenty x plus twenty three y plus twenty six z minus sixty nine equals zero.
+      The option with eight x plus five y plus two z uses lambda with the wrong sign.
+
+  - section: family
+    focus: '| parallel to the $x$-axis | $a_1 + \lambda a_2 = 0$ |'
+    say: >
+      Two more conditions. For a plane perpendicular to a given plane, the dot product of the
+      family's normal with the given normal must vanish; in the notes' example that gives
+      twenty nine plus seven lambda equals zero. For a plane parallel to the x axis, simply make
+      the coefficient of x zero. In the third example, one plus two lambda is zero, lambda is
+      minus one half, and the plane is y minus three z plus six equals zero.
+
+  - section: family
+    focus: 'A sign slip in $\lambda$ still gives a plane through the common line'
+    say: >
+      Now the caution, and it is a clever one. A sign slip in lambda still gives a plane through
+      the common line, so substituting points of the line will not catch it. Check the extra
+      condition instead: the given point, or the perpendicularity, in your final answer.
+
+  - section: bisectors
+    focus: 'The **$+$ sign** gives the bisector of the angle **containing the origin**.'
+    say: >
+      Bisector planes are the loci of points equidistant from two planes: the first expression
+      over its norm equals plus or minus the second over its norm. The two bisectors are
+      perpendicular. To tell them apart, first make both constants positive. Then the plus sign
+      gives the bisector of the angle containing the origin. If the dot product of the normals is
+      positive, the origin lies in the obtuse angle; if negative, in the acute angle.
+
+  - section: bisectors
+    focus: 'Hence $n_1 \cdot n_2 > 0$ makes the origin''s region obtuse.'
+    say: >
+      Why? With both constants positive, the origin lies where both expressions are positive,
+      and the plus sign picks the points where the signed distances agree. Both normals point
+      into that region, so its angle is pi minus the angle between the normals. If the normals
+      make an acute angle, their dot product is positive, and the origin's region is obtuse.
+
+  - section: bisectors
+    question: q0019
+    say: >
+      Try this. Find the plane bisecting the acute angle between two x minus y plus two z plus
+      three equals zero and two x plus three y minus six z plus fourteen equals zero.
+    answer: >
+      Both constants are positive, and the norms are three and seven. The dot product of the
+      normals is four minus three minus twelve, minus eleven, which is negative, so the origin
+      lies in the acute angle, and the plus sign gives the acute bisector: eight x minus sixteen
+      y plus thirty two z minus twenty one equals zero. The option with twenty x plus two y is
+      the obtuse bisector.
+
+  - section: bisectors
+    focus: 'Forgetting to divide by the norms gives a plane through the common line, but not a bisector.'
+    say: >
+      The caution: forgetting to divide by the norms still gives a plane through the common
+      line, but not a bisector. And the sign test works only after both constants are made
+      positive.
+
+  - section: pair-of-planes
+    focus: 'represents a **pair of planes through the origin** iff $F$ factorises into two linear factors'
+    say: >
+      Finally, a pair of planes. A homogeneous second degree equation in x, y, z represents a pair
+      of planes through the origin exactly when it factorises into two linear factors. The
+      condition is the same determinant as for a pair of lines: a b c plus two f g h minus a f
+      squared minus b g squared minus c h squared equals zero. Here f is half the y z
+      coefficient, g half the z x, and h half the x y.
+
+  - section: pair-of-planes
+    focus: 'when $\Delta \ne 0$, $F = 0$ is a cone'
+    say: >
+      Notice the difference from two variables. In the plane, every homogeneous quadratic is a
+      pair of lines. In space it is not: when delta is nonzero, the equation is a cone, such as x
+      squared plus y squared minus z squared equals zero. For the angle, tan theta is two root of
+      f squared plus g squared plus h squared minus a b minus b c minus c a, over a plus b plus
+      c.
+
+  - section: pair-of-planes
+    focus: '**Perpendicular planes:** $a + b + c = 0$ (given that $F = 0$ is a pair of planes).'
+    say: >
+      So the planes are perpendicular when a plus b plus c is zero, given that the equation is a
+      pair of planes. In the example, x squared minus two y squared plus z squared minus x y
+      minus y z plus lambda z x, delta is a quarter of lambda minus two times two lambda plus
+      five. For lambda equal to two it factors as x plus y plus z, times x minus two y plus z, and
+      since one minus two plus one is zero, the planes are perpendicular.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Direction cosines have squares adding to one; get them by dividing by the
+      root of the sum of squares, never by the sum. Use direction cosines in projections. The
+      normal form needs a non negative right side. Equalise coefficients before using the
+      parallel plane distance. The image is twice the step to the foot. In the family P one plus
+      lambda P two, check the extra condition. For bisectors, make constants positive; the plus
+      sign contains the origin. Now try the practice questions.

@@ -1,0 +1,313 @@
+# Spoken lecture for "Roots, Coefficients and Transformations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: vieta
+    say: >
+      Welcome. Today we revise the theory of equations: how the roots of a polynomial are tied
+      to its coefficients, and how to build new equations from old ones without solving
+      anything. By the end you should be able to write Vieta's relations with the right signs,
+      compute symmetric functions of the roots in seconds, solve cubics whose roots are in A P
+      or G P, and handle reciprocal equations. Let's start with the relations themselves.
+
+  - section: vieta
+    focus: '$$S_r = (-1)^r\,\frac{a_r}{a_0}, \qquad r = 1, 2, \ldots, n.$$'
+    say: >
+      Write the polynomial with leading coefficient a nought, and factor it as a nought times the
+      product of x minus each root. Expanding and comparing coefficients gives the highlighted
+      formula. S r, the sum of all products of the roots taken r at a time, equals minus one to
+      the power r, times a r over a nought. So the sum of the roots is minus a one over a nought,
+      the sum of products in pairs is plus a two over a nought, and so on, with alternating signs.
+
+  - section: vieta
+    focus: '| $ax^4 + bx^3 + cx^2 + dx + e = 0$ | $-b/a$ | $c/a$ | $-d/a$ | $e/a$ |'
+    say: >
+      The table puts this in everyday letters. For a quartic, the sum of the roots is minus b over
+      a, the sum in pairs is c over a, the sum three at a time is minus d over a, and the product
+      of all four is e over a. Remember the counts too: for a quartic, the pairwise sum has six
+      terms and the triple sum has four.
+
+  - section: vieta
+    focus: '- $\sum \dfrac{1}{\alpha_i} = \dfrac{S_{n-1}}{S_n} = -\dfrac{a_{n-1}}{a_n}$ (when $a_n \ne 0$).'
+    say: >
+      Three consequences are worth keeping. The sum of the reciprocals of the roots is S n minus
+      one over S n, which simplifies to minus a n minus one over a n. Zero is a root exactly when
+      the constant term vanishes. And for a monic polynomial with integer coefficients, every
+      rational root is an integer dividing the constant term. That last fact is your first move
+      whenever you need to guess a root.
+
+  - section: vieta
+    focus: 'The $n$ Vieta relations do **not** solve the equation by themselves.'
+    say: >
+      Now a trap that appears as a statement question. The n Vieta relations, on their own, do not
+      solve the equation. If you try to eliminate the unknowns, you simply get the original
+      equation back. They become useful only when some extra relation among the roots is known,
+      such as roots in A P. Remember also the exam tip below: the product of the roots is minus a n
+      over a nought for odd degree, and plus a n over a nought for even degree.
+
+  - section: vieta
+    question: q0001
+    say: >
+      Let's check the signs. A question about a quartic has appeared next to the notes. Read it,
+      choose an option, and press Check.
+    answer: >
+      For a quartic, the sum of products three at a time is minus d over a. Here d is minus seven
+      and a is two, so the answer is plus seven halves. Minus seven halves forgets the alternating
+      sign. Five halves is the pairwise sum, and two is the product of all four roots.
+
+  - section: symmetric-functions
+    focus: 'Every symmetric polynomial in the roots is a polynomial in $S_1, \ldots, S_n$, so it can be found from the coefficients without solving the equation.'
+    say: >
+      A function of the roots is symmetric if swapping the roots in any way leaves it unchanged.
+      The fundamental theorem on symmetric functions says every symmetric polynomial in the roots
+      is a polynomial in the elementary sums. So we can evaluate it from the coefficients alone.
+      Notice the notation: the sum of alpha squared beta means all distinct terms of that shape,
+      which is six terms for three roots, not three.
+
+  - section: symmetric-functions
+    focus: '| $\sum\alpha^2\beta$ | $e_1e_2 - 3e_3$ |'
+    say: >
+      For a cubic, call the three elementary sums e one, e two and e three. The table is worth
+      memorising. The sum of squares is e one squared minus two e two. The sum of alpha squared
+      beta is e one e two minus three e three, because multiplying e one by e two produces every
+      such term once, plus the product of all three roots three times. The product of the three
+      pairwise sums, alpha plus beta and so on, is e one e two minus e three.
+
+  - section: symmetric-functions
+    focus: 'For $(\alpha+\beta)(\beta+\gamma)(\gamma+\alpha)$, a quicker route:'
+    say: >
+      Here is a neat shortcut for that last product. Alpha plus beta is e one minus gamma. So the
+      product is the monic cubic, evaluated at t equals e one. In other words, plug the sum of the
+      roots into the monic polynomial and you have the answer at once.
+
+  - section: symmetric-functions
+    focus: '$$s_k + c_1s_{k-1} + \cdots + c_{k-1}s_1 + k\,c_k = 0 \quad (1 \le k \le n),$$'
+    say: >
+      For power sums, use Newton's identities. Let s k be the sum of the k-th powers of the roots
+      of a monic equation. For k up to n, s k plus c one times s k minus one, and so on, plus k
+      times c k, equals zero. Notice the factor k on the last term. For k beyond n, the k c k term
+      disappears, and the identity is just the sum over the roots of alpha to the k minus n,
+      times f of alpha, which is zero.
+
+  - section: symmetric-functions
+    focus: '$$s_1 = 0,\quad s_2 = -2p,\quad s_3 = -3q,\quad s_4 = -p\,s_2 = 2p^2,\quad s_5 = -p\,s_3 - q\,s_2 = 5pq.$$'
+    say: >
+      For the reduced cubic x cubed plus p x plus q, the highlighted line gives the power sums.
+      s one is zero, s two is minus two p, s three is minus three q, s four is two p squared, and
+      s five is five p q. The exam tip explains s three directly: each root satisfies alpha cubed
+      equals minus p alpha minus q. Add over the three roots, and the constant q is added three
+      times, once per root. That is the usual slip.
+
+  - section: symmetric-functions
+    focus: '$\sum\alpha^2\beta^2 = e_2^2 - 2e_1e_3$ has a **minus** sign.'
+    say: >
+      And watch the caution box. The sum of alpha squared beta squared is e two squared minus two
+      e one e three. When you square the pairwise sum, the cross terms are two alpha beta gamma
+      times the sum of the roots, and they must be subtracted. A plus sign here is a classic wrong
+      option.
+
+  - section: symmetric-functions
+    question: q0003
+    say: >
+      Try this one. Find the sum of the cubes of the roots of x cubed minus three x plus one.
+    answer: >
+      Each root satisfies alpha cubed equals three alpha minus one. Adding over the three roots
+      gives three times the sum of the roots, which is zero, minus three. So the answer is minus
+      three. The tempting minus one adds the constant once instead of once per root.
+
+  - section: root-relations
+    focus: '| AP (cubic) | $a - d,\ a,\ a + d$ | sum $= 3a$ |'
+    say: >
+      Now the case where Vieta does solve the equation: when an extra relation among the roots is
+      given. The art is choosing the form of the roots. For an A P cubic, take a minus d, a, a plus
+      d, so the sum is three a and gives a at once. For a quartic in A P, take a minus three d, a
+      minus d, a plus d, a plus three d. For a G P cubic, take a over r, a, a r, so the product is
+      a cubed. For harmonic progression, take reciprocals first.
+
+  - section: root-relations
+    focus: '**AP example.** Solve $x^3 - 12x^2 + 39x - 28 = 0$, with roots in AP.'
+    say: >
+      In the A P example, the sum three a equals twelve, so a is four. The product gives four
+      times sixteen minus d squared equals 28, so d squared is nine. The roots are one, four and
+      seven. In the G P example, the product a cubed is 64, so a is four, and the sum then gives
+      r plus one over r equals five halves, so r is two and the roots are two, four, eight.
+
+  - section: root-relations
+    question: q0007
+    say: >
+      Now do it yourself. The roots of this cubic are in arithmetic progression. Find them.
+    answer: >
+      The sum is three a equals twelve, so the middle root is four. The product, four times
+      sixteen minus d squared, equals 28, so d is plus or minus three. The roots are one, four and
+      seven. Two, four, six has the right sum but its product is 48, not 28.
+
+  - section: root-relations
+    focus: '- Roots in **AP** $\iff$ the middle root $-\frac{b}{3a}$ is a root $\iff 2b^3 - 9abc + 27a^2d = 0$.'
+    say: >
+      The general conditions follow the same idea. The roots are in A P exactly when the mean of
+      the roots, minus b over three a, is itself a root. Substituting gives two b cubed minus nine
+      a b c plus 27 a squared d equals zero. For G P, the middle root is minus c over b, and the
+      condition is a c cubed equals b cubed d. Don't memorise blindly: remember the middle root and
+      substitute.
+
+  - section: root-relations
+    focus: 'the condition is $r = pq$'
+    say: >
+      If two roots of x cubed plus p x squared plus q x plus r have sum zero, then the third root
+      is minus p, the cubic factors as x squared plus q, times x plus p, and so r equals p q. For a
+      quartic with two roots summing to zero, write it as x squared minus k times a quadratic and
+      compare coefficients. In the example, k is three and the other factor is x squared minus two
+      x plus seven.
+
+  - section: basic-transformations
+    focus: 'then the new equation is $f(\psi(y)) = 0$, cleared of fractions.'
+    say: >
+      Next, transformations. To transform an equation is to find, without solving, the equation
+      whose roots are some function of the old roots. The rule is simple: if the new root is y
+      equals phi of alpha, solve for x in terms of y, substitute into f, and clear fractions.
+
+  - section: basic-transformations
+    focus: '| $k\alpha_i$ ($k \ne 0$) | $x \to x/k$ | multiply $a_r$ by $k^r$ |'
+    say: >
+      The table gives the three you must do on sight. For the negatives of the roots, change the
+      sign of alternate terms. For the roots multiplied by k, multiply a r by k to the power r.
+      For the reciprocals, reverse the order of the coefficients. Multiplying the roots is mainly
+      used to clear fractional coefficients: in the example, multiplying by six turns the fractions
+      into integers.
+
+  - section: basic-transformations
+    focus: 'For roots multiplied by $k$, substitute $x = y/k$, **not** $x = ky$.'
+    say: >
+      Here is the trap. For roots multiplied by k, substitute x equals y over k, not x equals k y.
+      Writing f of k x gives the roots divided by k. Always check with one coefficient: the new sum
+      of the roots must be k times the old sum.
+
+  - section: basic-transformations
+    question: q0013
+    say: >
+      Let's test that. Find the equation whose roots are three times the roots of the given cubic.
+    answer: >
+      Multiply a r by three to the power r. The coefficients one, minus one, two, minus one become
+      one, minus three, eighteen, minus 27. So the answer is x cubed minus three x squared plus 18
+      x minus 27. The option with 27 x cubed is f of three x, whose roots are divided by three.
+
+  - section: diminishing-roots
+    focus: '$$f(y + h) = f(h) + f''(h)\,y + \frac{f''''(h)}{2!}\,y^2 + \cdots + \frac{f^{(n)}(h)}{n!}\,y^n.$$'
+    say: >
+      To diminish every root by h, the new equation is f of y plus h equals zero. Taylor's theorem
+      expands it: the coefficients are f of h, f dash of h, f double dash of h over two factorial,
+      and so on. To increase the roots by h, diminish them by minus h.
+
+  - section: diminishing-roots
+    focus: 'Divide $f(x)$ by $x - h$ repeatedly. The successive remainders are the coefficients of the new equation, starting from the constant term.'
+    say: >
+      In practice, use repeated synthetic division. Divide by x minus h, note the remainder, divide
+      the quotient again, and so on. The remainders, read in order, are the new coefficients from
+      the constant term upward. In the example, diminishing the roots of x cubed minus six x squared
+      plus ten x minus three by two gives remainders one, minus two and zero, so the new equation
+      is y cubed minus two y plus one.
+
+  - section: diminishing-roots
+    focus: '"Diminished by $h$" means $f(x + h) = 0$, **not** $f(x - h) = 0$.'
+    say: >
+      Watch the direction. Diminished by h means f of x plus h, not f of x minus h. If alpha is a
+      root of f, then alpha minus h is a root of f of x plus h, because putting it in gives back f
+      of alpha. Get this wrong and you increase the roots instead.
+
+  - section: diminishing-roots
+    question: q0015
+    say: >
+      Try the synthetic division yourself. Diminish each root of this cubic by two.
+    answer: >
+      The three remainders are one, minus two and zero, read from the constant term upward. So the
+      equation is y cubed plus zero y squared minus two y plus one, that is, y cubed minus two y
+      plus one. The option with minus twelve y squared is f of y minus two, which increases the
+      roots.
+
+  - section: diminishing-roots
+    focus: '$$h = -\frac{a_1}{n\,a_0},$$'
+    say: >
+      Why did the y squared term vanish? In f of y plus h, the coefficient of y to the n minus one
+      is n a nought h plus a one. It vanishes when h is minus a one over n a nought, which is the
+      mean of the roots. Diminish every root by the mean, and the new roots sum to zero. This
+      reduces any cubic to the form y cubed plus p y plus q, the starting point of Cardan's method
+      in the next topic.
+
+  - section: general-transformation
+    focus: '$$E(y)^2 - y\,O(y)^2 = 0.$$'
+    say: >
+      For the squares of the roots, separate even and odd powers: f of x is E of x squared plus x
+      times O of x squared. Move one part across, square, and put y equals x squared. For x cubed
+      plus p x squared plus q x plus r, the result has coefficients two q minus p squared, q
+      squared minus two p r, and minus r squared. Check: the new sum of roots is p squared minus
+      two q, the sum of the squares.
+
+  - section: general-transformation
+    focus: 'If $\varphi$ is a symmetric expression in the roots, first use Vieta to write it as a function of **one** root.'
+    say: >
+      In general, eliminate x between f of x equals zero and y equals phi of x. If phi is a
+      symmetric expression, first use Vieta to write it in terms of one root. For example, beta
+      gamma equals the product of all three roots divided by alpha, which is minus q over alpha.
+      So substitute x equals minus q over y, and the equation is y cubed minus p y squared minus q
+      squared.
+
+  - section: general-transformation
+    focus: 'So the sum is $-7$.'
+    say: >
+      The second example shows how a transformation evaluates a nasty sum. To find the sum of one
+      plus alpha over one minus alpha, put y equal to that expression, solve for x, substitute, and
+      read off the sum of the new roots. The answer is minus seven. And remember the exam tip:
+      check every transformed equation with the sum or product of its roots. It catches sign slips
+      in seconds.
+
+  - section: reciprocal-equations
+    focus: '- **First class** ($\lambda = 1$): $a_{n-r} = a_r$ for every $r$. Coefficients equidistant from the ends are equal.'
+    say: >
+      Finally, reciprocal equations. An equation is reciprocal if one over alpha is a root, with
+      the same multiplicity, whenever alpha is. Equivalently, x to the n times f of one over x is
+      lambda times f, and lambda squared must be one. In the first class, coefficients equidistant
+      from the ends are equal. In the second class, they are equal in size and opposite in sign,
+      and for even degree the middle coefficient is zero.
+
+  - section: reciprocal-equations
+    focus: '| first class, odd degree | $x = -1$ | $x + 1$ | first class, even degree |'
+    say: >
+      The table tells you which roots are forced. First class, odd degree: minus one is a root.
+      Second class, odd degree: one is a root. Second class, even degree: both one and minus one,
+      so x squared minus one is a factor. After dividing out, you always reach the standard form:
+      first class, even degree.
+
+  - section: reciprocal-equations
+    focus: 'The equation of degree $2m$ becomes one of degree $m$ in $z$.'
+    say: >
+      To solve the standard form of degree two m, divide by x to the m, pair the terms, and put z
+      equals x plus one over x. Use x squared plus one over x squared equals z squared minus two,
+      and x cubed plus one over x cubed equals z cubed minus three z. The degree halves. Each root
+      of the z equation then gives a reciprocal pair from x squared minus z x plus one.
+
+  - section: reciprocal-equations
+    focus: '$x + \frac1x = z$ is real for real $x$ only when $|z| \ge 2$.'
+    say: >
+      And the caution: for real x, x plus one over x has modulus at least two. So a real z with
+      modulus less than two gives a pair of non-real roots of modulus one. Use this to count real
+      roots quickly.
+
+  - section: reciprocal-equations
+    question: q0021
+    say: >
+      Here is a question that uses all of this. Find the sum of the real roots of this fifth
+      degree equation.
+    answer: >
+      It is first class of odd degree, so minus one is a root. The quotient reduces to z squared
+      plus three z minus four, so z is one or minus four. z equals one has modulus less than two,
+      giving non-real roots. z equals minus four gives minus two plus or minus root three, both
+      real. The real roots sum to minus five. Minus four is the sum of all five roots.
+
+  - section: exam-tips
+    say: >
+      Let's finish with the checklist on the board. Vieta signs alternate, starting with minus.
+      The sum of squares can be negative, which simply means the roots are not all real. For an A
+      P cubic start from the sum, for a G P cubic from the product. Negatives flip alternate signs,
+      reciprocals reverse the coefficients, and multiplying by k multiplies a r by k to the r.
+      Diminish by h means f of x plus h. And check every transformed equation with one Vieta
+      relation. Now try the practice questions.

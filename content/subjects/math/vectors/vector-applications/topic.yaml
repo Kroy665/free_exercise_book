@@ -7,7 +7,7 @@ order: 2
 exams: [slst-1112]
 prerequisites: [math.vectors.vector-algebra]
 estimated_minutes: 60
-version: 0.1.0
+version: 0.2.0
 status: ai-generated
 reviewers: []
 sources:

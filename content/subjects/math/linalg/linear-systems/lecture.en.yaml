@@ -1,0 +1,313 @@
+# Spoken lecture for "Systems of Linear Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: matrix-form
+    say: >
+      Welcome. Today we revise systems of linear equations, a chapter that gives easy marks
+      once the rank picture is clear. By the end you should be able to decide in seconds
+      whether a system has no solution, exactly one, or infinitely many, count the free
+      parameters correctly, handle homogeneous systems, and solve the classic parameter
+      questions without falling into the determinant trap. Let's start with how a system is
+      written.
+
+  - section: matrix-form
+    focus: 'The **augmented matrix** is $[A \mid B]$, the $m \times (n + 1)$ matrix obtained by adjoining $B$ as an extra column. For example,'
+    say: >
+      A system of m equations in n unknowns becomes A X equals B. A is the m by n coefficient
+      matrix, X is the column of unknowns, and B is the column of constants. Adjoin B to A as
+      one extra column and you get the augmented matrix. Notice in the example on the board
+      that a missing unknown gets a zero entry, and the columns always stay in the fixed order
+      x, y, z. Dropping those zeros is the commonest slip in writing the augmented matrix.
+
+  - section: matrix-form
+    focus: '**Rank.** The rank $\rho(A)$ is the order of the largest non-vanishing minor of $A$.'
+    say: >
+      Recall the rank. It is the order of the largest non vanishing minor. Equivalently, it is
+      the number of non zero rows in any row echelon form, or the number of linearly
+      independent rows, or of independent columns. All these definitions agree, so you can use
+      whichever is quickest. In practice, elimination is almost always quickest.
+
+  - section: matrix-form
+    focus: '**Rouché–Capelli theorem.** $AX = B$ is consistent $\iff \rho(A) = \rho([A \mid B])$.'
+    say: >
+      Here is the central theorem of the chapter, the Rouché Capelli theorem. The system is
+      consistent exactly when the rank of A equals the rank of the augmented matrix. Why? A X
+      is just x one times the first column, plus x two times the second, and so on. So a
+      solution exists exactly when B is a linear combination of the columns of A, that is,
+      when adjoining B does not enlarge the column space, and so does not raise the rank.
+
+  - section: matrix-form
+    focus: 'Always $\rho(A) \le \rho([A \mid B]) \le \rho(A) + 1$.'
+    say: >
+      Adding one column can raise the rank by at most one. So the rank of the augmented matrix
+      is either equal to the rank of A, or exactly one more. In echelon form, that extra rank
+      shows up as a row of zeros in the A part with a non zero number in the last column. That
+      row says zero equals c, which is impossible. Whenever you see it, stop: the system is
+      inconsistent.
+
+  - section: matrix-form
+    question: q0001
+    say: >
+      Let's fix the theorem with a question. A system of m equations in n unknowns is
+      consistent if and only if what? Choose an option and press Check.
+    answer: >
+      The answer is that the rank of A equals the rank of the augmented matrix. That is
+      Rouché Capelli. Rank of A equal to n is about uniqueness, not existence. A non zero
+      determinant is sufficient for square systems but not necessary. And rank of the
+      augmented matrix equal to rank of A plus one is precisely the inconsistent case.
+
+  - section: solution-cases
+    focus: '| $r = r'' < n$ | infinitely many solutions, with $n - r$ free parameters |'
+    say: >
+      Now the three cases. Call the rank of A r, and the rank of the augmented matrix r dash.
+      If r is less than r dash, there is no solution. If they are equal and equal to n, the
+      number of unknowns, there is exactly one solution. If they are equal but less than n,
+      there are infinitely many, and the general solution has n minus r free parameters. Look
+      at that highlighted row; it is the one examiners test most.
+
+  - section: solution-cases
+    focus: 'For a **square** system ($m = n$), $\det A \ne 0 \iff r = n$, and then the solution is unique for every $B$.'
+    say: >
+      Why n minus r parameters? Choose r unknowns whose columns give a non zero r by r minor.
+      These are the pivot or basic variables. The remaining n minus r unknowns are free, and
+      once you fix them, the basic ones are determined. For a square system, a non zero
+      determinant means full rank, so the solution is unique, whatever the right hand side.
+
+  - section: solution-cases
+    focus: '| 2 | 3 | no common point (a triangular prism, or two parallel planes) |'
+    say: >
+      The geometry helps memory. In two unknowns, each equation is a line, and two lines meet
+      once, are parallel, or coincide. In three unknowns, each equation is a plane. Ranks three
+      and three give one common point. Two and two give a common line. One and one mean all
+      three planes coincide. And ranks two and three, the highlighted row, give no common
+      point: either a triangular prism, or two parallel planes cut by a third.
+
+  - section: solution-cases
+    focus: '"More unknowns than equations" does **not** guarantee infinitely many solutions for a non-homogeneous system.'
+    say: >
+      Now a trap. More unknowns than equations does not guarantee infinitely many solutions.
+      x plus y plus z equals one, and x plus y plus z equals two, has three unknowns, two
+      equations, and no solution at all. What is true is this: if such a system is consistent,
+      then it has infinitely many solutions, because the rank is at most m, which is less than
+      n.
+
+  - section: solution-cases
+    question: q0004
+    say: >
+      Quick check. A consistent system in six unknowns has both ranks equal to four. How many
+      arbitrary parameters are in the general solution?
+    answer: >
+      The number of parameters is n minus r, that is six minus four, which is two. The
+      tempting answer four is the number of basic, or pivot, unknowns, not the free ones.
+
+  - section: solution-structure
+    focus: 'In words: **general solution = particular solution + general solution of the associated homogeneous system.**'
+    say: >
+      Next, the structure of the solution set. Read the highlighted line: the general solution
+      equals one particular solution plus the general solution of the associated homogeneous
+      system. The proof is two lines. If X solves A X equals B, then X minus X nought solves
+      the homogeneous system. Conversely, adding any homogeneous solution to X nought gives
+      another solution. You met exactly this idea in linear differential equations.
+
+  - section: solution-structure
+    focus: 'In particular $\tfrac12(X_1 + X_2)$ is a solution, but $X_1 + X_2$ is not (it gives $2B$) unless $B = O$.'
+    say: >
+      The consequences are favourite one mark questions. The difference of two solutions
+      solves the homogeneous system. A combination lambda X one plus mu X two is a solution
+      exactly when lambda plus mu equals one. So the average, one half of X one plus X two,
+      is a solution, but the plain sum is not, because it gives two B.
+
+  - section: solution-structure
+    focus: 'It can never have exactly two: two distinct solutions give the whole line $X_1 + t(X_2 - X_1)$.'
+    say: >
+      Two more facts follow. Over the reals or complexes, a linear system has zero, one, or
+      infinitely many solutions, never exactly two, because two distinct solutions give the
+      whole line through them. And the solution set is a subspace only when B is zero. For
+      non zero B it does not even contain the zero vector. It is a translate of the null space,
+      sometimes called an affine subspace.
+
+  - section: solution-structure
+    focus: 'To test an option for a general solution, substitute it into **every** equation.'
+    say: >
+      In the worked example, the third equation is the sum of the first two, so both ranks are
+      two, there is one free parameter, and the solution is the point two, one, zero plus t
+      times the direction one, minus two, one. Now the exam tip. To test an option for a
+      general solution, substitute it into every equation. A wrong family can satisfy the
+      first equation and still fail the second.
+
+  - section: solution-structure
+    question: q0007
+    say: >
+      Try this. X one and X two are distinct solutions of A X equals B, with B non zero. Which
+      combination is also a solution?
+    answer: >
+      One half of X one plus X two. Applying A gives one half of B plus B, which is B. The
+      difference X one minus X two gives zero, so it solves the homogeneous system instead.
+      The sum gives two B, and two X one plus X two gives three B. The rule is that the
+      coefficients must add up to one.
+
+  - section: homogeneous
+    focus: 'It is **always consistent**: $X = O$ (the trivial solution) works, and $\rho(A) = \rho([A \mid O])$ automatically.'
+    say: >
+      Now homogeneous systems, A X equals zero. First, they are always consistent: the zero
+      vector is a solution, called the trivial solution. Second, the solution set is a
+      subspace, the null space of A. So the only real question for a homogeneous system is
+      whether there is a non trivial solution, and how big the solution space is.
+
+  - section: homogeneous
+    focus: '$\dim N(A) = n - \rho(A)$. This is the rank–nullity relation for $A$.'
+    say: >
+      The dimension of the null space is n minus the rank of A. That is rank nullity. So a non
+      trivial solution exists exactly when the rank is less than n. For a square matrix, that
+      means the determinant is zero. And if there are fewer equations than unknowns, a non
+      trivial solution always exists, since the rank is at most m, which is less than n.
+
+  - section: homogeneous
+    focus: 'A **basis** of the solution space comes from the free variables.'
+    say: >
+      To get a basis, set one free variable equal to one and the others to zero, solve for
+      the basic variables, and repeat for each free variable. That gives n minus r independent
+      solutions, called a fundamental set. In the first example, two equations in three
+      unknowns of rank two give a single line through the origin, spanned by minus one, one,
+      one.
+
+  - section: homogeneous
+    focus: '$\dim N(A) = n - \rho(A)$, **not** $n - m$.'
+    say: >
+      Spend a moment on this caution. The dimension is n minus the rank, not n minus the
+      number of equations. In the second example there are three equations in four unknowns,
+      but the second equation is just twice the first. So the rank is two, not three, and the
+      dimension is four minus two, which is two. Always find the rank first.
+
+  - section: homogeneous
+    question: q0015
+    say: >
+      This is the very example we just discussed. Find the dimension of the solution space in
+      four dimensional space.
+    answer: >
+      The second equation is twice the first, so the rank is two. The dimension is four minus
+      two, which is two. The trap answer is one, from four minus three, which counts equations
+      instead of rank.
+
+  - section: homogeneous
+    focus: 'At $k = 1$ the rank is 1 (a plane of solutions); at $k = -2$ the rank is 2 (a line).'
+    say: >
+      For a square homogeneous system with a parameter, set the determinant to zero. For k x
+      plus y plus z, x plus k y plus z, x plus y plus k z, all equal to zero, the determinant
+      is k minus one squared times k plus two. So k equals one or minus two. But notice the
+      ranks differ. At k equals one, all three equations coincide, the rank is one, and the
+      solutions form a plane. At minus two, the rank is two, and the solutions form a line.
+
+  - section: elimination
+    focus: 'Each operation is invertible, so it gives an **equivalent** system with the same solution set.'
+    say: >
+      Now the working method, elimination. There are three elementary row operations:
+      interchange two rows, multiply a row by a non zero scalar, and add a multiple of one row
+      to another. Each is invertible, so the new system has the same solutions, and both ranks
+      are preserved. But never use column operations while solving; they mix up the unknowns.
+
+  - section: elimination
+    focus: '**Gauss–Jordan:** continue to the **reduced** row echelon form, where each pivot is 1 and is the only non-zero entry in its column.'
+    say: >
+      Gaussian elimination reduces the augmented matrix to row echelon form and then back
+      substitutes. Gauss Jordan goes further, to reduced echelon form, where each pivot is one
+      and is the only non zero entry in its column, so the solution can be read off. In the
+      worked example, two steps of elimination leave z equals three, then y equals two, then x
+      equals one.
+
+  - section: elimination
+    focus: '| no such row, and some column of $A$ without a pivot | infinitely many; the non-pivot columns are the free variables |'
+    say: >
+      Learn to read the echelon form directly. A row with zeros and then a non zero last entry
+      means inconsistent. No such row and a pivot in every column of A means a unique
+      solution. No such row, but some column without a pivot, means infinitely many, and the
+      non pivot columns are your free variables. And one elimination gives both ranks at once:
+      just ignore the last column to read the rank of A.
+
+  - section: matrix-method
+    focus: 'If $A$ is **square** and $\det A \ne 0$, then $A^{-1}$ exists, and $AX = B$ has the unique solution'
+    say: >
+      The matrix method applies when A is square with non zero determinant. Then X equals A
+      inverse B, which is one over the determinant times the adjoint of A times B. In the
+      example the determinant is seven, the adjoint times B gives seven, seven, seven, and so
+      x, y and z are all one. Cramer's rule is the same method written out entry by entry: x j
+      is delta j over delta, where delta j replaces column j by B.
+
+  - section: matrix-method
+    focus: '$\det A = 0$ and $(\operatorname{adj}A)B \ne O$ $\Rightarrow$ **inconsistent**.'
+    say: >
+      What if the determinant is zero? Multiply A X equals B on the left by the adjoint. Since
+      adjoint of A times A is the determinant times the identity, which is now zero, any
+      solution forces adjoint of A times B to be zero. So if the determinant is zero and
+      adjoint of A times B is not zero, the system is inconsistent. But if adjoint of A times
+      B is zero, you can conclude nothing yet.
+
+  - section: matrix-method
+    focus: 'Some school texts state that "$\det A = 0$ and $(\operatorname{adj}A)B = O$" means infinitely many solutions.'
+    say: >
+      This caution corrects a school book myth. Many texts say that zero determinant with
+      adjoint times B zero means infinitely many solutions. That is false. Take A with every
+      entry one. Its adjoint is the zero matrix, so adjoint times B is zero for every B. Yet x
+      plus y plus z equals one, two and three is plainly inconsistent. In that case, use ranks
+      or elimination.
+
+  - section: matrix-method
+    question: q0022
+    say: >
+      Let's test it. A square system has zero determinant and adjoint of A times B not zero.
+      What can you say?
+    answer: >
+      The system is inconsistent. Any solution X would give adjoint of A times B equal to the
+      determinant times X, which is zero, a contradiction. The option saying infinitely many
+      or none is the inconclusive verdict for the other case, when adjoint of A times B is
+      zero.
+
+  - section: parameter-systems
+    focus: 'Step 3 must be done separately for **each** root. The roots often behave differently.'
+    say: >
+      Now the standard parameter question. The recipe for a square system has three steps.
+      Compute the determinant as a function of the parameter. Wherever it is non zero, the
+      solution is unique. At each root, substitute, reduce the augmented matrix, and compare
+      the ranks. Unequal ranks mean no solution; equal ranks mean infinitely many. And do this
+      separately for each root, because the roots often behave differently.
+
+  - section: parameter-systems
+    focus: '$$(\lambda - 3)z = \mu - 10.$$'
+    say: >
+      In the classic example, subtracting the second equation from the third gives lambda
+      minus three times z equals mu minus ten. Read the table straight off this line. If
+      lambda is not three, the solution is unique for any mu. If lambda is three and mu is not
+      ten, it says zero equals something non zero: no solution. If lambda is three and mu is
+      ten, it says zero equals zero, and there are infinitely many solutions, with one
+      parameter.
+
+  - section: parameter-systems
+    focus: 'It is consistent iff $k^2 - 1 = 3(k - 1)$, that is, $k = 1$ or $k = 2$.'
+    say: >
+      When the parameter sits on the right hand side, reduce and demand that each zero row of
+      A has a zero last entry. In the example, elimination leaves y plus three z equals k minus
+      one, and three y plus nine z equals k squared minus one. The left side of the second is
+      three times the first, so k squared minus one must equal three times k minus one. That
+      gives k equals one or k equals two.
+
+  - section: parameter-systems
+    question: q0028
+    say: >
+      Here is the trap in question form. For a x plus y plus z, x plus a y plus z, and x plus
+      y plus a z, all equal to one, when is there no solution?
+    answer: >
+      Only when a equals minus two. The determinant is a plus two times a minus one squared.
+      At a equals one, all three equations become x plus y plus z equals one, so there are
+      infinitely many solutions. At a equals minus two, adding all three equations gives zero
+      equals three, so there is none. The tempting option, a equals one or minus two, treats
+      every root as inconsistent.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist on the board. Consistency is a rank test, never a
+      determinant test. Count parameters as unknowns minus rank, not unknowns minus equations.
+      Homogeneous systems are never inconsistent. Two distinct solutions mean infinitely many.
+      The average of two solutions is a solution; their difference solves the homogeneous
+      system. Zero determinant with adjoint times B zero decides nothing. Test every root of
+      the determinant separately, and verify by substitution. Now try the practice questions.

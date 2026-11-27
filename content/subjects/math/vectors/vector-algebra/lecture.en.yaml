@@ -1,0 +1,286 @@
+# Spoken lecture for "Vector Algebra".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: vectors-basics
+    say: >
+      Welcome. Today we revise vector algebra: components, the section formula, and the three
+      products, scalar, vector and the two triple products. This is the toolkit behind all of
+      three dimensional geometry, and SLST questions test it directly with quick numerical
+      checks. By the end you should be able to compute each product without sign slips, know
+      what each one means geometrically, and use the standard identities confidently.
+
+  - section: vectors-basics
+    focus: '$$\vec{AB} = \vec b - \vec a.$$'
+    say: >
+      Recall the basic language. A vector has magnitude and direction and adds by the
+      parallelogram law. The position vector of a point P is the vector from a fixed origin O
+      to P. Look at the highlighted line: the vector from A to B is b minus a, the head minus
+      the tail. Almost every computation in the chapter starts with this.
+
+  - section: vectors-basics
+    focus: 'The **direction cosines** of $\vec a$ are the components of $\hat a$'
+    say: >
+      In components along i, j, k, the magnitude is the square root of the sum of the squares,
+      and the unit vector a hat is a divided by its magnitude. The direction cosines are simply
+      the components of a hat, so their squares add to one. For two i minus three j plus six k,
+      the magnitude is seven, and the direction cosines are two sevenths, minus three sevenths
+      and six sevenths.
+
+  - section: vectors-basics
+    question: q0005
+    say: >
+      A quick warm up. Choose the direction cosines of the vector shown and press Check.
+    answer: >
+      The answer is two sevenths, minus three sevenths, six sevenths. The magnitude is the
+      square root of four plus nine plus 36, which is seven. Dropping the minus sign gives a
+      different direction, and dividing by five or by 49 fails the check that the squares add
+      to one.
+
+  - section: vectors-basics
+    focus: '| three, $\vec a, \vec b, \vec c$ | coplanar, i.e. $[\vec a\,\vec b\,\vec c] = 0$ |'
+    say: >
+      Linear dependence has a geometric face in space, as the table shows. One vector is
+      dependent only if it is zero. Two are dependent exactly when they are parallel, so their
+      cross product vanishes. Three are dependent exactly when they are coplanar, so their
+      scalar triple product is zero. And four or more vectors in space are always dependent,
+      since the space has dimension three.
+
+  - section: vectors-basics
+    focus: '**Basis theorem.** If $\vec a, \vec b, \vec c$ are non-coplanar, every vector $\vec r$ is **uniquely** $x\vec a + y\vec b + z\vec c$.'
+    say: >
+      The basis theorem says three non coplanar vectors form a basis: every vector is uniquely x
+      a plus y b plus z c. Cramer's rule gives each coefficient as a ratio of triple products,
+      but in practice you just equate components and solve the three by three system. The
+      caution below is subtle: three coplanar vectors need not make a chosen one a combination
+      of the other two. With i, two i and j, the vector j is not a combination of i and two i.
+      What is true is that some one of them is a combination of the others.
+
+  - section: collinearity-coplanarity
+    focus: '$$\text{internally: } \frac{m\vec b + n\vec a}{m + n}, \qquad \text{externally: } \frac{m\vec b - n\vec a}{m - n}\ (m \ne n).$$'
+    say: >
+      The section formula. The point dividing A B internally in the ratio m to n is m b plus n
+      a, over m plus n. Notice that b, the far end, carries m, the part of the ratio next to A.
+      Externally, it is m b minus n a, over m minus n. The midpoint is half of a plus b, and the
+      centroid of a triangle is one third of a plus b plus c.
+
+  - section: collinearity-coplanarity
+    focus: 'In the external section formula the denominator is $m - n$, and $\vec b$ (the second end-point) carries the coefficient $m$.'
+    say: >
+      The caution on the board names the commonest slip: swapping the roles of a and b. Say it
+      aloud as you write it: the second end point gets the first number of the ratio. And for
+      external division, keep the sign of the denominator; with a ratio one to two, m minus n is
+      minus one, and forgetting to divide by it flips your answer.
+
+  - section: collinearity-coplanarity
+    question: q0009
+    say: >
+      Try this one on external division. Read it carefully and choose your answer.
+    answer: >
+      The answer is three a plus five b. With P equal to two a plus b, Q equal to a minus three
+      b, and ratio one to two, the point is Q minus two P, over one minus two. The numerator is
+      minus three a minus five b, and dividing by minus one gives three a plus five b. The option
+      minus three a minus five b forgets that division, and one third of five a minus b is the
+      internal point.
+
+  - section: collinearity-coplanarity
+    focus: 'The $x$- and $z$-components force $\vec{AC} = -3\,\vec{AB}$, so $\lambda + 1 = 12$, $\lambda = 11$.'
+    say: >
+      Three points are collinear when A B and A C are parallel. In the example, the x and z
+      components contain no unknown, and they force A C to be minus three times A B. The y
+      component then gives lambda plus one equal to twelve, so lambda is eleven. That is the exam
+      tip: match the components without unknowns first, and check the multiple is consistent
+      with every known component.
+
+  - section: collinearity-coplanarity
+    focus: '**Coplanar points.** $A, B, C, D$ are coplanar $\iff \vec{AB}, \vec{AC}, \vec{AD}$ are coplanar vectors $\iff [\vec{AB}\ \vec{AC}\ \vec{AD}] = 0$.'
+    say: >
+      Four points are coplanar when the three vectors from one of them to the others are
+      coplanar, so their scalar triple product vanishes. In the example, the determinant comes
+      to 35 minus seven lambda, so lambda is five. Note the distinction: we test coplanarity of
+      points with difference vectors, never with the position vectors themselves.
+
+  - section: scalar-product
+    focus: '$$\vec a \cdot \vec b = |\vec a|\,|\vec b|\cos\theta = a_1b_1 + a_2b_2 + a_3b_3, \qquad 0 \le \theta \le \pi.$$'
+    say: >
+      Now the scalar product. Geometrically, a dot b is the product of the lengths times the
+      cosine of the angle between them, with the angle taken between zero and pi. In components
+      it is a one b one plus a two b two plus a three b three. The two agree by the cosine rule.
+      For non zero vectors, a zero dot product means perpendicular, and its sign tells you
+      whether the angle is acute or obtuse.
+
+  - section: scalar-product
+    focus: '$$\frac{\vec a\cdot\vec b}{|\vec b|}, \qquad \left(\frac{\vec a\cdot\vec b}{|\vec b|^2}\right)\vec b.$$'
+    say: >
+      Projections come next. The scalar projection, or component, of a on b is a dot b over the
+      length of b. The vector projection is a dot b over the length of b squared, times b. Keep
+      those denominators straight; they are the source of most wrong options.
+
+  - section: scalar-product
+    question: q0001
+    say: >
+      Let's check. Find the scalar projection of a on b.
+    answer: >
+      The answer is minus four thirds. The dot product is two minus two minus four, which is minus
+      four, and b has length three. Minus four ninths divides by the length squared; that is the
+      coefficient in the vector projection. Four thirds drops the sign, but the minus sign is
+      meaningful: a leans against b.
+
+  - section: scalar-product
+    focus: '$$|\vec a \pm \vec b|^2 = |\vec a|^2 + |\vec b|^2 \pm 2\,\vec a\cdot\vec b, \qquad (\vec a + \vec b)\cdot(\vec a - \vec b) = |\vec a|^2 - |\vec b|^2.$$'
+    say: >
+      Two identities do a lot of work. The modulus of a plus or minus b, squared, is the sum of
+      the squared lengths plus or minus twice a dot b. And a plus b dotted with a minus b is the
+      difference of the squared lengths. So the diagonals of a parallelogram are equal exactly
+      when it is a rectangle, and the diagonals of a rhombus are perpendicular. Cauchy Schwarz,
+      the modulus of a dot b at most the product of the lengths, gives the triangle inequality.
+
+  - section: scalar-product
+    focus: 'so the angle of the triangle between those sides is $\pi - \frac{\pi}{3} = \frac{2\pi}{3}$'
+    say: >
+      The solved example and its caution are a classic trap. If a plus b plus c is zero with
+      lengths three, five and seven, squaring gives a dot b equal to fifteen halves, so the angle
+      between a and b is pi by three. But the vectors form a triangle head to tail, so the angle
+      inside the triangle is two pi by three. The question asks for the angle between the
+      vectors, so compute it from the dot product. Also, collinear means the angle is zero or pi,
+      not only zero.
+
+  - section: vector-product
+    focus: 'where $\hat n$ is the unit vector perpendicular to both, such that $\vec a, \vec b, \hat n$ is right-handed.'
+    say: >
+      The vector product a cross b has length equal to the product of the lengths times the sine
+      of the angle, and direction n hat, perpendicular to both, with a, b, n hat right handed. In
+      components it is the determinant with i, j, k in the first row. It is anti commutative, so
+      b cross a is minus a cross b and a cross a is zero. It is not associative: i cross, i cross
+      j, is minus j, while i cross i, crossed with j, is zero.
+
+  - section: vector-product
+    focus: '| area of parallelogram, sides $\vec a, \vec b$ | $\lvert\vec a\times\vec b\rvert$ |'
+    say: >
+      Geometrically, the length of a cross b is the area of the parallelogram on a and b, and
+      half of it is the triangle. With diagonals d one and d two, the parallelogram's area is
+      half the length of d one cross d two. And a cross b over its length, with either sign,
+      gives the two unit vectors perpendicular to both.
+
+  - section: vector-product
+    focus: 'Watch the sign of the middle ($\hat j$) term in the determinant expansion'
+    say: >
+      In the worked example, the cross product is eight i plus eight j minus eight k, so the
+      parallelogram has area eight root three and the triangle four root three. The caution:
+      the middle j term carries a minus sign. Always check your answer by dotting it with both
+      vectors; you must get zero both times.
+
+  - section: vector-product
+    question: q0002
+    say: >
+      Use that example. Find the area of the parallelogram.
+    answer: >
+      The area is eight root three, the length of eight, eight, minus eight. Four root three is
+      the triangle, fourteen is the product of the lengths without the sine, and 192 is the
+      square of the area. The check: eight, eight, minus eight is perpendicular to both given
+      vectors.
+
+  - section: vector-product
+    focus: '**Both together** with $\vec a \ne \vec 0$ force $\vec b = \vec c$'
+    say: >
+      A word on cancellation. From a dot b equal to a dot c you only learn that a is perpendicular
+      to b minus c. From a cross b equal to a cross c you only learn that a is parallel to b minus
+      c. But both together, with a non zero, force b equal to c, because a non zero vector cannot
+      be both parallel and perpendicular to a.
+
+  - section: scalar-triple-product
+    focus: '**Geometric meaning.** $\lvert[\vec a\,\vec b\,\vec c]\rvert$ is the **volume of the parallelepiped** with coterminous edges $\vec a, \vec b, \vec c$'
+    say: >
+      The scalar triple product a dot b cross c is the determinant of the components. Its modulus
+      is the volume of the parallelepiped with edges a, b, c: the base area is the length of b
+      cross c, and the height is the component of a along that normal. Its sign is positive
+      exactly when a, b, c is right handed. So three vectors are coplanar exactly when it is
+      zero.
+
+  - section: scalar-triple-product
+    focus: '- **Dot and cross may be interchanged:** $\vec a\cdot(\vec b\times\vec c) = (\vec a\times\vec b)\cdot\vec c$.'
+    say: >
+      The properties all come from determinants. Cyclic shifts leave it unchanged, swapping two
+      vectors changes the sign, and dot and cross can be interchanged. A repeated vector gives
+      zero. It is linear in each slot, so scaling all three by lambda multiplies it by lambda
+      cubed, not by lambda.
+
+  - section: scalar-triple-product
+    focus: '$$[\vec a\times\vec b\ \ \vec b\times\vec c\ \ \vec c\times\vec a] = [\vec a\,\vec b\,\vec c]^2.$$'
+    say: >
+      Memorise the standard results. The triple product of a plus b, b plus c, c plus a is twice
+      the original. With differences, a minus b, b minus c, c minus a, it is zero, because those
+      three add to zero. And the triple product of the three cross products is the square of the
+      original. The exam tip explains the first: it is the determinant of the coefficient matrix,
+      which is two, times the original triple product.
+
+  - section: scalar-triple-product
+    question: q0015
+    say: >
+      Apply it. Given that the triple product of a, b, c is three, evaluate the new one.
+    answer: >
+      The answer is six. The coefficient matrix with rows one one zero, zero one one, one zero one
+      has determinant two, so the value is two times three. Zero is the answer for the
+      differences, whose vectors add to zero, and three forgets the second surviving term in the
+      expansion.
+
+  - section: scalar-triple-product
+    focus: 'Example: unit vectors with every pairwise angle $\frac{\pi}{3}$ give $[\vec a\,\vec b\,\vec c]^2 = \frac12$, volume $\frac{1}{\sqrt2}$.'
+    say: >
+      The Gram determinant gives the square of the triple product from dot products alone, by
+      multiplying the determinant by its transpose. So a volume can be found from lengths and
+      angles without coordinates. For three unit vectors with every pairwise angle pi by three,
+      the Gram determinant is one half, and the volume is one over root two.
+
+  - section: vector-triple-product
+    focus: '$$\vec a\times(\vec b\times\vec c) = (\vec a\cdot\vec c)\,\vec b - (\vec a\cdot\vec b)\,\vec c, \qquad (\vec a\times\vec b)\times\vec c = (\vec a\cdot\vec c)\,\vec b - (\vec b\cdot\vec c)\,\vec a.$$'
+    say: >
+      The vector triple product follows the rule "bac minus cab": a cross, b cross c, equals a dot
+      c times b, minus a dot b times c. Why must it look like this? b cross c is normal to the
+      plane of b and c, so crossing again brings you back into that plane, and the result is also
+      perpendicular to a. The other bracketing, a cross b, crossed with c, lies in the plane of a
+      and b instead.
+
+  - section: vector-triple-product
+    focus: 'so they are equal **iff** $(\vec c\times\vec a)\times\vec b = \vec 0$'
+    say: >
+      Subtracting the two bracketings gives c cross a, crossed with b. So they are equal exactly
+      when b is parallel to c cross a, or either is zero; for example when a is parallel to c, or
+      when b is perpendicular to both a and c. The Jacobi identity says the three cyclic triple
+      products add to zero.
+
+  - section: vector-triple-product
+    question: q0010
+    say: >
+      Compute this triple product using the bac minus cab rule.
+    answer: >
+      The answer is minus i plus j. Here a dot c is one and a dot b is one, so the result is b
+      minus c, which is j plus k minus k minus i. Minus i plus k is the other bracketing, and i
+      minus j reverses the sign. The check: the answer must be perpendicular to a, and it is.
+
+  - section: vector-triple-product
+    focus: '$$|\vec a\times\vec b|^2 = |\vec a|^2|\vec b|^2 - (\vec a\cdot\vec b)^2,$$'
+    say: >
+      For four vectors, a cross b dotted with c cross d is a two by two determinant of dot
+      products: a dot c times b dot d, minus a dot d times b dot c. Put c equal to a and d equal
+      to b and you get Lagrange's identity on the board, which is just sine squared plus cosine
+      squared equals one. For lengths two and five with dot product six, the cross product has
+      length the square root of 100 minus 36, which is eight.
+
+  - section: vector-triple-product
+    focus: 'has $\vec d$ inside the **first** bracket'
+    say: >
+      The vector product of two cross products is c times the triple product a b d, minus d times
+      the triple product a b c. The caution: d sits inside the first bracket. If unsure, test with
+      a equal to i, b equal to j, c equal to k and d equal to i. Finally, to solve r cross b equal
+      to a cross b, note that r minus a is parallel to b, so r is a plus t b, and a second
+      condition fixes t.
+
+  - section: exam-tips
+    say: >
+      To recap. Projection divides the dot product by the length of b only; the cosine divides by
+      both lengths. Triangle area takes half the cross product; the parallelepiped volume takes the
+      triple product with no factor. Check every cross product by dotting with both vectors. The
+      second end point carries the first number in the section formula. Scaling by lambda cubes
+      the triple product. Bac minus cab, and the bracketing matters. Now try the practice
+      questions.

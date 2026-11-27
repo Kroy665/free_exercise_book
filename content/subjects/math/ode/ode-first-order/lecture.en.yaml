@@ -1,0 +1,257 @@
+# Spoken lecture for "First-Order Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: order-degree
+    say: >
+      Welcome. Today we revise first order differential equations. We begin with the
+      vocabulary, order, degree and kinds of solution, then form equations from families of
+      curves, look at when a solution exists and is unique, and finally work through the main
+      solution methods: separable, homogeneous, exact, and integrating factors. By the end you
+      should recognise each type at a glance and know the one line check for every answer.
+
+  - section: order-degree
+    focus: 'If it cannot be made polynomial in the derivatives (e.g. $\sin y''$, $e^{y''''}$, $\ln y''$ appear), the degree is **not defined**.'
+    say: >
+      The order is the order of the highest derivative present. The degree is the power of
+      that highest derivative, but only after the equation has been made a polynomial in all
+      the derivatives, by clearing radicals and fractions. If a derivative sits inside a sine,
+      an exponential or a logarithm, the equation cannot be made polynomial, and the degree is
+      not defined. A linear equation has y and its derivatives only to the first power, not
+      multiplied together, with coefficients depending on x alone.
+
+  - section: order-degree
+    focus: '| $y'' = e^{x + y}$ | 1 | 1 (only $y$ is inside $\exp$) |'
+    say: >
+      Look at the table. The cube root of the square of the third derivative equal to y dash
+      becomes, on cubing, the third derivative squared equals y dash cubed, so order three,
+      degree two. y equals x y dash plus a over y dash has degree two after multiplying by y
+      dash. And notice the last row: y dash equals e to the x plus y. Only y, not a derivative,
+      is inside the exponential, so the degree is one.
+
+  - section: order-degree
+    question: q0001
+    say: >
+      Try the classic. What are the order and degree of one plus y dash squared, to the power
+      three halves, equals y double dash?
+    answer: >
+      Order two, degree two. Square both sides to clear the radical: one plus y dash squared,
+      cubed, equals y double dash squared. Now the highest derivative appears squared. Degree
+      one comes from reading it before removing the radical, and three halves is not a degree at
+      all, since a degree is always a positive integer.
+
+  - section: order-degree
+    focus: 'A **singular solution** satisfies the equation but is not obtained from the general solution for any value of the constant'
+    say: >
+      Three kinds of solution. A general solution of an n-th order equation has n independent
+      arbitrary constants. A particular solution fixes them, usually through initial
+      conditions. A singular solution satisfies the equation but does not come from the general
+      solution for any value of the constant; we meet these with Clairaut's equation.
+      Geometrically, y dash equals f of x and y assigns a slope to every point, and a solution
+      is a curve that follows this direction field.
+
+  - section: formation
+    focus: 'Constants are essential only if they cannot be merged.'
+    say: >
+      To form the equation of a family with n essential constants, differentiate n times and
+      eliminate the constants. The order equals the number of essential constants. Essential
+      means they cannot be merged. A plus B, times e to the x plus C, looks like three
+      constants, but it is just K e to the x, one constant, so the equation is y dash equals y,
+      of first order.
+
+  - section: formation
+    focus: '| circles of fixed radius | 2 | 2 |'
+    say: >
+      The table lists the orders worth knowing. Lines through the origin, one. All lines, two:
+      the equation is y double dash equals zero, not y dash equals zero. Circles of a fixed
+      radius, two, because the centre has two coordinates, and their equation is one plus y dash
+      squared, cubed, equals r squared times y double dash squared. All circles, three. And all
+      parabolas y equals a x squared plus b x plus c, three.
+
+  - section: formation
+    question: q0005
+    say: >
+      Form one yourself. Find the differential equation of all circles through the origin with
+      centres on the x axis.
+    answer: >
+      The family is x squared plus y squared equals two a x. Differentiating gives a equal to x
+      plus y y dash. Substitute back and simplify: two x y y dash equals y squared minus x
+      squared. Check with the circle through one comma one: the tangent there is horizontal,
+      and y squared minus x squared is indeed zero. The option x squared minus y squared has the
+      sign flipped.
+
+  - section: existence
+    focus: '- **Peano (existence).** If $f$ is continuous on a rectangle $R$ around $(x_0, y_0)$, then $y'' = f(x,y)$, $y(x_0) = y_0$ has **at least one** solution near $x_0$.'
+    say: >
+      When does a solution exist, and when is it unique? Peano's theorem says continuity of f on
+      a rectangle around the initial point is enough for at least one solution near that point.
+      Picard's theorem adds a Lipschitz condition in y: the difference of f at two y values is
+      at most L times the difference of the y values. Then the solution is unique, on an
+      interval of half width h, the smaller of a and b over K, where K bounds f.
+
+  - section: existence
+    focus: 'A convenient sufficient condition for the Lipschitz condition: $\partial f/\partial y$ is continuous (hence bounded) on $R$.'
+    say: >
+      In practice, you check the Lipschitz condition through the partial derivative of f with
+      respect to y. If it is continuous on the closed rectangle, it is bounded there, and the
+      mean value theorem in y gives the Lipschitz inequality at once.
+
+  - section: existence
+    question: q0006
+    say: >
+      The theorem is local. See what that means. On which largest interval containing zero does
+      the solution of y dash equals y squared, y of zero equals one, exist?
+    answer: >
+      On the open interval from minus infinity to one. Separating gives minus one over y equals
+      x minus one, so y is one over one minus x, which blows up as x approaches one. The function
+      y squared is perfectly smooth, yet the solution does not exist on the whole line. That is
+      what local means.
+
+  - section: existence
+    focus: 'Continuity of $f$ alone gives existence, **not** uniqueness.'
+    say: >
+      Uniqueness can fail. For y dash equals three y to the power two thirds, with y of zero
+      equal to zero, f is continuous, but its y derivative, two y to the minus one third, is
+      unbounded near zero. On the graph you see several solutions through the origin: y equals
+      zero, y equals x cubed, and functions that stay at zero for a while and then follow a
+      shifted cube. So continuity gives existence only. And Lipschitz is sufficient for
+      uniqueness, not necessary.
+
+  - section: separable
+    focus: 'If $h(y_0) = 0$, then the constant $y = y_0$ is also a solution; dividing by $h(y)$ may lose it.'
+    say: >
+      Now the methods. A separable equation has y dash equal to g of x times h of y. Divide by h
+      of y and integrate both sides. But notice the warning: if h vanishes at some y nought, the
+      constant function y equals y nought is also a solution, and dividing by h of y may lose
+      it. For y dash equals one plus y squared over one plus x squared, you get tan inverse y
+      equals tan inverse x plus C, which can be written as y minus x over one plus x y equals a
+      constant.
+
+  - section: separable
+    focus: '**Reducible to separable: $y'' = f(ax + by + c)$.** Put $v = ax + by + c$. Then $v'' = a + b f(v)$, which is separable.'
+    say: >
+      When y dash is a function of a single linear expression a x plus b y plus c, call that
+      expression v. Then v dash is a plus b times f of v, which separates. For y dash equals x
+      plus y plus one, squared, v dash is one plus v squared, so tan inverse of v equals x plus
+      C, and y equals tan of x plus C, minus x, minus one.
+
+  - section: separable
+    focus: 'Write the constant where the integration produces it.'
+    say: >
+      And the caution here is subtle but common. Write the constant where the integration
+      produces it. From tan inverse v equals x plus C, you get v equals tan of x plus C, not tan
+      x plus C. Those are different families, and only the first is correct.
+
+  - section: homogeneous
+    focus: 'The equation $M\,dx + N\,dy = 0$ is **homogeneous** if $M$ and $N$ are homogeneous of the **same** degree; equivalently, $\frac{dy}{dx} = F\!\left(\frac{y}{x}\right)$.'
+    say: >
+      A function is homogeneous of degree n if scaling both x and y by t scales it by t to the
+      n. The equation M d x plus N d y equals zero is homogeneous when M and N are homogeneous of
+      the same degree, which is the same as saying d y by d x is a function of y over x alone.
+      The method: put y equal to v x. Then d y by d x is v plus x d v by d x, and the equation
+      separates in v and x.
+
+  - section: homogeneous
+    question: q0010
+    say: >
+      Try one. Solve x squared plus y squared, d x, minus two x y d y, equals zero.
+    answer: >
+      The answer is x squared minus y squared equals C x. With y equal to v x, x v dash is one
+      minus v squared over two v. Integrating gives x times one minus v squared equals a
+      constant, which is x squared minus y squared equals C x. The option x squared plus y
+      squared equals C x is a family of circles; it solves the equation from the formation
+      question, not this one.
+
+  - section: homogeneous
+    focus: '| $a_1b_2 - a_2b_1 \ne 0$ (lines meet at $(h, k)$) | $x = X + h,\ y = Y + k$ | homogeneous in $X, Y$ |'
+    say: >
+      For y dash equal to a ratio of two linear expressions with constant terms, the constants
+      spoil homogeneity. If the two lines meet at a point h comma k, shift the origin there,
+      and the equation becomes homogeneous in the new variables. If the lines are parallel, no
+      shift works; instead put z equal to the common combination a one x plus b one y, and the
+      equation becomes separable. The quick test from the tip: replace x and y by t x and t y.
+
+  - section: exact
+    focus: 'Then the equation is exact **if and only if** $\dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}$.'
+    say: >
+      An equation M d x plus N d y equals zero is exact when the left side is the total
+      differential of some function u, and then the solution is u equals C. The test: with
+      continuous partial derivatives on a rectangle, it is exact exactly when the partial of M
+      with respect to y equals the partial of N with respect to x. Necessity is just equality of
+      mixed partials of u.
+
+  - section: exact
+    focus: 'Do **not** integrate the $x^2$ of $N$ again; it is already in $x^2y$.'
+    say: >
+      To solve: integrate M with respect to x, holding y constant. Then add the integral of
+      those terms of N that do not contain x. In the example, M integrates to x squared y plus e
+      to the x. The only term of N free of x is cos y, giving sine y. So the solution is x
+      squared y plus e to the x plus sine y equals C. Do not integrate the x squared of N again;
+      it is already there.
+
+  - section: exact
+    question: q0013
+    say: >
+      Quick test. For which k is three x squared plus k x y squared, d x, plus two x squared y
+      plus four y cubed, d y, exact?
+    answer: >
+      k equals two. The partial of M with respect to y is two k x y, and the partial of N with
+      respect to x is four x y. So two k is four. The answer four comes from matching k x y
+      squared with four x y without differentiating the y squared.
+
+  - section: exact
+    focus: 'Keep the order: $\partial M/\partial y$ against $\partial N/\partial x$.'
+    say: >
+      Learn the table of standard exact differentials; they let you solve by inspection. x d y
+      plus y d x is d of x y. x d y minus y d x over x squared is d of y over x, and over x
+      squared plus y squared it is d of tan inverse y over x. And keep the order in the test.
+      y d x minus x d y is not exact, because one partial is one and the other is minus one,
+      while y d x plus x d y is. Homogeneous does not imply exact.
+
+  - section: integrating-factors
+    focus: 'IFs are never unique'
+    say: >
+      If an equation is not exact, multiply by an integrating factor mu that makes it exact.
+      Integrating factors are never unique: if mu works and the solution is u equals C, then mu
+      times any function of u also works. For y d x minus x d y, one over x squared, one over y
+      squared, one over x y and one over x squared plus y squared all work, but one over x y
+      squared does not.
+
+  - section: integrating-factors
+    focus: 'Note the **signs** in the last two rows: $M_y - N_x$ over $N$, but $N_x - M_y$ over $M$.'
+    say: >
+      The standard rules are in the table. For a homogeneous equation, one over M x plus N y.
+      When M is y times a function of x y, and N is x times a function of x y, one over M x
+      minus N y. If M y minus N x, over N, is a function of x alone, the factor is e to its
+      integral. If N x minus M y, over M, is a function of y alone, likewise in y. Notice the
+      signs are reversed between these two; swapping them gives the reciprocal of the correct
+      factor.
+
+  - section: integrating-factors
+    question: q0018
+    say: >
+      Use the rule in x. Solve x squared plus y squared plus x, d x, plus x y d y, equals zero.
+    answer: >
+      The answer is three x to the four plus four x cubed plus six x squared y squared equals C.
+      M y minus N x is two y minus y, which is y, and dividing by N gives one over x. So the
+      integrating factor is x. The exact equation integrates to x to the four over four, plus x
+      squared y squared over two, plus x cubed over three. Multiply by twelve. The option with
+      three x squared y squared loses a factor two.
+
+  - section: integrating-factors
+    focus: '**By inspection.** $x\,dy - y\,dx = (x^2 + y^2)\,dx$: divide by $x^2 + y^2$ to get $d\left(\tan^{-1}\frac{y}{x}\right) = dx$, so $\tan^{-1}\frac{y}{x} = x + C$.'
+    say: >
+      Often the quickest route is inspection. For x d y minus y d x equals x squared plus y
+      squared, times d x, divide by x squared plus y squared. The left side becomes the
+      differential of tan inverse y over x, and the right side is d x. So tan inverse of y over
+      x equals x plus C. Look for those standard combinations first. Linear and Bernoulli
+      equations, which also use integrating factors, are in the next topic.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Remove radicals before reading the degree. The order of a family's equation
+      is the number of essential constants. Check a solution u equals C by its slope, minus u x
+      over u y. The exact test is M y equals N x. In the integrating factor rules, M y minus N x
+      over N gives x, N x minus M y over M gives y. Don't lose constant solutions when
+      separating. Picard is local, and continuity alone does not give uniqueness. Now try the
+      practice questions.

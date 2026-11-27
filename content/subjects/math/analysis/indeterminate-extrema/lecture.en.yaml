@@ -1,0 +1,297 @@
+# Spoken lecture for "Indeterminate Forms, Maxima and Minima".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: lhospital
+    say: >
+      Welcome. This lecture joins two very practical chapters: indeterminate forms and maxima and
+      minima. By the end you should be able to apply L'Hospital's rule with its exact hypotheses
+      and know when it fails, reduce every other indeterminate form to it, evaluate the standard
+      exponential limits in seconds, classify stationary points with the first, second and higher
+      derivative tests, find points of inflexion, and solve the classic optimisation problems.
+
+  - section: lhospital
+    focus: 'with $g''(x) \ne 0$ on $N''(a)$'
+    say: >
+      Start with the rule for zero by zero. Let f and g be differentiable on a deleted
+      neighbourhood of a, with g dash never zero there. If f and g both tend to zero, and f dash
+      over g dash tends to L, then f over g tends to the same L. Here L may be finite, or plus or
+      minus infinity. The same holds when the modulus of g tends to infinity, for one sided
+      limits, and when a is infinite.
+
+  - section: lhospital
+    focus: '**Proof idea.** Define $f(a) = g(a) = 0$.'
+    say: >
+      The proof is Cauchy's mean value theorem. Define f and g to be zero at a. Then f of x over g
+      of x equals f dash over g dash at some point xi between a and x. As x tends to a, xi is
+      squeezed to a, so the quotients share the limit. This is exactly why g dash must not vanish
+      near a: Cauchy's theorem needs it.
+
+  - section: lhospital
+    focus: 'Simplify between steps'
+    say: >
+      You may repeat the rule while the form stays zero by zero. For x minus sine x over x cubed,
+      three applications give one sixth. But simplify between steps: cancel common factors, and
+      replace sine x, tan x, e to the x minus one, or log of one plus x by x when they appear as
+      factors of a product or quotient. That keeps the derivatives short.
+
+  - section: lhospital
+    focus: '1. **Not indeterminate.**'
+    say: >
+      Now the three ways the rule goes wrong. First, the form is not indeterminate. x plus one over
+      x plus two tends to one half at zero, but differentiating blindly gives one. Always check the
+      form first. Third, the rule can go round in circles: for e to the x plus e to the minus x,
+      over their difference, at infinity, it swaps numerator and denominator for ever. Just divide
+      by e to the x, and the limit is one.
+
+  - section: lhospital
+    focus: '"$\lim f''/g''$ does not exist" never proves "$\lim f/g$ does not exist".'
+    say: >
+      The second failure is the subtle one. The rule is a one way implication. x plus sine x over
+      x tends to one at infinity, as the graph shows, but f dash over g dash is one plus cos x,
+      which oscillates for ever. So if the limit of f dash over g dash does not exist, the rule is
+      simply silent. It never proves that the limit of f over g fails to exist.
+
+  - section: lhospital
+    question: q0022
+    say: >
+      Here is a statements question on exactly these points. Decide which statements are true.
+    answer: >
+      Statements one and three are true. One is L'Hospital's rule with its exact hypotheses. Two is
+      false, because the rule is one way. Three is the counterexample: x squared sine one over x,
+      over sine x, tends to zero, since it is x over sine x times x sine one over x. But the
+      quotient of derivatives contains cos of one over x, which oscillates, so it has no limit.
+
+  - section: other-forms
+    focus: '| $0^0,\ 1^\infty,\ \infty^0$ | put $y = f^g$, so $\ln y = g\ln f$, which is $0\cdot\infty$; then $\lim y = e^{\lim \ln y}$ |'
+    say: >
+      Every other form is reduced to zero by zero or infinity by infinity. For zero times infinity,
+      write the product as one factor over the reciprocal of the other, keeping the logarithm in
+      the numerator. For infinity minus infinity, take a common denominator. And for the three
+      exponential forms, zero to the zero, one to the infinity and infinity to the zero, take
+      logarithms: log y becomes g times log f, a zero times infinity form.
+
+  - section: other-forms
+    focus: 'More generally $x^\alpha\ln x \to 0$ as $x \to 0^+$ for every $\alpha > 0$.'
+    say: >
+      The key building block is x log x, which tends to zero as x tends to zero from the right.
+      Write it as log x over one over x and apply the rule. More generally, x to any positive power
+      times log x tends to zero. So x to the x has logarithm x log x, which tends to zero, and x to
+      the x tends to one. Similarly, x to the power one over x tends to one at infinity, because
+      log x over x tends to zero.
+
+  - section: other-forms
+    focus: '$0^0$ as a **form** is indeterminate even if a convention sets the number $0^0 = 1$.'
+    say: >
+      Notice the caution. Zero to the zero as a form is indeterminate, even though a convention may
+      set the number zero to the zero equal to one. For example, x to the power one over log x is
+      exactly e for every positive x, though the base and the exponent both tend to zero. On the
+      other hand, zero to the infinity is zero and infinity to the infinity is infinity: those are
+      not indeterminate.
+
+  - section: other-forms
+    question: q0011
+    say: >
+      Try an infinity to the zero form. Find the limit of cot x to the power sine x as x tends to
+      zero from the right.
+    answer: >
+      The limit is one. Take logs: log y is sine x times log cot x, which is minus sine x times log
+      tan x. That behaves like minus x log x, which tends to zero. So y tends to e to the zero,
+      which is one. Infinity is the tempting answer if you look only at the base.
+
+  - section: other-forms
+    focus: 'In $1^\infty$ problems never write $1^\infty = 1$.'
+    say: >
+      For one to the infinity there is a shortcut, because log f behaves like f minus one when f is
+      near one. The limit of f to the g is e to the limit of g times f minus one. One plus three x,
+      to the power one over x, gives e cubed. And as the exam tip says, never write one to the
+      infinity equals one. Cos x to the power one over x squared gives e to the minus one half.
+
+  - section: standard-limits
+    focus: '| $\dfrac1{x^2} - \dfrac1{\sin^2 x}$, $\;\dfrac1{x^2} - \cot^2 x$ | $-\dfrac13$, $\;\dfrac23$ |'
+    say: >
+      Most limits in the paper reduce to a few Maclaurin facts: sine x is x minus x cubed by six,
+      tan x is x plus x cubed by three, cos x is one minus x squared by two. The table collects the
+      results. Memorise the highlighted pair: one over x squared minus one over sine squared x
+      tends to minus one third, while one over x squared minus cot squared x tends to plus two
+      thirds.
+
+  - section: standard-limits
+    focus: '**Worked example.**'
+    say: >
+      Now the exponential forms. For sine x over x, to the power one over x squared, use the
+      shortcut: one over x squared times sine x over x minus one is sine x minus x, over x cubed,
+      which tends to minus one sixth. So the limit is e to the minus one sixth. In the same way,
+      tan x over x to the power one over x squared gives e to the one third.
+
+  - section: standard-limits
+    focus: 'so its limit power must be **below** $1$ ($e^{-1/6}$)'
+    say: >
+      A quick sign check catches errors. Sine x over x is less than one near zero, so its power
+      must tend to something below one, and e to the minus one sixth is below one. Tan x over x is
+      greater than one, so its limit must be above one. Also worth knowing: the mean of a to the x
+      and b to the x, to the power one over x, tends to the square root of a b.
+
+  - section: standard-limits
+    question: q0007
+    say: >
+      Use the shortcut. Find the limit of sine x over x, to the power one over x squared.
+    answer: >
+      e to the minus one sixth. One over x squared times sine x over x minus one is sine x minus x,
+      over x cubed, which tends to minus one sixth. The sign check kills e to the plus one sixth,
+      because sine x over x is less than one. And one is the trap of treating one to the infinity
+      as one.
+
+  - section: standard-limits
+    focus: '**Finding constants.**'
+    say: >
+      To find constants, insist that the limit be finite. If a sine x minus sine two x, over x
+      cubed, is finite, the x term of the numerator must vanish, so a minus two is zero, and a is
+      two. Then two sine x minus sine two x expands to x cubed plus higher terms, so the limit is
+      one.
+
+  - section: local-extrema
+    focus: '- **Fermat (necessary condition).** If $c$ is an interior point, $f$ has a local extremum at $c$ and $f''(c)$ exists, then $f''(c) = 0$.'
+    say: >
+      Now maxima and minima. f has a local maximum at c if f of x is at most f of c in some
+      neighbourhood of c. Fermat's theorem: at an interior extremum where the derivative exists,
+      the derivative is zero. So interior extrema occur only at critical points, where the
+      derivative is zero or does not exist.
+
+  - section: local-extrema
+    focus: '- $f''$ has the same sign on both sides: **no** extremum.'
+    say: >
+      The first derivative test: if f is continuous at c, and f dash changes from positive to
+      negative, it is a strict local maximum; from negative to positive, a minimum; no change of
+      sign, no extremum. This test does not need f dash of c to exist: the modulus of x has a
+      minimum at zero. And f dash of c equal to zero is not enough: x cubed has zero derivative at
+      the origin, but no extremum.
+
+  - section: local-extrema
+    focus: '| sign of $f''$ | $+$ | $-$ | $+$ |'
+    say: >
+      In the cubic example, the derivative factors as three times x minus one times x minus three.
+      The sign pattern is plus, minus, plus, so there is a local maximum at one and a local minimum
+      at three. Remember too that local maxima and minima of a continuous function alternate.
+
+  - section: local-extrema
+    question: q0004
+    say: >
+      Find the local maximum value of this cubic.
+    answer: >
+      The local maximum value is five. The derivative changes from positive to negative at x equals
+      one, and f of one is one minus six plus nine plus one, which is five. The option one is f of
+      three, the local minimum, and three is the value at the point of inflexion.
+
+  - section: local-extrema
+    focus: 'A local maximum value can be **smaller** than a local minimum value.'
+    say: >
+      And a caution that surprises people. A local maximum value can be smaller than a local
+      minimum value. For x plus one over x, the local maximum is minus two at minus one, and the
+      local minimum is two at one. Local means local.
+
+  - section: higher-derivative-test
+    focus: '- $n$ **even**: an extremum; a **maximum** if $f^{(n)}(c) < 0$ and a **minimum** if $f^{(n)}(c) > 0$.'
+    say: >
+      The second derivative test: at a stationary point, negative second derivative gives a
+      maximum, positive gives a minimum, and zero gives no conclusion. When it is zero, go further.
+      Find the first derivative that does not vanish at c. If its order is even, there is an
+      extremum: a maximum if it is negative, a minimum if it is positive. If its order is odd,
+      there is no extremum, and the point is a stationary point of inflexion.
+
+  - section: higher-derivative-test
+    focus: 'Near $c$ the sign is that of $h^n f^{(n)}(c)$.'
+    say: >
+      Why? Taylor's theorem. Near c, f of c plus h minus f of c has the sign of h to the n times the
+      n-th derivative. For even n, h to the n is always positive, so the sign is fixed. For odd n,
+      it flips with the sign of h. So x to the fourth has a minimum at zero, and x to the fifth has
+      no extremum.
+
+  - section: higher-derivative-test
+    question: q0012
+    say: >
+      Apply the test at zero for this quintic.
+    answer: >
+      Neither a maximum nor a minimum. The first and second derivatives vanish at zero, but the
+      third derivative is thirty, which is non zero. The first non vanishing derivative has odd
+      order, so there is no extremum. Indeed f dash is five x squared times x minus one times x
+      minus three, which is positive on both sides of zero.
+
+  - section: higher-derivative-test
+    focus: 'Yet $f$ has a minimum at $0$, because $f(x) > 0 = f(0)$ for $x \ne 0$.'
+    say: >
+      The test needs a non vanishing derivative. For e to the minus one over x squared, every
+      derivative at zero is zero, so the test is silent. Yet there is a minimum, since the function
+      is positive everywhere else. And the exam tip: when f double dash of c is zero, checking the
+      sign of f dash on both sides is often faster than computing more derivatives.
+
+  - section: inflexion
+    focus: 'A **point of inflexion** is a point $(c, f(c))$ of a continuous curve at which the concavity changes from one side to the other.'
+    say: >
+      Concavity next. The curve is concave upward when it lies above its tangents, which happens
+      when the second derivative is positive, and concave downward when it is negative. A point of
+      inflexion is a point where the concavity changes. If the second derivative exists there, it
+      must be zero. Sufficient: the second derivative changes sign, or the first non vanishing
+      derivative of order two or more has odd order.
+
+  - section: inflexion
+    focus: '- $f''''(c) = 0$ is **not sufficient**'
+    say: >
+      Two traps. f double dash zero is not sufficient: x to the fourth has zero second derivative
+      at the origin but is concave upward on both sides. And the second derivative need not exist:
+      x to the one third has an inflexion at the origin with a vertical tangent. At an inflexion,
+      the curve crosses its tangent, as you can see on the graph.
+
+  - section: inflexion
+    focus: 'Every cubic has exactly one point of inflexion, at $x = -\frac{b}{3a}$ for $ax^3 + bx^2 + cx + d$.'
+    say: >
+      For x to the fourth minus four x cubed, the second derivative is twelve x times x minus two,
+      which changes sign at zero and at two, giving two points of inflexion. Every cubic has
+      exactly one, at minus b over three a, midway between its maximum and minimum. For counting
+      questions, keep only the zeros of f double dash where it changes sign; a double root is not
+      an inflexion.
+
+  - section: global-extrema
+    focus: '**Closed-interval method.**'
+    say: >
+      For global extrema on a closed bounded interval, the extreme value theorem guarantees both
+      exist. Evaluate f at the critical points inside and at the two endpoints, and compare. For x
+      cubed minus three x squared on minus one to four, the local maximum at zero has value zero,
+      but the endpoint four gives sixteen, which is the global maximum. Always compare the
+      endpoints.
+
+  - section: global-extrema
+    focus: '| cylinder inscribed in a sphere of radius $R$ | $h = \dfrac{2R}{\sqrt3}$; $V = \dfrac{4\pi R^3}{3\sqrt3}$ |'
+    say: >
+      For applied problems, choose one variable, write the quantity, restrict the domain, and use
+      the tests. Several results are worth memorising. A closed cylinder of given volume has least
+      surface when the height is twice the radius; with an open top, height equals radius. The
+      cylinder in a sphere has height two R over root three. The cone in a sphere has height four R
+      by three. And the open box from a square sheet uses cuts of one sixth of the side.
+
+  - section: global-extrema
+    focus: '**Minimum distance.** Minimise the **square** of the distance; it has the same minimiser.'
+    say: >
+      For a minimum distance, minimise the square of the distance, which has the same minimiser
+      and no square roots. From the point zero comma two to the parabola y equals x squared, put u
+      equal to x squared, which must be non negative. The squared distance is u plus u minus two
+      squared, minimised at u equal to three halves.
+
+  - section: global-extrema
+    question: q0015
+    say: >
+      Finish that computation. What is the least distance?
+    answer: >
+      Root seven over two. At u equal to three halves, the squared distance is three halves plus
+      one quarter, which is seven quarters, so the distance is root seven over two. Two is the
+      distance to the vertex, which is not the nearest point, and the square root of three halves
+      is the x coordinate of the nearest points.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Check the form before L'Hospital, and differentiate numerator and denominator
+      separately. The rule is one way. For one to the infinity, use e to the limit of g times f
+      minus one; for zero to the zero and infinity to the zero, take logs. Series beat repeated
+      differentiation for cubic denominators. First non vanishing derivative even means extremum,
+      odd means none. Zero second derivative proves nothing. Compare endpoints for global extrema.
+      Now try the practice questions.

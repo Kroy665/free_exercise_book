@@ -1,0 +1,320 @@
+# Spoken lecture for "Methods of Integration".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: standard-forms
+    say: >
+      Welcome. Today we revise the methods of indefinite integration. This chapter is less about
+      theory and more about speed and reliability. By the end you should recognise which method
+      a given integrand is asking for, reduce it to a standard form in a line or two, and,
+      just as important, check an answer option in seconds by differentiating it. We start with
+      the table of standard integrals, because every method ends there.
+
+  - section: standard-forms
+    focus: 'An antiderivative is valid **on an interval** where the integrand is continuous; two antiderivatives of the same function on an interval differ by a constant.'
+    say: >
+      First, a point of precision that examiners like. An antiderivative is valid on an
+      interval where the integrand is continuous, and on such an interval any two
+      antiderivatives differ by a constant. That is just the mean value theorem: the
+      difference has zero derivative, so it is constant. Notice the words on an interval. On a
+      set with a gap, such as all non zero x, the constant may be different on each piece.
+
+  - section: standard-forms
+    focus: '| $\sec x$ | $\ln\lvert\sec x + \tan x\rvert = \ln\left\lvert\tan\left(\frac{\pi}{4} + \frac{x}{2}\right)\right\rvert$ |'
+    say: >
+      The table is memory work, so I will only stress the rows people get wrong. The integral
+      of tan x is log of the modulus of sec x, and of cot x is log of the modulus of sin x. The
+      integral of sec x is log of sec x plus tan x, which also equals log of tan of pi by four
+      plus x by two. And the integral of cosec x is log of cosec x minus cot x, which is log of
+      tan of x by two.
+
+  - section: standard-forms
+    focus: '| $\dfrac{1}{a^2 + x^2}$ | $\dfrac{1}{a}\tan^{-1}\dfrac{x}{a}$ |'
+    say: >
+      For the quadratic denominators, watch the factors in front. One over a squared plus x
+      squared gives one over a times tan inverse of x over a. One over x squared minus a
+      squared gives one over two a, times log of x minus a over x plus a. With a square root,
+      a squared minus x squared gives sine inverse of x over a, while x squared plus or minus a
+      squared gives a logarithm, log of x plus the root.
+
+  - section: standard-forms
+    focus: '**Completing the square** reduces any $\dfrac{1}{ax^2 + bx + c}$ or $\dfrac{1}{\sqrt{ax^2 + bx + c}}$ to one row of the table:'
+    say: >
+      Any quadratic in the denominator, with or without a square root, comes down to one of
+      these rows by completing the square. In the example on the board, x squared plus four x
+      plus thirteen is x plus two, all squared, plus three squared. So the integral is one
+      third of tan inverse of x plus two over three.
+
+  - section: standard-forms
+    focus: 'Do not swap the two logarithmic forms.'
+    say: >
+      Now the trap. The integral of one over x squared minus a squared has x minus a over x plus
+      a inside the log. The integral of one over a squared minus x squared has a plus x over a
+      minus x. These differ by a sign, not by a constant, so swapping them is a real error. In
+      the same way, log of cosec x plus cot x is minus log of tan of x by two, so it is the
+      negative of the correct integral of cosec x.
+
+  - section: standard-forms
+    focus: 'To test an option, differentiate it.'
+    say: >
+      And here is the most useful habit for the whole chapter. To test an option, differentiate
+      it. Differentiation is mechanical and fast, integration is not. A single derivative
+      settles sign slips and missing factors of a half or one over two a at once.
+
+  - section: standard-forms
+    question: q0001
+    say: >
+      Let's use that habit straight away. Which option is the integral of cosec x?
+    answer: >
+      The answer is log of the modulus of tan of x by two. Write cosec x as half sec squared of
+      x by two, over tan of x by two. That is f dash over f, with f equal to tan of x by two.
+      The tempting option, log of cosec x plus cot x, has the wrong sign; it is the negative of
+      the correct answer.
+
+  - section: substitution
+    focus: 'Read the other way: if the integrand has the shape $g(\psi(x))\,\psi''(x)$, put $u = \psi(x)$. Three patterns cover most exam questions:'
+    say: >
+      Substitution is the chain rule run backwards. If the integrand looks like a function of
+      some inner expression, multiplied by the derivative of that inner expression, call the
+      inner expression u. Three patterns on the board cover most exam questions: f dash over f
+      integrates to log of the modulus of f; f to the n times f dash gives f to the n plus one
+      over n plus one; and f of a x plus b integrates to F of a x plus b, divided by a.
+
+  - section: substitution
+    focus: '$\displaystyle\int\frac{dx}{e^x + e^{-x}} = \int\frac{e^x\,dx}{e^{2x} + 1} = \tan^{-1}(e^x) + C$ (put $u = e^x$).'
+    say: >
+      Look at the second example. One over e to the x plus e to the minus x does not look
+      standard. Multiply top and bottom by e to the x, and you get e to the x over e to the two
+      x plus one. Now put u equal to e to the x, and it is one over u squared plus one. The
+      answer is tan inverse of e to the x. Often the substitution only appears after a small
+      rewrite like this.
+
+  - section: substitution
+    focus: '| $\sqrt{a^2 - x^2}$ | $x = a\sin\theta$ |'
+    say: >
+      Trigonometric substitutions remove square roots, by turning one minus sine squared into
+      cosine squared, and so on. For root of a squared minus x squared, put x equal to a sine
+      theta. For a squared plus x squared, x equals a tan theta. For x squared minus a squared,
+      x equals a sec theta.
+
+  - section: substitution
+    focus: '**Different-looking answers can both be right.**'
+    say: >
+      Here is a caution that costs marks in multiple choice. Different looking answers can both
+      be right. The integral of sin x cos x is half sine squared x, or minus half cos squared x,
+      or minus a quarter of cos two x, depending on the substitution. All three differ only by
+      constants. So before you reject an option, check whether it differs from yours by a
+      constant.
+
+  - section: by-parts
+    focus: 'Choose $u$ as the factor that comes first in **ILATE**: Inverse trigonometric, Logarithmic, Algebraic, Trigonometric, Exponential.'
+    say: >
+      Integration by parts is the product rule run backwards: the integral of u times v dash is
+      u v minus the integral of u dash times v. The choice of u is guided by ILATE: inverse
+      trigonometric, logarithmic, algebraic, trigonometric, exponential. Take as u the factor
+      that comes first, because differentiating it simplifies the integrand. For log x or tan
+      inverse x alone, take v dash equal to one.
+
+  - section: by-parts
+    focus: 'In general, for a polynomial $p$, $\int p(x)e^x\,dx = e^x(p - p'' + p'''' - \cdots)$.'
+    say: >
+      The results on the board are worth knowing by heart. The integral of log x is x log x
+      minus x. The integral of tan inverse x is x tan inverse x minus half log of one plus x
+      squared. And for a polynomial times e to the x, there is a shortcut: the answer is e to
+      the x times p, minus p dash, plus p double dash, with alternating signs. For x squared,
+      that gives e to the x times x squared minus two x plus two.
+
+  - section: by-parts
+    focus: '$$\int e^x\left(f(x) + f''(x)\right)dx = e^x f(x) + C.$$'
+    say: >
+      Now a rule that turns hard looking problems into one liners. Since the derivative of e to
+      the x times f is e to the x times f plus f dash, the integral of e to the x times f plus
+      f dash is simply e to the x times f. The skill is to split the integrand into a function
+      plus its own derivative. For example, one over x minus one over x squared is f plus f
+      dash with f equal to one over x, so the answer is e to the x over x.
+
+  - section: by-parts
+    question: q0006
+    say: >
+      Try the hardest version. Integrate e to the x, times one plus sine x over one plus cos x.
+    answer: >
+      The answer is e to the x times tan of x by two. Using half angles, one plus cos x is two
+      cos squared of x by two, so the fraction splits into tan of x by two plus half sec
+      squared of x by two. That is f plus f dash with f equal to tan of x by two. The cot
+      options come from confusing one plus cos x with one minus cos x.
+
+  - section: by-parts
+    focus: '$$\int e^{ax}\sin bx\,dx = \frac{e^{ax}(a\sin bx - b\cos bx)}{a^2 + b^2}, \qquad \int e^{ax}\cos bx\,dx = \frac{e^{ax}(a\cos bx + b\sin bx)}{a^2 + b^2}.$$'
+    say: >
+      For e to the a x times sine b x, parts twice brings back the original integral, and you
+      solve for it. The result: e to the a x, times a sine b x minus b cos b x, over a squared
+      plus b squared. For cosine, it is a cos b x plus b sine b x. Notice the denominator is a
+      squared plus b squared, never a plus b.
+
+  - section: by-parts
+    focus: 'Check the recurring formulas at $x = 0$ by differentiating'
+    say: >
+      If you forget which sign goes where, use the tip on the board. Differentiate the
+      bracket for the sine formula and put x equal to zero. You get minus a b plus a b, which
+      is zero, matching sine of zero. With the wrong sign you get two a b, which is not zero.
+      So the minus sign belongs with the sine integral.
+
+  - section: partial-fractions
+    focus: '1. **Make it proper.** If $\deg P \ge \deg Q$, divide first: $\frac{P}{Q} = S + \frac{R}{Q}$ with $\deg R < \deg Q$.'
+    say: >
+      Rational functions are handled by partial fractions, in three steps. First, make the
+      fraction proper: if the degree of the numerator is at least that of the denominator,
+      divide first. Second, factor the denominator over the reals into linear factors and
+      irreducible quadratics. Third, write the form from the table: one constant for each
+      simple linear factor, k terms for a factor repeated k times, and a linear numerator over
+      each irreducible quadratic.
+
+  - section: partial-fractions
+    focus: '**Cover-up rule.** For a simple factor $(x - a)$ of $Q$, $A = \dfrac{P(a)}{Q''(a)}$; equivalently, cover the factor and put $x = a$ in the rest.'
+    say: >
+      The cover-up rule saves algebra. For a simple factor x minus a, the coefficient is P of a
+      over Q dash of a. In practice, cover that factor with your thumb and put x equal to a in
+      what remains. Why does it work? Write Q as x minus a times R. Multiply the identity by x
+      minus a and let x tend to a: every other term vanishes and you are left with P of a over
+      R of a, which is Q dash of a.
+
+  - section: partial-fractions
+    focus: 'A repeated factor $(x - a)^2$ needs **both** $\frac{A_1}{x - a}$ and $\frac{A_2}{(x - a)^2}$.'
+    say: >
+      The caution on the board lists the two classic slips. A repeated factor, x minus a
+      squared, needs both terms, A one over x minus a and A two over x minus a squared. Leaving
+      out the first is the common error. And an irreducible quadratic needs a linear numerator,
+      B x plus C, not just a constant. With fewer unknowns than the degree, the identity simply
+      cannot be satisfied.
+
+  - section: partial-fractions
+    question: q0011
+    say: >
+      Here is a repeated factor in action. Integrate one over x times x plus one squared.
+    answer: >
+      The answer is log of x over x plus one, plus one over x plus one. Cover-up gives one for
+      the one over x term and minus one for the squared term. Comparing the x squared terms,
+      the coefficient of one over x plus one is minus one. Then minus one over x plus one
+      squared integrates to plus one over x plus one. The option with minus one over x plus one
+      gets that last sign wrong.
+
+  - section: partial-fractions
+    focus: '**The $x^4 + 1$ trick.** Divide by $x^2$ and substitute:'
+    say: >
+      For the x to the four plus one trick, do not factor at all. Divide top and bottom by x
+      squared. For x squared plus one over x to the four plus one, the numerator becomes one
+      plus one over x squared, which is the derivative of x minus one over x, and the
+      denominator becomes x minus one over x, squared, plus two. So you get one over root two,
+      times tan inverse of x squared minus one over root two x. With x squared minus one on top,
+      use x plus one over x instead, and you get a logarithm.
+
+  - section: half-angle
+    focus: '$$\int\frac{dx}{a + b\cos x} = \int\frac{2\,dt}{(a + b) + (a - b)t^2}.$$'
+    say: >
+      Next, integrals of one over a plus b cos x. Put t equal to tan of x by two. Then cos x is
+      one minus t squared over one plus t squared, and d x is two d t over one plus t squared.
+      The one plus t squared cancels, and the integral becomes two d t over a plus b, plus a
+      minus b times t squared. Everything now depends on the sign of a minus b.
+
+  - section: half-angle
+    focus: '| $a > b$ | $\dfrac{2}{\sqrt{a^2 - b^2}}\tan^{-1}\left(\sqrt{\dfrac{a - b}{a + b}}\tan\dfrac{x}{2}\right)$ |'
+    say: >
+      With a and b positive: if a is greater than b, both coefficients are positive and you get
+      a tan inverse, with factor two over the root of a squared minus b squared. If a is less
+      than b, the t squared coefficient is negative, and you get a logarithm with factor one
+      over the root of b squared minus a squared. If a equals b, one plus cos x is two cos
+      squared of x by two, and the answer is one over a times tan of x by two.
+
+  - section: half-angle
+    question: q0013
+    say: >
+      Try one. Integrate one over five plus four cos x.
+    answer: >
+      The answer is two thirds of tan inverse of one third tan of x by two. The substitution
+      gives two d t over nine plus t squared, which is two thirds tan inverse of t over three.
+      If you forget the two from d x, you get the one third option, which is the usual slip.
+
+  - section: half-angle
+    focus: 'Across those points it jumps by $\frac{2\pi}{\sqrt{a^2 - b^2}}$.'
+    say: >
+      Look at the graph and the caution together. The formula from tan of x by two is an
+      antiderivative only on intervals that avoid odd multiples of pi, where tan of x by two is
+      undefined. There the formula jumps by two pi over root of a squared minus b squared, while
+      the true area function keeps climbing smoothly. This will matter when we do definite
+      integrals over zero to two pi.
+
+  - section: trig-quotients
+    focus: '$$l\sin x + m\cos x = A(n\sin x + p\cos x) + B(n\cos x - p\sin x).$$'
+    say: >
+      For a quotient of two linear combinations of sine and cosine, write the numerator as A
+      times the denominator, plus B times the derivative of the denominator. The A part
+      integrates to A x, and the B part is f dash over f, giving B log of the denominator. So
+      the answer always has the shape A x plus B log of the modulus of the denominator. Find A
+      and B by comparing the coefficients of sine and cosine.
+
+  - section: trig-quotients
+    question: q0016
+    say: >
+      Try it. Integrate three sine x plus two cos x, over two sine x plus three cos x.
+    answer: >
+      The answer is twelve thirteenths x, minus five thirteenths log of the modulus of two sine
+      x plus three cos x. Comparing coefficients gives two A minus three B equals three, and
+      three A plus two B equals two, so A is twelve thirteenths and B is minus five
+      thirteenths. The option with plus five thirteenths has the sign of B wrong.
+
+  - section: trig-quotients
+    focus: 'Write $a\sin x + b\cos x = r\sin(x + \alpha)$ with $r = \sqrt{a^2 + b^2}$, $\tan\alpha = \frac{b}{a}$. Then'
+    say: >
+      For one over a sine x plus b cos x, combine the denominator into r sine of x plus alpha,
+      with r the root of a squared plus b squared. The integral becomes one over r times cosec
+      of x plus alpha, which is one over r times log of tan of x plus alpha, over two. For sine
+      x plus cos x, alpha is pi by four, so the answer has tan of x by two plus pi by eight.
+      Halving the shift is exactly where people slip.
+
+  - section: trig-quotients
+    focus: 'Use $t = \tan x$ when the integrand is even in $\sin x$ and $\cos x$ together'
+    say: >
+      For one over a plus b sine squared x, and relatives like one over a squared sine squared
+      plus b squared cos squared, divide by cos squared x and put t equal to tan x. The rule of
+      thumb on the board is worth remembering: use tan x when only squares and the product sine
+      x cos x appear; use tan of x by two for first powers, such as a plus b cos x. A common
+      slip is to forget that sec squared x is one plus t squared, not one.
+
+  - section: irrational
+    focus: 'The sign of $a$ decides the family: $a > 0$ gives logarithms, $a < 0$ gives $\sin^{-1}$.'
+    say: >
+      Finally, irrational integrands. Type one is one over the square root of a quadratic, or
+      the square root of a quadratic itself. Complete the square and use the table. The sign of
+      the leading coefficient decides the family: positive gives logarithms, negative gives
+      sine inverse. Type two has a linear numerator. Write it as lambda times the derivative of
+      the quadratic, plus a constant mu. The lambda part gives two lambda times the square root;
+      the mu part is type one.
+
+  - section: irrational
+    focus: '**Type 3: $\int\frac{dx}{(px + q)\sqrt{ax^2 + bx + c}}$.** Put $px + q = \frac{1}{t}$. This reduces it to Type 1 in $t$.'
+    say: >
+      Type three has a linear factor times a root of a quadratic in the denominator. Put the
+      linear factor equal to one over t, and it reduces to type one in t. In the worked example,
+      with x plus one equal to one over t, the integral collapses to minus the integral of one
+      over root of one minus two t, giving the square root of x minus one over x plus one. Type
+      four, a linear factor times the root of a linear expression, is handled by putting that
+      linear expression equal to u squared.
+
+  - section: irrational
+    question: q0019
+    say: >
+      One last question. Integrate one over the square root of x squared plus two x plus five.
+    answer: >
+      The answer is log of x plus one plus the square root of x squared plus two x plus five.
+      Completing the square gives x plus one, squared, plus two squared, which is the
+      logarithmic row of the table. Sine inverse belongs to a squared minus u squared, and the
+      option that drops the plus one inside the log is the commonest slip.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist on the board. Differentiate the options; it is faster than
+      integrating. Remember that answers can differ by a constant. Write log of the modulus of
+      x, not log x. Keep the factor one over a with tan inverse and one over two a with the
+      logarithmic forms. Look for a function and its derivative beside e to the x. For a plus b
+      cos x, compare a and b first. For sine cosine quotients, the answer is A x plus B log of
+      the denominator. Now try the practice questions.

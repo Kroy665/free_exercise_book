@@ -1,0 +1,329 @@
+# Spoken lecture for "Integers and Divisibility".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: induction
+    say: >
+      Welcome. Today we revise elementary number theory: induction, the division algorithm,
+      the gcd and Bezout's identity, primes, divisor functions and linear Diophantine
+      equations. This chapter looks easy, and that is exactly why marks are lost in it. By the
+      end you should be able to write the correct remainder for negative numbers, produce a
+      Bezout pair and check it, count divisors in seconds, and count the positive solutions of
+      a linear equation without fear.
+
+  - section: induction
+    focus: '**Well-ordering principle (WOP).** Every non-empty set of positive integers has a least element.'
+    say: >
+      Everything starts with the well-ordering principle. Every non-empty set of positive
+      integers has a least element. It sounds obvious, but notice what it depends on. It fails
+      for all the integers, because the negative integers have no least element. It fails for
+      the positive rationals and for the open interval from zero to one, where the infimum zero
+      is never reached. It does hold for any non-empty set of integers that is bounded below.
+
+  - section: induction
+    question: q0019
+    say: >
+      A quick check of that idea. Which of these sets has a least element under the usual
+      order? Choose an option and press Check.
+    answer: >
+      The positive even integers. They form a non-empty set of positive integers, so the
+      well-ordering principle gives a least element, namely two. The positive rationals and the
+      open interval from zero to one have infimum zero, but zero is not in either set. The
+      negative integers are not bounded below at all.
+
+  - section: induction
+    focus: 'The WOP, the first principle and the second principle are **logically equivalent** (each can be proved from any other).'
+    say: >
+      The first principle of induction needs a base case and the step from k to k plus one.
+      The strong form lets you assume the statement for all of one up to k. These two forms and
+      well-ordering are logically equivalent. The proof of induction from well-ordering is
+      worth knowing: if the statement failed somewhere, take the least failure m. Then m minus
+      one is fine, so by the step m is fine too, a contradiction.
+
+  - section: induction
+    focus: 'So $f(k + 1) = 9f(k) + 64(k + 1)$, and $64 \mid f(k)$ gives $64 \mid f(k + 1)$.'
+    say: >
+      In the worked example, we show that 64 divides three to the power two n plus two, minus
+      eight n, minus nine. At n equals one the value is exactly 64. For the step, the trick is
+      to compare f of k plus one with nine times f of k. The difference is 64 times k plus one,
+      so f of k plus one is nine f of k plus a multiple of 64. That pattern, subtract a
+      suitable multiple of the previous term, works for most divisibility inductions.
+
+  - section: induction
+    focus: 'Here the step uses $P(a)$ for some smaller $a$, not just $P(n - 1)$, so the strong form is needed.'
+    say: >
+      Strong induction is needed when the step reaches further back. To show every integer from
+      two onwards has a prime factor, write a composite n as a times b, and use the statement
+      for a, which is smaller than n but not necessarily n minus one. That is the typical
+      signature of strong induction: you fall back on some smaller case, not just the previous
+      one.
+
+  - section: induction
+    focus: 'For divisibility results like $6 \mid n^3 - n$ or $30 \mid n^5 - n$, factor first:'
+    say: >
+      Two cautions here. Both parts of induction are needed: the absurd statement n equals n
+      plus one passes the inductive step but never has a base. And the exam tip: for results
+      like six divides n cubed minus n, factor first. n cubed minus n is n minus one, times n,
+      times n plus one, a product of three consecutive integers, so it is divisible by two and
+      by three. That is quicker than any induction.
+
+  - section: division-algorithm
+    focus: '- $a \mid b$ and $a \mid c \Rightarrow a \mid (bx + cy)$ for all integers $x, y$.'
+    say: >
+      Now divisibility. a divides b when b is a times some integer. The basic facts are on the
+      board; the most used one is highlighted. If a divides b and a divides c, then a divides
+      every combination b x plus c y. Keep this in mind, because the gcd, Bezout and the
+      Diophantine criterion are all built on it. Also note that a divides zero for every a, but
+      zero divides only zero.
+
+  - section: division-algorithm
+    focus: '  $$a = bq + r, \qquad 0 \le r < |b|.$$'
+    say: >
+      The division algorithm. For integers a and b with b non zero, there are unique integers q
+      and r with a equal to b q plus r, and r between zero and the modulus of b, including
+      zero but excluding the modulus of b. Existence comes from well-ordering: take the least
+      non negative number of the form a minus b x. Uniqueness: two representations would make
+      a multiple of b smaller than b itself.
+
+  - section: division-algorithm
+    focus: '| $-17 \div 5$ | $-17 = 5 \cdot (-4) + 3$ | $-4$ | $3$ |'
+    say: >
+      The single most important line in this section: the remainder is never negative. Look at
+      the highlighted row. Minus 17 divided by five gives quotient minus four and remainder
+      three, because minus 20 plus three is minus 17. Writing minus 17 as five times minus three,
+      minus two, is true arithmetic, but it is not the division algorithm. For a negative
+      dividend, push the quotient one step further from zero.
+
+  - section: division-algorithm
+    question: q0001
+    say: >
+      Try it. Minus 17 divided by five, by the division algorithm. What are the quotient and
+      remainder?
+    answer: >
+      The quotient is minus four and the remainder is three. The remainder must lie from zero up
+      to four, and minus 17 equals five times minus four, plus three. The tempting option,
+      quotient minus three with remainder minus two, gives the right number but a negative
+      remainder, so it is not allowed.
+
+  - section: division-algorithm
+    focus: 'For example, every square has the form $4k$ or $4k + 1$, so no integer of the form $4k + 3$ is a sum of two squares.'
+    say: >
+      The division algorithm sorts integers into remainder classes: even or odd, three k, three
+      k plus one, three k plus two, and so on. A favourite consequence: every square leaves
+      remainder zero or one on division by four. So a sum of two squares leaves remainder zero,
+      one or two, never three. These classes are the beginning of congruence modulo n.
+
+  - section: gcd
+    focus: 'In fact $\gcd(a, b)$ is the **least positive** integer of the form $ax + by$.'
+    say: >
+      The gcd of a and b is the positive common divisor that every other common divisor divides.
+      Bezout's identity says it can be written as a x plus b y for some integers x and y. In
+      fact, it is the least positive number of that form. The proof: take the least positive
+      combination d, by well-ordering. Divide a by d. The remainder is again a combination and
+      smaller than d, so it must be zero. So d divides a, and likewise b.
+
+  - section: gcd
+    focus: 'The integers $x, y$ are **not unique**:'
+    say: >
+      Notice that the Bezout pair is not unique. You can add b over d times t to x and subtract a
+      over d times t from y, for any integer t, and the combination does not change. Keep this in
+      mind; it is exactly the general solution of a Diophantine equation, which comes at the end.
+
+  - section: gcd
+    focus: 'So $\gcd(252, 198) = 18$.'
+    say: >
+      The Euclidean algorithm rests on one fact: if a equals b q plus r, then the gcd of a and b
+      equals the gcd of b and r. So keep dividing until the remainder is zero; the last non zero
+      remainder is the gcd. For 252 and 198 the remainders are 54, 36, 18 and then zero, so the
+      gcd is 18. A common slip is to stop at an intermediate remainder like 36.
+
+  - section: gcd
+    focus: '$$18 = 54 - 36 = 54 - (198 - 3 \cdot 54) = 4 \cdot 54 - 198 = 4(252 - 198) - 198 = 4 \cdot 252 - 5 \cdot 198.$$'
+    say: >
+      To find the Bezout pair, work upwards. Write 18 as 54 minus 36, replace 36 by 198 minus
+      three times 54, collect, then replace 54 by 252 minus 198. You end with 18 equal to four
+      times 252, minus five times 198. Always check by multiplying out: 1008 minus 990 is 18.
+
+  - section: gcd
+    question: q0003
+    say: >
+      Now pick the correct Bezout pair from the options. Remember the exam tip: just multiply
+      out.
+    answer: >
+      The pair is four and minus five: four times 252 is 1008, five times 198 is 990, and the
+      difference is 18. The trap is minus four and five, which gives minus 18, a simple sign
+      slip. The other two pairs give 468 and minus 36.
+
+  - section: gcd
+    focus: 'And $\gcd(a, b) = \gcd(a, b + ka)$ for every integer $k$.'
+    say: >
+      Three useful rules. Multiplying both numbers by m multiplies the gcd by the modulus of m.
+      Dividing both numbers by their gcd leaves coprime numbers. And adding any multiple of a to
+      b does not change the gcd. This last rule is the engine of the Euclidean algorithm and of
+      many one line proofs.
+
+  - section: coprime-lcm
+    focus: 'So $\gcd(n, n + 1) = 1$ (take $x = -1$, $y = 1$), and $\gcd(2n + 1, 3n + 1) = 1$ (use $3(2n + 1) - 2(3n + 1) = 1$).'
+    say: >
+      Two numbers are coprime when their gcd is one. Because one is the least positive integer,
+      coprimality is the same as being able to write one as a x plus b y. That gives instant
+      proofs: n and n plus one are coprime, since their difference is one. And two n plus one
+      and three n plus one are coprime, since three times the first minus two times the second
+      is one.
+
+  - section: coprime-lcm
+    focus: '- **Euclid''s lemma.** If $a \mid bc$ and $\gcd(a, b) = 1$, then $a \mid c$.'
+    say: >
+      Euclid's lemma: if a divides b c and a is coprime to b, then a divides c. Proof: write one
+      as a x plus b y, multiply by c, and a divides both terms. The caution box shows why
+      coprimality matters. Four and six both divide 12, but 24 does not. And six divides four
+      times nine, yet six divides neither four nor nine.
+
+  - section: coprime-lcm
+    focus: '$$\gcd(a, b) \cdot \operatorname{lcm}(a, b) = |ab|.$$'
+    say: >
+      For the lcm, remember the product rule: gcd times lcm equals the modulus of a b. The
+      factorisation view explains it: the gcd takes the smaller exponent of each prime, the lcm
+      the larger, and smaller plus larger is the sum. So for 252 and 198, the lcm is their
+      product divided by 18, which is 2772. But this rule is for two numbers only.
+
+  - section: coprime-lcm
+    focus: 'If $\gcd(a, b) = 1$, then $\gcd(a + b, a - b)$ is $1$ or $2$:'
+    say: >
+      A classic exam fact. If a and b are coprime, then the gcd of a plus b and a minus b is one
+      or two. Any common divisor divides the sum, two a, and the difference, two b, so it
+      divides two. Both values occur: two and one give one, while three and one give two.
+
+  - section: primes
+    focus: '- **Euclid''s first theorem.** If $p$ is prime and $p \mid ab$, then $p \mid a$ or $p \mid b$. More generally, $p \mid a_1 a_2 \cdots a_n \Rightarrow p \mid a_i$ for some $i$.'
+    say: >
+      Primes. One is neither prime nor composite. Euclid's first theorem: if a prime divides a
+      product, it divides one of the factors. Proof: if p does not divide a, then p is coprime
+      to a, because p has no other divisors, and Euclid's lemma finishes it. This property
+      actually characterises primes: a composite r s divides itself but neither r nor s.
+
+  - section: primes
+    focus: 'The proof does **not** say $N$ is prime.'
+    say: >
+      Euclid's second theorem: there are infinitely many primes. Multiply all the supposed
+      primes and add one. That number leaves remainder one on division by each of them, so its
+      prime factors are new. Now the trap. The proof does not say this number is prime. Two
+      times three times five times seven times eleven times thirteen, plus one, is 30031, which
+      is 59 times 509.
+
+  - section: primes
+    question: q0012
+    say: >
+      Here is that trap as a question. What can you say about 30031?
+    answer: >
+      It is composite: 59 times 509. None of the primes from two to thirteen divides it, since
+      each leaves remainder one, so the options with seven and thirteen are wrong. And the
+      tempting first option, that Euclid's proof makes it prime, is false. The proof only says
+      its prime factors are new.
+
+  - section: primes
+    focus: 'If $n > 1$ is composite, it has a prime factor $p \le \sqrt n$.'
+    say: >
+      The fundamental theorem of arithmetic: every integer greater than one is a product of
+      primes, uniquely apart from order. Existence is strong induction; uniqueness uses Euclid's
+      first theorem to cancel one prime at a time. For a primality test, try only primes up to
+      the square root. For 223, the square root is below 15, and none of two to thirteen
+      divides it, so 223 is prime. But 221 is 13 times 17. Unique factorisation also proves the
+      square root of any prime is irrational.
+
+  - section: divisor-functions
+    focus: '- **Number of divisors:** $\tau(n) = (\alpha_1 + 1)(\alpha_2 + 1) \cdots (\alpha_k + 1)$.'
+    say: >
+      Divisor functions. Once you have the prime factorisation, every divisor is chosen by
+      picking each exponent from zero up to its maximum. So the number of divisors, tau of n, is
+      the product of the exponents plus one. The sum of divisors, sigma of n, is the product of
+      the geometric sums one plus p plus up to p to the alpha. And the product of all divisors
+      is n to the power tau of n over two.
+
+  - section: divisor-functions
+    focus: '$$\tau(360) = 4 \cdot 3 \cdot 2 = 24, \qquad \sigma(360) = (1 + 2 + 4 + 8)(1 + 3 + 9)(1 + 5) = 15 \cdot 13 \cdot 6 = 1170.$$'
+    say: >
+      For 360, which is two cubed times three squared times five, tau is four times three times
+      two, which is 24, and sigma is 15 times 13 times six, which is 1170. The usual slips are
+      to multiply the exponents without adding one, or to give 810, which is the sum of proper
+      divisors only. From the table, remember that six and 28 are perfect: sigma is twice the
+      number.
+
+  - section: divisor-functions
+    focus: '- $\tau(n)$ is odd $\iff$ $n$ is a perfect square (the divisors pair off as $d \leftrightarrow n/d$, except $d = \sqrt n$).'
+    say: >
+      The facts used in questions. Tau of n is odd exactly when n is a perfect square, because
+      divisors pair off as d with n over d, except the square root. Tau and sigma are
+      multiplicative for coprime arguments, but not completely multiplicative. Odd divisors are
+      the divisors of the odd part. And the sum of reciprocals of the divisors is sigma of n
+      over n; for 360 that is 13 over four.
+
+  - section: divisor-functions
+    focus: 'The smallest is $2^2 \cdot 3 \cdot 5 = 60$.'
+    say: >
+      The exam tip deserves attention. For the smallest number with exactly k divisors, write k
+      as a product of exponents plus one in every way, and give the largest exponents to the
+      smallest primes. For 12 divisors, the candidates are two to the eleven, two to the five
+      times three, two cubed times three squared, and two squared times three times five. Then
+      compare.
+
+  - section: divisor-functions
+    question: q0017
+    say: >
+      Now do the comparison yourself. What is the smallest positive integer with exactly 12
+      divisors?
+    answer: >
+      It is 60, which is two squared times three times five, with three times two times two
+      divisors. The other candidates are 72, 96 and 2048, all larger. The tempting 48 is smaller
+      but has only ten divisors, since it is two to the four times three.
+
+  - section: diophantine
+    focus: '- **Solvability.** Let $d = \gcd(a, b)$. The equation has an integer solution **if and only if** $d \mid c$.'
+    say: >
+      Finally, linear Diophantine equations, a x plus b y equals c in integers. Let d be the gcd
+      of a and b. A solution exists if and only if d divides c. One direction: d divides every
+      combination a x plus b y. The other: scale a Bezout pair for d by c over d. So six x plus
+      ten y equals 15 has no solution, because the left side is always even.
+
+  - section: diophantine
+    focus: '  $$x = x_0 + \frac{b}{d}\,t, \qquad y = y_0 - \frac{a}{d}\,t, \qquad t \in \Z.$$'
+    say: >
+      Given one solution, all solutions are x nought plus b over d times t, and y nought minus a
+      over d times t. The proof is Euclid's lemma applied after dividing through by d. Look at
+      the caution: the steps are b over d and a over d, not b and a, otherwise you miss
+      solutions whenever d exceeds one. And the signs are opposite: when x goes up, y goes down.
+
+  - section: diophantine
+    focus: 'So $t = -99$ gives the only positive solution, $(x, y) = (5, 7)$. Check: $860 + 140 = 1000$.'
+    say: >
+      The worked example, 172 x plus 20 y equals 1000, shows the full method. The gcd is four,
+      which divides 1000. Back substitution gives four as two times 172 minus 17 times 20;
+      multiply by 250. The general solution is x equals 500 plus five t, y equals minus 4250
+      minus 43 t. Positivity of both forces t equal to minus 99, giving the single positive
+      solution five and seven.
+
+  - section: diophantine
+    focus: '**Small cases by remainders.**'
+    say: >
+      For small equations, use remainders instead. In five x plus three y equals 52, three y
+      must leave remainder two on division by five, so y must leave remainder four. Then list y
+      equal to four, nine, fourteen and read off x.
+
+  - section: diophantine
+    question: q0007
+    say: >
+      Count them. How many solutions does five x plus three y equals 52 have in positive
+      integers?
+    answer: >
+      Three. y equal to four, nine and fourteen give x equal to eight, five and two. The next
+      value, y equal to 19, makes x negative. The tempting answer four counts a case with y equal
+      to minus one, which is not positive.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the checklist on the board. The remainder is never negative. The least
+      positive value of a x plus b y is the gcd, so for 84 x plus 60 y it is 12. Gcd times lcm
+      equals the product for two numbers only. Combining divisors needs coprimality. Euclid's
+      number need not be prime. For the largest integer dividing f of n for all n, compute f at
+      small n first; for n to the fifth minus n it is 30. And solvability depends only on the gcd
+      dividing c. Now try the practice questions.

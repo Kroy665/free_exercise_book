@@ -113,6 +113,7 @@ pub fn install_pack_db(
         tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [&id])?;
         tx.execute("DELETE FROM questions WHERE topic_id = ?1", [&id])?;
         tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [&id])?;
+        tx.execute("DELETE FROM lectures WHERE topic_id = ?1", [&id])?;
         tx.execute_batch(
             "INSERT OR REPLACE INTO subjects SELECT * FROM pack.subjects;
              INSERT OR REPLACE INTO units SELECT * FROM pack.units;
@@ -127,6 +128,15 @@ pub fn install_pack_db(
         )?;
         if has_ca {
             tx.execute_batch("INSERT INTO ca_items SELECT * FROM pack.ca_items;")?;
+        }
+        // Packs built before lectures existed have no such table.
+        let has_lectures: bool = tx.query_row(
+            "SELECT EXISTS (SELECT 1 FROM pack.sqlite_master WHERE type = 'table' AND name = 'lectures')",
+            [],
+            |r| r.get(0),
+        )?;
+        if has_lectures {
+            tx.execute_batch("INSERT INTO lectures SELECT * FROM pack.lectures;")?;
         }
         tx.execute(
             "INSERT OR REPLACE INTO installed_packs (id, version, sha256, size) VALUES (?1, ?2, ?3, ?4)",
@@ -147,6 +157,7 @@ pub fn remove_pack(conn: &mut Connection, id: &str) -> Result<()> {
     tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
+    tx.execute("DELETE FROM lectures WHERE topic_id = ?1", [id])?;
     tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
     tx.execute("DELETE FROM installed_packs WHERE id = ?1", [id])?;
     crate::search::remove_topic(&tx, id)?;
@@ -199,6 +210,7 @@ pub fn purge_unmanaged(conn: &mut Connection) -> Result<usize> {
         tx.execute("DELETE FROM note_sections WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM questions WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM ca_items WHERE topic_id = ?1", [id])?;
+        tx.execute("DELETE FROM lectures WHERE topic_id = ?1", [id])?;
         tx.execute("DELETE FROM topics WHERE id = ?1", [id])?;
         crate::search::remove_topic(&tx, id)?;
     }

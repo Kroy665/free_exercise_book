@@ -1,0 +1,305 @@
+# Spoken lecture for "Quadrics".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: general-equation
+    say: >
+      Welcome. Today we study quadrics, the surfaces given by a general second degree equation
+      in x, y and z. This topic is where coordinate geometry meets linear algebra: the whole
+      classification runs on the eigenvalues of a symmetric matrix and two determinants. By the
+      end you should be able to name any quadric from its equation, find its centre, reduce it
+      to a standard form, and write tangent planes, quickly and without the classic halving
+      errors.
+
+  - section: general-equation
+    focus: 'The factors of $2$ are part of the convention: the coefficient of $yz$ is $2f$, of $x$ is $2u$, and so on.'
+    say: >
+      Look at the general equation on the board: a x squared plus b y squared plus c z squared,
+      plus two f y z, two g z x, two h x y, then two u x, two v y, two w z, and d. Notice the
+      highlighted sentence. The factors of two are built into the notation, so f, g, h, u, v
+      and w are half the coefficients you actually see.
+
+  - section: general-equation
+    focus: '$$F = X^TAX + 2L^TX + d, \qquad A = \begin{pmatrix} a & h & g\\ h & b & f\\ g & f & c\end{pmatrix}.$$'
+    say: >
+      In matrix form, the quadratic part is X transpose A X, where A is the symmetric matrix
+      with a, b, c on the diagonal, h in the x y positions, g in the x z positions, and f in the
+      y z positions. Border A with the column u, v, w and the constant d, and you get the four
+      by four matrix E of the whole equation. We call the determinant of A capital D, and the
+      determinant of E capital delta.
+
+  - section: general-equation
+    focus: 'In matrix form, $\tfrac12\nabla F = AX + L$.'
+    say: >
+      Half the partial derivatives are three linear expressions: a x plus h y plus g z plus u,
+      and its two partners. In matrix form, half the gradient is A X plus L. Remember these,
+      because the same three expressions give both the centre and the tangent plane.
+
+  - section: general-equation
+    focus: 'The most common slip is **not halving**.'
+    say: >
+      The caution on the board is the single biggest source of wrong answers in this chapter.
+      The x y entry of A is h, half the coefficient of x y. Put the unhalved coefficient in, and
+      every invariant and every eigenvalue comes out wrong. As a summary, the eigenvalues of A
+      give the shape and axes, the rank of A tells you about the centre, and delta with the
+      rank of E tells you whether the quadric is degenerate.
+
+  - section: general-equation
+    question: q0003
+    say: >
+      Let's make sure the halving is automatic. A question is beside the notes. Choose the
+      correct matrix and press Check.
+    answer: >
+      The correct matrix is the first one: diagonal one, minus two, three, with h equal to minus
+      one, f equal to minus two, and g equal to three. Each is half of the cross coefficient.
+      The second option forgets to halve, the third swaps f and g, and the last gets the sign of
+      h wrong, since the term is minus two x y.
+
+  - section: standard-surfaces
+    focus: '**Counting signs.** In a central form $\pm\frac{x^2}{a^2} \pm \frac{y^2}{b^2} \pm \frac{z^2}{c^2} = 1$, count the **positive** squares'
+    say: >
+      Every real quadric can be moved, by a rotation and a translation, into one of the standard
+      forms in the table. For the central forms equal to one, there is a simple rule: count the
+      positive squares. Three positive gives an ellipsoid, two gives a hyperboloid of one sheet,
+      one gives a hyperboloid of two sheets, and none gives no real points at all.
+
+  - section: standard-surfaces
+    focus: '| $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{2z}{c}$ | elliptic paraboloid | none |'
+    say: >
+      The rest of the table: equal to zero instead of one gives a cone with vertex at the
+      origin. Two squares equal to a linear term in the third variable give a paraboloid,
+      elliptic if the squares have the same sign, hyperbolic, the saddle, if they differ.
+      Paraboloids have no centre. Then come the cylinders and the pairs of planes.
+
+  - section: standard-surfaces
+    focus: '| hyperboloid of one sheet | ellipses for every $k$ | hyperbolas (a line pair at $\lvert k\rvert = a$) |'
+    say: >
+      Sections parallel to the coordinate planes identify surfaces quickly. The hyperboloid of
+      one sheet has an elliptic section at every height, which is why it is connected. The
+      hyperboloid of two sheets has a gap: for the form with one positive square in x, the
+      sections x equals k are empty when the modulus of k is less than a. That gap separates the
+      two sheets.
+
+  - section: standard-surfaces
+    focus: 'So $4x^2 + 9y^2 = 36$ is an elliptic cylinder, not an ellipse.'
+    say: >
+      A trap worth highlighting. In space, an equation with one variable missing is a cylinder,
+      with generators parallel to the axis of the missing variable. So four x squared plus nine
+      y squared equals 36 is an elliptic cylinder, not an ellipse; an ellipse in space needs two
+      equations. Also remember the exam tip: the hyperboloid of one sheet and the hyperbolic
+      paraboloid are the doubly ruled quadrics, containing two families of straight lines.
+
+  - section: standard-surfaces
+    question: q0001
+    say: >
+      Try the sign count. Identify the surface on the board beside you.
+    answer: >
+      It is a hyperboloid of one sheet. On the left of equals one there are two positive
+      squares, x squared and y squared, and one negative. One positive square would give two
+      sheets, a cone needs zero on the right, and a paraboloid needs a linear term.
+
+  - section: invariants
+    focus: '- the quadratic part''s matrix becomes $A'' = P^TAP$, which has the **same eigenvalues** as $A$;'
+    say: >
+      Now the invariants. A change of rectangular axes is an orthogonal matrix P together with a
+      translation. Under it, A becomes P transpose A P, which is similar to A, so it has the
+      same eigenvalues. The four by four matrix transforms the same way with a matrix of
+      determinant plus or minus one, so its determinant is unchanged.
+
+  - section: invariants
+    focus: '$$I = a + b + c, \qquad J = bc + ca + ab - f^2 - g^2 - h^2, \qquad D = \det A, \qquad \Delta = \det E,$$'
+    say: >
+      The invariants are on the board. I is the trace, a plus b plus c. J is the sum of the
+      principal two by two minors, b c plus c a plus a b minus f squared minus g squared minus h
+      squared. D is the determinant of A, and delta the determinant of E. The ranks of A and E
+      are invariant too.
+
+  - section: invariants
+    focus: '$$\lambda^3 - I\lambda^2 + J\lambda - D = 0, \qquad \lambda_1 + \lambda_2 + \lambda_3 = I,\ \ \sum\lambda_i\lambda_j = J,\ \ \lambda_1\lambda_2\lambda_3 = D.$$'
+    say: >
+      Why these three? They are the coefficients of the characteristic equation, called the
+      discriminating cubic: lambda cubed minus I lambda squared plus J lambda minus D. So the
+      eigenvalues add to I, their pairwise products add to J, and their product is D. Notice
+      also that a translation does not touch the second degree coefficients at all, so it
+      leaves A unchanged, while a rotation changes the coefficients but not the invariants.
+
+  - section: invariants
+    focus: '$J$ uses $h$, not $2h$.'
+    say: >
+      In the worked example, three x squared plus three y squared plus two z squared plus two x
+      y, we get I equal to eight, J equal to twenty and D equal to sixteen, and the cubic has
+      roots four, two, two. The caution: J uses h, not two h. And here is a powerful shortcut.
+      Any proposed reduced form must have coefficients adding to the trace. That single check
+      eliminates most wrong options in a multiple choice question.
+
+  - section: invariants
+    question: q0007
+    say: >
+      Compute J for the example we just discussed.
+    answer: >
+      J equals twenty. With a and b equal to three, c equal to two, and h equal to one, half of
+      two, we get six plus six plus nine, minus one. Twenty one forgets the h squared term,
+      seventeen uses h equal to two without halving, and sixteen is the determinant D. Check:
+      for eigenvalues four, two, two the pairwise products add to twenty.
+
+  - section: central-reduction
+    focus: '$$\tfrac12 F_x = \tfrac12 F_y = \tfrac12 F_z = 0, \qquad\text{i.e.}\qquad AX_0 + L = 0.$$'
+    say: >
+      A centre is a point about which the quadric is symmetric. Shifting the origin there must
+      kill the linear terms, so the centre solves half the partial derivatives equal to zero, that
+      is, A times X nought plus L equals zero. If D is nonzero, there is a unique centre, minus A
+      inverse L, and the quadric is called central. If D is zero, there is no centre, or a whole
+      line or plane of them.
+
+  - section: central-reduction
+    focus: '$$d'' = F(X_0) = ux_0 + vy_0 + wz_0 + d = \frac{\Delta}{D}.$$'
+    say: >
+      After translating to the centre, the new constant is u x nought plus v y nought plus w z
+      nought plus d. Why is this delta over D? Because delta is unchanged by the shift, and after
+      the shift the four by four matrix is block diagonal, so its determinant is D times the new
+      constant. Then rotate to the eigenvectors, and you get lambda one X squared plus lambda two
+      Y squared plus lambda three Z squared plus delta over D equals zero.
+
+  - section: central-reduction
+    focus: 'So the **smallest eigenvalue gives the longest axis**.'
+    say: >
+      The principal axes are the lines through the centre along the eigenvectors. For an
+      ellipsoid written as the sum of lambda i times the squares equal to K, the semi axis along
+      each eigenvector is the square root of K over lambda i. So the smallest eigenvalue gives the
+      longest axis. In the worked example, the eigenvalues are three, six and nine, the centre is
+      one, two, minus one, the constant is minus six, and the result is an ellipsoid.
+
+  - section: central-reduction
+    focus: 'the central quadric is a **surface of revolution** about the axis of the simple eigenvalue $\lambda_1$.'
+    say: >
+      The exam tip: a repeated eigenvalue means a surface of revolution, about the axis of the
+      simple eigenvalue. The reason: the reduced form then depends on the other two coordinates
+      only through the sum of their squares, which is unchanged by rotation about that axis. Our
+      earlier example with roots four, two, two is therefore a spheroid, an ellipsoid of
+      revolution.
+
+  - section: central-reduction
+    question: q0009
+    say: >
+      Find the centre of the quadric on the board beside you.
+    answer: >
+      The centre is one, minus one, two. Half the partial derivatives give two x plus y minus one,
+      x plus two y plus one, and z minus two, all equal to zero, so x is one, y is minus one and z
+      is two. Minus one, one, minus two reverses every sign, and two, minus two, four forgets to
+      halve the linear coefficients.
+
+  - section: non-central
+    focus: '$$\Delta = -\lambda_1\lambda_2\,p^2, \qquad\text{so}\qquad p^2 = -\frac{\Delta}{\lambda_1\lambda_2}.$$'
+    say: >
+      When D is zero, at least one eigenvalue is zero. Suppose the rank of A is two. Rotate and
+      complete the squares, and you are left with lambda one X squared plus lambda two Y squared
+      plus two p Z plus q. If p is nonzero, this is a paraboloid, elliptic when the two nonzero
+      eigenvalues share a sign and hyperbolic otherwise. Computing delta gives the formula on the
+      board, so p squared is minus delta over lambda one lambda two. The paraboloid case is
+      exactly delta nonzero.
+
+  - section: non-central
+    focus: '**Rank $A = 1$** (the quadratic part is a perfect square $\lambda(\alpha x + \beta y + \gamma z)^2$):'
+    say: >
+      If p is zero, you get a cylinder when q is nonzero, or a pair of intersecting planes when q
+      is zero and the eigenvalues have opposite signs. If the rank of A is one, the quadratic part
+      is a perfect square. Then it is a parabolic cylinder if the linear part is independent of
+      that square, and otherwise parallel or coincident planes. For instance, x plus y all squared
+      equals four z is a parabolic cylinder, and x plus y plus z all squared equals one is two
+      parallel planes.
+
+  - section: non-central
+    focus: '$D = 0$ does **not** mean "paraboloid".'
+    say: >
+      The caution here is a genuine trap. D equal to zero does not mean paraboloid. It only says
+      there is no unique centre. The cylinder x squared plus y squared equals one has D equal to
+      zero and a whole line of centres. Decide with delta, or with the rank of E.
+
+  - section: classification
+    focus: '| 3 | 3 | $\Delta = 0$, $\lambda_i$ not all of one sign | cone, vertex at the centre |'
+    say: >
+      The classification table brings it all together. With rank A three and rank E four, you
+      compare the signs of the eigenvalues with K, which is minus delta over D, exactly like
+      counting positive squares. With rank A three but delta zero, the constant vanishes after
+      the shift, so you have a cone with vertex at the centre. The lower rows are the paraboloids,
+      cylinders and plane pairs we just met.
+
+  - section: classification
+    focus: '- A **homogeneous** second-degree equation in $x, y, z$ is a cone with vertex at the origin.'
+    say: >
+      Two quick recognitions for cones. A homogeneous second degree equation is a cone with
+      vertex at the origin, since scaling a solution gives another solution. And in general, a
+      quadric with D nonzero and delta zero is a cone with vertex at the centre. In the example,
+      completing squares leaves constant zero, so it is a cone with vertex one, minus two, one.
+
+  - section: classification
+    question: q0017
+    say: >
+      Here is a question on exactly that example. What does the equation represent?
+    answer: >
+      It is a cone with vertex one, minus two, one. Completing the squares gives x minus one
+      squared plus y plus two squared minus z minus one squared equals zero; the constant after
+      the shift is zero. A hyperboloid would need a nonzero constant, and the vertex minus one,
+      two, minus one has the sign of the shift reversed.
+
+  - section: classification
+    focus: '$\Delta > 0$ exactly for the hyperboloid of one sheet and the hyperbolic paraboloid: the ruled ones.'
+    say: >
+      The worked example two y z plus two z x plus two x y equals one is the all ones matrix minus
+      the identity, with eigenvalues two, minus one, minus one, so it is a hyperboloid of two
+      sheets, and a surface of revolution about the line x equals y equals z. And the exam tip
+      gives a sign test: for a real non degenerate quadric, delta is positive exactly for the two
+      ruled ones, and negative for the ellipsoid, the two sheeted hyperboloid and the elliptic
+      paraboloid. Use it only once you know the surface is real.
+
+  - section: tangent-planes
+    focus: '$$(x - x_1)F_x(P) + (y - y_1)F_y(P) + (z - z_1)F_z(P) = 0.$$'
+    say: >
+      Finally, tangent planes. At a point P on the quadric where the gradient is nonzero, the
+      tangent plane is the gradient at P dotted with X minus P, equal to zero. Equivalently, use
+      the substitution rule you know from the sphere: x squared becomes x x one, two y z becomes y
+      z one plus y one z, two x becomes x plus x one. The normal has direction ratios given by the
+      partial derivatives.
+
+  - section: tangent-planes
+    focus: 'Dropping the linear terms of $F$ would wrongly give $3x + 4y - z = 6$.'
+    say: >
+      In the worked example, half the partial derivatives at one, one, one are two, four and zero,
+      so the tangent plane is x plus two y equals three. Notice the warning: forgetting the linear
+      terms of F gives a different, wrong plane.
+
+  - section: tangent-planes
+    focus: '$$\frac{l^2}{a} + \frac{m^2}{b} + \frac{n^2}{c} = p^2.$$'
+    say: >
+      For the central conicoid a x squared plus b y squared plus c z squared equals one, the plane
+      l x plus m y plus n z equals p touches it exactly when l squared over a plus m squared over
+      b plus n squared over c equals p squared. The proof: match the plane with the tangent plane
+      at alpha, beta, gamma, which gives alpha equal to l over a p and so on, then substitute into
+      the surface. For an ellipsoid with semi axes A, B, C, this reads A squared l squared plus B
+      squared m squared plus C squared n squared equals p squared.
+
+  - section: tangent-planes
+    focus: 'So, unlike for the sphere, the normal does not in general pass through the centre.'
+    say: >
+      The caution: the normal to a central conicoid at P is along a alpha, b beta, c gamma, not
+      along the line from the centre to P. They agree only on a sphere. So unlike the sphere, the
+      normal generally misses the centre.
+
+  - section: tangent-planes
+    question: q0013
+    say: >
+      Last question. For which positive k does the plane touch the ellipsoid?
+    answer: >
+      The answer is k equals five. With semi axes squared four, nine and twelve, and l, m, n all
+      one, k squared equals four plus nine plus twelve, which is 25. Twenty five itself is k
+      squared, not k, and two thirds comes from dividing by the squares instead of multiplying.
+
+  - section: exam-tips
+    say: >
+      To recap. Halve the cross and linear coefficients first. Any reduced form must match the
+      trace and the determinant. The constant after shifting to the centre is delta over D, not
+      delta. Delta zero means degenerate: a cone if D is nonzero, otherwise a cylinder or planes.
+      D zero with delta nonzero means a paraboloid. Count positive squares for the hyperboloids.
+      A missing variable means a cylinder, a homogeneous equation a cone. Tangency to the central
+      conicoid uses l squared over a. The longest axis goes with the smallest eigenvalue. Now try
+      the practice questions.

@@ -1,0 +1,286 @@
+# Spoken lecture for "Cubic and Biquadratic Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: reduced-cubic
+    say: >
+      Welcome. This lecture covers the classical solution of cubic and quartic equations. By the
+      end you should be able to reduce a cubic, solve it by Cardan's method, read off the nature
+      of its roots from one expression, handle the irreducible case with cosines, and reduce a
+      quartic to a cubic by the methods of Ferrari and Descartes. Most exam questions here test
+      one formula, so precision with the constants is everything.
+
+  - section: reduced-cubic
+    focus: '$$z^3 + 3Hz + G = 0, \qquad H = a_0a_2 - a_1^2, \qquad G = a_0^2a_3 - 3a_0a_1a_2 + 2a_1^3.$$'
+    say: >
+      Two notations are in use. In the binomial form, the cubic is a nought x cubed plus three a
+      one x squared plus three a two x plus a three. The substitution z equals a nought x plus a
+      one removes the square term and gives the reduced cubic, z cubed plus three H z plus G. On
+      the board, H is a nought a two minus a one squared. G is longer; remember that it is the
+      constant term after reduction.
+
+  - section: reduced-cubic
+    focus: 'For $x^3 + bx^2 + cx + d = 0$, put $x = y - \dfrac{b}{3}$.'
+    say: >
+      For a monic cubic with x squared coefficient b, put x equal to y minus b over three. Why
+      does this work? The sum of the roots is minus b. Shifting each of the three roots by b over
+      three makes the new sum zero, so the new square coefficient is zero. The same trick removes
+      the cube term of a monic quartic, with b over four.
+
+  - section: reduced-cubic
+    focus: '**In this topic the reduced cubic is always written $y^3 + 3Hy + G = 0$.**'
+    say: >
+      Notice the convention on the board. The reduced cubic is always written y cubed plus three
+      H y plus G. So H is one third of the coefficient of y, and G is the constant. In the
+      example, x cubed minus nine x squared plus thirty three x minus sixty five, with x equal to y
+      plus three, becomes y cubed plus six y minus twenty. So H is two, not six, and G is minus
+      twenty.
+
+  - section: reduced-cubic
+    question: q0002
+    say: >
+      Check the reduction yourself. What does x equal y plus three turn this cubic into?
+    answer: >
+      y cubed plus six y minus twenty equals zero. The square term vanishes because nine over
+      three is three. Substituting y equal to two gives zero, which is a quick check: x equal to
+      five is a root of the original. The option with plus twenty has the sign of the constant
+      wrong.
+
+  - section: reduced-cubic
+    focus: 'Many wrong answers in Cardan problems come from using the coefficient of $y$ itself as $H$.'
+    say: >
+      The caution is about that factor three. Using the coefficient of y itself as H is the
+      commonest source of wrong answers in Cardan problems. And the exam tip for the shift: divide
+      the x squared coefficient by three a nought and change its sign. So x cubed minus six x
+      squared needs x equal to y plus two.
+
+  - section: cardan
+    focus: '$$u^3 + v^3 = -G, \qquad u^3v^3 = -H^3.$$'
+    say: >
+      Cardan's method. Put y equal to u plus v. Cubing gives u cubed plus v cubed plus three u v
+      times u plus v. We have two unknowns and one equation, so we are free to impose a second
+      condition: u v equals minus H. That kills the linear term, and leaves u cubed plus v cubed
+      equal to minus G, and u cubed v cubed equal to minus H cubed.
+
+  - section: cardan
+    focus: '$$t^2 + Gt - H^3 = 0, \qquad u^3, v^3 = \frac{-G \pm \sqrt{G^2 + 4H^3}}{2}.$$'
+    say: >
+      So u cubed and v cubed are the roots of a quadratic: t squared plus G t minus H cubed equals
+      zero. Solving it and taking cube roots gives Cardan's formula. The expression under the
+      square root, G squared plus four H cubed, will reappear in a moment as the key to the nature
+      of the roots.
+
+  - section: cardan
+    focus: '$$u + v, \qquad \omega u + \omega^2 v, \qquad \omega^2 u + \omega v.$$'
+    say: >
+      Each cube root has three values, so we must pair them correctly. Choose one value u, and
+      then v is fixed as minus H over u. With omega a complex cube root of unity, the three roots
+      are u plus v, omega u plus omega squared v, and omega squared u plus omega v. These pairings
+      keep the product u v unchanged. Pairing omega u with omega v changes it, and gives a false
+      root.
+
+  - section: cardan
+    focus: '**Example 1.** $x^3 - 15x - 126 = 0$.'
+    say: >
+      Look at the first example. x cubed minus fifteen x minus 126: H is minus five and G is minus
+      126. So u cubed plus v cubed is 126 and u cubed v cubed is 125. The quadratic gives 125 and
+      one, so u is five and v is one. The real root is six, and the other two come from five omega
+      plus omega squared and its conjugate.
+
+  - section: cardan
+    question: q0006
+    say: >
+      Finish that example. What are the non real roots?
+    answer: >
+      Minus three plus or minus two root three i. Five omega plus omega squared gives minus five
+      halves minus one half, which is minus three, plus i root three times five halves minus one
+      half, which is two root three. Check: the three roots must sum to zero, and six plus minus
+      three plus minus three does.
+
+  - section: cardan
+    focus: 'To simplify $s = \sqrt[3]{A + \sqrt B} + \sqrt[3]{A - \sqrt B}$, cube it'
+    say: >
+      A favourite exam trick. To simplify the cube root of A plus root B, plus the cube root of A
+      minus root B, call it s and cube it. You get s cubed equals two A plus three times the cube
+      root of A squared minus B, times s. Then guess a small integer. For two plus root five, s
+      cubed equals four minus three s, so s is one. In the second example, the same idea gives y
+      equals two.
+
+  - section: nature-of-roots
+    focus: '| $< 0$ | three distinct real roots (the **irreducible case**) |'
+    say: >
+      Now the nature of the roots. For real H and G, the sign of G squared plus four H cubed
+      decides everything. Positive: one real root and a pair of complex conjugates. Zero: all
+      real, with at least two equal. Negative: three distinct real roots, the irreducible case.
+      Notice the direction: negative means more real roots, which surprises many students.
+
+  - section: nature-of-roots
+    focus: '$$\Delta = -27\,(G^2 + 4H^3).$$'
+    say: >
+      The usual discriminant, minus four p cubed minus twenty seven q squared, equals minus
+      twenty seven times G squared plus four H cubed. So it has the opposite sign: a positive
+      discriminant means three distinct real roots. The reason is that this discriminant equals
+      the product of the squared differences of the roots, which is positive for distinct real
+      roots and negative when two roots are complex conjugates.
+
+  - section: nature-of-roots
+    focus: '- If $H > 0$, then $G^2 + 4H^3 > 0$, so there is exactly one real root.'
+    say: >
+      Two quick consequences. If H is positive, G squared plus four H cubed is positive, so
+      there is exactly one real root; indeed the cubic is then strictly increasing. Three real
+      roots need H negative, but H negative is not enough: y cubed minus three y plus three has H
+      equal to minus one and still only one real root.
+
+  - section: nature-of-roots
+    focus: 'title: $y = x^3 - 3x + c$ for $c = 1, 2, 3$ ($G^2 + 4H^3 = c^2 - 4$)'
+    say: >
+      The graph shows all three cases at once. For x cubed minus three x plus c, the expression
+      is c squared minus four. With c equal to one it is negative, and the curve cuts the axis
+      three times. With c equal to two it is zero, and the curve touches the axis at x equals one,
+      a double root. With c equal to three it is positive, and there is only one crossing.
+
+  - section: nature-of-roots
+    question: q0010
+    say: >
+      Use the criterion. For which k does x cubed minus twelve x plus k have three distinct real
+      roots?
+    answer: >
+      When the modulus of k is less than sixteen. Here H is minus four and G is k, so G squared
+      plus four H cubed is k squared minus 256, which must be negative. The tempting option, less
+      than or equal to sixteen, includes the boundary, where there is a repeated root.
+
+  - section: nature-of-roots
+    focus: '"$G^2 + 4H^3 = 0$" does **not** mean all three roots are equal.'
+    say: >
+      And the caution. When G squared plus four H cubed is zero, at least two roots are equal, but
+      not necessarily all three. All three are equal only when G and H are both zero, as for x
+      minus one, cubed. For x cubed minus three x plus two, the roots are one, one and minus two.
+
+  - section: trigonometric
+    focus: 'This is the *casus irreducibilis*.'
+    say: >
+      Now the irreducible case. All three roots are real, yet the square root in Cardan's formula
+      is of a negative number. So u and v are complex conjugates, and you need cube roots of
+      complex numbers to reach real answers. This happens even with integer roots: x cubed minus
+      seven x plus six has roots one, two and minus three, and the expression is thirty six minus
+      1372 over twenty seven, which is negative.
+
+  - section: trigonometric
+    focus: '$$y^3 + 3Hy + G = 2(-H)^{3/2}\cos 3\theta + G = 0, \qquad \cos 3\theta = \frac{-G}{2(-H)^{3/2}}.$$'
+    say: >
+      The way out is trigonometry. Since H is negative, put y equal to two times the square root
+      of minus H, times cos theta. The identity four cos cubed minus three cos equals cos three
+      theta turns the cubic into an equation for cos three theta: minus G over two times minus H
+      to the power three halves. This lies strictly between minus one and one exactly in the
+      irreducible case.
+
+  - section: trigonometric
+    focus: '$$y_k = 2\sqrt{-H}\,\cos\!\left(\theta_0 + \frac{2k\pi}{3}\right), \qquad k = 0, 1, 2.$$'
+    say: >
+      If theta nought is one solution, the three roots come from adding nought, two pi by three
+      and four pi by three to theta nought. For y cubed minus three y plus one, H is minus one,
+      so y is two cos theta, and cos three theta is minus a half. Then theta nought is two pi by
+      nine, and the roots are two cos of two pi by nine, eight pi by nine and fourteen pi by nine.
+
+  - section: trigonometric
+    question: q0012
+    say: >
+      Pick the correct list of roots for this cubic.
+    answer: >
+      Two cos two pi by nine, two cos four pi by nine and two cos eight pi by nine. Fourteen pi
+      by nine has the same cosine as four pi by nine. The option without the factor two is the
+      trap: the roots can exceed one in size, so they cannot be plain cosines.
+
+  - section: trigonometric
+    focus: 'Check the scale first.'
+    say: >
+      That is the exam tip. Check the scale first: for y cubed minus three y plus or minus one,
+      the roots are two times a cosine. And any list of roots whose sum is not zero is wrong at
+      once, because the reduced cubic has no square term. For x cubed minus three x minus one,
+      cos three theta is a half, and the largest root is two cos pi by nine, about 1.879.
+
+  - section: ferrari
+    focus: '$$(x^2 + px + \lambda)^2 = (2\lambda + p^2 - q)\,x^2 + 2(p\lambda - r)\,x + (\lambda^2 - s).$$'
+    say: >
+      Now the biquadratic, that is, the quartic. Ferrari's idea is to write it as a difference of
+      two squares. Write the quartic as x to the four plus two p x cubed plus q x squared plus two
+      r x plus s. Complete the square on the left with a free parameter lambda. The right side
+      becomes a quadratic in x, as on the board.
+
+  - section: ferrari
+    focus: '$$(p\lambda - r)^2 = (2\lambda + p^2 - q)(\lambda^2 - s).$$'
+    say: >
+      Choose lambda so that the right side is a perfect square, which means its discriminant
+      vanishes. That condition, p lambda minus r squared equals two lambda plus p squared minus q,
+      times lambda squared minus s, is the resolvent cubic. You need only one root of it, ideally
+      a rational one. Then the quartic becomes a difference of two squares and splits into two
+      quadratics.
+
+  - section: ferrari
+    focus: 'Each root corresponds to one way of splitting the four roots into two pairs.'
+    say: >
+      The roots of the resolvent have a neat meaning: half of alpha beta plus gamma delta, and
+      the two similar expressions. Each corresponds to one way of splitting the four roots into
+      two pairs. In the example, the resolvent is two lambda cubed plus lambda squared minus three,
+      with the root one, and the quartic splits into x squared minus three x plus three, and x
+      squared plus x minus one.
+
+  - section: ferrari
+    question: q0016
+    say: >
+      Try the key step. Which lambda makes the right side a perfect square?
+    answer: >
+      Lambda equals one. With p and q both minus one, r equal to three and s equal to minus
+      three, the resolvent becomes two lambda cubed plus lambda squared minus three equals zero,
+      and lambda equal to one satisfies it. The right side is then four x squared minus eight x
+      plus four, which is two x minus two, squared.
+
+  - section: ferrari
+    focus: 'The $x$-coefficient on the right is $2(p\lambda - r)$, and the constant is $\lambda^2 - s$, not $\lambda^2 + s$.'
+    say: >
+      Watch the signs, as the caution says. The x coefficient on the right is two times p lambda
+      minus r, and the constant is lambda squared minus s, not plus s. And if the quartic is
+      written with a x cubed and c x, then p is a over two and r is c over two. Forgetting those
+      halves ruins the resolvent.
+
+  - section: descartes-method
+    focus: '$$y^4 + qy^2 + ry + s = (y^2 + ky + l)(y^2 - ky + m).$$'
+    say: >
+      Descartes's method factorises directly. First remove the cube term with x equal to y minus
+      a over four. Then look for a factorisation into two quadratics. The y coefficients are k and
+      minus k, because the quartic has no y cubed term. Comparing coefficients gives three
+      equations in k, l and m.
+
+  - section: descartes-method
+    focus: '$$t^3 + 2qt^2 + (q^2 - 4s)t - r^2 = 0.$$'
+    say: >
+      Eliminate l and m using four l m equals l plus m squared minus m minus l squared. With t
+      equal to k squared, you get the cubic on the board. When r is not zero, this cubic is
+      negative at zero and grows without bound, so it has a positive root, giving a real k. Its
+      roots are the squares of the pair sums, alpha plus beta squared, and so on.
+
+  - section: descartes-method
+    question: q0020
+    say: >
+      Which cubic does t equal to k squared satisfy?
+    answer: >
+      t cubed plus two q t squared plus q squared minus four s times t, minus r squared, equals
+      zero. It comes from four s equals q plus t, squared, minus r squared over t. The tempting
+      options change one sign, usually the four s or the r squared.
+
+  - section: descartes-method
+    focus: 'Ferrari and Descartes both lead to a cubic, and both need only one root of it.'
+    say: >
+      In the example, y to the four minus two y squared plus eight y minus three gives the cubic
+      with root four, so k is two, and the quartic factors into y squared plus two y minus one
+      times y squared minus two y plus three. Remember the exam tip: both methods need only one
+      root of a cubic, but Descartes's needs the cube term removed first, while Ferrari's does
+      not.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Shift by b over three for a cubic, a over four for a quartic. H is one third of
+      the coefficient of y. Cardan's quadratic is t squared plus G t minus H cubed. G squared plus
+      four H cubed positive means one real root, zero a repeated root, negative three distinct
+      real roots. In the irreducible case use two root minus H cos theta. The roots of a reduced
+      cubic sum to zero. Now try the practice questions.

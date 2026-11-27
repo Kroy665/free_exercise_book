@@ -15,6 +15,12 @@ export const settings = $state<Settings & { loaded: boolean }>({
   onboarded: "1",
   exams: "",
   auto_update: "1",
+  assistant: "ollama",
+  ollama_url: "http://127.0.0.1:11434",
+  ollama_model: "qwen2.5:3b",
+  claude_model: "claude-opus-5-5",
+  tts_voice: "af_heart",
+  tts_speed: "1",
   loaded: false,
 });
 

@@ -1,0 +1,290 @@
+# Spoken lecture for "Definite Integrals".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: limit-of-sum
+    say: >
+      Welcome. Today we revise definite integrals. We will see the integral as a limit of
+      sums, and then run that idea backwards to evaluate limits of sums. Then come the
+      fundamental theorem and the Leibniz rule, the properties that let you evaluate hard
+      looking integrals without finding any antiderivative, and the first mean value theorem.
+      By the end, many of these questions should take you under a minute.
+
+  - section: limit-of-sum
+    focus: 'Divide $[a, b]$ into $n$ **equal** parts of width'
+    say: >
+      Start with the definition used at this level. Divide the closed interval from a to b
+      into n equal parts of width h, which is b minus a over n. Add up h times f at the
+      right end of each strip, and let n tend to infinity. For a positive function, that is
+      the total area of n thin rectangles, and the limit is the area under the curve. The left
+      end sum works equally well, because the two sums differ by h times f of b minus f of a,
+      which tends to zero.
+
+  - section: limit-of-sum
+    focus: 'title: Right-endpoint rectangles for $\int_0^1 x^2\,dx$ with $n = 4$: the sum overestimates $\tfrac13$'
+    say: >
+      Look at the graph: x squared from zero to one, with four right end rectangles. Because
+      the function is increasing, each rectangle sticks out above the curve, so the sum
+      overestimates one third. Working it out in general, h is one over n, and the sum is one
+      over n cubed times the sum of r squared. Using the formula n times n plus one times two n
+      plus one over six, the sum tends to two over six, which is one third.
+
+  - section: limit-of-sum
+    focus: 'The intervals must be **equal** for the formula $h\sum f(a + rh)$.'
+    say: >
+      You need the three power sums on the board: the sum of r, of r squared, and of r cubed,
+      which is the square of the first. For exponentials, the sum is a geometric series, and
+      the limit uses the fact that h over e to the h minus one tends to one. And notice the
+      caution: this formula needs equal strips. Unequal partitions, with upper and lower sums,
+      belong to Riemann's general theory, which is a separate topic.
+
+  - section: sum-to-integral
+    focus: '$$\lim_{n \to \infty} \frac1n \sum_{r=1}^{n} f\!\left(\frac rn\right) = \int_0^1 f(x)\,dx.$$'
+    say: >
+      Now reverse the definition. With a equal to zero and b equal to one, the limit of one
+      over n times the sum of f of r over n is the integral from zero to one of f. So the
+      recipe is: take out one over n, so that every term depends on r and n only through r over
+      n. Then replace r over n by x, and one over n by d x. Finally, read the limits from the
+      range of r over n.
+
+  - section: sum-to-integral
+    focus: 'If the degree is $-1$, the sum tends to an integral; if it is lower (e.g. $\frac{1}{n^2 + r^2}$), the sum tends to $0$.'
+    say: >
+      Here is a quick test from the exam tip. Count the degree of each term in n and r
+      together. A term like n over n squared plus r squared has degree minus one, which is
+      exactly the one over n that you need, so the sum tends to an integral. If the degree is
+      lower, such as one over n squared plus r squared, the sum simply tends to zero.
+
+  - section: sum-to-integral
+    question: q0008
+    say: >
+      Try one. Find the limit of the sum from r equals one to n of n over n squared plus r
+      squared.
+    answer: >
+      Divide top and bottom by n squared. You get one over n times one over one plus r over n,
+      squared. That is the integral from zero to one of one over one plus x squared, which is
+      tan inverse of one, pi by four. Half log two is the answer for r on top instead of n.
+
+  - section: sum-to-integral
+    focus: 'Writing $\int_0^1$ for $\sum_{r=1}^{2n}\frac{1}{n + r}$ gives $\ln 2$ instead of $\ln 3$.'
+    say: >
+      Watch the upper limit. If r runs up to n, r over n runs up to one. But if r runs up to two
+      n, then x runs up to two. So the sum of one over n plus r, up to n, gives log two, while
+      the same sum up to two n gives the integral from zero to two of one over one plus x, which
+      is log three. Writing zero to one there is the standard wrong option.
+
+  - section: sum-to-integral
+    focus: '**Limits of products.** Take logarithms first.'
+    say: >
+      For a limit of a product, take logarithms first, to turn it into a sum. The classic is the
+      n-th root of n factorial over n to the n. Its logarithm is one over n times the sum of log
+      of r over n, which tends to the integral from zero to one of log x. That integral is minus
+      one, so the limit is one over e. Strictly, log x is unbounded near zero, so that integral
+      is improper, but the result is correct and standard.
+
+  - section: fundamental-theorem
+    focus: '1. If $f$ is **continuous** on $[a, b]$, then $F(x) = \displaystyle\int_a^x f(t)\,dt$ is differentiable on $[a, b]$ and $F''(x) = f(x)$.'
+    say: >
+      The fundamental theorem has two parts. Part one: if f is continuous, the area function,
+      the integral from a to x of f, is differentiable and its derivative is f. Part two: if f
+      is integrable and phi is an antiderivative of f on the whole closed interval, the
+      integral equals phi of b minus phi of a. Notice the words whole closed interval. An
+      antiderivative that breaks down somewhere inside cannot be used.
+
+  - section: fundamental-theorem
+    focus: '$$\frac{d}{dx}\int_{u(x)}^{v(x)} f(t)\,dt = f\big(v(x)\big)\,v''(x) - f\big(u(x)\big)\,u''(x).$$'
+    say: >
+      From part one and the chain rule we get the Leibniz rule for variable limits. The
+      derivative of the integral from u of x to v of x of f of t d t is f at the upper limit
+      times v dash, minus f at the lower limit times u dash. For example, the derivative of the
+      integral from zero to x squared of cos t is two x cos of x squared. Do not forget the
+      chain rule factor, or the minus sign on the lower limit.
+
+  - section: fundamental-theorem
+    question: q0010
+    say: >
+      Let's apply it. Differentiate the integral from x to x squared of one over log t.
+    answer: >
+      The answer is x minus one over log x. The upper limit gives one over log of x squared,
+      times two x, which is x over log x, since log of x squared is two log x. The lower limit
+      subtracts one over log x. The option with x plus one adds the lower term instead of
+      subtracting it.
+
+  - section: fundamental-theorem
+    focus: 'When $x$ is also inside the integrand, take it outside first:'
+    say: >
+      When x appears inside the integrand as well as in a limit, take it outside first. For the
+      integral from zero to x of x minus t times g of t, split it as x times the integral of g,
+      minus the integral of t g. Differentiating with the product rule, two terms cancel, and
+      the first derivative is the integral from zero to x of g; the second derivative is g of
+      x. Limits involving integrals usually yield to L'Hospital's rule plus part one.
+
+  - section: fundamental-theorem
+    focus: 'is absurd for a positive integrand'
+    say: >
+      Now the most important caution of the chapter. The so called answer minus two, for the
+      integral from minus one to one of one over x squared, is absurd, since the integrand is
+      positive. The function is unbounded on that interval, and minus one over x is not an
+      antiderivative across zero. In the same way, a substitution like t equals tan x fails on
+      an interval containing pi by two. Always check the hypotheses before you plug in limits.
+
+  - section: properties
+    focus: '| P4 | $\int_a^b f(x)\,dx = \int_a^b f(a + b - x)\,dx$ |'
+    say: >
+      Now the properties. The first three are routine: dummy variable, reversal of limits, and
+      additivity. The one that does real work is P4. The integral from a to b of f of x equals
+      the integral of f of a plus b minus x. The proof is a single substitution, x equals a plus
+      b minus t, which swaps the limits and changes the sign of d x, and the two effects cancel.
+      P5 is the special case from zero to a.
+
+  - section: properties
+    focus: '**The add-the-two-forms trick.**'
+    say: >
+      Here is how you use it. Apply P4 to your integral I and get a second form. Add the two
+      forms. If the sum of the integrands is simple, you have two I easily. For sine to the n
+      over sine to the n plus cos to the n on zero to pi by two, P5 swaps sine and cosine, the
+      two integrands add up to one, and I is pi by four, for every positive n. In general, f of
+      x over f of x plus f of a plus b minus x integrates to half the length of the interval.
+
+  - section: properties
+    question: q0013
+    say: >
+      Try a harder one. Evaluate the integral from zero to pi by four of log of one plus tan x.
+    answer: >
+      The answer is pi by eight log two. Replacing x by pi by four minus x turns one plus tan x
+      into two over one plus tan x. So I equals pi by four log two, minus I, and I is pi by
+      eight log two. The option pi by four log two is two I; it forgets to halve.
+
+  - section: properties
+    focus: '$$\int_0^2 [x^2]\,dx = 0 + 1(\sqrt2 - 1) + 2(\sqrt3 - \sqrt2) + 3(2 - \sqrt3) = 5 - \sqrt2 - \sqrt3.$$'
+    say: >
+      For greatest integer integrands, split the interval where the integer part jumps. For the
+      greatest integer of x squared on zero to two, the jumps are at one, root two and root
+      three. On each piece the integrand is a constant, so you add constant times length. The
+      total is five minus root two minus root three.
+
+  - section: symmetry
+    focus: 'In general, $\int_{-a}^{a} f(x)\,dx = \int_0^a [f(x) + f(-x)]\,dx$.'
+    say: >
+      Next, symmetry. On a symmetric interval from minus a to a, an even function gives twice
+      the integral from zero to a, and an odd function gives zero. The general line on the
+      board explains both: the integral equals the integral from zero to a of f of x plus f of
+      minus x. In practice, delete every odd term first. One condition: the odd terms must be
+      continuous on the closed interval. Tan to the five on minus pi by two to pi by two is
+      unbounded, so the rule does not apply.
+
+  - section: symmetry
+    focus: '$$\int_0^{2a} f(x)\,dx = \begin{cases} 2\displaystyle\int_0^a f(x)\,dx, & \text{if } f(2a - x) = f(x),\\[2mm] 0, & \text{if } f(2a - x) = -f(x).\end{cases}$$'
+    say: >
+      The two a rule is the same idea on zero to two a. If f of two a minus x equals f of x, the
+      integral is twice the first half. If it equals minus f of x, the integral is zero. With a
+      equal to pi by two, sine is unchanged by x going to pi minus x, so sine cubed on zero to
+      pi is twice its value on zero to pi by two, four thirds. Cosine changes sign, so odd
+      powers of cosine give zero on zero to pi.
+
+  - section: symmetry
+    focus: 'So an integral over one full period does not depend on where the period starts.'
+    say: >
+      For a continuous periodic function with period T, the integral over any interval of
+      length T is the same, wherever it starts. So the integral over n periods is n times the
+      integral over one. The modulus of sine has period pi, not two pi, and its integral over
+      one period is two.
+
+  - section: symmetry
+    question: q0005
+    say: >
+      Quick one. Find the integral from zero to ten pi of the modulus of sine x.
+    answer: >
+      The answer is 20. The modulus of sine has period pi, and each period contributes two. Ten
+      periods give 20. The option zero is the integral of sine without the modulus, and 10 comes
+      from counting one per period instead of two.
+
+  - section: symmetry
+    focus: '"Odd" is about symmetry **about $0$**.'
+    say: >
+      And a caution about words. Odd means symmetric about zero, so the zero rule needs a
+      symmetric interval from minus a to a. The function x is odd, but its integral from zero to
+      two is two, not zero. On zero to two a, the right test is whether f of two a minus x
+      equals minus f of x, not whether f is odd.
+
+  - section: standard-results
+    focus: '$$\int_0^{\pi/2}\log\sin x\,dx = \int_0^{\pi/2}\log\cos x\,dx = -\frac{\pi}{2}\log 2.$$'
+    say: >
+      Now three standard results. First, the log sine integral: from zero to pi by two, log sine
+      x and log cos x both integrate to minus pi by two log two. It is strictly an improper
+      integral, but the evaluation is examinable. By P5 the two are equal. Add them: log of
+      sine times cos is log of sine two x minus log two. Substituting t equals two x and using
+      the two a rule, the log sine two x integral is I again. So two I equals I minus pi by two
+      log two.
+
+  - section: standard-results
+    focus: '$\int_0^{\pi/2}\log\tan x\,dx = 0$ (it is $\int\log\sin - \int\log\cos$).'
+    say: >
+      Three consequences follow. Over zero to pi, log sine gives minus pi log two, twice the
+      value. The integral of log tan x over zero to pi by two is zero, since it is log sine
+      minus log cos. And substituting x equals sine theta turns log x over root of one minus x
+      squared, on zero to one, into the log sine integral again.
+
+  - section: standard-results
+    focus: '$$\int_0^{\pi} x\,f(\sin x)\,dx = \frac{\pi}{2}\int_0^{\pi} f(\sin x)\,dx.$$'
+    say: >
+      Second, the x f of sine x result. The integral from zero to pi of x times f of sine x is
+      pi by two times the integral of f of sine x. The proof is P4: replacing x by pi minus x
+      leaves sine x unchanged, so adding the two forms gives two I equals pi times the integral
+      of f of sine x. The exam tip puts it simply: if the rest is unchanged by x going to pi
+      minus x, replace x by pi by two and integrate what is left.
+
+  - section: standard-results
+    question: q0018
+    say: >
+      Try it. Integrate x sine x over one plus cos squared x, from zero to pi.
+    answer: >
+      The answer is pi squared over four. Cos squared is one minus sine squared, so this is x
+      times a function of sine x. The integral becomes pi by two times the integral of sine x
+      over one plus cos squared x, which is minus tan inverse of cos x, giving pi by two. So pi
+      by two times pi by two. Pi squared over two forgets the half.
+
+  - section: mean-value-bounds
+    focus: '$$m(b - a) \le \int_a^b f(x)\,dx \le M(b - a).$$'
+    say: >
+      Finally, bounds and the mean value theorem. If f lies between m and M on the interval,
+      the integral lies between m times the length and M times the length. If f is less than or
+      equal to g, the integrals keep that order, and for continuous functions that differ
+      somewhere, the inequality is strict. And the modulus of an integral is at most the
+      integral of the modulus.
+
+  - section: mean-value-bounds
+    focus: 'The number $\dfrac{1}{b - a}\displaystyle\int_a^b f(x)\,dx$ is the **mean value** (average) of $f$ on $[a, b]$.'
+    say: >
+      The first mean value theorem says that for a continuous f, the integral equals f of xi
+      times b minus a, for some xi in the closed interval. One over b minus a times the
+      integral is the average value of f. The proof: the average lies between the minimum and
+      maximum, and the intermediate value theorem supplies xi. For x squared on zero to three,
+      the mean value is three, attained at root three.
+
+  - section: mean-value-bounds
+    question: q0015
+    say: >
+      Use the bounds. Where does the integral from zero to one of e to the x squared lie?
+    answer: >
+      It lies strictly between one and e. On that interval, x squared is between zero and one,
+      so e to the x squared is between one and e, with equality only at the ends. The value is
+      about 1.46. The option e minus one is the integral of e to the x, which is larger.
+
+  - section: mean-value-bounds
+    focus: 'Continuity is essential in the mean value theorem.'
+    say: >
+      Two traps in the caution. Continuity is essential: a step function that is zero then one
+      on zero to two has integral one, so its average is a half, a value it never takes. And xi
+      is not in general the midpoint. For x squared on zero to three, xi is root three, not
+      three halves. There is also a generalised form, with a second factor g that does not
+      change sign.
+
+  - section: exam-tips
+    say: >
+      Let's recap. A positive integrand must give a positive integral, so a negative answer
+      means a hypothesis failed. Delete odd terms on symmetric intervals. The pi by four family
+      and b minus a over two come from adding the two forms. Log sine on zero to pi by two is
+      minus pi by two log two. For a limit of a sum, pull out one over n and read the upper
+      limit carefully. Keep the chain rule factors in the Leibniz rule. Now try the practice
+      questions.

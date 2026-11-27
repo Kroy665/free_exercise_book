@@ -1,0 +1,300 @@
+# Spoken lecture for "The Sphere".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: general-equation
+    say: >
+      Welcome. Today's topic is the sphere, the first curved surface in our three dimensional
+      geometry. It rewards clean habits more than clever ideas. By the end you should be able
+      to read off a centre and radius instantly, build a sphere from given data, handle plane
+      sections and spheres through a circle, write tangent planes, and use power, the radical
+      plane and the orthogonality condition without slips.
+
+  - section: general-equation
+    focus: '$$S \equiv x^2 + y^2 + z^2 + 2ux + 2vy + 2wz + d = 0,$$'
+    say: >
+      A sphere is the set of points at a fixed distance r from a fixed centre. Expanding the
+      distance equation gives the general form on the board: x squared plus y squared plus z
+      squared, plus two u x, plus two v y, plus two w z, plus d, equals zero. Complete the
+      squares and you see the centre is minus u, minus v, minus w, and the radius is the
+      square root of u squared plus v squared plus w squared minus d.
+
+  - section: general-equation
+    focus: '| $= 0$ | a **point sphere** (only the centre) |'
+    say: >
+      The quantity under that square root decides what you have. If it is positive, a real
+      sphere. If it is zero, a point sphere, consisting of the centre alone. If it is negative,
+      no real points at all, a so called virtual sphere. Examiners like to hand you an equation
+      that turns out to be a point sphere, so always compute this quantity before assuming a
+      genuine radius.
+
+  - section: general-equation
+    focus: '$$a = b = c \neq 0 \quad\text{and}\quad f = g = h = 0.$$'
+    say: >
+      When does a general second degree equation represent a sphere? Exactly when the three
+      squared terms have equal nonzero coefficients and there are no product terms in y z, z x
+      or x y. The linear terms only move the centre. Then divide through by the common
+      coefficient. Note also that the general equation has four free constants, u, v, w and d,
+      so four independent conditions, such as four non coplanar points, fix a sphere.
+
+  - section: general-equation
+    focus: 'Then $S_1 = CP^2 - r^2$, so $P$ is inside, on or outside the sphere according as $S_1 < 0$, $= 0$ or $> 0$.'
+    say: >
+      Substituting a point into the standard form gives S one, which equals the square of the
+      distance from the centre minus r squared. So S one negative means inside, zero means on
+      the sphere, and positive means outside. We will meet this quantity again as the power of
+      the point.
+
+  - section: general-equation
+    focus: 'Read the centre and radius **only after** making the coefficient of $x^2$ equal to $1$.'
+    say: >
+      The caution on the board is the source of most errors. Make the coefficient of x squared
+      equal to one first. Only then is the centre half the coefficient of x with the sign
+      changed. In the example, two x squared and so on with minus four x, the x coordinate of
+      the centre is one, not two. And watch the exam tip below it: a single cross term such as
+      two x y rules out a sphere; that equation is actually a cylinder.
+
+  - section: general-equation
+    question: q0001
+    say: >
+      Let's start with the basic reading. A question is beside the notes. Choose an option and
+      press Check.
+    answer: >
+      The centre is one, minus two, three and the radius is five. Here u is minus one, v is two,
+      w is minus three and d is minus eleven, so the radius is the square root of one plus four
+      plus nine plus eleven, that is, the square root of 25. The option minus one, two, minus three forgets to
+      change the sign, and root three comes from adding d instead of subtracting it.
+
+  - section: given-data
+    focus: '$$(x - x_1)(x - x_2) + (y - y_1)(y - y_2) + (z - z_1)(z - z_2) = 0.$$'
+    say: >
+      Now building spheres from data. If A and B are ends of a diameter, then any point P on
+      the sphere sees A B at a right angle, the angle in a semicircle. So P A dot P B is zero,
+      which is the equation on the board. Its centre is the midpoint of A B and its radius is
+      half of A B. This is far quicker than finding the centre and radius separately.
+
+  - section: given-data
+    focus: 'A unique sphere exists iff the four points are **not coplanar**.'
+    say: >
+      Through four points, substitute each into the general equation and solve four linear
+      equations for u, v, w and d. A unique sphere exists exactly when the four points are not
+      coplanar. Four coplanar points lie on at most one circle, and then either infinitely many
+      spheres pass through them, or none does.
+
+  - section: given-data
+    focus: '$$x^2 + y^2 + z^2 - ax - by - cz = 0,$$'
+    say: >
+      A special case appears again and again: the sphere through the origin and the three
+      axis points a, zero, zero, then zero, b, zero, then zero, zero, c. Passing through the
+      origin kills d, and each axis point fixes one of u, v, w. The result is on the board:
+      centre a by two, b by two, c by two, and radius half the square root of a squared plus b
+      squared plus c squared.
+
+  - section: given-data
+    question: q0004
+    say: >
+      Use that shortcut now. Find the radius of the sphere through these four points.
+    answer: >
+      The radius is root fourteen. The equation is x squared plus y squared plus z squared minus
+      two x minus four y minus six z equals zero, so the centre is one, two, three, and the
+      radius is the square root of one plus four plus nine. Two root fourteen is the diameter,
+      and fourteen is r squared, not r.
+
+  - section: given-data
+    focus: 'the point sphere at $A$ plus $\lambda$ times the plane.'
+    say: >
+      Two more constructions. With a given centre touching a plane, the radius is just the
+      perpendicular distance from the centre to the plane. And for a sphere touching a plane P
+      at a given point A, take the point sphere at A plus lambda times P. Every such sphere
+      touches P at A, and one more condition fixes lambda. In the example, passing through the
+      origin forces lambda equal to one. Always check your answer by substituting the given
+      points.
+
+  - section: plane-section
+    focus: '- The **radius of the circle** is $\sqrt{r^2 - \delta^2}$ (Pythagoras in the triangle $CNQ$ with $Q$ on the circle).'
+    say: >
+      A plane cuts a sphere in a circle, written as the pair: the sphere and the plane
+      together. The centre of the circle is the foot N of the perpendicular from the sphere's
+      centre C, because C N is perpendicular to every chord through N. The radius follows from
+      Pythagoras: the square root of r squared minus delta squared, where delta is the distance
+      from the centre to the plane.
+
+  - section: plane-section
+    focus: '| $\delta = 0$ | a **great circle** (radius $r$) |'
+    say: >
+      The table follows at once. If delta is less than r, a real circle. If delta equals r, a
+      single point, and the plane is a tangent plane. If delta exceeds r, no real points. And
+      if delta is zero, the plane passes through the centre, and the section is a great circle
+      with the full radius r.
+
+  - section: plane-section
+    focus: '- The normal through $C$ is $(t,\ 1 + 2t,\ 2 + 2t)$.'
+    say: >
+      To locate the centre of the circle, walk from C along the normal to the plane, using the
+      general point trick from the lines topic, and substitute into the plane to find t. In the
+      worked example, the sphere has centre zero, one, two and radius four, the distance to the
+      plane is three, so the circle has radius root seven, and t equals one gives the centre
+      one, three, four.
+
+  - section: plane-section
+    focus: 'Forgetting the denominator, or using $r^2 + \delta^2$ instead of $r^2 - \delta^2$, are the two standard slips.'
+    say: >
+      Two standard slips. Forgetting to divide by the length of the normal when you compute
+      delta, and adding the squares instead of subtracting. A third, quieter one is r minus
+      delta, which subtracts lengths instead of squares. The exam tip gives a shortcut for a
+      sphere centred at the origin: the section centre is p over l squared plus m squared plus
+      n squared, times l, m, n.
+
+  - section: plane-section
+    question: q0006
+    say: >
+      Try this one. Find the radius of the circle in which the plane cuts the sphere.
+    answer: >
+      The radius is root seven. The sphere has centre zero, one, two and radius four, and the
+      centre is at distance three from the plane, so the circle's radius is the square root of
+      sixteen minus nine. Five comes from adding the squares, and one comes from subtracting the
+      lengths, four minus three.
+
+  - section: through-circle
+    focus: 'is a sphere (the second-degree part is still $x^2 + y^2 + z^2$), and it contains every point of the circle.'
+    say: >
+      Now spheres through a given circle. If the circle is S equals zero together with P equals
+      zero, then S plus lambda P equals zero is still a sphere, because the second degree part
+      is unchanged, and it vanishes at every point of the circle. Conversely every sphere
+      through the circle has this form. One more condition, such as a point, fixes lambda.
+
+  - section: through-circle
+    focus: '**Circle as a great circle.** The circle is a great circle of $S + \lambda P = 0$ iff the centre of that sphere lies on the plane $P = 0$.'
+    say: >
+      A favourite variant asks for the sphere on which the given circle is a great circle.
+      Write the centre of S plus lambda P in terms of lambda, and demand that it lie on the
+      plane. That gives one linear equation for lambda.
+
+  - section: through-circle
+    focus: 'because $S_1 - S_2$ is linear: the squared terms cancel.'
+    say: >
+      Two spheres in standard form meet in a circle whose plane is S one minus S two equals
+      zero; the squared terms cancel, leaving a linear equation. To find the radius of this
+      common circle, find that plane and apply the plane section method to either sphere. The
+      caution here: in S plus lambda P, write the plane with everything on one side, and do
+      not forget its constant term when you substitute a point.
+
+  - section: through-circle
+    question: q0008
+    say: >
+      Here is the great circle problem. Find the sphere having the given circle as a great
+      circle.
+    answer: >
+      The answer is x squared plus y squared plus z squared minus two x minus two y minus two z
+      minus nineteen equals zero. The family has centre minus lambda by two in each coordinate,
+      and putting this on the plane x plus y plus z equals three gives lambda equal to minus two.
+      Lambda equal to plus two gives the option with minus thirty one, which is the sign slip.
+
+  - section: tangent-plane
+    focus: '(Replace $x^2$ by $xx_1$ and $2x$ by $x + x_1$, and so on.)'
+    say: >
+      Next, the tangent plane at a point on the sphere. The rule on the board is mechanical:
+      replace x squared by x times x one, and two x by x plus x one, and likewise for y and z.
+      The result is the plane through the point perpendicular to the radius, with normal x one
+      plus u, y one plus v, z one plus w. For a sphere centred at the origin it is x x one plus
+      y y one plus z z one equals a squared.
+
+  - section: tangent-plane
+    focus: '**Condition of tangency.** A plane touches a sphere iff its distance from the centre equals the radius.'
+    say: >
+      The condition of tangency is just as geometric: a plane touches a sphere exactly when its
+      distance from the centre equals the radius. The point of contact is the foot of the
+      perpendicular from the centre. And tangent planes parallel to a given plane come in pairs,
+      one on each side of the centre. In the example, k equals seven or minus eleven, and
+      answering only one of them loses the mark.
+
+  - section: tangent-plane
+    focus: 'The tangent plane is **perpendicular** to the radius at the point of contact, not parallel to it.'
+    say: >
+      Watch the half coefficient rule. Two u x becomes u times x plus x one, not two u times x
+      plus x one. Doubling it is the classic error. A tangent line is handled the same way: its
+      distance from the centre equals the radius, or equivalently the quadratic in t has equal
+      roots.
+
+  - section: tangent-plane
+    question: q0010
+    say: >
+      Apply the rule. Find the tangent plane at the point one, one, one.
+    answer: >
+      The answer is two x minus y plus two z minus three equals zero. Here u is one, v is minus
+      two, w is one, and applying the replacement rule gives that plane. Its normal two, minus
+      one, two points from the centre minus one, two, minus one to the point, as it should. The
+      option x minus y plus z equals one comes from doubling the half coefficients.
+
+  - section: radical-plane
+    focus: 'If $P$ is outside, $S_1$ is the **square of the length of a tangent** from $P$'
+    say: >
+      The power of a point is S one, the value of the standard form at the point, which equals
+      C P squared minus r squared. For an outside point it is the square of the tangent length,
+      by Pythagoras on the right angle at the point of contact. More generally, any line through
+      P meeting the sphere at A and B has P A times P B equal to the modulus of S one.
+
+  - section: radical-plane
+    focus: '- Its normal is $(u_1 - u_2, v_1 - v_2, w_1 - w_2)$, so it is **perpendicular to the line of centres**.'
+    say: >
+      The radical plane of two spheres is the locus of points with equal powers, which is
+      simply S one minus S two equals zero. Its normal is the difference of the u, v, w values,
+      so it is perpendicular to the line of centres. If the spheres meet, it is the plane of
+      their common circle; if they touch, it is the common tangent plane. Concentric spheres
+      have none.
+
+  - section: radical-plane
+    focus: '- Four spheres with **non-coplanar** centres: the radical planes meet in one point, the **radical centre**, which has equal power with respect to all four.'
+    say: >
+      Three spheres with non collinear centres share a radical line, because equal powers for
+      the first two and the last two force equality for the first and third. Four spheres with
+      non coplanar centres share a radical centre. In the example, subtracting the fourth sphere
+      from each of the others gives x, y and z each equal to one. Again, normalise first:
+      subtracting an equation with two x squared from one with x squared gives a quadric, not a
+      plane.
+
+  - section: orthogonal
+    focus: '$$\cos\theta = \frac{r_1^2 + r_2^2 - \delta^2}{2r_1r_2}.$$'
+    say: >
+      Finally, the angle between two spheres. At a common point, the angle between their tangent
+      planes equals the angle between the two radii to that point, or its supplement. The cosine
+      rule in the triangle formed by the two centres and the common point gives the formula on
+      the board, with delta the distance between centres.
+
+  - section: orthogonal
+    focus: '$$\delta^2 = r_1^2 + r_2^2 \iff 2(u_1u_2 + v_1v_2 + w_1w_2) = d_1 + d_2.$$'
+    say: >
+      The spheres cut orthogonally when that cosine is zero, so delta squared equals r one
+      squared plus r two squared. In coefficients this becomes the highlighted condition: twice
+      u one u two plus v one v two plus w one w two, equals d one plus d two. The proof is just
+      expanding both sides. A consequence: two spheres through the origin are orthogonal only
+      when their centres subtend a right angle at the origin.
+
+  - section: orthogonal
+    focus: 'Writing $d_1d_2$ or $d_1 - d_2$ on the right, or forgetting the factor $2$ on the left, are the usual slips.'
+    say: >
+      The caution lists the usual slips: a product or difference of the d's on the right, or a
+      missing factor two on the left. For touching spheres, the distance between centres equals
+      the sum of the radii for external contact, and the modulus of their difference for
+      internal contact. Between those values the spheres meet in a real circle.
+
+  - section: orthogonal
+    question: q0016
+    say: >
+      Last question. For which k do the two spheres cut orthogonally?
+    answer: >
+      The answer is k equals minus five. With u, v, w equal to minus one, minus two, minus three
+      for the first sphere and two, one, minus one for the second, twice the sum of products is
+      twice minus one, which is minus two, and this must equal k plus three. Plus five is the
+      sign slip. Check it geometrically: the radii squared are nineteen and three, and the
+      centres are root twenty two apart.
+
+  - section: exam-tips
+    say: >
+      To recap. Normalise so that x squared has coefficient one before using any formula. Centre
+      is minus u, minus v, minus w; check the radius quantity is positive. Section radius is the
+      square root of r squared minus delta squared. Spheres through a circle are S plus lambda
+      P. Tangent plane by the replacement rule, tangency by distance equals radius, with
+      parallel tangent planes in pairs. Power is the square of the tangent length. Radical plane
+      is S one minus S two. Orthogonal means twice the sum of u products equals d one plus d
+      two. Now try the practice questions.

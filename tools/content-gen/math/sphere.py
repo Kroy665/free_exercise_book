@@ -122,10 +122,10 @@ Check: the power of $(1, 1, 1)$ is $3 - 2 - 7 = 3 - 4 - 5 = 3 - 6 - 3 = 3 - 9 = 
 
 # q16
 T.single(2, ["orthogonal"], r"The spheres $x^2 + y^2 + z^2 - 2x - 4y - 6z + k = 0$ and $x^2 + y^2 + z^2 + 4x + 2y - 2z + 3 = 0$ cut orthogonally if $k$ equals",
-         [r"$-5$", r"$5$", r"$-1$", r"$-7$"],
+         [r"$-5$", r"$5$", r"$-4$", r"$-7$"],
          r"""Orthogonality: $2(u_1u_2 + v_1v_2 + w_1w_2) = d_1 + d_2$, with $(u_1, v_1, w_1) = (-1, -2, -3)$ and $(u_2, v_2, w_2) = (2, 1, -1)$:
 $$2(-2 - 2 + 3) = k + 3 \implies k = -5.$$
-Check: $r_1^2 = 14 + 5 = 19$, $r_2^2 = 3$, and the distance between the centres $(1, 2, 3)$, $(-2, -1, 1)$ is $\sqrt{9 + 9 + 4} = \sqrt{22} = \sqrt{19 + 3}$. $k = -1$ drops the factor $2$; $k = 5$ is a sign slip.""")
+Check: $r_1^2 = 14 + 5 = 19$, $r_2^2 = 3$, and the distance between the centres $(1, 2, 3)$, $(-2, -1, 1)$ is $\sqrt{9 + 9 + 4} = \sqrt{22} = \sqrt{19 + 3}$. $k = -4$ drops the factor $2$; $k = 5$ is a sign slip.""")
 
 # q17
 T.single(3, ["through-circle", "plane-section"],

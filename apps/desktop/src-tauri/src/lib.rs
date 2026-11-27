@@ -1,8 +1,10 @@
+mod assistant;
 mod commands;
 mod pack_commands;
 mod pack_service;
 mod state;
 mod test_commands;
+mod tts;
 
 use feb_core::{db, import};
 use pack_service::PackConfig;
@@ -81,11 +83,14 @@ pub fn run() {
         .setup(|app| {
             let state = init_state(app.handle())?;
             app.manage(state);
+            app.manage(assistant::AssistantState::default());
+            app.manage(tts::TtsState::default());
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
             commands::library_tree,
             commands::topic_get,
+            commands::lecture_get,
             commands::practice_questions,
             commands::practice_record,
             commands::mistakes_list,
@@ -115,6 +120,17 @@ pub fn run() {
             test_commands::test_submit,
             test_commands::test_result,
             test_commands::test_delete,
+            assistant::assistant_status,
+            assistant::assistant_set_key,
+            assistant::assistant_links,
+            assistant::assistant_suggest,
+            assistant::assistant_chat,
+            assistant::assistant_cancel,
+            assistant::assistant_ollama_pull,
+            tts::tts_status,
+            tts::tts_download,
+            tts::tts_remove,
+            tts::tts_synth,
         ])
         .run(tauri::generate_context!())
         .expect("error while running Free Exercise Book");

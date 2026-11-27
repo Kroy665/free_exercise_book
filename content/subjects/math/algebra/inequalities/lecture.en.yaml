@@ -1,0 +1,275 @@
+# Spoken lecture for "Inequalities".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: basics
+    say: >
+      Welcome. This lecture revises the classical inequalities: the means, weighted and power
+      means, Cauchy-Schwarz, and their use in finding maxima and minima. By the end you should be
+      able to spot which tool a question needs, write down the equality case at once, and avoid
+      the sign traps that catch most candidates. Many of these questions take under a minute, if
+      you know where the extremum sits.
+
+  - section: basics
+    focus: '- $a > b,\ c > d \Rightarrow a + c > b + d$. You may add inequalities, but not subtract or divide them.'
+    say: >
+      Everything here is about real numbers; complex numbers have no order. The rules are those of
+      an ordered field. Adding the same number keeps the inequality. Multiplying by a positive
+      number keeps it, but multiplying by a negative number flips it. For positive numbers,
+      taking reciprocals flips it. And you may add two inequalities, but never subtract or divide
+      them.
+
+  - section: basics
+    focus: '**The one source of all of them:** $x^2 \ge 0$, with equality only at $x = 0$.'
+    say: >
+      Almost every inequality in this topic comes from one fact: a square is never negative.
+      For example, a squared plus b squared minus two a b is a minus b, squared. And a squared
+      plus b squared plus c squared minus a b minus b c minus c a is half the sum of three
+      squares. So the sum of squares is at least a b plus b c plus c a, for all real numbers,
+      with equality only when all three are equal.
+
+  - section: basics
+    focus: 'So if $a^2 + b^2 + c^2 = 1$, then $-\frac12 \le ab + bc + ca \le 1$.'
+    say: >
+      In the other direction, a plus b plus c, squared, is non negative, which gives a b plus b c
+      plus c a at least minus a half of the sum of squares. Put the two together: if the sum of
+      squares is one, the expression a b plus b c plus c a lies between minus a half and one.
+      Also note the identity for a cubed plus b cubed plus c cubed minus three a b c: it factors
+      through a plus b plus c.
+
+  - section: basics
+    question: q0020
+    say: >
+      Try this one. Where does a b plus b c plus c a lie, given the sum of squares is one?
+    answer: >
+      In the closed interval from minus a half to one. The upper bound is attained when a, b and c
+      are equal, and the lower bound when a plus b plus c is zero. The tempting option from minus
+      one to one ignores the identity with the square of the sum.
+
+  - section: basics
+    focus: 'Multiplying an inequality by an expression whose sign you do not know is the commonest error.'
+    say: >
+      The caution here is the commonest error of all. Never multiply by an expression whose sign
+      you do not know. x greater than one over x does not give x squared greater than one when x
+      is negative. The solution set is actually the open interval from minus one to zero, together
+      with x greater than one.
+
+  - section: am-gm-hm
+    focus: '- **Theorem.** $A \ge G \ge H$, and equality in either place holds **iff** $a_1 = a_2 = \cdots = a_n$.'
+    say: >
+      Now the central theorem. For positive numbers, the arithmetic mean is at least the
+      geometric mean, which is at least the harmonic mean, and equality anywhere holds exactly
+      when all the numbers are equal. G at least H is just A at least G applied to the
+      reciprocals. All three means lie between the smallest and the largest number.
+
+  - section: am-gm-hm
+    focus: '- **$n = 2$:** $\frac{a + b}{2} - \sqrt{ab} = \frac12\left(\sqrt a - \sqrt b\right)^2 \ge 0$.'
+    say: >
+      The proofs are worth knowing. For two numbers, the difference of A and G is half the square
+      of root a minus root b. Cauchy's forward and backward induction climbs from two to four to
+      every power of two, then comes down by adding the mean itself as an extra number. Or think
+      of smoothing: replacing two unequal numbers by their mean keeps the sum and increases the
+      product.
+
+  - section: am-gm-hm
+    focus: '- For **two** numbers: $G^2 = AH$, so $G$ is the geometric mean of $A$ and $H$.'
+    say: >
+      For two numbers there is an exact relation: G squared equals A times H. So if you know two
+      of the means, you know the third. For four and nine, A is thirteen halves and G is six, so H
+      is thirty six divided by thirteen halves, that is seventy two over thirteen.
+
+  - section: am-gm-hm
+    question: q0003
+    say: >
+      Use that relation. The arithmetic mean is thirteen halves and the geometric mean is six.
+      Find the harmonic mean.
+    answer: >
+      Seventy two over thirteen. H equals G squared over A, which is thirty six times two over
+      thirteen. The reciprocal, thirteen over seventy two, is the trap. A quick sanity check: H
+      must be smaller than G, and seventy two over thirteen is about 5.5.
+
+  - section: am-gm-hm
+    focus: 'AM ≥ GM needs **non-negative** numbers.'
+    say: >
+      The caution: the means inequality needs non negative numbers. For minus one and minus four,
+      the arithmetic mean is minus two and a half, but the square root of the product is two. And
+      for negative x, x plus one over x is at most minus two, not at least two. The exam tip: the
+      equality case, all terms equal, tells you where the extremum is.
+
+  - section: weighted
+    focus: '- For positive **integer** weights, this is the ordinary AM ≥ GM with $a_i$ repeated $w_i$ times.'
+    say: >
+      Weighted means generalise this. With positive weights, the weighted arithmetic mean is at
+      least the weighted geometric mean, which is at least the weighted harmonic mean, again with
+      equality only when all the numbers are equal. For integer weights there is nothing new: just
+      repeat each number as many times as its weight. Young's inequality is the two term case with
+      weights one over p and one over q.
+
+  - section: weighted
+    focus: 'Equality holds when $\frac{x}{m} = \frac{y}{n}$, that is, when $x : y = m : n$.'
+    say: >
+      The main use is maximising x to the m times y to the n when x plus y is fixed. Split x into
+      m equal parts and y into n equal parts. These m plus n numbers have a fixed sum, so their
+      product is largest when they are all equal. That means x over m equals y over n: x and y in
+      the ratio m to n. For x plus y equal to five, x cubed y squared is largest at three and two,
+      giving 108.
+
+  - section: weighted
+    question: q0007
+    say: >
+      Apply the ratio rule. If x plus y is three, find the greatest value of x squared y.
+    answer: >
+      Four. The ratio must be two to one, so x is two and y is one, and x squared y is four. The
+      tempting answer twenty seven over eight comes from putting x and y equal, at three halves;
+      that is not the maximum for unequal powers.
+
+  - section: weighted
+    focus: 'Splitting into equal parts must keep the **sum constant**.'
+    say: >
+      This caution explains why the splitting must be done carefully. The parts must have a
+      constant sum. With x plus y equal to three, the three numbers x over two, x over two and y
+      sum to three, so the means inequality gives a fixed bound. The numbers x, x and y sum to two
+      x plus y, which varies, so they give nothing useful.
+
+  - section: power-means
+    focus: '- **Power mean inequality.** $M_p$ is an increasing function of $p$: if $p < q$ then $M_p \le M_q$.'
+    say: >
+      Power means unify everything. The mean of order p is the p-th root of the average of the p-th
+      powers. Order minus one is the harmonic mean, order zero, as a limit, is the geometric mean,
+      order one is the arithmetic mean, and order two is the root mean square. The power mean
+      inequality says this mean increases with p. So H, G, A and the root mean square come in that
+      order.
+
+  - section: power-means
+    focus: 'and the inequality is **reversed** if $0 < m < 1$.'
+    say: >
+      The m-th power theorem follows. For positive numbers, not all equal, the average of the m-th
+      powers exceeds the m-th power of the average when m is greater than one or negative. It is
+      reversed when m is between zero and one. The reason is convexity: t to the m is convex for
+      those m, and concave in between, so Jensen's inequality decides the direction.
+
+  - section: power-means
+    focus: 'Put $a = 0$ and $b = 2$ (by continuity): the left side is $2^{m-1}$ and the right side is $1$.'
+    say: >
+      If you forget the direction, use this test case from the exam tip. Take a equal to zero and
+      b equal to two. The average of the m-th powers is two to the m minus one, and the m-th power
+      of the average is one. So, for positive m, the left side wins exactly when m is greater than
+      one.
+
+  - section: power-means
+    question: q0016
+    say: >
+      Here is a direct application. If a plus b is two, find the least value of a to the four plus
+      b to the four.
+    answer: >
+      Two. By the power theorem with m equal to four, the average of the fourth powers is at least
+      the fourth power of the average, which is one. So the sum is at least two, attained at a
+      equals b equals one. The option one forgets to double the average.
+
+  - section: cauchy-schwarz
+    focus: '- **Equality** holds iff the two $n$-tuples are proportional: $a_i = \lambda b_i$ for all $i$ (or every $b_i = 0$).'
+    say: >
+      Cauchy-Schwarz: the square of the sum of products a i b i is at most the sum of the a i
+      squared times the sum of the b i squared. Equality holds exactly when the two lists are
+      proportional. Unlike the means, no sign condition is needed; it holds for all real numbers.
+
+  - section: cauchy-schwarz
+    focus: 'A quadratic that is never negative has discriminant $\le 0$, and that is exactly the inequality.'
+    say: >
+      The proof is examinable and short. Consider the sum of the squares of a i x plus b i. It is
+      a quadratic in x that is never negative, so its discriminant is at most zero, and that is
+      exactly the inequality. Equality means the quadratic has a real root, which makes every a i
+      x plus b i zero, so the lists are proportional.
+
+  - section: cauchy-schwarz
+    focus: '**Linear function on a sphere.**'
+    say: >
+      The standard uses. On the circle x squared plus y squared equals one, three x plus four y,
+      squared, is at most nine plus sixteen, that is twenty five. So three x plus four y lies
+      between minus five and five. On the plane x plus two y plus two z equals nine, the sum of
+      squares is at least eighty one over nine, that is nine, which is the squared distance from
+      the origin to the plane.
+
+  - section: cauchy-schwarz
+    question: q0009
+    say: >
+      Try the circle version. What is the greatest value of three x plus four y?
+    answer: >
+      Five. By Cauchy-Schwarz the square is at most twenty five, and equality holds at three
+      fifths, four fifths, which lies on the circle. The tempting answer seven is just three plus
+      four, which would need both x and y equal to one.
+
+  - section: cauchy-schwarz
+    focus: 'Engel''s form needs **positive** denominators.'
+    say: >
+      Engel's form, also called Titu's lemma, is Cauchy-Schwarz in disguise: the sum of x i
+      squared over y i is at least the square of the sum of x i, over the sum of y i. For
+      example, one over x plus four over y, with x plus y equal to one, is at least three squared,
+      that is nine. But note the caution: the denominators must be positive, or the inequality can
+      fail badly.
+
+  - section: extrema
+    focus: '- **Fixed sum → greatest product.**'
+    say: >
+      Two principles cover most one minute questions, both for positive variables. A fixed product
+      gives the least sum when the variables are equal: x plus y is at least twice the root of the
+      product. A fixed sum gives the greatest product when they are equal: x y is at most a
+      quarter of the sum squared. The same holds for n variables.
+
+  - section: extrema
+    focus: '- $ax + \frac{b}{x} \ge 2\sqrt{ab}$ for $a, b, x > 0$, with equality at $x = \sqrt{b/a}$.'
+    say: >
+      The graph shows the model case: x plus one over x has least value two at x equals one. More
+      generally, a x plus b over x is at least two root a b, attained when x is the root of b over
+      a. From the table, four x plus nine over x has least value twelve, at x equal to three
+      halves. And x squared plus two over x needs splitting into x squared plus one over x plus one
+      over x, which gives three.
+
+  - section: extrema
+    question: q0006
+    say: >
+      Check yourself. Find the least value of four x plus nine over x, for positive x.
+    answer: >
+      Twelve. It is at least twice the square root of thirty six, which is twelve, and equality
+      holds when four x equals nine over x, that is at x equal to three halves. Thirteen is what
+      you get by carelessly putting x equal to one.
+
+  - section: extrema
+    focus: 'The bound is a minimum **only if equality can actually occur**.'
+    say: >
+      Now a trap that costs marks. A bound from the means inequality is the minimum only if
+      equality can actually occur. For x at least three, x plus one over x is still at least two,
+      but two is never reached, because x cannot be one. The true least value is three plus one
+      third, ten thirds, since the function is increasing from one onwards.
+
+  - section: standard-bounds
+    focus: 'This is $A \ge H$ (or Cauchy–Schwarz with $\sqrt{a_i}$ and $\frac{1}{\sqrt{a_i}}$).'
+    say: >
+      Some standard bounds to know by heart. The sum of positive numbers times the sum of their
+      reciprocals is at least n squared. This is just A at least H, or Cauchy-Schwarz. So for
+      three numbers the least value is nine. Applying the means to one, two, up to n gives n
+      factorial less than n plus one over two, to the power n, strictly for n at least two.
+
+  - section: standard-bounds
+    focus: '- If $a_1, \dots, a_n > 0$, then $(1 + a_1)(1 + a_2)\cdots(1 + a_n) > 1 + (a_1 + \cdots + a_n)$.'
+    say: >
+      Weierstrass's inequalities, for n at least two. The product of one plus a i exceeds one plus
+      the sum. For a i between zero and one, the product of one minus a i exceeds one minus the
+      sum. The proof is induction: one minus a, times one minus b, is one minus a minus b plus a b,
+      which is bigger. With all a i equal, you get Bernoulli's inequality.
+
+  - section: standard-bounds
+    focus: 'To test a claimed bound quickly, try the equality case ($a = b = c$) and one lopsided case (one variable tiny).'
+    say: >
+      And the exam tip for checking any option. Try the equality case, all variables equal, and
+      one lopsided case, with one variable tiny. A wrong constant fails immediately. For example,
+      a plus b plus c, cubed, at least eighty one a b c fails at one, one, one, since twenty seven
+      is less than eighty one.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Check signs first: the means and Engel's form need positive numbers, while
+      Cauchy-Schwarz does not. Equality means all equal for the means, and proportional for
+      Cauchy-Schwarz. For two numbers, G squared equals A H. For a fixed sum, x to the m y to the n
+      peaks at the ratio m to n. And a bound is a minimum only if the equality case is allowed.
+      Now try the practice questions.

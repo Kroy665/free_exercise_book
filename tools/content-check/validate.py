@@ -89,8 +89,53 @@ for t in root.glob("subjects/*/*/*/topic.yaml"):
             if path.endswith(".bn"):
                 if re.search(r"[0-9]", val): print(f"ERR {q['id']} {path}: ASCII digits in Bengali text (use ০-৯)"); ok = False
                 if unicodedata.normalize("NFC", val) != val: print(f"ERR {q['id']} {path}: not NFC"); ok = False
+    # Lecture (optional): a teacher's spoken script that walks through the notes.
+    lec_note = ""
+    lfile = t.parent/"lecture.en.yaml"
+    if lfile.exists():
+        try:
+            lec = yaml.safe_load(lfile.read_text())
+        except Exception as e:
+            print(f"ERR {lfile}: invalid YAML: {str(e).splitlines()[0]}"); ok = False; lec = None
+        segs = (lec or {}).get("segments") if isinstance(lec, dict) else None
+        if not isinstance(segs, list) or not segs:
+            print(f"ERR {lfile}: needs a non-empty 'segments' list"); ok = False; segs = []
+        en = (t.parent/"notes.en.md").read_text() if (t.parent/"notes.en.md").exists() else ""
+        bodies, cur = {}, None
+        for line in en.splitlines(keepends=True):
+            m = re.match(r"^##\s+.*\{#([a-z0-9-]+)\}\s*$", line)
+            if m: cur = m.group(1); bodies[cur] = ""; continue
+            if cur: bodies[cur] += line
+        qids = set(ids)
+        words = 0
+        for i, sg in enumerate(segs):
+            where = f"{lfile.relative_to(root)} segment {i+1}"
+            if not isinstance(sg, dict): print(f"ERR {where}: not a mapping"); ok = False; continue
+            extra_keys = set(sg) - {"section", "focus", "say", "question", "answer"}
+            if extra_keys: print(f"ERR {where}: unknown keys {sorted(extra_keys)}"); ok = False
+            sec, say = sg.get("section"), sg.get("say")
+            if sec not in bodies: print(f"ERR {where}: section '{sec}' is not an anchor in notes.en.md"); ok = False; continue
+            if not isinstance(say, str) or len(say.split()) < 5: print(f"ERR {where}: 'say' must be spoken text"); ok = False; continue
+            for key in ("say", "answer"):
+                v = sg.get(key)
+                if v is None: continue
+                if re.search(r"[$\\^_{}|*#`]|\\[a-z]", v):
+                    print(f"ERR {where}: '{key}' must be plain spoken English (no LaTeX, Markdown or symbols like $ \\ ^ _ {{ }} | * #)"); ok = False
+                words += len(v.split())
+            f = sg.get("focus")
+            if f is not None and f not in bodies[sec]:
+                print(f"ERR {where}: focus text not found in section '{sec}': {f[:60]!r}"); ok = False
+            q = sg.get("question")
+            if q is not None:
+                if q not in qids: print(f"ERR {where}: unknown question {q}"); ok = False
+                if not sg.get("answer"): print(f"ERR {where}: a question needs a spoken 'answer'"); ok = False
+            elif sg.get("answer"): print(f"ERR {where}: 'answer' without 'question'"); ok = False
+        covered = {sg.get("section") for sg in segs if isinstance(sg, dict)}
+        missing = [a for a in bodies if a not in covered]
+        if missing: print(f"WARN {lfile.relative_to(root)}: sections not covered: {missing}")
+        lec_note = f" lecture: {len(segs)} steps, {words} words (~{round(words/150)} min)"
     dist = collections.Counter(q["answer"] for q in qs if q["type"] != "assertion-reason")
-    print(t.parent.name, "questions:", len(qs), "answer spread:", dict(sorted(dist.items())), "anchors:", sorted(anchors))
+    print(t.parent.name, "questions:", len(qs), "answer spread:", dict(sorted(dist.items())), "anchors:", sorted(anchors), lec_note)
 # Formulas and graphs must render (needs Node 23.6+ and `npm ci` in apps/desktop).
 import shutil, subprocess
 script = pathlib.Path(__file__).resolve().parents[2]/"apps/desktop/scripts/check-math.ts"

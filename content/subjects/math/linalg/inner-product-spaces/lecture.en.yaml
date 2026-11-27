@@ -1,0 +1,314 @@
+# Spoken lecture for "Inner Product Spaces".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: inner-products
+    say: >
+      Welcome. Today we revise inner product spaces: the setting where vectors have length
+      and angle. By the end you should be able to check whether a formula is an inner
+      product, use Cauchy Schwarz and the parallelogram law, expand a vector in an
+      orthonormal basis, run Gram Schmidt quickly and correctly, compute projections and
+      distances, and recognise orthogonal matrices. Let's begin with the axioms.
+
+  - section: inner-products
+    focus: '1. **Linearity in the first argument:** $\langle \alpha u + w, v\rangle = \alpha\langle u, v\rangle + \langle w, v\rangle$.'
+    say: >
+      An inner product takes two vectors and returns a scalar, with three axioms. It is
+      linear in the first argument. It is conjugate symmetric: swapping the arguments
+      conjugates the value, which over the reals is plain symmetry. And it is positive
+      definite: the inner product of v with itself is non negative, and zero only for the
+      zero vector. Conjugate symmetry makes the inner product of v with itself real, so the
+      third axiom makes sense.
+
+  - section: inner-products
+    focus: '$$\langle u, \alpha v\rangle = \bar\alpha\,\langle u, v\rangle.$$'
+    say: >
+      Notice the convention on the board. These notes take linearity in the first argument,
+      as Mapa and Hoffman Kunze do. Then a scalar pulled out of the second argument comes
+      out conjugated: the inner product of u with alpha v is alpha bar times the inner
+      product of u and v. Physics books do the opposite. A real space with an inner product
+      is called Euclidean, and a complex one unitary.
+
+  - section: inner-products
+    focus: '| $M_{m\times n}(\R)$ | $\operatorname{tr}(A^T B) = \sum_{i,j} a_{ij}b_{ij}$ |'
+    say: >
+      The table lists the standard examples: the dot product on R n, the complex version
+      with the second vector conjugated, weighted dot products, y transpose A x for a
+      positive definite symmetric A, the integral of f g on continuous functions, and on
+      matrices, the trace of A transpose B. That last one is simply the sum of products of
+      corresponding entries, so the norm of a matrix is the square root of the sum of the
+      squares of all its entries.
+
+  - section: inner-products
+    focus: 'It is an inner product **iff** $b = c$ (symmetry) and $M$ is positive definite: $a > 0$ and $ad - b^2 > 0$.'
+    say: >
+      To test a formula on R two, write it as x transpose M y. It is an inner product exactly
+      when M is symmetric and positive definite: the top left entry positive and the
+      determinant positive. For x one y one minus x one y two minus x two y one plus three x
+      two y two, the matrix has rows one, minus one and minus one, three. Its determinant is
+      two, so this is an inner product.
+
+  - section: inner-products
+    question: q0010
+    say: >
+      Try a parameter version. For which k is this formula an inner product on R two?
+    answer: >
+      The matrix has rows one, k and k, four, symmetric for every k. Positive definiteness
+      needs four minus k squared to be strictly positive, so k lies strictly between minus
+      two and two. The tempting option includes the end points, but at k equals two the non
+      zero vector two, minus one has inner product zero with itself.
+
+  - section: inner-products
+    focus: 'On $C[a, b]$, positivity uses **continuity**'
+    say: >
+      Two cautions. On continuous functions, positivity uses continuity: a continuous f with
+      the integral of f squared equal to zero must vanish identically. For merely integrable
+      functions that fails. And p of zero q of zero plus p of one q of one is an inner
+      product on polynomials of degree at most one, but not degree two, because x times x
+      minus one is non zero yet has inner product zero with itself. For the complex dot
+      product, remember to conjugate the second vector.
+
+  - section: norm-inequalities
+    focus: '- **Cauchy–Schwarz:** $|\langle u, v\rangle| \le \|u\|\,\|v\|$, with **equality iff $u, v$ are linearly dependent**.'
+    say: >
+      The norm of v is the square root of the inner product of v with itself. The most
+      important inequality is Cauchy Schwarz: the modulus of the inner product of u and v is
+      at most the norm of u times the norm of v, with equality exactly when u and v are
+      linearly dependent. The real proof is neat: the norm squared of u minus t v is a
+      quadratic in t that is never negative, so its discriminant is at most zero.
+
+  - section: norm-inequalities
+    focus: '- **Triangle inequality:** $\|u + v\| \le \|u\| + \|v\|$. In a real space with $u, v \ne 0$, equality holds **iff $v = cu$ with $c > 0$** (same direction).'
+    say: >
+      The triangle inequality follows by expanding the norm squared of u plus v and applying
+      Cauchy Schwarz to the middle term. Now compare the equality cases carefully. Cauchy
+      Schwarz needs only dependence. The triangle inequality, in a real space with non zero
+      vectors, needs v to be a positive multiple of u. One, zero and minus one, zero are
+      dependent, but the norm of their sum is zero, not two.
+
+  - section: norm-inequalities
+    focus: '- **Parallelogram law:** $\|u + v\|^2 + \|u - v\|^2 = 2\|u\|^2 + 2\|v\|^2$.'
+    say: >
+      The parallelogram law says the squares of the diagonals add up to the squares of the
+      four sides. Polarisation recovers the inner product from norms: one quarter of the
+      norm squared of u plus v minus the norm squared of u minus v. And the exam tip: a norm
+      comes from an inner product exactly when it satisfies the parallelogram law. The norm
+      modulus x plus modulus y fails it on the two unit vectors: eight on one side, four on
+      the other.
+
+  - section: norm-inequalities
+    focus: '$$\cos\theta = \frac{\langle u, v\rangle}{\|u\|\,\|v\|}.$$'
+    say: >
+      Cauchy Schwarz also lets us define angles in a real space: the cosine of theta is the
+      inner product over the product of norms, with theta between zero and pi. In C zero one,
+      the functions one and x have inner product one half, norms one and one over root
+      three, so the cosine is root three over two and the angle is pi by six.
+
+  - section: norm-inequalities
+    question: q0018
+    say: >
+      Here is the other use of Cauchy Schwarz, for maxima. Find the maximum of two x plus
+      three y plus six z on the unit sphere.
+    answer: >
+      By Cauchy Schwarz, the expression is at most the square root of four plus nine plus
+      thirty six, times one, which is seven, with equality at one seventh of two, three, six.
+      The tempting answers are eleven, which just adds the coefficients, and forty nine,
+      which forgets the square root.
+
+  - section: orthogonality
+    focus: '**Pythagoras.** If $u \perp v$, then $\|u + v\|^2 = \|u\|^2 + \|v\|^2$.'
+    say: >
+      Two vectors are orthogonal when their inner product is zero. Pythagoras holds: if u is
+      orthogonal to v, the norm squared of the sum is the sum of the norm squares. The
+      converse holds in a real space, but fails in a complex one, because the identity only
+      forces the real part of the inner product to vanish. One and i in the complex numbers
+      satisfy the identity, yet their inner product is minus i.
+
+  - section: orthogonality
+    focus: '- An orthogonal set of **non-zero** vectors is linearly independent. (Take $\langle \sum c_j v_j, v_i\rangle = c_i\|v_i\|^2 = 0$.)'
+    say: >
+      A key fact: an orthogonal set of non zero vectors is linearly independent. Take the
+      inner product of a vanishing combination with v i, and only c i times the norm squared
+      of v i survives, so c i is zero. Hence n mutually orthogonal non zero vectors in an n
+      dimensional space form a basis, with no determinant needed. And every finite
+      dimensional inner product space has an orthonormal basis.
+
+  - section: orthogonality
+    focus: '$$v = \sum_{i=1}^n \langle v, e_i\rangle\, e_i, \qquad \|v\|^2 = \sum_{i=1}^n |\langle v, e_i\rangle|^2 \ \text{(Parseval)}.$$'
+    say: >
+      In an orthonormal basis, coordinates are free: the coefficient of e i is just the inner
+      product of v with e i, the Fourier coefficient. The norm squared of v is the sum of the
+      squared moduli of these coefficients; that is Parseval. For an orthonormal set that is
+      not a basis, you get Bessel's inequality instead. For an orthogonal basis that is not
+      normalised, divide by the norm squared of each basis vector.
+
+  - section: orthogonality
+    focus: 'and indeed $2\sqrt2\, e_1 + \sqrt2\, e_2 = (2, 2) + (1, -1) = (3, 1)$, with $8 + 2 = 10 = \|v\|^2$.'
+    say: >
+      In the example, with e one and e two the normalised versions of one, one and one, minus
+      one, the vector three, one has coefficients two root two and root two. Check it: they
+      rebuild three, one, and eight plus two is ten, the norm squared of v.
+
+  - section: gram-schmidt
+    focus: '$$u_1 = v_1, \qquad u_k = v_k - \sum_{j=1}^{k-1}\frac{\langle v_k, u_j\rangle}{\|u_j\|^2}\,u_j \quad (k = 2, \dots, n).$$'
+    say: >
+      Now the Gram Schmidt process. Start with independent vectors. Keep the first. From each
+      later vector, subtract its projections onto the orthogonal vectors already built, each
+      projection being the inner product over the norm squared, times that vector. The
+      results are orthogonal and non zero, and the first k of them span the same space as
+      the first k inputs. Normalise at the end. If some output is zero, the inputs were
+      dependent.
+
+  - section: gram-schmidt
+    focus: 'Scaling does not affect orthogonality, so use $u_2 = (1, -1, 2)$, $\|u_2\|^2 = 6$.'
+    say: >
+      Walk through the worked example. Start with one, one, zero, of norm squared two. The
+      second vector one, zero, one has inner product one with it, so subtract one half of
+      one, one, zero, giving one half, minus one half, one. Scaling does not affect
+      orthogonality, so double it to one, minus one, two. The third step subtracts a half and
+      a sixth, and ends at a multiple of minus one, one, one.
+
+  - section: gram-schmidt
+    question: q0011
+    say: >
+      Check the second step yourself. What is the second orthogonal vector for one, one, zero
+      and one, zero, one?
+    answer: >
+      Subtract the inner product, one, divided by the norm squared, two, times one, one,
+      zero. That gives one half, minus one half, one, and its inner product with one, one,
+      zero is zero. The tempting option zero, minus one, one forgets to divide by the norm
+      squared, and it is not orthogonal to the first vector.
+
+  - section: gram-schmidt
+    focus: 'The divisor is $\|u_j\|^2$, **not** $\|u_j\|$ and not $1$.'
+    say: >
+      That is exactly the caution on the board. The divisor is the norm squared, not the norm
+      and not one. Also, project onto the new orthogonal vectors, not the original ones. And
+      the exam tip: the output depends on the order of the inputs, but the first output is
+      always parallel to the first input. In a multiple choice question, eliminate options
+      whose first vector is wrong, then test orthogonality.
+
+  - section: gram-schmidt-polynomials
+    focus: 'Use $\int_{-1}^{1} x^k\,dx = \frac{2}{k + 1}$ for even $k$ and $0$ for odd $k$.'
+    say: >
+      Gram Schmidt on polynomials is a favourite. Take polynomials of degree at most two,
+      with the inner product the integral from minus one to one of p q d x. The only integral
+      you need is that of x to the k over this interval: two over k plus one for even k, and
+      zero for odd k. Apply the process to one, x, x squared.
+
+  - section: gram-schmidt-polynomials
+    focus: '**Symmetry shortcut.** On a symmetric interval $[-a, a]$, every even function is orthogonal to every odd function.'
+    say: >
+      The symmetry shortcut does most of the work. On a symmetric interval, every even
+      function is orthogonal to every odd one. So x is already orthogonal to one, and x
+      squared is orthogonal to x. From x squared we subtract only its projection on the
+      constant: two thirds divided by two, which is one third. So the outputs are one, x, and
+      x squared minus one third.
+
+  - section: gram-schmidt-polynomials
+    question: q0015
+    say: >
+      Confirm that with this question. What is the third unnormalised output?
+    answer: >
+      x squared is even and x is odd, so only the constant is subtracted. The inner product
+      of x squared with one is two thirds, and the norm squared of one is two, giving x
+      squared minus one third. The option x squared minus two thirds forgets to divide by
+      two, and x squared minus x plus one sixth is the answer on the interval from zero to
+      one.
+
+  - section: gram-schmidt-polynomials
+    focus: 'These are multiples of the **Legendre polynomials** $P_0 = 1$, $P_1 = x$, $P_2 = \frac12(3x^2 - 1)$'
+    say: >
+      These are multiples of the Legendre polynomials: one, x, and one half of three x
+      squared minus one. Watch the normalisation. The Legendre polynomials are orthogonal but
+      not unit vectors; the norm squared of P n is two over two n plus one. The orthonormal
+      version of the third one is root of five eighths times three x squared minus one.
+
+  - section: gram-schmidt-polynomials
+    focus: 'On $[0, 1]$, Gram–Schmidt on $1, x, x^2$ gives $1$, $x - \frac12$, $x^2 - x + \frac16$'
+    say: >
+      And the interval matters. On zero to one, x is not orthogonal to one, because the
+      integral of x there is one half. The process then gives one, x minus one half, and x
+      squared minus x plus one sixth. Always check the interval before using the symmetry
+      shortcut.
+
+  - section: complement-projection
+    focus: '- $V = W \oplus W^\perp$, so $\dim W^\perp = \dim V - \dim W$.'
+    say: >
+      The orthogonal complement of a set S is everything orthogonal to every vector of S. It
+      is always a subspace, even when S is not. For a subspace W of a finite dimensional
+      space, V is the direct sum of W and its complement, so the dimensions add up to the
+      dimension of V, and the complement of the complement is W again. For a real matrix,
+      the complement of the row space is the null space.
+
+  - section: complement-projection
+    focus: 'First find $\dim W$ (the rank), because the spanning set may be dependent.'
+    say: >
+      To compute a complement, solve the homogeneous system saying x is orthogonal to each
+      spanning vector. But first find the dimension of W by rank, since the spanning set may
+      be dependent. In the example in R four, the third vector is the sum of the first two,
+      so W has dimension two and its complement also has dimension two, not one.
+
+  - section: complement-projection
+    focus: '**Best approximation:** $P_W v$ is the unique vector of $W$ nearest to $v$, so the distance from $v$ to $W$ is $\|v - P_W v\|$.'
+    say: >
+      With an orthogonal basis of W, the projection of v is the sum of the individual
+      projections onto the basis vectors. The difference v minus its projection lies in the
+      complement. And the projection is the best approximation: the unique nearest point of W
+      to v. So the distance from v to W is the norm of v minus its projection.
+
+  - section: complement-projection
+    question: q0020
+    say: >
+      Try the worked example. Find the distance from one, two, three to the plane spanned by
+      one, one, zero and one, minus one, two.
+    answer: >
+      The spanning vectors are orthogonal, so add the projections: three halves of the first
+      plus five sixths of the second. The remainder is four thirds of minus one, one, one,
+      whose norm is four over root three. The tempting option four thirds forgets the factor
+      root three from the norm of minus one, one, one.
+
+  - section: complement-projection
+    focus: 'The projection formula needs an **orthogonal** basis of $W$.'
+    say: >
+      The caution: the projection formula needs an orthogonal basis. With a non orthogonal
+      spanning set, run Gram Schmidt first. For a plane in R three there is a faster route:
+      project v onto the normal n, and that component, the inner product of v and n over the
+      norm squared of n, times n, is exactly v minus its projection onto the plane.
+
+  - section: orthogonal-matrices
+    focus: 'A real $n \times n$ matrix $Q$ is **orthogonal** if $Q^TQ = QQ^T = I$, that is, $Q^{-1} = Q^T$.'
+    say: >
+      Finally, orthogonal matrices. A real square matrix is orthogonal when Q transpose Q is
+      the identity, so its inverse is its transpose. Equivalently, its columns form an
+      orthonormal basis, or its rows do; it preserves dot products; it preserves lengths.
+      The determinant is plus or minus one, real eigenvalues are plus or minus one, and the
+      matrix that changes one orthonormal basis to another is orthogonal. In the plane, these
+      are rotations, with determinant one, and reflections, with determinant minus one.
+
+  - section: orthogonal-matrices
+    question: q0017
+    say: >
+      Here is the example from the notes. For which x is this one third times a three by
+      three matrix orthogonal?
+    answer: >
+      Row three must be orthogonal to row one: four minus two plus x equals zero, so x is
+      minus two. Then row three is one third of two, one, minus two, a unit vector orthogonal
+      to row two as well. The tempting value two makes row three a unit vector, but not
+      orthogonal to row one.
+
+  - section: orthogonal-matrices
+    focus: '$\det Q = \pm 1$ is necessary, **not** sufficient'
+    say: >
+      And the caution. A determinant of plus or minus one is necessary, not sufficient: the
+      matrix with rows one, one and zero, one has determinant one but is not orthogonal. And
+      orthogonal columns are not enough; they must also be unit vectors.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Conjugate the second slot. To test an inner product, its matrix must be
+      symmetric and positive definite, with strict inequalities. Cauchy Schwarz has equality
+      for dependence; the triangle inequality for positive multiples. In Gram Schmidt divide
+      by the norm squared, and check that the first output is parallel to the first input.
+      On minus one to one, even is orthogonal to odd. Find the dimension of W by rank. And
+      orthogonal matrices have orthonormal rows. Now try the practice questions.

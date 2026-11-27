@@ -23,6 +23,16 @@ const CA_ITEMS_DDL: &str = r#"
     CREATE INDEX ca_items_topic ON ca_items(topic_id, ord);
 "#;
 
+/// Spoken lectures (`lecture.<lang>.yaml`), one JSON document per topic and language.
+const LECTURES_DDL: &str = r#"
+    CREATE TABLE lectures (
+        topic_id TEXT NOT NULL,
+        lang     TEXT NOT NULL,
+        data     TEXT NOT NULL,   -- JSON Lecture
+        PRIMARY KEY (topic_id, lang)
+    );
+"#;
+
 const CONTENT_MIGRATIONS: &[&str] = &[
     // 1: initial content schema
     r#"
@@ -110,6 +120,8 @@ const CONTENT_MIGRATIONS: &[&str] = &[
     "#,
     // 5: current-affairs items
     CA_ITEMS_DDL,
+    // 6: lectures
+    LECTURES_DDL,
 ];
 
 /// Pack file format version (docs/DATA_AND_PACKS.md §2). A pack is a SQLite database with
@@ -128,6 +140,7 @@ pub fn create_pack(path: &Path) -> Result<Connection> {
     conn.execute_batch(CONTENT_MIGRATIONS[0])?;
     conn.execute_batch("CREATE TABLE pack_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);")?;
     conn.execute_batch(CA_ITEMS_DDL)?;
+    conn.execute_batch(LECTURES_DDL)?;
     Ok(conn)
 }
 

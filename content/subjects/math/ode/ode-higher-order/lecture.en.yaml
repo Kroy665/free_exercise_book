@@ -1,0 +1,319 @@
+# Spoken lecture for "Higher-Order Linear Equations".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: linear-theory
+    say: >
+      Welcome. Today we revise higher order linear differential equations, the part of the
+      syllabus that carries the most marks. By the end you should be able to write the general
+      solution of a constant coefficient equation at sight, find particular integrals with the D
+      operator, handle resonance, use variation of parameters, and reduce a Cauchy Euler
+      equation to constant coefficients.
+
+  - section: linear-theory
+    focus: '**Superposition:** any linear combination of solutions of $L[y] = 0$ is again a solution.'
+    say: >
+      An equation is linear when y and its derivatives appear only to the first degree and are
+      never multiplied together. The left side is then a linear operator L. Two consequences
+      follow. Any combination of solutions of the homogeneous equation is again a solution. And
+      if the right side is a sum, you may treat each term separately and add the answers.
+
+  - section: linear-theory
+    focus: '**Existence and uniqueness (statement).**'
+    say: >
+      Now the existence and uniqueness theorem. Suppose every coefficient and the right side are
+      continuous on an interval, and the leading coefficient never vanishes there. Then for any
+      point x nought in the interval and any n prescribed numbers, there is exactly one solution
+      taking those values for y and its first n minus one derivatives at x nought. Notice the
+      two hypotheses: continuity, and a leading coefficient that is never zero.
+
+  - section: linear-theory
+    focus: 'the solutions of $L[y] = 0$ form a vector space of dimension exactly $n$'
+    say: >
+      Under the same hypotheses, the homogeneous solutions form a vector space of dimension
+      exactly n, because a solution is fixed by its n initial values. Any n independent
+      solutions form a fundamental set. The general solution of the full equation is the
+      complementary function plus any one particular integral, since the difference of two
+      solutions solves the homogeneous equation. So two particular integrals that differ by a
+      member of the complementary function are both correct: for y double dash plus y equals x,
+      both x and x plus three cos x work.
+
+  - section: linear-theory
+    focus: 'A **boundary value problem** can have none or infinitely many solutions'
+    say: >
+      A caution on uniqueness. The theorem is about an initial value problem, with all
+      conditions at one point. A boundary value problem can fail completely: y double dash plus
+      y equals zero, with y zero at zero and at pi, is solved by every multiple of sine x. And
+      the exam tip: the number of independent arbitrary constants must equal the order.
+
+  - section: wronskian
+    focus: 'For two functions, $W(y_1, y_2) = y_1y_2'' - y_2y_1''$.'
+    say: >
+      Next, the Wronskian, the tool for testing independence. It is the determinant with the
+      functions in the first row, their first derivatives in the second, and so on. For two
+      functions it is y one times y two dash, minus y two times y one dash. Memorise three
+      values: for e to the a x and e to the b x it is b minus a times e to the a plus b x; for
+      cos beta x and sin beta x it is beta; and for one, x, x squared it is two.
+
+  - section: wronskian
+    focus: '| $W(x_0) \ne 0$ at one point $\Rightarrow$ independent on $I$ | **any** differentiable functions |'
+    say: >
+      Now the table, which is where exams set traps. If the Wronskian is nonzero at even one
+      point, the functions are independent, and this holds for any differentiable functions.
+      The converse is false in general: a Wronskian that is identically zero does not prove
+      dependence. It does prove dependence when the functions are solutions of one linear
+      equation with continuous coefficients and a nonvanishing leading coefficient.
+
+  - section: wronskian
+    focus: 'Since the exponential never vanishes, $W$ is either identically zero or never zero.'
+    say: >
+      Abel's formula explains this. For two solutions of y double dash plus P y dash plus Q y
+      equals zero, differentiate the Wronskian and use the equation: you get W dash equals minus
+      P times W. So W at x is W at x nought times e to the minus integral of P. An exponential
+      never vanishes, so W is either identically zero or never zero. Notice that Q plays no part.
+
+  - section: wronskian
+    question: q0011
+    say: >
+      Try this. Two solutions of y double dash plus two y dash plus five y equals zero have
+      Wronskian three at the origin. What is the Wronskian at x?
+    answer: >
+      By Abel's formula, only P matters, and P is two. So W at x is three times e to the minus
+      two x. The tempting wrong options are three e to the two x, which drops the minus sign,
+      and three e to the minus five x, which uses Q instead of P.
+
+  - section: wronskian
+    focus: 'yet they are independent'
+    say: >
+      Here is the counterexample to know. Take x squared and x times the modulus of x on the
+      interval from minus one to one. The Wronskian is identically zero, yet they are
+      independent: they agree for positive x and are negatives for negative x, so no single
+      constant relates them. Abel is not contradicted, because they do not solve one equation
+      with continuous coefficients there.
+
+  - section: constant-coefficients
+    focus: 'so $m$ must be a root of the **auxiliary (characteristic) equation** $f(m) = 0$.'
+    say: >
+      Now the workhorse: constant coefficients. Write D for d by d x, so the equation is f of D
+      applied to y equals zero. Try y equals e to the m x. Each D just multiplies by m, so you
+      get f of m times e to the m x equals zero, and m must be a root of the auxiliary
+      equation. The table on the board turns the roots into the complementary function.
+
+  - section: constant-coefficients
+    focus: '| real $m$, repeated $k$ times | $(c_1 + c_2x + \cdots + c_kx^{k-1})e^{mx}$ |'
+    say: >
+      Distinct real roots give separate exponentials. A real root repeated k times gives e to
+      the m x times a polynomial of degree k minus one, with k constants. So a double root at
+      three gives c one plus c two x, times e to the three x. The extra powers of x come from
+      reduction of order. As the exam tip warns, c one e to the three x plus c two e to the
+      three x really has only one constant.
+
+  - section: constant-coefficients
+    focus: '| complex pair $\alpha \pm i\beta$ | $e^{\alpha x}(c_1\cos\beta x + c_2\sin\beta x)$ |'
+    say: >
+      Real coefficients force complex roots into conjugate pairs alpha plus or minus i beta.
+      Euler's formula turns each pair into two real solutions, e to the alpha x times cos beta x
+      and times sin beta x. A repeated pair gets the extra factor x, as before. So roots one plus
+      or minus two i give e to the x times c one cos two x plus c two sin two x.
+
+  - section: constant-coefficients
+    question: q0001
+    say: >
+      Let's warm up. Choose the general solution of y double dash minus five y dash plus six y
+      equals zero.
+    answer: >
+      The auxiliary equation m squared minus five m plus six factors as m minus two times m minus
+      three, so the roots are two and three, and y is c one e to the two x plus c two e to the
+      three x. Negative exponents come from a sign slip. The roots must add to five and
+      multiply to six.
+
+  - section: constant-coefficients
+    focus: 'The lowest-order real equation with $xe^{x}$ and $\sin x$ among its solutions is $(D - 1)^2(D^2 + 1)y = 0$, of order 4.'
+    say: >
+      Examiners also run this backwards. If the solution is e to the alpha x times cos and sin
+      of beta x, the equation is y double dash minus two alpha y dash plus alpha squared plus
+      beta squared times y equals zero. And if x e to the x and sin x must both be solutions,
+      you need a double root at one and the pair plus or minus i: order four, not two.
+
+  - section: constant-coefficients
+    focus: 'Every solution tends to $0$ exactly when every root has a negative real part.'
+    say: >
+      At infinity, every solution tends to zero exactly when every root has a negative real
+      part. The graph shows a damped oscillation with roots minus one quarter plus or minus two
+      i, and the resonant particular integral that grows like x over four. We meet that next.
+
+  - section: d-operator
+    focus: '| $e^{ax}$ | $\dfrac{e^{ax}}{f(a)}$, if $f(a) \ne 0$ |'
+    say: >
+      Particular integrals. One over f of D applied to R means any one function y with f of D y
+      equal to R. The basic inverse, one over D minus a, is e to the a x times the integral of e
+      to the minus a x times R; the rest are shortcuts. For e to the a x, the particular integral
+      is e to the a x over f of a, provided f of a is not zero. For D squared plus three D plus
+      two, f of three is twenty.
+
+  - section: d-operator
+    focus: 'write $f(D) = \phi(D^2)$: $\dfrac{\sin ax}{\phi(-a^2)}$'
+    say: >
+      For sine a x or cosine a x, write f of D as a function of D squared and replace D squared
+      by minus a squared. So D squared plus four acting on sin x gives sin x over minus one plus
+      four, that is sin x over three. If f has odd powers of D, replace D squared first, and you
+      are left with a linear expression in D in the denominator. Rationalise it by multiplying
+      above and below by the conjugate factor, which brings D squared back.
+
+  - section: d-operator
+    focus: 'expand $[f(D)]^{-1}$ in ascending powers of $D$ up to $D^m$'
+    say: >
+      For a polynomial x to the m, expand one over f of D in ascending powers of D and stop at D
+      to the m, since higher powers kill the polynomial. For D squared minus four acting on x
+      squared, take out minus one quarter, expand one over one minus D squared by four as one
+      plus D squared by four, and you get minus x squared over four, minus one eighth. A common
+      slip is to expand one over one minus u as one minus u.
+
+  - section: d-operator
+    focus: '$e^{ax}\dfrac{1}{f(D + a)}V$ (exponential shift)'
+    say: >
+      The exponential shift is the most useful rule of all. To pass e to the a x through one over
+      f of D, pull it out to the front and replace D by D plus a. Plus a, not minus a. For D
+      minus one squared acting on x e to the x, the shift turns D minus one into D, so you get e
+      to the x times one over D squared of x, which is x cubed over six, times e to the x.
+
+  - section: d-operator
+    focus: 'This is exactly the case where $e^{ax}$ already lies in the CF (resonance)'
+    say: >
+      Now the key caution. The rule e to the a x over f of a is meaningless when f of a is zero,
+      which happens exactly when e to the a x is already in the complementary function. This is
+      resonance, and the particular integral picks up a factor x: x e to the a x over f dash of
+      a, or x to the k over the k-th derivative for a root of order k. For sines, one over D
+      squared plus a squared of sin a x is minus x cos a x over two a; for cos a x it is plus x
+      sin a x over two a.
+
+  - section: d-operator
+    question: q0008
+    say: >
+      Try this resonance question. Find a particular integral of D squared minus three D plus
+      two, acting on y, equal to e to the x.
+    answer: >
+      f of one is one minus three plus two, which is zero, so e to the x is in the complementary
+      function. f dash of D is two D minus three, and f dash of one is minus one. So the
+      particular integral is minus x e to the x. The tempting option x e to the x drops that sign,
+      and the x squared form is only for a double root.
+
+  - section: d-operator-advanced
+    focus: '**Easier route for $x\sin ax$ or $x\cos ax$:**'
+    say: >
+      For x times V there is a general rule, but it is heavy. For x sin a x the easier route is
+      complex: write it as the imaginary part of x e to the i a x, shift the exponential
+      through, and expand in powers of D. For D squared plus one, the shift gives one over two i
+      D times one plus D over two i. Expand, act on x, multiply by cos x plus i sin x, and take
+      the imaginary part.
+
+  - section: d-operator-advanced
+    question: q0017
+    say: >
+      Here is that computation as a question. Choose the particular integral of D squared plus
+      one, acting on y, equal to x sin x.
+    answer: >
+      The answer is minus x squared cos x over four, plus x sin x over four. The tempting option
+      is minus x squared cos x over four alone, which drops the correction term from expanding
+      one over one plus D over two i. You cannot drop it, because x sin x is not in the
+      complementary function. Check by substituting: the two pieces together give exactly x
+      sin x.
+
+  - section: d-operator-advanced
+    focus: '**Initial value problems.** First write the full general solution (CF + PI), then impose the conditions.'
+    say: >
+      Two more points. When the right side is a sum, find each particular integral separately
+      and add. And for an initial value problem, first write the full general solution, then
+      impose the conditions. For y double dash plus four y equals four, with y and y dash zero at
+      the origin, the particular integral is one, the conditions give c one minus one and c two
+      zero, so y is one minus cos two x.
+
+  - section: d-operator-advanced
+    focus: 'Check any PI by applying $f(D)$ to it.'
+    say: >
+      The exam tip: always check a particular integral by applying f of D to it. For x sin two x
+      over four and D squared plus four, the second derivative is cos two x minus x sin two x;
+      adding four times the function cancels the second term and leaves cos two x. That takes
+      twenty seconds and catches nearly every sign error.
+
+  - section: variation-of-parameters
+    focus: 'use **variation of parameters** (Lagrange)'
+    say: >
+      For a right side such as sec x, tan x, or e to the x over x, the shortcuts fail, so use
+      variation of parameters. Replace the constants in c one y one plus c two y two by
+      functions u one and u two, and impose u one dash y one plus u two dash y two equals zero.
+      Then u one dash is minus y two R over W, and u two dash is y one R over W, where W is the
+      Wronskian.
+
+  - section: variation-of-parameters
+    focus: 'The formulas need the equation in **normalised form**'
+    say: >
+      A caution that costs many candidates. These formulas assume the coefficient of y double
+      dash is one. For x squared y double dash plus something equal to g of x, first divide
+      through, so R is g of x over x squared. And the exam tip on sign: the minus goes with u
+      one, the coefficient of y one, and its numerator holds the other function, y two.
+      Swapping these is the commonest slip.
+
+  - section: variation-of-parameters
+    question: q0018
+    say: >
+      Try the standard example. By variation of parameters, find a particular integral of y
+      double dash plus y equals sec x on the open interval from minus pi by two to pi by two.
+    answer: >
+      With cos x and sin x the Wronskian is one. u one dash is minus tan x, so u one is log cos x;
+      u two dash is one, so u two is x. The particular integral is cos x log cos x plus x sin x.
+      The option with minus cos x log cos x integrates minus tan x with the wrong sign. Any part
+      of an answer that lies in the complementary function may be dropped.
+
+  - section: cauchy-euler
+    focus: 'and in general $x^kD^k = \theta(\theta - 1)\cdots(\theta - k + 1)$'
+    say: >
+      Finally, equations with variable coefficients of a special shape. In a Cauchy Euler
+      equation each term is x to the k times the k-th derivative, times a constant. For positive
+      x, put x equal to e to the z and let theta be d by d z. Then x D is theta, x squared D
+      squared is theta times theta minus one, and in general a falling product. The equation
+      becomes one with constant coefficients in z, and everything we have done applies.
+
+  - section: cauchy-euler
+    focus: '| repeated $m$ | $(c_1 + c_2\ln x)x^{m}$ |'
+    say: >
+      Equivalently, try y equals x to the m, which gives the indicial equation m times m minus
+      one, plus a m, plus b equals zero. Distinct real roots give powers of x. A repeated root
+      gives c one plus c two log x, times x to the m. Complex roots alpha plus or minus i beta
+      give x to the alpha times cos and sin of beta log x. Every exponential in z has become a
+      power of x.
+
+  - section: cauchy-euler
+    question: q0012
+    say: >
+      Your turn. For positive x, choose the general solution of x squared y double dash minus two
+      x y dash plus two y equals zero.
+    answer: >
+      The indicial equation is m times m minus one, minus two m, plus two, which is m squared
+      minus three m plus two. The roots are one and two, so y is c one x plus c two x squared.
+      The cos of log x option comes from writing x squared D squared as theta squared, which
+      gives complex roots one plus or minus i.
+
+  - section: cauchy-euler
+    focus: '$$(1 - \theta)^{-2}z = (1 + 2\theta + \cdots)z = z + 2.$$'
+    say: >
+      With a right side, transform it too. For x squared y double dash minus x y dash plus y
+      equals log x, the operator becomes theta minus one squared and log x becomes z. Expanding,
+      the particular integral is z plus two, that is log x plus two.
+
+  - section: cauchy-euler
+    focus: '$x^2D^2 \ne \theta^2$.'
+    say: >
+      Legendre's equation is the same idea with a plus b x in place of x: put a plus b x equal
+      to e to the z, and remember the factor b to the k. Now the caution: x squared D squared is
+      not theta squared. Forgetting the minus theta changes the indicial equation, as we just
+      saw.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Count constants: as many as the order. Repeated roots need extra powers of x.
+      Resonance means an extra factor x in the particular integral; for sine it carries a minus
+      sign, for cosine a plus. The exponential shift is D plus a. A nonzero Wronskian anywhere
+      proves independence; a zero Wronskian proves dependence only for solutions of one
+      equation. In variation of parameters, normalise first. In Cauchy Euler, x squared D
+      squared is theta times theta minus one. Now try the practice questions.

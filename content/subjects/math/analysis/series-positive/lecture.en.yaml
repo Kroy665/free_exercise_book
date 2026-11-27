@@ -1,0 +1,310 @@
+# Spoken lecture for "Series of Positive Terms".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: convergence
+    say: >
+      Welcome. Today we revise series of positive terms. Almost every exam paper has two or
+      three questions here, and they reward knowing which test to reach for. By the end you
+      should be able to rule out a series in seconds, use condensation and the p-series as
+      your yardstick, apply comparison, ratio, root, Raabe and Gauss correctly, handle the
+      end point of a parameter range, and avoid the classic traps. Let's begin with what
+      convergence means.
+
+  - section: convergence
+    focus: '- **Positive terms.** If $a_n \ge 0$, then $(s_n)$ is increasing, so $\sum a_n$ converges **iff $(s_n)$ is bounded above**. Every test in this topic comes from this fact.'
+    say: >
+      A series converges when its sequence of partial sums converges. Now look at the
+      highlighted fact, which drives the whole chapter. If the terms are non negative, the
+      partial sums increase, so the series converges exactly when the partial sums are
+      bounded above. A positive series cannot oscillate: it either converges or diverges to
+      plus infinity. Every test today is a clever way to bound the partial sums.
+
+  - section: convergence
+    focus: '- **Necessary condition.** If $\sum a_n$ converges, then $a_n = s_n - s_{n-1} \to 0$. The converse is **false**.'
+    say: >
+      The first necessary condition: if a series converges, its terms tend to zero, because a
+      n is s n minus s n minus one, and both tend to the same limit. The converse is false.
+      The harmonic series, the sum of one over n, diverges even though one over n tends to
+      zero. Cauchy's criterion shows why: the block from n plus one to two n always adds up
+      to at least one half, so the partial sums never settle.
+
+  - section: convergence
+    focus: '"$a_n \to 0$" only **removes** a series from the list of obvious failures; it never proves convergence.'
+    say: >
+      So use the condition the other way round. Terms tending to zero never proves
+      convergence; terms not tending to zero proves divergence at once. The exam tip adds a
+      subtler point: even s two n minus s n tending to zero is only necessary. Cauchy's
+      criterion needs every block from n to m, for all m beyond n, to be small, not only the
+      block up to two n.
+
+  - section: convergence
+    question: q0010
+    say: >
+      Try this one. Does the sum of one plus one over n, to the power minus n, converge?
+    answer: >
+      It diverges, because its terms tend to one over e, which is not zero. The root and
+      ratio limits both equal one here, so those tests decide nothing. And decreasing terms
+      are not enough; these decrease to one over e, not to zero.
+
+  - section: convergence
+    focus: '**Telescoping.** If $a_n = b_n - b_{n+1}$, then $s_n = b_1 - b_{n+1}$.'
+    say: >
+      Two simple tools. Changing finitely many terms never changes convergence, only the sum.
+      And when a term is a difference b n minus b n plus one, the partial sums telescope to b
+      one minus b n plus one. So the sum of one over n times n plus one equals one. The graph
+      contrasts the two key cases: the harmonic sums grow like log n, while the sums of one
+      over n squared level off at pi squared over six.
+
+  - section: p-series
+    focus: 'Mind the starting index: $\sum_{n=1}^{\infty} r^n = \dfrac{r}{1 - r}$.'
+    say: >
+      The geometric series is the first yardstick. Starting from n equals zero, the sum of r
+      to the n is one over one minus r, for r between zero and one, and it diverges for r at
+      least one. Mind the starting index: from n equals one, the sum is r over one minus r.
+      So the sum of two thirds to the n, from one, is two, not three.
+
+  - section: p-series
+    focus: '**Cauchy''s condensation test.** Let $(a_n)$ be **positive and decreasing**. Then'
+    say: >
+      Now Cauchy's condensation test. If the terms are positive and decreasing, the series
+      converges exactly when the condensed series, the sum of two to the k times a sub two to
+      the k, converges. The proof groups terms in blocks from two to the k up to two to the k
+      plus one. Each block has two to the k terms, each trapped between the values at the
+      two ends.
+
+  - section: p-series
+    focus: '$$\sum_{n=1}^{\infty} \frac{1}{n^p} \text{ converges} \iff p > 1.$$'
+    say: >
+      Apply it to one over n to the p. The condensed series is geometric with ratio two to
+      the power one minus p. So the p-series converges exactly when p is greater than one.
+      The boundary case p equals one is the harmonic series, which diverges. So any option
+      saying converges if and only if p is at least one is always wrong.
+
+  - section: p-series
+    focus: '| $\sum \dfrac{1}{n(\ln n)^p}$ | converges $\iff p > 1$ |'
+    say: >
+      Condensation also handles the logarithmic scale. Condensing one over n times log n to
+      the p gives a constant times one over k to the p. So the sum of one over n log n
+      diverges, while one over n times log n squared converges. And one over log n to any
+      power diverges, since a power of log n is eventually smaller than n. The base of the
+      logarithm never matters, but the terms must be decreasing.
+
+  - section: p-series
+    question: q0008
+    say: >
+      Let's check. What is the verdict on the sum of one over n log n, and why?
+    answer: >
+      It diverges, by Cauchy's condensation test: the condensed terms are one over log two,
+      times one over k, a multiple of the harmonic series. The tempting option says it
+      converges because n a n tends to zero; that is only a necessary condition. And
+      comparison with one over n squared fails, because these terms are much larger.
+
+  - section: comparison
+    focus: '- **Limit comparison.** If $\dfrac{a_n}{b_n} \to l$ with $0 < l < \infty$, then $\sum a_n$ and $\sum b_n$ converge or diverge together.'
+    say: >
+      Now comparison tests. Direct comparison: if a n is at most a constant times b n
+      eventually, convergence of the larger series gives convergence of the smaller, and
+      divergence of the smaller gives divergence of the larger. Limit comparison is easier
+      in practice: if a n over b n tends to a finite, non zero limit, the two series behave
+      alike. If the ratio tends to zero or infinity, only one direction survives.
+
+  - section: comparison
+    focus: '**Method.** Find the dominant power: $a_n \sim \dfrac{c}{n^p}$ means $n^p a_n \to c \ne 0$. Then compare with $\sum \frac{1}{n^p}$.'
+    say: >
+      The method is always the same: find the dominant power. If n to the p times a n tends
+      to a non zero constant, compare with one over n to the p. For two n plus three over n
+      cubed plus one, the power is two, so it converges. For one over the square root of n
+      times n plus one, the power is one, so it diverges. For root of n plus one minus root
+      n, over n, rationalise first: the power is three halves, so it converges.
+
+  - section: comparison
+    question: q0009
+    say: >
+      Now you choose. Which of these four series converges?
+    answer: >
+      The last one, root of n plus one minus root n, all over n. Rationalising gives one over
+      n times root n plus one plus root n, which behaves like one half over n to the three
+      halves, so it converges. The difference of roots alone telescopes to infinity, one over
+      root of n times n plus one behaves like one over n, and sine of one over n behaves like
+      one over n. All three diverge.
+
+  - section: comparison
+    focus: 'Do not compare with a series whose exponent drifts towards 1.'
+    say: >
+      Now the classic trap. Consider one over n to the power one plus one over n. Every
+      exponent exceeds one, so it is tempting to say it converges. But the exponent drifts
+      down towards one. Divide by one over n and the ratio, n to the minus one over n, tends
+      to one, so the series behaves like the harmonic series and diverges. The p-test needs a
+      fixed p greater than one.
+
+  - section: comparison
+    focus: 'Standard asymptotics: $\sin x \sim x$, $\tan x \sim x$, $\ln(1 + x) \sim x$, $e^x - 1 \sim x$, and $1 - \cos x \sim \frac{x^2}{2}$ as $x \to 0$.'
+    say: >
+      Keep these asymptotics ready: sine x, tan x, log of one plus x, and e to the x minus
+      one all behave like x near zero, while one minus cos x behaves like x squared over two.
+      Put x equal to one over n and read off the power. So sine of one over n diverges, but
+      sine squared of one over n and one minus cos of one over n converge.
+
+  - section: ratio-root
+    focus: '- **D''Alembert''s ratio test.** Let $\dfrac{a_{n+1}}{a_n} \to l$. If $l < 1$, $\sum a_n$ converges. If $l > 1$ (including $l = \infty$), it diverges. If $l = 1$, the test is **inconclusive**.'
+    say: >
+      Now the ratio and root tests. D'Alembert: if a n plus one over a n tends to l, the
+      series converges for l less than one and diverges for l greater than one. Cauchy's root
+      test says the same with the n-th root of a n, or more generally its lim sup. When l
+      equals one, both tests are silent. Every p-series and every rational function of n
+      gives l equals one, so use comparison for those.
+
+  - section: ratio-root
+    focus: '$$\liminf\frac{a_{n+1}}{a_n} \le \liminf a_n^{1/n} \le \limsup a_n^{1/n} \le \limsup\frac{a_{n+1}}{a_n}.$$'
+    say: >
+      The root test is stronger, and the chain of inequalities on the board shows why. The
+      root limits always sit between the lim inf and lim sup of the ratios. So whenever the
+      ratio test decides, the root test agrees. But the root test can decide when the ratio
+      oscillates: for two to the power minus one to the n, minus n, the ratio jumps between
+      one eighth and two, yet the n-th root tends to one half, giving convergence.
+
+  - section: ratio-root
+    focus: '- $\displaystyle\sum \left(1 + \frac1n\right)^{-n^2}$: $a_n^{1/n} = \left(1 + \frac1n\right)^{-n} \to \frac1e < 1$. It converges.'
+    say: >
+      Choose the test by the shape of the term. For n factorial over n to the n, the ratio is
+      one over one plus one over n, to the n, which tends to one over e, so it converges. For
+      one plus one over n, to the power minus n squared, the n squared in the exponent calls
+      for the root: the n-th root is one plus one over n, to the minus n, again one over e,
+      so it converges.
+
+  - section: ratio-root
+    question: q0007
+    say: >
+      Here is a parameter question. For positive x, when does the sum of x to the n over n
+      converge?
+    answer: >
+      The ratio is n over n plus one, times x, which tends to x. So it converges for x less
+      than one and diverges for x greater than one. At x equals one the ratio test is silent,
+      and the series is the harmonic series, which diverges. So the answer is x strictly
+      between zero and one. The tempting option includes x equals one.
+
+  - section: ratio-root
+    focus: 'Many Indian texts (Mapa, Das–Mukherjee) state D''Alembert''s test with the reciprocal ratio'
+    say: >
+      A convention warning. Many Indian texts state D'Alembert's test with the reciprocal
+      ratio, a n over a n plus one. Then the series converges when that limit is greater than
+      one, and diverges when it is less than one. It is the same test. Before applying less
+      than one, check which ratio the question uses.
+
+  - section: raabe-gauss
+    focus: '- **Raabe''s test.** Let $n\left(\dfrac{a_n}{a_{n+1}} - 1\right) \to l$. If $l > 1$, $\sum a_n$ converges; if $l < 1$, it diverges; $l = 1$ is inconclusive.'
+    say: >
+      When the ratio test gives one, finer tests compare with the p-series, and all of them
+      use the reciprocal ratio. Raabe's test: take n times a n over a n plus one, minus one.
+      If its limit exceeds one, the series converges; if it is less than one, it diverges;
+      if it equals one, Raabe is silent. Think of it as reading off the p of the comparable
+      p-series.
+
+  - section: raabe-gauss
+    question: q0012
+    say: >
+      Try Raabe on the classic product: one times three times five up to two n minus one,
+      over two times four up to two n. Find the Raabe limit.
+    answer: >
+      The reciprocal ratio is two n plus two over two n plus one. Subtract one to get one over
+      two n plus one, and multiply by n: the limit is one half. Since one half is less than
+      one, the series diverges. In fact these terms behave like one over the square root of
+      pi n.
+
+  - section: raabe-gauss
+    focus: 'If $\lambda > 1$ it converges; if $\lambda < 1$ it diverges. If $\lambda = 1$, it converges for $\mu > 1$ and **diverges for $\mu \le 1$**.'
+    say: >
+      Gauss's test goes further. Expand the reciprocal ratio as lambda plus mu over n plus a
+      bounded term over n to a power bigger than one. If lambda exceeds one it converges; if
+      less, it diverges. If lambda equals one, it converges for mu greater than one, and
+      diverges for mu at most one. So Gauss settles Raabe's doubtful case: divergence. For the
+      p-th power of the same product, mu is p over two, so it converges exactly when p
+      exceeds two.
+
+  - section: raabe-gauss
+    focus: 'It converges for $x < \frac1e$ and diverges for $x > \frac1e$.'
+    say: >
+      The logarithmic test, n times log of the reciprocal ratio, is handy when e appears. For
+      n to the n x to the n over n factorial, the reciprocal ratio tends to one over e x, so
+      the series converges for x below one over e and diverges above it. At x equals one over
+      e, the logarithmic limit is one half, less than one, so it diverges. The pattern is
+      always the same: the ratio test gives an open interval, then test the end point
+      separately.
+
+  - section: abel-pringsheim
+    focus: '**Abel–Pringsheim test.** If $(a_n)$ is **positive and decreasing** and $\sum a_n$ converges, then'
+    say: >
+      Now the Abel Pringsheim test. If the terms are positive and decreasing and the series
+      converges, then n a n tends to zero. The proof: the block from n plus one to two n
+      tends to zero by Cauchy's criterion, and since the terms decrease, that block is at
+      least n times a two n. Use it in contrapositive form: one over a n plus b diverges,
+      because n a n tends to one over a.
+
+  - section: abel-pringsheim
+    focus: '- **Monotonicity is needed.**'
+    say: >
+      Three cautions. The converse is false: one over n log n has n a n tending to zero, yet
+      diverges. Monotonicity is needed: put one over n at perfect squares and one over n
+      squared elsewhere; the series converges, but n a n equals one at every square. And
+      nothing stronger is forced: one over n to the three halves converges, while n squared a
+      n tends to infinity.
+
+  - section: abel-pringsheim
+    question: q0017
+    say: >
+      Which of these must hold for a decreasing positive sequence with convergent sum?
+    answer: >
+      n a n tends to zero. That is exactly Abel Pringsheim. The others fail for p-series: one
+      over n to the three halves has n squared a n tending to infinity, and one over n squared
+      has ratio limit one and makes the sum of n a n the harmonic series.
+
+  - section: abel-pringsheim
+    focus: '$$\sum_{n=1}^{\infty} f(n) \quad \text{and} \quad \int_1^{\infty} f(x)\,dx$$'
+    say: >
+      The integral test: if f is positive, continuous and decreasing from one to infinity,
+      the sum of f of n and the integral of f converge or diverge together. The graph shows
+      why: the rectangles of heights one over n sit above the area under one over x. The
+      integral of one over x log x squared from two is one over log two, finite, so that
+      series converges; the integral of one over x log x is log log x, which is infinite.
+
+  - section: abel-pringsheim
+    focus: 'The integral gives a **convergence verdict**, not the sum.'
+    say: >
+      But the integral gives a verdict, not the sum. The sum of one over n squared is pi
+      squared over six, while the integral of one over x squared from one to infinity is just
+      one. Never quote the integral as the value of the series.
+
+  - section: standard-examples
+    focus: '| $\sum \frac{(n!)^2}{(2n)!}x^n$ | ratio, $l = \frac x4$ | converges $\iff 0 < x < 4$ |'
+    say: >
+      The table of standard examples is worth an hour of revision. Notice the parameter rows.
+      a to the n n factorial over n to the n converges exactly for a less than e. n factorial
+      squared over two n factorial, times x to the n, converges for x less than four. n to the
+      n x to the n over n factorial converges for x less than one over e. In every case the
+      end point is excluded.
+
+  - section: standard-examples
+    focus: 'since $(1 + \frac1n)^n < e$. So the terms increase and cannot tend to $0$: it diverges.'
+    say: >
+      Why are the end points excluded? At a equals e, the ratio is e over one plus one over
+      n, to the n. Since that bracket is always less than e, the ratio exceeds one, the terms
+      increase, and they cannot tend to zero. Similarly at x equals four, the ratio is two n
+      plus two over two n plus one, again above one. Both diverge.
+
+  - section: standard-examples
+    focus: '- **factorials or $n^n$** → ratio test;'
+    say: >
+      And the exam tip gives your decision tree. Factorials or n to the n: ratio test. An
+      n-th power, or a power n squared: root test. Rational or algebraic in n: compare with
+      one over n to the p. Logarithms: condensation or the integral test. Ratio tending to
+      one with factorials: Raabe or Gauss.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Check divergence first: if the terms do not tend to zero, stop. Terms
+      tending to zero is never enough. A ratio or root limit of one decides nothing. A ratio
+      less than one for every n is not the same as a limit less than one. Root beats ratio.
+      Check which ratio the question uses. Abel Pringsheim needs decreasing terms, and its
+      converse fails. Watch the starting index of a geometric sum. And p equals one always
+      diverges. Now try the practice questions.

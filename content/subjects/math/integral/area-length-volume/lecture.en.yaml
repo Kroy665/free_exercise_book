@@ -1,0 +1,282 @@
+# Spoken lecture for "Areas, Lengths and Volumes".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: cartesian-area
+    say: >
+      Welcome. Today we turn integrals into geometry: areas, arc lengths, volumes and surface
+      areas of solids of revolution, and finally a working knowledge of double integrals. The
+      exam asks for a small set of standard curves again and again, the cycloid, the cardioid,
+      the astroid, the ellipse. By the end you should know which formula to use, how to set the
+      limits, and the standard answers well enough to spot a wrong option on sight.
+
+  - section: cartesian-area
+    focus: 'The plain integral $\int_a^b f\,dx$ is a **signed** area.'
+    say: >
+      Start with area in Cartesian coordinates. The area between y equals f of x, the x axis,
+      and the lines x equals a and x equals b, is the integral of the modulus of f. The plain
+      integral is a signed area: parts below the axis count as negative. So where f changes
+      sign, split the interval at its zeros. Between two curves, integrate upper minus lower.
+      And strips can be horizontal too, right minus left in d y, if that needs one integral
+      instead of two.
+
+  - section: cartesian-area
+    focus: 'title: Area between $y = x$ and $y = x^2$'
+    say: >
+      The method is always the same: sketch, find the intersection points, which give the
+      limits, decide which curve is on top, then integrate. On the graph, y equals x and y
+      equals x squared meet at zero and one, and the line is on top in between. So the area is
+      the integral from zero to one of x minus x squared, which is one half minus one third,
+      one sixth.
+
+  - section: cartesian-area
+    question: q0008
+    say: >
+      Now a classic. Find the area between the parabolas y squared equals four a x and x
+      squared equals four a y.
+    answer: >
+      The answer is sixteen a squared over three. The curves meet at the origin and at four a,
+      four a, and the upper curve is two root of a x. The area under it is thirty two a squared
+      over three, and the area under the lower parabola is sixteen a squared over three.
+      Subtract. The option thirty two a squared over three forgets the lower curve.
+
+  - section: cartesian-area
+    focus: '"Area" is never negative.'
+    say: >
+      Two quick reminders from the boxes. Area is never negative. The integral of sine x from
+      zero to two pi is zero, but the area between the sine curve and the axis over that range
+      is four. And use symmetry first: for a curve symmetric about both axes, find the first
+      quadrant area and multiply by four. For the loop of a y squared equals x squared times a
+      minus x, symmetry about the x axis halves the work, and the loop area is eight a squared
+      over fifteen.
+
+  - section: polar-area
+    focus: '$$A = \frac12\int_\alpha^\beta (x\dot y - y\dot x)\,dt = \int_\alpha^\beta x\,\dot y\,dt = -\int_\alpha^\beta y\,\dot x\,dt.$$'
+    say: >
+      For a closed parametric curve traced once anticlockwise, the area is half the integral of
+      x y dot minus y x dot, d t. Equivalently, it is the integral of x y dot, or minus the
+      integral of y x dot. For an arch above the x axis, simply integrate y d x, written as y
+      times x dot d t, with the limits in the order that makes x increase. That is how you get
+      the ellipse, pi a b, and the cycloid arch, three pi a squared.
+
+  - section: polar-area
+    focus: '$$A = \frac12\int_\alpha^\beta r^2\,d\theta.$$'
+    say: >
+      In polar coordinates, the area swept by the radius vector from alpha to beta is half the
+      integral of r squared d theta. The reason is that a thin sector of radius r and angle d
+      theta has area half r squared d theta, just like a thin triangle. For the cardioid, a
+      times one plus cos theta, use symmetry: twice the integral from zero to pi. Expanding the
+      square gives pi plus zero plus pi by two, so the area is three pi a squared over two.
+
+  - section: polar-area
+    focus: '| Lemniscate $r^2 = a^2\cos 2\theta$ (both loops) | $a^2$ |'
+    say: >
+      The table of standard areas is worth learning as a set. Ellipse, pi a b. Astroid, three pi
+      a squared over eight. Cycloid arch, three pi a squared. The circle r equals two a cos
+      theta is just a circle of radius a, so pi a squared. Cardioid, three halves pi a squared.
+      One loop of a cos two theta, pi a squared over eight. One loop of a sine three theta, pi a
+      squared over twelve. And the whole lemniscate, both loops, is simply a squared.
+
+  - section: polar-area
+    question: q0009
+    say: >
+      Try one. Find the area of one loop of r equals a cos two theta.
+    answer: >
+      The answer is pi a squared over eight. The loop on the initial line runs between the
+      zeros of r, at minus pi by four and pi by four. Half of a squared times the integral of
+      cos squared two theta over that range is a squared over two times pi by four. The option
+      pi a squared over two is the total of all four loops.
+
+  - section: polar-area
+    focus: '**Rose petals.** $r = a\cos n\theta$ has $n$ loops if $n$ is odd and $2n$ loops if $n$ is even.'
+    say: >
+      Now a trap with rose curves. a cos n theta has n loops when n is odd, and two n loops when
+      n is even. For even n, integrating half r squared over zero to two pi gives the correct
+      total. But for odd n, the curve traces every loop twice as theta goes round, so the
+      integral double counts. The total area of a sine three theta is pi a squared over four,
+      not pi a squared over two.
+
+  - section: arc-length
+    focus: 'All three come from $ds^2 = dx^2 + dy^2$ (in polar form, $ds^2 = dr^2 + r^2\,d\theta^2$).'
+    say: >
+      Next, rectification, the length of an arc. Everything comes from one line: d s squared
+      equals d x squared plus d y squared, which is Pythagoras for a tiny piece of curve. For y
+      as a function of x, that gives the square root of one plus y dash squared, d x. For a
+      parametric curve, the root of x dot squared plus y dot squared, d t. In polar form, d s
+      squared is d r squared plus r squared d theta squared, so the integrand is the root of r
+      squared plus r dash squared.
+
+  - section: arc-length
+    focus: '$$s = \int_0^{2\pi} 2a\sin\frac t2\,dt = 8a.$$'
+    say: >
+      The standard results all depend on one half angle trick. For the cycloid, x dot squared
+      plus y dot squared is two a squared times one minus cos t, which is four a squared sine
+      squared t by two. The root is two a sine t by two, which is non negative on the arch, and
+      the arch length is eight a. For the cardioid, r squared plus r dash squared is four a
+      squared cos squared theta by two, and the whole length is also eight a.
+
+  - section: arc-length
+    question: q0012
+    say: >
+      Check yourself. What is the length of one arch of the cycloid?
+    answer: >
+      Eight a. The integrand is two a sine t by two, and integrating from zero to two pi gives
+      minus four a cos t by two, evaluated between the limits, which is eight a. Four a is half
+      an arch, and two pi a is the length of the base, not of the curve.
+
+  - section: arc-length
+    focus: 'so the arc from the vertex $(0, c)$ to the point with abscissa $x$ is'
+    say: >
+      Two more to remember. For the astroid, d s is three a times the modulus of sine t cos t,
+      and the whole perimeter is six a. And for the catenary, y equals c cosh of x over c, one
+      plus y dash squared is cosh squared, so the arc from the vertex is c sinh of x over c. It
+      follows that y squared equals c squared plus s squared, a relation often asked directly.
+
+  - section: arc-length
+    focus: 'The integrand is $\sqrt{1 + y''^2}$, **not** $1 + y''$ or $\sqrt{1 + y''}$.'
+    say: >
+      Two cautions. The integrand is the root of one plus y dash squared, not one plus y dash,
+      and not the root of one plus y dash. And treat the root as a non negative quantity. For
+      the astroid, sine t cos t changes sign as t goes round, so if you integrate over the full
+      circle without the modulus, the pieces cancel to zero. Use symmetry: four times the first
+      quadrant. The exam tip sums it up: cardioid and cycloid arch are both eight a, the
+      astroid is six a.
+
+  - section: volume-revolution
+    focus: '$$V = \pi\int_a^b y^2\,dx.$$'
+    say: >
+      Now volumes of revolution. Revolve the region under y equals f of x about the x axis. Each
+      thin slice is a disc of radius y and thickness d x, with volume pi y squared d x. So the
+      volume is pi times the integral of y squared. About the y axis, use x squared d y
+      instead. Between two curves you get washers: pi times f squared minus g squared. And the
+      shell method, about the y axis, gives two pi times the integral of x times f of x.
+
+  - section: volume-revolution
+    focus: '$$V = \frac{2\pi}{3}\int_\alpha^\beta r^3\sin\theta\,d\theta.$$'
+    say: >
+      For a polar region revolved about the initial line, the formula on the board is two pi
+      over three times the integral of r cubed sine theta d theta. That is how the cardioid
+      gives eight thirds pi a cubed. The other standard volumes are the sphere, four thirds pi a
+      cubed; the cone, one third pi r squared h; and one cycloid arch about its base, five pi
+      squared a cubed.
+
+  - section: volume-revolution
+    focus: 'The axis of revolution is $2a$; the square goes on the **other** semi-axis.'
+    say: >
+      The ellipsoid deserves care. Revolve the ellipse about the x axis: y squared is b squared
+      times one minus x squared over a squared, and integrating from minus a to a gives four
+      thirds pi a b squared. The axis of revolution has length two a, and the square goes on the
+      other semi axis, b. About the y axis, it becomes four thirds pi a squared b. Swapping
+      these is a favourite wrong option.
+
+  - section: volume-revolution
+    question: q0016
+    say: >
+      Try the washer method. Revolve the region between y equals x and y equals x squared about
+      the x axis.
+    answer: >
+      The volume is two pi over fifteen. The outer radius is x and the inner radius is x
+      squared, so the volume is pi times the integral from zero to one of x squared minus x to
+      the four, which is pi times one third minus one fifth. The option pi over thirty squares
+      the difference instead of taking the difference of squares.
+
+  - section: surface-revolution
+    focus: '$$S = 2\pi\int y\,ds,$$'
+    say: >
+      Surface area of revolution: revolve an arc about the x axis, and each piece of length d s
+      sweeps a thin band of circumference two pi y. So the surface area is two pi times the
+      integral of y d s, with d s taken from the arc length table. For a polar arc about the
+      initial line, y is r sine theta, and d s is the root of r squared plus r dash squared,
+      d theta.
+
+  - section: surface-revolution
+    focus: 'A **zone** of a sphere has area $2\pi a h$, depending only on its height $h$.'
+    say: >
+      The sphere gives a beautiful result. For y equals the root of a squared minus x squared, y
+      times the root of one plus y dash squared is exactly a. So the surface between two planes
+      is two pi a times the distance between them. A zone of a sphere has area two pi a h,
+      depending only on its height. With h equal to two a, the whole sphere is four pi a
+      squared.
+
+  - section: surface-revolution
+    question: q0017
+    say: >
+      Use that. The arc of the circle x squared plus y squared equals 25, from x equals zero to
+      three, is revolved about the x axis. Find the surface area.
+    answer: >
+      It is 30 pi. This is a spherical zone with radius five and height three, so two pi times
+      five times three. Fifty pi would be the whole hemisphere, with height five, and fifteen pi
+      forgets the two in two pi times the integral of y d s.
+
+  - section: surface-revolution
+    focus: '(Only $0 \le \theta \le \pi$: the lower half generates the same surface.)'
+    say: >
+      For the cardioid about its axis, write r as two a cos squared theta by two. Then d s is
+      two a cos theta by two, and y works out to a power of cos theta by two times sine theta
+      by two, so the substitution u equals cos theta by two finishes it. The answer is thirty
+      two pi a squared over five. Notice the range: only zero to pi, because the lower half of
+      the curve generates the same surface. Integrating over the full range would double it.
+
+  - section: surface-revolution
+    focus: '1. **Volume** of the solid of revolution $=$ (area of the region) $\times$ (distance travelled by its centroid) $= A\cdot 2\pi\bar y$.'
+    say: >
+      Pappus's theorems give volumes and surfaces without integration. The volume of a solid of
+      revolution is the area of the region times the distance travelled by its centroid. The
+      surface area is the length of the arc times the distance travelled by the arc's centroid.
+      For a torus, a circle of radius a whose centre is at distance b from the axis, the volume
+      is pi a squared times two pi b, and the surface is two pi a times two pi b.
+
+  - section: surface-revolution
+    focus: 'Pappus in reverse finds centroids'
+    say: >
+      Run Pappus backwards to find centroids. A semicircular disc of radius a, revolved about
+      its diameter, gives a sphere. So half pi a squared, times two pi times y bar, equals four
+      thirds pi a cubed. Solving, the centroid is at four a over three pi from the diameter.
+      This is quicker than any integral.
+
+  - section: double-integrals
+    focus: '**Reversing the order.** Sketch the region from the given limits, then describe it the other way.'
+    say: >
+      Finally, double integrals. For a continuous function on a closed bounded region, the
+      double integral is computed as an iterated integral, inner first. When the inner integral
+      is impossible, reverse the order. Sketch the region from the given limits, then describe
+      it the other way. Never just swap the limits. On a rectangle with a product integrand,
+      the double integral simply splits into a product of two single integrals.
+
+  - section: double-integrals
+    question: q0018
+    say: >
+      Try the standard example. Evaluate the integral from zero to one, of the integral from x
+      to one of e to the y squared, d y d x.
+    answer: >
+      The answer is e minus one, over two. The inner integral is not elementary, so reverse the
+      order. The region is the triangle with y from zero to one and x from zero to y. The inner
+      integral in x gives y times e to the y squared, which integrates to half of e minus one.
+      The option e minus one forgets the half.
+
+  - section: double-integrals
+    focus: '$$dx\,dy = r\,dr\,d\theta.$$'
+    say: >
+      For circular regions, change to polar coordinates. The Jacobian of x and y with respect to
+      r and theta is r, so d x d y becomes r d r d theta. Over the disc of radius a, e to the
+      minus x squared plus y squared integrates to pi times one minus e to the minus a squared.
+      Letting a go to infinity gives the Gaussian integral: the square of the integral of e to
+      the minus x squared over the whole line is pi. Forgetting the factor r is the classic
+      slip.
+
+  - section: double-integrals
+    focus: 'The order can be swapped freely only under hypotheses'
+    say: >
+      And one theoretical caution. The order of integration can be swapped freely when the
+      function is continuous on a closed bounded region, or more generally when the integral of
+      its modulus is finite. Without such hypotheses it can fail. The example on the board, x
+      minus y over x plus y cubed on the unit square, gives a half in one order and minus a half
+      in the other.
+
+  - section: exam-tips
+    say: >
+      Let's recap with the formula sheet. Area: y d x, or half r squared d theta. Length: the
+      root of one plus y dash squared. Volume: pi y squared d x. Surface: two pi y d s. Do a
+      dimension check: areas carry a squared, lengths a, volumes a cubed. Remember the eight a
+      family and the astroid's six a. Watch odd rose curves, washers, and the ellipsoid's b
+      squared. Keep the Jacobian r. Now try the practice questions.

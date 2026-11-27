@@ -1,0 +1,288 @@
+# Spoken lecture for "Pair of Straight Lines".
+# Each step: the notes section it teaches, the exact notes text to highlight (focus),
+# and what the teacher says (plain spoken English, no symbols). See docs/CONTENT_STRUCTURE.md §6.3.
+segments:
+  - section: homogeneous
+    say: >
+      Welcome. Today we revise the pair of straight lines. By the end you should be able to read
+      the angle, the bisectors and the slopes straight off a second degree equation, test
+      whether a general equation is a pair of lines, find where the lines meet or how far apart
+      they are, and use homogenisation to get the lines joining the origin to the points where a
+      line cuts a conic. Every formula today hangs on reading h correctly.
+
+  - section: homogeneous
+    focus: 'It always represents a pair of lines through the origin, which may be real or imaginary.'
+    say: >
+      Start with a x squared plus two h x y plus b y squared equals zero. Every term has degree
+      two, so the equation is homogeneous, and it always represents two lines through the
+      origin. Why? Divide by x squared and put m equal to y over x. You get b m squared plus two
+      h m plus a equals zero, a quadratic in the slope. Its two roots are the two slopes, and the
+      expression factors as b times y minus m one x, times y minus m two x.
+
+  - section: homogeneous
+    focus: '| $h^2 > ab$ | two real, distinct lines through $O$ |'
+    say: >
+      The discriminant of that quadratic decides everything. If h squared is greater than a b,
+      the lines are real and distinct. If h squared equals a b, the expression is a perfect
+      square, and the lines coincide. If h squared is less than a b, the lines are imaginary, and
+      the only real point on the locus is the origin.
+
+  - section: homogeneous
+    focus: '$$m_1 + m_2 = -\frac{2h}{b}, \qquad m_1 m_2 = \frac{a}{b}.$$'
+    say: >
+      From the same quadratic, the sum of the slopes is minus two h over b, and the product is a
+      over b. Notice: two h over b, because the x y coefficient is two h. For two x squared plus
+      five x y plus three y squared, the slopes are minus two thirds and minus one, with sum
+      minus five thirds and product two thirds.
+
+  - section: homogeneous
+    focus: 'is $bx^2 - 2hxy + ay^2 = 0$. (Swap $a$ and $b$ and change the sign of $h$.)'
+    say: >
+      Two related results. The pair through the origin perpendicular to the given pair is b x
+      squared minus two h x y plus a y squared equals zero: swap a and b, and change the sign of
+      h. The reason is that a slope m becomes minus one over m, which turns the slope quadratic
+      into exactly this form. The notes also give the product of perpendiculars from a point,
+      and the area of the triangle cut off by a third line.
+
+  - section: homogeneous
+    question: q0014
+    say: >
+      Try this. Find the pair of lines through the origin perpendicular to two x squared minus
+      five x y plus three y squared equals zero.
+    answer: >
+      Swap a and b, and change the sign of the x y term. That gives three x squared plus five x y
+      plus two y squared equals zero. The tempting option three x squared minus five x y plus two
+      y squared forgets to change the sign. Check: the original slopes are two thirds and one,
+      the new ones minus three halves and minus one.
+
+  - section: homogeneous
+    focus: 'To test whether a given line $y = mx$ belongs to the pair, substitute it'
+    say: >
+      The exam tip. To test whether a given line through the origin belongs to the pair, just
+      substitute its slope: a plus two h m plus b m squared must vanish. For three x plus four y
+      to be one of the lines of six x squared minus x y plus four c y squared, put m equal to
+      minus three quarters, and you get c equals minus three. Take care with the sign of the
+      slope.
+
+  - section: angle
+    focus: '$$\tan\theta = \frac{2\sqrt{h^2 - ab}}{a + b}.$$'
+    say: >
+      Now the angle between the lines. Tan theta is two root of h squared minus a b, over a plus
+      b. The derivation is short: tan theta is m one minus m two over one plus m one m two. The
+      square of m one minus m two is the sum squared minus four times the product, which is four
+      times h squared minus a b over b squared, and one plus the product is a plus b over b.
+      For the acute angle, take the modulus of a plus b.
+
+  - section: angle
+    focus: '**Perpendicular** $\iff a + b = 0$'
+    say: >
+      Two special cases come straight out of this formula. The lines are perpendicular exactly
+      when a plus b is zero, that is, when the coefficients of x squared and y squared add to
+      zero. They coincide exactly when h squared equals a b. Notice also that when a plus b is
+      zero, h squared minus a b becomes h squared plus a squared, which is never negative, so
+      perpendicular pairs are automatically real.
+
+  - section: angle
+    focus: 'the $xy$ coefficient is $2h$, **not** $h$.'
+    say: >
+      Now the most common slip in the whole chapter. In a x squared plus two h x y plus b y
+      squared, the x y coefficient is two h, not h. For x squared minus four x y plus y squared,
+      h is minus two. If you take h as minus four, every formula goes wrong at once. Halve the x
+      y coefficient before you do anything else.
+
+  - section: angle
+    question: q0002
+    say: >
+      Let's apply that. Find the acute angle between the lines x squared minus four x y plus y
+      squared equals zero.
+    answer: >
+      a and b are both one, and h is minus two. So tan theta is two root of four minus one, over
+      two, which is root three, and the angle is pi by three. The option tan inverse root fifteen
+      comes from taking h as minus four, and pi by six inverts the tangent.
+
+  - section: angle
+    focus: 'The first-degree terms only shift the lines parallel to themselves.'
+    say: >
+      An important remark. The same formula gives the angle between the lines of a general pair,
+      with first degree terms and a constant. Those terms only shift the lines parallel to
+      themselves, so the angle depends only on a, h and b. For a general pair, ignore g, f and c
+      when you want the angle.
+
+  - section: bisectors
+    focus: '\text{that is,}\qquad h(x^2 - y^2) = (a - b)xy'
+    say: >
+      Next, the angle bisectors. For the pair through the origin, they are given by h times x
+      squared minus y squared, equals a minus b times x y. The idea behind it: a bisector makes
+      an angle that is the average of the two line angles. So tan of twice the bisector angle is
+      tan of the sum of the line angles, which is the sum of slopes over one minus the product.
+      That works out to two h over a minus b, and tan of twice the angle is two x y over x
+      squared minus y squared.
+
+  - section: bisectors
+    focus: 'So the **two bisectors are always perpendicular**.'
+    say: >
+      Look at the bisector equation as a pair: its x squared coefficient is h and its y squared
+      coefficient is minus h. They add to zero, so the two bisectors are always perpendicular,
+      as they must be. If h is zero, the bisectors are the axes. If a equals b, the bisectors are
+      y equals plus or minus x.
+
+  - section: bisectors
+    focus: 'Test with $a = b$: the bisectors must be $y = \pm x$.'
+    say: >
+      The caution here is subtle. In the bisector equation, a minus b sits next to x y, and h
+      sits next to x squared minus y squared. If you swap them, the result is still a
+      perpendicular pair, so the coefficient sum check will not catch the error. Test instead
+      with a equal to b: the bisectors must come out as y equals plus or minus x.
+
+  - section: bisectors
+    question: q0006
+    say: >
+      Try it. Find the bisectors of the angles between the lines two x squared plus six x y plus
+      y squared equals zero.
+    answer: >
+      Here h is three and a minus b is one. So three times x squared minus y squared equals x y,
+      that is three x squared minus x y minus three y squared equals zero. The tempting option x
+      squared minus three x y minus y squared swaps h and a minus b; it is still perpendicular,
+      which is why it fools people.
+
+  - section: bisectors
+    focus: '**Bisectors of a general pair** meeting at $(\alpha, \beta)$'
+    say: >
+      For a general pair meeting at the point alpha, beta, shift the origin there. The bisectors
+      are h times x minus alpha squared minus y minus beta squared, equals a minus b times x
+      minus alpha times y minus beta. The same a, h and b, measured from the new origin.
+
+  - section: general-condition
+    focus: '= abc + 2fgh - af^2 - bg^2 - ch^2 = 0.$$'
+    say: >
+      Now the general second degree equation, with linear terms two g x and two f y and a
+      constant c. It represents a pair of straight lines if and only if delta is zero, where
+      delta is the three by three determinant with rows a h g, h b f, g f c. Expanded, delta is a
+      b c plus two f g h minus a f squared minus b g squared minus c h squared. Remember: f goes
+      with a and g goes with b.
+
+  - section: general-condition
+    focus: 'Its own discriminant vanishing is $\Delta = 0$.'
+    say: >
+      Why does this work? If b is nonzero, solve the equation for y as a quadratic. The two
+      values of y are linear in x exactly when the discriminant, which is itself a quadratic in
+      x, is a perfect square. That happens when its own discriminant vanishes, and that
+      condition simplifies to delta equal to zero.
+
+  - section: general-condition
+    focus: 'For **real, intersecting** lines we also need $h^2 > ab$.'
+    say: >
+      But delta zero only says the equation splits into two linear factors. For real
+      intersecting lines you also need h squared greater than a b. If h squared equals a b, the
+      lines are parallel or coincident, and with a nonzero they are real exactly when g squared
+      is at least a c.
+
+  - section: general-condition
+    question: q0007
+    say: >
+      Here is the standard question. For which lambda does lambda x squared minus ten x y plus
+      twelve y squared plus five x minus sixteen y minus three equal zero represent a pair of
+      lines?
+    answer: >
+      Read off a as lambda, h as minus five, b as twelve, g as five halves, f as minus eight, and
+      c as minus three. Delta works out to two hundred minus one hundred lambda, so lambda is
+      two. Halving the linear coefficients is as important as halving the x y coefficient.
+
+  - section: general-condition
+    focus: '$\Delta = 0$ alone does not guarantee **real** lines.'
+    say: >
+      To factorise a pair, factor the second degree part first, then match constants. For x
+      squared minus five x y plus four y squared plus x plus two y minus two, the quadratic part
+      is x minus y times x minus four y, and matching gives x minus y minus one, times x minus
+      four y plus two. The caution: delta zero does not guarantee real lines, since x squared
+      plus y squared equals zero is only the origin. And h squared equals a b alone does not
+      give parallel lines: y squared equals four x is a parabola.
+
+  - section: intersection
+    focus: '$$a\alpha + h\beta + g = 0, \qquad h\alpha + b\beta + f = 0,$$'
+    say: >
+      Where do the lines meet? At the point where both partial derivatives of S vanish: a alpha
+      plus h beta plus g equals zero, and h alpha plus b beta plus f equals zero. These are the
+      same equations as for the centre of a conic. Shifting the origin to that point removes the
+      linear terms and leaves a X squared plus two h X Y plus b Y squared. So the general pair is
+      parallel to the homogeneous pair, which is why the angle and bisector formulas carry over.
+
+  - section: intersection
+    focus: '$$d = 2\sqrt{\frac{g^2 - ac}{a(a + b)}}.$$'
+    say: >
+      Parallel lines arise when delta is zero and h squared equals a b. Then the distance between
+      them is two root of g squared minus a c, over a times a plus b. You may memorise that, but
+      the exam tip gives a faster method.
+
+  - section: intersection
+    focus: 'When the second-degree part is a perfect square $(px + qy)^2$, put $u = px + qy$.'
+    say: >
+      When the second degree part is a perfect square, put u equal to the expression being
+      squared. The equation becomes a quadratic in u, and its two roots give the two parallel
+      lines at once. Then the distance is the difference of the constants over the root of the
+      sum of squares of the coefficients.
+
+  - section: intersection
+    question: q0013
+    say: >
+      Use that idea here. Find the distance between the parallel lines nine x squared minus
+      twenty four x y plus sixteen y squared minus twelve x plus sixteen y minus twelve equals
+      zero.
+    answer: >
+      The quadratic part is three x minus four y, squared. With u equal to three x minus four y,
+      the equation is u squared minus four u minus twelve, so u is six or minus two. The lines
+      are three x minus four y equals six and equals minus two, and the distance is eight over
+      five. The formula gives the same value.
+
+  - section: homogenisation
+    focus: 'This step is called **homogenisation**.'
+    say: >
+      The last idea is homogenisation. A line l x plus m y equals n, with n nonzero, cuts a conic
+      at P and Q. Write the line as l x plus m y over n equals one, and multiply each lower
+      degree term of the conic by that ratio until every term has degree two. The result is
+      homogeneous, so it is a pair of lines through the origin, and it is satisfied at P and Q.
+      So it is the joint equation of O P and O Q.
+
+  - section: homogenisation
+    focus: 'A common slip is to leave the constant $c$ multiplied only once.'
+    say: >
+      Look at the caution. The degree two terms stay as they are. The linear terms are
+      multiplied by the ratio once. The constant is multiplied by it twice, that is, by its
+      square. For the circle x squared plus y squared equals four and the line x plus y equals
+      one, you get x squared plus y squared equals four times x plus y squared, that is three x
+      squared plus eight x y plus three y squared equals zero.
+
+  - section: homogenisation
+    focus: 'exactly when the $x^2$ and $y^2$ coefficients of the homogenised equation add to $0$.'
+    say: >
+      Now combine this with the perpendicularity test. Angle P O Q is a right angle exactly when
+      the x squared and y squared coefficients of the homogenised equation add to zero. For the
+      circle of radius r and the chord y equals m x plus c, that gives two c squared equals r
+      squared times one plus m squared. For the parabola y squared equals four a x and the chord
+      x equals k, it gives k equal to four a.
+
+  - section: homogenisation
+    question: q0011
+    say: >
+      Try this. The line y equals two x plus c meets the circle x squared plus y squared equals
+      ten at P and Q, and angle P O Q is a right angle. Find c squared.
+    answer: >
+      Homogenising gives c squared times x squared plus y squared equals ten times y minus two x,
+      squared. The x squared and y squared coefficients must add to zero: two c squared minus ten
+      times five is zero, so c squared is twenty five. The tempting fifty forgets the factor two.
+
+  - section: homogenisation
+    focus: '**Coincident case.**'
+    say: >
+      One more observation. O P and O Q coincide exactly when P equals Q, that is, when the line
+      touches the conic. For the circle this is the tangency condition n squared equals r
+      squared times l squared plus m squared. So homogenisation also gives tangency conditions.
+
+  - section: exam-tips
+    say: >
+      Let's recap. Halve the x y coefficient to get h. Perpendicular means a plus b is zero;
+      coincident means h squared equals a b; real and distinct means h squared exceeds a b. The
+      angle formula ignores the linear terms. Bisectors: h times x squared minus y squared equals
+      a minus b times x y, and test with a equal to b. A pair of lines needs delta zero, with f
+      paired with a and g with b. For homogenisation, the constant is multiplied twice. Now try
+      the practice questions.
