@@ -32,11 +32,13 @@ made (finished clips are skipped). Download that Drive folder for step 2.
 
 ```sh
 # Download the notebook's output (Output → Download), then:
-python3 tools/lecture-audio/import.py ~/Downloads/output.zip
+python3 tools/lecture-audio/import.py ~/Downloads/output.zip --tempo 0.8   # speed: set here
 tools/publish-packs.sh        # packs and signs audio/ along with the content packs
 ```
 
-`import.py` keeps only clips whose text is still in the lectures and reports what is missing.
+`import.py` keeps only clips whose text is still in the lectures, applies the speed
+(time-stretch, same pitch) and reports what is missing. The notebook's clips are at Chatterbox's
+own speed (96 kbit/s); keep them, so the speed can be changed later without a GPU.
 The clips live in `dist/lecture-audio/clips/` (not in git); keep a copy of the Kaggle output.
 
 ## How clips are matched

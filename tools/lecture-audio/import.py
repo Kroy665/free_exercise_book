@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Bring clips made on Kaggle (or another machine) into dist/lecture-audio/clips.
 
-  python3 tools/lecture-audio/import.py ~/Downloads/output.zip   # or an unpacked folder
+  python3 tools/lecture-audio/import.py ~/Downloads/clips.zip [--tempo 0.8]   # or a folder
 
-Copies every <topic>/<clip-id>.mp3 whose text is still in the lecture, then reports how
-much of each lecture has audio. tools/publish-packs.sh packs whatever is there.
+Converts every <topic>/<clip-id>.mp3 whose text is still in the lecture into the copy the
+app gets (24 kHz mono MP3, 48 kbit/s), slowed or sped up by --tempo without changing pitch,
+then reports how much of each lecture has audio. Keep the downloaded clips: run again with
+another --tempo to change the speed. tools/publish-packs.sh packs whatever is in the output.
 """
+import argparse
+import subprocess
 import os
 import shutil
 import sys
@@ -20,9 +24,13 @@ DEST = os.path.join(ROOT, "dist", "lecture-audio", "clips")
 
 
 def main():
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
-    src = sys.argv[1]
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("src")
+    ap.add_argument("--tempo", type=float, default=0.8, help="speed (default 0.8: 20%% slower)")
+    a = ap.parse_args()
+    if not 0.5 <= a.tempo <= 2:
+        sys.exit("--tempo must be between 0.5 and 2")
+    src = a.src
     tmp = None
     if src.endswith(".zip"):
         tmp = tempfile.mkdtemp()
@@ -44,7 +52,14 @@ def main():
         dst = os.path.join(DEST, topic, cid + ".mp3")
         if (topic, cid) in found:
             os.makedirs(os.path.dirname(dst), exist_ok=True)
-            shutil.copyfile(found[(topic, cid)], dst)
+            part = dst + ".part.mp3"
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error", "-i", found[(topic, cid)],
+                 "-af", f"atempo={a.tempo}", "-ar", "24000", "-ac", "1",
+                 "-c:a", "libmp3lame", "-b:a", "48k", part],
+                check=True,
+            )
+            os.replace(part, dst)
             copied += 1
         if os.path.exists(dst):
             have[0] += 1
@@ -53,7 +68,7 @@ def main():
     for topic, (h, n) in per_topic.items():
         print(f"  {topic:<42} {h:>3}/{n:<3}{'' if h == n else '  incomplete'}")
     done = sum(h for h, _ in per_topic.values())
-    print(f"imported {copied} clips; {done} of {len(wanted)} lecture clips now in {DEST}")
+    print(f"imported {copied} clips at tempo {a.tempo}; {done} of {len(wanted)} lecture clips now in {DEST}")
 
 
 if __name__ == "__main__":
