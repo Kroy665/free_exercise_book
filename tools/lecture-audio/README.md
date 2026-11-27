@@ -6,7 +6,7 @@ published with the content packs. The app downloads a topic's audio when the top
 (about 4–5 MB) and plays it; steps without a clip use the built-in Kokoro voice.
 
 All 42 lectures are about 10 hours of speech (1,670 clips). Chatterbox needs a real GPU: it
-is far too slow on an 8 GB Mac, so use Kaggle's free GPUs (30 hours a week).
+is far too slow on an 8 GB Mac, so use Kaggle's free GPUs (30 hours a week; needs a verified phone number) or Google Colab's free T4.
 
 ## 1. Make the clips on Kaggle
 
@@ -20,6 +20,13 @@ is far too slow on an 8 GB Mac, so use Kaggle's free GPUs (30 hours a week).
    again. Finished clips are skipped.
 
 The notebook clones this repository, so the lecture texts it reads are those on `main`.
+
+### Or on Google Colab (no phone verification)
+
+colab.research.google.com → **File → Upload notebook** → `kaggle.ipynb`, then **Runtime →
+Change runtime type → T4 GPU**, and run all. Clips are saved to Google Drive
+(`MyDrive/lecture-audio/clips`); a free session lasts a few hours, so run again until all are
+made (finished clips are skipped). Download that Drive folder for step 2.
 
 ## 2. Import and publish
 
