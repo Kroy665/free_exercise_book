@@ -1,7 +1,12 @@
 //! feb-packer: build signed content packs from `content/` (docs/DATA_AND_PACKS.md §1).
 //!
 //!   feb-packer build <content-dir> --out <dir> [--key <file> | --dev-key <dir> | --auto-key <dir>]
+//!   feb-packer audio <content-dir> <clips-dir> --out <dir> [--voice <name>] [key flags as for build]
 //!   feb-packer keygen --secret <file> --public <file>
+//!
+//! `audio` packs the lecture clips made by tools/lecture-audio (<clips-dir>/<topic>/<id>.mp3)
+//! into `<out>/audio/`: one pack per topic plus a signed `manifest.json`. Clips whose text is
+//! no longer in the lecture are left out.
 //!
 //! Signing key, in order: `--key <file>`, env `FEB_PACK_SIGNING_KEY` (key file contents,
 //! used in CI), the maintainer key `~/.config/free-exercise-book/pack-signing.key` (only
@@ -20,7 +25,7 @@ type Res<T> = Result<T, String>;
 
 fn usage() -> ExitCode {
     eprintln!(
-        "usage:\n  feb-packer build <content-dir> --out <dir> [--key <file> | --dev-key <dir> | --auto-key <dir>]\n  feb-packer keygen --secret <file> --public <file>"
+        "usage:\n  feb-packer build <content-dir> --out <dir> [--key <file> | --dev-key <dir> | --auto-key <dir>]\n  feb-packer audio <content-dir> <clips-dir> --out <dir> [--voice <name>] [key flags]\n  feb-packer keygen --secret <file> --public <file>"
     );
     ExitCode::from(2)
 }
@@ -222,10 +227,81 @@ fn build(args: &[String]) -> Res<()> {
     Ok(())
 }
 
+fn audio(args: &[String]) -> Res<()> {
+    use feb_packs::audio::{AUDIO_DIR, AUDIO_SCHEMA, AudioEntry, AudioManifest, clip_id, write_pack};
+    let (Some(content), Some(clips)) = (args.get(1), args.get(2)) else {
+        return Err("audio needs <content-dir> <clips-dir>".into());
+    };
+    let out = PathBuf::from(flag(args, "--out").ok_or("audio needs --out <dir>")?).join(AUDIO_DIR);
+    let voice = flag(args, "--voice").unwrap_or_else(|| "Chatterbox".into());
+    let (secret, key_label) = signing_key(args)?;
+    let subjects = load_dir(Path::new(content)).map_err(|e| e.to_string())?;
+    if out.exists() {
+        std::fs::remove_dir_all(&out).map_err(|e| format!("{}: {e}", out.display()))?;
+    }
+    let mut topics = Vec::new();
+    let (mut missing, mut total) = (0usize, 0usize);
+    for s in &subjects {
+        for u in &s.units {
+            for t in &u.topics {
+                let id = &t.topic.id;
+                let mut wanted = std::collections::BTreeSet::new();
+                for (_, lec) in &t.lectures {
+                    for seg in &lec.segments {
+                        wanted.insert(clip_id(&seg.say));
+                        if let Some(a) = &seg.answer {
+                            wanted.insert(clip_id(a));
+                        }
+                    }
+                }
+                if wanted.is_empty() {
+                    continue;
+                }
+                let mut have = std::collections::BTreeMap::new();
+                for cid in &wanted {
+                    let f = Path::new(clips).join(id).join(format!("{cid}.mp3"));
+                    if let Ok(b) = std::fs::read(&f) {
+                        have.insert(cid.clone(), b);
+                    }
+                }
+                total += wanted.len();
+                missing += wanted.len() - have.len();
+                if have.is_empty() {
+                    continue;
+                }
+                let bytes = write_pack(&have);
+                let sha256 = feb_packs::sha256_hex(&bytes);
+                let file = format!("{id}@{}.audio", &sha256[..12]);
+                write(&out.join(&file), &bytes)?;
+                println!("  {id:<40} {:>3}/{:<3} clips {:>6} KB", have.len(), wanted.len(), bytes.len() / 1024);
+                topics.push(AudioEntry { id: id.clone(), file, size: bytes.len() as u64, sha256, clips: have.len() });
+            }
+        }
+    }
+    let generated_at = std::env::var("SOURCE_DATE_EPOCH")
+        .ok()
+        .and_then(|v| v.parse().ok())
+        .unwrap_or_else(|| SystemTime::now().duration_since(UNIX_EPOCH).map(|d| d.as_secs()).unwrap_or(0));
+    let manifest = AudioManifest { schema: AUDIO_SCHEMA, generated_at, voice, topics };
+    let bytes = serde_json::to_vec_pretty(&manifest).map_err(|e| e.to_string())?;
+    let sig = sign::sign(&secret, &bytes, &format!("timestamp:{generated_at}\tfile:{AUDIO_DIR}/{MANIFEST_FILE}"))
+        .map_err(|e| e.to_string())?;
+    write(&out.join(MANIFEST_FILE), &bytes)?;
+    write(&out.join(MANIFEST_SIG_FILE), sig)?;
+    println!(
+        "{} audio packs, {} of {total} clips ({missing} missing) -> {} (signed with {key_label})",
+        manifest.topics.len(),
+        total - missing,
+        out.display()
+    );
+    Ok(())
+}
+
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
     let result = match args.first().map(String::as_str) {
         Some("build") => build(&args),
+        Some("audio") => audio(&args),
         Some("keygen") => keygen(&args),
         _ => return usage(),
     };

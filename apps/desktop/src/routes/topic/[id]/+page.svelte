@@ -2,14 +2,14 @@
   import { page } from "$app/state";
   import { api, errorMessage, type Lecture, type TopicView } from "$lib/api";
   import LecturePanel from "$lib/components/LecturePanel.svelte";
-  import { lecture, load as loadLecture, playFrom, stopLecture } from "$lib/lecture/lecture.svelte";
+  import { lecture, load as loadLecture, playFrom, stopLecture, stopPreparing } from "$lib/lecture/lecture.svelte";
   import GraduationCap from "@lucide/svelte/icons/graduation-cap";
   import ErrorBox from "$lib/components/ErrorBox.svelte";
   import StatusTag from "$lib/components/StatusTag.svelte";
   import { renderMarkdown } from "$lib/markdown/render";
   import { settings, t, tc } from "$lib/stores/settings.svelte";
   import { openUrl } from "@tauri-apps/plugin-opener";
-  import { tick } from "svelte";
+  import { tick, untrack } from "svelte";
 
   const CALLOUTS = ["keyfacts", "exam-tip", "mnemonic", "caution", "timeline", "asof"];
 
@@ -34,8 +34,11 @@
     }
   }
 
+  // Only the topic id and language re-run this: `load` reads and replaces `topic`, which
+  // must not count as a dependency, or the page would reload (and restart the lecture) forever.
   $effect(() => {
-    load(id, settings.lang);
+    const topicId = id, lang = settings.lang;
+    untrack(() => load(topicId, lang));
   });
 
   const labels = $derived(Object.fromEntries(CALLOUTS.map((k) => [k, tc(`callout.${k}`, topic?.lang ?? "en")])));
@@ -57,7 +60,10 @@
   }
 
   // Leaving the page ends the lecture.
-  $effect(() => () => stopLecture());
+  $effect(() => () => {
+    stopLecture();
+    stopPreparing();
+  });
 
   // The blackboard: highlight and scroll to the part of the notes the teacher is explaining.
   $effect(() => {
@@ -120,6 +126,11 @@
         <button class="btn btn-primary lecture-btn" onclick={startLecture}>
           <GraduationCap size={18} aria-hidden="true" /> Start lecture
           <span class="muted-on-accent">· the teacher explains this topic, with questions</span>
+          {#if lecture.toPrepare}
+            <span class="muted-on-accent">
+              · {lecture.prepared >= lecture.toPrepare ? "voice ready" : `preparing voice ${Math.floor((100 * lecture.prepared) / lecture.toPrepare)}%`}
+            </span>
+          {/if}
         </button>
       {/if}
       <div class="tabs" role="tablist">

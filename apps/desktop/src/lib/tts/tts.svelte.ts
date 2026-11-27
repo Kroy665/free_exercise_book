@@ -56,13 +56,60 @@ listen<{ done: number; total: number }>("tts-progress", (e) => {
 
 const RATE = 24_000;
 
-/** 24 kHz mono samples for one short chunk of plain text (Rust runs the model). */
-export async function synth(text: string): Promise<Float32Array> {
-  const voice = settings.tts_voice;
-  const phonemes = await phonemize(text, voice.startsWith("b"));
-  if (!phonemes) return new Float32Array();
-  const bytes = await invoke<ArrayBuffer>("tts_synth", { voice, phonemes, speed: Number(settings.tts_speed) || 1 });
-  return new Float32Array(bytes);
+type Job = {
+  text: string;
+  background: boolean;
+  live: () => boolean;
+  resolve: (a: Float32Array) => void;
+  reject: (e: unknown) => void;
+};
+// One synthesis at a time (the model uses all the cores it is given). Audio someone is
+// waiting for goes ahead of background preparation; jobs no longer wanted are skipped.
+const jobs: Job[] = [];
+let busy = false;
+
+async function pump() {
+  if (busy) return;
+  const job = jobs.shift();
+  if (!job) return;
+  busy = true;
+  try {
+    if (!job.live()) throw new Error("cancelled");
+    const voice = settings.tts_voice;
+    const phonemes = await phonemize(job.text, voice.startsWith("b"));
+    if (!phonemes) job.resolve(new Float32Array());
+    else {
+      const bytes = await invoke<ArrayBuffer>("tts_synth", {
+        voice,
+        phonemes,
+        speed: Number(settings.tts_speed) || 1,
+        prefetch: job.background,
+      });
+      job.resolve(new Float32Array(bytes));
+    }
+  } catch (e) {
+    job.reject(e);
+  } finally {
+    busy = false;
+    pump();
+  }
+}
+
+/**
+ * 24 kHz mono samples for one short chunk of plain text (Rust runs the model and keeps
+ * the audio in a disk cache). `background`: only fill the cache (resolves with no samples),
+ * after any audio that is waited for. `live`: checked when the job's turn comes.
+ */
+export function synth(text: string, opts: { background?: boolean; live?: () => boolean } = {}): Promise<Float32Array> {
+  return new Promise((resolve, reject) => {
+    const job: Job = { text, background: !!opts.background, live: opts.live ?? (() => true), resolve, reject };
+    if (job.background) jobs.push(job);
+    else {
+      const at = jobs.findIndex((j) => j.background);
+      jobs.splice(at < 0 ? jobs.length : at, 0, job);
+    }
+    pump();
+  });
 }
 
 /** Read `markdown` aloud. Speaking the same key again stops it. */
@@ -90,12 +137,13 @@ export async function speak(key: string, markdown: string) {
     ctx = audioContext();
     if (ctx.state === "suspended") await ctx.resume();
     let when = 0;
-    let next = synth(parts[0]);
+    const live = () => mine === run;
+    let next = synth(parts[0], { live });
     for (let i = 0; i < parts.length; i++) {
       const samples = await next;
       if (mine !== run) return;
       // Synthesise the next chunk while this one plays.
-      if (i + 1 < parts.length) next = synth(parts[i + 1]);
+      if (i + 1 < parts.length) next = synth(parts[i + 1], { live });
       if (!samples.length) continue;
       const buf = ctx.createBuffer(1, samples.length, RATE);
       buf.copyToChannel(new Float32Array(samples), 0);

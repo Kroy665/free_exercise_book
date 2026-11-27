@@ -80,6 +80,11 @@ impl Source {
         }
     }
 
+    /// Any file under the source (e.g. `audio/manifest.json`), at most `max` bytes.
+    pub fn fetch_file(&self, name: &str, max: u64, progress: &mut dyn FnMut(u64, u64)) -> Result<Vec<u8>> {
+        self.get(name, max, progress)
+    }
+
     /// Returns (manifest bytes, signature text). Verify with [`crate::verify_manifest`].
     pub fn fetch_manifest(&self) -> Result<(Vec<u8>, String)> {
         let bytes = self.get(MANIFEST_FILE, MAX_MANIFEST_BYTES, &mut |_, _| {})?;

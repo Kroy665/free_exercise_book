@@ -4,6 +4,7 @@ mod pack_commands;
 mod pack_service;
 mod state;
 mod test_commands;
+mod lecture_audio;
 mod tts;
 
 use feb_core::{db, import};
@@ -85,6 +86,7 @@ pub fn run() {
             app.manage(state);
             app.manage(assistant::AssistantState::default());
             app.manage(tts::TtsState::default());
+            app.manage(lecture_audio::LectureAudioState::default());
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
@@ -131,6 +133,8 @@ pub fn run() {
             tts::tts_download,
             tts::tts_remove,
             tts::tts_synth,
+            lecture_audio::lecture_audio_prepare,
+            lecture_audio::lecture_audio_clip,
         ])
         .run(tauri::generate_context!())
         .expect("error while running Free Exercise Book");

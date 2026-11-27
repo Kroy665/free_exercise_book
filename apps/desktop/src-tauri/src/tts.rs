@@ -31,7 +31,9 @@ const CORE: &[File] = &[
     File { path: "config.json", base: MODEL_BASE, size: 44, sha256: "df34b4f930b23447cd4dc410fabfb42eb3f24e803e6c3f97d618fb359380a36f" },
     File { path: "tokenizer.json", base: MODEL_BASE, size: 3497, sha256: "77a02c8e164413299b4b4c403b14f8e0e1c1b727db4d46a09d6327b861060a34" },
     File { path: "tokenizer_config.json", base: MODEL_BASE, size: 113, sha256: "be1cb066d6ef6b074b3f15e6a6dd21ac88ff3cdaedf325f0aaed686c70f75d20" },
-    File { path: "onnx/model_quantized.onnx", base: MODEL_BASE, size: 92_361_116, sha256: "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478" },
+    // fp16: about 1.7x faster than the int8 `model_quantized.onnx` on Apple silicon (the int8
+    // kernels run barely faster than real time there), at 163 MB instead of 92 MB.
+    File { path: "onnx/model_fp16.onnx", base: MODEL_BASE, size: 163_234_740, sha256: "ba4527a874b42b21e35f468c10d326fdff3c7fc8cac1f85e9eb6c0dfc35c334a" },
 ];
 
 const VOICES: &[File] = &[
@@ -133,6 +135,8 @@ pub async fn tts_download(app: AppHandle, state: State<'_, AppState>, voice: Str
     let root = dir(&state);
     let files: Vec<&'static File> = needed(&voice)?.into_iter().filter(|f| !present(&root, f)).collect();
     let total: u64 = files.iter().map(|f| f.size).sum();
+    // The model used by earlier versions.
+    let _ = std::fs::remove_file(root.join("onnx/model_quantized.onnx"));
     tauri::async_runtime::spawn_blocking(move || -> Result<(), String> {
         let mut done = 0u64;
         for f in files {
@@ -190,7 +194,7 @@ fn load_engine(root: &Path) -> Result<Engine, String> {
         .map_err(|e| e.to_string())?
         .with_intra_threads(threads.max(1))
         .map_err(|e| e.to_string())?
-        .commit_from_file(root.join("onnx/model_quantized.onnx"))
+        .commit_from_file(root.join("onnx/model_fp16.onnx"))
         .map_err(|e| format!("could not load the voice model: {e}"))?;
     let tok: serde_json::Value = serde_json::from_slice(&std::fs::read(root.join("tokenizer.json")).map_err(|e| e.to_string())?)
         .map_err(|e| e.to_string())?;
@@ -246,7 +250,65 @@ fn synthesize(engine: &mut Engine, root: &Path, voice_name: &str, phonemes: &str
     Ok(audio.to_vec())
 }
 
+// Synthesised audio is kept on disk (16-bit, 24 kHz mono), keyed by model, voice, speed and
+// phonemes, so a lecture prepared in the background plays instantly, even after a restart.
+const CACHE_MODEL: &str = "kokoro-v1.0-fp16";
+const CACHE_LIMIT: u64 = 400 * 1024 * 1024;
+
+fn cache_path(root: &Path, voice: &str, phonemes: &str, speed: f32) -> PathBuf {
+    let mut h = Sha256::new();
+    h.update(format!("{CACHE_MODEL}\0{voice}\0{speed:.3}\0{phonemes}"));
+    let hex: String = h.finalize().iter().map(|b| format!("{b:02x}")).collect();
+    root.join("cache").join(format!("{}.pcm", &hex[..32]))
+}
+
+fn cache_read(path: &Path) -> Option<Vec<f32>> {
+    let bytes = std::fs::read(path).ok()?;
+    // Touch it, so pruning drops the least recently used audio first.
+    let _ = std::fs::File::options().append(true).open(path).and_then(|f| f.set_modified(std::time::SystemTime::now()));
+    Some(bytes.chunks_exact(2).map(|b| i16::from_le_bytes([b[0], b[1]]) as f32 / 32767.0).collect())
+}
+
+fn cache_write(path: &Path, samples: &[f32]) {
+    let Some(dir) = path.parent() else { return };
+    if std::fs::create_dir_all(dir).is_err() {
+        return;
+    }
+    let bytes: Vec<u8> = samples.iter().flat_map(|s| ((s.clamp(-1.0, 1.0) * 32767.0).round() as i16).to_le_bytes()).collect();
+    let tmp = path.with_extension("tmp");
+    if std::fs::write(&tmp, bytes).is_ok() {
+        let _ = std::fs::rename(&tmp, path);
+    }
+    prune(dir);
+}
+
+/// Keep the audio cache under `CACHE_LIMIT`, dropping the oldest files.
+fn prune(dir: &Path) {
+    let Ok(rd) = std::fs::read_dir(dir) else { return };
+    let mut files: Vec<(std::time::SystemTime, u64, PathBuf)> = rd
+        .flatten()
+        .filter_map(|e| {
+            let m = e.metadata().ok()?;
+            Some((m.modified().ok()?, m.len(), e.path()))
+        })
+        .collect();
+    let mut total: u64 = files.iter().map(|f| f.1).sum();
+    if total <= CACHE_LIMIT {
+        return;
+    }
+    files.sort_by_key(|f| f.0);
+    for (_, len, path) in files {
+        if total <= CACHE_LIMIT * 9 / 10 {
+            break;
+        }
+        if std::fs::remove_file(&path).is_ok() {
+            total -= len;
+        }
+    }
+}
+
 /// Speak one chunk of phonemes; returns 24 kHz mono samples as little-endian f32 bytes.
+/// `prefetch`: only make sure the audio is in the disk cache, and return nothing.
 #[tauri::command]
 pub async fn tts_synth(
     app: AppHandle,
@@ -254,6 +316,7 @@ pub async fn tts_synth(
     voice: String,
     phonemes: String,
     speed: f32,
+    prefetch: Option<bool>,
 ) -> CmdResult<tauri::ipc::Response> {
     if !feb_core::settings::TTS_VOICES.contains(&voice.as_str()) {
         return Err(err("INVALID", format!("unknown voice '{voice}'")));
@@ -261,16 +324,27 @@ pub async fn tts_synth(
     if phonemes.chars().count() > 4 * MAX_TOKENS {
         return Err(err("INVALID", "text chunk is too long"));
     }
+    let prefetch = prefetch.unwrap_or(false);
     let speed = if speed.is_finite() { speed.clamp(0.5, 2.0) } else { 1.0 };
     let root = dir(&state);
     let bytes = tauri::async_runtime::spawn_blocking(move || -> Result<Vec<u8>, String> {
-        let tts = tauri::Manager::state::<TtsState>(&app);
-        let mut guard = tts.engine.lock().map_err(|_| "speech engine lock poisoned".to_string())?;
-        if guard.is_none() {
-            *guard = Some(load_engine(&root)?);
-        }
-        let engine = guard.as_mut().ok_or("speech engine missing")?;
-        let samples = synthesize(engine, &root, &voice, &phonemes, speed)?;
+        let cached = cache_path(&root, &voice, &phonemes, speed);
+        let samples = if prefetch && cached.is_file() {
+            Vec::new()
+        } else if let Some(s) = (!prefetch).then(|| cache_read(&cached)).flatten() {
+            s
+        } else {
+            let tts = tauri::Manager::state::<TtsState>(&app);
+            let mut guard = tts.engine.lock().map_err(|_| "speech engine lock poisoned".to_string())?;
+            if guard.is_none() {
+                *guard = Some(load_engine(&root)?);
+            }
+            let engine = guard.as_mut().ok_or("speech engine missing")?;
+            let s = synthesize(engine, &root, &voice, &phonemes, speed)?;
+            drop(guard);
+            cache_write(&cached, &s);
+            if prefetch { Vec::new() } else { s }
+        };
         Ok(samples.iter().flat_map(|s| s.to_le_bytes()).collect())
     })
     .await

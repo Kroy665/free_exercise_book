@@ -6,6 +6,8 @@
 # 1. Validates content/ (schemas, formulas, graphs).
 # 2. Builds and signs every topic with the maintainer key
 #    (~/.config/free-exercise-book/pack-signing.key, or FEB_PACK_SIGNING_KEY).
+#    Lecture audio made ahead of time (tools/lecture-audio, in dist/lecture-audio/clips)
+#    is packed into audio/ the same way; without local clips the published audio is kept.
 # 3. Commits the result on top of the `packs` branch and pushes it (a normal push,
 #    never a force push). Installed apps pick the new topics up on their next start.
 #
@@ -29,6 +31,13 @@ SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)" \
   cargo run --release -q -p feb-packer -- build content --out "$out" \
   $( [[ -z "${FEB_PACK_SIGNING_KEY:-}" ]] && echo --key "$key" )
 
+clips="$root/dist/lecture-audio/clips"
+if [[ -d "$clips" ]]; then
+  SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)" \
+    cargo run --release -q -p feb-packer -- audio content "$clips" --out "$out" \
+    $( [[ -z "${FEB_PACK_SIGNING_KEY:-}" ]] && echo --key "$key" ) | tail -1
+fi
+
 remote="$(git remote get-url origin)"
 branch_dir="$root/dist/packs-branch"
 if [[ ! -d "$branch_dir/.git" ]]; then
@@ -45,7 +54,8 @@ git -C "$branch_dir" config user.name "$(git config user.name)"
 git -C "$branch_dir" config user.email "$(git config user.email)"
 
 # Replace the published files with the new build.
-find "$branch_dir" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+keep_audio=$([[ -d "$out/audio" ]] && echo "" || echo "! -name audio")
+find "$branch_dir" -mindepth 1 -maxdepth 1 ! -name .git $keep_audio -exec rm -rf {} +
 cp -R "$out"/. "$branch_dir"/
 cat > "$branch_dir/README.md" <<MD
 Signed content packs for Free Exercise Book, built from $(git rev-parse --short HEAD)

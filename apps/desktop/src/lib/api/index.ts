@@ -136,6 +136,11 @@ export interface Lecture {
 
 export const api = {
   lectureGet: (id: string, lang: string) => invoke<Lecture | null>("lecture_get", { id, lang }),
+  /** Download the topic's ready-made lecture audio if needed; which of `texts` have a clip. */
+  lectureAudioPrepare: (topic: string, texts: string[]) => invoke<boolean[]>("lecture_audio_prepare", { topic, texts }),
+  /** 24 kHz mono samples of a ready-made clip (empty when there is none). */
+  lectureAudioClip: async (topic: string, text: string) =>
+    new Float32Array(await invoke<ArrayBuffer>("lecture_audio_clip", { topic, text })),
   libraryTree: (lang: string) => invoke<LibrarySubject[]>("library_tree", { lang }),
   topicGet: (id: string, lang: string) => invoke<TopicView>("topic_get", { id, lang }),
   practiceQuestions: (topicId: string, lang: string) =>

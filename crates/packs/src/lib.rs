@@ -10,6 +10,7 @@ use sha2::{Digest, Sha256};
 use std::collections::BTreeMap;
 use std::io::Read;
 
+pub mod audio;
 #[cfg(feature = "sign")]
 pub mod sign;
 #[cfg(feature = "fetch")]
@@ -132,6 +133,24 @@ pub fn decompress(bytes: &[u8]) -> Result<Vec<u8>> {
     Ok(out)
 }
 
+/// Check `bytes` against a minisign signature with any of the trusted public keys
+/// (minisign `.pub` file contents).
+pub fn verify_signature(bytes: &[u8], signature: &str, trusted_keys: &[String]) -> Result<()> {
+    let sig = minisign_verify::Signature::decode(signature)
+        .map_err(|e| PackError::Signature(format!("unreadable signature: {e}")))?;
+    let mut last_err = String::from("no trusted keys configured");
+    for key in trusted_keys {
+        match minisign_verify::PublicKey::decode(key) {
+            Ok(pk) => match pk.verify(bytes, &sig, false) {
+                Ok(()) => return Ok(()),
+                Err(e) => last_err = e.to_string(),
+            },
+            Err(e) => last_err = format!("bad trusted key: {e}"),
+        }
+    }
+    Err(PackError::Signature(last_err))
+}
+
 /// Verify `manifest_bytes` against its minisign signature with any of the trusted
 /// public keys (minisign `.pub` file contents), then parse it.
 pub fn verify_manifest(
@@ -139,25 +158,7 @@ pub fn verify_manifest(
     signature: &str,
     trusted_keys: &[String],
 ) -> Result<Manifest> {
-    let sig = minisign_verify::Signature::decode(signature)
-        .map_err(|e| PackError::Signature(format!("unreadable signature: {e}")))?;
-    let mut last_err = String::from("no trusted keys configured");
-    let mut ok = false;
-    for key in trusted_keys {
-        match minisign_verify::PublicKey::decode(key) {
-            Ok(pk) => match pk.verify(manifest_bytes, &sig, false) {
-                Ok(()) => {
-                    ok = true;
-                    break;
-                }
-                Err(e) => last_err = e.to_string(),
-            },
-            Err(e) => last_err = format!("bad trusted key: {e}"),
-        }
-    }
-    if !ok {
-        return Err(PackError::Signature(last_err));
-    }
+    verify_signature(manifest_bytes, signature, trusted_keys)?;
     let manifest: Manifest =
         serde_json::from_slice(manifest_bytes).map_err(|e| PackError::Manifest(e.to_string()))?;
     if manifest.schema != MANIFEST_SCHEMA {
