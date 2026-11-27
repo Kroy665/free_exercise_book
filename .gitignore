@@ -21,3 +21,6 @@ apps/desktop/src-tauri/gen/schemas/
 
 # Built content packs and the local development signing key
 /dist/
+
+# Python
+__pycache__/
