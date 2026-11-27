@@ -87,6 +87,7 @@ def main():
     ap.add_argument("--list", action="store_true", help="only print the clips and total length")
     ap.add_argument("--exaggeration", type=float, default=0.45, help="Chatterbox expressiveness (0.25-1)")
     ap.add_argument("--cfg", type=float, default=0.5, help="Chatterbox cfg_weight (lower: slower, calmer)")
+    ap.add_argument("--tempo", type=float, default=1.0, help="speed of the finished clip (0.8: 20%% slower, same pitch)")
     ap.add_argument("--voice", help="optional reference clip (a few seconds of a voice to imitate)")
     a = ap.parse_args()
 
@@ -141,7 +142,7 @@ def main():
         tmp = dst + ".part.mp3"
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
-             "-af", "loudnorm=I=-18:TP=-1.5:LRA=11", "-ar", str(SR), "-ac", "1",
+             "-af", (f"atempo={a.tempo}," if a.tempo != 1 else "") + "loudnorm=I=-18:TP=-1.5:LRA=11", "-ar", str(SR), "-ac", "1",
              "-c:a", "libmp3lame", "-b:a", "48k", tmp],
             input=pcm.tobytes(), check=True,
         )
